@@ -1,0 +1,58 @@
+/* css/pp-hud.css — currency holders (AP, Cubes, JP) in the top bar, after the
+   Phantom Parade HUD: a black plate with a thin gold frame (UI kit bar), a large
+   glowing currency icon breaking out of its left edge, the full amount in bold
+   tabular numerals, and a square stone "+" button. Loaded last (via
+   pp-landscape.css), so it is the one source of truth for .hud-cur. */
+.topbar .hud { gap: 14px; align-items: center; }
+.topbar .hud-cur {
+  position: relative; display: inline-flex; align-items: center; gap: 6px;
+  height: 34px; min-width: 146px; margin-left: 12px; padding: 0 6px 0 30px;
+  border: 0 solid transparent; border-width: 8px 10px;
+  border-image: url("../assets/pp/ui/kit/bar.webp") 16 20 fill / 8px 10px stretch;
+  background: none; box-shadow: none; border-radius: 0;
+  font: 800 17px/1 var(--pp-font); letter-spacing: .02em; color: #fbf7ec;
+  text-shadow: 0 1px 0 #000, 0 0 6px rgba(0, 0, 0, .9);
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .55));
+  transition: transform .12s var(--pp-ease), filter .15s;
+}
+.topbar .hud-cur:hover { filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .55)) brightness(1.1); }
+.topbar .hud-cur:active { transform: translateY(1px); }
+.topbar .hud-cur b { flex: 1; min-width: 0; text-align: right; font-weight: 800; font-variant-numeric: tabular-nums; }
+/* the icon sits on the plate's left end and breaks out of it */
+.topbar .hud-cur .cur-ic {
+  position: absolute; left: -24px; top: 50%; width: 44px; height: 44px; margin-top: -22px; border-radius: 0;
+  object-fit: contain; filter: drop-shadow(0 0 4px rgba(0, 0, 0, .8)) drop-shadow(0 2px 3px rgba(0, 0, 0, .7));
+}
+.topbar .hud-cur svg.cur-ic { width: 34px; height: 34px; margin-top: -17px; left: -19px; filter: drop-shadow(0 0 6px rgba(127, 242, 224, .55)) drop-shadow(0 2px 2px rgba(0, 0, 0, .7)); }
+/* AP refill countdown under the plate */
+.topbar .hud-cur small { position: absolute; right: 4px; bottom: -17px; font: 700 10px/1 var(--pp-font); color: #9ff3e6; text-shadow: 0 1px 2px #000, 0 0 3px #000; }
+/* square stone "+" (UI kit blank stone) */
+.topbar .hud-plus {
+  flex: none; display: grid; place-items: center; width: 24px; height: 24px; margin: 0 -2px 0 2px; border-radius: 0;
+  background: url("../assets/pp/ui/kit/sq.webp") center / 100% 100% no-repeat;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .6));
+}
+.topbar .hud-plus .ic { width: 14px; height: 14px; color: #f6f2e6; stroke-width: 3.2; filter: drop-shadow(0 1px 0 #000); }
+/* Home already shows AP in its Player Rank / AP header */
+body[data-page="home"] .topbar .hud-cur[title="AP"] { display: none; }
+
+/* landscape phones / short screens */
+html.is-compact .topbar .hud { gap: 10px; }
+html.is-compact .topbar .hud-cur { height: 28px; min-width: 118px; margin-left: 10px; padding: 0 4px 0 24px; border-width: 6px 8px; border-image-width: 6px 8px; font-size: 14px; }
+html.is-compact .topbar .hud-cur .cur-ic { left: -20px; width: 36px; height: 36px; margin-top: -18px; }
+html.is-compact .topbar .hud-cur svg.cur-ic { left: -16px; width: 28px; height: 28px; margin-top: -14px; }
+html.is-compact .topbar .hud-plus { width: 20px; height: 20px; }
+html.is-compact .topbar .hud-plus .ic { width: 12px; height: 12px; }
+html.is-compact .topbar .hud-cur small { bottom: -14px; font-size: 9px; }
+@media (max-width: 720px) {
+  .topbar .hud { gap: 6px; }
+  .topbar .hud-cur, html.is-compact .topbar .hud-cur { min-width: 0; height: 26px; margin-left: 9px; padding: 0 3px 0 20px; border-width: 5px 7px; border-image-width: 5px 7px; font-size: 12.5px; }
+  .topbar .hud-cur .cur-ic, html.is-compact .topbar .hud-cur .cur-ic { left: -17px; width: 31px; height: 31px; margin-top: -15.5px; }
+  .topbar .hud-cur svg.cur-ic, html.is-compact .topbar .hud-cur svg.cur-ic { left: -14px; width: 24px; height: 24px; margin-top: -12px; }
+  .topbar .hud-plus, html.is-compact .topbar .hud-plus { width: 17px; height: 17px; }
+  .topbar .hud-cur small { display: none; }
+}
+@media (max-width: 480px) {
+  .topbar .hud-cur .hud-plus { display: none; }
+  .topbar .hud-cur { font-size: 11px; }
+}

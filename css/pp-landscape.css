@@ -1,10 +1,9 @@
+@import url("pp-hud.css");
 /* css/pp-landscape.css — landscape phones (html.is-compact = viewport height <= 520px).
    The game is played sideways; these rules keep every screen's key actions on screen. */
 
-/* Bottom nav: smaller labels so "Formation" / "Summon" fit */
-html.is-compact .dock-btn { font-size: 12.5px; gap: 4px; }
-html.is-compact .dock-btn .ic { width: 15px; height: 15px; }
-@media (max-width: 720px) { html.is-compact .dock-btn:not(.is-menu) { font-size: 11.5px; border-width: 7px 12px 10px; } }
+/* Bottom nav: labels sized so "Formation" fits at 667 wide */
+@media (max-width: 720px) { html.is-compact .dock-btn:not(.is-menu) { font-size: 12px; letter-spacing: 0; gap: 3px; border-width: 7px 9px 10px; padding: 0; } html.is-compact .dock-btn:not(.is-menu) .ic { width: 17px; height: 17px; } }
 
 /* Quest hub: one short row of mode tiles so the stages stay in view */
 html.is-compact .mode-cards { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; padding-bottom: 6px; }
@@ -20,31 +19,7 @@ html.is-compact .q-cards { grid-template-columns: repeat(2, minmax(0, 220px)); }
 html.is-compact .q-card { height: 92px; }
 html.is-compact .q-card .parch-label { font-size: 14px; }
 
-/* Gacha: smaller panel and draw buttons that fit under the art */
-html.is-compact .gacha { min-height: 0; }
-html.is-compact .g-logo { max-height: 34vh; }
-html.is-compact .g-desc, html.is-compact .g-feat { display: none; }
-html.is-compact .g-info { width: min(220px, 30%); gap: 5px; }
-html.is-compact .g-title { font-size: 13px; }
-html.is-compact .g-btns .pp-stone { padding: 2px 6px; font-size: 10px; }
-html.is-compact .g-tag { left: 26%; top: 34%; }
-html.is-compact .g-tag b { font-size: 18px; }
-html.is-compact .g-draws { gap: 4px; bottom: 6px; }
-html.is-compact .g-pull { min-width: 0; padding: 6px 8px 4px; }
-html.is-compact .g-pull.is-multi { min-width: 0; }
-html.is-compact .g-pull b { font-size: 13px; }
-html.is-compact .g-pull small { font-size: 9.5px; }
-html.is-compact .g-pull em { font-size: 8px; margin-bottom: 1px; }
-html.is-compact .g-pt { padding: 3px 6px; font-size: 10px; max-width: 440px; }
-html.is-compact .g-pt .pity.gp > small:not(:first-child) { display: none; }
-html.is-compact .g-pt .gp-btns .cur-ic { width: 12px; height: 12px; }
-html.is-compact .g-pt .gp-btns { margin: 3px 0 0; }
-html.is-compact .g-pt .gp-btns .jjk-btn { height: 24px; font-size: 10px; }
-@media (max-width: 720px) {
-  html.is-compact .g-list { width: 118px; }
-  html.is-compact .g-draws { left: 134px; }
-  html.is-compact .g-list .ban-tab { height: 44px; }
-}
+/* Gacha: compact rules live in css/summon.css (html.is-compact .g-*) */
 
 /* Novice: Day tabs fit */
 html.is-compact .nv-tab { min-width: 0; font-size: 12px; padding-left: 2px; padding-right: 2px; letter-spacing: 0; white-space: nowrap; }
@@ -72,5 +47,3 @@ html.is-compact .enh-pb small { font-size: 11px; }
 @keyframes rotHint { 0%, 25% { transform: rotate(0); } 55%, 100% { transform: rotate(-90deg); } }
 html.reduce-motion .rotate-hint svg { animation: none; }
 html.is-compact .nv-tab { height: 28px; line-height: 1; border-width: 6px 8px; padding-top: 0; padding-bottom: 0; }
-html.is-compact .g-logo { max-height: 24vh; }
-html.is-compact .g-title { display: none; }

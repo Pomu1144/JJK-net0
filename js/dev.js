@@ -32,7 +32,8 @@
   .dev-panel textarea { width: 100%; min-height: 160px; background: #0e1418; color: #cfe; border: 1px solid #3c5563; font: 11px/1.3 ui-monospace, monospace; }
   .dev-stat { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px 10px; margin-bottom: 10px; color: #cde; }
   .dev-stat b { color: #fff; }
-  .dev-msg { color: #7CFC9A; min-height: 1.3em; }`;
+  .dev-msg { color: #7CFC9A; min-height: 1.3em; }
+  .dev-panel button.dev-big { background: #1d5a2c; border-color: #7CFC9A; color: #fff; font-weight: 800; }`;
 
   const $ = (sel, root) => (root || document).querySelector(sel);
   const fmt = (n) => Number(n || 0).toLocaleString();
@@ -64,7 +65,7 @@
 
   const TABS = {
     currency: () => `
-      <div class="dev-row"><span>Free Cubes</span>${[3000, 30000, 300000].map((n) => `<button class="d" data-a="cubes" data-n="${n}">+${fmt(n)}</button>`).join('')}</div>
+      <div class="dev-row"><span>Free Cubes</span>${[3000, 30000, 100000, 300000].map((n) => `<button class="d" data-a="cubes" data-n="${n}">+${fmt(n)}</button>`).join('')}</div>
       <div class="dev-row"><span>Paid Cubes</span>${[100, 3000, 30000].map((n) => `<button class="d" data-a="paid" data-n="${n}">+${fmt(n)}</button>`).join('')}</div>
       <div class="dev-row"><span>JP</span>${[10000, 100000, 1000000].map((n) => `<button class="d" data-a="jp" data-n="${n}">+${fmt(n)}</button>`).join('')}</div>
       <div class="dev-row"><span>Friendship Pt</span>${[100, 1000].map((n) => `<button class="d" data-a="fp" data-n="${n}">+${fmt(n)}</button>`).join('')}</div>
@@ -196,7 +197,7 @@
     panel = document.createElement('div');
     panel.className = 'dev-panel'; panel.hidden = true;
     panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', 'Developer panel');
-    panel.innerHTML = '<div class="dev-head"><b>DEV PANEL</b><span class="dev-msg"></span><span class="sp"></span><button class="d" type="button" data-close>Close & reload</button><button class="d" type="button" data-x>✕</button></div><div class="dev-tabs"></div><div class="dev-body"></div>';
+    panel.innerHTML = '<div class="dev-head"><b>DEV PANEL</b><button class="d dev-big" type="button" data-a="cubes" data-n="100000">+100,000 Cubes</button><span class="dev-msg"></span><span class="sp"></span><button class="d" type="button" data-close>Close & reload</button><button class="d" type="button" data-x>✕</button></div><div class="dev-tabs"></div><div class="dev-body"></div>';
     panel.addEventListener('click', (e) => {
       const t = e.target.closest('[data-tab]');
       if (t) { tab = t.dataset.tab; draw(); return; }
