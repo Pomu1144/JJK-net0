@@ -251,3 +251,5 @@ From the screenshots and icons on the fan wiki's [Beginner's Guide](https://jjk-
 `ui/kit/` (square buttons, nav plates, parchment plates, currency bar, skill slots) is sliced from the
 UI-kit sheet supplied by the project owner, and `ui/bg-dark.webp` is their background texture. `ui/btn/`
 pieces were cut from reference screenshots of the game, with their labels painted out.
+`ui/exchange/` (the six Exchange cards) and `currency/friend-point.webp`, `currency/investigation-medal.webp`
+are cut from the Exchange-screen reference supplied by the project owner (printed counters painted out).

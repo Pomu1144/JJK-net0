@@ -52,3 +52,12 @@
 
 /* Lv / Skill enhancement plates: the kit parchment */
 .enh-btn { border-image: url("../assets/pp/ui/kit/parch.webp") 44 44 fill / 12px 13px stretch; }
+@media (max-width: 480px) {
+  .hud-cur { flex: none; border-width: 4px; border-image-width: 4px 5px; padding: 0 1px 0 15px; font-size: 10.5px; }
+  .hud { flex: none; gap: 2px; }
+  .hud-cur .cur-ic { left: -1px; width: 14px; height: 14px; margin-top: -7px; }
+  .jjk-icon-btn.jjk-back, .topbar .help-btn { width: 32px; height: 32px; }
+  .topbar { gap: 4px; }
+  .jjk-title-plate { padding: 0 22px 0 10px; }
+  .hud-cur .hud-plus { display: none; }
+}

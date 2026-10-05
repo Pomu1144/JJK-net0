@@ -410,7 +410,16 @@ SHOP = {'sections': [
         {'id': 'ticket_yen', 'give': {'items': {'ticket': 1}}, 'price': {'yen': 6000}},
     ]},
     {'id': 'daily', 'name': 'Daily', 'kanji': '日課', 'offers': [
-        {'id': 'daily_gift', 'give': {'cubes': 600, 'yen': 1000}, 'price': {}, 'daily': True},
+        {'id': 'daily_gift', 'give': {'cubes': 600, 'yen': 1000, 'fp': 10}, 'price': {}, 'daily': True},
+    ]},
+    # Friendship Point exchange: FP come from the daily gift and from clears with a Backup unit
+    {'id': 'friend', 'name': 'Friendship Point', 'kanji': '友情', 'hub': 'friend', 'offers': [
+        {'id': 'fp_ts3', 'give': {'items': {'light_s': 3}}, 'price': {'fp': 30}},
+        {'id': 'fp_tm', 'give': {'items': {'light_m': 1}}, 'price': {'fp': 60}},
+        {'id': 'fp_ap10', 'give': {'stamina': 10}, 'price': {'fp': 40}},
+        {'id': 'fp_jp', 'give': {'yen': 3000}, 'price': {'fp': 50}},
+        {'id': 'fp_gp', 'give': {'items': {'gp_card': 1}}, 'price': {'fp': 150}},
+        {'id': 'fp_ticket', 'give': {'items': {'ticket': 1}}, 'price': {'fp': 400}},
     ]},
 ]}
 

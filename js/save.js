@@ -39,7 +39,7 @@
       created: now,
       updated: now,
       profile: { name: String(name || 'Sorcerer').slice(0, 24), rank: 1, rankExp: 0, homeUnit: null },
-      currency: { cubes: 6000, yen: 5000 },   // yen = JP (soft), cubes = Cubes (premium)
+      currency: { cubes: 6000, yen: 5000, fp: 0 },   // fp = Friendship Points   // yen = JP (soft), cubes = Cubes (premium)
       stamina: { cur: 30, ts: now },
       items: { light_s: 10, light_m: 2, light_l: 0, ticket: 1, gp_card: 0 },
       units: {},          // id -> { id, level, exp, dupes, obtained, guest? }

@@ -627,6 +627,7 @@
       areaIdx = fromNode >= 0 && areaOpen(EV.areas[fromNode]) ? fromNode : Math.max(0, EV.areas.map(areaOpen).lastIndexOf(true));
     }
     drawMap();
+    if (hash === 'exchange') openExchange();   // from the Exchange hub's Event card
   }
 
   /* mouse drag to pan (touch scrolls natively) */

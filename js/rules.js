@@ -195,6 +195,8 @@
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   }
 
+  const FP_PER_SUPPORT_CLEAR = 5;
+
   /* ---------------- Strengthening Quests ---------------- */
   /** Runs used today for a quest id (the counter resets each local day). */
   function questRuns(s, qid) {
@@ -216,6 +218,8 @@
     res.rankUps = addRankExpTo(s, r.rankExp || 0);
     (o.team || []).forEach((id) => { const lv = addExpTo(s, id, r.unitExp); if (lv) res.levels.push(Object.assign({ id }, lv)); });
     if (o.support) { const lv = addExpTo(s, o.support, Math.round(r.unitExp / 2)); if (lv) res.levels.push(Object.assign({ id: o.support, support: true }, lv)); }
+    // Friendship Points: a clear with a Backup unit (guide: borrowing a support) earns 5
+    if (o.support) { res.fp = FP_PER_SUPPORT_CLEAR; s.currency.fp = (s.currency.fp || 0) + FP_PER_SUPPORT_CLEAR; }
     (r.drops || []).forEach((d) => { if (Math.random() * 100 < d.chance) res.drops[d.item] = (res.drops[d.item] || 0) + (d.qty || 1); });
     Object.entries(res.drops).forEach(([k, n]) => { s.items[k] = (s.items[k] || 0) + n; });
     const prev = s.progress[stage.id];
