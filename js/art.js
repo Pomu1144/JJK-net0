@@ -1,7 +1,8 @@
 /* js/art.js — character / curse art.
  * Every character has art.portrait / art.full (real webp for the three
  * NXBNVNB characters, generated SVG files for the rest, absolute URLs for
- * Portal guests). If an image fails to load (e.g. a guest's home game is
+ * Portal guests). Phantom Parade units also have art.anim, the animated card
+ * art (looping WebP); 'full' art uses it unless motion is reduced. If an image fails to load (e.g. a guest's home game is
  * offline) it is swapped for a generated SVG made here at runtime.
  */
 (function (global) {
@@ -44,23 +45,65 @@
     return url;
   }
 
-  function src(def, kind) {
+  /** False when the player asked for less motion or less data: the game's
+   * "Reduce motion" setting, the OS reduced-motion preference, or Save-Data. */
+  function motionOk() {
+    try {
+      if (global.Save && Save.get().settings.reduceMotion) return false;
+    } catch (e) { /* no save yet */ }
+    const de = global.document && document.documentElement;
+    if (de && de.classList.contains('reduce-motion')) return false;
+    if (global.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+    const c = global.navigator && navigator.connection;
+    return !(c && c.saveData);
+  }
+
+  /** Animated card art (art.anim, a looping WebP) for 'full' unless motion
+   * is off or opts.still; 'portrait'/'icon' are always stills. */
+  function src(def, kind, opts) {
     const a = def && def.art;
+    if (kind === 'full' && a && a.anim && !(opts && opts.still) && motionOk()) return a.anim;
     const u = a && (kind === 'full' ? a.full || a.portrait
       : kind === 'icon' ? a.icon || a.full || a.portrait
         : a.portrait || a.full);
     return u || fallback(def);
   }
 
-  /** <img> markup with lazy loading and an automatic generated fallback. */
+  /** <img> markup with lazy loading and an automatic generated fallback.
+   * 'full' art moves (animated WebP) in eager/hero spots or with opts.anim;
+   * long lists (no eager) keep the still poster. opts.anim === false or
+   * opts.still forces the still. If the animation fails it drops to the still. */
   function img(def, kind, opts) {
     const o = opts || {};
     if (def && def.id) registry.set(def.id, def);
     const lazy = o.eager ? '' : ' loading="lazy"';
-    return `<img class="${esc(o.cls || 'art')}" src="${esc(src(def, kind))}" alt="${esc(o.alt != null ? o.alt : (def && def.name) || '')}"${lazy} decoding="async" draggable="false" data-art-id="${esc(def && def.id)}" onerror="Art.onErr(this)">`;
+    const a = def && def.art;
+    const wantAnim = kind === 'full' && a && a.anim && a.full && !o.still && (o.anim === true || (o.anim !== false && o.eager));
+    const s = wantAnim ? src(def, 'full') : src(def, kind, { still: true });
+    const animAttr = wantAnim ? ` data-anim="${esc(a.anim)}" data-still="${esc(a.full)}"` : '';
+    return `<img class="${esc(o.cls || 'art')}" src="${esc(s)}" alt="${esc(o.alt != null ? o.alt : (def && def.name) || '')}"${lazy} decoding="async" draggable="false" data-art-id="${esc(def && def.id)}"${animAttr} onerror="Art.onErr(this)">`;
+  }
+
+  /** Swap every animated <img> between its animation and its still when the
+   * reduce-motion setting changes (settings.js toggles html.reduce-motion). */
+  function applyMotion() {
+    const ok = motionOk();
+    document.querySelectorAll('img[data-anim]').forEach((el) => {
+      if (el.dataset.animFailed) return;
+      const want = ok ? el.dataset.anim : el.dataset.still;
+      if (el.getAttribute('src') !== want) el.setAttribute('src', want);
+    });
+  }
+  if (global.MutationObserver && global.document) {
+    new MutationObserver(applyMotion).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   }
 
   function onErr(el) {
+    // An animation that will not load falls back to its still poster first.
+    if (el.dataset.still && !el.dataset.animFailed) {
+      el.dataset.animFailed = '1';
+      if (el.getAttribute('src') !== el.dataset.still) { el.src = el.dataset.still; return; }
+    }
     if (el.dataset.fb) return;
     el.dataset.fb = '1';
     el.src = fallback(registry.get(el.dataset.artId) || { id: el.dataset.artId, name: el.alt });
@@ -93,5 +136,5 @@
   /** Kept for older callers: now returns the Phantom Parade type badge. */
   function orb(element) { return typeIcon(element); }
 
-    global.Art = { src, img, fallback, onErr, orb, typeOf, typeIcon, TYPES, initials, COLORS: EL };
+    global.Art = { src, img, fallback, onErr, motionOk, applyMotion, orb, typeOf, typeIcon, TYPES, initials, COLORS: EL };
 })(window);

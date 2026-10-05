@@ -56,13 +56,23 @@ Saves from before this economy are migrated on load (schema 2): Cubes ×60, tali
 Lights, old pity counts → Gacha Points.
 
 ### Art
-- `assets/pp/` (7.5 MB): card art, unit icons and skill icons for the 100 units, 104 memory
+- `assets/pp/` (~228 MB): card art, unit icons and skill icons for the 100 units, 104 memory
   illustrations, type and rarity badges, currency / item icons (`currency/`: JP, Cubes, Training
   and Recollection Lights, Gacha Point Card, Clear Rank marks) and Quest mode art (`modes/`) — from
   the Phantom Parade fan wikis, every file credited in
   `assets/pp/CREDITS.md` and `assets/pp/manifest.json`. Every unit has a 3:4 portrait crop
   (`assets/pp/portraits/`, offsets in `tools/pp-art.json`); memory scenes are the backdrops of the
   chapters and summon banners.
+- Card art moves, as in the game: `assets/pp/units/<slug>/art-anim.webp` is the unit's animated card
+  art (looping animated WebP, 218 MB for all 100 units, 0.5–4.8 MB each) made by
+  `tools/animate_pp_art.py` from the wikis' own animated uploads at their native size (400–1689 px
+  wide; the fan wikis are the best source found — game8/GameWith only have stills, the official
+  site only per-character illustrations). Frames are thinned to ≤ 20 fps with the original timing,
+  lossy WebP quality 60 (50 for the three largest). `art.webp` is the still poster (middle frame,
+  native size, 4.9 MB in all) and the portrait crops are cut from it. `Art.img(def, 'full', {eager:
+  true})` (hero spots: unit detail, profile, summon, battle cut-ins) and `Art.src(def, 'full')` (home
+  backdrop) play the animation; long lists keep the still unless `{anim: true}`; the "Reduce motion"
+  setting, the OS reduced-motion preference and Save-Data switch everything to the stills.
 - Art and characters are © Gege Akutami/Shueisha, JUJUTSU KAISEN Project; Phantom Parade © Sumzap /
   TOHO. Non-commercial fan project.
 
@@ -74,6 +84,7 @@ python3 tools/pp_assets.py path/to/out # copy into assets/pp/, cut portraits, wr
 python3 tools/fetch_pp_units.py        # new wiki: SSR unit templates not yet in the game -> tools/pp-units-raw.json
 python3 tools/pp_units.py              # tools/pp-units-raw.json (wiki unit templates) -> tools/pp-units.json
 python3 tools/fetch_pp_units.py --art  # their card art, icons and portraits -> assets/pp/ (manifest, CREDITS)
+python3 tools/animate_pp_art.py        # animated card art (art-anim.webp), full-size stills and portraits (needs Pillow)
 python3 tools/generate.py              # rebuild data/*.json (roster, opponents per chapter, missions, banners)
 node tools/balance.js                  # auto-battle win rates per stage
 ```
