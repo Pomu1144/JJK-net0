@@ -26,7 +26,7 @@
       <div class="set-row"><span class="lbl">Battle speed<small>Animation speed in battle</small></span>
         <span class="seg" role="radiogroup" aria-label="Battle speed">${[1, 2, 3].map((n) => `<button class="pt-segb${s.settings.battleSpeed === n ? ' is-on' : ''}" role="radio" aria-checked="${s.settings.battleSpeed === n}" data-speed="${n}" type="button">×${n}</button>`).join('')}</span></div>
       <div class="set-row"><label>Auto battle by default<small>Units pick their own actions (toggle any time in battle)</small></label>${toggle('autoBattle', s.settings.autoBattle)}</div>
-      <div class="set-row"><label>Reduce motion<small>Shorter animations everywhere</small></label>${toggle('reduceMotion', s.settings.reduceMotion)}</div>`;
+      <div class="set-row"><label>Reduce motion<small>Still card art and shorter animations</small></label>${toggle('reduceMotion', s.settings.reduceMotion)}</div>`;
   }
 
   function accountTab(s) {

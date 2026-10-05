@@ -45,17 +45,15 @@
     return url;
   }
 
-  /** False when the player asked for less motion or less data: the game's
-   * "Reduce motion" setting, the OS reduced-motion preference, or Save-Data. */
+  /** False when the player turned on the game's own "Reduce motion" setting
+   * (Settings → Display). The OS preference and Save-Data don't stop the card
+   * art: it is the game's art, and many phones have those switched on. */
   function motionOk() {
     try {
       if (global.Save && Save.get().settings.reduceMotion) return false;
     } catch (e) { /* no save yet */ }
     const de = global.document && document.documentElement;
-    if (de && de.classList.contains('reduce-motion')) return false;
-    if (global.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
-    const c = global.navigator && navigator.connection;
-    return !(c && c.saveData);
+    return !(de && de.classList.contains('reduce-motion'));
   }
 
   /** Animated card art (art.anim, a looping WebP) for 'full' unless motion
