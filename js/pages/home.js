@@ -84,7 +84,7 @@
     const need = Rules.rankExpToNext(s.profile.rank);
     const st = Rules.staminaNow(s);
     return `<header class="home-head">
-      <span class="rank-circle" title="Player Rank">${s.profile.rank}</span>
+      <a class="rank-circle" href="profile.html" title="Player Rank · Profile">${s.profile.rank}</a>
       <div class="hh-block hh-rank"><small>${esc(s.profile.name)}</small><span class="hh-bar red"><i style="width:${Math.min(100, s.profile.rankExp / need * 100)}%"></i></span></div>
       <div class="hh-block hh-ap"><small><span>AP</span><b id="home-ap">${st.cur}/${st.max}</b></small><span class="hh-bar"><i id="home-ap-bar" style="width:${Math.min(100, st.cur / st.max * 100)}%"></i></span></div>
       <a class="pp-stone hh-plus" href="shop.html#stamina" aria-label="Refill stamina">${UI.icon('plus')}</a>

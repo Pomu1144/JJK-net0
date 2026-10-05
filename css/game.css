@@ -169,7 +169,7 @@ body[data-page="home"]::after {
     linear-gradient(180deg, rgba(4, 6, 8, .65) 0%, transparent 18%, transparent 74%, rgba(4, 6, 8, .7) 100%);
 }
 .home-head { display: flex; align-items: center; gap: 8px; min-width: 0; }
-.rank-circle {
+.rank-circle { text-decoration: none; cursor: pointer;
   flex: none; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%;
   font: 800 22px/1 var(--pp-font); color: #fff; text-shadow: 0 2px 2px #000;
   background: radial-gradient(circle at 40% 35%, #c2402f, #7a1610 70%); border: 2px solid #2a0705;
