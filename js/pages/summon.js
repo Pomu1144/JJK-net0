@@ -60,6 +60,7 @@
     const one = costFor('single'), ten = costFor('multi');
     $('#banner-art').innerHTML = `
       <div class="ban-stage el-${b.element.toLowerCase()}">
+        ${b.bg ? `<div class="scene-bg" style="background-image:url('${esc(b.bg)}')"></div>` : ''}
         <span class="ban-kanji">${esc(b.kanji)}</span>
         ${hero ? Art.img(hero, 'full', { cls: 'ban-hero' + (hero.art.generated ? ' is-svg' : ''), eager: true, alt: '' }) : ''}
         <div class="ban-copy"><small>${b.featured.length ? 'RATE UP' : 'STANDARD'}</small><h2>${esc(b.name)}</h2><p>${esc(b.subtitle)}</p>

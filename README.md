@@ -24,8 +24,25 @@ Plain static HTML / CSS / vanilla JS: no build step, no backend. Play it at
 | `settings.html` | Audio, Display, Account, Data (export / import JSON) and **Portal** |
 
 31 characters (★3–★7) in `data/characters.json`, 17 curses in `data/enemies.json`, 20 stages in
-`data/missions.json`. Gojo and both Sukunas use art shared with NXBNVNB; everyone else has a
-generated SVG portrait (`assets/portraits/`). `tools/generate.py` rebuilds all data and generated art.
+`data/missions.json`. `tools/generate.py` rebuilds all data and generated art.
+
+### Art
+- **Phantom Parade art** (`assets/pp/`, 4.5 MB): card art, icons and skill icons for 50 units and
+  104 memory illustrations from the *Jujutsu Kaisen Phantom Parade* fan wiki, with every file
+  credited in `assets/pp/CREDITS.md` and `assets/pp/manifest.json`. 20 characters and the Mahito,
+  Todo, Hanami and Jogo bosses use it; memory scenes are the backdrops of the four chapters and the
+  three summon banners. Mapping and portrait crops: `tools/pp-art.json`.
+- Gojo and both Sukunas use art shared with NXBNVNB.
+- Characters the wiki has no art for (Choso, Mei Mei, Naoya, Kenjaku, Yuki, Hakari, Kashimo,
+  Higuruma) keep a generated SVG portrait (`assets/portraits/`).
+
+Refreshing the art:
+
+```sh
+python3 tools/scrape_pp_wiki.py        # run in a scratch folder: downloads + converts to out/ (needs ffmpeg, ImageMagick)
+python3 tools/pp_assets.py path/to/out # copies into assets/pp/, cuts portraits, writes CREDITS.md
+python3 tools/generate.py              # rebuilds data/*.json
+```
 
 ### Battle
 

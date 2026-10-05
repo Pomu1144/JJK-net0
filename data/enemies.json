@@ -142,7 +142,7 @@
     "turns": 2
    }
   },
-  "art": "assets/enemies/mahito_boss.svg"
+  "art": "assets/pp/portraits/mahito_boss.webp"
  },
  {
   "id": "cursed_corpse",
@@ -186,7 +186,7 @@
     "chance": 40
    }
   },
-  "art": "assets/enemies/todo_boss.svg"
+  "art": "assets/pp/portraits/todo_boss.webp"
  },
  {
   "id": "cursed_bud",
@@ -231,7 +231,7 @@
     "turns": 2
    }
   },
-  "art": "assets/enemies/hanami_boss.svg"
+  "art": "assets/pp/portraits/hanami_boss.webp"
  },
  {
   "id": "shibuya_curse",
@@ -340,7 +340,7 @@
     "turns": 2
    }
   },
-  "art": "assets/enemies/jogo_boss.svg"
+  "art": "assets/pp/portraits/jogo_boss.webp"
  },
  {
   "id": "sukuna_boss",

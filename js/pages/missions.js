@@ -26,7 +26,7 @@
     const ch = M.chapters[chIdx];
     const got = ch.stages.reduce((a, st) => a + ((s.progress[st.id] || {}).stars || 0), 0);
     $('#tabs').innerHTML = M.chapters.map((c, i) => `<button class="jjk-tab${i === chIdx ? ' active' : ''}" data-c="${i}" type="button" ${chapterUnlocked(i) ? '' : 'disabled title="Clear the previous chapter"'}>${esc(c.arc)} · ${esc(c.name)}</button>`).join('');
-    $('#chapter').innerHTML = `<div class="chapter-hero jjk-panel"><span class="ch-kanji">${esc(ch.kanji)}</span>
+    $('#chapter').innerHTML = `<div class="chapter-hero jjk-panel${ch.bg ? ' has-bg' : ''}">${ch.bg ? `<div class="scene-bg" style="background-image:url('${esc(ch.bg)}')"></div>` : ''}<span class="ch-kanji">${esc(ch.kanji)}</span>
       <div class="grow"><b>${esc(ch.name)}</b><p>${esc(ch.desc)}</p></div>
       <div class="ch-stars"><b>${got}</b> / ${ch.stages.length * 3} ★</div></div>
       <div class="stage-list">${ch.stages.map((st) => {

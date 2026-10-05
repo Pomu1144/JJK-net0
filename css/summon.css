@@ -97,3 +97,6 @@ html.is-compact .draw-btn { height: 46px; }
 html.is-compact .reveal-cards { grid-template-columns: repeat(5, minmax(0, 66px)); gap: 6px; }
 html.is-compact .reveal-cards:has(.rcard:only-child) { grid-template-columns: 110px; }
 .ban-hero:not(.is-svg) { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 22%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent 0, #000 22%, #000 88%, transparent); }
+
+/* Banner scene art: the stage's colour glow is replaced by the scene */
+.ban-stage > .scene-bg::after { background: linear-gradient(90deg, rgba(6,8,10,.88) 0%, rgba(6,8,10,.5) 45%, rgba(6,8,10,.1) 100%); }

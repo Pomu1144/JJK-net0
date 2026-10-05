@@ -8,7 +8,8 @@
    "featured": [],
    "element": "Wisdom",
    "pityAt": 0,
-   "hero": "yuta_601"
+   "hero": "yuta_601",
+   "bg": "assets/pp/memories/someday-i-ll-be-with-everyone/art.webp"
   },
   {
    "id": "strongest",
@@ -21,7 +22,8 @@
    ],
    "element": "Skill",
    "pityAt": 60,
-   "hero": "gojo_9005"
+   "hero": "gojo_9005",
+   "bg": "assets/pp/memories/the-strongest-duo/art.webp"
   },
   {
    "id": "king",
@@ -35,7 +37,8 @@
    ],
    "element": "Body",
    "pityAt": 60,
-   "hero": "sukuna_9006"
+   "hero": "sukuna_9006",
+   "bg": "assets/pp/memories/malevolent-shrine/art.webp"
   }
  ],
  "rates": {

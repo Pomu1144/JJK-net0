@@ -1,0 +1,42 @@
+{
+  "_doc": "Real art for the game, taken from the Jujutsu Kaisen Phantom Parade fan wiki (see assets/pp/CREDITS.md). tools/pp_assets.py copies the files and cuts portraits; tools/generate.py reads this file. 'x' is the horizontal centre (0-1) of the 3:4 portrait crop.",
+  "characters": {
+    "yuji_301":      {"unit": "yuji-itadori-the-agile-body", "x": 0.48},
+    "miwa_302":      {"unit": "kasumi-miwa-firm-interception", "x": 0.42},
+    "mai_303":       {"unit": "mai-ze-nin-calculated-shot", "x": 0.46},
+    "momo_304":      {"unit": "momo-nishimiya-aerial-reconnaissance", "x": 0.40},
+    "mechamaru_305": {"unit": "kokichi-muta-mode-albatross", "x": 0.38},
+    "megumi_401":    {"unit": "megumi-fushiguro-inherited-cursed-technique", "x": 0.48},
+    "nobara_402":    {"unit": "nobara-kugisaki-girl-of-steel", "x": 0.70},
+    "toge_403":      {"unit": "toge-inumaki-compelling-cursed-speech", "x": 0.50},
+    "panda_404":     {"unit": "panda-don-t-blame-the-doll", "x": 0.62},
+    "kamo_405":      {"unit": "noritoshi-kamo-the-determination-within-the-bloodline", "x": 0.68},
+    "yuji_501":      {"unit": "yuuji-itadori-cursed-energy-black-flash", "x": 0.64},
+    "nanami_502":    {"unit": "kento-nanami-ratio-technique", "x": 0.52},
+    "maki_503":      {"unit": "maki-zen-in-rebellious-failure", "x": 0.60},
+    "todo_504":      {"unit": "aoi-todo-memories-of-friendship", "x": 0.42},
+    "hanami_508":    {"unit": "hanami-the-joys-of-battle", "x": 0.62},
+    "yuta_601":      {"unit": "yuta-okkotsu-lend-me-your-strength", "x": 0.33},
+    "toji_602":      {"unit": "toji-fushiguro-the-sorcerer-killer", "x": 0.38},
+    "geto_604":      {"unit": "suguru-geto-for-the-justice", "x": 0.47},
+    "mahito_609":    {"unit": "mahito-the-inspiration-of-death", "x": 0.50},
+    "jogo_610":      {"unit": "jogo-cursed-spirit-s-pride", "x": 0.45}
+  },
+  "enemies": {
+    "mahito_boss": {"unit": "mahito-the-inspiration-of-death", "x": 0.50},
+    "todo_boss":   {"unit": "aoi-todo-rowdy-first-class", "x": 0.36},
+    "hanami_boss": {"unit": "hanami-the-joys-of-battle", "x": 0.62},
+    "jogo_boss":   {"unit": "jogo-cursed-spirit-s-pride", "x": 0.45}
+  },
+  "chapters": {
+    "ch1": "sukuna-s-vessel",
+    "ch2": "instincts-of-a-curse",
+    "ch3": "arrival-of-kyoto-s-students",
+    "ch4": "the-encounter-in-the-mall-of-death"
+  },
+  "banners": {
+    "standard": "someday-i-ll-be-with-everyone",
+    "strongest": "the-strongest-duo",
+    "king": "malevolent-shrine"
+  }
+}

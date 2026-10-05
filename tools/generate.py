@@ -226,6 +226,19 @@ CHARS = [
 def rnd_for(key):
     return random.Random(sum(ord(c) * (i + 1) for i, c in enumerate(key)))
 
+# Real art from Phantom Parade (tools/pp-art.json, files from tools/pp_assets.py).
+PP = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pp-art.json')))
+
+
+def pp_unit_art(gid, group):
+    c = PP[group].get(gid)
+    if not c:
+        return None
+    base = f'assets/pp/units/{c["unit"]}/'
+    return {'portrait': f'assets/pp/portraits/{gid}.webp', 'full': base + 'art.webp',
+            'icon': base + 'icon.webp', 'source': 'phantom-parade', 'generated': False}
+
+
 def build_characters():
     out_list = []
     for (cid, name, title, el, rar, kanji, prof, art, basic, tech, ult, passives, support, aff) in CHARS:
@@ -245,7 +258,7 @@ def build_characters():
             'id': cid, 'name': name, 'title': title, 'element': el, 'rarity': rar,
             'maxLevel': MAX_LEVEL[rar], 'kanji': kanji, 'affiliation': aff,
             'statsBase': sb, 'statsMax': sm,
-            'art': {'portrait': portrait, 'full': full, 'generated': cid not in REAL},
+            'art': pp_unit_art(cid, 'characters') or {'portrait': portrait, 'full': full, 'generated': cid not in REAL},
             'basic': {'name': basic, 'mult': 1.0},
             'technique': tech,
             'ultimate': ult,
@@ -509,6 +522,9 @@ def build_enemies():
         lst.append({'id': eid, 'name': name, 'grade': grade, 'element': el, 'kanji': kanji,
                     'stats': {'hp': hp, 'atk': atk, 'speed': spd}, 'boss': boss,
                     'skill': skill, 'art': f'assets/enemies/{eid}.svg'})
+        pp = pp_unit_art(eid, 'enemies')
+        if pp:
+            lst[-1]['art'] = pp['portrait']
         out(f'assets/enemies/{eid}.svg', enemy_svg(e))
     return lst
 
@@ -609,6 +625,12 @@ BANNERS = {'banners': [
 
 
 def main():
+    for ch in MISSIONS['chapters']:
+        if ch['id'] in PP['chapters']:
+            ch['bg'] = f'assets/pp/memories/{PP["chapters"][ch["id"]]}/art.webp'
+    for b in BANNERS['banners']:
+        if b['id'] in PP['banners']:
+            b['bg'] = f'assets/pp/memories/{PP["banners"][b["id"]]}/art.webp'
     chars = build_characters()
     for (cid, *_rest), c in zip(CHARS, chars):
         art = _rest[6]

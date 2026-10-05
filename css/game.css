@@ -407,3 +407,9 @@ html.reduce-motion *, html.reduce-motion *::before, html.reduce-motion *::after 
 .home-hero img.art:not(.is-svg) { -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent), linear-gradient(0deg, transparent, #000 15%); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent), linear-gradient(0deg, transparent, #000 15%); mask-composite: intersect; }
 
 .portal-float { position: fixed; z-index: 50; top: max(10px, env(safe-area-inset-top)); right: max(var(--gutter), env(safe-area-inset-right)); display: flex !important; gap: 6px; align-items: center; }
+
+/* Scene art (Phantom Parade memories) behind chapter headers and banners */
+.scene-bg { position: absolute; inset: 0; z-index: 0; background: center 35% / cover no-repeat; pointer-events: none; }
+.scene-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,10,12,.92) 0%, rgba(8,10,12,.7) 45%, rgba(8,10,12,.3) 100%); }
+.chapter-hero.has-bg { min-height: 74px; }
+.chapter-hero.has-bg > :not(.scene-bg) { position: relative; z-index: 1; }

@@ -19,9 +19,11 @@
    "speed": 190
   },
   "art": {
-   "portrait": "assets/portraits/yuji_301.svg",
-   "full": "assets/portraits/yuji_301.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/yuji_301.webp",
+   "full": "assets/pp/units/yuji-itadori-the-agile-body/art.webp",
+   "icon": "assets/pp/units/yuji-itadori-the-agile-body/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Divergent Fist",
@@ -74,9 +76,11 @@
    "speed": 257
   },
   "art": {
-   "portrait": "assets/portraits/miwa_302.svg",
-   "full": "assets/portraits/miwa_302.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/miwa_302.webp",
+   "full": "assets/pp/units/kasumi-miwa-firm-interception/art.webp",
+   "icon": "assets/pp/units/kasumi-miwa-firm-interception/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Sword Draw",
@@ -129,9 +133,11 @@
    "speed": 213
   },
   "art": {
-   "portrait": "assets/portraits/mai_303.svg",
-   "full": "assets/portraits/mai_303.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/mai_303.webp",
+   "full": "assets/pp/units/mai-ze-nin-calculated-shot/art.webp",
+   "icon": "assets/pp/units/mai-ze-nin-calculated-shot/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Revolver Shot",
@@ -184,9 +190,11 @@
    "speed": 246
   },
   "art": {
-   "portrait": "assets/portraits/momo_304.svg",
-   "full": "assets/portraits/momo_304.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/momo_304.webp",
+   "full": "assets/pp/units/momo-nishimiya-aerial-reconnaissance/art.webp",
+   "icon": "assets/pp/units/momo-nishimiya-aerial-reconnaissance/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Broom Swipe",
@@ -239,9 +247,11 @@
    "speed": 194
   },
   "art": {
-   "portrait": "assets/portraits/mechamaru_305.svg",
-   "full": "assets/portraits/mechamaru_305.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/mechamaru_305.webp",
+   "full": "assets/pp/units/kokichi-muta-mode-albatross/art.webp",
+   "icon": "assets/pp/units/kokichi-muta-mode-albatross/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Rocket Fist",
@@ -294,9 +304,11 @@
    "speed": 265
   },
   "art": {
-   "portrait": "assets/portraits/megumi_401.svg",
-   "full": "assets/portraits/megumi_401.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/megumi_401.webp",
+   "full": "assets/pp/units/megumi-fushiguro-inherited-cursed-technique/art.webp",
+   "icon": "assets/pp/units/megumi-fushiguro-inherited-cursed-technique/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Shadow Strike",
@@ -354,9 +366,11 @@
    "speed": 251
   },
   "art": {
-   "portrait": "assets/portraits/nobara_402.svg",
-   "full": "assets/portraits/nobara_402.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/nobara_402.webp",
+   "full": "assets/pp/units/nobara-kugisaki-girl-of-steel/art.webp",
+   "icon": "assets/pp/units/nobara-kugisaki-girl-of-steel/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Hammer & Nail",
@@ -414,9 +428,11 @@
    "speed": 323
   },
   "art": {
-   "portrait": "assets/portraits/toge_403.svg",
-   "full": "assets/portraits/toge_403.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/toge_403.webp",
+   "full": "assets/pp/units/toge-inumaki-compelling-cursed-speech/art.webp",
+   "icon": "assets/pp/units/toge-inumaki-compelling-cursed-speech/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Megaphone Bash",
@@ -473,9 +489,11 @@
    "speed": 246
   },
   "art": {
-   "portrait": "assets/portraits/panda_404.svg",
-   "full": "assets/portraits/panda_404.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/panda_404.webp",
+   "full": "assets/pp/units/panda-don-t-blame-the-doll/art.webp",
+   "icon": "assets/pp/units/panda-don-t-blame-the-doll/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Panda Punch",
@@ -528,9 +546,11 @@
    "speed": 320
   },
   "art": {
-   "portrait": "assets/portraits/kamo_405.svg",
-   "full": "assets/portraits/kamo_405.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/kamo_405.webp",
+   "full": "assets/pp/units/noritoshi-kamo-the-determination-within-the-bloodline/art.webp",
+   "icon": "assets/pp/units/noritoshi-kamo-the-determination-within-the-bloodline/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Blood Arrow",
@@ -583,9 +603,11 @@
    "speed": 304
   },
   "art": {
-   "portrait": "assets/portraits/yuji_501.svg",
-   "full": "assets/portraits/yuji_501.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/yuji_501.webp",
+   "full": "assets/pp/units/yuuji-itadori-cursed-energy-black-flash/art.webp",
+   "icon": "assets/pp/units/yuuji-itadori-cursed-energy-black-flash/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Divergent Fist",
@@ -657,9 +679,11 @@
    "speed": 300
   },
   "art": {
-   "portrait": "assets/portraits/nanami_502.svg",
-   "full": "assets/portraits/nanami_502.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/nanami_502.webp",
+   "full": "assets/pp/units/kento-nanami-ratio-technique/art.webp",
+   "icon": "assets/pp/units/kento-nanami-ratio-technique/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Blunt Blade",
@@ -727,9 +751,11 @@
    "speed": 379
   },
   "art": {
-   "portrait": "assets/portraits/maki_503.svg",
-   "full": "assets/portraits/maki_503.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/maki_503.webp",
+   "full": "assets/pp/units/maki-zen-in-rebellious-failure/art.webp",
+   "icon": "assets/pp/units/maki-zen-in-rebellious-failure/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Polearm Thrust",
@@ -797,9 +823,11 @@
    "speed": 281
   },
   "art": {
-   "portrait": "assets/portraits/todo_504.svg",
-   "full": "assets/portraits/todo_504.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/todo_504.webp",
+   "full": "assets/pp/units/aoi-todo-memories-of-friendship/art.webp",
+   "icon": "assets/pp/units/aoi-todo-memories-of-friendship/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Brawler Strike",
@@ -1090,9 +1118,11 @@
    "speed": 292
   },
   "art": {
-   "portrait": "assets/portraits/hanami_508.svg",
-   "full": "assets/portraits/hanami_508.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/hanami_508.webp",
+   "full": "assets/pp/units/hanami-the-joys-of-battle/art.webp",
+   "icon": "assets/pp/units/hanami-the-joys-of-battle/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Root Lash",
@@ -1169,9 +1199,11 @@
    "speed": 347
   },
   "art": {
-   "portrait": "assets/portraits/yuta_601.svg",
-   "full": "assets/portraits/yuta_601.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/yuta_601.webp",
+   "full": "assets/pp/units/yuta-okkotsu-lend-me-your-strength/art.webp",
+   "icon": "assets/pp/units/yuta-okkotsu-lend-me-your-strength/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Katana Slash",
@@ -1243,9 +1275,11 @@
    "speed": 436
   },
   "art": {
-   "portrait": "assets/portraits/toji_602.svg",
-   "full": "assets/portraits/toji_602.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/toji_602.webp",
+   "full": "assets/pp/units/toji-fushiguro-the-sorcerer-killer/art.webp",
+   "icon": "assets/pp/units/toji-fushiguro-the-sorcerer-killer/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Playful Cloud",
@@ -1388,9 +1422,11 @@
    "speed": 324
   },
   "art": {
-   "portrait": "assets/portraits/geto_604.svg",
-   "full": "assets/portraits/geto_604.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/geto_604.webp",
+   "full": "assets/pp/units/suguru-geto-for-the-justice/art.webp",
+   "icon": "assets/pp/units/suguru-geto-for-the-justice/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Playful Cloud",
@@ -1759,9 +1795,11 @@
    "speed": 351
   },
   "art": {
-   "portrait": "assets/portraits/mahito_609.svg",
-   "full": "assets/portraits/mahito_609.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/mahito_609.webp",
+   "full": "assets/pp/units/mahito-the-inspiration-of-death/art.webp",
+   "icon": "assets/pp/units/mahito-the-inspiration-of-death/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Shape Shift",
@@ -1834,9 +1872,11 @@
    "speed": 360
   },
   "art": {
-   "portrait": "assets/portraits/jogo_610.svg",
-   "full": "assets/portraits/jogo_610.svg",
-   "generated": true
+   "portrait": "assets/pp/portraits/jogo_610.webp",
+   "full": "assets/pp/units/jogo-cursed-spirit-s-pride/art.webp",
+   "icon": "assets/pp/units/jogo-cursed-spirit-s-pride/icon.webp",
+   "source": "phantom-parade",
+   "generated": false
   },
   "basic": {
    "name": "Ember Punch",

@@ -280,7 +280,8 @@
       }
      }
     }
-   ]
+   ],
+   "bg": "assets/pp/memories/sukuna-s-vessel/art.webp"
   },
   {
    "id": "ch2",
@@ -593,7 +594,8 @@
       }
      }
     }
-   ]
+   ],
+   "bg": "assets/pp/memories/instincts-of-a-curse/art.webp"
   },
   {
    "id": "ch3",
@@ -887,7 +889,8 @@
       }
      }
     }
-   ]
+   ],
+   "bg": "assets/pp/memories/arrival-of-kyoto-s-students/art.webp"
   },
   {
    "id": "ch4",
@@ -1181,7 +1184,8 @@
       }
      }
     }
-   ]
+   ],
+   "bg": "assets/pp/memories/the-encounter-in-the-mall-of-death/art.webp"
   }
  ]
 }
