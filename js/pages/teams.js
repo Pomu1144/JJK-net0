@@ -13,25 +13,32 @@
     const t = team();
     const sup = t.support && Rules.unitView(t.support);
     const supSkill = sup && sup.def.support;
-    $('#tabs').innerHTML = s.teams.map((tm, i) => `<button class="jjk-tab${i === teamIdx ? ' active' : ''}" data-t="${i}" type="button">${esc(tm.name)}${i === s.activeTeam ? ' ★' : ''}</button>`).join('');
+    $('#tabs').innerHTML = s.teams.map((tm, i) => `<button class="jjk-tab${i === teamIdx ? ' active' : ''}" data-t="${i}" type="button">${esc(tm.name)}${i === s.activeTeam ? ' ◆' : ''}</button>`).join('');
+    const ORD = ['1st', '2nd', '3rd', '4th', ''];
     const slot = (i) => {
       const id = slotId(i);
       const v = id && Rules.unitView(id);
-      return `<div class="slot${i === 4 ? ' is-support' : ''}"><span class="slot-label">${i === 4 ? '支援 · SUPPORT' : (i === 0 ? 'LEADER' : 'FRONT ' + (i + 1))}</span>
-        <button class="slot-box${sel === i ? ' is-sel' : ''}" data-slot="${i}" type="button" aria-label="${i === 4 ? 'Support slot' : 'Front slot ' + (i + 1)}">${v ? UI.unitCard(v, { tag: 'span' }) : UI.icon('plus')}</button></div>`;
+      const d = v && v.def;
+      const card = d ? `${Art.img(d, 'portrait', { alt: '' })}${UI.focusTag(d)}<span class="fm-lv">Lv${v.unit.level}</span>${UI.typeBadge(d, 'fm-type')}
+          <span class="fm-strip">${UI.rarityBadge(d)}<span>${esc(d.name)}</span></span>` : `<span class="fm-empty">${UI.icon('plus')}<small>${i === 4 ? 'Backup' : 'Empty'}</small></span>`;
+      return `<button class="slot-box fm-card${d ? ' t-' + UI.typeOf(d).toLowerCase() + ' is-' + UI.rarityOf(d).toLowerCase() : ' is-empty'}${i === 4 ? ' is-support' : ''}${sel === i ? ' is-sel' : ''}" data-slot="${i}" type="button" aria-label="${i === 4 ? 'Backup (support) slot' : 'Main slot ' + (i + 1)}">
+          ${ORD[i] ? `<span class="fm-ord">${ORD[i]}</span>` : ''}${card}</button>`;
     };
     $('#formation').innerHTML = `
       <div class="formation-head"><h3>${esc(t.name)}</h3>
-        <button class="jjk-btn is-small" id="rename" type="button">Rename</button>
-        <button class="jjk-btn is-small${s.activeTeam === teamIdx ? ' is-primary' : ''}" id="activate" type="button">${s.activeTeam === teamIdx ? 'Active team' : 'Set active'}</button>
-        <span class="power">Team power <b>${fmt(Rules.teamPower(t))}</b></span></div>
-      <div class="slots">${[0, 1, 2, 3].map(slot).join('')}<span class="slot-sep"></span>${slot(4)}</div>
-      <p class="support-note">${supSkill ? `Support · <b>${esc(supSkill.name)}</b>: ${esc(supSkill.desc)}` : 'Support does not fight; their support skill boosts the whole front line.'}</p>
-      <div class="row" style="gap:6px"><button class="jjk-btn is-small" id="clear" type="button">Clear slot</button><button class="jjk-btn is-small" id="auto" type="button">Auto-fill strongest</button></div>`;
+        <button class="pp-stone fm-mini" id="rename" type="button" aria-label="Rename team" title="Rename">✎</button>
+        <span class="power">Current Power <b>${fmt(Rules.teamPower(t))}</b></span>
+        <button class="jjk-btn is-small${s.activeTeam === teamIdx ? ' is-primary' : ''}" id="activate" type="button">${s.activeTeam === teamIdx ? 'Active team' : 'Set active'}</button></div>
+      <div class="fm-row">
+        <div class="fm-main"><h4 class="brush">Main</h4><div class="fm-cards">${[0, 1, 2, 3].map(slot).join('')}</div></div>
+        <div class="fm-backup"><h4 class="brush">Backup</h4><div class="fm-cards">${slot(4)}</div></div>
+      </div>
+      <div class="fm-tools"><button class="pp-stone" id="auto" type="button">Quick Format</button><button class="pp-stone" id="clear" type="button">Clear Slot</button>
+        <p class="support-note">${supSkill ? `Backup · <b>${esc(supSkill.name)}</b>: ${esc(supSkill.desc)}` : 'The Backup does not fight; its support skill boosts the whole Main line.'}</p></div>`;
     const used = new Set([...t.slots, t.support].filter(Boolean));
     const list = Rules.ownedList().sort((a, b) => b.power - a.power);
-    $('#pick-title').textContent = sel === 4 ? 'Pick a support' : 'Pick for slot ' + (sel + 1);
-    $('#pick').innerHTML = list.map((v) => UI.unitCard(v, { picked: v.id === slotId(sel), dim: used.has(v.id) && v.id !== slotId(sel) })).join('');
+    $('#pick-title').textContent = sel === 4 ? 'Pick the Backup' : 'Pick for Main ' + (sel + 1);
+    $('#pick').innerHTML = list.map((v) => UI.unitCard(v, { picked: v.id === slotId(sel), dim: used.has(v.id) && v.id !== slotId(sel), tag2: false })).join('');
   }
 
   function place(id) {
@@ -54,10 +61,8 @@
   function render() {
     teamIdx = Save.get().activeTeam;
     $('#main').innerHTML = `<div class="tabs" id="tabs"></div>
-      <div class="team-layout">
-        <section class="formation jjk-panel" id="formation"></section>
-        <section class="picker jjk-panel"><div class="section-title" id="pick-title">Pick</div><div class="unit-grid" id="pick"></div></section>
-      </div>`;
+      <section class="formation" id="formation"></section>
+      <section class="picker jjk-panel"><div class="section-title" id="pick-title">Pick</div><div class="unit-grid" id="pick"></div></section>`;
     $('#tabs').addEventListener('click', (e) => { const b = e.target.closest('[data-t]'); if (b) { teamIdx = +b.dataset.t; sel = 0; draw(); } });
     $('#formation').addEventListener('click', async (e) => {
       const sb = e.target.closest('[data-slot]');
@@ -78,6 +83,6 @@
     draw();
   }
 
-  UI.boot({ data: ['characters'], init: render });
+  UI.boot({ back: 'formation.html', data: ['characters'], init: render });
   window.addEventListener('portal:imported', () => { if ($('#pick')) draw(); });
 })();

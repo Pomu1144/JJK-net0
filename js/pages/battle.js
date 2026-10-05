@@ -52,32 +52,39 @@
 
   /* ---------------- rendering ---------------- */
   function unitHtml(u) {
-    const img = u.side === 'ally' ? Art.img(u.def, 'portrait', { eager: true, alt: '' }) : `<img class="art" src="${esc(u.def.art)}" alt="" draggable="false">`;
-    return `<div class="bu ${u.side}${u.boss ? ' is-boss' : ''} el-${u.element.toLowerCase()}" data-key="${u.key}" ${u.side === 'enemy' ? 'role="button" tabindex="0"' : ''} aria-label="${esc(u.name)}">
-      <div class="bu-art">${img}<img class="bu-orb" src="${Art.orb(u.element)}" alt="" width="18" height="18"><span class="bu-fx"></span><span class="bu-status"></span></div>
-      <div class="bu-name">${u.side === 'enemy' ? `<small>Lv${u.level}</small> ` : ''}${esc(u.name)}</div>
+    const tsrc = u.def && u.def.color ? u.def : u.element;
+    const t = UI.typeOf(tsrc).toLowerCase();
+    if (u.side === 'ally') {
+      const lv = (Rules.unitView(u.id) || { unit: {} }).unit.level;
+      return `<div class="bu ally t-${t} el-${u.element.toLowerCase()}" data-key="${u.key}" aria-label="${esc(u.name)}">
+        <div class="bu-name">${esc(u.name)}</div>
+        <div class="bu-row"><div class="bu-art">${Art.img(u.def, 'icon', { eager: true, alt: '' })}${UI.typeBadge(tsrc, 'bu-type')}${lv ? `<span class="bu-lv">Lv<b>${lv}</b></span>` : ''}<span class="bu-fx"></span><span class="bu-status"></span></div>
+          <div class="bu-bars"><div class="bu-hp"><i></i><span></span></div>${u.ultimate ? '<div class="bu-gauge"><i></i></div>' : ''}</div></div>
+      </div>`;
+    }
+    return `<div class="bu enemy${u.boss ? ' is-boss' : ''} t-${t} el-${u.element.toLowerCase()}" data-key="${u.key}" role="button" tabindex="0" aria-label="${esc(u.name)}">
       <div class="bu-hp"><i></i><span></span></div>
-      ${u.side === 'ally' && u.ultimate ? '<div class="bu-gauge"><i></i></div>' : ''}
+      <div class="bu-art"><img class="art" src="${esc(u.def.art)}" alt="" draggable="false">${UI.typeBadge(tsrc, 'bu-type')}${u.boss ? '<span class="bu-boss">BOSS</span>' : ''}<span class="bu-lv">Lv<b>${u.level}</b></span><span class="bu-fx"></span><span class="bu-status"></span></div>
+      <div class="bu-name">${esc(u.name)}</div>
     </div>`;
   }
 
   function build() {
     const sup = supportId && Rules.unitView(supportId);
+    if (chapter.bg) document.body.style.setProperty('--scene', `url('${new URL(chapter.bg, location.href).href}')`);
     $('#main').innerHTML = `<div class="battle el-${(chapter.element || 'Body').toLowerCase()}">
       <div class="bt-top">
-        <span class="bt-wave" id="wave"></span><span class="bt-round" id="round"></span>
-        <div class="bt-ce" id="ce" title="Cursed energy"><span class="ce-label">呪力</span><span class="ce-pips"></span><b></b></div>
+        <div class="bt-wave-plate"><span class="bt-wave" id="wave"></span><span class="bt-round" id="round"></span></div>
+        <div class="bt-ce" id="ce" title="Cursed energy"><img class="ce-ic" src="assets/pp/ui/Energy.webp" alt=""><span class="ce-label">呪力</span><span class="ce-pips"></span><b></b></div>
         <span class="grow"></span>
-        ${sup ? `<span class="bt-support" title="${esc(sup.def.support.desc)}">${Art.img(sup.def, 'portrait', { alt: '' })}<small>${esc(sup.def.support.name)}</small></span>` : ''}
-        <button class="jjk-btn is-small" id="auto" type="button" aria-pressed="${auto}">Auto</button>
-        <button class="jjk-btn is-small" id="speed" type="button">${speed}x</button>
+        ${sup ? `<span class="bt-support" title="${esc(sup.def.support.desc)}">${Art.img(sup.def, 'icon', { alt: '' })}<small>${esc(sup.def.support.name)}</small></span>` : ''}
+        <button class="pp-stone bt-sq" id="speed" type="button" title="Battle speed">${speed}x</button>
+        <button class="pp-stone bt-sq" id="auto" type="button" aria-pressed="${auto}" title="Auto battle">Auto</button>
       </div>
-      <div class="bt-field">
-        <div class="bt-side bt-allies" id="allies"></div>
-        <div class="bt-vs">VS</div>
-        <div class="bt-side bt-enemies" id="enemies"></div>
-      </div>
+      <div class="bt-field"><div class="bt-side bt-enemies" id="enemies"></div></div>
+      <div class="bt-actor" id="actor"></div>
       <div class="bt-panel" id="panel"></div>
+      <div class="bt-side bt-allies" id="allies"></div>
       <div class="bt-banner" id="banner"></div>
     </div>`;
     $('#allies').innerHTML = S.allies.map(unitHtml).join('');
@@ -117,7 +124,7 @@
   }
 
   function paint() {
-    $('#wave').textContent = 'Wave ' + (S.wave + 1) + '/' + S.waveCount;
+    $('#wave').innerHTML = '<small>WAVE</small>' + (S.wave + 1) + '/' + S.waveCount;
     $('#round').textContent = 'Turn ' + Math.max(1, S.round) + ' · ★ ≤ ' + stage.turnGoal;
     const ce = $('#ce');
     ce.querySelector('b').textContent = S.ce + '/' + S.ceMax;
@@ -144,24 +151,37 @@
     }
   }
 
+  function drawActor(u) {
+    const a = $('#actor');
+    if (!a) return;
+    if (!u || u.side !== 'ally') { a.classList.remove('on'); return; }
+    if (a.dataset.key !== u.key) { a.dataset.key = u.key; a.innerHTML = Art.img(u.def, 'full', { alt: '', eager: true }); }
+    a.classList.add('on');
+  }
+
   function drawPanel() {
     const p = $('#panel');
     const u = current;
+    drawActor(u);
     if (!u || u.side !== 'ally') {
       p.innerHTML = `<div class="bt-wait">${u ? esc(u.name) + ' is acting…' : ''}</div>`;
       return;
     }
     const ul = u.ultimate;
-    const techBtn = (t, slot) => `<button class="act act-tech" data-act="technique" data-slot="${slot}" type="button" ${can && t && E.canTechnique(S, u, slot) ? '' : 'disabled'}>${u.def && u.def.art && u.def.art.skills && u.def.art.skills['s' + (slot + 1)] ? `<img class="act-icon" src="${esc(u.def.art.skills['s' + (slot + 1)])}" alt="">` : ''}<b>${t ? esc(t.name) : '—'}</b><small>${t ? 'Skill ' + (slot + 1) + ' · ' + t.cost + ' CE' : 'No skill'}</small></button>`;
+    const fk = u.def && u.def.focusKanji ? `<i class="act-fk">${esc(u.def.focusKanji)}</i>` : '';
+    const sk = (k, fb) => `<span class="act-ic">${u.def && u.def.art && u.def.art.skills && u.def.art.skills[k] ? `<img src="${esc(u.def.art.skills[k])}" alt="">` : UI.icon(fb)}${fk}</span>`;
+    const confirm = '<span class="act-ok">Confirm</span>';
     const can = !!waiting && !auto;
+    const ready = E.canUltimate(S, u);
+    const techBtn = (t, slot) => `<button class="act act-tech" data-act="technique" data-slot="${slot}" type="button" ${can && t && E.canTechnique(S, u, slot) ? '' : 'disabled'}>${sk('s' + (slot + 1), 'bolt')}<span class="act-tx"><small class="act-k">Skill ${slot + 1}</small><b>${t ? esc(t.name) : '—'}</b></span><span class="act-ce">${t ? t.cost : ''}</span>${confirm}</button>`;
+    const tgt = target && E.find(S, target);
     p.innerHTML = `
-      <div class="bt-who">${Art.img(u.def, 'portrait', { alt: '' })}<div><b>${esc(u.name)}</b><small>${fmt(u.hp)} / ${fmt(u.maxHp)} HP</small>
-        <small class="bt-hint">${auto ? 'Auto battle on' : target ? '⌖ ' + esc((E.find(S, target) || {}).name || '') : 'Tap a curse to target'}</small></div></div>
-      <button class="act act-atk" data-act="attack" type="button" ${can ? '' : 'disabled'}><b>Attack</b><small>${esc(u.basic.name)} · +1 CE</small></button>
+      <div class="bt-who"><small class="bt-hint">${auto ? 'Auto battle on' : tgt ? 'Selected enemy: ' + esc(tgt.name) : 'Tap an enemy to target'}</small><span class="bt-hp">${esc(u.name)} · ${fmt(u.hp)}/${fmt(u.maxHp)} HP</span></div>
+      <button class="act act-atk" data-act="attack" type="button" ${can ? '' : 'disabled'}>${sk('normal', 'attack')}<span class="act-tx"><small class="act-k">Attack</small><b>${esc(u.basic.name)}</b></span><span class="act-ce plus">+1</span>${confirm}</button>
       ${techBtn(u.technique, 0)}
       ${u.technique2 ? techBtn(u.technique2, 1) : ''}
-      <button class="act act-ult${E.canUltimate(S, u) ? ' is-ready' : ''}" data-act="ultimate" type="button" ${can && E.canUltimate(S, u) ? '' : 'disabled'}>
-        <b>${ul ? (ul.kind === 'domain' ? 'Domain Expansion' : 'Ultimate') : 'No ultimate'}</b><small>${ul ? esc(ul.name.replace(/^Domain Expansion: /, '')) + ' · ' + ul.cost + ' CE' + (u.gauge < 100 ? ' · ' + Math.floor(u.gauge) + '%' : '') : '—'}</small></button>`;
+      <button class="act act-ult${ready ? ' is-ready' : ''}" data-act="ultimate" type="button" ${can && ready ? '' : 'disabled'} style="--g:${ul ? Math.floor(u.gauge) : 0}%">
+        ${sk('ult', 'bolt')}<span class="act-tx"><small class="act-k">${ul ? (ul.kind === 'domain' ? 'Domain Expansion' : 'Ultimate') + (u.gauge < 100 ? ' · ' + Math.floor(u.gauge) + '%' : '') : 'Ultimate'}</small><b>${ul ? esc(ul.name.replace(/^Domain Expansion: /, '')) : 'None'}</b></span><span class="act-ce">${ul ? ul.cost : ''}</span>${confirm}</button>`;
   }
 
   function selectTarget(key) {
@@ -221,7 +241,7 @@
         case 'action': {
           const u = E.find(S, ev.from);
           if (ev.kind === 'domain' || ev.kind === 'ultimate') await domainCutIn(u, u.ultimate);
-          else if (ev.kind === 'technique' || ev.kind === 'skill') await showBanner(`<small>${ev.kind === 'skill' ? '呪霊 · Curse technique' : '術式 · Cursed Technique'}</small><b>${esc(ev.name)}</b>`, u.side, 650);
+          else if (ev.kind === 'technique' || ev.kind === 'skill') await showBanner(`<small>${ev.kind === 'skill' ? '術式 · Enemy technique' : '術式 · Cursed Technique'}</small><b>${esc(ev.name)}</b>`, u.side, 650);
           pulse(ev.from, u.side === 'ally' ? 'lunge-r' : 'lunge-l', 380);
           await wait(200);
           break;
@@ -342,8 +362,8 @@
     const ov = document.createElement('div');
     ov.className = 'results ' + (win ? 'is-win' : 'is-lose');
     ov.innerHTML = `<div class="res-box jjk-panel">
-      <div class="res-head"><span class="res-k">${win ? '祓除' : '敗北'}</span><h2>${win ? 'Mission Clear' : 'Defeat'}</h2><span class="res-sub">${esc(stage.id + ' · ' + stage.name)}</span></div>
-      ${win ? `<div class="res-stars">${conds.map((c, i) => `<div class="res-star${c.ok ? ' on' : ''}" style="--d:${0.2 + i * 0.25}s"><i>★</i><small>${esc(c.text)}</small></div>`).join('')}</div>
+      <div class="res-head"><span class="res-k">${win ? '任務完了' : '敗北'}</span><h2 class="res-title">${win ? 'MISSION CLEAR' : 'DEFEAT'}</h2><span class="res-sub">${esc(stage.id + ' · ' + stage.name)}</span></div>
+      ${win ? `<div class="res-stars">${conds.map((c, i) => `<div class="res-star pp-card${c.ok ? ' on' : ''}" style="--d:${0.2 + i * 0.25}s"><i>★</i><small>${esc(c.text)}</small></div>`).join('')}</div>
       <div class="res-rewards">
         <span class="rw">${UI.YEN_SVG} ¥${fmt(r.yen)}</span><span class="rw">Rank EXP +${fmt(r.rankExp)}${res.rankUps ? ' · <b class="gold">RANK UP!</b>' : ''}</span>
         ${itemLine(res.drops)}
@@ -352,9 +372,9 @@
       <div class="res-units">${res.levels.map((l) => {
         const v = Rules.unitView(l.id);
         if (!v) return '';
-        return `<div class="res-unit">${Art.img(v.def, 'portrait', { alt: '' })}<small>${esc(v.def.name)}</small>
+        return `<div class="res-unit pp-card">${Art.img(v.def, 'icon', { alt: '' })}<small>${esc(v.def.name)}</small>
           <b>${l.to > l.from ? `Lv ${l.from} → <span class="gold">${l.to}</span>` : l.capped ? 'MAX' : 'Lv ' + l.to}</b><small>+${fmt(l.gained)} EXP${l.support ? ' (support)' : ''}</small></div>`;
-      }).join('')}</div>` : `<p class="res-lose">The curses were too strong. Level up with talismans, check element advantage (Body › Skill › Heart › Body, Bravery ⇄ Wisdom) or bring a stronger support.</p>`}
+      }).join('')}</div>` : `<p class="res-lose">Your opponents were too strong. Level up with talismans, use type advantage (影 Blue › 夜 Green › 幻 Red › 影 Blue, 行 Yellow ⇄ Purple) or bring a stronger support.</p>`}
       <div class="modal-actions">
         ${PortalPort.session ? '<button class="jjk-btn" type="button" id="res-portal">Return to Portal</button>' : ''}
         <a class="jjk-btn" href="home.html">Home</a>

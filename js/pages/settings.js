@@ -48,10 +48,7 @@
   function cardMini(c) {
     // a Portal card shown as a roster card (art may be from another game)
     const def = { id: 'card_' + c.id, name: c.name, title: c.title, element: c.element, rarity: c.rarity, art: c.art, kanji: '' };
-    return `<div class="ucard r${Math.min(7, Math.max(3, c.rarity))}" title="${esc(c.name + ' · ' + c.sourceGame)}">${Art.img(def, 'portrait')}
-      <img class="uc-orb" src="${Art.orb(c.element)}" alt="" width="20" height="20">
-      ${c.sourceGame !== PortalPort.GAME_ID ? '<span class="uc-badge badge is-guest">' + esc(c.sourceGame) + '</span>' : ''}
-      <span class="uc-foot"><span class="uc-name">${esc(c.name)}</span><span class="uc-meta">${UI.stars(c.rarity)}<span>Lv${c.level}</span></span></span></div>`;
+    return UI.unitTile(def, { tag: 'div', level: c.level, title: c.name + ' · ' + c.sourceGame, badge: c.sourceGame !== PortalPort.GAME_ID ? '<span class="uc-badge badge is-guest">' + esc(c.sourceGame) + '</span>' : '' });
   }
 
   function portalTab(s) {
@@ -71,8 +68,8 @@
       <div class="section-title" style="margin-top:12px">Wallet <small>財布 · CURRENCY</small></div>
       <p class="muted" style="font-size:12px;margin:0 0 6px">Currency you send is held at the Portal, where you can convert it to other games' currencies or invest it. Receive brings Yen or Cubes held at the Portal back into this game. Currency never travels in Portal Codes.</p>
       <div class="wallet-grid">
-        <div class="wallet-box"><h5>IN THIS GAME</h5><div>${UI.YEN_SVG} ¥${fmt(s.currency.yen)} Yen</div><div>${UI.CUBE_SVG} ${fmt(s.currency.cubes)} Cubes</div></div>
-        <div class="wallet-box"><h5>HELD AT THE PORTAL</h5>${sess ? `<div id="w-coins">${UI.YEN_SVG} ¥${fmt(sess.wallet.coins)} Yen at Portal</div><div id="w-premium">${UI.CUBE_SVG} ${fmt(sess.wallet.premium)} Cubes at Portal</div>` : '<div class="muted" style="font-weight:500">—</div>'}</div>
+        <div class="wallet-box pp-card"><h5>IN THIS GAME</h5><div>${UI.YEN_SVG} ¥${fmt(s.currency.yen)} Yen</div><div>${UI.CUBE_SVG} ${fmt(s.currency.cubes)} Cubes</div></div>
+        <div class="wallet-box pp-card"><h5>HELD AT THE PORTAL</h5>${sess ? `<div id="w-coins">${UI.YEN_SVG} ¥${fmt(sess.wallet.coins)} Yen at Portal</div><div id="w-premium">${UI.CUBE_SVG} ${fmt(sess.wallet.premium)} Cubes at Portal</div>` : '<div class="muted" style="font-weight:500">—</div>'}</div>
       </div>
       <div class="row wrap">
         <input class="input" id="w-amt" type="number" min="1" step="1" inputmode="numeric" placeholder="Amount" style="width:120px" ${sess ? '' : 'disabled'}>

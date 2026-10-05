@@ -46,7 +46,9 @@
 
   function src(def, kind) {
     const a = def && def.art;
-    const u = a && (kind === 'full' ? a.full || a.portrait : a.portrait || a.full);
+    const u = a && (kind === 'full' ? a.full || a.portrait
+      : kind === 'icon' ? a.icon || a.full || a.portrait
+        : a.portrait || a.full);
     return u || fallback(def);
   }
 
@@ -64,9 +66,32 @@
     el.src = fallback(registry.get(el.dataset.artId) || { id: el.dataset.artId, name: el.alt });
   }
 
-  function orb(element) {
-    return 'assets/ui/jjk/orb_' + String(element || 'body').toLowerCase() + '.webp';
+  /* Phantom Parade unit types: 幻 Red (Heart), 影 Blue (Body), 夜 Green (Skill),
+   * 行 Yellow (Bravery). Wisdom curses keep a drawn purple diamond. */
+  const TYPES = {
+    Red:    { kanji: '幻', img: 'assets/pp/ui/RedType.webp' },
+    Blue:   { kanji: '影', img: 'assets/pp/ui/BlueType.webp' },
+    Green:  { kanji: '夜', img: 'assets/pp/ui/GreenType.webp' },
+    Yellow: { kanji: '行', img: 'assets/pp/ui/YellowType.webp' },
+    Purple: { kanji: '呪', img: '' },
+  };
+  const EL_TYPE = { Heart: 'Red', Body: 'Blue', Skill: 'Green', Bravery: 'Yellow', Wisdom: 'Purple' };
+  let purpleUrl = '';
+  function purpleDiamond() {
+    if (purpleUrl) return purpleUrl;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 2 62 32 32 62 2 32z" fill="#2a1446" stroke="#d8b8ff" stroke-width="3"/><path d="M32 9 55 32 32 55 9 32z" fill="#1a0c2e" stroke="#a174e6" stroke-width="2"/><text x="32" y="42" text-anchor="middle" font-family="serif" font-size="28" font-weight="700" fill="#d9c2ff">呪</text></svg>`;
+    purpleUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    return purpleUrl;
   }
+  /** Type name ('Red' …) for a def, a colour or an internal element. */
+  function typeOf(x) {
+    if (!x) return 'Purple';
+    if (typeof x === 'string') return TYPES[x] ? x : (EL_TYPE[x] || 'Purple');
+    return (x.color && TYPES[x.color]) ? x.color : (EL_TYPE[x.element] || 'Purple');
+  }
+  function typeIcon(x) { const t = TYPES[typeOf(x)]; return t.img || purpleDiamond(); }
+  /** Kept for older callers: now returns the Phantom Parade type badge. */
+  function orb(element) { return typeIcon(element); }
 
-  global.Art = { src, img, fallback, onErr, orb, initials, COLORS: EL };
+    global.Art = { src, img, fallback, onErr, orb, typeOf, typeIcon, TYPES, initials, COLORS: EL };
 })(window);

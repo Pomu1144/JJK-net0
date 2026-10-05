@@ -10,16 +10,15 @@
     const main = $('#main');
     main.classList.add('title-main');
     main.innerHTML = `<section class="title-screen">
-      <div class="title-bg"></div>
-      <img class="title-shards" src="assets/ui/ink/shards.webp" alt="">
       <img class="title-hero" src="assets/characters/gojo_9005/full_7S.webp" alt="" fetchpriority="high">
       <div class="title-box">
-        <h1 class="title-kanji">呪術廻戦</h1>
-        <p class="title-en">Cursed Clash</p>
+        <div class="title-logo"><h1 class="title-kanji">呪術廻戦</h1>
+          <span class="title-pp">${['Red', 'Blue', 'Green', 'Yellow'].map((t) => `<img src="${Art.typeIcon(t)}" alt="">`).join('')} 幻影夜行</span>
+          <p class="title-en">Cursed Clash</p></div>
         <div class="title-form jjk-panel" id="form">
           ${s ? `
             <label>Welcome back</label>
-            <div class="row"><b class="grow" style="font-size:18px">${esc(s.profile.name)}</b><span class="jjk-chip">Rank ${s.profile.rank}</span></div>
+            <div class="row"><b class="grow" style="font-size:18px;font-weight:800">${esc(s.profile.name)}</b><span class="jjk-chip">Rank ${s.profile.rank}</span></div>
             <a class="jjk-btn is-primary is-wide" id="continue" href="home.html">Enter Jujutsu High</a>
             <p class="title-note">Not you? Change the name or start over in Settings › Account.</p>` : `
             <label for="name">Sorcerer name</label>

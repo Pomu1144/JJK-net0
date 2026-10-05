@@ -58,21 +58,24 @@
     const b = current;
     const hero = Data.char(b.hero);
     const one = costFor('single'), ten = costFor('multi');
+    const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
     $('#banner-art').innerHTML = `
-      <div class="ban-stage el-${b.element.toLowerCase()}">
+      <div class="ban-stage t-${UI.typeOf(b.element).toLowerCase()}">
         ${b.bg ? `<div class="scene-bg" style="background-image:url('${esc(b.bg)}')"></div>` : ''}
+        ${hero ? Art.img(hero, 'full', { cls: 'ban-hero', eager: true, alt: '' }) : ''}
         <span class="ban-kanji">${esc(b.kanji)}</span>
-        ${hero ? Art.img(hero, 'full', { cls: 'ban-hero' + (hero.art.generated ? ' is-svg' : ''), eager: true, alt: '' }) : ''}
-        <div class="ban-copy"><small>${b.featured.length ? 'RATE UP' : 'STANDARD'}</small><h2>${esc(b.name)}</h2><p>${esc(b.subtitle)}</p>
-          <div class="ban-feat">${b.featured.map((id) => { const d = Data.char(id); return d ? `<span>${UI.orb(d.element)} ${esc(d.name)} ${UI.stars(d.rarity)}</span>` : ''; }).join('')}</div></div>
+        <div class="ban-copy"><span class="pk-label">${b.featured.length ? 'PICKUP' : 'STANDARD'}</span>
+          <h2 class="ban-title">${esc(b.name)}</h2><p>${esc(b.subtitle)}</p></div>
+        ${feats.length ? `<div class="ban-film"><span class="film-holes"></span><div class="ban-feat">${feats.map((d) => UI.unitTile(d, { tag: 'span' })).join('')}</div><span class="film-holes"></span></div>` : ''}
+        ${b.pityAt ? `<span class="ban-rate">SSR rate up · ${B.featuredShare}%</span>` : ''}
       </div>`;
     $('#side').innerHTML = `
       <h3>${esc(b.name)}</h3>
-      ${b.pityAt ? `<div class="pity"><small>Pity</small><div class="bar"><i style="width:${Math.min(100, (s.pity[b.id] || 0) / b.pityAt * 100)}%"></i></div><small><b>${s.pity[b.id] || 0}</b> / ${b.pityAt} — a featured ★6+ is guaranteed at ${b.pityAt}</small></div>` : '<p class="muted" style="font-size:12px">No pity on the standard banner. Every 10x guarantees a ★5 or better.</p>'}
-      <button class="draw-btn is-single" id="pull1" type="button" ${one.short ? 'disabled' : ''}><span class="n">×1</span><span class="t">Summon<small>${one.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(one.label)}</small></span></button>
-      <button class="draw-btn is-multi" id="pull10" type="button" ${ten.short ? 'disabled' : ''}><span class="n">×10</span><span class="t">Summon<small>${ten.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(ten.label)}</small></span></button>
+      ${b.pityAt ? `<div class="pity"><small>Pity</small><div class="bar"><i style="width:${Math.min(100, (s.pity[b.id] || 0) / b.pityAt * 100)}%"></i></div><small><b>${s.pity[b.id] || 0}</b> / ${b.pityAt} — a featured SSR is guaranteed at ${b.pityAt}</small></div>` : '<p class="muted" style="font-size:11.5px;margin:0">No pity on the standard banner. Every 10x guarantees an SR or better.</p>'}
+      <button class="draw-btn is-single" id="pull1" type="button" ${one.short ? 'disabled' : ''}><span class="n">1<small>回</small></span><span class="t">Summon ×1<small>${one.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(one.label)}</small></span></button>
+      <button class="draw-btn is-multi" id="pull10" type="button" ${ten.short ? 'disabled' : ''}><span class="n">10<small>回</small></span><span class="t">Summon ×10<small>${ten.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(ten.label)}</small></span></button>
       <div class="row" style="gap:6px;margin-top:6px"><button class="jjk-btn is-small grow" id="rates" type="button">Rates</button><a class="jjk-btn is-small grow" href="shop.html#summon">Get Cubes</a></div>
-      <small class="muted">You have ${fmt(s.currency.cubes)} Cubes · ${s.items.ticket || 0} Tickets</small>`;
+      <small class="muted have">You have ${UI.CUBE_SVG} ${fmt(s.currency.cubes)} · ${UI.itemIcon('ticket', {})} ${s.items.ticket || 0}</small>`;
     $('#pull1').addEventListener('click', () => doPull('single'));
     $('#pull10').addEventListener('click', () => doPull('multi'));
     $('#rates').addEventListener('click', showRates);
@@ -83,10 +86,11 @@
     const b = current;
     const rows = Object.keys(B.rates).sort().reverse().map((r) => {
       const feats = b.featured.map((id) => Data.char(id)).filter((c) => c && c.rarity === Number(r));
-      return `<tr><td>${UI.stars(Number(r))}</td><td>${B.rates[r].toFixed(1)}%</td><td>${feats.length ? feats.map((f) => esc(f.name + ' (' + f.title + ')')).join(', ') + ` — ${B.featuredShare}% of ★${r} pulls` : '<span class="muted">—</span>'}</td><td class="muted">${pool(Number(r)).length} units</td></tr>`;
+      const lbl = Number(r) >= 7 ? 'Limited SSR' : UI.rarityOf(Number(r));
+      return `<tr><td>${UI.rarityBadge(Number(r))}${Number(r) >= 7 ? ' <span class="limited-tag">LIMITED</span>' : ''}</td><td><b>${B.rates[r].toFixed(1)}%</b></td><td>${feats.length ? feats.map((f) => esc(f.name + ' (' + f.title + ')')).join(', ') + ` — ${B.featuredShare}% of ${lbl} pulls` : '<span class="muted">—</span>'}</td><td class="muted">${pool(Number(r)).length} units</td></tr>`;
     }).join('');
     UI.modal(`<table class="rates"><thead><tr><th>Rarity</th><th>Rate</th><th>Featured</th><th>Pool</th></tr></thead><tbody>${rows}</tbody></table>
-      <p class="muted" style="font-size:12px">10x summons guarantee at least one ★${B.multiGuarantee} or better. ${b.pityAt ? `Pity: after ${b.pityAt - 1} pulls without a featured ★6+, the next pull is a featured unit. The counter carries over and resets when you pull one.` : ''} Duplicates add +${Rules.DUPE_BONUS}% stats (up to +${Rules.MAX_DUPES}); beyond that they convert to Yen.</p>`,
+      <p class="muted" style="font-size:12px">10x summons guarantee at least one ${UI.rarityOf(B.multiGuarantee)} or better. ${b.pityAt ? `Pity: after ${b.pityAt - 1} pulls without a featured SSR, the next pull is a featured unit. The counter carries over and resets when you pull one.` : ''} Duplicates add +${Rules.DUPE_BONUS}% stats (up to +${Rules.MAX_DUPES}); beyond that they convert to Yen.</p>`,
     { title: 'Summon Rates', sub: '提供割合' });
   }
 
@@ -108,20 +112,18 @@
   function reveal(results, kind) {
     const top = Math.max(...results.map((r) => r.def.rarity));
     const ov = document.createElement('div');
-    ov.className = 'reveal r' + top;
+    ov.className = 'reveal r' + top + ' is-' + UI.rarityOf(top).toLowerCase();
     ov.innerHTML = `<div class="reveal-seal"><div class="seal-paper"><span>${top >= 6 ? '特級' : top >= 5 ? '一級' : '呪'}</span></div><div class="seal-burst"></div></div>
+      <h2 class="rv-title">Summon Results</h2>
       <div class="reveal-cards">${results.map((r, i) => `
-        <div class="rcard r${r.def.rarity}" style="--d:${i * 0.12}s">
+        <div class="rcard r${r.def.rarity} is-${UI.rarityOf(r.def).toLowerCase()}" style="--d:${i * 0.12}s">
           <div class="rcard-in">
             <div class="rcard-back"><span>呪</span></div>
-            <div class="rcard-front ucard r${r.def.rarity}">${Art.img(r.def, 'portrait', { eager: true })}
-              <img class="uc-orb" src="${Art.orb(r.def.element)}" alt="" width="20" height="20">
-              ${r.isNew ? '<span class="uc-badge badge is-new">NEW</span>' : r.dupe ? `<span class="uc-badge badge">+${r.dupe}</span>` : r.yen ? `<span class="uc-badge badge">¥${fmt(r.yen)}</span>` : ''}
-              <span class="uc-foot"><span class="uc-name">${esc(r.def.name)}</span><span class="uc-meta">${UI.stars(r.def.rarity)}</span></span>
-            </div></div></div>`).join('')}</div>
+            <div class="rcard-front">${UI.unitTile(r.def, { tag: 'span', badge: r.isNew ? '<span class="uc-badge badge is-new">NEW</span>' : r.dupe ? `<span class="uc-badge badge">+${r.dupe}</span>` : r.yen ? `<span class="uc-badge badge">¥${fmt(r.yen)}</span>` : '' })}</div>
+          </div></div>`).join('')}</div>
       <div class="reveal-actions"><button class="jjk-btn" id="rv-skip" type="button">Skip</button>
         <button class="jjk-btn" id="rv-again" type="button" hidden>Summon ${kind === 'multi' ? '×10' : '×1'} again</button>
-        <button class="jjk-btn is-primary" id="rv-close" type="button" hidden>OK</button></div>`;
+        <button class="jjk-btn is-primary rv-back" id="rv-close" type="button" hidden>Back to Summon</button></div>`;
     document.body.appendChild(ov);
     UI.sfx('pull');
     const finish = () => {
@@ -142,7 +144,7 @@
     $('#main').innerHTML = `<div class="summon">
       <aside class="ban-list jjk-panel" id="banners"><h4>Banners</h4>${B.banners.map((b) => {
         const h = Data.char(b.hero);
-        return `<button class="ban-tab el-${b.element.toLowerCase()}" data-id="${b.id}" type="button">${h ? Art.img(h, 'portrait', { alt: '' }) : ''}<span>${esc(b.name)}</span></button>`;
+        return `<button class="ban-tab el-${b.element.toLowerCase()}" data-id="${b.id}" type="button">${h ? Art.img(h, 'full', { alt: '' }) : ''}<span>${esc(b.name)}</span></button>`;
       }).join('')}</aside>
       <section class="ban-main" id="banner-art"></section>
       <aside class="ban-side jjk-panel" id="side"></aside>

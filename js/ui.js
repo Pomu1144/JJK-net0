@@ -31,9 +31,14 @@
     bolt: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
     portal: '<circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16M12 4c-3 2.5-3 13.5 0 16"/>',
     exit: '<path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"/>',
+    menu: '<rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/>',
+    gift: '<rect x="4" y="9" width="16" height="11"/><path d="M3 9h18M12 9v11M12 9C10 5 6 5 7 8M12 9c2-4 6-4 5-1"/>',
+    expand: '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
     swap: '<path d="M4 8h13l-3-3M20 16H7l3 3"/>',
     plus: '<path d="M12 5v14M5 12h14"/>',
     close: '<path d="M6 6l12 12M18 6L6 18"/>',
+    back: '<path d="M9 5L4 10l5 5"/><path d="M4 10h10.5a5 5 0 0 1 0 10H11"/>',
+    attack: '<path d="M14.5 4H20v5.5L9 20.5 3.5 15z"/><path d="M6 13l5 5M3 21l2.5-2.5"/>',
   };
   const icon = (name, cls) => `<svg class="ic ${cls || ''}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ''}</svg>`;
 
@@ -41,17 +46,29 @@
   const YEN_SVG = '<svg class="cur-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#c9a24e"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#6e5320" stroke-width="1.4"/><path d="M8.5 7l3.5 5 3.5-5M12 12v6M9 13h6M9 15.5h6" stroke="#3a2a08" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>';
   const STAM_SVG = '<svg class="cur-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#0f5a5e"/><path d="M13 4L6 14h5l-1 6 7-10h-5z" fill="#7ff2e0"/></svg>';
 
+  // Phantom Parade order: Formation · Missions · Home · Summon · Shop, then the square Menu plate.
+  // `pages` lists the pages that light a plate up (the Formation hub covers Sorcerers + Teams).
   const NAV = [
-    { id: 'home', href: 'home.html', label: 'Home', icon: 'home' },
-    { id: 'characters', href: 'characters.html', label: 'Sorcerers', icon: 'units' },
-    { id: 'teams', href: 'teams.html', label: 'Teams', icon: 'teams' },
-    { id: 'summon', href: 'summon.html', label: 'Summon', icon: 'summon' },
-    { id: 'missions', href: 'missions.html', label: 'Missions', icon: 'missions' },
-    { id: 'shop', href: 'shop.html', label: 'Shop', icon: 'shop' },
-    { id: 'settings', href: 'settings.html', label: 'Settings', icon: 'settings' },
+    { id: 'formation', href: 'formation.html', label: 'Formation', icon: 'units', pages: ['formation', 'characters', 'teams'] },
+    { id: 'missions', href: 'missions.html', label: 'Missions', icon: 'missions', pages: ['missions', 'battle'] },
+    { id: 'home', href: 'home.html', label: 'Home', icon: 'home', pages: ['home'] },
+    { id: 'summon', href: 'summon.html', label: 'Summon', icon: 'summon', pages: ['summon'] },
+    { id: 'shop', href: 'shop.html', label: 'Shop', icon: 'shop', pages: ['shop'] },
+    { id: 'settings', href: 'settings.html', label: 'Menu', icon: 'menu', pages: ['settings'], menu: true },
   ];
+  const HELP = {
+    home: 'Your home sorcerer greets you here. Tap Change to pick another one. The Quest card continues the story; the banner on the left opens the current pickup summon.',
+    formation: 'Enhance Sorcerers to level them up with talismans, or open Team Formation to set 4 Main fighters and 1 Backup (support).',
+    characters: 'Tap a sorcerer to open Enhance: level up with talismans, read Command Skills (Attack, Skill 1, Skill 2, Ultimate) and Auto-Skills.',
+    teams: 'Tap a slot, then pick a sorcerer below. The Backup does not fight; its support skill boosts the whole Main line. Type advantage: 影 Blue › 夜 Green › 幻 Red › 影 Blue.',
+    summon: 'Spend Cursed Cubes or tickets. Every 10x summon guarantees an SR or better; pickup banners have a pity counter for the featured SSR.',
+    missions: 'Clear stages for Yen, EXP and first-clear Cubes. 3 stars: clear, nobody knocked out, and within the turn goal.',
+    shop: 'Trade Yen and Cubes for talismans, stamina and summon tickets. The daily gift resets every day.',
+    settings: 'Audio, display, account and save data. The Portal tab moves sorcerers and currency between games.',
+    battle: 'Tap an enemy to target it, then choose Attack, Skill 1, Skill 2 or the Ultimate. Attacks build cursed energy (呪力); skills spend it.',
+  };
 
-  /* ---------- viewport classes (theme-jjk.css keys compact rules on them) ---------- */
+  /* ---------- viewport classes (the CSS keys compact rules on them) ---------- */
   function sizeClasses() {
     const h = global.innerHeight, w = global.innerWidth;
     const root = document.documentElement;
@@ -69,21 +86,63 @@
     for (let i = n; i < (max || 0); i++) s += '<i class="star">★</i>';
     return `<span class="stars r${n}">${s}</span>`;
   }
-  const orb = (el, cls) => `<img class="orb ${cls || ''}" src="${Art.orb(el)}" alt="${esc(el)}" title="${esc(el)}" width="18" height="18">`;
+  /* ---------- Phantom Parade type + rarity badges ---------- */
+  /** Type name for a def / colour / element: 'Red' | 'Blue' | 'Green' | 'Yellow' | 'Purple'. */
+  const typeOf = (x) => Art.typeOf(x);
+  const typeKanji = (x) => Art.TYPES[typeOf(x)].kanji;
+  /** Type diamond (幻 Red, 影 Blue, 夜 Green, 行 Yellow; purple for curses). */
+  function typeBadge(x, cls) {
+    const t = typeOf(x);
+    const label = t + ' type (' + Art.TYPES[t].kanji + ')';
+    return `<img class="type-ic ${cls || ''}" src="${Art.typeIcon(t)}" alt="${esc(label)}" title="${esc(label)}" width="22" height="22" draggable="false">`;
+  }
+  /** "幻 Red" label coloured by type. */
+  const typeLabel = (x) => { const t = typeOf(x); return `<span class="type-name t-${t.toLowerCase()}">${Art.TYPES[t].kanji} ${t}</span>`; };
+  /** 'SSR' | 'SR' | 'R' from a def (rarityLabel) or an internal rarity number. */
+  function rarityOf(x) {
+    if (x && typeof x === 'object') { if (x.rarityLabel) return x.rarityLabel; x = x.rarity; }
+    const n = Number(x) || 0;
+    return n >= 6 ? 'SSR' : n === 5 ? 'SR' : 'R';
+  }
+  function rarityBadge(x, cls) {
+    const r = rarityOf(x);
+    if (r === 'R') return `<span class="rar-ic is-r ${cls || ''}" title="R">R</span>`;
+    return `<img class="rar-ic is-${r.toLowerCase()} ${cls || ''}" src="assets/pp/ui/${r}.webp" alt="${r}" title="${r}" draggable="false">`;
+  }
+  /** Cream "体·Attacker" tag (focus kanji + role). */
+  const focusTag = (d) => (d && (d.focusKanji || d.role) ? `<span class="focus-tag">${d.focusKanji ? `<i>${esc(d.focusKanji)}</i>` : ''}${esc(d.role || d.focus || '')}</span>` : '');
+  /** Older callers: the type badge replaces the element orb. */
+  const orb = (el, cls) => typeBadge(el, 'orb ' + (cls || ''));
 
-  /** Roster card for a Rules.unitView(). opts: { tag, picked, dim, extra, cls } */
-  function unitCard(v, opts) {
+  /** Phantom Parade unit icon for any def (own unit, guest, Portal card).
+   *  opts: { tag, id, level, badge, extra, cls, picked, dim, title } */
+  function unitTile(d, opts) {
     const o = opts || {};
     const tag = o.tag || 'button';
+    const hasIcon = !!(d.art && d.art.icon);
+    const r = rarityOf(d);
+    const cls = ['ucard', 't-' + typeOf(d).toLowerCase(), 'is-' + r.toLowerCase(), hasIcon ? 'has-icon' : '', d.rarity >= 7 || d.limited ? 'is-limited' : '', o.picked ? 'is-picked' : '', o.dim ? 'is-dim' : '', o.cls || ''].filter(Boolean).join(' ');
+    if (o.wide) {
+      // roster card: wide card art, rarity frame, type diamond, dupe hexagon, Lv strip
+      return `<${tag} class="${cls} is-wide"${o.id != null ? ` data-id="${esc(o.id)}"` : ''}${tag === 'button' ? ' type="button"' : ''} title="${esc(o.title || (d.name + (d.title ? ' — ' + d.title : '')))}">
+        <span class="uc-art">${Art.img(d, 'full')}${typeBadge(d, 'uc-type')}${rarityBadge(d, 'uc-rar')}
+          ${o.dupes ? `<span class="uc-hex">${esc(o.dupes)}</span>` : ''}
+          <span class="uc-strip"><span class="uc-name">${esc(d.name)}</span>${o.level != null ? `<span class="uc-lv">Lv<b>${esc(o.level)}</b></span>` : ''}</span>${o.badge || ''}${o.extra || ''}</span>
+      </${tag}>`;
+    }
+    return `<${tag} class="${cls}"${o.id != null ? ` data-id="${esc(o.id)}"` : ''}${tag === 'button' ? ' type="button"' : ''} title="${esc(o.title || (d.name + (d.title ? ' — ' + d.title : '')))}">
+      <span class="uc-art">${Art.img(d, 'icon')}${hasIcon ? '' : typeBadge(d, 'uc-type')}${rarityBadge(d, 'uc-rar')}
+        ${o.level != null ? `<span class="uc-lv">Lv<b>${esc(o.level)}</b></span>` : ''}${o.badge || ''}${o.extra || ''}</span>
+      <span class="uc-foot"><span class="uc-name">${esc(d.name)}</span>${o.tag2 === false ? '' : focusTag(d)}</span>
+    </${tag}>`;
+  }
+
+  /** Roster card for a Rules.unitView(). opts: { tag, picked, dim, extra, cls, badge } */
+  function unitCard(v, opts) {
+    const o = opts || {};
     const d = v.def;
     const badge = d.guest ? '<span class="uc-badge badge is-guest">GUEST</span>' : (o.badge || '');
-    return `<${tag} class="ucard r${Math.min(7, Math.max(3, d.rarity))}${o.picked ? ' is-picked' : ''}${o.dim ? ' is-dim' : ''} ${o.cls || ''}" data-id="${esc(v.id)}"${tag === 'button' ? ' type="button"' : ''} title="${esc(d.name + ' — ' + d.title)}">
-      ${Art.img(d, 'portrait')}
-      <img class="uc-orb" src="${Art.orb(d.element)}" alt="${esc(d.element)}" width="20" height="20">
-      ${badge}${o.extra || ''}
-      <span class="uc-foot"><span class="uc-name">${esc(d.name)}</span>
-      <span class="uc-meta">${stars(d.rarity)}<span>Lv${v.unit.level}</span></span></span>
-    </${tag}>`;
+    return unitTile(d, Object.assign({}, o, { id: v.id, level: v.unit.level, dupes: v.unit.dupes, badge }));
   }
 
   const ITEM_CLASS = { talisman_s: '', talisman_m: 't-m', talisman_l: 't-l', ticket: 't-ticket' };
@@ -114,9 +173,12 @@
       <div class="modal-body">${html}</div></div>`;
     document.body.appendChild(wrap);
     let closed = false;
+    const onKey = (e) => { if (e.key === 'Escape' && o.dismissable !== false) close(); };
+    document.addEventListener('keydown', onKey);
     const close = () => {
       if (closed) return;
       closed = true;
+      document.removeEventListener('keydown', onKey);
       wrap.classList.add('out');
       setTimeout(() => wrap.remove(), 180);
       if (o.onClose) o.onClose();
@@ -174,7 +236,7 @@
     return `<div class="hud">
       <a class="hud-cur" href="shop.html#stamina" title="Stamina">${STAM_SVG}<b id="hud-stam">0/0</b><small id="hud-stam-t"></small></a>
       <a class="hud-cur" href="shop.html#summon" title="Cursed Cubes">${CUBE_SVG}<b id="hud-cubes">0</b><i class="hud-plus">${icon('plus')}</i></a>
-      <a class="hud-cur" href="shop.html" title="Yen">${YEN_SVG}<b id="hud-yen">0</b></a>
+      <a class="hud-cur" href="shop.html" title="Yen">${YEN_SVG}<b id="hud-yen">0</b><i class="hud-plus">${icon('plus')}</i></a>
       <span id="portal-slot"></span>
     </div>`;
   }
@@ -193,21 +255,50 @@
     set('hud-yen', fmtShort(s.currency.yen));
   }
 
+  /* red "!" notification dots on the nav plates (presentation only) */
+  function paintDots() {
+    const s = Save.get();
+    if (!s) return;
+    const want = {
+      shop: s.daily && s.daily.daily_gift !== Rules.today(),
+      summon: (s.items && s.items.ticket > 0) || (s.currency && s.currency.cubes >= 45),
+      settings: !!(global.PortalPort && PortalPort.pendingTx && PortalPort.pendingTx.length) || (s.daily && s.daily.daily_gift !== Rules.today()),
+    };
+    $$('.dock-btn').forEach((a) => {
+      const on = !!want[a.dataset.nav];
+      let dot = a.querySelector('.nav-dot');
+      if (on && !dot) { dot = document.createElement('i'); dot.className = 'nav-dot'; dot.textContent = '!'; dot.setAttribute('aria-hidden', 'true'); a.appendChild(dot); }
+      if (!on && dot) dot.remove();
+    });
+  }
+
   function buildShell(cfg) {
     const body = document.body;
     const page = body.dataset.page || '';
     const main = $('#main');
     const top = document.createElement('div');
     top.className = 'topbar';
-    const back = cfg.back === false ? '' : `<a class="jjk-icon-btn jjk-back" href="${esc(cfg.back || 'home.html')}" aria-label="Back"><img src="assets/ui/jjk/back_arrow.webp" alt=""></a>`;
-    top.innerHTML = `<header class="jjk-page-header">${back}<h1 class="jjk-title-plate"><span>${esc(body.dataset.title || '')}</span>${body.dataset.sub ? `<small class="plate-sub">${esc(body.dataset.sub)}</small>` : ''}</h1></header>${cfg.hud === false ? '<div class="hud"><span id="portal-slot"></span></div>' : hudHtml()}`;
+    const back = cfg.back === false ? '' : `<a class="jjk-icon-btn jjk-back" href="${esc(cfg.back || 'home.html')}" aria-label="Back">${icon('back')}</a>`;
+    const head = cfg.header ? cfg.header() : `<header class="jjk-page-header">${back}<h1 class="jjk-title-plate"><span>${esc(body.dataset.title || '')}</span>${body.dataset.sub ? `<small class="plate-sub">${esc(body.dataset.sub)}</small>` : ''}</h1></header>`;
+    const help = HELP[page] ? `<button class="pp-stone help-btn" id="help" type="button" aria-label="Help" title="Help">?</button>` : '';
+    top.innerHTML = `${head}<div class="top-right">${cfg.hud === false ? '<div class="hud"><span id="portal-slot"></span></div>' : hudHtml()}${help}</div>`;
+    const hb = top.querySelector('#help');
+    if (hb) hb.addEventListener('click', () => modal(`<p class="help-text">${esc(HELP[page])}</p>`, { title: (body.dataset.title || 'Help') + ' · Help', cls: 'is-small' }));
     body.insertBefore(top, main);
     if (cfg.nav !== false) {
       const nav = document.createElement('nav');
       nav.className = 'dock';
       nav.setAttribute('aria-label', 'Main');
-      nav.innerHTML = NAV.map((n) => `<a class="dock-btn${n.id === page ? ' active' : ''}" href="${n.href}"${n.id === page ? ' aria-current="page"' : ''}>${icon(n.icon)}<span>${n.label}</span></a>`).join('');
+      nav.innerHTML = NAV.map((n) => {
+        const on = n.pages.includes(page);
+        return `<a class="dock-btn${on ? ' active' : ''}${n.menu ? ' is-menu' : ''}" href="${n.href}" data-nav="${n.id}"${n.id === page ? ' aria-current="page"' : ''}>${icon(n.icon)}<span>${n.label}</span></a>`;
+      }).join('');
       body.appendChild(nav);
+      const mb = nav.querySelector('.is-menu');
+      // the Menu modal lives in js/pp-menu.js (window.PPMenu); without it the plate opens Settings
+      if (mb) mb.addEventListener('click', (e) => { if (global.PPMenu && typeof PPMenu.open === 'function') { e.preventDefault(); PPMenu.open(); } });
+      paintDots();
+      Save.onChange(paintDots);
     }
     paintHud();
     Save.onChange(paintHud);
@@ -258,5 +349,5 @@
     else start();
   }
 
-  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG };
+  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, typeOf, typeKanji, typeBadge, typeLabel, rarityOf, rarityBadge, focusTag, unitTile, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG };
 })(window);

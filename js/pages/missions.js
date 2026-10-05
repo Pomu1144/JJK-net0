@@ -25,18 +25,25 @@
     const s = Save.get();
     const ch = M.chapters[chIdx];
     const got = ch.stages.reduce((a, st) => a + ((s.progress[st.id] || {}).stars || 0), 0);
-    $('#tabs').innerHTML = M.chapters.map((c, i) => `<button class="jjk-tab${i === chIdx ? ' active' : ''}" data-c="${i}" type="button" ${chapterUnlocked(i) ? '' : 'disabled title="Clear the previous chapter"'}>${esc(c.arc)} · ${esc(c.name)}</button>`).join('');
+    $('#tabs').innerHTML = M.chapters.map((c, i) => {
+      const open = chapterUnlocked(i);
+      const got = c.stages.reduce((a2, st) => a2 + ((s.progress[st.id] || {}).stars || 0), 0);
+      return `<button class="pp-parch ch-card${i === chIdx ? ' active' : ''}${open ? '' : ' is-locked'}" data-c="${i}" type="button" ${open ? '' : 'disabled title="Clear the previous chapter"'}>
+        ${c.bg ? `<span class="parch-art" style="background-image:url('${esc(c.bg)}')"></span>` : ''}
+        <span class="ch-arc">${esc(c.arc)}</span><span class="parch-label">${esc(c.name)}</span>
+        <span class="ch-prog">${open ? '★ ' + got + '/' + c.stages.length * 3 : 'LOCKED'}</span></button>`;
+    }).join('');
     $('#chapter').innerHTML = `<div class="chapter-hero jjk-panel${ch.bg ? ' has-bg' : ''}">${ch.bg ? `<div class="scene-bg" style="background-image:url('${esc(ch.bg)}')"></div>` : ''}<span class="ch-kanji">${esc(ch.kanji)}</span>
       <div class="grow"><b>${esc(ch.name)}</b><p>${esc(ch.desc)}</p></div>
-      <div class="ch-stars"><b>${got}</b> / ${ch.stages.length * 3} ★</div></div>
-      <div class="stage-list">${ch.stages.map((st) => {
+      <div class="ch-stars"><b>★ ${got}</b>of ${ch.stages.length * 3}</div></div>
+      <div class="stage-list jjk-panel">${ch.stages.map((st) => {
         const p = s.progress[st.id];
         const open = unlocked(st.id);
         const enemies = new Set(st.waves.flat().map((w) => w.enemy));
-        return `<div class="stage${open ? '' : ' is-locked'}">
-          <span class="st-no">${esc(st.id)}</span>
+        return `<div class="stage pp-card${open ? '' : ' is-locked'}${st.boss ? ' is-boss' : ''}${p ? ' is-cleared' : ''}">
+          <span class="st-no"><span>${esc(st.id)}</span></span>
           <div class="grow"><h4>${esc(st.name)} ${st.boss ? '<span class="boss-tag">BOSS</span>' : ''}</h4>
-            <div class="st-meta"><span>${UI.STAM_SVG} ${st.stamina}</span><span>${st.waves.length} waves · ${enemies.size} curse types</span><span>Rec. power ${fmt(st.recommendedPower)}</span>
+            <div class="st-meta"><span>${UI.STAM_SVG} ${st.stamina}</span><span>${st.waves.length} waves · ${enemies.size} opponent${enemies.size === 1 ? '' : 's'}</span><span>Rec. power <b>${fmt(st.recommendedPower)}</b></span>
               <span>¥${fmt(st.rewards.yen)} · ${fmt(st.rewards.unitExp)} EXP</span>
               <span class="first${p ? ' is-done' : ''}">First clear: ${esc(rewardText(st.firstClear))}</span></div></div>
           <span class="st-stars" title="1★ clear · 2★ nobody KO'd · 3★ within ${st.turnGoal} turns">${UI.stars((p && p.stars) || 0, 3)}</span>
@@ -57,7 +64,7 @@
       const t = s.teams[pick];
       const n = Rules.teamIds(t).length;
       body.innerHTML = `<p class="muted" style="margin:0 0 8px;font-size:12px">${esc(st.desc || '')} Stars: 1★ clear · 2★ nobody knocked out · 3★ clear within ${st.turnGoal} turns.</p>
-        <div class="team-choice">${s.teams.map((tm, i) => `<button type="button" data-team="${i}" class="${i === pick ? 'active' : ''}"><b>${esc(tm.name)}</b><small>Power ${fmt(Rules.teamPower(tm))}</small>
+        <div class="team-choice">${s.teams.map((tm, i) => `<button type="button" data-team="${i}" class="pp-card${i === pick ? ' active' : ''}"><b>${esc(tm.name)}</b><small>Power ${fmt(Rules.teamPower(tm))}</small>
           <div class="mini">${tm.slots.concat([tm.support]).map((id, j) => { const v = id && Rules.unitView(id); return `<span class="${j === 4 ? 'sup' : ''}">${v ? Art.img(v.def, 'portrait', { alt: '' }) : ''}</span>`; }).join('')}</div></button>`).join('')}</div>
         <div class="row wrap"><span>${UI.STAM_SVG} Cost <b>${st.stamina}</b> · you have <b class="${stam.cur < st.stamina ? '' : 'gold'}">${stam.cur}</b></span>
           <span class="grow"></span>
@@ -78,7 +85,7 @@
   }
 
   function render() {
-    $('#main').innerHTML = '<div class="tabs" id="tabs"></div><div id="chapter"></div>';
+    $('#main').innerHTML = '<div class="ch-cards" id="tabs"></div><div id="chapter"></div>';
     const hash = location.hash.slice(1);
     const hi = M.chapters.findIndex((c) => c.id === hash);
     if (hi >= 0) chIdx = hi;

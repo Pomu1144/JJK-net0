@@ -14,10 +14,12 @@
     newest: (a, b) => (b.unit.obtained || 0) - (a.unit.obtained || 0),
   };
 
+  const SORT_LABEL = { power: 'Power', rarity: 'Rarity', level: 'Level', element: 'Type', newest: 'Newest' };
+
   function renderGrid() {
     const all = Rules.ownedList();
     const list = all.filter((v) => view.el === 'all' || v.def.element === view.el).sort(SORTS[view.sort] || SORTS.power);
-    $('#grid').innerHTML = list.length ? list.map((v) => UI.unitCard(v)).join('') : '<p class="empty">No sorcerers match. Summon more at the Summon hall.</p>';
+    $('#grid').innerHTML = list.length ? list.map((v) => UI.unitCard(v, { wide: true })).join('') : '<p class="empty">No sorcerers match. Summon more at the Summon hall.</p>';
     $('#count').textContent = list.length + ' / ' + all.length + ' units · ' + Data.characters.length + ' in the archive';
     $$('.el-filter button').forEach((b) => b.classList.toggle('active', b.dataset.el === view.el));
   }
@@ -25,17 +27,17 @@
   function render() {
     $('#main').innerHTML = `
       <div class="toolbar">
-        <div class="el-filter" role="group" aria-label="Element filter">
+        <div class="el-filter" role="group" aria-label="Type filter">
           <button class="all" data-el="all" type="button">All</button>
-          ${Rules.ELEMENTS.map((e) => `<button data-el="${e}" type="button" title="${e}"><img src="${Art.orb(e)}" alt="${e}"></button>`).join('')}
+          ${Rules.ELEMENTS.map((e) => `<button data-el="${e}" type="button" title="${UI.typeOf(e)} type (${UI.typeKanji(e)})" aria-label="${UI.typeOf(e)} type">${UI.typeBadge(e)}</button>`).join('')}
         </div>
-        <label class="row" style="gap:6px"><span class="muted" style="font-size:12px">Sort</span>
-          <select class="input" id="sort" style="height:32px;font-size:13px">
-            ${Object.keys(SORTS).map((k) => `<option value="${k}"${k === view.sort ? ' selected' : ''}>${k[0].toUpperCase() + k.slice(1)}</option>`).join('')}
+        <label class="sort-label">SORT
+          <select class="input" id="sort">
+            ${Object.keys(SORTS).map((k) => `<option value="${k}"${k === view.sort ? ' selected' : ''}>${SORT_LABEL[k] || k}</option>`).join('')}
           </select></label>
         <span class="count" id="count"></span>
       </div>
-      <div class="unit-grid" id="grid"></div>`;
+      <div class="unit-grid roster-grid" id="grid"></div>`;
     $('.el-filter').addEventListener('click', (e) => {
       const b = e.target.closest('button');
       if (!b) return;
@@ -51,20 +53,24 @@
     if (want && Rules.unitView(want)) openDetail(want);
   }
 
-  function skillsHtml(d) {
+  /** Command skills (normal, Skill 1, Skill 2, Ultimate) and auto-skills (passives, support). */
+  function skillList(d) {
+    const ic = (k) => (d.art && d.art.skills && d.art.skills[k]) || '';
     const u = d.ultimate;
-    const icon = (k) => (d.art && d.art.skills && d.art.skills[k] ? `<img class="skill-icon" src="${esc(d.art.skills[k])}" alt="" loading="lazy">` : '');
-    const tech = (t, n) => (t ? `<div class="skill is-tech">${icon('s' + n)}<h4>${esc(t.name)} <small>Skill ${n}</small><span class="cost">${t.cost} CE</span></h4><p>${esc(t.desc)}</p></div>` : '');
-    return `
-      <div class="skill">${icon('normal')}<h4>${esc(d.basic.name)} <small>Normal attack</small><span class="cost">+1 CE</span></h4><p>${(d.basic.mult || 1).toFixed(1)}x attack to one curse. Builds cursed energy.</p></div>
-      ${tech(d.technique, 1)}${tech(d.technique2, 2)}
-      ${u ? `<div class="skill is-ult">${icon('ult')}<h4>${esc(u.name)} <small>${u.kind === 'domain' ? 'Domain Expansion' : 'Ultimate'}</small><span class="cost">${u.cost} CE · full gauge</span></h4><p>${esc(u.desc)}</p></div>` : ''}
-      ${(d.passives || []).map((p) => `<div class="skill is-passive"><h4>${esc(p.name)} <small>Passive</small></h4><p>${esc(p.desc)}</p></div>`).join('')}
-      ${d.support ? `<div class="skill is-support"><h4>${esc(d.support.name)} <small>Support skill</small></h4><p>${esc(d.support.desc)} (when set as Support)</p></div>` : ''}`;
+    const cmd = [
+      { k: 'normal', icon: ic('normal'), name: d.basic.name, label: 'Attack', cost: '+1', desc: (d.basic.mult || 1).toFixed(1) + 'x attack to one enemy. Builds cursed energy.' },
+      d.technique && { k: 's1', icon: ic('s1'), name: d.technique.name, label: 'Skill 1', cost: d.technique.cost, desc: d.technique.desc },
+      d.technique2 && { k: 's2', icon: ic('s2'), name: d.technique2.name, label: 'Skill 2', cost: d.technique2.cost, desc: d.technique2.desc },
+      u && { k: 'ult', icon: ic('ult'), name: u.name, label: u.kind === 'domain' ? 'Domain Expansion' : 'Ultimate', cost: u.cost + ' · full gauge', desc: u.desc },
+    ].filter(Boolean);
+    const auto = (d.passives || []).map((p, i) => ({ k: 'p' + i, name: p.name, label: 'Passive', desc: p.desc }))
+      .concat(d.support ? [{ k: 'sup', name: d.support.name, label: 'Support skill', desc: d.support.desc + ' (when set as Backup)' }] : []);
+    return { cmd, auto };
   }
 
   function openDetail(id) {
     let m = null;
+    let pick = 's1';
     const draw = () => {
       const v = Rules.unitView(id);
       if (!v) return;
@@ -73,41 +79,65 @@
       const maxed = u.level >= v.maxLevel;
       const next = maxed ? null : Rules.statsAt(d, u.level + 1, u.dupes);
       const s = Save.get();
-      const html = `<div class="detail" style="--rc:var(--r${Math.min(7, Math.max(3, d.rarity))})">
-        <div class="detail-art">${Art.img(d, 'full', { eager: true })}</div>
-        <div>
-          <div class="detail-head">${UI.orb(d.element)}<h3>${esc(d.name)}</h3>${UI.stars(d.rarity)}
-            ${d.guest ? `<span class="badge is-guest">GUEST · ${esc(d.sourceGame)}</span>` : ''}
-            ${u.dupes ? `<span class="badge">+${u.dupes}</span>` : ''}
-            <span class="title">${esc(d.title)} · ${esc(d.affiliation || '')}</span></div>
-          <div class="level-row"><b>Lv ${u.level} / ${v.maxLevel}</b>
-            <div class="bar"><i style="width:${maxed ? 100 : Math.min(100, (u.exp / need) * 100)}%"></i></div>
-            <small class="muted">${maxed ? 'MAX' : fmt(u.exp) + ' / ' + fmt(need)}</small></div>
-          <div class="stat-list">
-            <div class="stat"><small>HEALTH</small><b>${fmt(v.stats.hp)}</b>${next ? `<span class="next">+${fmt(next.hp - v.stats.hp)}</span>` : ''}</div>
-            <div class="stat"><small>ATTACK</small><b>${fmt(v.stats.atk)}</b>${next ? `<span class="next">+${fmt(next.atk - v.stats.atk)}</span>` : ''}</div>
-            <div class="stat"><small>SPEED</small><b>${fmt(v.stats.speed)}</b>${next ? `<span class="next">+${fmt(next.speed - v.stats.speed)}</span>` : ''}</div>
+      const t = UI.typeOf(d).toLowerCase();
+      const sk = skillList(d);
+      const all = sk.cmd.concat(sk.auto);
+      const cur = all.find((x) => x.k === pick) || all[0];
+      const plus = (a, b) => (next ? `<em>+${fmt(a - b)}</em>` : '');
+      const kanji = (x) => esc(String(x.name || '?').replace(/^[^A-Za-z0-9]*/, '').charAt(0) || '術');
+      const autoCells = sk.auto.map((x) => `<button class="enh-hex${x.k === pick ? ' on' : ''}" type="button" data-skill="${x.k}" title="${esc(x.name)}"><span>${kanji(x)}</span></button>`)
+        .concat(Array.from({ length: Math.max(0, 4 - sk.auto.length) }, () => '<span class="enh-hex is-empty"></span>')).join('');
+      const html = `<div class="enh t-${t} is-${UI.rarityOf(d).toLowerCase()}">
+        <div class="enh-art">${Art.img(d, 'full', { eager: true, alt: '' })}
+          <div class="enh-head"><button class="jjk-icon-btn enh-back" type="button" aria-label="Back">${UI.icon('back')}</button><h1 class="jjk-title-plate"><span>Enhance</span></h1></div>
+          <div class="enh-id">
+            <div class="enh-badges">${UI.rarityBadge(d)}${UI.typeBadge(d)}</div>
+            <div class="enh-name"><small>${esc(d.title || '')}</small><h2>${esc(d.name)}</h2></div>
+            <div class="enh-tags">${UI.focusTag(d)}${d.rarity >= 7 || d.limited ? '<span class="limited-tag">LIMITED</span>' : ''}${d.guest ? `<span class="badge is-guest">GUEST · ${esc(d.sourceGame)}</span>` : ''}${u.dupes ? `<span class="badge">+${u.dupes}</span>` : ''}
+              <span class="enh-aff">${UI.typeLabel(d)}${d.affiliation ? ' · ' + esc(d.affiliation) : ''}</span></div>
           </div>
-          <div class="section-title" style="margin-top:10px">Level up <small>呪符 · TALISMANS</small></div>
-          <div class="feed">${['talisman_s', 'talisman_m', 'talisman_l'].map((k) => `
-            <div class="feed-item">${UI.itemIcon(k, ITEMS)}<small>${esc(ITEMS[k].name)}</small>
-              <span class="qty">×${s.items[k] || 0} · +${fmt(ITEMS[k].exp)}</span>
-              <button class="jjk-btn is-small" type="button" data-feed="${k}" ${maxed || !(s.items[k] > 0) ? 'disabled' : ''}>Use</button></div>`).join('')}</div>
-          <div class="row wrap" style="margin-bottom:10px">
-            <button class="jjk-btn is-small" type="button" id="home-set">Set as Home</button>
-            <a class="jjk-btn is-small" href="teams.html">Teams</a>
-            <span class="muted" style="font-size:12px">Power <b class="gold">${fmt(v.power)}</b></span>
+        </div>
+        <div class="enh-panel">
+          <div class="enh-top">
+            <div class="enh-lv"><small>Lv</small><b>${u.level}<span>/${v.maxLevel}</span></b>
+              <div class="bar"><i style="width:${maxed ? 100 : Math.min(100, (u.exp / need) * 100)}%"></i></div>
+              <small class="enh-exp">${maxed ? 'MAX LEVEL' : 'EXP ' + fmt(u.exp) + ' / ' + fmt(need)}</small></div>
+            <div class="enh-grade"><small>Power</small><b>${fmt(v.power)}</b></div>
           </div>
-          <div class="section-title">Techniques <small>術式 · SKILLS</small></div>
-          ${skillsHtml(d)}
-          ${d.borrowedFrom ? `<p class="muted" style="font-size:11px">Guest techniques are borrowed from ${esc((Data.char(d.borrowedFrom) || {}).name || '')} (same element).</p>` : ''}
+          <div class="enh-grid">
+            <dl class="enh-stats">
+              <div><dt>HP</dt><dd>${fmt(v.stats.hp)}${plus(next && next.hp, v.stats.hp)}</dd></div>
+              <div><dt>Attack</dt><dd>${fmt(v.stats.atk)}${plus(next && next.atk, v.stats.atk)}</dd></div>
+              <div><dt>Speed</dt><dd>${fmt(v.stats.speed)}${plus(next && next.speed, v.stats.speed)}</dd></div>
+              <div><dt>Focus</dt><dd>${esc(d.focus || '—')}</dd></div>
+              <div><dt>Duplicates</dt><dd>+${u.dupes || 0}</dd></div>
+            </dl>
+            <div class="enh-skills">
+              <div class="enh-sk-h">Command Skills</div>
+              <div class="enh-sk-row">${sk.cmd.map((x) => `<button class="enh-sk${x.k === pick ? ' on' : ''}" type="button" data-skill="${x.k}" title="${esc(x.name)}">${x.icon ? `<img src="${esc(x.icon)}" alt="">` : `<span class="enh-sk-k">${kanji(x)}</span>`}<small>${x.k === 'normal' ? 'ATK' : x.k === 'ult' ? 'ULT' : x.label.replace('Skill ', 'S')}</small></button>`).join('')}</div>
+              <div class="enh-sk-h">Auto-Skills</div>
+              <div class="enh-sk-row">${autoCells}</div>
+            </div>
+          </div>
+          ${cur ? `<div class="enh-desc"><b>${esc(cur.name)}</b> <small>${esc(cur.label)}</small>${cur.cost != null ? `<span class="cost"><img src="assets/pp/ui/Energy.webp" alt="CE">${esc(cur.cost)}</span>` : ''}<p>${esc(cur.desc || '')}</p></div>` : ''}
+          <div class="enh-btns">${['talisman_s', 'talisman_m', 'talisman_l'].map((k) => `
+            <button class="enh-btn" type="button" data-feed="${k}" ${maxed || !(s.items[k] > 0) ? 'disabled' : ''}>${UI.itemIcon(k, ITEMS)}<span><b>${esc(ITEMS[k].name.replace(/ Talisman$/, ''))}</b><small>Lv Enhancement</small><em>×${s.items[k] || 0} · +${fmt(ITEMS[k].exp)} EXP</em></span></button>`).join('')}
+          </div>
+          <div class="enh-foot">
+            <button class="pp-stone" type="button" id="home-set">${UI.icon('home')}<span>Set as Home</span></button>
+            <a class="pp-stone" href="teams.html">${UI.icon('teams')}<span>Team Formation</span></a>
+            ${d.borrowedFrom ? `<small class="muted">Guest techniques are borrowed from ${esc((Data.char(d.borrowedFrom) || {}).name || '')} (same type).</small>` : ''}
+          </div>
         </div></div>`;
       if (!m) {
-        m = UI.modal(html, { title: d.name, sub: d.kanji ? d.kanji + ' · ' + d.element.toUpperCase() : d.element, onClose: () => { history.replaceState(null, '', location.pathname); renderGrid(); } });
+        m = UI.modal(html, { cls: 'is-full', onClose: () => { history.replaceState(null, '', location.pathname); renderGrid(); } });
         m.el.addEventListener('click', onClick);
       } else m.el.querySelector('.modal-body').innerHTML = html;
     };
     const onClick = (e) => {
+      if (e.target.closest('.enh-back')) { m.close(); return; }
+      const sk = e.target.closest('[data-skill]');
+      if (sk) { pick = sk.dataset.skill; UI.sfx('tap'); draw(); return; }
       const f = e.target.closest('[data-feed]');
       if (f) {
         const k = f.dataset.feed;
@@ -129,6 +159,6 @@
     draw();
   }
 
-  UI.boot({ data: ['characters', 'items'], init: () => Data.load('items').then((it) => { ITEMS = it.items; render(); }) });
+  UI.boot({ back: 'formation.html', data: ['characters', 'items'], init: () => Data.load('items').then((it) => { ITEMS = it.items; render(); }) });
   window.addEventListener('portal:imported', () => { if ($('#grid')) renderGrid(); });
 })();
