@@ -30,8 +30,8 @@
 .q-drop small { opacity: .7; }
 .q-btns { display: flex; flex-direction: column; gap: 4px; flex: none; }
 
-@media (max-width: 900px) { .mode-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (max-width: 520px) {
+@media (max-width: 900px) and (orientation: portrait) { .mode-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 520px) and (orientation: portrait) {
   .mode-card { height: 86px; } .mode-card .parch-label { font-size: 12px; }
   .mode-kanji { display: none; }
   .q-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }

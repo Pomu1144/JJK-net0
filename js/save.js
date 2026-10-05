@@ -39,7 +39,7 @@
       created: now,
       updated: now,
       profile: { name: String(name || 'Sorcerer').slice(0, 24), rank: 1, rankExp: 0, homeUnit: null },
-      currency: { cubes: 6000, yen: 5000, fp: 0 },   // fp = Friendship Points   // yen = JP (soft), cubes = Cubes (premium)
+      currency: { cubes: 6000, paidCubes: 0, yen: 5000, fp: 0 },   // fp = Friendship Points   // yen = JP (soft), cubes = Free Cubes, paidCubes = Paid Cubes
       stamina: { cur: 30, ts: now },
       items: { light_s: 10, light_m: 2, light_l: 0, ticket: 1, gp_card: 0 },
       units: {},          // id -> { id, level, exp, dupes, obtained, guest? }
@@ -93,6 +93,7 @@
     if (!out.quests.runs || typeof out.quests.runs !== 'object') out.quests.runs = {};
     if (!out.novice.claimed || typeof out.novice.claimed !== 'object' || Array.isArray(out.novice.claimed)) out.novice.claimed = {};
     out.novice.final = !!out.novice.final;
+    out.currency.paidCubes = Math.max(0, Math.floor(Number(out.currency.paidCubes) || 0));   // Paid Cubes (gacha), additive
     if (!(Number(s.schema) >= 2)) {
       // Phantom Parade economy: Cubes are priced 300 a draw (was 5), talismans
       // became Training Lights, and the 60-pull pity became Gacha Points.

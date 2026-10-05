@@ -68,7 +68,7 @@
 .enh.is-pp.is-expanded .enh-art { clip-path: none; }
 .enh.is-pp.is-expanded .enh-panel, .enh.is-pp.is-expanded .enh-id, .enh.is-pp.is-expanded .enh-arrow { display: none; }
 
-@media (max-width: 760px) {
+@media (max-width: 760px) and (orientation: portrait) {
   .enh.is-pp .enh-top { flex-wrap: wrap; padding-right: 30px; }
   .enh-btns.is-main { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .enh-pb b { font-size: 20px; }

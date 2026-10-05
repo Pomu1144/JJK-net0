@@ -245,7 +245,7 @@ html.is-compact .nv-promo p { font-size: 13px; }
 }
 
 /* ── narrow / portrait phones ── */
-@media (max-width: 700px) {
+@media (max-width: 700px) and (orientation: portrait) {
   #main.nv-main { overflow-y: auto; }
   .nv { grid-template-columns: 1fr; height: auto; min-height: 100%; gap: 6px; }
   .nv-left { min-height: 0; }
