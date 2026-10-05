@@ -1,0 +1,137 @@
+/* css/pp-home.css — Home screen after the Phantom Parade Home layout.
+   Sprites in assets/pp/ui/home/ are cut from the Home UI sheet; each <img class="hm-sp">
+   carries its sheet width in --w and is drawn at --w * --k, where --k is one sheet
+   pixel scaled to the viewport (the sheet's screen is ~1300 x 760 sheet px).
+   Loaded after css/game.css, whose older .home rules this file overrides. */
+
+body[data-page="home"] {
+  --k: min(calc(100vw / 1300), calc(100vh / 740), .8px);
+  --tk: 1;     /* right tile column scale */
+  --qk: 1;     /* Quest card scale */
+  --hm-gap: calc(10 * var(--k));
+}
+html.is-compact body[data-page="home"] { --tk: .86; --qk: .8; }
+.hm-sp { display: block; width: calc(var(--w) * var(--k)); height: auto; max-width: none; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+body[data-page="home"] #main { overflow: hidden; padding-bottom: 4px; }
+body[data-page="home"] .hm-head a, .hm a, .hm button { -webkit-tap-highlight-color: transparent; }
+.hm button { background: none; border: 0; padding: 0; margin: 0; cursor: pointer; font: inherit; color: inherit; }
+.hm a, .hm button, .hm-head a { transition: transform .12s var(--pp-ease), filter .15s; }
+.hm a:active, .hm button:active, .hm-head a:active { transform: translateY(1px) scale(.97); }
+.hm a:hover, .hm button:hover, .hm-head a:hover { filter: brightness(1.12); }
+.hm .nav-dot, .hm-head .nav-dot { position: absolute; z-index: 3; }
+
+/* ── top bar ── */
+body[data-page="home"] .topbar { gap: 6px; padding-top: max(5px, env(safe-area-inset-top)); padding-bottom: 2px; }
+.hm-head { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: calc(9 * var(--k)); }
+.hm-head > * { position: relative; flex: none; display: block; text-decoration: none; color: #f4f1ea; }
+.hm-head b, .hm-head small { font-family: var(--pp-font); text-shadow: 0 1px 0 #000, 0 0 4px rgba(0, 0, 0, .9); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.hm-bar { position: absolute; display: block; overflow: hidden; }
+.hm-bar i { display: block; height: 100%; width: 0; transition: width .4s var(--pp-ease); }
+/* Player Rank: number on the ink-splash badge, name + rank EXP bar on the plate */
+.hm-rank { margin-left: calc(-6 * var(--k)); }
+.hm-rank-n { position: absolute; left: 0; top: 2%; width: 38.6%; height: 100%; display: grid; place-items: center; font: 800 calc(42 * var(--k))/1 var(--pp-font); color: #fff4ea; }
+.hm-rank-name { position: absolute; left: 41%; width: 54%; top: 23%; height: 30%; display: flex; align-items: center; overflow: hidden; font: 700 max(11px, calc(25 * var(--k)))/1 var(--pp-font); color: #ece3cf; text-shadow: 0 1px 2px #000; white-space: nowrap; text-overflow: ellipsis; }
+.hm-bar.is-rank { left: 40.4%; width: 54.8%; top: 56.8%; height: 6.4%; }
+.hm-bar.is-rank i { background: linear-gradient(90deg, #8e1c1c, #e0412f); box-shadow: 0 0 4px rgba(224, 65, 47, .6); }
+/* AP: live value + refill countdown + bar */
+.hm-ap b { position: absolute; right: 5%; top: 12%; height: 50%; display: flex; align-items: center; font: 800 max(12px, calc(29 * var(--k)))/1 var(--pp-font); color: #fbf7ec; }
+.hm-ap small { position: absolute; left: 24%; top: 16%; height: 46%; display: flex; align-items: center; font: 700 max(9px, calc(19 * var(--k)))/1 var(--pp-font); color: #9ff3e6; }
+.hm-bar.is-ap { left: 6.8%; width: 88%; top: 68.5%; height: 16%; }
+.hm-bar.is-ap i { background: linear-gradient(180deg, #f2a43a, #d97a14); }
+.hm-sq { min-width: 32px; display: grid !important; place-items: center; }
+/* clock + currencies */
+.hm-clock { height: calc(48 * var(--k)); padding: 0 calc(16 * var(--k)); display: flex !important; align-items: center; background: url("../assets/pp/ui/home/plate.webp") center / 100% 100% no-repeat; }
+.hm-clock b { font: 700 max(11px, calc(24 * var(--k)))/1 var(--pp-font); color: #f2eee4; letter-spacing: .01em; }
+.hm-cur-gap { flex: 1 1 0; min-width: 0; }
+.hm-cur b { position: absolute; top: 0; bottom: 0; display: flex; align-items: center; justify-content: flex-end; font: 800 max(12px, calc(27 * var(--k)))/1 var(--pp-font); color: #fbf7ec; }
+.hm-cur.is-jp b { left: 27%; right: 7%; }
+.hm-cur.is-cubes b { left: 30%; right: 17%; }
+.hm-cubes { display: flex !important; align-items: center; }
+.hm-cubes > a { position: relative; display: block; flex: none; }
+.hm-cubes .hm-plus { margin-left: calc(-10 * var(--k)); }
+@media (max-width: 760px) { .hm-clock { display: none !important; } }
+
+/* ── page body ── */
+.hm { position: relative; height: 100%; min-height: 240px; }
+.hm > * { position: absolute; z-index: 2; }
+
+/* left: featured carousel in the film-strip frame, Novice / Portal icons, stones */
+.hm-left { left: calc(-4 * var(--k)); top: 0; bottom: 0; width: calc(563 * var(--k)); pointer-events: none; }
+.hm-left > * { pointer-events: auto; }
+.hm-feat { position: relative; width: calc(563 * var(--k)); height: calc(196 * var(--k)); }
+.hm-frame { position: absolute; left: calc(50 * var(--k)); top: 0; width: calc(464 * var(--k)); height: calc(166 * var(--k)); filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .55)); }
+.hm-frame-sp { position: absolute; inset: 0; z-index: 3; }
+.hm .home-carousel { position: absolute; inset: calc(5 * var(--k)); height: auto; overflow: hidden; background: #10171b; border-radius: 2px; }
+.hm .hc-slide { inset: 0; border: 0; box-shadow: none; background-position: center 42%; background-size: cover; }
+.hm .hc-slide::before { background: linear-gradient(180deg, rgba(10, 6, 14, .1) 30%, rgba(10, 6, 14, .2) 55%, rgba(10, 6, 14, .82) 100%); }
+.hm .hc-slide > img { width: 100%; object-position: 50% 20%; }
+.hc-tag { position: absolute; z-index: 2; left: 50%; top: 7%; transform: translateX(-50%); padding: calc(3 * var(--k)) calc(20 * var(--k)); white-space: nowrap;
+  font: 700 max(9px, calc(21 * var(--k)))/1.1 var(--pp-font); color: #fff3e6; letter-spacing: .03em;
+  background: linear-gradient(180deg, #d0362a, #8e1410); clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%); text-shadow: 0 1px 1px #000; }
+.hc-title { position: absolute; z-index: 2; left: 4%; right: 4%; bottom: 9%; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font: 800 max(12px, calc(37 * var(--k)))/1.05 var(--pp-font); color: #fff; letter-spacing: .01em;
+  -webkit-text-stroke: calc(5 * var(--k)) #3a0610; paint-order: stroke fill; text-shadow: 0 0 calc(10 * var(--k)) rgba(255, 90, 40, .85); }
+.hc-title small { display: block; margin: calc(-2 * var(--k)) 6% 0 0; text-align: right; font: 800 max(9px, calc(21 * var(--k)))/1 var(--pp-font); color: #f6dc84; -webkit-text-stroke: calc(4 * var(--k)) #2a1a06; }
+.hm-arrow { position: absolute !important; top: calc(38 * var(--k)); width: max(32px, calc(52 * var(--k))); height: max(40px, calc(90 * var(--k))); display: grid !important; place-items: center; z-index: 4; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .7)); }
+.hm-arrow.is-l { left: calc(-4 * var(--k)); }
+.hm-arrow.is-r { left: calc(511 * var(--k)); }
+.hm .hc-dots { position: absolute; left: calc(50 * var(--k)); width: calc(464 * var(--k)); top: calc(172 * var(--k)); bottom: auto; display: flex; justify-content: center; gap: max(5px, calc(13 * var(--k))); }
+.hm .hc-dots i { width: max(7px, calc(17 * var(--k))); height: max(7px, calc(17 * var(--k))); border-radius: 50%; background: #1d2a33; box-shadow: 0 0 0 1px rgba(0, 0, 0, .6), inset 0 1px 1px rgba(255, 255, 255, .15); }
+.hm .hc-dots i.on { background: radial-gradient(circle at 40% 35%, #fff2a0, #f0c330 60%, #a07810); box-shadow: 0 0 0 1px #3a2a06, 0 0 6px rgba(242, 210, 74, .8); }
+
+.hm-ics { display: flex; align-items: flex-start; gap: calc(36 * var(--k)); margin: calc(12 * var(--k)) 0 0 calc(44 * var(--k)); }
+.hm-ic { position: relative; display: flex; flex-direction: column; align-items: center; text-decoration: none; min-width: 40px; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .65)); }
+.hm-ic.is-novice .hm-sp { width: calc(122 * var(--k) * .92); }
+.hm-ic.is-portal { padding-top: calc(16 * var(--k)); }
+.hm-ic-lb { margin-top: calc(-3 * var(--k)); padding: 0 calc(6 * var(--k)); font: 800 max(12px, calc(33 * var(--k)))/1.05 var(--pp-font); color: #f6f2e8;
+  -webkit-text-stroke: calc(6 * var(--k)) #0c0d0e; paint-order: stroke fill; }
+.hm-ic .nav-dot { top: 0; right: -4px; }
+.hm-ic.is-portal .nav-dot { top: calc(6 * var(--k)); }
+
+.hm-stones { position: absolute; left: calc(52 * var(--k)); bottom: calc(6 * var(--k)); display: flex; flex-direction: column; gap: calc(6 * var(--k)); }
+.hm-stone { display: grid !important; place-items: center; min-width: 32px; min-height: 32px; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); }
+html.is-compact .hm-stones { flex-direction: row; gap: calc(12 * var(--k)); left: calc(48 * var(--k)); }
+html.is-compact .hm-stone .hm-sp { width: calc(var(--w) * var(--k) * .9); }
+
+/* centre-right: Story Event (Remaining tab, ribbon, title on the ink splash) */
+.hm-event { top: calc(4 * var(--k)); right: calc(157 * var(--k) * var(--tk) + 22 * var(--k)); width: calc(409 * var(--k)); text-decoration: none; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .5)); }
+.hm-ev-head { position: relative; display: block; margin-left: 9.3%; width: max-content; }
+.hm-ev-left { position: absolute; left: 13%; right: 4%; top: 2%; height: 52%; display: flex; align-items: center; justify-content: center; white-space: nowrap;
+  font: 700 max(11px, calc(27 * var(--k)))/1 var(--pp-font); color: #f4efe2; text-shadow: 0 1px 2px #000; }
+.hm-ev-logo { position: relative; display: block; margin-top: calc(-2 * var(--k)); }
+.hm-ev-title { position: absolute; left: 0; right: 0; top: 4%; height: 62%; display: flex; align-items: center; justify-content: center; gap: .28em; white-space: nowrap;
+  font: 800 max(15px, calc(44 * var(--k)))/1 var(--pp-font); letter-spacing: -.01em; transform: rotate(-1.5deg); }
+.hm-ev-title span { color: #fffaf0; -webkit-text-stroke: calc(3 * var(--k)) rgba(40, 6, 4, .9); paint-order: stroke fill; }
+.ev-w1 { text-shadow: 0 0 calc(6 * var(--k)) #ff6a1a, 0 0 calc(16 * var(--k)) #e0381a, 0 calc(2 * var(--k)) 0 #6a1206; }
+.ev-w2 { text-shadow: 0 0 calc(6 * var(--k)) #6a5cff, 0 0 calc(16 * var(--k)) #5a1fd0, 0 calc(2 * var(--k)) 0 #1a0a50; }
+.hm-ev-title span::first-letter { font-size: 1.18em; }
+
+/* right: dark shortcut tiles */
+.hm-tiles { top: 0; right: calc(-4 * var(--k)); width: calc(157 * var(--k) * var(--tk)); display: flex; flex-direction: column; align-items: center; gap: calc(9 * var(--k) * var(--tk)); }
+.hm-tile { position: relative; display: block; min-width: 40px; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .65)); }
+.hm-tile .hm-sp { width: calc(var(--w) * var(--k) * var(--tk)); }
+.hm-tile .nav-dot { top: -5px; right: -3px; }
+
+/* bottom-right: Quest card (next stage live in the black bar) */
+.hm-quest { bottom: calc(2 * var(--k)); right: calc(157 * var(--k) * var(--tk) + 12 * var(--k)); text-decoration: none; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .6)); animation: riseIn .6s .2s var(--pp-ease) both; }
+.hm-quest .hm-sp { width: calc(478 * var(--k) * var(--qk)); }
+.hm-qnext { position: absolute; left: 14.5%; width: 70.2%; top: 66%; height: 15.5%; display: flex; align-items: center; justify-content: center; gap: .35em; overflow: hidden; white-space: nowrap; padding: 0 .4em;
+  font: 700 max(10.5px, calc(23 * var(--k) * var(--qk)))/1 var(--pp-font); color: #f4ecd8; }
+.hm-qnext b { flex: none; color: #fff; letter-spacing: .02em; }
+.hm-qnext span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+
+/* dialogue: bottom, between the left column and the Quest card */
+body[data-page="home"] .hm .home-dialog { left: calc(220 * var(--k)); right: calc(157 * var(--k) * var(--tk) + 478 * var(--k) * var(--qk) + 26 * var(--k)); bottom: calc(4 * var(--k)); max-width: 560px; }
+html.is-compact body[data-page="home"] .hm .home-dialog { left: calc(345 * var(--k)); }
+@media (max-width: 700px) { body[data-page="home"] .hm .home-dialog { display: none; } }
+
+/* "expand" stone: hide every menu to look at the art; any tap brings them back */
+html.hm-art-only body[data-page="home"] .topbar,
+html.hm-art-only body[data-page="home"] .dock,
+html.hm-art-only body[data-page="home"] #main { opacity: 0; transition: opacity .3s; }
+html.hm-art-only body[data-page="home"]::after { opacity: .35; }
+html.reduce-motion .hm-quest { animation: none; }
+/* top-bar plates are shorter than 32px on phones: widen their hit area vertically */
+.hm-head a::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: max(100%, 36px); transform: translateY(-50%); }
+/* taller screens: the stones stack right under the Novice / Portal icons, as in the game */
+html:not(.is-compact) .hm-stones { position: relative; left: auto; bottom: auto; width: max-content; margin: calc(22 * var(--k)) 0 0 calc(56 * var(--k)); }

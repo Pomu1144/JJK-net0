@@ -125,8 +125,9 @@
     if (u.side === 'ally') {
       return `<div class="bu ally t-${t}" data-key="${u.key}" role="button" tabindex="0" aria-label="${esc(u.name)}">
         <div class="bu-tag"></div>
+        <span class="bu-plate" aria-hidden="true"></span>
         <div class="bu-body">
-          <div class="bu-art"><span class="bu-aura"></span><span class="bu-face">${Art.img(u.def, 'portrait', { eager: true, alt: '' })}</span><span class="bu-fx"></span><span class="bu-status"></span></div>
+          <div class="bu-art"><span class="bu-aura"></span><span class="bu-face">${Art.img(u.def, 'portrait', { eager: true, alt: '' })}</span><span class="bu-ring" aria-hidden="true"></span>${UI.typeBadge(typeSrc(u), 'bu-tb')}<span class="bu-ko" aria-hidden="true">KO</span><span class="bu-fx"></span><span class="bu-status"></span></div>
           <div class="bu-bars">
             <div class="bu-num bu-hpn"></div>
             <div class="bu-row"><svg class="bu-heart" viewBox="0 0 20 18" aria-hidden="true"><path d="M10 17 2.6 9.7C.4 7.5.6 4 3 2.3 5 .9 7.7 1.4 10 4c2.3-2.6 5-3.1 7-1.7 2.4 1.7 2.6 5.2.4 7.4z"/></svg><div class="bu-hp"><i></i><span></span></div></div>
@@ -171,7 +172,7 @@
       <div class="bt-party">
         <div class="bt-prow">
           <div class="bt-allies" id="allies"></div>
-          <button class="bt-complete" id="complete" type="button" disabled><span>Selection<br>Complete</span></button>
+          <button class="bt-complete" id="complete" type="button" disabled><i class="bt-cmp-glow" aria-hidden="true"></i><span>Selection<br>Complete</span></button>
         </div>
         <div class="bt-buffs" id="buffs"></div>
       </div>
