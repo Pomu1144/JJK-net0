@@ -313,7 +313,14 @@
     setInterval(paintHud, 1000);
   }
 
+  // A navigation away aborts in-flight data fetches ("Failed to fetch"); that is
+  // not an error the player should see, so nothing is reported while unloading.
+  let unloading = false;
+  global.addEventListener('pagehide', () => { unloading = true; });
+  global.addEventListener('beforeunload', () => { unloading = true; });
+
   function errorPanel(err) {
+    if (unloading) return;
     console.error(err);
     const main = $('#main');
     if (main) main.innerHTML = `<div class="jjk-panel error-panel"><h2>Something went wrong</h2><p>${esc(err && err.message ? err.message : err)}</p><a class="jjk-btn" href="home.html">Back to Jujutsu High</a></div>`;

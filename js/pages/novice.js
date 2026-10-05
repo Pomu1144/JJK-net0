@@ -293,7 +293,7 @@
           <span class="nv-foot-tk">${ticketSvg('ssr')}</span>
           <div class="nv-foot-txt"><p>Complete <b>7-day Mission</b> to obtain <em>SSR-Character-Guaranteed Gacha Ticket!</em></p>
             <div class="nv-foot-prog"><span class="bar"><i id="nv-count-bar"></i></span><span id="nv-count"></span></div></div>
-          <button class="jjk-btn is-primary nv-claimall" id="nv-claimall" type="button">Claim All</button>
+          <button class="jjk-btn is-red nv-claimall" id="nv-claimall" type="button">Claim All</button>
         </div>
       </section>
     </div>`;

@@ -240,7 +240,6 @@ html.is-compact .rv-title { font-size: 15px; padding: 3px 30px; }
 .g-list .ban-group { padding-left: 1px; text-indent: 0; }
 .g-list .ban-tab { height: 64px; flex: none; border-color: #8c7a4c; }
 .g-list .ban-tab.active { margin-left: 6px; }
-.g-list .ban-tab.active::before { content: ''; position: absolute; z-index: 3; left: -1px; top: 50%; border: 8px solid transparent; border-left-color: #f2d24a; transform: translateY(-50%); }
 .ban-time { flex: none; margin: 0 0 6px; padding: 1px 6px; font: 700 9.5px/1.4 var(--pp-font); color: #f0e2bd; background: rgba(10, 8, 18, .75); }
 
 .g-info { position: absolute; z-index: 3; right: 10px; top: 10px; width: min(300px, 30%); display: flex; flex-direction: column; gap: 8px; }
