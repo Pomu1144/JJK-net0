@@ -42,7 +42,7 @@
     const allies = teamUnitIds.map((id) => {
       const v = Rules.unitView(id);
       const d = v.def;
-      return { id, name: d.name, element: d.element, stats: v.stats, basic: d.basic, technique: d.technique, ultimate: d.ultimate, passives: d.passives, def: d };
+      return { id, name: d.name, element: d.element, stats: v.stats, basic: d.basic, technique: d.technique, technique2: d.technique2, ultimate: d.ultimate, passives: d.passives, def: d };
     });
     const waves = stage.waves.map((w) => w.map((x) => Object.assign({}, Data.enemy(x.enemy), { level: x.level, scale: chapter.scale || 1 })));
     S = E.create({ allies, support: supportId ? Rules.unitDef(supportId) : null, waves, rules: Rules });
@@ -100,7 +100,7 @@
       const b = e.target.closest('[data-act]');
       if (!b || b.disabled || !waiting) return;
       const w = waiting; waiting = null;
-      w({ type: b.dataset.act, target: target });
+      w({ type: b.dataset.act, slot: Number(b.dataset.slot || 0), target: target });
     });
     const back = $('.jjk-back');
     if (back) back.addEventListener('click', async (e) => {
@@ -151,15 +151,17 @@
       p.innerHTML = `<div class="bt-wait">${u ? esc(u.name) + ' is acting…' : ''}</div>`;
       return;
     }
-    const t = u.technique, ul = u.ultimate;
+    const ul = u.ultimate;
+    const techBtn = (t, slot) => `<button class="act act-tech" data-act="technique" data-slot="${slot}" type="button" ${can && t && E.canTechnique(S, u, slot) ? '' : 'disabled'}>${u.def && u.def.art && u.def.art.skills && u.def.art.skills['s' + (slot + 1)] ? `<img class="act-icon" src="${esc(u.def.art.skills['s' + (slot + 1)])}" alt="">` : ''}<b>${t ? esc(t.name) : '—'}</b><small>${t ? 'Skill ' + (slot + 1) + ' · ' + t.cost + ' CE' : 'No skill'}</small></button>`;
     const can = !!waiting && !auto;
     p.innerHTML = `
       <div class="bt-who">${Art.img(u.def, 'portrait', { alt: '' })}<div><b>${esc(u.name)}</b><small>${fmt(u.hp)} / ${fmt(u.maxHp)} HP</small>
         <small class="bt-hint">${auto ? 'Auto battle on' : target ? '⌖ ' + esc((E.find(S, target) || {}).name || '') : 'Tap a curse to target'}</small></div></div>
       <button class="act act-atk" data-act="attack" type="button" ${can ? '' : 'disabled'}><b>Attack</b><small>${esc(u.basic.name)} · +1 CE</small></button>
-      <button class="act act-tech" data-act="technique" type="button" ${can && E.canTechnique(S, u) ? '' : 'disabled'}><b>${t ? esc(t.name) : 'No technique'}</b><small>${t ? 'Cursed Technique · ' + t.cost + ' CE' : '—'}</small></button>
+      ${techBtn(u.technique, 0)}
+      ${u.technique2 ? techBtn(u.technique2, 1) : ''}
       <button class="act act-ult${E.canUltimate(S, u) ? ' is-ready' : ''}" data-act="ultimate" type="button" ${can && E.canUltimate(S, u) ? '' : 'disabled'}>
-        <b>${ul ? (ul.kind === 'domain' ? 'Domain Expansion' : 'Ultimate') : 'No ultimate'}</b><small>${ul ? esc(ul.name.replace(/^Domain Expansion: /, '')) + ' · ' + ul.cost + ' CE' + (u.gauge < 100 ? ' · ' + Math.floor(u.gauge) + '%' : '') : '★5+ only'}</small></button>`;
+        <b>${ul ? (ul.kind === 'domain' ? 'Domain Expansion' : 'Ultimate') : 'No ultimate'}</b><small>${ul ? esc(ul.name.replace(/^Domain Expansion: /, '')) + ' · ' + ul.cost + ' CE' + (u.gauge < 100 ? ' · ' + Math.floor(u.gauge) + '%' : '') : '—'}</small></button>`;
   }
 
   function selectTarget(key) {

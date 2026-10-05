@@ -52,11 +52,13 @@
   }
 
   function skillsHtml(d) {
-    const t = d.technique, u = d.ultimate;
+    const u = d.ultimate;
+    const icon = (k) => (d.art && d.art.skills && d.art.skills[k] ? `<img class="skill-icon" src="${esc(d.art.skills[k])}" alt="" loading="lazy">` : '');
+    const tech = (t, n) => (t ? `<div class="skill is-tech">${icon('s' + n)}<h4>${esc(t.name)} <small>Skill ${n}</small><span class="cost">${t.cost} CE</span></h4><p>${esc(t.desc)}</p></div>` : '');
     return `
-      <div class="skill"><h4>${esc(d.basic.name)} <small>Basic attack</small><span class="cost">+1 CE</span></h4><p>1.0x attack to one curse. Builds cursed energy.</p></div>
-      ${t ? `<div class="skill is-tech"><h4>${esc(t.name)} <small>Cursed Technique</small><span class="cost">${t.cost} CE</span></h4><p>${esc(t.desc)}</p></div>` : ''}
-      ${u ? `<div class="skill is-ult"><h4>${esc(u.name)} <small>${u.kind === 'domain' ? 'Domain Expansion' : 'Ultimate'}</small><span class="cost">${u.cost} CE · full gauge</span></h4><p>${esc(u.desc)}</p></div>` : ''}
+      <div class="skill">${icon('normal')}<h4>${esc(d.basic.name)} <small>Normal attack</small><span class="cost">+1 CE</span></h4><p>${(d.basic.mult || 1).toFixed(1)}x attack to one curse. Builds cursed energy.</p></div>
+      ${tech(d.technique, 1)}${tech(d.technique2, 2)}
+      ${u ? `<div class="skill is-ult">${icon('ult')}<h4>${esc(u.name)} <small>${u.kind === 'domain' ? 'Domain Expansion' : 'Ultimate'}</small><span class="cost">${u.cost} CE · full gauge</span></h4><p>${esc(u.desc)}</p></div>` : ''}
       ${(d.passives || []).map((p) => `<div class="skill is-passive"><h4>${esc(p.name)} <small>Passive</small></h4><p>${esc(p.desc)}</p></div>`).join('')}
       ${d.support ? `<div class="skill is-support"><h4>${esc(d.support.name)} <small>Support skill</small></h4><p>${esc(d.support.desc)} (when set as Support)</p></div>` : ''}`;
   }

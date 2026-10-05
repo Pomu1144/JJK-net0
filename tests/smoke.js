@@ -122,7 +122,7 @@ async function gameFlow(browser) {
   // forced defeat: one 3-star unit against the final boss
   await p.evaluate(() => Save.update((st) => {
     ['1-1', '1-2', '1-3', '1-4', '1-5', '2-1', '2-2', '2-3', '2-4', '2-5', '3-1', '3-2', '3-3', '3-4', '3-5', '4-1', '4-2', '4-3', '4-4'].forEach((id) => { st.progress[id] = st.progress[id] || { stars: 1, clears: 1, best: 9 }; });
-    st.teams[2].slots = ['yuji_301', null, null, null]; st.teams[2].support = null;
+    st.teams[2].slots = ['maki_weaker_curse', null, null, null]; st.teams[2].support = null;
     st.stamina = { cur: 99, ts: Date.now() }; st.settings.autoBattle = true; st.settings.battleSpeed = 3;
   }));
   await p.goto(BASE + 'battle.html?stage=4-5&team=2');
@@ -155,8 +155,8 @@ async function gameFlow(browser) {
   check(await p.$eval('#w-dep', (b) => b.disabled), 'wallet disabled when standalone');
 
   // Portal Code out ...
-  await p.click('#send-pick .ucard[data-id="megumi_401"]');
-  await p.click('#send-pick .ucard[data-id="panda_404"]');
+  await p.click('#send-pick .ucard[data-id="toge_baton_counterattack"]');
+  await p.click('#send-pick .ucard[data-id="panda_at_shortest"]');
   await p.click('#send-go');
   const code = await p.inputValue('#code-out');
   check(code.startsWith('PRTL1.'), 'Portal Code made');
@@ -178,13 +178,13 @@ async function codeRoundTrip(browser, code) {
   await p.fill('#name', 'Second Device');
   await p.click('#start');
   await p.waitForURL(/home\.html/);
-  await p.evaluate(() => Save.update((s) => { delete s.units.megumi_401; }));
+  await p.evaluate(() => Save.update((s) => { delete s.units.toge_baton_counterattack; }));
   await p.goto(BASE + 'settings.html#portal');
   const foreign = await p.evaluate((root) => PortalSDK.encodeCode([{ sourceGame: 'nxbnvnb', baseId: 'kakashi_100', name: 'Kakashi Hatake', element: 'Wisdom', rarity: 6, level: 40, maxLevel: 100, stats: { hp: 0.5, atk: 0.4, speed: 0.5 }, art: { portrait: root + 'deliberately-missing.webp' } }]), BASE);
   await p.fill('#code-in', code);
   await p.click('#code-go');
   let s = await save(p);
-  check(!!s.units.megumi_401 && !!s.units.panda_404, 'code import adds / keeps own units: ' + (await p.textContent('#code-msg')));
+  check(!!s.units.toge_baton_counterattack && !!s.units.panda_at_shortest, 'code import adds / keeps own units: ' + (await p.textContent('#code-msg')));
   await p.fill('#code-in', foreign);
   await p.click('#code-go');
   s = await save(p);
@@ -243,7 +243,7 @@ async function hubFlow(browser) {
   f = fr();
   w = await wallet();
   check(w.pending === 0 && w.cur.cubes === w0.cur.cubes - 10 && w.cur.yen === w0.cur.yen - 700 && w.hub.premium === 10 && w.hub.coins === 700, 'pending transfers retried once on reconnect (same txId)');
-  await f.evaluate(() => Save.update((st) => { st.teams[0].slots = ['gojo_9005', 'guest_nxbnvnb_naruto_001', 'yuji_301', 'nobara_402']; st.units.gojo_9005.exp = 236; st.settings.autoBattle = true; st.settings.battleSpeed = 3; }));
+  await f.evaluate(() => Save.update((st) => { st.teams[0].slots = ['gojo_9005', 'guest_nxbnvnb_naruto_001', 'maki_weaker_curse', 'shoko_reverse_curse']; st.units.gojo_9005.exp = 236; st.settings.autoBattle = true; st.settings.battleSpeed = 3; }));
   await f.goto(BASE + 'battle.html?stage=1-1&team=0');
   await p.waitForTimeout(1500);
   f = fr();

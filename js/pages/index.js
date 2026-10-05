@@ -2,7 +2,8 @@
 (function () {
   'use strict';
   const { $, esc } = UI;
-  const STARTERS = ['yuji_301', 'megumi_401', 'nobara_402', 'panda_404'];
+  // Tokyo second-years plus Shoko as healer (all SR).
+  const STARTERS = ['maki_weaker_curse', 'panda_at_shortest', 'toge_baton_counterattack', 'shoko_reverse_curse'];
 
   function render() {
     const s = Save.get();

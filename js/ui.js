@@ -223,6 +223,27 @@
   }
 
   /** Page entry point. */
+  // The roster only keeps units with real art. Units in an older save that
+  // are no longer in data/characters.json (and aren't Portal guests) are
+  // removed from the box and teams and refunded in Yen, once.
+  function retireUnits() {
+    if (!Save.exists() || !Data.characters.length) return;
+    const s = Save.get();
+    const gone = Object.keys(s.units || {}).filter((id) => !Data.char(id) && !(s.guests || {})[id]);
+    if (!gone.length) return;
+    const refund = gone.length * 3000;
+    Save.update((st) => {
+      gone.forEach((id) => { delete st.units[id]; });
+      st.teams.forEach((t) => {
+        t.slots = t.slots.map((x) => (gone.includes(x) ? null : x));
+        if (gone.includes(t.support)) t.support = null;
+      });
+      if (gone.includes(st.profile.homeUnit)) st.profile.homeUnit = null;
+      st.currency.yen += refund;
+    });
+    toast(gone.length + ' retired sorcerer' + (gone.length === 1 ? '' : 's') + ' refunded: ¥' + fmt(refund));
+  }
+
   function boot(cfg) {
     const c = cfg || {};
     if (c.requireSave !== false && !Save.exists()) { global.location.replace('index.html'); return; }
@@ -230,7 +251,7 @@
       try { if (c.shell !== false) buildShell(c); } catch (e) { errorPanel(e); return; }
       if (global.PortalPort) PortalPort.init();
       Data.all(...(c.data || ['characters']))
-        .then(() => (c.init ? c.init() : null))
+        .then(() => { retireUnits(); return c.init ? c.init() : null; })
         .catch(errorPanel);
     };
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);

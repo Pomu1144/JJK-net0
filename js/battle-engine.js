@@ -8,7 +8,10 @@
  *   const ev = BattleEngine.act(S, actor, a)-> events[]
  *   S.over / S.result ('win' | 'lose')
  *
- * allies: [{ id, name, element, stats:{hp,atk,speed}, technique, ultimate, passives, def }]
+ * allies: [{ id, name, element, stats:{hp,atk,speed}, technique, technique2, ultimate, passives, def }]
+ *   technique / technique2 are a unit's Skill 1 and Skill 2. A skill with
+ *   mult 0 does not hit: it only applies its effect (target 'allies' for
+ *   heals and buffs).
  * waves:  [[{ id, name, element, stats, skill, boss, level, def }], ...]
  */
 (function (global) {
@@ -45,7 +48,7 @@
         maxHp, hp: maxHp, atk: Math.round(a.stats.atk * (1 + p.atk / 100)),
         speed: Math.round(a.stats.speed * (1 + p.speed / 100)),
         crit: B.baseCrit + p.crit, guard: Math.min(60, p.guard), regen: p.regen, lowHpAtk: p.lowHpAtk,
-        basic: a.basic || { name: 'Attack', mult: 1 }, technique: a.technique || null, ultimate: a.ultimate || null,
+        basic: a.basic || { name: 'Attack', mult: 1 }, technique: a.technique || null, technique2: a.technique2 || null, ultimate: a.ultimate || null,
         gauge: 0, buffs: [], dots: [], stun: 0, alive: true, acted: 0,
       });
     });
@@ -166,7 +169,8 @@
     }
   }
 
-  function canTechnique(S, u) { return !!(u.side === 'ally' && u.technique && S.ce >= u.technique.cost); }
+  const techOf = (u, slot) => (slot === 1 ? u.technique2 : u.technique);
+  function canTechnique(S, u, slot) { const t = techOf(u, slot || 0); return !!(u.side === 'ally' && t && S.ce >= t.cost); }
   function canUltimate(S, u) { return !!(u.side === 'ally' && u.ultimate && u.gauge >= S.B.gaugeMax && S.ce >= u.ultimate.cost); }
 
   function pickTargets(S, attacker, target, kind) {
@@ -232,7 +236,8 @@
     const events = [];
     if (S.over || !actor || !actor.alive) return events;
     let type = action && action.type || 'attack';
-    if (type === 'technique' && !canTechnique(S, actor)) type = 'attack';
+    const slot = action && action.slot === 1 ? 1 : 0;
+    if (type === 'technique' && !canTechnique(S, actor, slot)) type = 'attack';
     if (type === 'ultimate' && !canUltimate(S, actor)) type = 'attack';
     actor.acted++;
     let spec;
@@ -241,9 +246,10 @@
       if (type === 'skill' && sk) spec = { name: sk.name, mult: sk.mult, target: sk.target, effect: sk.effect, kind: 'skill' };
       else spec = { name: 'Attack', mult: 1, target: 'single', kind: 'attack' };
     } else if (type === 'technique') {
-      spec = Object.assign({ kind: 'technique' }, actor.technique);
-      S.ce -= actor.technique.cost;
-      events.push({ type: 'ce', amount: -actor.technique.cost, ce: S.ce });
+      const tech = techOf(actor, slot);
+      spec = Object.assign({ kind: 'technique' }, tech);
+      S.ce -= tech.cost;
+      events.push({ type: 'ce', amount: -tech.cost, ce: S.ce });
     } else if (type === 'ultimate') {
       spec = Object.assign({ kind: actor.ultimate.kind === 'domain' ? 'domain' : 'ultimate' }, actor.ultimate);
       S.ce -= actor.ultimate.cost;
@@ -253,9 +259,10 @@
       spec = { name: actor.basic ? actor.basic.name : 'Attack', mult: actor.basic ? actor.basic.mult : 1, target: 'single', kind: 'attack' };
     }
     events.push({ type: 'action', from: actor.key, kind: spec.kind, name: spec.name, target: action && action.target });
-    const targets = pickTargets(S, actor, action && action.target, spec.target || 'single');
+    const supportOnly = spec.target === 'allies';
+    const targets = supportOnly ? [] : pickTargets(S, actor, action && action.target, spec.target || 'single');
     let landed = 0;
-    targets.forEach((t) => { if (hit(S, actor, t, spec.mult, events, spec.name) > 0) landed++; });
+    if (spec.mult > 0) targets.forEach((t) => { if (hit(S, actor, t, spec.mult, events, spec.name) > 0) landed++; });
     applyEffect(S, actor, targets.filter((t) => t.alive), spec.effect, events);
     if (actor.side === 'ally') {
       if (spec.kind === 'attack' && landed) {
@@ -287,12 +294,25 @@
     const best = foes.slice().sort((a, b) =>
       (R.elementMult(u.element, b.element) - R.elementMult(u.element, a.element)) || (a.hp - b.hp))[0];
     if (canUltimate(S, u)) return { type: 'ultimate', target: best.key };
-    if (canTechnique(S, u)) {
-      // keep enough energy for a teammate's charged domain
-      const reserve = living(S.allies).some((a) => a !== u && a.ultimate && a.gauge >= S.B.gaugeMax - S.B.gaugePerAction)
-        ? Math.max(...living(S.allies).filter((a) => a.ultimate).map((a) => a.ultimate.cost)) : 0;
-      if (S.ce - u.technique.cost >= reserve || foes.length === 1 && best.hp < atkOf(u) * u.technique.mult) return { type: 'technique', target: best.key };
-    }
+    // keep enough energy for a teammate's charged ultimate
+    const reserve = living(S.allies).some((a) => a !== u && a.ultimate && a.gauge >= S.B.gaugeMax - S.B.gaugePerAction)
+      ? Math.max(...living(S.allies).filter((a) => a.ultimate).map((a) => a.ultimate.cost)) : 0;
+    const hurt = living(S.allies).some((a) => a.hp < a.maxHp * 0.55);
+    const buffed = u.buffs.some((b) => b.type === 'atk');
+    const options = [0, 1].map((slot) => ({ slot, t: techOf(u, slot) }))
+      .filter((o) => o.t && canTechnique(S, u, o.slot))
+      .map((o) => {
+        const e = o.t.effect && o.t.effect.type;
+        let score = o.t.mult * (o.t.target === 'all' ? Math.min(foes.length, 3) * 0.8 : 1);
+        if (e === 'heal') score = hurt ? 6 : -1;
+        else if (e === 'buffAtk' && !o.t.mult) score = buffed ? -1 : 2.2;
+        else if (e === 'ceGain' && !o.t.mult) score = 1.5;
+        else if (!o.t.mult) score = 1.8; // stun / weaken only
+        return Object.assign(o, { score });
+      })
+      .filter((o) => o.score > 0 && (S.ce - o.t.cost >= reserve || (foes.length === 1 && best.hp < atkOf(u) * o.t.mult)))
+      .sort((a, b) => b.score - a.score);
+    if (options.length) return { type: 'technique', slot: options[0].slot, target: best.key };
     return { type: 'attack', target: best.key };
   }
 

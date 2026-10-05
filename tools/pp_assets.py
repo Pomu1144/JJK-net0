@@ -30,12 +30,15 @@ def main(src_dir):
     for sub in ('units', 'memories', 'ui'):
         shutil.copytree(os.path.join(src_dir, sub), os.path.join(DEST, sub))
     os.makedirs(os.path.join(DEST, 'portraits'))
-    for group in ('characters', 'enemies'):
-        for gid, c in cfg[group].items():
-            art = os.path.join(DEST, 'units', c['unit'], 'art.webp')
-            if not os.path.exists(art):
-                sys.exit(f'missing art for {gid}: {c["unit"]}')
-            crop(art, os.path.join(DEST, 'portraits', gid + '.webp'), c['x'])
+    # Every unit gets a 3:4 portrait; tools/pp-art.json can move the crop.
+    units = json.load(open(os.path.join(ROOT, 'tools', 'pp-units.json')))
+    crops = [(u['id'], u['slug'], cfg['characters'].get(u['id'], {}).get('x', 0.5)) for u in units]
+    crops += [(gid, c['unit'], c['x']) for gid, c in cfg['enemies'].items()]
+    for gid, unit, x in crops:
+        art = os.path.join(DEST, 'units', unit, 'art.webp')
+        if not os.path.exists(art):
+            sys.exit(f'missing art for {gid}: {unit}')
+        crop(art, os.path.join(DEST, 'portraits', gid + '.webp'), x)
     for group in ('chapters', 'banners'):
         for gid, mem in cfg[group].items():
             if not os.path.exists(os.path.join(DEST, 'memories', mem, 'art.webp')):

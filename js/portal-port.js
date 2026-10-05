@@ -98,6 +98,7 @@
       art: { portrait: card.art.portrait || '', full: card.art.full || card.art.portrait || '', generated: false },
       basic: { name: 'Strike', mult: 1.0 },
       technique: tpl.technique,
+      technique2: tpl.technique2 || null,
       ultimate: ult,
       passives: (tpl.passives || []).slice(0, 1),
       support: tpl.support,

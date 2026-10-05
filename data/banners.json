@@ -15,38 +15,39 @@
    "id": "strongest",
    "name": "The Strongest",
    "kanji": "最強",
-   "subtitle": "Featured: Gojo Satoru ★7 rate up",
+   "subtitle": "Pickup: Satoru Gojo SSR rate up",
    "featured": [
-    "gojo_9005",
-    "toji_602"
+    "satoru_strongest",
+    "satoru_hollow_technique",
+    "satoru_strongest_blue",
+    "gojo_9005"
    ],
-   "element": "Skill",
+   "element": "Body",
    "pityAt": 60,
-   "hero": "gojo_9005",
+   "hero": "satoru_strongest",
    "bg": "assets/pp/memories/the-strongest-duo/art.webp"
   },
   {
    "id": "king",
    "name": "King of Curses",
    "kanji": "呪いの王",
-   "subtitle": "Featured: Ryomen Sukuna ★7 ×2 rate up",
+   "subtitle": "Limited: Ryomen Sukuna rate up",
    "featured": [
     "sukuna_9006",
     "sukuna_9007",
-    "jogo_610"
+    "jogo_610",
+    "mahito_609"
    ],
-   "element": "Body",
+   "element": "Heart",
    "pityAt": 60,
    "hero": "sukuna_9006",
    "bg": "assets/pp/memories/malevolent-shrine/art.webp"
   }
  ],
  "rates": {
-  "3": 46.0,
-  "4": 32.0,
-  "5": 15.0,
-  "6": 6.0,
-  "7": 1.0
+  "5": 85.0,
+  "6": 13.0,
+  "7": 2.0
  },
  "featuredShare": 50,
  "cost": {
