@@ -25,9 +25,11 @@ Plain static HTML / CSS / vanilla JS: no build step, no backend. Play it at
 
 Only characters with real art are in the game.
 
-- **53 units** in `data/characters.json`: the 50 units of the *Jujutsu Kaisen Phantom Parade* fan
-  wiki (SR and SSR, with their wiki epithets, types, roles, Skill 1 / Skill 2 / ultimate names and
-  auto skills) plus Gojo and both Sukunas as limited SSRs (art shared with NXBNVNB).
+- **103 units** in `data/characters.json`: 100 *Jujutsu Kaisen Phantom Parade* units (16 SR, 84 SSR)
+  from the fan wikis — the 50 of the [old wiki](https://jujutsu-kaisen-phantom-parade.fandom.com) plus
+  every other SSR of the [new wiki](https://jjk-phantom-parade.fandom.com/wiki/SSR_Character) that has
+  card art — with their wiki epithets, types, roles, Skill 1 / Skill 2 / ultimate names and auto
+  skills, plus Gojo and both Sukunas as limited SSRs (art shared with NXBNVNB).
 - **32 opponents** in `data/enemies.json`, every one a character with art: rival sorcerers
   (Tokyo second-years, the Kyoto students, Junpei, Toji…) and cursed spirits (Mahito, Hanami, Jogo,
   Ryomen Sukuna).
@@ -54,7 +56,7 @@ Saves from before this economy are migrated on load (schema 2): Cubes ×60, tali
 Lights, old pity counts → Gacha Points.
 
 ### Art
-- `assets/pp/` (4.9 MB): card art, unit icons and skill icons for the 50 units, 104 memory
+- `assets/pp/` (7.5 MB): card art, unit icons and skill icons for the 100 units, 104 memory
   illustrations, type and rarity badges, currency / item icons (`currency/`: JP, Cubes, Training
   and Recollection Lights, Gacha Point Card, Clear Rank marks) and Quest mode art (`modes/`) — from
   the Phantom Parade fan wikis, every file credited in
@@ -69,10 +71,14 @@ Lights, old pity counts → Gacha Points.
 ```sh
 python3 tools/scrape_pp_wiki.py        # in a scratch folder: wiki images -> out/ (needs ffmpeg, ImageMagick)
 python3 tools/pp_assets.py path/to/out # copy into assets/pp/, cut portraits, write CREDITS.md
+python3 tools/fetch_pp_units.py        # new wiki: SSR unit templates not yet in the game -> tools/pp-units-raw.json
 python3 tools/pp_units.py              # tools/pp-units-raw.json (wiki unit templates) -> tools/pp-units.json
+python3 tools/fetch_pp_units.py --art  # their card art, icons and portraits -> assets/pp/ (manifest, CREDITS)
 python3 tools/generate.py              # rebuild data/*.json (roster, opponents per chapter, missions, banners)
 node tools/balance.js                  # auto-battle win rates per stage
 ```
+
+`tools/pp-new-units.json` maps every unit's page title on the new wiki to its game id.
 
 `tools/pp_units.py` translates each unit's wiki effect text into this engine: damage %, one or all
 enemies, and one side effect (stun, poison/burn, attack down, heal, attack up, cursed energy). Stats

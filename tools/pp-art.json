@@ -112,6 +112,62 @@
     "toge_baton_counterattack": {
       "unit": "toge-inumaki-the-baton-of-counterattack",
       "x": 0.72
+    },
+    "aoi_satisfied": {
+      "unit": "aoi-todo-are-you-satisfied-with-that",
+      "x": 0.3
+    },
+    "atsuya_sharp_blade": {
+      "unit": "atsuya-kusakabe-ward-off-with-sharp-blade",
+      "x": 0.58
+    },
+    "dagon_unlimited_shikigami": {
+      "unit": "dagon-unlimited-shikigami",
+      "x": 0.3
+    },
+    "kaito_will_in_mind": {
+      "unit": "kaito-yuki-with-that-will-in-mind",
+      "x": 0.43
+    },
+    "mahito_unbridled_soul": {
+      "unit": "mahito-unbridled-soul",
+      "x": 0.6
+    },
+    "mai_final_bullet": {
+      "unit": "mai-zen-in-the-final-bullet",
+      "x": 0.58
+    },
+    "mei_dancing_crows": {
+      "unit": "mei-mei-night-of-dancing-crows",
+      "x": 0.6
+    },
+    "momo_tool_manipulation": {
+      "unit": "momo-nishimiya-tool-manipulation",
+      "x": 0.62
+    },
+    "ryomen_battle_firepower": {
+      "unit": "ryomen-sukuna-battle-of-firepower",
+      "x": 0.68
+    },
+    "satoru_summer_treats": {
+      "unit": "satoru-gojo-melting-sweet-summer-treats",
+      "x": 0.6
+    },
+    "suguru_what_lies_end": {
+      "unit": "suguru-geto-teen-what-lies-at-the-end",
+      "x": 0.4
+    },
+    "takuma_no_conceit": {
+      "unit": "takuma-ino-no-conceit",
+      "x": 0.55
+    },
+    "yoshinobu_crafty_rock": {
+      "unit": "yoshinobu-gakuganji-crafty-rock",
+      "x": 0.65
+    },
+    "yuta_executioner": {
+      "unit": "yuta-okkotsu-executioner",
+      "x": 0.4
     }
   },
   "chapters": {

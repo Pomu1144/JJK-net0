@@ -33,6 +33,13 @@
    "kanji": "札",
    "desc": "One free draw on any banner. Earns a Gacha Point like any draw."
   },
+  "ssr_ticket": {
+   "name": "SSR-Character Guaranteed Ticket",
+   "kind": "ssr",
+   "kanji": "確",
+   "icon": "assets/pp/currency/gacha-card.webp",
+   "desc": "One draw that is always an SSR character. Reward for finishing all 7 days of Novice Missions."
+  },
   "gp_card": {
    "name": "Gacha Point Card",
    "kind": "gp",

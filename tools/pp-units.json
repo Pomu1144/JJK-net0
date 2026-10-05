@@ -1,5 +1,93 @@
 [
  {
+  "id": "aoi_satisfied",
+  "slug": "aoi-todo-are-you-satisfied-with-that",
+  "name": "Aoi Todo",
+  "title": "Are you satisfied with that?",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Kyoto Jujutsu High Year 3",
+  "kanji": "東堂",
+  "wiki": {
+   "hp": 44135.0,
+   "attack": 13030.0,
+   "jujutsu": 10387.0
+  },
+  "basic": {
+   "name": "All-Out Straight",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Poor Souls…",
+    "cost": 4,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Increases own Taijutsu Stat by 14.3% (4 Turns) Increases own Critical Hit Rate 12.2% (4 Turns) Grants an ally in front of Todo a “Best Friend” Status (4 Turns) (\"Physically Gifted\" ally will not receives “Best Friend” Status) (Cooldown: 4 T",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Boogie Woogie Combination",
+    "cost": 5,
+    "mult": 3.49,
+    "target": "single",
+    "desc": "Deals 348.8% Melee Taijutsu Damage to the selected enemy (4 Hits) Disrupt the selected enemy (Special) (2 Turns/1 Time/Chance: 35%)"
+   }
+  ],
+  "ultimate": {
+   "name": "Climax☆Jumping!",
+   "cost": 6,
+   "mult": 4.28,
+   "target": "single",
+   "desc": "Grants Guaranteed hit Status (1 Time) Deals 777.4% Melee Taijutsu Damage to the selected enemy (9 Hits, Critical Hit on 9th hit, Counter Bypass) Grants “Climax⭐️JUMPING!” status (6 Turns) If “Climax⭐️JUMPING!” status is activated: Increases",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Are you satisfied with that?",
+    "desc": "After all allies have perform their attack, Todo will perform different type of follow up attack on the selected enemy (Counter Bypass): If any allies performs ",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Boogie Woogie (Counter)",
+    "desc": "To the enemy who attempted to attack \"Best Friend\" ally (1 Time per Turn) Deals 100% Melee Taijutsu Damage to the countered enemy Disrupt the countered enemy (S",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Zone, Outburst",
+   "desc": "When Black Flash is performed Increases own Black Flash Rate by 30% (4 Turns/Cannot be Stacked) Fills own Ultimate Gauge by 60 Recovers own Cursed Energy by 5 (",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.2,
+   "atk": 1.054,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "aoi_fight_together",
   "slug": "aoi-todo-fight-together-with-takada-chan",
   "name": "Aoi Todo",
@@ -153,6 +241,352 @@
   }
  },
  {
+  "id": "atsuya_sharp_blade",
+  "slug": "atsuya-kusakabe-ward-off-with-sharp-blade",
+  "name": "Atsuya Kusakabe",
+  "title": "Ward off with Sharp Blade",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Defender",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "日下部",
+  "wiki": {
+   "hp": 42270.0,
+   "attack": 12507.0,
+   "jujutsu": 9956.0
+  },
+  "basic": {
+   "name": "Nukitsuke",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "New Shadow Style: Simple Domain",
+    "cost": 5,
+    "mult": 1.8,
+    "target": "single",
+    "desc": "Applies the following effect to self: \"Simple Domain\" State (4 turns) Counter State (4 Turns/2 Times) Ranged attack Interception Increases own Taijutsu Stat by 14.3% Decreases own Jujutsu Damage Received by 19.4% Nullify enemy's Domain Cont"
+   },
+   {
+    "name": "Continuous Slashes",
+    "cost": 4,
+    "mult": 3.01,
+    "target": "single",
+    "desc": "Deals 301.0% Melee Taijutsu Damage to the selected enemy (5 Hits)"
+   }
+  ],
+  "ultimate": {
+   "name": "New Shadow Style: \"Batto Sword Drawing\"",
+   "cost": 6,
+   "mult": 2.4,
+   "target": "all",
+   "desc": "Deals 685.4% Melee Taijutsu Damage to all enemies with Critical Hit Increases own Critical Hit Rate by 26.3% (4 Turns)",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Interception",
+    "desc": "If own Cursed Energy is 5 or more when receiving Melee Attack in Counter State Deals 300% Melee Taijutsu Damage to the countered enemy Consumes 5 Cursed Energy ",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Simple Domain",
+    "desc": "If own Cursed Energy is 5 or more and own HP is 10% or more when receiving Ranged Attack in \"Ranged Attack Interception\" State Decreases own Ranged Damage Recei",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Cover",
+   "desc": "If own Cursed Energy is 10 or more and \"Simple Domain\" State is activated Nullify the attack which will cause any allies defeated (Excluding self) Consumes 10 C",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.167,
+   "atk": 1.012,
+   "speed": 0.9
+  }
+ },
+ {
+  "id": "choso_older_brother",
+  "slug": "choso-fulfilling-his-duty-as-the-older-brother",
+  "name": "Choso",
+  "title": "Fulfilling His Duty as the Older Brother",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Incarnation Cursed Womb: Death Paintings",
+  "kanji": "脹相",
+  "wiki": {
+   "hp": 33877.0,
+   "attack": 9044.0,
+   "jujutsu": 11806.0
+  },
+  "basic": {
+   "name": "\"Blood Edge\"",
+   "mult": 1.0
+  },
+  "skills": [
+   {
+    "name": "\"Flowing Red Scale\"",
+    "cost": 2,
+    "mult": 1.99,
+    "target": "single",
+    "desc": "Grant \"Flowing Red Scale\" State (4 Turns/Cannot be stacked, Re-activation will override turn count) Increases own Taijutsu Stat & Damage Dealt by 14.3% At the start of turn, Recovers own Cursed Energy by 5 Remove \"Flowing Red Scale\" state i",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "\"Slicing Exorcism\"",
+    "cost": 3,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 149.4% ranged Jujutsu Damage to the selected enemy (3 Hits) Inflict 34.7% Continuous Jujutsu Damage (Poison) to the selected enemy (3 Turns) Increases the selected enemy's Damage Received by 22.2% (4 Turns) (Effective for \"夜\" (Green) ",
+    "effect": {
+     "type": "burn",
+     "pct": 5,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "\"Piercing Blood\"",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Grant \"Flowing Red Scale: Stack\" State (6 Turns/Cannot be stacked, Re-activation will override turn count) Increases own Jujutsu, Taijutsu Stat & Damage Dealt by 34.7% Decreases own Damage Received by 41.9% (Chance: 40%) Deals 531.6% ranged",
+   "effect": {
+    "type": "burn",
+    "pct": 5,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "This is Your Older Brother",
+    "desc": "At the start of 8th turn, Recovers own Cursed Energy by 30 (Regardless of Maximum Cursed Energy Cap) Increases own Jujutsu Stat by 20%",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "This is Your Older Brother",
+   "desc": "At the start of 8th turn, Recovers own Cursed Energy by 30 (Regardless of Maximum Cursed Energy Cap) Increases own Jujutsu Stat by 20%",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.935,
+   "atk": 0.955,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "dagon_unlimited_shikigami",
+  "slug": "dagon-unlimited-shikigami",
+  "name": "Dagon",
+  "title": "Unlimited Shikigami",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Cursed Spirit",
+  "kanji": "陀艮",
+  "wiki": {
+   "hp": 38055.0,
+   "attack": 8094.0,
+   "jujutsu": 10840.0
+  },
+  "basic": {
+   "name": "Kick",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "Defence from Water",
+    "cost": 4,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Increases own Jujutsu Stat by 22.2% (3 Turns) Decreases own Damage Received by 13.3% (3 Turns) Increases own Ultimate Gauge Charging Rate by 14.3% (3 Turns) When Domain \"Horizon of the Captivating Skandha\" is expanded, Change into \"Death Sw",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Disaster Tides",
+    "cost": 5,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals 122.7% ranged Jujutsu Damage to all enemies Stop all enemies' action (Chance: 20%/2 Turns/1 Time) Increases all enemies' Damage Received by 7.4% (2 Turns)) When Domain \"Horizon of the Captivating Skandha\" is expanded, Change into \"Dea",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Domain Expansion \"Horizon of the Captivating Skandha\"",
+   "cost": 6,
+   "mult": 2.0,
+   "target": "all",
+   "desc": "Expands the Domain (6 Turns) Domain Effect (Self): Grants Guaranteed Hit Effect and Attack Immunity Nullification Decreases Damage Received by 23.7% Increases Jujutsu Stat by 33.9% Unable to fill own Ultimate Skill Gauge Domain Effect (All ",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "domain"
+  },
+  "passives": [
+   {
+    "name": "The Essence of Curses",
+    "desc": "At the start of battle, Grants \"Cursed Energy Recovery\" to self (1 Time/Cannot be Stacked) Grants \"Ultimate Skill Gauge Recovery\" to self (1 Time/Cannot be Stac",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "The Essence of Curses",
+   "desc": "At the start of battle, Grants \"Cursed Energy Recovery\" to self (1 Time/Cannot be Stacked) Grants \"Ultimate Skill Gauge Recovery\" to self (1 Time/Cannot be Stac",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.051,
+   "atk": 0.877,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "eiji_full_throttle",
+  "slug": "eiji-urushi-chain-mark-full-throttle",
+  "name": "Eiji Urushi",
+  "title": "Chain Mark: Full Throttle",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Prison Island Officials",
+  "kanji": "漆",
+  "wiki": {
+   "hp": 42270.0,
+   "attack": 13014.0,
+   "jujutsu": 10287.0
+  },
+  "basic": {
+   "name": "Chain Mark",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Face Your Sins!",
+    "cost": 4,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Taunt the selected enemy (1 Turn) Inflict \"Chain Mark\" to the selected enemy (1 Turn) Grants Counter State (Chain Mark) (1 Turn/Cannot be Stacked) Increases own Taijutsu Stat by 11.1% (2 Turns) Increases own chance to evade an enemy's attac",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 1
+    }
+   },
+   {
+    "name": "Chain Declaration",
+    "cost": 8,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deal 99.6% melee Taijutsu Damage to the selected enemy (4 Hits) (Increases the damage further, up to 150% of original effect with 10 Chain Counts) *Removes all Chain Count if unable to deal damage Increases Chain Count +4 *Not effective if ",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Chain Mark: Full Throttle",
+   "cost": 6,
+   "mult": 4.87,
+   "target": "single",
+   "desc": "Condition: 10+ Chain Counts Grants \"Full Throttle\" Mode (2 Turns/Cannot be Stacked) Recovers own Cursed Energy by 80 (Bypass Limit) Deal 886% melee Taijutsu Damage to the selected enemy (5 Hits, Bypass Melee Counter) When in \"Full Throttle\"",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 2
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Chain Mark",
+    "desc": "If self is not in \"Full Throttle\" Mode at the start of turn, Increases own Critical Hit Rate (Chain Mark) by 5% (Increases the effect further, up to 30% with 10",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Counter Upper",
+    "desc": "Condition: If self is in Counter State (Chain Mark) and receiving a melee attack If the countered enemy is receiving \"Chain Mark\" and self is not in \"Full Throt",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Chain Mark: Ignition",
+   "desc": "If Chain Count is 10 or more after all allies have performed their action, (Cooldown: 3 Turns) Deals 150% ranged Jujutsu Damage to all enemies Increases all ene",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.167,
+   "atk": 1.053,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "hanami_508",
   "slug": "hanami-the-joys-of-battle",
   "name": "Hanami",
@@ -238,6 +672,99 @@
    "hp": 0.9,
    "atk": 1.085,
    "speed": 1.0
+  }
+ },
+ {
+  "id": "jogo_meteor_fierceness",
+  "slug": "jogo-meteor-of-fierceness",
+  "name": "Jogo",
+  "title": "Meteor of Fierceness",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Cursed Spirit",
+  "kanji": "漏瑚",
+  "wiki": {
+   "hp": 39171.0,
+   "attack": 10241.0,
+   "jujutsu": 14392.0
+  },
+  "basic": {
+   "name": "Heat OverRay",
+   "mult": 1.07
+  },
+  "skills": [
+   {
+    "name": "Scorch",
+    "cost": 5,
+    "mult": 1.98,
+    "target": "single",
+    "desc": "Deals 198.3% ranged Jujutsu Damage to the selected enemy Inflicts 85.4% Jujutsu DOT (Flame) to the selected enemy (3 turns) If Ember Insects are summoned, Deals an additional 72.1% ranged Jujutsu Damage to the same enemy Ignore Darkness, Cr",
+    "effect": {
+     "type": "burn",
+     "pct": 5,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Eruption",
+    "cost": 8,
+    "mult": 1.96,
+    "target": "all",
+    "desc": "Deals 245.4% ranged Jujutsu Damage to all enemies Critical Hit Chance: Medium Inflicts 72.1% Jujutsu DOT (Flame) to all enemies (3 Turns) Decreases all enemies’ Damage Dealt by 11.1% (2 Turns) Increases own Damage Dealt by 27.3% (3 Turns)",
+    "effect": {
+     "type": "burn",
+     "pct": 5,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Maximum: \"Meteor\"",
+   "cost": 6,
+   "mult": 3.6,
+   "target": "all",
+   "desc": "Deals 1200.3% ranged Jujutsu Damage to all enemies Stop all enemies’ Action (2 Turns/Chance: 25%) Inflicts 154.2% Jujutsu DOT (Flame) (2 Turns), 97.4% Jujutsu DOT (Flame) (3 Turns) and 72.1% Jujutsu DOT (Flame) (4 Turns) to all enemies",
+   "effect": {
+    "type": "burn",
+    "pct": 5,
+    "turns": 2
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Cursed Spirit's Pride",
+    "desc": "At the start of the battle, Grants Cursed Energy Recovery (Special) (3 Times) If own Cursed Energy is below 20 and Cursed Energy Recovery (Special) is applied a",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Ember Insect",
+    "desc": "At the start of the battle, Summon 2 Ember Insects Increase own Jujutsu Stat (Ember Insect) by 15% (4 Turns) At the start of the turn, If there is only 1 Ember ",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Critical Hit Enhancement",
+   "desc": "When performing a critical hit, Increase own Critical Hit chance by 10% (3 Turns) Critical Hit Count +1 (Multiple hits within a single skill count as one) If ow",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.082,
+   "atk": 1.164,
+   "speed": 1.06
   }
  },
  {
@@ -404,6 +931,173 @@
   }
  },
  {
+  "id": "kaito_will_in_mind",
+  "slug": "kaito-yuki-with-that-will-in-mind",
+  "name": "Kaito Yuki",
+  "title": "With That Will In Mind",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Fukuoka Jujutsu High Year 1",
+  "kanji": "海斗",
+  "wiki": {
+   "hp": 24549.0,
+   "attack": 6505.0,
+   "jujutsu": 8654.0
+  },
+  "basic": {
+   "name": "Reversed Kesagiri",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Barrier Strike",
+    "cost": 5,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals Melee Combined Damage equal to 60.0% Taijutsu and 100.0% Jujutsu to the selected enemy Increases all allies' Damage Dealt by 10.0% (3 Turns) (Effective for \"行\" (Yellow) Type attacks/Excludes self) If own Cursed Energy is 30 or above w",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Barrier Prison",
+    "cost": 6,
+    "mult": 1.8,
+    "target": "single",
+    "desc": "Deals 180.0% Ranged Jujutsu Damage to the selected enemy Decreases the selected enemy's Damage Dealt by 18.0% (1 Turn) Stuns the selected enemy (1 Turn/Chance: 80.0%) Decreases all allies' Damage Received by 25.0% (2 Turns) (Effective for \"",
+    "effect": {
+     "type": "stun",
+     "chance": 50
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Prayer Formation Technique",
+   "cost": 6,
+   "mult": 3.35,
+   "target": "single",
+   "desc": "Deals Melee Combined Damage equal to 250.0% Taijutsu and 360.0% Jujutsu to the selected enemy (2 Hits) Increases all allies' Jujutsu Stat by 30.0% (2 Turns/1 Time) Increases all allies' Jujutsu Stat by 40.0% (2 Turns/1 Time) (Effective for ",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 20,
+    "turns": 2
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Cursed Energy Support",
+    "desc": "At the start of each turn (Once 2 Turns have passed), If own Cursed Energy is 30 or above, Recovers all allies' Cursed Energy by 5 (Excludes self)",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Teamwork",
+   "desc": "Team attack +6%.",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "kasumi_sprinting",
+  "slug": "kasumi-miwa-sprinting",
+  "name": "Kasumi Miwa",
+  "title": "Sprinting",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Kyoto Jujutsu High Year 2",
+  "kanji": "三輪",
+  "wiki": {
+   "hp": 25553.0,
+   "attack": 9176.0,
+   "jujutsu": 7212.0
+  },
+  "basic": {
+   "name": "Nukitsuke",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "New Shadow Style: Simple Domain",
+    "cost": 5,
+    "mult": 1.8,
+    "target": "single",
+    "desc": "Increases own Taijutsu Stat by 13.30% (2 Turns) Activates own Counter State (2 Turns) Activates Simple Domain State If own Batto Count is 15 or above, change the skill effect"
+   },
+   {
+    "name": "Successive Hits",
+    "cost": 5,
+    "mult": 2.82,
+    "target": "single",
+    "desc": "Deals 282.10% Melee Taijutsu Damage to the selected enemy (3 Hits) Increases own Critical Hit Rate by 20.00% (2 Turns) Increases own Batto Count by 2 After the Skill is used, cancels own Counter State and Simple Domain State Counter State (",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Full Power Triple Slash",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals 448.20% Melee Taijutsu Damage to the selected enemy (3 Hits) Attracts the selected enemy's attacks (1 Turn/1 Time) Increases own Taijutsu Stat by 13.30% (3 Turns) Activates own Counter State (2 Turns) Activates own Simple Domain State",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Counter Batto",
+    "desc": "While Counter State is active, When targeted by an enemy's single-target Melee Attack, Deals 100.00% Taijutsu multiplied by a certain amount as Counter Damage ※",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Simple Domain",
+    "desc": "While Simple Domain State is active, applies the following effects to self: Decreases own Jujutsu Damage Received by 20.00% Nullifies effects applies from enemi",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Batto Sword Drawing",
+   "desc": "At the start of each Turn, applies effects to self based on own Batto Count (1 Turn): 1 Counts or above: Increases own Taijutsu Stat by 11.00% (Batto) 4 Counts ",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "kasumi_zanshin",
   "slug": "kasumi-miwa-zanshin",
   "name": "Kasumi Miwa",
@@ -415,7 +1109,7 @@
   "role": "Defender",
   "focus": "Combined",
   "affiliation": "Kyoto Jujutsu High Year 2",
-  "kanji": "Ka",
+  "kanji": "三輪",
   "wiki": {
    "hp": 750.0,
    "attack": 253.0,
@@ -564,6 +1258,99 @@
   }
  },
  {
+  "id": "kento_new_student",
+  "slug": "kento-nanami-teen-promising-new-student",
+  "name": "Kento Nanami",
+  "title": "Promising New Student",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Support",
+  "focus": "Combined",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "七海",
+  "wiki": {
+   "hp": 30975.0,
+   "attack": 10273.0,
+   "jujutsu": 10374.0
+  },
+  "basic": {
+   "name": "Sever",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Combination",
+    "cost": 5,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 74.7% melee Taijutsu Damage to the selected enemy(3 Hits) Increases all allies' Damage Dealt by 34.7% (4 turns) (Effective for \"幻\" (Red) Type attacks)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "7:3",
+    "cost": 8,
+    "mult": 1.9,
+    "target": "single",
+    "desc": "(Cooldown: 4 turns) Increases own Damage Dealt by 15.0% (1 turn/1 time) Deals melee Combined Damage of 94.8% Taijutsu & 94.8% Jujutsu to the selected enemy (Perform a Critical Hit) Increases the selected enemy's Break Damage Received by 14.",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Ratio Technique",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals melee Combined Damage of 118.6% Taijutsu & 118.6% Jujutsu to the selected enemy (2 Hits) Increases own Damage Dealt by 30.0% (1 turn/1 time) Deals melee Combined Damage of 135.2% Taijutsu & 135.2% Jujutsu to the selected enemy(Perform",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Harassed Student",
+    "desc": "At the start of 6th turn, Increases own Taijutsu & Jujutsu Stat by 15.0% Increases own Critical Hit Damage by 25.0% Recovers own Cursed Energy by 30",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Critical Hit Enhancement",
+    "desc": "When Critical Hit is performed Increase own Taijutsu & Jujutsu Stat by 5.0% (4 turns) Increases own Critical Hit rate by 30.0% (4 turns, cannot be stacked, re-a",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Harassed Student",
+   "desc": "At the start of 6th turn, Increases own Taijutsu & Jujutsu Stat by 15.0% Increases own Critical Hit Damage by 25.0% Recovers own Cursed Energy by 30",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.855,
+   "atk": 0.85,
+   "speed": 0.97
+  }
+ },
+ {
   "id": "nanami_502",
   "slug": "kento-nanami-ratio-technique",
   "name": "Kento Nanami",
@@ -635,6 +1422,99 @@
   "profile": {
    "hp": 0.985,
    "atk": 1.0,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "kento_silent_suppression",
+  "slug": "kento-nanami-silent-suppression",
+  "name": "Kento Nanami",
+  "title": "Silent Suppression",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Attacker",
+  "focus": "Mixed",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "七海",
+  "wiki": {
+   "hp": 37339.0,
+   "attack": 12619.0,
+   "jujutsu": 12330.0
+  },
+  "basic": {
+   "name": "Ratio Technique",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Continuous Severing Strike",
+    "cost": 5,
+    "mult": 1.91,
+    "target": "single",
+    "desc": "Increases own Break Damage by 50% (1 Turn/1 Time) Deals melee Mixed Damage equal to 95.4% Taijutsu & 95.4% Jujutsu to the selected enemy (3 Hits) If own Cursed Energy is 60 or more, Increase all \"夜\" (Green) Type allies’ Damage Dealt by 18.2",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 1
+    }
+   },
+   {
+    "name": "Ratio Technique: \"Collapse\"",
+    "cost": 9,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals ranged Mixed Damage equal to 74.7% Taijutsu & 74.7% Jujutsu to all enemies (3 Hits, Critical Hit Rate: High) (With more Cursed Energy, Increase the damage further/Up to 120% of the original effect with 60 Cursed Energy) Max Damage Out",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 1
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "You've prepared yourself right?",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Increases own Break Damage by 100% (1 Turn/1 Time) Deals melee Mixed Damage equal to 251.4% Taijutsu & 251.4% Jujutsu to the selected enemy (3 Hits, Critical Hit Rate: High) (With more Cursed Energy, Increase the damage further/Up to 150% o",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Persevere",
+    "desc": "Grants Revival Status (Persevere) at the start of battle Revival Status (Persevere): Decreases own Maximum HP by 20% (5 Turns/Cannot be Cancelled) Attracts enem",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Overtime Work",
+    "desc": "At the start of the 9th turn, Recovers own Cursed Energy by 60 (Bypass Limit) Increases own Taijutsu & Jujutsu Stat by 50% Recovers own Ultimate Gauge by 1000 A",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Counter (Ratio Technique)",
+   "desc": "Grants Counter Status at the start of battle Counter (Certain Chance to activate; 1 Time per Turn): Deals melee mixed damage equal to 75% Taijutsu & 75% Jujutsu",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.031,
+   "atk": 1.021,
    "speed": 1.06
   }
  },
@@ -719,6 +1599,159 @@
   }
  },
  {
+  "id": "kiyotaka_hard_work",
+  "slug": "kiyotaka-ijichi-pick-up-after-hard-work",
+  "name": "Kiyotaka Ijichi",
+  "title": "Pick Up After Hard Work",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Enhancer",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "伊地知",
+  "wiki": {
+   "hp": 37515.0,
+   "attack": 9115.0,
+   "jujutsu": 11023.0
+  },
+  "basic": {
+   "name": "Action Support",
+   "mult": 1.0
+  },
+  "skills": [
+   {
+    "name": "Information Gathering",
+    "cost": 6,
+    "mult": 1.8,
+    "target": "single",
+    "desc": "To all \"夜\" (Green) allies (Self-Excluded): Increases Jujutsu Stat by 24.9% (3 Turns) Decreases Damage Received by 2.1% (3 Turns) *Increases the amount with more \"Information Gathering\" Counts/Up to 100% of the original effect with 10 Counts"
+   },
+   {
+    "name": "Fly Heads Strategy",
+    "cost": 3,
+    "mult": 1.8,
+    "target": "all",
+    "desc": "Disrupt all enemies (2 Turns/1 Time/Chance: 10.4%) (Special) Conceal Self (3 Turns) \"Information Gathering\" Count +2 *This Skill will gains more Ultimate Gauge than usual"
+   }
+  ],
+  "ultimate": {
+   "name": "Cooperative Investigation",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "To all \"夜\" (Green) allies (Self-Excluded): Fills Ultimate Gauge by 440 Increases Jujutsu Stat by 24.9% (3 Turns) Increases \"夜\" (Green) Damage Dealt by 4.6% (4 Turns/Cannot be Stacked) *Increases the amount with more \"Information Gathering\" ",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Information Sharing",
+    "desc": "At the start of wave, Remove all of the \"Information Gathering\" Counts Then, to all \"夜\" (Green) allies (Self-Excluded): Increases \"夜\" (Green) Damage Dealt by 7.",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Information Sharing",
+   "desc": "At the start of wave, Remove all of the \"Information Gathering\" Counts Then, to all \"夜\" (Green) allies (Self-Excluded): Increases \"夜\" (Green) Damage Dealt by 7.",
+   "effect": {
+    "type": "atk",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.036,
+   "atk": 0.892,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "kokichi_seen_it_all",
+  "slug": "kokichi-muta-i-ve-seen-it-all",
+  "name": "Kokichi Muta",
+  "title": "I've Seen It All",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Kyoto Jujutsu High Year 2",
+  "kanji": "与",
+  "wiki": {
+   "hp": 26440.0,
+   "attack": 8236.0,
+   "jujutsu": 8875.0
+  },
+  "basic": {
+   "name": "Come! Mechamaru!",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Sword Option",
+    "cost": 2,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals 120.0% ranged Taijutsu Damage to all enemies Inflicts 1 Mechamaru Counts to all enemies (4 Turns) If own Cursed Energy is 30 or more, add the following effect into skill: Refreshes the duration of all enemies' Mechamaru Counts (4 Turn"
+   },
+   {
+    "name": "Formation Attack",
+    "cost": 8,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals 60.0% ranged Taijutsu Damage & 60.0% ranged Jujutsu Damage to the selected enemy (2 Hits) (The more Mechamaru Counts enemy has, the greater Damage boost additionally/1 Count=10% of Skill Effect/Up to 100.0% with 10 Counts) Inflicts 2 "
+   }
+  ],
+  "ultimate": {
+   "name": "Ultra Cannon",
+   "cost": 6,
+   "mult": 2.33,
+   "target": "all",
+   "desc": "Deals 666.0% ranged Jujutsu Damage to all enemies (The more Mechamaru Counts enemy has, the greater Damage boost additionally/1 Count=10% of Skill Effect/Up to 100.0% with 10 Counts) Decreases all enemies' Ultimate Skill Count by 1 Removes ",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Puppet Manipulation",
+    "desc": "At The Start of Battle, Inflict Darkness Immunity to self, Increases own Break Damage by 130.0%; If the selected enemy is in Break state or Breaking the selecte",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "With Everyone Together...",
+    "desc": "At The Start of Turn, Increases own Damage Dealt By 60.0% (1 Turn) Based on the number of \"Kyoto Jujutsu High\" affilliation ally present in a wave, Increases ow",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Puppet Manipulation",
+   "desc": "At The Start of Battle, Inflict Darkness Immunity to self, Increases own Break Damage by 130.0%; If the selected enemy is in Break state or Breaking the selecte",
+   "effect": {
+    "type": "atk",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "mahito_609",
   "slug": "mahito-the-inspiration-of-death",
   "name": "Mahito",
@@ -795,6 +1828,367 @@
   "profile": {
    "hp": 1.0,
    "atk": 0.989,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "mahito_unbridled_soul",
+  "slug": "mahito-unbridled-soul",
+  "name": "Mahito",
+  "title": "Unbridled Soul",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Debuffer",
+  "focus": "Mixed",
+  "affiliation": "Cursed Spirit",
+  "kanji": "真人",
+  "wiki": {
+   "hp": 41297.0,
+   "attack": 12433.0,
+   "jujutsu": 12543.0
+  },
+  "basic": {
+   "name": "Defiguration Attack",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Body Repel",
+    "cost": 5,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals ranged mixed damage of 44.2% Taijutsu & 66.3% Jujutsu to all enemies Increases all enemies' \"幻\" (Red) Damage Received by 34.7% (4 Turns)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Idle Transfiguration",
+    "cost": 5,
+    "mult": 1.77,
+    "target": "single",
+    "desc": "Increases own Break Damage by 200% (1 Turn/1 Time) Deals melee Jujutsu Damage to the selected enemy by 176.8% Increases the selected enemy's \"幻\" (Red) Damage Received 34.7% (4 Turns) Increases the selected enemy's Break Damage Received by 2",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 1
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "\"Instant Spirit Body of Distorted Killing\"",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "This skill cannot be used until Mahito have used Black Flash in a battle Grant \"Instant Spirit Body of Distorted Killing\" State Deals Melee Mixed Damage of 142.8% Taijutsu & 190.4% Jujutsu to the selected enemy (4 Hits) Deals an additional ",
+   "effect": {
+    "type": "heal",
+    "pct": 30
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Regeneration",
+    "desc": "If own Cursed Energy is more than 30 and not in \"Instant Spirit Body of Distorted Killing\" State Recovers own HP by 10% (Won't be activated if HP is full) Recei",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Zone, Outburst",
+    "desc": "When Black Flash are performed (1 Time per Turn) Grants \"Zone\" Status (Cannot be Stacked) Increases own Ultimate Charging Rate by 15% (6 Turns/Cannot be Stacked",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Regeneration",
+   "desc": "If own Cursed Energy is more than 30 and not in \"Instant Spirit Body of Distorted Killing\" State Recovers own HP by 10% (Won't be activated if HP is full) Recei",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.14,
+   "atk": 1.015,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "mai_effective_range",
+  "slug": "mai-zen-in-effective-range",
+  "name": "Mai Zen'in",
+  "title": "Effective Range",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Debuffer",
+  "focus": "Mixed",
+  "affiliation": "Kyoto Jujutsu High Year 2",
+  "kanji": "真依",
+  "wiki": {
+   "hp": 34746.0,
+   "attack": 11281.0,
+   "jujutsu": 11560.0
+  },
+  "basic": {
+   "name": "Shoot",
+   "mult": 1.2
+  },
+  "skills": [
+   {
+    "name": "Reload",
+    "cost": 5,
+    "mult": 1.77,
+    "target": "single",
+    "desc": "Deals ranged Mixed Damage equal to 88.6% Taijutsu & 88.6% Jujutsu to the selected enemy (2 Hits) Increases the selected enemy's \"影\" (Blue) Damage Received by 13.3% (3 Turns) Grants \"Pursuit\" State (3 Turns)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Flashbang",
+    "cost": 6,
+    "mult": 2.13,
+    "target": "all",
+    "desc": "Deals ranged Mixed Damage equal to 132.9% Taijutsu & 132.9% Jujutsu to the selected enemy (3 Hits) Decreases all enemies' Critical Hit Resistance by 23.7% (3 Turns/Cannot be Stacked) Grants \"Follow-up Attack\" State (4 Turns)"
+   }
+  ],
+  "ultimate": {
+   "name": "Snipe",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals ranged Mixed Damage equal to 217.5% Taijutsu & 217.5% Jujutsu to the selected enemy Critical Hit Rate: Large Increases further based on \"Lurking\" Count (Up to 80% of the original effect with 10 Counts) *Max Damage Output (Skill Level ",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Cover Shooting",
+    "desc": "If \"Pursuit\" State is active and all allies have performed their skills (Chance: 50%), Deals ranged MIxed Damage equal to 150% Taijutsu & 150% Jujutsu to the se",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Follow-up Attack",
+    "desc": "If \"Follow-up Attack\" State is active and any \"影\" (Blue) allies have attacked an enemy with a Command Skill or Ultimate Skill (Chance: 50%/Guaranteed if the att",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Lurking Count",
+   "desc": "At the start of battle, Grants 15% Chance to Evade Conceal Self (2 Turns) If no damage was received last turn, at the start of next turn (DOT excluded), \"Lurkin",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.959,
+   "atk": 0.935,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "mai_final_bullet",
+  "slug": "mai-zen-in-the-final-bullet",
+  "name": "Mai Zen'in",
+  "title": "The Final Bullet",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Debuffer",
+  "focus": "Taijutsu",
+  "affiliation": "Kyoto Jujutsu High Year 2",
+  "kanji": "真依",
+  "wiki": {
+   "hp": 739.0,
+   "attack": 225.0,
+   "jujutsu": 191.0
+  },
+  "basic": {
+   "name": "Gunshot",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Reload (Special Ammo)",
+    "cost": 6,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 100.0% Ranged Taijutsu Damage to the selected enemy Delays the selected enemy's action (1 Turn/Chance: 20.0%) If \"Special Ammo\" or \"Enhanced Ammo\" State is active: If own Follow-Up Attack Rate is 40.0%, increases own Follow-Up Attack ",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 1
+    }
+   },
+   {
+    "name": "Reload (Enhanced Ammo)",
+    "cost": 6,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals 90.0% Ranged Taijutsu Damage to all enemies Increases all enemies' Damage Received by 30.0% (2 Turns) If \"Special Ammo\" or \"Enhanced Ammo\" State is active: If own Follow-Up Attack Rate is 40.0%, increases own Follow-Up Attack Rate to ",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Watch Your Mouth Or I'll Teach You A Lesson",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals Ranged Combined Damage equal to 300.0% Taijutsu (3 Hits), 100.0% Taijutsu and 50.0% Jujutsu to the selected enemy Increases the selected enemy's Damage Received by 80.0% (2 Turns) Increases own Follow-Up Attack Rate to 100.0% (2 Turns",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 2
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Pursuit",
+    "desc": "When an ally attacks an enemy with a Command Skill or Ultimate Skill, Deals 60.0% Taijutsu Damage to the ally's selected enemy (Chance: 40.0%) (Does not apply t",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Stealth",
+    "desc": "When own HP is 50.0% or below (Up to 1 Time during battle), Grants Conceal Status to self (4 Turns)",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Teamwork",
+   "desc": "Team attack +6%.",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "maki_early_morning",
+  "slug": "maki-zen-in-early-morning-departure",
+  "name": "Maki Zen'in",
+  "title": "Early Morning Departure",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Year 2",
+  "kanji": "真希",
+  "wiki": {
+   "hp": 31332.0,
+   "attack": 12396.0,
+   "jujutsu": 0.0
+  },
+  "basic": {
+   "name": "Flying Kunai",
+   "mult": 1.33
+  },
+  "skills": [
+   {
+    "name": "Cutting Knife",
+    "cost": 2,
+    "mult": 2.66,
+    "target": "single",
+    "desc": "Deals 265.8% Melee Taijutsu Damage to the selected enemy (3 Hits) Increases own Taijutsu Stat by 23.7% (3 Turns) Increases the Damage Reduction rate & Evasion Chance from the \"Heavenly Restriction\" Auto Skill to 14.3% (1 Turn) Grants \"Cutti",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   },
+   {
+    "name": "All-Out Full Sword",
+    "cost": 3,
+    "mult": 3.92,
+    "target": "single",
+    "desc": "Deals 391.9% Melee Taijutsu Damage to the selected enemy Grants \"All-Out Full Sword\" State to self (2 Turns) Additionally applies the following effects when in the following states: Flying Kunai: Fills own Ultimate Skill Gauge by 110 Cuttin",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Instant Continuous Attacks",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals 74.7% Ranged Taijutsu Damage and 597.0% Melee Taijutsu Damage to the selected enemy (4 Hits) (The 4th Hit is guaranteed to be a Critical Hit) Fills own Ultimate Skill Gauge by 110",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Early Bird Gets The Worm",
+    "desc": "At the start of each wave, Increases own Taijutsu Stat by 10% (2 Turns) Decreases own Damage Received by 7% (2 Turns)",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Heavenly Restriction",
+    "desc": "At the start of turn, Increases own Taijutsu Stat (1 Turn/The fewer enemies are in the wave, the greater the boost) 1 Enemy: 30% 2 Enemies: 25% 3 Enemies: 17.5%",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Early Bird Gets The Worm",
+   "desc": "At the start of each wave, Increases own Taijutsu Stat by 10% (2 Turns) Decreases own Damage Received by 7% (2 Turns)",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.865,
+   "atk": 1.003,
    "speed": 1.06
   }
  },
@@ -1060,6 +2454,263 @@
   }
  },
  {
+  "id": "masamichi_pivotal_guardian",
+  "slug": "masamichi-yaga-pivotal-guardian",
+  "name": "Masamichi Yaga",
+  "title": "Pivotal Guardian",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Support",
+  "focus": "Mixed",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "夜蛾",
+  "wiki": {
+   "hp": 38446.0,
+   "attack": 11556.0,
+   "jujutsu": 12443.0
+  },
+  "basic": {
+   "name": "Guidance",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "Battle Preparation",
+    "cost": 5,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Summon Cursed Corpse (5.5% of maximum own HP) Grants \"Cursed Corpse: Activated\" State [Cursed Corpse will take melee Damage of any allies (Including Self, 1 time per turn)] (\"Cursed Corpse: Deactivated\" State will be effective for 3 Turns o",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Battle Declared",
+    "cost": 5,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Increases all \"影\" (Blue) Type allies' Taijutsu & Jujutsu Stat (Battle Declared) by 40.1% (3 Turns)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Cursed Corpse Great Battle",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals 354.4% ranged Jujutsu Damage to the selected enemy (4 Hits) Decreases the selected enemy's Critical Hit Resistance by 10% (3 Turns) Decreases the selected enemy's Damage Dealt by 15% (3 Turns) Inflict Darkness to the selected enemy (1",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Cursed Corpse: Activated",
+    "desc": "If \"Cursed Corpse: Activated\" State is active after all allies have performed their action, Deals 250% ranged Jujutsu Damage to 1 random enemy Increases the ene",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Cursed Corpse: Activated",
+   "desc": "If \"Cursed Corpse: Activated\" State is active after all allies have performed their action, Deals 250% ranged Jujutsu Damage to 1 random enemy Increases the ene",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.062,
+   "atk": 1.006,
+   "speed": 0.97
+  }
+ },
+ {
+  "id": "megumi_bond_friendship",
+  "slug": "megumi-fushiguro-bond-of-friendship",
+  "name": "Megumi Fushiguro",
+  "title": "Bond of Friendship",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Debuffer",
+  "focus": "Combined",
+  "affiliation": "Year 1 Tokyo Jujutsu High",
+  "kanji": "伏黒",
+  "wiki": {
+   "hp": 23836.0,
+   "attack": 8561.0,
+   "jujutsu": 9100.0
+  },
+  "basic": {
+   "name": "Spinning Kick",
+   "mult": 0.92
+  },
+  "skills": [
+   {
+    "name": "\"Divine Dog\"",
+    "cost": 6,
+    "mult": 2.33,
+    "target": "single",
+    "desc": "Summons White & Black Divine Dog (Each of them has the character's 14.6% maximum HP, enemy's damage dealt of 35% will go towards Divine Dogs instead of the character, Disappear when Divine Dog's HP has reached to 0); Deals 233.3% ranged Juj",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Strike",
+    "cost": 3,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 146.2% melee Taijutsu damage to the selected enemy, Increases the Ultimate Gauge Charging amount by 15% (3 Turns)"
+   }
+  ],
+  "ultimate": {
+   "name": "\"Divines Dogs\" Double Attack",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals 302.0% ranged Jujutsu damage to the selected enemy(2 Hits); If White Divine Dog is summoned before using Ultimate Skill, Deals an additional 199.2% ranged Jujutsu damage; If Black Divine Dog is summoned before using Ultimate Skill, De",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "I'll Surpass You",
+    "desc": "At the start of battle, Increases own Damage Dealt by 100.0% (Effective when the selected enemy is in Break State) At the start of turn and if Divine Dogs are a",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   },
+   {
+    "name": "\"Divine Dog\" Follow-Up Attack",
+    "desc": "55% Chance of Divine Dogs launching a follow-up attack when any allies performs Command Skill or Ultimate Skill (Combo Ultimate is excluded, if ally is attackin",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Teamwork",
+   "desc": "Team attack +6%.",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "megumi_summer_breeze",
+  "slug": "megumi-fushiguro-enjoying-the-cool-summer-breeze",
+  "name": "Megumi Fushiguro",
+  "title": "Enjoying The Cool Summer Breeze",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Debuffer",
+  "focus": "Jujutsu",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "伏黒",
+  "wiki": {
+   "hp": 34685.0,
+   "attack": 12828.0,
+   "jujutsu": 13440.0
+  },
+  "basic": {
+   "name": "Divine Dog: Totality",
+   "mult": 0.94
+  },
+  "skills": [
+   {
+    "name": "The Well's Unknown Abyss",
+    "cost": 5,
+    "mult": 1.61,
+    "target": "single",
+    "desc": "Deals 160.8% ranged Jujutsu Damage to the selected enemy (6 Hits/Bypass Darkness) Increases the selected enemy's \"夜\" (Green) Taijutsu & Jujutsu Damage Received (Fushiguro) by 22.3% (3 Turns) Stun the enemy (1 Turn/Chance: 80%) If failed to ",
+    "effect": {
+     "type": "stun",
+     "chance": 50
+    }
+   },
+   {
+    "name": "Max Elephant",
+    "cost": 8,
+    "mult": 1.76,
+    "target": "all",
+    "desc": "Deals 219.9% ranged Jujutsu Damage to all enemies Decreases all enemies' Critical Hit Resistance by 6.1% (4 Turns) Increases all enemies' \"夜\" (Green) Damage Received (Fushiguro) by 14.3% (4 Turns/Cannot be Stacked) Increases own Critical Hi",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Shikigami Combo",
+   "cost": 6,
+   "mult": 3.1,
+   "target": "all",
+   "desc": "Deals 886.5% ranged Jujutsu Damage to all enemies (5 Hits) Increases all enemies' \"夜\" (Green) Taijutsu & Jujutsu Damage Received by 22.3% (Fushiguro) (3 Turns) Increases all enemies' Break Damage Received by 5% (3 Turns) Decreases all enemi",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Critical Hit Enhancement",
+    "desc": "When performing a Critical Hit (1 Time per Turn) Increases own Jujutsu Stat by 20% (3 Turns) Increases own Ultimate Gauge Charging Rate by 10% (3 Turns) To an a",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Critical Hit Enhancement",
+   "desc": "When performing a Critical Hit (1 Time per Turn) Increases own Jujutsu Stat by 20% (3 Turns) Increases own Ultimate Gauge Charging Rate by 10% (3 Turns) To an a",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.958,
+   "atk": 1.087,
+   "speed": 1.0
+  }
+ },
+ {
   "id": "megumi_incomplete_domain",
   "slug": "megumi-fushiguro-incomplete-domain",
   "name": "Megumi Fushiguro",
@@ -1211,6 +2862,241 @@
   }
  },
  {
+  "id": "megumi_rabbit_disruption",
+  "slug": "megumi-fushiguro-rabbit-s-disruption",
+  "name": "Megumi Fushiguro",
+  "title": "Rabbit's Disruption",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Debuffer",
+  "focus": "Combined",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "伏黒",
+  "wiki": {
+   "hp": 29104.0,
+   "attack": 9954.0,
+   "jujutsu": 11802.0
+  },
+  "basic": {
+   "name": "Exorcist Slash",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Continuous Exorcist Slashes",
+    "cost": 5,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 74.7% Melee Taijutsu Damage to the selected enemy (3 Hits) If \"Rabbit Escape\" State is applied, Ignore enemy's melee attack counter If \"Divine Dog: Totality\" State is applied, Deals an additional 65.7% ranged Jujutsu Damage to the sam",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Rabbit Escape",
+    "cost": 6,
+    "mult": 0,
+    "target": "all",
+    "desc": "Summons \"Rabbit Escape\" HP: 23.5% of the character's maximum HP 50% of the damage dealt will go to \"Rabbit Escape\"; Disappears when HP reaches 0 Applies \"Attack Nullification (Rabbit Escape) to self (2 Turns/1 Time) Removed if \"Rabbit Escap",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Continuous Shikigami Summon",
+   "cost": 6,
+   "mult": 3.1,
+   "target": "single",
+   "desc": "Increases the selected enemy's Jujutsu Damage Received by 34.7% (1 Turn/1 Time) (Effective for \"幻\" (Red) Type attacks) Removes both \"Rabbit Escape\" and \"Divine Dog: Totality\" State Deals 563.7% ranged Jujutsu Damage to the selected enemy (T",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "\"Divine Dog: Totality\"",
+    "desc": "If own Cursed Energy is 30 or more and \"Divine Dog: Totality\" is not applied at the start of turn, Summon \"Divine Dog: Totality\" Disappear if \"Divine Dog: Total",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "\"Divine Dog: Totality\"",
+   "desc": "If own Cursed Energy is 30 or more and \"Divine Dog: Totality\" is not applied at the start of turn, Summon \"Divine Dog: Totality\" Disappear if \"Divine Dog: Total",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.955,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "mei_dancing_crows",
+  "slug": "mei-mei-night-of-dancing-crows",
+  "name": "Mei Mei",
+  "title": "Night Of Dancing Crows",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "冥冥",
+  "wiki": {
+   "hp": 33187.0,
+   "attack": 10653.0,
+   "jujutsu": 10430.0
+  },
+  "basic": {
+   "name": "Sever",
+   "mult": 1.3
+  },
+  "skills": [
+   {
+    "name": "Vision Sharing",
+    "cost": 4,
+    "mult": 0,
+    "target": "single",
+    "desc": "Increases own Damage Dealt by 73.6% (3 Turns) Increases the selected enemy's Damage Received by 6.8% (3 Turns)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Strikes without Mercy",
+    "cost": 5,
+    "mult": 2.4,
+    "target": "all",
+    "desc": "Deals 300.0% Melee Taijutsu Damage to all enemies (2 Hits)"
+   }
+  ],
+  "ultimate": {
+   "name": "Bird Strike",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals 200.0% Melee Taijutsu Damage & 697.3% Melee Jujutsu Damage to the seleced enemy (2 Hits) (2nd Hit ignore Darkness)",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "It's getting excited",
+    "desc": "If own HP is 70% or lower at the start of turn (Once only in a battle), Recovers own Cursed Energy by 10 (4 Turns), Increases own Taijutsu & Jujutsu Stat by 50%",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "It's getting excited",
+   "desc": "If own HP is 70% or lower at the start of turn (Once only in a battle), Recovers own Cursed Energy by 10 (4 Turns), Increases own Taijutsu & Jujutsu Stat by 50%",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.916,
+   "atk": 0.862,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "miguel_delayed_quota",
+  "slug": "miguel-delayed-quota",
+  "name": "Miguel",
+  "title": "Delayed Quota",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Obstructor",
+  "focus": "Combined",
+  "affiliation": "Curse Users",
+  "kanji": "ミゲル",
+  "wiki": {
+   "hp": 27622.0,
+   "attack": 9119.0,
+   "jujutsu": 8519.0
+  },
+  "basic": {
+   "name": "Combination",
+   "mult": 1.23
+  },
+  "skills": [
+   {
+    "name": "I'm Fired Up!",
+    "cost": 5,
+    "mult": 1.8,
+    "target": "single",
+    "desc": "Increases own Taijutsu Stat by 18.3% (3 Turns) Reduces Damage received by 15.1% (3 Turns/The higher own Cursed Energy is when receiving an attack, the greater the original effect, by up to 60%) Max increase at 60 Cursed Energy"
+   },
+   {
+    "name": "Cursed Technique Disrupting Rope",
+    "cost": 3,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Nullifies \"Attack Nullification\" Status (1 Time) Deals 60.2% Jujutsu Damage to the selected enemy & attracts the selected enemy's attacks to self (1 Turn) Decreases the value of 2 of the enemy's eligible buffs by 30.0% Decreases those buffs"
+   }
+  ],
+  "ultimate": {
+   "name": "Your Opponent Is Me",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Nullifies \"Attack Nullification\" Status (1 Time) Deals 133.4% Ranged Jujutsu Damage to the selected enemy (2 Hits) Increases the selected enemy's Damage Received by 25.0% (1 Turn) Decreases the value of 3 of the enemy's eligible buffs by 50",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Let's Have Some Fun",
+    "desc": "At the start of the battle, Decreases own Jujutsu Damage Received by 15.0% Increases own Taijutsu Stat by 20.0%",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Let's Have Some Fun",
+   "desc": "At the start of the battle, Decreases own Jujutsu Damage Received by 15.0% Increases own Taijutsu Stat by 20.0%",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.08
+  }
+ },
+ {
   "id": "momo_underestimate",
   "slug": "momo-nishimiya-don-t-underestimate-me",
   "name": "Momo Nishimiya",
@@ -1283,6 +3169,191 @@
    "hp": 0.861,
    "atk": 1.0,
    "speed": 1.08
+  }
+ },
+ {
+  "id": "momo_tool_manipulation",
+  "slug": "momo-nishimiya-tool-manipulation",
+  "name": "Momo Nishimiya",
+  "title": "Tool Manipulation",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Support",
+  "focus": "Jujutsu",
+  "affiliation": "Kyoto Jujutsu High Year 3",
+  "kanji": "西宮",
+  "wiki": {
+   "hp": 32949.0,
+   "attack": 8658.0,
+   "jujutsu": 13730.0
+  },
+  "basic": {
+   "name": "Wind Slash",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Whirlwind",
+    "cost": 5,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals 88.4% ranged Jujutsu Damage to all enemies (4 Hits) Stun all enemies (2 Turns/1 Time, Chance: 100%) Inflicts Darkness to all enemies (1 Turn/Chance: 100%) Grants 1 \"Reconnaissance\" to self If Stun or Darkness fails to apply, Grants 2 ",
+    "effect": {
+     "type": "stun",
+     "chance": 50
+    }
+   },
+   {
+    "name": "Squall",
+    "cost": 6,
+    "mult": 1.96,
+    "target": "all",
+    "desc": "Deals 245.4% Ranged Jujutsu Damage to all enemies (2 Hits) Increases all enemies' Break Damage Received by 22.5% (2 Turns) Increases all enemies' \"幻\" (Red) Type Damage Received by 22.5% (3 Turns) Grants 2 \"Reconnaissance\" to self Evades ene",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Tool Manipulation: \"Wind Scythe\"",
+   "cost": 6,
+   "mult": 2.0,
+   "target": "all",
+   "desc": "Deals 531.6% Ranged Jujutsu Damage to all enemies (2 Hits) Increases all enemies' Break Damage Received by 22.2% (2 Turns) Grants 2 \"Reconnaissance\" to self Evades enemy attack (2 Turns/1 Time) Increases all \"幻\" (Red) Type allies' Taijutsu ",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 2
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Information Sharing",
+    "desc": "At the start of a wave, Removes all stacks of \"Reconnaissance\" and Buff applied to \"幻\" (Red) Type allies through \"Information Sharing\" Grants 1 \"Reconnaissance\"",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Evasion Enhancement",
+    "desc": "After evading an enemy's attack (1 Time per Turn), Recovers own Cursed Energy by 10",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Information Sharing",
+   "desc": "At the start of a wave, Removes all stacks of \"Reconnaissance\" and Buff applied to \"幻\" (Red) Type allies through \"Information Sharing\" Grants 1 \"Reconnaissance\"",
+   "effect": {
+    "type": "atk",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.91,
+   "atk": 1.111,
+   "speed": 0.97
+  }
+ },
+ {
+  "id": "naobito_speed",
+  "slug": "naobito-zen-in-crushed-with-speed",
+  "name": "Naobito Zen'in",
+  "title": "Crushed With Speed",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Special Grade 1 Sorcerer",
+  "kanji": "直毘人",
+  "wiki": {
+   "hp": 27998.0,
+   "attack": 9291.0,
+   "jujutsu": 12019.0
+  },
+  "basic": {
+   "name": "Fastest Strike",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Crush you with Speed!",
+    "cost": 4,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Increases own Break Damage by 50% (1 Turn/1 Time) Each \"Projection Sorcery\" State increases an additional effect by 50%, up to 300% with 5 States Deals 44.2% Taijutsu & 88.4% Jujutsu melee mixed Damage to the selected enemy (2 Hits) Chance ",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 1
+    }
+   },
+   {
+    "name": "Projection Sorcery",
+    "cost": 6,
+    "mult": 1.89,
+    "target": "single",
+    "desc": "Increases own Jujutsu Stat by 30% (1 Turn/1 Time) Applied during \"Projection Sorcery\" State Increases own Break Damage by 25% (1 Turn/1 Time) Each \"Projection Sorcery\" State increases an additional effect by 25%, up to 150% with 5 States In",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 1
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Fastest Jujutsu Sorcerer",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Increases own Jujutsu Stat by 50% (1 Turn/1 Time) Applied during \"Projection Sorcery\" State Increases own Break Damage by 50% (1 Turn/1 Time) Each \"Projection Sorcery\" State increases an additional effect by 50%, up to 300% with 5 states De",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Projection Sorcery (Counter)",
+    "desc": "When receiving a melee attack in counter state (1 Time per Turn) Increases own Jujutsu Stat by 30% (1 Turn/1 Time) Applied during \"Projection Sorcery\" State Inc",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   },
+   {
+    "name": "You Are Too Slow",
+    "desc": "If self is receiving \"Chance to evade (Projection Sorcery)\" at the start of turn \"Projection Sorcery\" State +1 (Up to 5) \"Pursuit\" State Increases own Damage De",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Secret Art \"Falling Blossom Emotion\"",
+   "desc": "If enemy is using Domain and own Cursed Energy is 10 or more Grants \"Falling Blossom Emotion\" State to self Consumes 10 Cursed Energy Decreases own Damage Recei",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.972,
+   "speed": 1.06
   }
  },
  {
@@ -1366,6 +3437,187 @@
   }
  },
  {
+  "id": "nobara_keep_hammering",
+  "slug": "nobara-kugisaki-keep-hammering-at-them",
+  "name": "Nobara Kugisaki",
+  "title": "Keep Hammering At Them",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Year 1 Tokyo Jujutsu High",
+  "kanji": "釘崎",
+  "wiki": {
+   "hp": 24241.0,
+   "attack": 6183.0,
+   "jujutsu": 9810.0
+  },
+  "basic": {
+   "name": "Hammer Strike",
+   "mult": 1.0
+  },
+  "skills": [
+   {
+    "name": "Nail Hammering",
+    "cost": 4,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals Ranged Combined Damage equal to 55.0% Taijutsu and 90.0% Jujutsu to the selected enemy (2 Hits) Increases the selected enemy's Jujutsu Damage Received by 10.0% (2 Turns)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   },
+   {
+    "name": "Consecutive Strikes",
+    "cost": 5,
+    "mult": 1.9,
+    "target": "single",
+    "desc": "Deals Ranged Combined Damage equal to 70.0% Taijutsu and 120.0% Jujutsu to the selected enemy (2 Hits) Increases own Damage Dealt by 20.0% (2 Turns)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Straw Doll Technique: [Resonance]",
+   "cost": 6,
+   "mult": 4.4,
+   "target": "single",
+   "desc": "Deals 800.0% Jujutsu Damage to the selected enemy (2 Hits) (Deals Soul damage)",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Weakening Jujutsu Attack",
+    "desc": "At the start of the battle, Increases own Taijutsu&Jujutsu Stat by 20.0% (The more Debuffs and other Statuses the enemy has, the higher the Taijutsu&Jujutsu Sta",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Zone, Outburst",
+    "desc": "When Black Flash is performed, Increases own Jujutsu Stat by 45.0% (6 Turns/Cannot be stacked) Recovers own Cursed Energy by 15",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Weakening Jujutsu Attack",
+   "desc": "At the start of the battle, Increases own Taijutsu&Jujutsu Stat by 20.0% (The more Debuffs and other Statuses the enemy has, the higher the Taijutsu&Jujutsu Sta",
+   "effect": {
+    "type": "atk",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "nobara_striking_eternal",
+  "slug": "nobara-kugisaki-striking-eternal-summer",
+  "name": "Nobara Kugisaki",
+  "title": "Striking Eternal Summer",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "釘崎",
+  "wiki": {
+   "hp": 35282.0,
+   "attack": 8134.0,
+   "jujutsu": 14839.0
+  },
+  "basic": {
+   "name": "Scattered Nail Tossing",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "An Eternal Summer Treat",
+    "cost": 2,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Condition: 1 or more \"Tropical Juice\" Count Recovers own Cursed Energy by 20 (Bypass Limit) Increases own Damage Dealt by 36.9% (7 Turns/Cannot be Stacked) Reduces own \"Tropical Juice\" Count by 1",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Straw Doll Technique \"Resonance\"",
+    "cost": 9,
+    "mult": 1.42,
+    "target": "all",
+    "desc": "Deals 177.2% Ranged Jujutsu Damage to all enemies Increases all enemies' Nail Count (Change the Nail Count based on the enemies on the wave) 1 Enemy: 3 Counts 2 Enemies: 2 Counts 3+ Enemies: 1 Count Increases all enemies' Jujutsu Damage Rec",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Straw Doll Technique \"Hairpin\"",
+   "cost": 6,
+   "mult": 2.0,
+   "target": "all",
+   "desc": "Deals 200.1% Ranged Jujutsu Damage to all enemies Increases all enemies' Jujutsu Damage Received by 30% (Removed after activation) *The more Debuffs/Abnormal Status enemies have, the greater the effect (Up to 52.5% with 15 Debuffs/Abnormal ",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Vacation Vibe",
+    "desc": "At the start of battle, Recovers own Cursed Energy by 20 (Bypass Limit) Increases own \"Tropical Juice\" Count by 3 (Up to 5)",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   },
+   {
+    "name": "Evasion Enhancement",
+    "desc": "At the start of turn, Grants self \"Chance to Evade (Evasion Enhancement)\" (Cannot be stacked/Chance: 10%) When evaded successfully (1 Time per Turn): Increases ",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Weakening Specialist",
+   "desc": "At the start of battle, Increases own Jujutsu Stat by 40% (Up to 100% with 15 Abnormal Status or Debuffs/Cannot be Stacked) *Effects with no Time or Turn limit ",
+   "effect": {
+    "type": "atk",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.974,
+   "atk": 1.2,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "nobara_worst_match",
   "slug": "nobara-kugisaki-the-worst-match",
   "name": "Nobara Kugisaki",
@@ -1428,6 +3680,99 @@
   "profile": {
    "hp": 0.861,
    "atk": 1.041,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "noritoshi_golden_age",
+  "slug": "noritoshi-kamo-the-golden-age-of-jujutsu",
+  "name": "Noritoshi Kamo",
+  "title": "The Golden Age of Jujutsu",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Curse Users",
+  "kanji": "加茂",
+  "wiki": {
+   "hp": 39687.0,
+   "attack": 11609.0,
+   "jujutsu": 14484.0
+  },
+  "basic": {
+   "name": "Curse Manipulation (1)",
+   "mult": 1.25
+  },
+  "skills": [
+   {
+    "name": "Curse Manipulation (2)",
+    "cost": 4,
+    "mult": 1.2,
+    "target": "all",
+    "desc": "Deals 72.1% ranged Jujutsu Damage to all enemies Stop all enemies’ action (1 Turn/1 Time/Chance: 18.7%) Decreases all enemies’ Critical Hit Resistance by 23.7% (2 Turns) Increases own Jujutsu Stat by 30.1% (2 Turns)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 1
+    }
+   },
+   {
+    "name": "Curse Manipulation (3)",
+    "cost": 8,
+    "mult": 2.6,
+    "target": "all",
+    "desc": "Increases own Break Damage by 100% (Removed after activation) Deals 528.7% ranged Jujutsu Damage to all enemies Decreases all enemies’ Damage Dealt by 7.4% (3 Turns) Extends the duration of \"幻\" (Red) Jujutsu Damage Received (Curse Manipulat",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "This is the World of the Future",
+   "cost": 6,
+   "mult": 3.04,
+   "target": "all",
+   "desc": "Deals 868.9% ranged Jujutsu Damage to all enemies (7 Hits) Decreases all enemies’ Taijutsu & Jujutsu Stat by 14.9% (3 Turns) Decreases all enemies’ Critical Hit Resistance by 15% (3 Turns) Increases all enemies’ \"幻\" (Red) Jujutsu Damage Rec",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Weakening Specialist",
+    "desc": "At the start of battle, Increases own Jujutsu Stat by 10% (Up to 100% with 25 Abnormal Status or Debuffs) 5% chance to evades (Up to 20% with 15 Abnormal Status",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Evasion Enhancement",
+    "desc": "If evaded successfully (1 time per turn), Recovers own Cursed Energy by 5 (Bypass Caps) Increases own Jujutsu Stat by 10% (5 Turns)",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Curse Manipulation (Auto)",
+   "desc": "If receiving melee attack, Certain chance to decrease own melee Damage Received by 50%",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.096,
+   "atk": 1.172,
    "speed": 1.06
   }
  },
@@ -1647,6 +3992,192 @@
   }
  },
  {
+  "id": "ryomen_battle_firepower",
+  "slug": "ryomen-sukuna-battle-of-firepower",
+  "name": "Ryomen Sukuna",
+  "title": "Battle of firepower",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Incarnation",
+  "kanji": "宿儺",
+  "wiki": {
+   "hp": 44168.0,
+   "attack": 13215.0,
+   "jujutsu": 13714.0
+  },
+  "basic": {
+   "name": "Playing around",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Dismantle",
+    "cost": 4,
+    "mult": 2.41,
+    "target": "all",
+    "desc": "Deals 301.0% ranged Jujutsu Damage to all enemies (2 Hits) Inflicts 2 stacks of 30% Continuous Jujutsu Damage (Laceration) (4 Turns) (Each stacks increases additional Damage by 20%) Increases all enemies' Damage Received by 11.1% (3 Turns)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Cleave",
+    "cost": 11,
+    "mult": 4.2,
+    "target": "single",
+    "desc": "Deals 765.8% Melee Jujutsu Damage to the selected enemy (7 Hits) Inflicts 2 stacks of 45% Continuous Jujutsu Damage (Laceration) (2 Turns) (Each stacks increases additional Damage by 20%)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Fuga",
+   "cost": 6,
+   "mult": 5.5,
+   "target": "single",
+   "desc": "Deals 1421.8% ranged Jujutsu Damage to the selected enemy with Critical Hit Inflicts 198.3% Continuous Jujutsu Damage (Flame) (2 Turns) Cannot use Ultimate Skill until Sukuna have used Dismantle and Cleave in a battle Unable to perform Comb",
+   "effect": {
+    "type": "burn",
+    "pct": 5,
+    "turns": 2
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "King of Curses",
+    "desc": "At the start of the battle, Grants Poison, Darkness, Soul Stun, Confusion Immunity to self, Grants Immunity to Instant Death effects caused by Soul Damage to se",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Reverse Cursed Technique",
+    "desc": "If HP is around 20%-80% at the start of turn Recovers own HP by 20% (Chance: 30%-45%, Less HP will increases the chance) If HP is below 20% at the start of turn",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Dismantle (Counter)",
+   "desc": "At the start of battle, Grants Counter State When receiving a melee-attack (1 Time per Turn), Certain chance to deal 400% ranged Jujutsu Damage to the countered",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.2,
+   "atk": 1.109,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "ryomen_genuine_jujutsu",
+  "slug": "ryomen-sukuna-genuine-jujutsu",
+  "name": "Ryomen Sukuna",
+  "title": "Genuine Jujutsu",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Incarnation",
+  "kanji": "宿儺",
+  "wiki": {
+   "hp": 31170.0,
+   "attack": 10182.0,
+   "jujutsu": 10291.0
+  },
+  "basic": {
+   "name": "Know Your Place",
+   "mult": 1.3
+  },
+  "skills": [
+   {
+    "name": "Show me",
+    "cost": 2,
+    "mult": 2.35,
+    "target": "single",
+    "desc": "Deals 235.0% melee Taijutsu Damage to the selected enemy (3 Hits, Medium Chance of performing a critical hit), Increases own critical hit rate by 30.0% (3 Turns), Increases own critical hit Damage by 50.0% (3 Turns)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Unseen Slash",
+    "cost": 5,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 160.0% ranged Jujutsu damage to the selected enemy, Inflicts 2 stacks of 20% Continuous Jujutsu Damage (Laceration) (3 Turns) (Each stack of Laceration increases an additional Damage of Laceration by 20%) If \"Skill Restriction\" Status",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Domain Expansion \"Malevolent Shrine\"",
+   "cost": 6,
+   "mult": 3.6,
+   "target": "all",
+   "desc": "Expands the Domain: Grants Sure-Hit Effect to self (1 Turn) Nullifies \"Attack Nullification\" Status (1 Turn) Deals 1120.0% ranged Jujutsu Damage to all enemies (8 Hits), Inflicts 4 stacks of 50% Continuous Jujutsu Damage (Laceration) (4 Tur",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 1
+   },
+   "kind": "domain"
+  },
+  "passives": [
+   {
+    "name": "Reverse Cursed Technique",
+    "desc": "At The Start of Turn, Recovers own HP Based on the frequency of hit received If a skill can hit multiple times, still count as 1 hit received If no hit received",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   },
+   {
+    "name": "King of Curses",
+    "desc": "At the start of the battle, Grants Poison, Darkness, Soul Stun, Confusion Immunity to self, Grants Immunity to Instant Death effects caused by Soul Damage to se",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Reverse Cursed Technique",
+   "desc": "At The Start of Turn, Recovers own HP Based on the frequency of hit received If a skill can hit multiple times, still count as 1 hit received If no hit received",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.861,
+   "atk": 0.85,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "saki_resolve_heart",
   "slug": "saki-rindo-the-resolve-within-the-heart",
   "name": "Saki Rindo",
@@ -1722,6 +4253,171 @@
   }
  },
  {
+  "id": "satoru_quick_domain",
+  "slug": "satoru-gojo-0-2-second-domain-expansion",
+  "name": "Satoru Gojo",
+  "title": "0.2-Second Domain Expansion",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "五条",
+  "wiki": {
+   "hp": 53724.0,
+   "attack": 15095.0,
+   "jujutsu": 14861.0
+  },
+  "basic": {
+   "name": "Converge And Strike",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Massacre",
+    "cost": 2,
+    "mult": 2.6,
+    "target": "all",
+    "desc": "Deals 412.6% melee Taijutsu Damage to all enemies (2 Hits) Decreases all enemies' Critical Hit Resistance by 14.3% (3 Turns) Increases own Taijutsu Stat by 14.3% (5 Turns)"
+   },
+   {
+    "name": "Infinity Amplification",
+    "cost": 3,
+    "mult": 2.6,
+    "target": "all",
+    "desc": "Deals 412.6% ranged Jujutsu Damage to all enemies Increases all enemies' Break Damage Received by 36.2% (5 Turns/Cannot be Stacked)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Domain Expansion: \"Infinite Void\"",
+   "cost": 6,
+   "mult": 2.8,
+   "target": "all",
+   "desc": "Expands the Domain: Grants Sure-Hit Effect to self (1 Turn) Inflicts all enemies with \"Stun (Infinite Void)\" Status (2 Turns) Inflicts all enemies with \"Infinite Void\" Status (3 Turns) Prevents all enemies from increasing their Ultimate Ski",
+   "effect": {
+    "type": "stun",
+    "chance": 50
+   },
+   "kind": "domain"
+  },
+  "passives": [
+   {
+    "name": "Break Enhancement",
+    "desc": "At the start of battle, Increases own Damage Dealt by 50% (Effective when the selected enemy is in Break State)",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Zone, Outburst",
+    "desc": "When Black Flash are performed Increases own Taijutsu & Jujutsu Stat by 25% (4 Turns) Recovers own HP by 20%",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Desperate Decision",
+   "desc": "At the start of battle, Grants \"Desperate Decision\" State to self (10 Turns) At the start of turn, Increases own Taijutsu & Jujutsu Stat by 20% (1 Turn) (Each t",
+   "effect": {
+    "type": "atk",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.2,
+   "atk": 1.2,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "satoru_awakening",
+  "slug": "satoru-gojo-teen-awakening",
+  "name": "Satoru Gojo",
+  "title": "Awakening",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Tokyo Jujutsu High Year 2",
+  "kanji": "五条",
+  "wiki": {
+   "hp": 39828.0,
+   "attack": 12658.0,
+   "jujutsu": 12424.0
+  },
+  "basic": {
+   "name": "Converge And Strike",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Cursed Technique Reversal - Red",
+    "cost": 2,
+    "mult": 4.2,
+    "target": "single",
+    "desc": "Deals 471.7% ranged Jujutsu damage to the selected enemy Increases own “Core of Cursed Energy” count by 1 In \"Honored One\" Mode, Change the Skill Effect"
+   },
+   {
+    "name": "Awakening",
+    "cost": 3,
+    "mult": 1.8,
+    "target": "single",
+    "desc": "Increases own Ultimate gauge charge rate by 22.2% (3 turns) Grants Attack Immunity to self (3 Turns) (Awakening) (3 turns, cannot be stacked)"
+   }
+  ],
+  "ultimate": {
+   "name": "Hollow Purple",
+   "cost": 6,
+   "mult": 4.51,
+   "target": "single",
+   "desc": "Only usable In \"Honored One\" Mode Deals 819.3% Jujutsu Damage to the seleced enemy Increases own Ultimate gauge charge rate by 16.7% (4 turns/The more remaining turns of “Honored one” mode, the greater effect Increases/up to 50.0% with 5 re",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Limitless Technique",
+    "desc": "At the start of battle, Grants Attack Immunity (Awaken) to self (3 Turns, cannot be stacked) If \"Honored one\" mode is activated at the start of turn: Grants Att",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Cursed Technique Reversal - Red (Counter)",
+    "desc": "Counter Status: When targeted by an enemy's single-target Melee attack, Deals 520.0% ranged Jujutsu Damage to the countered enemy (Critical Hit Chance: Large) I",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Core of Cursed Energy",
+   "desc": "If \"Core of Cursed Energy\" is applied to self at the start of turn, Increases own Jujutsu stat (Awaken) by 35% (1 Turn/Each count increases an additional Jujuts",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.1,
+   "atk": 1.024,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "satoru_hollow_technique",
   "slug": "satoru-gojo-hollow-technique-purple",
   "name": "Satoru Gojo",
@@ -1793,6 +4489,97 @@
    "effect": {
     "type": "atk",
     "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.2,
+   "atk": 1.2,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "satoru_summer_treats",
+  "slug": "satoru-gojo-melting-sweet-summer-treats",
+  "name": "Satoru Gojo",
+  "title": "Melting Sweet Summer Treats",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Enhancer",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "五条",
+  "wiki": {
+   "hp": 53724.0,
+   "attack": 15095.0,
+   "jujutsu": 14861.0
+  },
+  "basic": {
+   "name": "Think you can keep up?",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "You can't have a summer without this",
+    "cost": 2,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Fills own Ultimate Gauge by 220 Increases own Ultimate Gauge Charging Rate by 14.3% (3 Turns) Recovers all \"行\" (Yellow) allies' Cursed Energy by 10 Cooldown: 6 Turns",
+    "effect": {
+     "type": "ceGain",
+     "amount": 3
+    }
+   },
+   {
+    "name": "Passionate Coaching",
+    "cost": 3,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Increases all \"行\" (Yellow) allies' Taijutsu & Jujutsu Stat by 24.9% (4 Turns) Recovers own HP by 5%",
+    "effect": {
+     "type": "heal",
+     "pct": 24
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Let's rest for a bit",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Increases all \"行\" (Yellow) allies' Taijutsu & Jujutsu Stat by 24.9% (4 Turns) Increases all \"行\" (Yellow) allies' Damage Dealt by 14.3% (5 Turns/Cannot be Stacked) Extends the \"Urgent Business\" Status by 3 Turns",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Limitless Technique",
+    "desc": "At the start of battle, Grants Attack Immunity to self",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Urgent Business",
+    "desc": "At the start of battle, Grants \"Urgent Business\" Status to self (8 Turns) Grants Taunt Immunity to self When self is leaving the battlefield, for the rest of th",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Extracurricular Activities",
+   "desc": "At the start of battle, Grants Attack Immunity to self",
+   "effect": {
+    "type": "atk",
+    "pct": 10
    }
   },
   "profile": {
@@ -1957,6 +4744,257 @@
   }
  },
  {
+  "id": "satoru_infinity",
+  "slug": "satoru-gojo-within-infinity",
+  "name": "Satoru Gojo",
+  "title": "Within Infinity",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "五条",
+  "wiki": {
+   "hp": 41113.0,
+   "attack": 12180.0,
+   "jujutsu": 11946.0
+  },
+  "basic": {
+   "name": "Converge And Strike",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Cursed Technique Lapse - Blue",
+    "cost": 2,
+    "mult": 2.6,
+    "target": "all",
+    "desc": "Deals 357.2% Ranged Jujutsu Damage to all enemies (4 Hits) Decreases all enemies' Damage Dealt by 16.9% (2 Turns) If \"Skill Restriction\" Status is active: Skill cannot be used",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   },
+   {
+    "name": "Cursed Technique Reversal - Red",
+    "cost": 3,
+    "mult": 4.2,
+    "target": "single",
+    "desc": "Deals 465.1% Ranged Jujutsu Damage to the selected enemy Increases own Jujutsu Stat by 29.7% (3 Turns) If \"Skill Restriction\" Status is active: Skill cannot be used",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Domain Expansion: \"Infinite Void\"",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "all",
+   "desc": "Expands the Domain: Grants Sure-Hit Effect to self (Cancelled once Domain Expansion ends) Inflicts all enemies with \"Stun (Infinite Void)\" Status (2 Turns) Inflicts all enemies with \"Infinite Void\" Status (4 Turns) Decreases all enemies' Ul",
+   "effect": {
+    "type": "stun",
+    "chance": 50
+   },
+   "kind": "domain"
+  },
+  "passives": [
+   {
+    "name": "Zone State",
+    "desc": "When Black Flash is performed, Activates \"Zone State\" (3 Turns) Zone State: Increases own Jujutsu Stat by 30.0% Increases own Critical Hit Rate by 30.0%",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Limitless Technique",
+   "desc": "At the start of battle, Grants Attack Immunity to self If \"Skill Restriction\" Status is active: Cancels out Attack Immunity",
+   "effect": {
+    "type": "atk",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.135,
+   "atk": 0.985,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "shoko_fwoo_hyoi",
+  "slug": "shoko-ieiri-teen-fwoo-hyoi",
+  "name": "Shoko Ieiri",
+  "title": "Fwoo Hyoi",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Healer",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Year 2",
+  "kanji": "家入",
+  "wiki": {
+   "hp": 26689.0,
+   "attack": 6062.0,
+   "jujutsu": 12003.0
+  },
+  "basic": {
+   "name": "Throwing Scalpel",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Information Capture",
+    "cost": 5,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Increases all \"夜\" (Green) Type allies' Taijutsu & Jujutsu Stat by 40.1% (3 Turns) Grants Stealth Status to self (1 Turn)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Reverse Cursed Technique",
+    "cost": 3,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Recovers the selected ally's HP by 23.5% (Reverse Cursed Technique) If the selected ally is an eligible target for Reverse Cursed Technique: Recovers the selected ally's HP by 5.0% each turn (3 turns) Decreases the value of 2 of the selecte",
+    "effect": {
+     "type": "heal",
+     "pct": 23
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "\"Fwoo, Hyoi\"",
+   "cost": 6,
+   "mult": 0,
+   "target": "allies",
+   "desc": "Increases all \"夜\" (Green) Type allies' Taijutsu & Jujutsu Stat by 40.1% (3 Turns) Recovers all allies' HP by 9.2% (Reverse Cursed Technique) If the ally is an eligible target for Reverse Cursed Technique: Recovers the eligible ally's HP by ",
+   "effect": {
+    "type": "heal",
+    "pct": 30
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Holding Operation",
+    "desc": "If own HP is below 60% after receiving an attack, Recovers own HP by 20.0% Grants Stealth Status to self (2 Turns) Decreases own Damage Received by 15.0% (3 Tur",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Holding Operation",
+   "desc": "If own HP is below 60% after receiving an attack, Recovers own HP by 20.0% Grants Stealth Status to self (2 Turns) Decreases own Damage Received by 15.0% (3 Tur",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.971,
+   "speed": 0.95
+  }
+ },
+ {
+  "id": "shoko_life_saver",
+  "slug": "shoko-ieiri-life-saver",
+  "name": "Shoko Ieiri",
+  "title": "Life Saver",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Healer",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "家入",
+  "wiki": {
+   "hp": 28182.0,
+   "attack": 6087.0,
+   "jujutsu": 11742.0
+  },
+  "basic": {
+   "name": "Sample Retrieval",
+   "mult": 1.2
+  },
+  "skills": [
+   {
+    "name": "Reverse Cursed Technique",
+    "cost": 2,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Recovers the selected ally's HP by 35.0% of Jujutsu Decreases the value of 2 of the selected ally's eligible debuffs by 30.0% (Prioritizes the most recent debuffs) (Deals damage when used on a Cursed Spirit)",
+    "effect": {
+     "type": "heal",
+     "pct": 30
+    }
+   },
+   {
+    "name": "Intelligence Sharing",
+    "cost": 5,
+    "mult": 0,
+    "target": "single",
+    "desc": "Increases the selected enemy's Damage Received by 10.0% (2 Turns) Increases all allies' Taijutsu & Jujutsu Stat by 31.1% (3 Turns) (Effective for \"行\" (Yellow) ally)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "I can take them apart as I please, right?",
+   "cost": 6,
+   "mult": 3.74,
+   "target": "single",
+   "desc": "Deals 680.0% melee Taijutsu Damage to selected enemy Increases all allies' Damage Dealt by 30.0% (2 Turns) Increases all allies' Ultimate Skill Gauge Charging rate by 20.0% (2 Turns)",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 20,
+    "turns": 2
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Holding Operation",
+    "desc": "If an ally's HP is 40% or below at the start of turn: (Excludes self) Recovers all allies' HP by 30% (Deals damage when used on a Cursed Spirit) Decreases the v",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Holding Operation",
+   "desc": "If an ally's HP is 40% or below at the start of turn: (Excludes self) Recovers all allies' HP by 30% (Deals damage when used on a Cursed Spirit) Decreases the v",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.95,
+   "speed": 0.95
+  }
+ },
+ {
   "id": "suguru_protecting_non",
   "slug": "suguru-geto-teen-for-protecting-non-jujutsu-sorcerer",
   "name": "Suguru Geto",
@@ -2117,6 +5155,280 @@
   }
  },
  {
+  "id": "suguru_what_lies_end",
+  "slug": "suguru-geto-teen-what-lies-at-the-end",
+  "name": "Suguru Geto",
+  "title": "What Lies at the End",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Curse User",
+  "kanji": "夏油",
+  "wiki": {
+   "hp": 38791.0,
+   "attack": 10571.0,
+   "jujutsu": 14682.0
+  },
+  "basic": {
+   "name": "Curse Manipulation (A)",
+   "mult": 0.9
+  },
+  "skills": [
+   {
+    "name": "Curse Manipulation (B)",
+    "cost": 6,
+    "mult": 1.59,
+    "target": "all",
+    "desc": "Deals 198.3% ranged Jujutsu Damage to all enemies Decreases all enemies' Critical Hit Resistance by 13.3% (3 Turns/Cannot be Stacked) Increases all enemies' \"行\" (Yellow) Damage Received (B) by 23.7% (3 Turns/Cannot be Stacked)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Curse Manipulation (C)",
+    "cost": 9,
+    "mult": 1.24,
+    "target": "all",
+    "desc": "Deals 154.8% ranged Jujutsu Damage to all enemies(4 Hits) Increases all enemies' \"行\" (Yellow) Jujutsu Damage Received (A) by 9.8% (2 Turns) To the enemy who received a Critical Hit from this attack, Increases that enemy's \"行\" (Yellow) Jujut",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 2
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "\"This is the life I've chosen\"",
+   "cost": 6,
+   "mult": 3.59,
+   "target": "all",
+   "desc": "Deals 1024.8% ranged Jujutsu Damage to all enemies Deals 252.4% Flame Jujutsu DOT to all enemies (1 Turn) Increases all enemies' \"行\" (Yellow) Jujutsu Damage Received (A) by 9.8% (2 Turns) Increases all enemies' \"行\" (Yellow) Jujutsu Damage R",
+   "effect": {
+    "type": "burn",
+    "pct": 5,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Critical Hit Enhancement",
+    "desc": "If Critical Hit is performed (Once per Turn), Recovers own Cursed Energy by 5 Increases own Break Damage by 15% (3 Turns)",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Cursed Energy Enhancement",
+    "desc": "If own Cursed Energy is 40 or more at the start of turn, Increases own Jujutsu Stat by 25% (1 Turn/Cannot be Buffed/Nerfed) (Increases an additional 0.5% with E",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Absorption",
+   "desc": "When defeating an enemy, Recovers own Cursed Energy by 15 (Fixed Amount) *Excluding certain Enemies and Cursed Spirits",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.071,
+   "atk": 1.188,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "takuma_indomitable_auspicious",
+  "slug": "takuma-ino-indomitable-auspicious-beasts",
+  "name": "Takuma Ino",
+  "title": "Indomitable Auspicious Beasts",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Debuffer",
+  "focus": "Mixed",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "猪野",
+  "wiki": {
+   "hp": 39881.0,
+   "attack": 11614.0,
+   "jujutsu": 12663.0
+  },
+  "basic": {
+   "name": "No.1 \"Kaichi\"",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "No.3 \"Kirin\"",
+    "cost": 19,
+    "mult": 1.8,
+    "target": "single",
+    "desc": "Grants \"Kirin\" State (8 Turns)"
+   },
+   {
+    "name": "Blind Spot Strike",
+    "cost": 3,
+    "mult": 2.03,
+    "target": "single",
+    "desc": "Increases own Break Damage by 100% (Removed after skill activation) Deals ranged Mixed Damage equal to 101.6% Taijutsu & 101.6% Jujutsu to the selected enemy (4 Hits) Increases the selected enemy's Break Damage Received by 10.4% (3 Turns) I",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Adhere to the facts with a disciplined mind",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Deals melee Mixed Damage equal to 265.8% Taijutsu & 265.8% Jujutsu to the selected enemy (2 Hits, Counter Bypass) Deals an additional ranged Mixed Damage equal to 126.2% Taijutsu & 126.2% Jujutsu to the selected enemy Increases the selected",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "I'm gonna become a Grade 1 Sorcerer",
+    "desc": "Before skill activation (Once per Battle) Increases own Jujutsu Stat by 10% Recovers own Cursed Energy by 10",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   },
+   {
+    "name": "No.1 \"Kaichi\" (Follow-up)",
+    "desc": "If any allies attack an enemy with a \"夜\" (Green) Command Skill or Ultimate Skill (Chance: 40%; Guaranteed if the attack was Hybrid attack) Deals ranged Mixed Da",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "\"Kirin\" State",
+   "desc": "In \"Kirin\" State, Increases own Mixed Damage Dealt by 15% Each Mixed Skill Damage Multiplier Increased by 100% (Additive) Recovers own Cursed Energy by 10 Each ",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.101,
+   "atk": 1.024,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "takuma_no_conceit",
+  "slug": "takuma-ino-no-conceit",
+  "name": "Takuma Ino",
+  "title": "No Conceit",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Combined",
+  "affiliation": "Tokyo Jujutsu High Officials",
+  "kanji": "猪野",
+  "wiki": {
+   "hp": 33877.0,
+   "attack": 9376.0,
+   "jujutsu": 11476.0
+  },
+  "basic": {
+   "name": "Punch",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "No.1 \"Kaichi\"",
+    "cost": 5,
+    "mult": 2.66,
+    "target": "single",
+    "desc": "Increases own Jujutsu Stat by 23.5% (1 Turn/1 Time) Deals 265.8% ranged Jujutsu Damage to the selected enemy In \"Spirit Turtle\" State, add the following effect into skill: Increases own Damage Dealt by 30.0% (2 Turns)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 1
+    }
+   },
+   {
+    "name": "No.2 \"Spirit Turtle\"",
+    "cost": 9,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Inflict \"Spirit Turtle\" State to self (4 Turns/Cannot be stacked) Reuse Cooldown: 3 Turns In \"Spirit Turtle\" State, Evade enemy's attack (Chance: 12.2%) Decreases own Damage Dealt by 30.0% (Cannot be removed/weakened) Decreases own Ultimate",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Auspicious Beasts Summon",
+   "cost": 6,
+   "mult": 3.0,
+   "target": "single",
+   "desc": "Increases own Jujutsu Stat by 27.9% (1 Turn/1 Time) Deals 531.6% ranged Jujutsu Damage to the selected enemy (2 Hits)",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "I'm gonna become a Grade 1 Sorcerer",
+    "desc": "Before using any skill, Increases own Jujutsu Stat by 10.0% Recovers own Cursed Energy by 10 (Once only during Battle)",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   },
+   {
+    "name": "\"Spirit Turtle\" State",
+    "desc": "In \"Spirit Turtle\" State, Inflict \"Additional action\" (1 Turn) If receiving an enemy's attack, Recovers own Cursed Energy by 5 (Once Only in a turn)",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "I'm gonna become a Grade 1 Sorcerer",
+   "desc": "Before using any skill, Increases own Jujutsu Stat by 10.0% Recovers own Cursed Energy by 10 (Once only during Battle)",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.935,
+   "atk": 0.928,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "toge_403",
   "slug": "toge-inumaki-compelling-cursed-speech",
   "name": "Toge Inumaki",
@@ -2201,6 +5513,247 @@
    "hp": 0.912,
    "atk": 0.989,
    "speed": 0.97
+  }
+ },
+ {
+  "id": "toge_night_lurking",
+  "slug": "toge-inumaki-night-lurking-sorcerer",
+  "name": "Toge Inumaki",
+  "title": "Night-Lurking Sorcerer",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Attacker",
+  "focus": "Jujutsu",
+  "affiliation": "Tokyo Jujutsu High Year 2",
+  "kanji": "狗巻",
+  "wiki": {
+   "hp": 23442.0,
+   "attack": 8580.0,
+   "jujutsu": 9158.0
+  },
+  "basic": {
+   "name": "\"Pop\"",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "\"Don't Move.\"",
+    "cost": 8,
+    "mult": 0,
+    "target": "single",
+    "desc": "Stuns the selected enemy (1 Turn/Chance: 95.0%) Increases the selected enemy's Taijutsu&Jujutsu Damage Received by 20.1% (2 Turns) (Effective for \"幻\" (Red) Type attacks) If a powerful enemy is targeted by this Skill: Sacrifices 8.0% of own ",
+    "effect": {
+     "type": "stun",
+     "chance": 50
+    }
+   },
+   {
+    "name": "\"Rot.\"",
+    "cost": 4,
+    "mult": 1.42,
+    "target": "all",
+    "desc": "Deals 177.2% Jujutsu Damage to all enemies Inflicts [Cursed Speech] on all enemies (5 Turns/1 Count) If a powerful enemy is targeted by this Skill, additionally Inflicts [Cursed Speech] on all enemies (5 Turns/2 Counts) If a powerful enemy "
+   }
+  ],
+  "ultimate": {
+   "name": "\"Split\"",
+   "cost": 6,
+   "mult": 2.0,
+   "target": "all",
+   "desc": "Increases own Jujutsu Stat by 27.9% (1 Time) Deals 563.7% Jujutsu Damage to all enemies If the enemy has any [Cursed Speech] Counts, additionally: Deals 100.0% Jujutsu Damage to the selected enemy (The more [Cursed Speech] Counts the enemy ",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Throat Medicine",
+    "desc": "At the start of each turn, Recovers own HP by 10.0% (Chance: 50.0%)",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Teamwork",
+   "desc": "Team attack +6%.",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "toge_shatter_pieces",
+  "slug": "toge-inumaki-shatter-to-pieces",
+  "name": "Toge Inumaki",
+  "title": "Shatter To Pieces",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Support",
+  "focus": "Combined",
+  "affiliation": "Year 2 Tokyo Jujutsu High",
+  "kanji": "狗巻",
+  "wiki": {
+   "hp": 23442.0,
+   "attack": 8580.0,
+   "jujutsu": 9158.0
+  },
+  "basic": {
+   "name": "Salmon Roe",
+   "mult": 1.0
+  },
+  "skills": [
+   {
+    "name": "Crumble Away",
+    "cost": 4,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Decreases all enemies' Jujutsu by 26.6% (2 Turns) (The lower the target's HP, the greater the decrease/Up to 50% of the original effect) Fills own Ultimate Skill Gauge by 124 If a powerful enemy is targeted by this Skill: Sacrifices 4.5% of",
+    "effect": {
+     "type": "heal",
+     "pct": 26
+    }
+   },
+   {
+    "name": "Shatter",
+    "cost": 5,
+    "mult": 2.1,
+    "target": "single",
+    "desc": "Deals 210.0% Jujutsu Damage to the selected enemy Increases the selected enemy's Taijutsu & Jujutsu Damage received by 18.0% (4 Turns) (Effective for \"影\" (Blue) Type attacks) (The lower the target's HP, the greater the increase/Up to 50% of",
+    "effect": {
+     "type": "heal",
+     "pct": 30
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Shatter To Pieces",
+   "cost": 6,
+   "mult": 2.62,
+   "target": "all",
+   "desc": "Increases all enemies' Jujutsu Damage received by 26.6% (Removed after Skill activation) (Effective for \"影\" (Blue) Type attacks) (The lower the target's HP, the greater the increase/Up to 50% of the original effect) Deals 750.0% Jujutsu Dam",
+   "effect": {
+    "type": "heal",
+    "pct": 26
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Throat Medicine",
+    "desc": "At the start of the battle, Grants HP Recovery (Special) Status to self (5 Times) At the start of each turn, If own HP is 70.0% or below and HP Recovery (Specia",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Throat Medicine",
+   "desc": "At the start of the battle, Grants HP Recovery (Special) Status to self (5 Times) At the start of each turn, If own HP is 70.0% or below and HP Recovery (Specia",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 0.97
+  }
+ },
+ {
+  "id": "toji_seance",
+  "slug": "toji-fushiguro-seance",
+  "name": "Toji Fushiguro",
+  "title": "Seance",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "The Sorcerer Killer",
+  "kanji": "甚爾",
+  "wiki": {
+   "hp": 40113.0,
+   "attack": 12774.0,
+   "jujutsu": 0.0
+  },
+  "basic": {
+   "name": "Carnage",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Sharpened Fang",
+    "cost": 2,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Increases own Damage Dealt by 22.2% (4 Turns) Increases own Critical Hit Damage by 24.9% (4 Turns) Grants \"Sharpened Fang\" State (4 Turns) While in \"Sharpened Fang\" State, Changes the Skill Effect into \"Pierce\"",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Rampant Flurry",
+    "cost": 3,
+    "mult": 2.71,
+    "target": "single",
+    "desc": "Deals 270.9% Melee Taijutsu Damage to the selected enemy (3 Hits) Increases own Combo Count by 1"
+   }
+  ],
+  "ultimate": {
+   "name": "The fangs point to the strong",
+   "cost": 6,
+   "mult": 3.44,
+   "target": "single",
+   "desc": "Deals 625.0% Melee Taijutsu Damage to the selected enemy (5 Hits) Inflicts 5 stack of 40% Continuous Taijutsu Damage (Sting) (4 Turns) (Each stack of Sting increases an additional Damage by 20%) Increases own Combo Count by 1",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Physically gIfted:",
+    "desc": "At the Start of Battle, Evade single-target Attacks (Chance: 20%) Recovers own HP by 3.5% Each Turn Decreases own Damage Received by 15% Grants Guaranteed Hit I",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Physically gIfted:",
+   "desc": "At the Start of Battle, Evade single-target Attacks (Chance: 20%) Recovers own HP by 3.5% Each Turn Decreases own Damage Received by 15% Grants Guaranteed Hit I",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.108,
+   "atk": 1.033,
+   "speed": 1.06
   }
  },
  {
@@ -2368,6 +5921,366 @@
   }
  },
  {
+  "id": "uraume_third_rate",
+  "slug": "uraume-step-back-third-rate",
+  "name": "Uraume",
+  "title": "Step back, third-rate",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Debuffer",
+  "focus": "Jujutsu",
+  "affiliation": "Incarnation",
+  "kanji": "裏梅",
+  "wiki": {
+   "hp": 38351.0,
+   "attack": 10612.0,
+   "jujutsu": 13486.0
+  },
+  "basic": {
+   "name": "Ice Knife",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "Ice Formation",
+    "cost": 4,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 80.7% ranged Jujutsu Damage to the selected enemy (2 Hits) Increases the selected enemy's \"行\" (Yellow) Type Jujutsu Damage Received by 7.5% (3 Turns)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Frost Calm",
+    "cost": 6,
+    "mult": 2.1,
+    "target": "single",
+    "desc": "Deals 209.5% ranged Jujutsu Damage to the selected enemy Inflicts 50% Jujutsu Damage DOT (Freeze) to the selected enemy (6 Turns) Increases the selected enemy's Break Damage Received by 30% (3 Turns) Increases Freeze Enhancement Lvl by 3 (U",
+    "effect": {
+     "type": "stun",
+     "chance": 50
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Ice Formation: \"Ice Fall\"",
+   "cost": 6,
+   "mult": 2.19,
+   "target": "all",
+   "desc": "Deals 625% ranged Jujutsu Damage to all enemies (6 Hits) Inflicts 50% Jujutsu Damage DOT (Freeze) to all enemies (6 Turns) To enemies with 3 DOT (Freeze) or more, Deals an additional 287.4% ranged Jujutsu Damage Removes 3 DOT (Freeze) (Prio",
+   "effect": {
+    "type": "stun",
+    "chance": 50
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Reverse Cursed Technique",
+    "desc": "At the start of battle, Grants HP Recovery (Special) (1 Time) If own HP is 70% or less, own Cursed Energy is 20 or more and HP Recovery (Special) is inflicted a",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Freeze Enhancement",
+    "desc": "At the start of battle, Grants Freeze Immunity At the start of turn, (All effect can be overridden) Increases own Jujutsu Stat by 4.8% (Cannot be Stacked) (Effe",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Reverse Cursed Technique",
+   "desc": "At the start of battle, Grants HP Recovery (Special) (1 Time) If own HP is 70% or less, own Cursed Energy is 20 or more and HP Recovery (Special) is inflicted a",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.059,
+   "atk": 1.091,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "yoshinobu_crafty_rock",
+  "slug": "yoshinobu-gakuganji-crafty-rock",
+  "name": "Yoshinobu Gakuganji",
+  "title": "Crafty Rock",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Interferer",
+  "focus": "Jujutsu",
+  "affiliation": "Kyoto Jujutsu High Officials",
+  "kanji": "楽巌寺",
+  "wiki": {
+   "hp": 29310.0,
+   "attack": 8252.0,
+   "jujutsu": 14771.0
+  },
+  "basic": {
+   "name": "Cursed Energy Burst",
+   "mult": 1.19
+  },
+  "skills": [
+   {
+    "name": "Tuning",
+    "cost": 4,
+    "mult": 1.6,
+    "target": "single",
+    "desc": "Deals 151.7% ranged Jujutsu Damage to the selected enemy Increases the selected enemy's \"幻\" (Red) Jujutsu Damage Received by 12.2% (4 Turns) \"Tuning\" Count +3",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Cursed Energy Beat",
+    "cost": 6,
+    "mult": 1.85,
+    "target": "all",
+    "desc": "Deals 231.3% ranged Jujutsu Damage to all enemies (3 Hits) Increases all enemies' \"幻\" (Red) Taijutsu & Jujutsu Damage Received by 14.3% (4 Turns)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Kill me to confirm it",
+   "cost": 6,
+   "mult": 2.0,
+   "target": "all",
+   "desc": "Deals 449.5% ranged Jujutsu Damage to all enemies (5 Hits) Increases further based on \"Tuning\" Count (Up to 80% of the original effect with 20 Counts) *Max Damage Output (Skill Level 10): 1530% ranged Jujutsu Damage Lowers all enemies' Juju",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Melody Amplification",
+    "desc": "If \"Tuning\" Count is 6 or more at the start of turn, Increases all enemies' \"幻\" (Red) Taijutsu & Jujutsu Damage Received by 23% (Gakuganji) (Cannot be Stacked) ",
+    "effect": {
+     "type": "guard",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Teamwork",
+   "desc": "Team attack +6%.",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 1.195,
+   "speed": 1.0
+  }
+ },
+ {
+  "id": "yu_burning_passion",
+  "slug": "yu-haibara-burning-passion",
+  "name": "Yu Haibara",
+  "title": "Burning Passion",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Attacker",
+  "focus": "Mixed",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "灰原",
+  "wiki": {
+   "hp": 39363.0,
+   "attack": 12221.0,
+   "jujutsu": 11998.0
+  },
+  "basic": {
+   "name": "Burst Eruption",
+   "mult": 1.19
+  },
+  "skills": [
+   {
+    "name": "Vapor Technique",
+    "cost": 10,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Grants \"Vaporous\" State (5 Turns) After all allies has performed their action (Skill activation turn only) Performs a follow-up S3 \"Kanketsusen\" to a random enemy (CE: 0, Melee Counter Immunity) More likely to target the enemy with \"Decreas",
+    "effect": {
+     "type": "heal",
+     "pct": 30
+    }
+   },
+   {
+    "name": "Kanketsusen",
+    "cost": 4,
+    "mult": 2.59,
+    "target": "single",
+    "desc": "Deals melee Mixed Damage equal to 129.4% Taijutsu & 129.4% Jujutsu to the selected enemy (2 Hits) Decreases the selected enemy's Critical Hit Resistance by 12.2% (Vaporous) (6 Turns/Cannot be Stacked) Recovers own Cursed Energy by 5 (Bypass",
+    "effect": {
+     "type": "ceGain",
+     "amount": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Vapor Technique: \"Point Break Rush\"",
+   "cost": 6,
+   "mult": 5.5,
+   "target": "single",
+   "desc": "If in \"Vaporous\" State, Extends \"Vaporous\" State Duration by 3 Turns Otherwise, Grants \"Vaporous\" State (3 Turns) Increases own Break Damage by 100% (Removed after Skill activation) Deals melee Mixed Damage equal to 531.6% Taijutsu & 531.6%",
+   "effect": {
+    "type": "buffAtk",
+    "pct": 15,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Critical Hit Enhancement",
+    "desc": "If Critical Hit is performed: Critical Hit Count +1 Increases own Taijutsu & Jujutsu Stat by 34.5% (4 Turns/Cannot be Stacked) Increases an additional 4.5% effe",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Fuel Supplies",
+    "desc": "At the start of the 6th turn from battle Recovers own Cursed Energy by 30 (Bypass Limit) Recovers own HP by 6%",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Critical Hit Enhancement",
+   "desc": "If Critical Hit is performed: Critical Hit Count +1 Increases own Taijutsu & Jujutsu Stat by 34.5% (4 Turns/Cannot be Stacked) Increases an additional 4.5% effe",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.087,
+   "atk": 0.989,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "yuji_life_entrusted",
+  "slug": "yuji-itadori-a-life-entrusted-to-me",
+  "name": "Yuji Itadori",
+  "title": "A Life Entrusted to Me",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Green",
+  "element": "Skill",
+  "role": "Enhancer",
+  "focus": "Taijutsu",
+  "affiliation": "Year 1 Tokyo Jujutsu High",
+  "kanji": "虎杖",
+  "wiki": {
+   "hp": 46462.0,
+   "attack": 13298.0,
+   "jujutsu": 0.0
+  },
+  "basic": {
+   "name": "Body Blow",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "Hammer Kick",
+    "cost": 6,
+    "mult": 3.01,
+    "target": "single",
+    "desc": "(Cooldown: 3 Turns) Deals 301% melee Taijutsu Damage to the selected enemy Increases the selected enemy's Break Damage Received by 14.3% (3 Turns; \"Zone\" State Exclusive Effect) Increases all \"夜\" (Green) allies' Damage Dealt by 34.7% (3 Tur",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Assault Rush",
+    "cost": 5,
+    "mult": 3.0,
+    "target": "single",
+    "desc": "Deals 299.9% melee Taijutsu Damage to the selected enemy (3 Hits) Increases all \"夜\" (Green) allies' Damage Dealt by 23.7% (3 Turns) Increases all \"夜\" (Green) allies' Critical Hit Damage by 9.8% (3 Turns; \"Zone\" State exclusive effect)",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Unyielding Counterattack",
+   "cost": 6,
+   "mult": 3.27,
+   "target": "single",
+   "desc": "Deals 595% melee Taijutsu Damage to the selected enemy (6 Hits; 6th Hit will perform Soul Attack) Increases the selected enemy's \"夜\" (Green) Damage Received by 9.8% (3 Turns) Increases all \"夜\" (Green) allies' Damage Dealt by 23.7% (3 Turns)",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Sukuna's Vessel",
+    "desc": "At the start of the battle, Grants Poison and Soul Damage Resistance to self Grants Immunity to Instant Death effects caused by Soul Damage to self Able to perf",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Counter Upper",
+    "desc": "At the start of battle, Grants Counter State (Counter Upper) To enemy who performs a single melee attack to any allies (Chance: 10%; 1 Time per Turn) Counter th",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Critical Hit Enhancement",
+   "desc": "When Critical Hit or Black Flash are performed, Increases all \"夜\" (Green) allies' Damage Dealt by 15% (2 Turns) Increases own Critical Hit Rate by 15% (4 Turns)",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.2,
+   "atk": 1.076,
+   "speed": 1.0
+  }
+ },
+ {
   "id": "yuji_501",
   "slug": "yuuji-itadori-cursed-energy-black-flash",
   "name": "Yuji Itadori",
@@ -2513,6 +6426,172 @@
   }
  },
  {
+  "id": "yuji_max_output",
+  "slug": "yuji-itadori-maximum-cursed-energy-output",
+  "name": "Yuji Itadori",
+  "title": "Maximum Cursed Energy Output",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Red",
+  "element": "Heart",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "虎杖",
+  "wiki": {
+   "hp": 37452.0,
+   "attack": 14604.0,
+   "jujutsu": 0.0
+  },
+  "basic": {
+   "name": "Manji Kick (Nimble Style)",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Assault (Nimble Style)",
+    "cost": 4,
+    "mult": 3.43,
+    "target": "single",
+    "desc": "Deals 343.2% Melee Taijutsu Damage to the selected enemy (2 Hits, Black Flash Rate: Low) Taunt on the selected enemy (1 Turn) Increases the chance of evasion (Nimble) to 30% (1 Turn) Decreases all allies' Damage Received by 8.1% (3 Turns)"
+   },
+   {
+    "name": "Scurry Combo Strike (Nimble Style)",
+    "cost": 4,
+    "mult": 3.43,
+    "target": "single",
+    "desc": "Deals 343.2% Melee Taijutsu Damage to the selected enemy (3 Hits, Black Flash Rate: Low) Increases own Taijutsu Stat by 9.7% (3 Turns) Increases own Ultimate Gauge Charging Rate by 9.7% (3 Turns)"
+   }
+  ],
+  "ultimate": {
+   "name": "Black Flash",
+   "cost": 6,
+   "mult": 3.91,
+   "target": "single",
+   "desc": "Grants Guaranteed Hit Status (1 Time) Deals 710.9% Melee Taijutsu Damage to the selected enemy with Black Flash (Counter Bypass) (Enhances Skill Multiplier based on the amount of \"Cursed Energy Enhancement\") (With 250 Cursed Energy Spent an",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Sukuna's Vessel",
+    "desc": "At the start of the battle, Grants Poison and Soul Damage Resistance to self Grants Immunity to Instant Death effects caused by Soul Damage to self",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Evasion Enhancement",
+    "desc": "In \"Nimble Style\" or “Guaranteed Exorcism” Status, Grants Evasion (Nimble) (Chance: 20%) and 15% Damage Reduction (Nimble) If evaded successfully (3 Times per T",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Cursed Energy Enhancement",
+   "desc": "In \"Ferocious Style\" or \"Guaranteed Exorcism” Status, Accumulate the Cursed Energy Spent by 1:1 Raito (Up to 250 Cursed Energy) (If both Status are activated, r",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.034,
+   "atk": 1.181,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "yuji_summer_sky",
+  "slug": "yuji-itadori-smash-it-into-the-summer-sky",
+  "name": "Yuji Itadori",
+  "title": "Smash It Into the Summer Sky",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "虎杖",
+  "wiki": {
+   "hp": 41183.0,
+   "attack": 14434.0,
+   "jujutsu": 0.0
+  },
+  "basic": {
+   "name": "Body Blow",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "I'll beat the hell out of you!",
+    "cost": 5,
+    "mult": 3.79,
+    "target": "single",
+    "desc": "Deals 379.2% melee Taijutsu Damage to the selected enemy (4 Hits) Increases own Black Flash Rate by 14.9% (3 Turns) To self and the ally in front of self: Increases Ultimate Gauge Charging Rate by 9.9% (2 Turns, Zone State exclusive)"
+   },
+   {
+    "name": "Summer Sky Strike",
+    "cost": 6,
+    "mult": 4.2,
+    "target": "single",
+    "desc": "Increases own Break Damage by 100% (Removed after skill activation) Deals 449% melee Taijutsu Damage to the selected enemy Increases the selected enemy's \"影\" (Blue) Damage Received by 15% (3 Turns, Zone State exclusive)",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Summer High Tension",
+   "cost": 6,
+   "mult": 5.5,
+   "target": "single",
+   "desc": "Grants Guaranteed Hit Status (1 Time) Deals 1267.2% melee Taijutsu Damage to the selected enemy (7 Hits, Last hit will always perform a Black Flash/Counter Bypass) Increases the selected enemy's \"影\" (Blue) Damage Received by 15.0% (3 Turns)",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 3
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Sukuna's Vessel",
+    "desc": "At the start of the battle, Grants Poison, Frostbitten(30% Chance) and Soul Damage Resistance to self Grants Immunity to Instant Death effects caused by Soul Da",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Zone, Outburst",
+    "desc": "When performing a Black Flash: Increases own Taijutsu Stat (Zone) by 50% (4 Turns/Cannot be Stacked, Buffed or Nerfed) Recovers own Cursed Energy by 10 (Bypass ",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   }
+  ],
+  "support": {
+   "name": "Let's Go All Out!",
+   "desc": "At the start of battle, Recovers own Cursed Energy by 10 (Bypass Limit)",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 1.137,
+   "atk": 1.168,
+   "speed": 1.06
+  }
+ },
+ {
   "id": "yuji_301",
   "slug": "yuji-itadori-the-agile-body",
   "name": "Yuji Itadori",
@@ -2585,6 +6664,177 @@
   "profile": {
    "hp": 1.085,
    "atk": 1.0,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "yuji_zone",
+  "slug": "yuji-itadori-zone",
+  "name": "Yuji Itadori",
+  "title": "Zone",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Taijutsu",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "虎杖",
+  "wiki": {
+   "hp": 28297.0,
+   "attack": 9259.0,
+   "jujutsu": 0.0
+  },
+  "basic": {
+   "name": "Punch",
+   "mult": 1.2
+  },
+  "skills": [
+   {
+    "name": "Strike of Resolve",
+    "cost": 8,
+    "mult": 2.8,
+    "target": "single",
+    "desc": "Deals 280.0% Melee Taijutsu Damage to the selected enemy (2 Hits) Increases own Ultimate Skill Gauge Charge Rate by 20.0% (3 Turns) If \"Zone State\" is active, Skill effect changes"
+   },
+   {
+    "name": "Exorcism Flurry",
+    "cost": 6,
+    "mult": 3.35,
+    "target": "single",
+    "desc": "Increases own Break Damage by 106.4% (1 Turn/1 Time) Deals 335.0% Melee Taijutsu Damage to the selected enemy (3 Hits) Decreases own Damage Received by 15.0% (2 Turns) If \"Zone State\" is active, Skill effect changes",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 1
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Black Flash",
+   "cost": 6,
+   "mult": 4.13,
+   "target": "single",
+   "desc": "Deals 750.4% Melee Taijutsu Damage to the selected enemy Activates \"Zone State\" (2 Turns) (Guaranteed to perform a Black Flash)",
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Zone, Outburst",
+    "desc": "At the start of each turn, if \"Zone State\" is activated: Increases own Taijutsu Stat by 30.0% Increases own Black Flash Rate by 50.0% Increases own Cursed Energ",
+    "effect": {
+     "type": "ceStart",
+     "amount": 2
+    }
+   },
+   {
+    "name": "Vessel of Sukuna",
+    "desc": "At the start of the battle, Grants Poison and Soul Damage Resistance to self Grants Immunity to Instant Death effects caused by Soul Damage to self",
+    "effect": {
+     "type": "atk",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Teamwork",
+   "desc": "Team attack +6%.",
+   "effect": {
+    "type": "atk",
+    "pct": 6
+   }
+  },
+  "profile": {
+   "hp": 0.85,
+   "atk": 0.85,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "yuta_executioner",
+  "slug": "yuta-okkotsu-executioner",
+  "name": "Yuta Okkotsu",
+  "title": "Executioner",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Yellow",
+  "element": "Bravery",
+  "role": "Attacker",
+  "focus": "Mixed",
+  "affiliation": "Year 2 Tokyo Jujutsu High",
+  "kanji": "乙骨",
+  "wiki": {
+   "hp": 39742.0,
+   "attack": 12724.0,
+   "jujutsu": 13495.0
+  },
+  "basic": {
+   "name": "Continuous Slash",
+   "mult": 1.4
+  },
+  "skills": [
+   {
+    "name": "Cursed Energy Unleashed",
+    "cost": 10,
+    "mult": 1.96,
+    "target": "all",
+    "desc": "Deals melee Mixed Damage equal to 122.7% Taijutsu & 122.7% Jujutsu to all enemies With less enemies within the wave, Increases the effect further by 30% of the original effect 1 Enemy: 90% of the original effect 2 Enemies: 60% of the origin"
+   },
+   {
+    "name": "Execution",
+    "cost": 8,
+    "mult": 1.95,
+    "target": "single",
+    "desc": "Increases own Break Damage by 100% (1 Turn/1 Time) Deals melee Mixed Damage equal to 97.4% Taijutsu & 97.4% Jujutsu to the selected enemy Increases the selected enemy’s Break Damage Received by 9.8% (3 Turns) Increases the selected enemy’s ",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 1
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Come, Rika",
+   "cost": 6,
+   "mult": 4.26,
+   "target": "single",
+   "desc": "Increases own Damage Dealt by 40% (1 Turn/1 Time) Deals melee Mixed Damage equal to 387.6% Taijutsu & 387.6% Jujutsu to the selected enemy (4 Hits) Critical Hit Rate: Large Increases the selected enemy’s \"行\" (Yellow) Type Damage Received by",
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 1
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Reversal Cursed Technique",
+    "desc": "At the start of turn, If an ally's HP is 60% or below and own Cursed Energy is 15 or more: To the ally with the lowest HP remaining, Recovers HP by 10% If the t",
+    "effect": {
+     "type": "hp",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Critical Hit Enhancement",
+    "desc": "When Critical Hit is performed, (1 Time per Turn) Increases own Critical Hit Count by 1 Increases own Taijutsu & Jujutsu Stat by 37.5% (3 Turns/Cannot be Stacke",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Reversal Cursed Technique",
+   "desc": "At the start of turn, If an ally's HP is 60% or below and own Cursed Energy is 15 or more: To the ally with the lowest HP remaining, Recovers HP by 10% If the t",
+   "effect": {
+    "type": "hp",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.097,
+   "atk": 1.092,
    "speed": 1.06
   }
  },
@@ -2668,6 +6918,98 @@
   "profile": {
    "hp": 1.0,
    "atk": 1.0,
+   "speed": 1.06
+  }
+ },
+ {
+  "id": "yuta_queen_curses",
+  "slug": "yuta-okkotsu-queen-of-curses",
+  "name": "Yuta Okkotsu",
+  "title": "Queen of Curses",
+  "rarity": 6,
+  "rarityLabel": "SSR",
+  "color": "Blue",
+  "element": "Body",
+  "role": "Attacker",
+  "focus": "Mixed",
+  "affiliation": "Tokyo Jujutsu High Year 1",
+  "kanji": "乙骨",
+  "wiki": {
+   "hp": 37149.0,
+   "attack": 11556.0,
+   "jujutsu": 12330.0
+  },
+  "basic": {
+   "name": "Cross-Slash",
+   "mult": 0.97
+  },
+  "skills": [
+   {
+    "name": "\"Infusing Cursed Energy into My Blade...\"",
+    "cost": 6,
+    "mult": 0,
+    "target": "allies",
+    "desc": "Increases own Taijutsu Stat, Critical Hit Rate and Damage reduction by 27.3% (3 turns) Fills own Ultimate Gauge by 60",
+    "effect": {
+     "type": "buffAtk",
+     "pct": 15,
+     "turns": 3
+    }
+   },
+   {
+    "name": "Step Slash",
+    "cost": 4,
+    "mult": 2.5,
+    "target": "single",
+    "desc": "Deals 249.9% Melee Taijutsu Damage to the seleced enemy (3 Hits) If the seleced enemy is a formidable foe, Increases the selected enemy's Break Damage Received by 14.9% (3 turns) Otherwise, Increases the selected enemy's Damage received by ",
+    "effect": {
+     "type": "weaken",
+     "pct": 20,
+     "turns": 3
+    }
+   }
+  ],
+  "ultimate": {
+   "name": "Special Grade Vengeful Cursed Spirit \"Rika Orimoto\"",
+   "cost": 6,
+   "mult": 5.5,
+   "target": "single",
+   "desc": "Grants \"Rika Orimoto\" State (8 Turns) Deals 1063.2% ranged Jujutsu Damage to the selected enemy (3 Hits) Recovers own Cursed Energy by 50 (Regardless of the Cursed Energy Cap) In \"Rika Orimoto\" State Increases own Jujutsu Stat by 70% Increa",
+   "effect": {
+    "type": "heal",
+    "pct": 30
+   },
+   "kind": "ultimate"
+  },
+  "passives": [
+   {
+    "name": "Don't bully Yuta!",
+    "desc": "At the start of battle, Grants Counter State to self If receiving an melee attack, Certain chance to: Deals 300% melee Jujutsu Damage to the countered enemy (Cr",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   },
+   {
+    "name": "Critical Hit Enhancement",
+    "desc": "When Critical Hit is performed, Increases own Critical Hit Rate by 15% (4 turns) Increases own Critical Hit Damage by 30% (4 turns) Fills own Ultimate Gauge by ",
+    "effect": {
+     "type": "crit",
+     "pct": 10
+    }
+   }
+  ],
+  "support": {
+   "name": "Don't bully Yuta!",
+   "desc": "At the start of battle, Grants Counter State to self If receiving an melee attack, Certain chance to: Deals 300% melee Jujutsu Damage to the countered enemy (Cr",
+   "effect": {
+    "type": "crit",
+    "pct": 10
+   }
+  },
+  "profile": {
+   "hp": 1.026,
+   "atk": 0.997,
    "speed": 1.06
   }
  },
@@ -2853,7 +7195,7 @@
   "role": "Supporter",
   "focus": "Jujutsu",
   "affiliation": "Fukuoka Jujutsu High Year 1",
-  "kanji": "Ka",
+  "kanji": "海斗",
   "wiki": {
    "hp": 667.0,
    "attack": 182.0,
@@ -2923,7 +7265,7 @@
   "role": "Defender",
   "focus": "Balanced",
   "affiliation": "Kyoto Jujutsu High Year 2",
-  "kanji": "Ka",
+  "kanji": "三輪",
   "wiki": {
    "hp": 713.0,
    "attack": 240.0,
@@ -3589,7 +7931,7 @@
   "role": "Healer",
   "focus": "Physical",
   "affiliation": "Tokyo Jujutsu High Officials",
-  "kanji": "Sh",
+  "kanji": "家入",
   "wiki": {
    "hp": 598.0,
    "attack": 118.0,

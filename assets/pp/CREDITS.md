@@ -57,6 +57,61 @@ Animated card art was reduced to a single still frame and resized; skill and uni
 - [Yuuji Itadori (Cursed Energy Black Flash) — Green SSR](https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Yuuji_Itadori_%28Cursed_Energy_Black_Flash%29) → `units/yuuji-itadori-cursed-energy-black-flash/`
 - [Yuuki Kaito (His Resolve As A Sorcerer) — Green SR](https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Yuuki_Kaito_%28His_Resolve_As_A_Sorcerer%29) → `units/yuuki-kaito-his-resolve-as-a-sorcerer/`
 
+## Units (jjk-phantom-parade.fandom.com)
+
+Card art, unit icons and skill icons of these units come from the newer fan wiki at https://jjk-phantom-parade.fandom.com (same treatment as above).
+
+- [Aoi Todo (Are you satisfied with that?) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Are_you_satisfied_with_that%3F%29_Aoi_Todo) → `units/aoi-todo-are-you-satisfied-with-that/`
+- [Atsuya Kusakabe (Ward off with Sharp Blade) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Ward_off_with_Sharp_Blade%29_Atsuya_Kusakabe) → `units/atsuya-kusakabe-ward-off-with-sharp-blade/`
+- [Choso (Fulfilling His Duty as the Older Brother) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Fulfilling_His_Duty_as_the_Older_Brother%29_Choso) → `units/choso-fulfilling-his-duty-as-the-older-brother/`
+- [Dagon (Unlimited Shikigami) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Unlimited_Shikigami%29_Dagon) → `units/dagon-unlimited-shikigami/`
+- [Eiji Urushi (Chain Mark: Full Throttle) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Chain_Mark%3A_Full_Throttle%29_Eiji_Urushi) → `units/eiji-urushi-chain-mark-full-throttle/`
+- [Jogo (Meteor of Fierceness) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Meteor_of_Fierceness%29_Jogo) → `units/jogo-meteor-of-fierceness/`
+- [Kaito Yuki (With That Will In Mind) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28With_That_Will_In_Mind%29_Kaito_Yuki) → `units/kaito-yuki-with-that-will-in-mind/`
+- [Kasumi Miwa (Sprinting) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Sprinting%29_Kasumi_Miwa) → `units/kasumi-miwa-sprinting/`
+- [Kento Nanami (Silent Suppression) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Silent_Suppression%29_Kento_Nanami) → `units/kento-nanami-silent-suppression/`
+- [Kento Nanami (Teen) (Promising New Student) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Promising_New_Student%29_Kento_Nanami_%28Teen%29) → `units/kento-nanami-teen-promising-new-student/`
+- [Kiyotaka Ijichi (Pick Up After Hard Work) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Pick_Up_After_Hard_Work%29_Kiyotaka_Ijichi) → `units/kiyotaka-ijichi-pick-up-after-hard-work/`
+- [Kokichi Muta (I've Seen It All) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28I%27ve_Seen_It_All%29_Kokichi_Muta) → `units/kokichi-muta-i-ve-seen-it-all/`
+- [Mahito (Unbridled Soul) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Unbridled_Soul%29_Mahito) → `units/mahito-unbridled-soul/`
+- [Mai Zen'in (Effective Range) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Effective_Range%29_Mai_Zen%27in) → `units/mai-zen-in-effective-range/`
+- [Mai Zen'in (The Final Bullet) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28The_Final_Bullet%29_Mai_Zen%27in) → `units/mai-zen-in-the-final-bullet/`
+- [Maki Zen'in (Early Morning Departure) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Early_Morning_Departure%29_Maki_Zen%27in) → `units/maki-zen-in-early-morning-departure/`
+- [Masamichi Yaga (Pivotal Guardian) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Pivotal_Guardian%29_Masamichi_Yaga) → `units/masamichi-yaga-pivotal-guardian/`
+- [Megumi Fushiguro (Bond of Friendship) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Bond_of_Friendship%29_Megumi_Fushiguro) → `units/megumi-fushiguro-bond-of-friendship/`
+- [Megumi Fushiguro (Enjoying The Cool Summer Breeze) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Enjoying_The_Cool_Summer_Breeze%29_Megumi_Fushiguro) → `units/megumi-fushiguro-enjoying-the-cool-summer-breeze/`
+- [Megumi Fushiguro (Rabbit's Disruption) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Rabbit%27s_Disruption%29_Megumi_Fushiguro) → `units/megumi-fushiguro-rabbit-s-disruption/`
+- [Mei Mei (Night Of Dancing Crows) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Night_Of_Dancing_Crows%29_Mei_Mei) → `units/mei-mei-night-of-dancing-crows/`
+- [Miguel (Delayed Quota) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Delayed_Quota%29_Miguel) → `units/miguel-delayed-quota/`
+- [Momo Nishimiya (Tool Manipulation) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Tool_Manipulation%29_Momo_Nishimiya) → `units/momo-nishimiya-tool-manipulation/`
+- [Naobito Zen'in (Crushed With Speed) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Crushed_With_Speed%29_Naobito_Zen%27in) → `units/naobito-zen-in-crushed-with-speed/`
+- [Nobara Kugisaki (Keep Hammering At Them) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Keep_Hammering_At_Them%29_Nobara_Kugisaki) → `units/nobara-kugisaki-keep-hammering-at-them/`
+- [Nobara Kugisaki (Striking Eternal Summer) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Striking_Eternal_Summer%29_Nobara_Kugisaki) → `units/nobara-kugisaki-striking-eternal-summer/`
+- [Noritoshi Kamo (The Golden Age of Jujutsu) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28The_Golden_Age_of_Jujutsu%29_Noritoshi_Kamo) → `units/noritoshi-kamo-the-golden-age-of-jujutsu/`
+- [Ryomen Sukuna (Battle of firepower) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Battle_of_firepower%29_Ryomen_Sukuna) → `units/ryomen-sukuna-battle-of-firepower/`
+- [Ryomen Sukuna (Genuine Jujutsu) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Genuine_Jujutsu%29_Ryomen_Sukuna) → `units/ryomen-sukuna-genuine-jujutsu/`
+- [Satoru Gojo (0.2-Second Domain Expansion) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%280.2-Second_Domain_Expansion%29_Satoru_Gojo) → `units/satoru-gojo-0-2-second-domain-expansion/`
+- [Satoru Gojo (Melting Sweet Summer Treats) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Melting_Sweet_Summer_Treats%29_Satoru_Gojo) → `units/satoru-gojo-melting-sweet-summer-treats/`
+- [Satoru Gojo (Within Infinity) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Within_Infinity%29_Satoru_Gojo) → `units/satoru-gojo-within-infinity/`
+- [Satoru Gojo (Teen) (Awakening) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Awakening%29_Satoru_Gojo_%28Teen%29) → `units/satoru-gojo-teen-awakening/`
+- [Shoko Ieiri (Life Saver) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Life_Saver%29_Shoko_Ieiri) → `units/shoko-ieiri-life-saver/`
+- [Shoko Ieiri (Teen) ("Fwoo Hyoi") — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28%22Fwoo_Hyoi%22%29_Shoko_Ieiri_%28Teen%29) → `units/shoko-ieiri-teen-fwoo-hyoi/`
+- [Suguru Geto (Teen) (What Lies at the End) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28What_Lies_at_the_End%29_Suguru_Geto_%28Teen%29) → `units/suguru-geto-teen-what-lies-at-the-end/`
+- [Takuma Ino (Indomitable Auspicious Beasts) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Indomitable_Auspicious_Beasts%29_Takuma_Ino) → `units/takuma-ino-indomitable-auspicious-beasts/`
+- [Takuma Ino (No Conceit) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28No_Conceit%29_Takuma_Ino) → `units/takuma-ino-no-conceit/`
+- [Toge Inumaki (Night-Lurking Sorcerer) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Night-Lurking_Sorcerer%29_Toge_Inumaki) → `units/toge-inumaki-night-lurking-sorcerer/`
+- [Toge Inumaki (Shatter To Pieces) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Shatter_To_Pieces%29_Toge_Inumaki) → `units/toge-inumaki-shatter-to-pieces/`
+- [Toji Fushiguro (Seance) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Seance%29_Toji_Fushiguro) → `units/toji-fushiguro-seance/`
+- [Uraume (Step back, third-rate) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Step_back%2C_third-rate%29_Uraume) → `units/uraume-step-back-third-rate/`
+- [Yoshinobu Gakuganji (Crafty Rock) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Crafty_Rock%29_Yoshinobu_Gakuganji) → `units/yoshinobu-gakuganji-crafty-rock/`
+- [Yu Haibara (Burning Passion) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Burning_Passion%29_Yu_Haibara) → `units/yu-haibara-burning-passion/`
+- [Yuji Itadori (A Life Entrusted to Me) — Green SSR](https://jjk-phantom-parade.fandom.com/wiki/%28A_Life_Entrusted_to_Me%29_Yuji_Itadori) → `units/yuji-itadori-a-life-entrusted-to-me/`
+- [Yuji Itadori (Maximum Cursed Energy Output) — Red SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Maximum_Cursed_Energy_Output%29_Yuji_Itadori) → `units/yuji-itadori-maximum-cursed-energy-output/`
+- [Yuji Itadori (Smash It Into the Summer Sky) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Smash_It_Into_the_Summer_Sky%29_Yuji_Itadori) → `units/yuji-itadori-smash-it-into-the-summer-sky/`
+- [Yuji Itadori (Zone) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Zone%29_Yuji_Itadori) → `units/yuji-itadori-zone/`
+- [Yuta Okkotsu (Executioner) — Yellow SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Executioner%29_Yuta_Okkotsu) → `units/yuta-okkotsu-executioner/`
+- [Yuta Okkotsu (Queen of Curses) — Blue SSR](https://jjk-phantom-parade.fandom.com/wiki/%28Queen_of_Curses%29_Yuta_Okkotsu) → `units/yuta-okkotsu-queen-of-curses/`
+
 ## Memories
 
 - ["Are you crying?"](https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22Are_you_crying%3F%22) → `memories/are-you-crying/`

@@ -441,6 +441,14 @@ def event_banners(chars):
     ids = json.load(open(map_path)) if os.path.exists(map_path) else {}
     norm = lambda s: ' '.join(''.join(ch if ch.isalnum() else ' ' for ch in s.lower()).split())
     ids_n = {norm(k): v for k, v in ids.items()}
+    # SSR list titles that the unit pages renamed (redirects / retranslations)
+    ids_n.update({norm(k): v for k, v in {
+        '(Small Fry and Reverse Retribution) Junpei Yoshino': 'junpei_misunderstand_value',
+        '(Hollow Technique: Purple) Satoru Gojo': 'satoru_hollow_technique',
+        '(Cursed Energy Focusing) Yuji Itadori': 'yuji_cursed_energy',
+        '(Inspiration Of Death) Mahito': 'mahito_609',
+        '(Overtime Work) Kento Nanami': 'kento_overtime_work',
+    }.items()})
     out = []
     for b in json.load(open(path)):
         feat = []

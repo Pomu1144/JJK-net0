@@ -35,7 +35,30 @@ KANJI = {'yuji': '虎杖', 'yuuji': '虎杖', 'megumi': '伏黒', 'nobara': '釘
          'mai': '真依', 'miwa': '三輪', 'momo': '西宮', 'kokichi': '与', 'ultimate': '与', 'noritoshi': '加茂', 'aoi': '東堂',
          'kento': '七海', 'satoru': '五条', 'suguru': '夏油', 'yuta': '乙骨', 'toji': '甚爾', 'mahito': '真人', 'jogo': '漏瑚',
          'hanami': '花御', 'ieri': '家入', 'junpei': '順平', 'masamichi': '夜蛾', 'yoshinobu': '楽巌寺', 'saki': '凛堂',
-         'yuuki': '海斗'}
+         'yuuki': '海斗', 'kaito': '海斗', 'shoko': '家入', 'mei': '冥冥', 'yu': '灰原', 'takuma': '猪野', 'naobito': '直毘人',
+         'ryomen': '宿儺', 'choso': '脹相', 'kiyotaka': '伊地知', 'dagon': '陀艮', 'atsuya': '日下部', 'uraume': '裏梅',
+         'eiji': '漆', 'miguel': 'ミゲル', 'kasumi': '三輪'}
+# Readable ids for new-wiki units whose epithet makes a poor id.
+NEW_IDS = {
+    'satoru-gojo-0-2-second-domain-expansion': 'satoru_quick_domain',
+    'kokichi-muta-i-ve-seen-it-all': 'kokichi_seen_it_all',
+    'shoko-ieiri-teen-fwoo-hyoi': 'shoko_fwoo_hyoi',
+    'choso-fulfilling-his-duty-as-the-older-brother': 'choso_older_brother',
+    'aoi-todo-are-you-satisfied-with-that': 'aoi_satisfied',
+    'uraume-step-back-third-rate': 'uraume_third_rate',
+    'eiji-urushi-chain-mark-full-throttle': 'eiji_full_throttle',
+    'kaito-yuki-with-that-will-in-mind': 'kaito_will_in_mind',
+    'yuji-itadori-smash-it-into-the-summer-sky': 'yuji_summer_sky',
+    'naobito-zen-in-crushed-with-speed': 'naobito_speed',
+    'megumi-fushiguro-enjoying-the-cool-summer-breeze': 'megumi_summer_breeze',
+    'satoru-gojo-melting-sweet-summer-treats': 'satoru_summer_treats',
+    'kiyotaka-ijichi-pick-up-after-hard-work': 'kiyotaka_hard_work',
+    'yuji-itadori-maximum-cursed-energy-output': 'yuji_max_output',
+    'atsuya-kusakabe-ward-off-with-sharp-blade': 'atsuya_sharp_blade',
+    'kento-nanami-teen-promising-new-student': 'kento_new_student',
+    'mei-mei-night-of-dancing-crows': 'mei_dancing_crows',
+    'suguru-geto-teen-what-lies-at-the-end': 'suguru_what_lies_end',
+}
 
 
 def clean(t):
@@ -50,13 +73,20 @@ def num(v):
     return float(m.group(0).replace(',', '')) if m else 0.0
 
 
-def damage_pct(text):
+def damage_pct(text, wide=False):
     """Damage % of a skill's main hit: the numbers between "deal(s)" and the
     word "damage", times the hit count when the text says "N times total"."""
     t = text.lower()
     for m in re.finditer(r'\bdeals?\b(.{0,160}?)\bdamage\b', t):
         seg = m.group(1)
         nums = [float(x) for x in re.findall(r'(\d+(?:\.\d+)?)\s*%', seg)]
+        if not nums and wide:
+            # Newer wiki wording: "Deals Melee Combined Damage equal to 285.5% Taijutsu & 90.3% Jujutsu to ..."
+            # (or "... Damage of 142.8% Taijutsu & 190.4% Jujutsu to ...", "... Damage to the selected enemy by 176.8%")
+            after = t[m.end():]
+            eq = re.match(r'\s*(?:equal to|of)\s+(.{0,80}?)\bto (the|all|an?|each|every|random)\b', after) or \
+                re.match(r'\s*to [^.%]{0,40}? by (\d+(?:\.\d+)?\s*%)', after)
+            nums = [float(x) for x in re.findall(r'(\d+(?:\.\d+)?)\s*%', eq.group(1))] if eq else []
         if not nums:
             continue
         total = sum(nums)
@@ -100,9 +130,9 @@ def target_of(text):
     return 'all' if re.search(r'all (enemies|enemy|foes)|every enemy|enemies in', t) else 'single'
 
 
-def skill(name, text, cost, ult=False):
+def skill(name, text, cost, ult=False, wide=False):
     text = clean(text)
-    pct = damage_pct(text)
+    pct = damage_pct(text, wide)
     tgt = target_of(text)
     eff = side_effect(text, pct > 0)
     if pct:
@@ -170,18 +200,20 @@ def main():
             title_name, epithet = u['title'], clean(f.get('Role'))
         title_name = re.sub(r'\s*\(\s*teen\s*\)', '', title_name, flags=re.I).strip()
         name = title_name if len(title_name) >= len(clean(f.get('Card Name'))) else clean(f.get('Card Name'))
-        name = {'Ieri Shoko': 'Shoko Ieri', 'Yuuji Itadori': 'Yuji Itadori', 'Yuuki Kaito': 'Kaito Yuki', 'Junpei': 'Junpei Yoshino'}.get(name, name)
+        epithet = epithet.strip('"“” ')
+        name = {'Ieri Shoko': 'Shoko Ieiri', 'Yuuji Itadori': 'Yuji Itadori', 'Yuuki Kaito': 'Kaito Yuki', 'Junpei': 'Junpei Yoshino'}.get(name, name)
         if epithet.upper() == 'SSR':
             epithet = clean(f.get('Ult')) or 'SSR'
-        uid = KEEP_IDS.get(slug) or short_id(name, epithet)
+        uid = KEEP_IDS.get(slug) or NEW_IDS.get(slug) or short_id(name, epithet)
         role = clean(f.get('Role')).lower()
         cost1 = max(2, round(num(f.get('Energy Cost S1')) / 4)) if f.get('Energy Cost S1') else 3
         cost2 = max(3, round(num(f.get('Energy Cost S2')) / 4)) if f.get('Energy Cost S2') else 7
-        s1 = skill(f.get('Skill 1'), f.get('Skill 1 Effect'), cost1)
-        s2 = skill(f.get('Skill 2'), f.get('Skill 2 Effect'), cost2)
-        ult = skill(f.get('Ult'), f.get('Ult Effect'), 4 if rar == 5 else 6, ult=True)
+        wide = 'jjk-phantom-parade' in u.get('wiki', '')  # newer wiki: wider damage wording
+        s1 = skill(f.get('Skill 1'), f.get('Skill 1 Effect'), cost1, wide=wide)
+        s2 = skill(f.get('Skill 2'), f.get('Skill 2 Effect'), cost2, wide=wide)
+        ult = skill(f.get('Ult'), f.get('Ult Effect'), 4 if rar == 5 else 6, ult=True, wide=wide)
         ult['kind'] = 'domain' if 'domain expansion' in ult['name'].lower() else 'ultimate'
-        basic_pct = damage_pct(clean(f.get('Normal Attack Effect')))
+        basic_pct = damage_pct(clean(f.get('Normal Attack Effect')), wide)
         passives = [p for p in (passive(f.get(f'Auto Skill {i} Name'), f.get(f'Auto Skill {i} Effect')) for i in (1, 2)) if p]
         sup = passive(f.get('Auto Skill 3 Name') or f.get('Auto Skill 1 Name'), f.get('Auto Skill 3 Effect') or f.get('Auto Skill 1 Effect'))
         if sup and sup['effect']['type'] not in ('atk', 'hp', 'speed', 'crit'):
@@ -194,23 +226,31 @@ def main():
             'focus': clean(f.get('Focus')), 'affiliation': clean(f.get('Affiliation')),
             'kanji': KANJI.get(first, name[:2]),
             'wiki': {'hp': hp, 'attack': atk, 'jujutsu': juj},
+            'source': 'new' if wide else 'old',
             'speedMult': ROLE_SPEED.get(role, 1.0),
             'basic': {'name': clean(f.get('Normal Attack')) or 'Attack', 'mult': round(max(0.9, min(1.4, basic_pct / 100 or 1.0)), 2)},
             'skills': [s1, s2], 'ultimate': ult, 'passives': passives,
             'support': sup or {'name': 'Teamwork', 'desc': 'Team attack +6%.', 'effect': {'type': 'atk', 'pct': 6}},
         })
-    # Stat profile: each unit's HP / offence relative to the median of its rarity.
-    for rar in set(u['rarity'] for u in units):
-        group = [u for u in units if u['rarity'] == rar]
+    # Stat profile: each unit's HP / offence relative to the median of its rarity
+    # among units from the same wiki (the old wiki lists level-1 stats, the new
+    # one maxed stats, roughly 36x level 1).
+    for rar, src in set((u['rarity'], u['source']) for u in units):
+        group = [u for u in units if u['rarity'] == rar and u['source'] == src]
         def base(u):
             w = u['wiki']
-            scale = 1 / 25 if w['hp'] > 3000 else 1  # a few pages list maxed stats
+            if u['source'] == 'new':
+                scale = 36 if w['hp'] < 3000 else 1  # a few new-wiki pages list level-1 stats
+            else:
+                scale = 1 / 25 if w['hp'] > 3000 else 1  # a few pages list maxed stats
             return w['hp'] * scale, max(w['attack'], w['jujutsu']) * scale
         mh = statistics.median(base(u)[0] for u in group)
         mo = statistics.median(base(u)[1] for u in group)
         for u in group:
             h, o = base(u)
             u['profile'] = {'hp': round(max(0.85, min(1.2, h / mh)), 3), 'atk': round(max(0.85, min(1.2, o / mo)), 3), 'speed': u.pop('speedMult')}
+    for u in units:
+        u.pop('source')
     units.sort(key=lambda u: (-u['rarity'], u['name'], u['title']))
     json.dump(units, open(os.path.join(HERE, 'pp-units.json'), 'w'), indent=1, ensure_ascii=False)
     print(len(units), 'units')
