@@ -1,45 +1,58 @@
 {
  "items": {
-  "talisman_s": {
-   "name": "Grade 4 Talisman",
+  "light_s": {
+   "name": "Training Light (S)",
    "kind": "exp",
    "exp": 600,
-   "kanji": "四",
-   "desc": "A paper seal holding residual cursed energy. +600 EXP."
+   "jp": 60,
+   "kanji": "燈",
+   "icon": "assets/pp/currency/training-light.webp",
+   "desc": "An orange orb of cursed energy from the Training Light Quest. +600 character EXP (costs 60 JP to use)."
   },
-  "talisman_m": {
-   "name": "Grade 2 Talisman",
+  "light_m": {
+   "name": "Training Light (M)",
    "kind": "exp",
    "exp": 4000,
-   "kanji": "二",
-   "desc": "A sealed charm from a grade 2 exorcism. +4,000 EXP."
+   "jp": 400,
+   "kanji": "燈",
+   "icon": "assets/pp/currency/training-light.webp",
+   "desc": "A brighter Training Light. +4,000 character EXP (costs 400 JP to use)."
   },
-  "talisman_l": {
-   "name": "Special Grade Talisman",
+  "light_l": {
+   "name": "Training Light (L)",
    "kind": "exp",
    "exp": 20000,
-   "kanji": "特",
-   "desc": "A sealed relic of a special grade curse. +20,000 EXP."
+   "jp": 2000,
+   "kanji": "燈",
+   "icon": "assets/pp/currency/training-light.webp",
+   "desc": "A blazing Training Light. +20,000 character EXP (costs 2,000 JP to use)."
   },
   "ticket": {
-   "name": "Summon Ticket",
+   "name": "Draw Ticket",
    "kind": "ticket",
    "kanji": "札",
-   "desc": "One free summon on any banner."
+   "desc": "One free draw on any banner. Earns a Gacha Point like any draw."
+  },
+  "gp_card": {
+   "name": "Gacha Point Card",
+   "kind": "gp",
+   "kanji": "点",
+   "icon": "assets/pp/currency/gacha-card.webp",
+   "desc": "Worth 1 Gacha Point on any pickup banner (up to 100 per banner). Made by converting 20 Gacha Points into 10 cards."
   }
  },
  "shop": {
   "sections": [
    {
     "id": "items",
-    "name": "Talismans",
-    "kanji": "呪符",
+    "name": "Training Lights",
+    "kanji": "修練の燈",
     "offers": [
      {
       "id": "buy_ts",
       "give": {
        "items": {
-        "talisman_s": 1
+        "light_s": 1
        }
       },
       "price": {
@@ -50,7 +63,7 @@
       "id": "buy_ts10",
       "give": {
        "items": {
-        "talisman_s": 10
+        "light_s": 10
        }
       },
       "price": {
@@ -61,7 +74,7 @@
       "id": "buy_tm",
       "give": {
        "items": {
-        "talisman_m": 1
+        "light_m": 1
        }
       },
       "price": {
@@ -72,7 +85,7 @@
       "id": "buy_tl",
       "give": {
        "items": {
-        "talisman_l": 1
+        "light_l": 1
        }
       },
       "price": {
@@ -83,19 +96,19 @@
       "id": "buy_tl_c",
       "give": {
        "items": {
-        "talisman_l": 1
+        "light_l": 1
        }
       },
       "price": {
-       "cubes": 15
+       "cubes": 900
       }
      }
     ]
    },
    {
     "id": "stamina",
-    "name": "Stamina",
-    "kanji": "気力",
+    "name": "AP",
+    "kanji": "行動力",
     "offers": [
      {
       "id": "refill",
@@ -103,7 +116,7 @@
        "staminaRefill": true
       },
       "price": {
-       "cubes": 5
+       "cubes": 300
       }
      },
      {
@@ -119,8 +132,8 @@
    },
    {
     "id": "summon",
-    "name": "Summon",
-    "kanji": "召喚",
+    "name": "Draw",
+    "kanji": "ガチャ",
     "offers": [
      {
       "id": "ticket1",
@@ -130,7 +143,7 @@
        }
       },
       "price": {
-       "cubes": 5
+       "cubes": 300
       }
      },
      {
@@ -141,7 +154,7 @@
        }
       },
       "price": {
-       "cubes": 45
+       "cubes": 3000
       }
      },
      {
@@ -165,7 +178,7 @@
      {
       "id": "daily_gift",
       "give": {
-       "cubes": 10,
+       "cubes": 600,
        "yen": 1000
       },
       "price": {},

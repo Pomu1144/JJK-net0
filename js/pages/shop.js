@@ -1,4 +1,4 @@
-/* shop.html — spend Yen / Cubes on talismans, stamina, summon tickets, daily gift. */
+/* shop.html — spend JP / Cubes on Training Lights, AP, Draw Tickets, daily gift. */
 (function () {
   'use strict';
   const { $, esc, fmt } = UI;
@@ -8,10 +8,10 @@
   function giveText(g) {
     const parts = [];
     Object.entries(g.items || {}).forEach(([k, n]) => parts.push(n + '× ' + D.items[k].name));
-    if (g.staminaRefill) parts.push('Full stamina refill');
-    if (g.stamina) parts.push('+' + g.stamina + ' stamina (can exceed max)');
-    if (g.cubes) parts.push(g.cubes + ' Cursed Cubes');
-    if (g.yen) parts.push('¥' + fmt(g.yen));
+    if (g.staminaRefill) parts.push('Full AP refill');
+    if (g.stamina) parts.push('+' + g.stamina + ' AP (can exceed max)');
+    if (g.cubes) parts.push(fmt(g.cubes) + ' Cubes');
+    if (g.yen) parts.push(fmt(g.yen) + ' JP');
     return parts.join(' + ');
   }
   function icon(g) {
@@ -36,8 +36,8 @@
   function label(g) {
     const k = g.items && Object.keys(g.items)[0];
     if (k) return { name: D.items[k].name, qty: g.items[k] };
-    if (g.staminaRefill) return { name: 'Stamina Refill', qty: 0 };
-    if (g.stamina) return { name: 'Stamina +' + g.stamina, qty: 0 };
+    if (g.staminaRefill) return { name: 'AP Refill', qty: 0 };
+    if (g.stamina) return { name: 'AP +' + g.stamina, qty: 0 };
     return { name: 'Daily Gift', qty: 0 };
   }
   function priceHtml(p) {
@@ -56,11 +56,11 @@
       const full = o.give.staminaRefill && st.cur >= st.max;
       const afford = (!o.price.cubes || s.currency.cubes >= o.price.cubes) && (!o.price.yen || s.currency.yen >= o.price.yen);
       const off = claimed || !afford || full;
-      const why = claimed ? 'Claimed today' : full ? 'Stamina full' : !afford ? (o.price.cubes ? 'Not enough Cubes' : 'Not enough Yen') : '';
+      const why = claimed ? 'Claimed today' : full ? 'AP full' : !afford ? (o.price.cubes ? 'Not enough Cubes' : 'Not enough JP') : '';
       const k = o.give.items && Object.keys(o.give.items)[0];
       const l = label(o.give);
       const own = k ? 'Owned ' + fmt(s.items[k] || 0) : o.daily ? 'Once a day' : (o.give.staminaRefill || o.give.stamina) ? 'AP ' + st.cur + '/' + st.max : '';
-      const sub = o.give.stamina ? 'Can exceed max' : o.give.staminaRefill ? 'Refills to max' : o.daily ? fmt(o.give.cubes || 0) + ' Cubes + ¥' + fmt(o.give.yen || 0) : '';
+      const sub = o.give.stamina ? 'Can exceed max' : o.give.staminaRefill ? 'Refills to max' : o.daily ? fmt(o.give.cubes || 0) + ' Cubes + ' + fmt(o.give.yen || 0) + ' JP' : '';
       return `<button class="pp-parch sx-card${o.daily && !claimed ? ' is-due' : ''}" type="button" data-buy="${o.id}" ${off ? 'disabled' : ''} title="${esc(giveText(o.give) + (why ? ' — ' + why : ''))}">
         <span class="parch-art" style="background-image:url('assets/pp/memories/${ART[o.id] || SECTION_ART[section.id] || 'daily-routine'}/art.webp')"></span>
         <span class="sx-item">${icon(o.give)}</span>${l.qty ? `<span class="sx-qty">×${fmt(l.qty)}</span>` : ''}
@@ -76,9 +76,9 @@
     if (!o) return;
     const ok = Save.update((s) => {
       if (o.daily && s.daily[o.id] === Rules.today()) return 'Already claimed today.';
-      if (o.give.staminaRefill) { const st = Rules.staminaNow(s); if (st.cur >= st.max) return 'Stamina is already full.'; }
+      if (o.give.staminaRefill) { const st = Rules.staminaNow(s); if (st.cur >= st.max) return 'AP is already full.'; }
       if ((o.price.cubes || 0) > s.currency.cubes) return 'Not enough Cubes.';
-      if ((o.price.yen || 0) > s.currency.yen) return 'Not enough Yen.';
+      if ((o.price.yen || 0) > s.currency.yen) return 'Not enough JP.';
       s.currency.cubes -= o.price.cubes || 0;
       s.currency.yen -= o.price.yen || 0;
       Object.entries(o.give.items || {}).forEach(([k, n]) => { s.items[k] = (s.items[k] || 0) + n; });

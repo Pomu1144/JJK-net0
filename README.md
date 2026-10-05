@@ -14,13 +14,13 @@ Plain static HTML / CSS / vanilla JS: no build step, no backend. Play it at
 | Page | What it does |
 | --- | --- |
 | `index.html` | Title screen: create a sorcerer (4 starter units) or continue |
-| `home.html` | Jujutsu High hub: home character, rank, stamina, quick tiles, nav dock |
-| `characters.html` | Roster grid (filter/sort) + detail: stats, techniques, passives, support skill, level-up with talismans |
-| `summon.html` | 3 banners, x1 / x10 pulls, rates table, pity (60), 10x ★5 guarantee, CSS reveal animation |
+| `home.html` | Jujutsu High hub: home character, rank, AP, quick tiles, nav dock |
+| `characters.html` | Roster grid (filter/sort) + Enhance: stats, Command / Auto skills, Limit Break, level-up with Training Lights + JP |
+| `summon.html` | 3 banners, 300 / 3,000-Cube draws, rates table, Gacha Points (250 = a featured unit), Gacha Point Cards, reveal animation |
 | `teams.html` | 3 team presets: 4 front slots + 1 support (commander) whose support skill boosts the team |
-| `missions.html` | 4 chapters (Cursed Womb, Origin of Obedience, Kyoto Goodwill, Shibuya) × 5 stages with bosses, stamina, stars, first-clear bonus |
+| `missions.html` | Quest hub: Main Quest (4 chapters × 5 stages with bosses) and Strengthening Quests (Training Light / JP Gathering, daily runs, auto-clear at 3★) |
 | `battle.html` | Turn-based battle vs waves of curses (see below) |
-| `shop.html` | Talismans (EXP), stamina, summon tickets, daily gift |
+| `shop.html` | Exchange: Training Lights, AP, Draw Tickets, daily gift |
 | `settings.html` | Audio, Display, Account, Data (export / import JSON) and **Portal** |
 
 Only characters with real art are in the game.
@@ -31,12 +31,33 @@ Only characters with real art are in the game.
 - **32 opponents** in `data/enemies.json`, every one a character with art: rival sorcerers
   (Tokyo second-years, the Kyoto students, Junpei, Toji…) and cursed spirits (Mahito, Hanami, Jogo,
   Ryomen Sukuna).
-- **20 stages** in `data/missions.json`: Entrance Exam, Origin of Obedience, Kyoto Goodwill Event and
-  Shibuya Incident.
+- **20 story stages** in `data/missions.json`: Entrance Exam, Origin of Obedience, Kyoto Goodwill Event and
+  Shibuya Incident, plus **6 Strengthening Quest stages** (Training Light and JP Gathering, three
+  difficulties each).
+
+### Economy (from the fan wiki's [Beginner's Guide](https://jjk-phantom-parade.fandom.com/wiki/Beginner%27s_Guide))
+
+| | |
+| --- | --- |
+| **JP** | Soft currency (saved as `currency.yen`). Stage rewards, JP Gathering Quest; spent on level-ups and in the Exchange. |
+| **Cubes** | Premium currency. A draw is 300 Cubes, 10 draws 3,000. First clears give 300+. |
+| **AP** | Stamina for stages; max AP grows with Player Rank. |
+| **Training Lights** (S / M / L) | Character EXP (600 / 4,000 / 20,000); each use also costs JP (60 / 400 / 2,000). Farmed in the Training Light Quest. |
+| **Gacha Points** | 1 per draw on a pickup banner; 250 exchange for any featured unit. 20 points convert into 10 **Gacha Point Cards** (up to 200 points per banner); a later banner accepts up to 100 cards, 1 point each. |
+| **Limit Break** | Duplicates raise LB up to 5 (+2% stats each); beyond that they convert to JP. |
+
+Rates follow the guide's character rates: SSR 2.5% (limited 0.5% of that), SR otherwise, and the 10th
+draw of a 10x is SR or better (this game has no R units or Recollection Bits). Clear Rank:
+1★ clear, 2★ at most one character defeated, 3★ nobody defeated. Strengthening Quest stages at 3★ can
+be auto-cleared (same rewards, no battle) while you have AP and runs left that day (18 / 6).
+Saves from before this economy are migrated on load (schema 2): Cubes ×60, talismans → Training
+Lights, old pity counts → Gacha Points.
 
 ### Art
-- `assets/pp/` (4.8 MB): card art, unit icons and skill icons for the 50 units, 104 memory
-  illustrations, type and rarity badges — from the Phantom Parade fan wiki, every file credited in
+- `assets/pp/` (4.9 MB): card art, unit icons and skill icons for the 50 units, 104 memory
+  illustrations, type and rarity badges, currency / item icons (`currency/`: JP, Cubes, Training
+  and Recollection Lights, Gacha Point Card, Clear Rank marks) and Quest mode art (`modes/`) — from
+  the Phantom Parade fan wikis, every file credited in
   `assets/pp/CREDITS.md` and `assets/pp/manifest.json`. Every unit has a 3:4 portrait crop
   (`assets/pp/portraits/`, offsets in `tools/pp-art.json`); memory scenes are the backdrops of the
   chapters and summon banners.
@@ -65,7 +86,7 @@ keep each unit's wiki proportions inside the range for its rarity (SR / SSR / li
   gauge is full.
 * Types follow Phantom Parade's colours on the same wheel as NXBNVNB: Blue (Body) › Green (Skill) ›
   Red (Heart) › Blue; Yellow (Bravery) ⇄ Purple (Wisdom). 1.5× / 0.75× (numbers in `js/rules.js`).
-* Stars: clear · nobody knocked out · clear within the turn goal. Auto battle and 1–3× speed.
+* Clear Rank stars: clear · at most 1 defeated · nobody defeated. Auto battle and 1–3× speed.
 * `js/battle-engine.js` is DOM-free and loads in Node (`tools/balance.js`).
 
 ## Run locally
@@ -110,7 +131,7 @@ Settings › Data exports / imports the save as JSON; Settings › Account › R
   each is `session.grant`ed into the vault, and a Portal Code (`PRTL1.…`) is always produced.
   *Paste Portal Code* imports one. After battles, level-ups of party cards are reported with
   `session.update(cardId, { level })`.
-* **Wallet**: when connected you can send Yen (`coins`) and Cursed Cubes (`premium`) to the Portal
+* **Wallet**: when connected you can send JP (`coins`) and Cubes (`premium`) to the Portal
   and receive them back. Currency you send is held at the Portal, where it can be converted to other
   games' currencies or invested. Transfers are idempotent: each carries a `txId`, is stored as pending
   in the save in the same write as the local balance change, and is retried with the same `txId` on

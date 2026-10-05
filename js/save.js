@@ -19,7 +19,7 @@
 
   const PREFIX = 'jjk_';
   const KEY = PREFIX + 'save';
-  const SCHEMA = 1;
+  const SCHEMA = 2;
 
   let storageOk = true;
   function rawGet(k) {
@@ -39,9 +39,9 @@
       created: now,
       updated: now,
       profile: { name: String(name || 'Sorcerer').slice(0, 24), rank: 1, rankExp: 0, homeUnit: null },
-      currency: { cubes: 100, yen: 5000 },
+      currency: { cubes: 6000, yen: 5000 },   // yen = JP (soft), cubes = Cubes (premium)
       stamina: { cur: 30, ts: now },
-      items: { talisman_s: 10, talisman_m: 2, talisman_l: 0, ticket: 1 },
+      items: { light_s: 10, light_m: 2, light_l: 0, ticket: 1, gp_card: 0 },
       units: {},          // id -> { id, level, exp, dupes, obtained, guest? }
       guests: {},         // guest id -> definition (from a Portal card)
       teams: [
@@ -51,7 +51,12 @@
       ],
       activeTeam: 0,
       progress: {},       // stageId -> { stars, clears, best }
-      pity: {},           // bannerId -> pulls since last featured high-rarity
+      pity: {},           // (schema 1) bannerId -> pulls since last featured; migrated into gacha.points
+      // Gacha Points: 1 per draw on a pickup banner, 250 exchange for a featured unit.
+      // converted: points turned into Gacha Point Cards on that banner (max 200);
+      // redeemed: cards spent on that banner (max 100).
+      gacha: { points: {}, converted: {}, redeemed: {} },
+      quests: { day: '', runs: {} },   // Strengthening Quest runs today, by quest id
       daily: {},          // offerId -> 'YYYY-MM-DD'
       settings: { music: true, sfx: true, volume: 70, battleSpeed: 1, autoBattle: false, reduceMotion: false },
       portal: { importedParties: [], lastPartyCards: [], pendingTx: [] },
@@ -64,7 +69,7 @@
     if (!s || typeof s !== 'object') throw new Error('Save data is not an object');
     const b = blank(s.profile && s.profile.name);
     const out = Object.assign({}, b, s);
-    for (const k of ['profile', 'currency', 'stamina', 'items', 'settings', 'portal', 'stats']) {
+    for (const k of ['profile', 'currency', 'stamina', 'items', 'settings', 'portal', 'stats', 'gacha', 'quests']) {
       out[k] = Object.assign({}, b[k], s[k] && typeof s[k] === 'object' ? s[k] : {});
     }
     for (const k of ['units', 'guests', 'progress', 'pity', 'daily']) {
@@ -80,7 +85,22 @@
     if (!Array.isArray(out.portal.importedParties)) out.portal.importedParties = [];
     if (!Array.isArray(out.portal.pendingTx)) out.portal.pendingTx = [];
     out.activeTeam = Math.max(0, Math.min(2, Number(out.activeTeam) || 0));
-    // (future) if (s.schema < 2) { ... }
+    for (const k of ['points', 'converted', 'redeemed']) {
+      if (!out.gacha[k] || typeof out.gacha[k] !== 'object' || Array.isArray(out.gacha[k])) out.gacha[k] = {};
+    }
+    if (!out.quests.runs || typeof out.quests.runs !== 'object') out.quests.runs = {};
+    if (!(Number(s.schema) >= 2)) {
+      // Phantom Parade economy: Cubes are priced 300 a draw (was 5), talismans
+      // became Training Lights, and the 60-pull pity became Gacha Points.
+      out.currency.cubes = Math.round((Number(out.currency.cubes) || 0) * 60);
+      out.items = Object.assign({ ticket: 0, gp_card: 0 }, s.items && typeof s.items === 'object' ? s.items : {});
+      for (const [from, to] of [['talisman_s', 'light_s'], ['talisman_m', 'light_m'], ['talisman_l', 'light_l']]) {
+        if (out.items[from]) out.items[to] = (out.items[to] || 0) + out.items[from];
+        delete out.items[from];
+      }
+      for (const [id, n] of Object.entries(out.pity)) out.gacha.points[id] = (out.gacha.points[id] || 0) + (Number(n) || 0);
+      out.pity = {};
+    }
     out.schema = SCHEMA;
     return out;
   }

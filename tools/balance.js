@@ -2,11 +2,16 @@
  *   node tools/balance.js
  * Runs the real engine (js/battle-engine.js + js/rules.js) with the Auto AI
  * for a few team setups against every stage, and prints win rates.
+ *   node tools/balance.js --legacy     # Black Flash + Break turned off
+ *   BREAK_RATIO=0.8 node tools/balance.js  # try another Break gauge size
  */
 global.window = global;
 require('../js/rules.js');
 require('../js/battle-engine.js');
 const E = global.BattleEngine, R = global.Rules;
+if (process.argv.includes('--legacy')) { R.BATTLE.blackFlash = false; R.BATTLE.break = false; }
+if (process.env.BREAK_RATIO) R.BATTLE.breakHpRatio = Number(process.env.BREAK_RATIO);
+const tally = { blackFlash: 0, breaks: 0, battles: 0 };
 const chars = require('../data/characters.json');
 const enemies = new Map(require('../data/enemies.json').map((e) => [e.id, e]));
 const M = require('../data/missions.json');
@@ -32,8 +37,10 @@ function run(team, level, supportId, stage, chapter) {
     while (!S.over && guard++ < 3000) {
       const t = E.nextTurn(S);
       if (!t.actor || S.over) continue;
-      E.act(S, t.actor, E.decide(S, t.actor));
+      const ev = E.act(S, t.actor, E.decide(S, t.actor));
+      for (const e of ev) { if (e.blackFlash) tally.blackFlash++; if (e.type === 'break') tally.breaks++; }
     }
+    tally.battles++;
     if (S.result === 'win') wins++;
   }
   return Math.round((wins / N) * 100);
@@ -56,3 +63,4 @@ for (const [label, team, lv] of setups) {
   for (const c of M.chapters) for (const s of c.stages) row.push(String(run(team, lv, null, s, c)).padStart(4));
   console.log(row.join(' '));
 }
+console.log(`\nBlack Flash hits: ${(tally.blackFlash / tally.battles).toFixed(2)}/battle · Breaks: ${(tally.breaks / tally.battles).toFixed(2)}/battle (breakHpRatio ${R.BATTLE.breakHpRatio}${R.BATTLE.break ? '' : ', off'})`);

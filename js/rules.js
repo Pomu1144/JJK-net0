@@ -28,6 +28,18 @@
     baseCrit: 10, critMult: 1.5, variance: 0.08,
     bossEnrageAt: 0.5, bossEnrageAtk: 30,
     enemyLevelHp: 0.22, enemyLevelAtk: 0.12, enemyLevelSpeed: 0.015,
+    // Black Flash (separate from crits): x mult damage + extra Ultimate gauge.
+    // Rolled on normal attacks and skills only (never ultimates / domains).
+    // A Black Flash replaces a crit on the same hit (they do not stack).
+    blackFlash: true, blackFlashMult: 1.5, blackFlashGauge: 25,
+    blackFlashChance: { Physical: 8, Combined: 5, Jujutsu: 3 }, blackFlashDefault: 4,
+    blackFlashItadori: 7,   // bonus % for Yuji Itadori units
+    // Break: bosses have a Break gauge = maxHp * breakHpRatio. Each hit lowers
+    // it by damage, x breakSkillMult for skills/ultimates, x breakAdvMult with
+    // type advantage. At 0 the boss loses breakTurns turns and takes
+    // breakDamageMult damage; then the gauge refills.
+    break: true, breakHpRatio: 1.0, breakSkillMult: 1.5, breakAdvMult: 1.5,
+    breakTurns: 2, breakDamageMult: 1.5,
   };
 
   /* ---------------- Levels & EXP ---------------- */
@@ -183,12 +195,52 @@
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   }
 
+  /* ---------------- Strengthening Quests ---------------- */
+  /** Runs used today for a quest id (the counter resets each local day). */
+  function questRuns(s, qid) {
+    s = s || Save.get();
+    return s.quests && s.quests.day === today() ? (s.quests.runs[qid] || 0) : 0;
+  }
+  function addQuestRunTo(s, qid, n) {
+    if (s.quests.day !== today()) s.quests = { day: today(), runs: {} };
+    s.quests.runs[qid] = (s.quests.runs[qid] || 0) + (n || 1);
+  }
+
+  /** Rewards for one clear, inside a Save.update. Shared by battle results and
+   *  auto-clear. Returns { levels, drops, first, rankUps }. */
+  function grantClearTo(s, stage, opts) {
+    const o = opts || {};
+    const r = stage.rewards;
+    const res = { levels: [], drops: {}, first: null, rankUps: 0 };
+    s.currency.yen += r.yen || 0;
+    res.rankUps = addRankExpTo(s, r.rankExp || 0);
+    (o.team || []).forEach((id) => { const lv = addExpTo(s, id, r.unitExp); if (lv) res.levels.push(Object.assign({ id }, lv)); });
+    if (o.support) { const lv = addExpTo(s, o.support, Math.round(r.unitExp / 2)); if (lv) res.levels.push(Object.assign({ id: o.support, support: true }, lv)); }
+    (r.drops || []).forEach((d) => { if (Math.random() * 100 < d.chance) res.drops[d.item] = (res.drops[d.item] || 0) + (d.qty || 1); });
+    Object.entries(res.drops).forEach(([k, n]) => { s.items[k] = (s.items[k] || 0) + n; });
+    const prev = s.progress[stage.id];
+    if (!prev) {
+      const f = stage.firstClear || {};
+      res.first = f;
+      s.currency.cubes += f.cubes || 0;
+      s.currency.yen += f.yen || 0;
+      Object.entries(f.items || {}).forEach(([k, n]) => { s.items[k] = (s.items[k] || 0) + n; });
+    }
+    s.progress[stage.id] = {
+      stars: Math.max(o.stars || 0, (prev && prev.stars) || 0),
+      clears: ((prev && prev.clears) || 0) + 1,
+      best: Math.min(o.round || Infinity, (prev && prev.best) || Infinity),
+    };
+    if (o.quest) addQuestRunTo(s, o.quest);
+    return res;
+  }
+
   global.Rules = {
     ELEMENTS, ELEMENT_KANJI, STRONG_VS, ADV_MULT, DISADV_MULT, elementMult,
     BATTLE, MAX_LEVEL, expToNext, DUPE_BONUS, MAX_DUPES,
     STAMINA_REGEN_MS, maxStamina, rankExpToNext,
     unitDef, maxLevelOf, statsAt, power, ownedUnit, unitView, ownedList,
     addUnitTo, addExpTo, staminaNow, spendStamina, addStaminaTo, addRankExpTo,
-    teamIds, teamPower, today,
+    teamIds, teamPower, today, questRuns, addQuestRunTo, grantClearTo,
   };
 })(window);

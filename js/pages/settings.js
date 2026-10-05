@@ -66,14 +66,14 @@
         <div class="row" style="margin-top:6px"><button class="jjk-btn is-small" id="p-reimport" type="button">Import party again</button><span class="muted" style="font-size:11px">Already imported automatically; importing again only raises levels.</span></div>` : '<p class="muted">The Portal sent no characters this time.</p>'}` : ''}
 
       <div class="section-title" style="margin-top:12px">Wallet <small>財布 · CURRENCY</small></div>
-      <p class="muted" style="font-size:12px;margin:0 0 6px">Currency you send is held at the Portal, where you can convert it to other games' currencies or invest it. Receive brings Yen or Cubes held at the Portal back into this game. Currency never travels in Portal Codes.</p>
+      <p class="muted" style="font-size:12px;margin:0 0 6px">Currency you send is held at the Portal, where you can convert it to other games' currencies or invest it. Receive brings JP or Cubes held at the Portal back into this game. Currency never travels in Portal Codes.</p>
       <div class="wallet-grid">
-        <div class="wallet-box pp-card"><h5>IN THIS GAME</h5><div>${UI.YEN_SVG} ¥${fmt(s.currency.yen)} Yen</div><div>${UI.CUBE_SVG} ${fmt(s.currency.cubes)} Cubes</div></div>
-        <div class="wallet-box pp-card"><h5>HELD AT THE PORTAL</h5>${sess ? `<div id="w-coins">${UI.YEN_SVG} ¥${fmt(sess.wallet.coins)} Yen at Portal</div><div id="w-premium">${UI.CUBE_SVG} ${fmt(sess.wallet.premium)} Cubes at Portal</div>` : '<div class="muted" style="font-weight:500">—</div>'}</div>
+        <div class="wallet-box pp-card"><h5>IN THIS GAME</h5><div>${UI.YEN_SVG} ${fmt(s.currency.yen)} JP</div><div>${UI.CUBE_SVG} ${fmt(s.currency.cubes)} Cubes</div></div>
+        <div class="wallet-box pp-card"><h5>HELD AT THE PORTAL</h5>${sess ? `<div id="w-coins">${UI.YEN_SVG} ${fmt(sess.wallet.coins)} JP at Portal</div><div id="w-premium">${UI.CUBE_SVG} ${fmt(sess.wallet.premium)} Cubes at Portal</div>` : '<div class="muted" style="font-weight:500">—</div>'}</div>
       </div>
       <div class="row wrap">
         <input class="input" id="w-amt" type="number" min="1" step="1" inputmode="numeric" placeholder="Amount" style="width:120px" ${sess ? '' : 'disabled'}>
-        <select class="input" id="w-cur" ${sess ? '' : 'disabled'}><option value="coins">Yen</option><option value="premium">Cursed Cubes</option></select>
+        <select class="input" id="w-cur" ${sess ? '' : 'disabled'}><option value="coins">JP</option><option value="premium">Cubes</option></select>
         <button class="jjk-btn is-small" id="w-dep" type="button" ${sess ? '' : 'disabled'}>Send to Portal</button>
         <button class="jjk-btn is-small" id="w-wd" type="button" ${sess ? '' : 'disabled'}>Receive from Portal</button>
         ${pend.length ? `<button class="jjk-btn is-small" id="w-retry" type="button" ${sess ? '' : 'disabled'}>Retry ${pend.length} pending</button>` : ''}
@@ -175,7 +175,7 @@
         try {
           if (id === 'w-dep') await PortalPort.deposit(cur, amt); else await PortalPort.withdraw(cur, amt);
           draw();
-          setMsg('w-msg', (id === 'w-dep' ? 'Sent ' : 'Received ') + fmt(amt) + ' ' + (cur === 'coins' ? 'Yen' : 'Cubes') + (id === 'w-dep' ? ' to the Portal.' : ' from the Portal.'), 'good');
+          setMsg('w-msg', (id === 'w-dep' ? 'Sent ' : 'Received ') + fmt(amt) + ' ' + (cur === 'coins' ? 'JP' : 'Cubes') + (id === 'w-dep' ? ' to the Portal.' : ' from the Portal.'), 'good');
         } catch (err) {
           draw();
           setMsg('w-msg', err.message, 'bad');

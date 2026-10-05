@@ -213,6 +213,11 @@ CAST = {
             'hanami_boss': ['hanami_508']},
     'ch4': {'shibuya_curse': ['geto_604', 'suguru_protecting_non'], 'finger_bearer': ['mahito_609'],
             'smallpox': ['hanami_508'], 'dagon_boss': ['toji_602'], 'jogo_boss': ['jogo_610'], 'sukuna_boss': ['sukuna_9006']},
+    # Strengthening Quests: sparring partners at Jujutsu High
+    'tl': {'fly_head': ['panda_need_help', 'maki_longsword_battle'], 'grasshopper': ['toge_403'], 'eye_curse': ['saki_resolve_heart'],
+           'transfigured': ['junpei_value_life', 'kaito_his_resolve'], 'cursed_corpse': ['miwa_302', 'mai_303', 'momo_304']},
+    'jp': {'fly_head': ['maki_longsword_battle'], 'grasshopper': ['toge_403'], 'eye_curse': ['saki_bring_on'],
+           'transfigured': ['junpei_misunderstand_value'], 'cursed_corpse': ['kamo_405', 'kasumi_zanshin', 'mechamaru_305']},
 }
 # Chapter / stage text that matches the new opponents.
 STORY = {
@@ -249,7 +254,7 @@ def cast_enemies():
     by_unit = {u['id']: u for u in PP_UNITS}
     real = {c[0]: c for c in CHARS}
     made = {}
-    for ch in MISSIONS['chapters']:
+    for ch in MISSIONS['chapters'] + MISSIONS['quests']:
         cast, turn = CAST[ch['id']], {}
         story = STORY.get(ch['id'], {})
         for k in ('name', 'kanji', 'desc'):
@@ -297,12 +302,12 @@ def stage(sid, name, stamina, waves, yen, rank_exp, unit_exp, turn_goal, boss=Fa
     return {'id': sid, 'name': name, 'desc': desc, 'stamina': stamina, 'boss': boss, 'turnGoal': turn_goal,
             'recommendedPower': rec, 'waves': waves,
             'rewards': {'yen': yen, 'rankExp': rank_exp, 'unitExp': unit_exp, 'drops': drops or []},
-            'firstClear': first or {'cubes': 5}}
+            'firstClear': first or {'cubes': 300}}
 
-D_S = [{'item': 'talisman_s', 'chance': 60, 'qty': 1}]
-D_M = [{'item': 'talisman_s', 'chance': 80, 'qty': 2}, {'item': 'talisman_m', 'chance': 35, 'qty': 1}]
-D_L = [{'item': 'talisman_m', 'chance': 70, 'qty': 1}, {'item': 'talisman_l', 'chance': 25, 'qty': 1}]
-D_X = [{'item': 'talisman_m', 'chance': 90, 'qty': 2}, {'item': 'talisman_l', 'chance': 50, 'qty': 1}, {'item': 'ticket', 'chance': 15, 'qty': 1}]
+D_S = [{'item': 'light_s', 'chance': 60, 'qty': 1}]
+D_M = [{'item': 'light_s', 'chance': 80, 'qty': 2}, {'item': 'light_m', 'chance': 35, 'qty': 1}]
+D_L = [{'item': 'light_m', 'chance': 70, 'qty': 1}, {'item': 'light_l', 'chance': 25, 'qty': 1}]
+D_X = [{'item': 'light_m', 'chance': 90, 'qty': 2}, {'item': 'light_l', 'chance': 50, 'qty': 1}, {'item': 'ticket', 'chance': 15, 'qty': 1}]
 
 MISSIONS = {'chapters': [
     {'id': 'ch1', 'scale': 1.3, 'name': 'Cursed Womb', 'kanji': '呪胎戴天', 'arc': 'Arc I', 'element': 'Heart',
@@ -312,7 +317,7 @@ MISSIONS = {'chapters': [
         stage('1-2', 'Rooftop Rescue', 3, [W(('fly_head', 2), ('grasshopper', 1), ('fly_head', 2)), W(('eye_curse', 2), ('grasshopper', 2))], 360, 24, 160, 9, drops=D_S, rec=1800, desc='Get Megumi and the seniors off the roof.'),
         stage('1-3', 'Eishu Detention Center', 4, [W(('womb_spawn', 1), ('fly_head', 3)), W(('eye_curse', 3), ('eye_curse', 3)), W(('grasshopper', 3), ('womb_spawn', 2))], 450, 30, 220, 12, drops=D_S, rec=2200, desc='A womb has matured in the detention center.'),
         stage('1-4', 'Inside the Barrier', 4, [W(('womb_spawn', 3), ('eye_curse', 4)), W(('grasshopper', 4), ('womb_spawn', 3), ('fly_head', 5)), W(('womb_spawn', 4), ('womb_spawn', 4))], 520, 34, 280, 12, drops=D_M, rec=2600, desc='The corridors twist into a curse’s domain.'),
-        stage('1-5', 'Special Grade Cursed Womb', 5, [W(('womb_spawn', 4), ('womb_spawn', 4)), W(('cursed_womb', 2), ('womb_spawn', 4))], 800, 50, 420, 14, boss=True, drops=D_M, rec=3200, first={'cubes': 15, 'items': {'talisman_m': 2}}, desc='BOSS — the womb is born.'),
+        stage('1-5', 'Special Grade Cursed Womb', 5, [W(('womb_spawn', 4), ('womb_spawn', 4)), W(('cursed_womb', 2), ('womb_spawn', 4))], 800, 50, 420, 14, boss=True, drops=D_M, rec=3200, first={'cubes': 900, 'items': {'light_m': 2}}, desc='BOSS — the womb is born.'),
      ]},
     {'id': 'ch2', 'scale': 2.5, 'name': 'Origin of Obedience', 'kanji': '幼魚と逆罰', 'arc': 'Arc II', 'element': 'Skill',
      'desc': 'Mysterious deaths in Kawasaki. A patchwork curse is reshaping human souls.',
@@ -321,66 +326,102 @@ MISSIONS = {'chapters': [
         stage('2-2', 'Satomi Sewers', 5, [W(('transfigured', 6), ('womb_spawn', 5)), W(('transfigured', 6), ('transfigured', 6), ('grasshopper', 8))], 980, 60, 600, 12, drops=D_M, rec=5200),
         stage('2-3', 'Junpei’s School', 6, [W(('eye_curse', 9), ('transfigured', 7), ('eye_curse', 9)), W(('transfigured', 8), ('womb_spawn', 7)), W(('transfigured', 8), ('transfigured', 8), ('transfigured', 8))], 1100, 66, 700, 14, drops=D_M, rec=6000),
         stage('2-4', 'Transfigured Horde', 6, [W(('transfigured', 9), ('transfigured', 9), ('transfigured', 9)), W(('womb_spawn', 9), ('transfigured', 10)), W(('transfigured', 10), ('womb_spawn', 10), ('transfigured', 10))], 1200, 72, 820, 14, drops=D_M, rec=7000),
-        stage('2-5', 'Mahito', 8, [W(('transfigured', 10), ('transfigured', 10)), W(('mahito_boss', 1), ('transfigured', 10))], 1800, 100, 1200, 18, boss=True, drops=D_L, rec=9000, first={'cubes': 20, 'items': {'talisman_l': 1}}, desc='BOSS — Mahito. Touch nothing.'),
+        stage('2-5', 'Mahito', 8, [W(('transfigured', 10), ('transfigured', 10)), W(('mahito_boss', 1), ('transfigured', 10))], 1800, 100, 1200, 18, boss=True, drops=D_L, rec=9000, first={'cubes': 1200, 'items': {'light_l': 1}}, desc='BOSS — Mahito. Touch nothing.'),
      ]},
     {'id': 'ch3', 'scale': 3.3, 'name': 'Kyoto Goodwill Event', 'kanji': '京都姉妹校交流会', 'arc': 'Arc III', 'element': 'Bravery',
      'desc': 'Tokyo and Kyoto clash — until special grade curses crash the exchange.',
      'stages': [
         stage('3-1', 'Team Battle Begins', 6, [W(('cursed_corpse', 6), ('cursed_corpse', 6)), W(('grasshopper', 12), ('cursed_corpse', 7), ('eye_curse', 12))], 1300, 76, 900, 12, drops=D_M, rec=9500),
         stage('3-2', 'Forest Ambush', 6, [W(('cursed_corpse', 8), ('cursed_corpse', 8), ('cursed_corpse', 8)), W(('womb_spawn', 12), ('cursed_corpse', 9))], 1400, 80, 980, 12, drops=D_M, rec=10500),
-        stage('3-3', 'What Type of Woman?', 7, [W(('cursed_corpse', 9), ('cursed_corpse', 9)), W(('todo_boss', 1))], 1900, 110, 1300, 16, boss=True, drops=D_L, rec=12000, first={'cubes': 15, 'items': {'ticket': 1}}, desc='BOSS — Aoi Todo wants to know your type.'),
+        stage('3-3', 'What Type of Woman?', 7, [W(('cursed_corpse', 9), ('cursed_corpse', 9)), W(('todo_boss', 1))], 1900, 110, 1300, 16, boss=True, drops=D_L, rec=12000, first={'cubes': 900, 'items': {'ticket': 1}}, desc='BOSS — Aoi Todo wants to know your type.'),
         stage('3-4', 'The Veil Falls', 7, [W(('cursed_bud', 6), ('cursed_bud', 6), ('cursed_bud', 6)), W(('cursed_bud', 8), ('womb_spawn', 14)), W(('cursed_bud', 9), ('cursed_bud', 9), ('cursed_bud', 9))], 1600, 90, 1100, 14, drops=D_L, rec=13000),
-        stage('3-5', 'Hanami', 9, [W(('cursed_bud', 10), ('cursed_bud', 10)), W(('hanami_boss', 1), ('cursed_bud', 10))], 2400, 130, 1700, 18, boss=True, drops=D_L, rec=16000, first={'cubes': 25, 'items': {'talisman_l': 2}}, desc='BOSS — a disaster curse of the forest.'),
+        stage('3-5', 'Hanami', 9, [W(('cursed_bud', 10), ('cursed_bud', 10)), W(('hanami_boss', 1), ('cursed_bud', 10))], 2400, 130, 1700, 18, boss=True, drops=D_L, rec=16000, first={'cubes': 1500, 'items': {'light_l': 2}}, desc='BOSS — a disaster curse of the forest.'),
      ]},
     {'id': 'ch4', 'scale': 1.9, 'name': 'Shibuya Incident', 'kanji': '渋谷事変', 'arc': 'Arc IV', 'element': 'Body',
      'desc': 'October 31st. A veil descends over Shibuya and the worst night in jujutsu history begins.',
      'stages': [
         stage('4-1', 'Veil Descends', 8, [W(('shibuya_curse', 5), ('shibuya_curse', 5), ('shibuya_curse', 5)), W(('finger_bearer', 3), ('shibuya_curse', 6))], 2000, 110, 1500, 14, drops=D_L, rec=18000),
         stage('4-2', 'Smallpox Deity', 8, [W(('shibuya_curse', 7), ('finger_bearer', 5)), W(('smallpox', 4), ('shibuya_curse', 8))], 2200, 120, 1700, 14, drops=D_L, rec=21000),
-        stage('4-3', 'Dagon', 9, [W(('shibuya_curse', 9), ('shibuya_curse', 9), ('finger_bearer', 6)), W(('dagon_boss', 1))], 2800, 150, 2200, 16, boss=True, drops=D_X, rec=26000, first={'cubes': 25, 'items': {'ticket': 2}}, desc='BOSS — the sea swallows Shibuya Station.'),
-        stage('4-4', 'Jogo', 10, [W(('finger_bearer', 8), ('finger_bearer', 8)), W(('jogo_boss', 1), ('shibuya_curse', 12))], 3200, 170, 2600, 18, boss=True, drops=D_X, rec=32000, first={'cubes': 30, 'items': {'talisman_l': 3}}, desc='BOSS — a volcano with a grudge.'),
-        stage('4-5', 'The King of Curses', 12, [W(('finger_bearer', 10), ('smallpox', 8), ('finger_bearer', 10)), W(('sukuna_boss', 1))], 5000, 250, 4000, 20, boss=True, drops=D_X, rec=42000, first={'cubes': 50, 'items': {'ticket': 5}}, desc='FINAL BOSS — twenty fingers’ worth of malice.'),
+        stage('4-3', 'Dagon', 9, [W(('shibuya_curse', 9), ('shibuya_curse', 9), ('finger_bearer', 6)), W(('dagon_boss', 1))], 2800, 150, 2200, 16, boss=True, drops=D_X, rec=26000, first={'cubes': 1500, 'items': {'ticket': 2}}, desc='BOSS — the sea swallows Shibuya Station.'),
+        stage('4-4', 'Jogo', 10, [W(('finger_bearer', 8), ('finger_bearer', 8)), W(('jogo_boss', 1), ('shibuya_curse', 12))], 3200, 170, 2600, 18, boss=True, drops=D_X, rec=32000, first={'cubes': 1800, 'items': {'light_l': 3}}, desc='BOSS — a volcano with a grudge.'),
+        stage('4-5', 'The King of Curses', 12, [W(('finger_bearer', 10), ('smallpox', 8), ('finger_bearer', 10)), W(('sukuna_boss', 1))], 5000, 250, 4000, 20, boss=True, drops=D_X, rec=42000, first={'cubes': 3000, 'items': {'ticket': 5}}, desc='FINAL BOSS — twenty fingers’ worth of malice.'),
      ]},
 ]}
 
+
+# Strengthening Quests (guide: Training Light Quest / JP Gathering Quest). Each
+# difficulty unlocks after a main-story boss, has its own enemy scale, a daily
+# run limit shared by the quest, and can be auto-cleared once it has 3 stars.
+def qstage(sid, name, ap, scale, waves, yen, rank_exp, unit_exp, drops, unlock, rec):
+    s = stage(sid, name, ap, waves, yen, rank_exp, unit_exp, 0, drops=drops, rec=rec, first={'cubes': 300})
+    s.update({'scale': scale, 'unlock': unlock})
+    del s['turnGoal']
+    return s
+
+L = lambda item, chance, qty: {'item': item, 'chance': chance, 'qty': qty}
+MISSIONS['quests'] = [
+    {'id': 'tl', 'mode': 'strengthen', 'name': 'Training Light Quest', 'kanji': '修練の燈クエスト', 'daily': 18,
+     'art': 'assets/pp/modes/training-light-quest.webp', 'icon': 'assets/pp/currency/training-light.webp',
+     'desc': 'Spar at Jujutsu High for Training Lights, the orange orbs that level up your characters.',
+     'stages': [
+        qstage('tl-1', 'Beginner', 6, 1.3, [W(('fly_head', 2), ('grasshopper', 2)), W(('eye_curse', 3), ('fly_head', 3))], 200, 30, 200, [L('light_s', 100, 3), L('light_m', 30, 1)], None, 1800),
+        qstage('tl-2', 'Intermediate', 10, 2.5, [W(('transfigured', 6), ('transfigured', 6)), W(('eye_curse', 8), ('transfigured', 8), ('grasshopper', 8))], 400, 60, 600, [L('light_s', 100, 5), L('light_m', 100, 2), L('light_l', 20, 1)], '2-5', 6500),
+        qstage('tl-3', 'Advanced', 15, 3.3, [W(('cursed_corpse', 8), ('cursed_corpse', 8), ('cursed_corpse', 8)), W(('cursed_corpse', 10), ('transfigured', 12))], 800, 100, 1200, [L('light_m', 100, 4), L('light_l', 60, 1)], '3-5', 13000),
+     ]},
+    {'id': 'jp', 'mode': 'strengthen', 'name': 'JP Gathering Quest', 'kanji': 'JP獲得クエスト', 'daily': 6,
+     'art': 'assets/pp/modes/jp-quest.webp', 'icon': 'assets/pp/currency/jp.webp',
+     'desc': 'JP is the general currency you need to power up characters. Clear these for a lot of it.',
+     'stages': [
+        qstage('jp-1', 'Beginner', 6, 1.3, [W(('fly_head', 2), ('grasshopper', 2)), W(('eye_curse', 3), ('fly_head', 3))], 3000, 30, 150, [], None, 1800),
+        qstage('jp-2', 'Intermediate', 10, 2.5, [W(('transfigured', 6), ('transfigured', 6)), W(('eye_curse', 8), ('transfigured', 8), ('grasshopper', 8))], 8000, 60, 400, [], '2-5', 6500),
+        qstage('jp-3', 'Advanced', 15, 3.3, [W(('cursed_corpse', 8), ('cursed_corpse', 8), ('cursed_corpse', 8)), W(('cursed_corpse', 10), ('transfigured', 12))], 20000, 100, 800, [], '3-5', 13000),
+     ]},
+]
+
 ITEMS = {
-    'talisman_s': {'name': 'Grade 4 Talisman', 'kind': 'exp', 'exp': 600, 'kanji': '四', 'desc': 'A paper seal holding residual cursed energy. +600 EXP.'},
-    'talisman_m': {'name': 'Grade 2 Talisman', 'kind': 'exp', 'exp': 4000, 'kanji': '二', 'desc': 'A sealed charm from a grade 2 exorcism. +4,000 EXP.'},
-    'talisman_l': {'name': 'Special Grade Talisman', 'kind': 'exp', 'exp': 20000, 'kanji': '特', 'desc': 'A sealed relic of a special grade curse. +20,000 EXP.'},
-    'ticket': {'name': 'Summon Ticket', 'kind': 'ticket', 'kanji': '札', 'desc': 'One free summon on any banner.'},
+    'light_s': {'name': 'Training Light (S)', 'kind': 'exp', 'exp': 600, 'jp': 60, 'kanji': '燈', 'icon': 'assets/pp/currency/training-light.webp',
+                'desc': 'An orange orb of cursed energy from the Training Light Quest. +600 character EXP (costs 60 JP to use).'},
+    'light_m': {'name': 'Training Light (M)', 'kind': 'exp', 'exp': 4000, 'jp': 400, 'kanji': '燈', 'icon': 'assets/pp/currency/training-light.webp',
+                'desc': 'A brighter Training Light. +4,000 character EXP (costs 400 JP to use).'},
+    'light_l': {'name': 'Training Light (L)', 'kind': 'exp', 'exp': 20000, 'jp': 2000, 'kanji': '燈', 'icon': 'assets/pp/currency/training-light.webp',
+                'desc': 'A blazing Training Light. +20,000 character EXP (costs 2,000 JP to use).'},
+    'ticket': {'name': 'Draw Ticket', 'kind': 'ticket', 'kanji': '札', 'desc': 'One free draw on any banner. Earns a Gacha Point like any draw.'},
+    'gp_card': {'name': 'Gacha Point Card', 'kind': 'gp', 'kanji': '点', 'icon': 'assets/pp/currency/gacha-card.webp',
+                'desc': 'Worth 1 Gacha Point on any pickup banner (up to 100 per banner). Made by converting 20 Gacha Points into 10 cards.'},
 }
 
 SHOP = {'sections': [
-    {'id': 'items', 'name': 'Talismans', 'kanji': '呪符', 'offers': [
-        {'id': 'buy_ts', 'give': {'items': {'talisman_s': 1}}, 'price': {'yen': 300}},
-        {'id': 'buy_ts10', 'give': {'items': {'talisman_s': 10}}, 'price': {'yen': 2700}},
-        {'id': 'buy_tm', 'give': {'items': {'talisman_m': 1}}, 'price': {'yen': 1800}},
-        {'id': 'buy_tl', 'give': {'items': {'talisman_l': 1}}, 'price': {'yen': 8000}},
-        {'id': 'buy_tl_c', 'give': {'items': {'talisman_l': 1}}, 'price': {'cubes': 15}},
+    {'id': 'items', 'name': 'Training Lights', 'kanji': '修練の燈', 'offers': [
+        {'id': 'buy_ts', 'give': {'items': {'light_s': 1}}, 'price': {'yen': 300}},
+        {'id': 'buy_ts10', 'give': {'items': {'light_s': 10}}, 'price': {'yen': 2700}},
+        {'id': 'buy_tm', 'give': {'items': {'light_m': 1}}, 'price': {'yen': 1800}},
+        {'id': 'buy_tl', 'give': {'items': {'light_l': 1}}, 'price': {'yen': 8000}},
+        {'id': 'buy_tl_c', 'give': {'items': {'light_l': 1}}, 'price': {'cubes': 900}},
     ]},
-    {'id': 'stamina', 'name': 'Stamina', 'kanji': '気力', 'offers': [
-        {'id': 'refill', 'give': {'staminaRefill': True}, 'price': {'cubes': 5}},
+    {'id': 'stamina', 'name': 'AP', 'kanji': '行動力', 'offers': [
+        {'id': 'refill', 'give': {'staminaRefill': True}, 'price': {'cubes': 300}},
         {'id': 'stam10', 'give': {'stamina': 10}, 'price': {'yen': 1000}},
     ]},
-    {'id': 'summon', 'name': 'Summon', 'kanji': '召喚', 'offers': [
-        {'id': 'ticket1', 'give': {'items': {'ticket': 1}}, 'price': {'cubes': 5}},
-        {'id': 'ticket10', 'give': {'items': {'ticket': 10}}, 'price': {'cubes': 45}},
+    {'id': 'summon', 'name': 'Draw', 'kanji': 'ガチャ', 'offers': [
+        {'id': 'ticket1', 'give': {'items': {'ticket': 1}}, 'price': {'cubes': 300}},
+        {'id': 'ticket10', 'give': {'items': {'ticket': 10}}, 'price': {'cubes': 3000}},
         {'id': 'ticket_yen', 'give': {'items': {'ticket': 1}}, 'price': {'yen': 6000}},
     ]},
     {'id': 'daily', 'name': 'Daily', 'kanji': '日課', 'offers': [
-        {'id': 'daily_gift', 'give': {'cubes': 10, 'yen': 1000}, 'price': {}, 'daily': True},
+        {'id': 'daily_gift', 'give': {'cubes': 600, 'yen': 1000}, 'price': {}, 'daily': True},
     ]},
 ]}
 
 BANNERS = {'banners': [
     {'id': 'standard', 'name': 'Jujutsu High Recruitment', 'kanji': '呪術高専', 'subtitle': 'Standard banner — every sorcerer and curse',
-     'featured': [], 'element': 'Wisdom', 'pityAt': 0, 'hero': 'yuta_601'},
+     'featured': [], 'element': 'Wisdom', 'exchangeAt': 0, 'hero': 'yuta_601'},
     {'id': 'strongest', 'name': 'The Strongest', 'kanji': '最強', 'subtitle': 'Pickup: Satoru Gojo SSR rate up',
-     'featured': ['satoru_strongest', 'satoru_hollow_technique', 'satoru_strongest_blue', 'gojo_9005'], 'element': 'Body', 'pityAt': 60, 'hero': 'satoru_strongest'},
+     'featured': ['satoru_strongest', 'satoru_hollow_technique', 'satoru_strongest_blue', 'gojo_9005'], 'element': 'Body', 'exchangeAt': 250, 'hero': 'satoru_strongest'},
     {'id': 'king', 'name': 'King of Curses', 'kanji': '呪いの王', 'subtitle': 'Limited: Ryomen Sukuna rate up',
-     'featured': ['sukuna_9006', 'sukuna_9007', 'jogo_610', 'mahito_609'], 'element': 'Heart', 'pityAt': 60, 'hero': 'sukuna_9006'},
-], 'rates': {'5': 85.0, '6': 13.0, '7': 2.0}, 'featuredShare': 50,
-   'cost': {'single': {'cubes': 5, 'tickets': 1}, 'multi': {'cubes': 45, 'tickets': 10}}, 'multiGuarantee': 5}
+     'featured': ['sukuna_9006', 'sukuna_9007', 'jogo_610', 'mahito_609'], 'element': 'Heart', 'exchangeAt': 250, 'hero': 'sukuna_9006'},
+], 'rates': {'5': 97.5, '6': 2.0, '7': 0.5}, 'featuredShare': 50,
+   'cost': {'single': {'cubes': 300, 'tickets': 1}, 'multi': {'cubes': 3000, 'tickets': 10}}, 'multiGuarantee': 5,
+   'gp': {'exchangeAt': 250, 'convertPoints': 20, 'convertCards': 10, 'convertMax': 200, 'redeemMax': 100}}
 
 
 def main():

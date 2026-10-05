@@ -42,8 +42,10 @@
   };
   const icon = (name, cls) => `<svg class="ic ${cls || ''}" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[name] || ''}</svg>`;
 
-  const CUBE_SVG = '<svg class="cur-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z" fill="#7c5cff"/><path d="M12 2l9 5-9 5-9-5z" fill="#b9a6ff"/><path d="M12 12v10l9-5V7z" fill="#4a2fc2"/><path d="M12 6.5l3.5 2-3.5 2-3.5-2z" fill="#fff" opacity=".7"/></svg>';
-  const YEN_SVG = '<svg class="cur-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#c9a24e"/><circle cx="12" cy="12" r="7.6" fill="none" stroke="#6e5320" stroke-width="1.4"/><path d="M8.5 7l3.5 5 3.5-5M12 12v6M9 13h6M9 15.5h6" stroke="#3a2a08" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>';
+  // Phantom Parade currency art (assets/pp/currency, from the fan wiki's Beginner's Guide)
+  const CUBE_SVG = '<img class="cur-ic" src="assets/pp/currency/cubes.webp" alt="" aria-hidden="true">';
+  const YEN_SVG = '<img class="cur-ic" src="assets/pp/currency/jp.webp" alt="" aria-hidden="true">';
+  const GP_ICON = '<img class="cur-ic" src="assets/pp/currency/gacha-card.webp" alt="" aria-hidden="true">';
   const STAM_SVG = '<svg class="cur-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#0f5a5e"/><path d="M13 4L6 14h5l-1 6 7-10h-5z" fill="#7ff2e0"/></svg>';
 
   // Phantom Parade order: Formation · Missions · Home · Summon · Shop, then the square Menu plate.
@@ -58,12 +60,12 @@
   ];
   const HELP = {
     home: 'Your home sorcerer greets you here. Tap Change to pick another one. The Quest card continues the story; the banner on the left opens the current pickup summon.',
-    formation: 'Enhance Sorcerers to level them up with talismans, or open Team Formation to set 4 Main fighters and 1 Backup (support).',
-    characters: 'Tap a sorcerer to open Enhance: level up with talismans, read Command Skills (Attack, Skill 1, Skill 2, Ultimate) and Auto-Skills.',
+    formation: 'Enhance Sorcerers to level them up with Training Lights and JP, or open Team Formation to set 4 Main fighters and 1 Backup (support).',
+    characters: 'Tap a sorcerer to open Enhance: level up with Training Lights and JP, read Command Skills (Attack, Skill 1, Skill 2, Ultimate) and Auto-Skills.',
     teams: 'Tap a slot, then pick a sorcerer below. The Backup does not fight; its support skill boosts the whole Main line. Type advantage: 影 Blue › 夜 Green › 幻 Red › 影 Blue.',
-    summon: 'Spend Cursed Cubes or tickets. Every 10x summon guarantees an SR or better; pickup banners have a pity counter for the featured SSR.',
-    missions: 'Clear stages for Yen, EXP and first-clear Cubes. 3 stars: clear, nobody knocked out, and within the turn goal.',
-    shop: 'Trade Yen and Cubes for talismans, stamina and summon tickets. The daily gift resets every day.',
+    summon: 'A draw costs 300 Cubes (10x: 3,000) or a ticket. Every draw on a pickup banner earns 1 Gacha Point; 250 points exchange for a featured unit. 20 points can be turned into 10 Gacha Point Cards for a later banner.',
+    missions: 'Main Quest continues the story; Strengthening Quests give Training Lights and JP. Clear Rank: 1★ clear, 2★ at most 1 character defeated, 3★ nobody defeated. 3★ Strengthening stages can be auto-cleared.',
+    shop: 'Trade JP and Cubes for Training Lights, AP and Draw Tickets. The daily gift resets every day.',
     settings: 'Audio, display, account and save data. The Portal tab moves sorcerers and currency between games.',
     battle: 'Tap an enemy to target it, then choose Attack, Skill 1, Skill 2 or the Ultimate. Attacks build cursed energy (呪力); skills spend it.',
   };
@@ -145,9 +147,12 @@
     return unitTile(d, Object.assign({}, o, { id: v.id, level: v.unit.level, dupes: v.unit.dupes, badge }));
   }
 
-  const ITEM_CLASS = { talisman_s: '', talisman_m: 't-m', talisman_l: 't-l', ticket: 't-ticket' };
+  const ITEM_CLASS = { light_s: '', light_m: 't-m', light_l: 't-l', ticket: 't-ticket' };
+  const ITEM_ART = { light_s: 'training-light', light_m: 'training-light', light_l: 'training-light', gp_card: 'gacha-card' };
   function itemIcon(id, items) {
     const it = items && items[id];
+    const art = (it && it.icon) || (ITEM_ART[id] && 'assets/pp/currency/' + ITEM_ART[id] + '.webp');
+    if (art) return `<img class="item-ic ${ITEM_CLASS[id] || ''}" src="${esc(art)}" alt="" aria-hidden="true">`;
     return `<span class="talisman ${ITEM_CLASS[id] || ''}" data-k="${esc(it ? it.kanji : '札')}" aria-hidden="true"></span>`;
   }
 
@@ -234,9 +239,9 @@
   /* ---------- HUD ---------- */
   function hudHtml() {
     return `<div class="hud">
-      <a class="hud-cur" href="shop.html#stamina" title="Stamina">${STAM_SVG}<b id="hud-stam">0/0</b><small id="hud-stam-t"></small></a>
-      <a class="hud-cur" href="shop.html#summon" title="Cursed Cubes">${CUBE_SVG}<b id="hud-cubes">0</b><i class="hud-plus">${icon('plus')}</i></a>
-      <a class="hud-cur" href="shop.html" title="Yen">${YEN_SVG}<b id="hud-yen">0</b><i class="hud-plus">${icon('plus')}</i></a>
+      <a class="hud-cur" href="shop.html#stamina" title="AP">${STAM_SVG}<b id="hud-stam">0/0</b><small id="hud-stam-t"></small></a>
+      <a class="hud-cur" href="shop.html#summon" title="Cubes">${CUBE_SVG}<b id="hud-cubes">0</b><i class="hud-plus">${icon('plus')}</i></a>
+      <a class="hud-cur" href="shop.html" title="JP">${YEN_SVG}<b id="hud-yen">0</b><i class="hud-plus">${icon('plus')}</i></a>
       <span id="portal-slot"></span>
     </div>`;
   }
@@ -261,7 +266,7 @@
     if (!s) return;
     const want = {
       shop: s.daily && s.daily.daily_gift !== Rules.today(),
-      summon: (s.items && s.items.ticket > 0) || (s.currency && s.currency.cubes >= 45),
+      summon: (s.items && s.items.ticket > 0) || (s.currency && s.currency.cubes >= 3000),
       settings: !!(global.PortalPort && PortalPort.pendingTx && PortalPort.pendingTx.length) || (s.daily && s.daily.daily_gift !== Rules.today()),
     };
     $$('.dock-btn').forEach((a) => {
@@ -316,7 +321,7 @@
   /** Page entry point. */
   // The roster only keeps units with real art. Units in an older save that
   // are no longer in data/characters.json (and aren't Portal guests) are
-  // removed from the box and teams and refunded in Yen, once.
+  // removed from the box and teams and refunded in JP, once.
   function retireUnits() {
     if (!Save.exists() || !Data.characters.length) return;
     const s = Save.get();
@@ -332,7 +337,7 @@
       if (gone.includes(st.profile.homeUnit)) st.profile.homeUnit = null;
       st.currency.yen += refund;
     });
-    toast(gone.length + ' retired sorcerer' + (gone.length === 1 ? '' : 's') + ' refunded: ¥' + fmt(refund));
+    toast(gone.length + ' retired sorcerer' + (gone.length === 1 ? '' : 's') + ' refunded: ' + fmt(refund) + ' JP');
   }
 
   function boot(cfg) {
@@ -349,5 +354,5 @@
     else start();
   }
 
-  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, typeOf, typeKanji, typeBadge, typeLabel, rarityOf, rarityBadge, focusTag, unitTile, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG };
+  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, typeOf, typeKanji, typeBadge, typeLabel, rarityOf, rarityBadge, focusTag, unitTile, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG, GP_ICON };
 })(window);

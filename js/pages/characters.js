@@ -1,4 +1,4 @@
-/* characters.html — roster grid + detail (stats, skills, level-up with talismans). */
+/* characters.html — roster grid + detail (stats, skills, level-up with Training Lights + JP). */
 (function () {
   'use strict';
   const { $, $$, esc, fmt } = UI;
@@ -93,7 +93,7 @@
           <div class="enh-id">
             <div class="enh-badges">${UI.rarityBadge(d)}${UI.typeBadge(d)}</div>
             <div class="enh-name"><small>${esc(d.title || '')}</small><h2>${esc(d.name)}</h2></div>
-            <div class="enh-tags">${UI.focusTag(d)}${d.rarity >= 7 || d.limited ? '<span class="limited-tag">LIMITED</span>' : ''}${d.guest ? `<span class="badge is-guest">GUEST · ${esc(d.sourceGame)}</span>` : ''}${u.dupes ? `<span class="badge">+${u.dupes}</span>` : ''}
+            <div class="enh-tags">${UI.focusTag(d)}${d.rarity >= 7 || d.limited ? '<span class="limited-tag">LIMITED</span>' : ''}${d.guest ? `<span class="badge is-guest">GUEST · ${esc(d.sourceGame)}</span>` : ''}${u.dupes ? `<span class="badge">LB ${u.dupes}</span>` : ''}
               <span class="enh-aff">${UI.typeLabel(d)}${d.affiliation ? ' · ' + esc(d.affiliation) : ''}</span></div>
           </div>
         </div>
@@ -110,7 +110,7 @@
               <div><dt>Attack</dt><dd>${fmt(v.stats.atk)}${plus(next && next.atk, v.stats.atk)}</dd></div>
               <div><dt>Speed</dt><dd>${fmt(v.stats.speed)}${plus(next && next.speed, v.stats.speed)}</dd></div>
               <div><dt>Focus</dt><dd>${esc(d.focus || '—')}</dd></div>
-              <div><dt>Duplicates</dt><dd>+${u.dupes || 0}</dd></div>
+              <div><dt>Limit Break</dt><dd>${u.dupes || 0} / ${Rules.MAX_DUPES}</dd></div>
             </dl>
             <div class="enh-skills">
               <div class="enh-sk-h">Command Skills</div>
@@ -120,9 +120,10 @@
             </div>
           </div>
           ${cur ? `<div class="enh-desc"><b>${esc(cur.name)}</b> <small>${esc(cur.label)}</small>${cur.cost != null ? `<span class="cost"><img src="assets/pp/ui/Energy.webp" alt="CE">${esc(cur.cost)}</span>` : ''}<p>${esc(cur.desc || '')}</p></div>` : ''}
-          <div class="enh-btns">${['talisman_s', 'talisman_m', 'talisman_l'].map((k) => `
-            <button class="enh-btn" type="button" data-feed="${k}" ${maxed || !(s.items[k] > 0) ? 'disabled' : ''}>${UI.itemIcon(k, ITEMS)}<span><b>${esc(ITEMS[k].name.replace(/ Talisman$/, ''))}</b><small>Lv Enhancement</small><em>×${s.items[k] || 0} · +${fmt(ITEMS[k].exp)} EXP</em></span></button>`).join('')}
+          <div class="enh-btns">${['light_s', 'light_m', 'light_l'].map((k) => `
+            <button class="enh-btn" type="button" data-feed="${k}" ${maxed || !(s.items[k] > 0) || s.currency.yen < (ITEMS[k].jp || 0) ? 'disabled' : ''} title="${esc(ITEMS[k].desc)}">${UI.itemIcon(k, ITEMS)}<span><b>${esc(ITEMS[k].name.replace(/^Training Light /, 'Light '))}</b><small>+${fmt(ITEMS[k].exp)} EXP · ${UI.YEN_SVG}${fmt(ITEMS[k].jp || 0)}</small><em>×${s.items[k] || 0}</em></span></button>`).join('')}
           </div>
+          <small class="enh-jp muted">${UI.YEN_SVG} ${fmt(s.currency.yen)} JP · Training Lights drop in the <a href="missions.html#strengthen">Training Light Quest</a></small>
           <div class="enh-foot">
             <button class="pp-stone" type="button" id="home-set">${UI.icon('home')}<span>Set as Home</span></button>
             <a class="pp-stone" href="teams.html">${UI.icon('teams')}<span>Team Formation</span></a>
@@ -143,8 +144,10 @@
         const k = f.dataset.feed;
         let res = null;
         Save.update((s) => {
-          if (!(s.items[k] > 0)) return;
+          const jp = ITEMS[k].jp || 0;
+          if (!(s.items[k] > 0) || s.currency.yen < jp) return;
           s.items[k]--;
+          s.currency.yen -= jp;
           res = Rules.addExpTo(s, id, ITEMS[k].exp);
         });
         if (res && res.to > res.from) { UI.toast('Level up! Lv ' + res.from + ' → ' + res.to, 'good'); UI.sfx('rare'); } else UI.sfx('tap');

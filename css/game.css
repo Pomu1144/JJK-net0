@@ -129,6 +129,13 @@ html.is-compact .tabs .jjk-tab { height: 30px; min-width: 84px; font-size: 12px;
 .talisman.t-l { background: linear-gradient(180deg, #ffe08a, #d39a2a); }
 .talisman.t-ticket { background: linear-gradient(180deg, #8e1c1c, #4e0c0c); border-color: #f1d98a; }
 .talisman.t-ticket::before { color: #f1d98a; }
+/* Phantom Parade item art (Training Lights, Gacha Point Card): S / M / L read by size and glow */
+.item-ic { display: inline-block; width: 30px; height: 30px; object-fit: contain; vertical-align: middle; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .55)); }
+.item-ic.t-m { filter: drop-shadow(0 0 5px rgba(255, 170, 60, .75)) drop-shadow(0 2px 3px rgba(0, 0, 0, .5)); }
+.item-ic.t-l { filter: drop-shadow(0 0 7px rgba(255, 215, 110, .95)) saturate(1.25) brightness(1.08); }
+.rw .item-ic { width: 20px; height: 20px; }
+.feed-item .item-ic { width: 34px; height: 34px; }
+img.cur-ic { object-fit: contain; border-radius: 3px; }
 
 /* ══════════════ Title (index.html) ══════════════ */
 #main.title-main { padding: 0; display: flex; overflow: hidden; }

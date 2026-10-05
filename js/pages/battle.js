@@ -24,18 +24,23 @@
     const q = new URLSearchParams(location.search);
     const sid = q.get('stage');
     teamIdx = Math.max(0, Math.min(2, Number(q.get('team')) || 0));
-    for (const c of M.chapters) for (const st of c.stages) if (st.id === sid) { stage = st; chapter = c; }
+    for (const c of M.chapters.concat(M.quests || [])) for (const st of c.stages) if (st.id === sid) { stage = st; chapter = c; }
     if (!stage) return fail('Unknown mission "' + (sid || '') + '".');
     const s = Save.get();
-    // stage must be unlocked
-    const list = M.chapters.flatMap((c) => c.stages);
-    const i = list.indexOf(stage);
-    if (i > 0 && !s.progress[list[i - 1].id]) return fail('Clear the previous mission first.');
+    // stage must be unlocked; Strengthening Quests also have a daily run limit
+    if (chapter.mode === 'strengthen') {
+      if (stage.unlock && !s.progress[stage.unlock]) return fail('Clear Main Quest ' + stage.unlock + ' first.');
+      if (Rules.questRuns(s, chapter.id) >= chapter.daily) return fail('No ' + chapter.name + ' runs left today. They reset tomorrow.');
+    } else {
+      const list = M.chapters.flatMap((c) => c.stages);
+      const i = list.indexOf(stage);
+      if (i > 0 && !s.progress[list[i - 1].id]) return fail('Clear the previous mission first.');
+    }
     const team = s.teams[teamIdx];
     teamUnitIds = Rules.teamIds(team).filter((id) => Rules.unitView(id));
     supportId = team.support && Rules.unitView(team.support) ? team.support : null;
     if (!teamUnitIds.length) return fail('Your team has no front units. Set one up in Teams.');
-    if (!Rules.spendStamina(stage.stamina)) return fail('Not enough stamina (' + stage.stamina + ' needed). Refill it in the Shop or wait.');
+    if (!Rules.spendStamina(stage.stamina)) return fail('Not enough AP (' + stage.stamina + ' needed). Refill it in the Shop or wait.');
 
     speed = s.settings.battleSpeed || 1;
     auto = !!s.settings.autoBattle;
@@ -44,7 +49,7 @@
       const d = v.def;
       return { id, name: d.name, element: d.element, stats: v.stats, basic: d.basic, technique: d.technique, technique2: d.technique2, ultimate: d.ultimate, passives: d.passives, def: d };
     });
-    const waves = stage.waves.map((w) => w.map((x) => Object.assign({}, Data.enemy(x.enemy), { level: x.level, scale: chapter.scale || 1 })));
+    const waves = stage.waves.map((w) => w.map((x) => Object.assign({}, Data.enemy(x.enemy), { level: x.level, scale: stage.scale || chapter.scale || 1 })));
     S = E.create({ allies, support: supportId ? Rules.unitDef(supportId) : null, waves, rules: Rules });
     build();
     loop().catch((err) => { console.error(err); UI.toast('Battle error: ' + err.message, 'bad'); });
@@ -63,7 +68,7 @@
       </div>`;
     }
     return `<div class="bu enemy${u.boss ? ' is-boss' : ''} t-${t} el-${u.element.toLowerCase()}" data-key="${u.key}" role="button" tabindex="0" aria-label="${esc(u.name)}">
-      <div class="bu-hp"><i></i><span></span></div>
+      <div class="bu-hp"><i></i><span></span></div>${u.brkMax ? '<div class="bu-brk" title="Break gauge"><i></i></div>' : ''}
       <div class="bu-art"><img class="art" src="${esc(u.def.art)}" alt="" draggable="false">${UI.typeBadge(tsrc, 'bu-type')}${u.boss ? '<span class="bu-boss">BOSS</span>' : ''}<span class="bu-lv">Lv<b>${u.level}</b></span><span class="bu-fx"></span><span class="bu-status"></span></div>
       <div class="bu-name">${esc(u.name)}</div>
     </div>`;
@@ -112,7 +117,7 @@
     const back = $('.jjk-back');
     if (back) back.addEventListener('click', async (e) => {
       e.preventDefault();
-      if (S.over || await UI.confirm('Retreat from battle? The stamina spent is not refunded.', 'Retreat', 'Retreat')) location.href = 'missions.html';
+      if (S.over || await UI.confirm('Retreat from battle? The AP spent is not refunded.', 'Retreat', 'Retreat')) location.href = 'missions.html';
     });
     paint();
   }
@@ -125,7 +130,7 @@
 
   function paint() {
     $('#wave').innerHTML = '<small>WAVE</small>' + (S.wave + 1) + '/' + S.waveCount;
-    $('#round').textContent = 'Turn ' + Math.max(1, S.round) + ' · ★ ≤ ' + stage.turnGoal;
+    $('#round').textContent = 'Turn ' + Math.max(1, S.round);
     const ce = $('#ce');
     ce.querySelector('b').textContent = S.ce + '/' + S.ceMax;
     ce.querySelector('.ce-pips').innerHTML = Array.from({ length: S.ceMax }, (_, i) => `<i class="${i < S.ce ? 'on' : ''}"></i>`).join('');
@@ -138,6 +143,9 @@
       el.querySelector('.bu-hp span').textContent = fmt(u.hp);
       const g = el.querySelector('.bu-gauge i');
       if (g) { g.style.width = u.gauge + '%'; el.classList.toggle('ult-ready', E.canUltimate(S, u)); }
+      const brk = el.querySelector('.bu-brk i');
+      if (brk) brk.style.width = (u.broken ? 0 : Math.max(0, u.brk / u.brkMax * 100)) + '%';
+      el.classList.toggle('is-broken', !!u.broken && u.alive);
       el.classList.toggle('is-ko', !u.alive);
       el.classList.toggle('is-active', current === u);
       el.classList.toggle('is-target', u.key === target);
@@ -146,6 +154,7 @@
       if (u.dots.length) st.push('<i class="s-burn" title="Burning">火</i>');
       if (u.buffs.some((b) => b.type === 'weaken')) st.push('<i class="s-weak" title="Attack down">↓</i>');
       if (u.buffs.some((b) => b.type === 'atk')) st.push('<i class="s-up" title="Attack up">↑</i>');
+      if (u.broken) st.push('<i class="s-break" title="Broken">破</i>');
       if (u.enraged) st.push('<i class="s-rage" title="Enraged">怒</i>');
       el.querySelector('.bu-status').innerHTML = st.join('');
     }
@@ -223,6 +232,21 @@
     b.className = 'bt-banner';
   }
 
+  /** Black Flash: black-and-red lightning over the target (CSS in pp-battle-rules.css). */
+  function blackFlashFx(key) {
+    const el = unitEl(key);
+    if (!el) return;
+    const fx = el.querySelector('.bu-fx');
+    const b = document.createElement('span');
+    b.className = 'bf-bolt';
+    b.innerHTML = '<svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path class="k" d="M58 0 L36 44 L54 46 L30 100 L72 38 L52 36 L70 0Z"/><path class="r" d="M60 4 L42 42 L57 44 L38 92 L66 40 L50 38 L66 4Z"/><path class="k2" d="M8 30 L30 48 L20 52 L44 70"/><path class="r2" d="M92 26 L70 50 L82 54 L60 76"/></svg>';
+    fx.appendChild(b);
+    pulse(key, 'bf-hit', 520);
+    const field = document.querySelector('.battle');
+    if (field) { field.classList.remove('bf-screen'); void field.offsetWidth; field.classList.add('bf-screen'); setTimeout(() => field.classList.remove('bf-screen'), 450); }
+    setTimeout(() => b.remove(), 700 / speed + 200);
+  }
+
   async function domainCutIn(u, ult) {
     const ov = document.createElement('div');
     ov.className = 'domain-cut el-' + u.element.toLowerCase() + (ult.kind === 'domain' ? ' is-domain' : '');
@@ -248,10 +272,13 @@
         }
         case 'damage': {
           pulse(ev.to, 'hit', 360);
+          if (ev.blackFlash) blackFlashFx(ev.to);
           const label = (ev.crit ? 'CRIT ' : '') + fmt(ev.amount);
-          floatText(ev.to, label, (ev.crit ? 'crit ' : '') + (ev.adv === 'strong' ? 'strong' : ev.adv === 'weak' ? 'weak' : ''));
+          floatText(ev.to, label, (ev.crit ? 'crit ' : '') + (ev.blackFlash ? 'bf ' : '') + (ev.broken ? 'brk ' : '') + (ev.adv === 'strong' ? 'strong' : ev.adv === 'weak' ? 'weak' : ''));
+          if (ev.blackFlash) floatText(ev.to, 'BLACK FLASH', 'tag black-flash');
           if (ev.adv) floatText(ev.to, ev.adv === 'strong' ? 'WEAK POINT!' : 'RESISTED', 'tag ' + ev.adv);
-          UI.sfx(ev.crit ? 'crit' : 'hit');
+          UI.sfx(ev.crit || ev.blackFlash ? 'crit' : 'hit');
+          if (ev.blackFlash) { paint(); await wait(260); }
           paint();
           await wait(170);
           break;
@@ -260,6 +287,13 @@
         case 'heal': if (!ev.quiet) { floatText(ev.to, '+' + fmt(ev.amount), 'heal'); UI.sfx('heal'); } paint(); if (!ev.quiet) await wait(120); break;
         case 'status': floatText(ev.to, ev.text, 'status'); paint(); await wait(90); break;
         case 'stunned': floatText(ev.to, 'STUNNED', 'status'); paint(); await wait(420); break;
+        case 'break':
+          floatText(ev.to, 'BREAK!', 'tag break');
+          pulse(ev.to, 'break-anim', 700);
+          UI.sfx('crit');
+          paint(); await wait(520); break;
+        case 'broken': floatText(ev.to, ev.left ? 'BROKEN' : 'BROKEN · last turn', 'status'); paint(); await wait(380); break;
+        case 'breakEnd': floatText(ev.to, 'RECOVERED', 'status'); paint(); await wait(300); break;
         case 'enrage': floatText(ev.to, 'ENRAGED!', 'crit'); pulse(ev.to, 'rage', 700); paint(); await wait(400); break;
         case 'ce': paint(); if (!ev.quiet && ev.amount > 0) pulse('ce', 'x', 1); break;
         case 'ko': pulse(ev.to, 'ko-anim', 600); paint(); await wait(380); break;
@@ -309,18 +343,12 @@
   }
 
   /* ---------------- results ---------------- */
-  function rollDrops() {
-    const got = {};
-    (stage.rewards.drops || []).forEach((d) => { if (Math.random() * 100 < d.chance) got[d.item] = (got[d.item] || 0) + (d.qty || 1); });
-    return got;
-  }
-
   function finish() {
     const win = S.result === 'win';
     const conds = [
       { ok: win, text: 'Clear the mission' },
-      { ok: win && S.koAllies === 0, text: 'Nobody knocked out' },
-      { ok: win && S.round <= stage.turnGoal, text: 'Clear within ' + stage.turnGoal + ' turns (' + S.round + ')' },
+      { ok: win && S.koAllies <= 1, text: 'At most 1 character defeated' },
+      { ok: win && S.koAllies === 0, text: 'No characters defeated' },
     ];
     const stars = conds.filter((c) => c.ok).length;
     let res = { levels: [], drops: {}, first: null, rankUps: 0 };
@@ -328,26 +356,7 @@
       s.stats.battles++;
       if (!win) return;
       s.stats.wins++;
-      const prev = s.progress[stage.id];
-      const r = stage.rewards;
-      s.currency.yen += r.yen;
-      res.rankUps = Rules.addRankExpTo(s, r.rankExp);
-      teamUnitIds.forEach((id) => { const lv = Rules.addExpTo(s, id, r.unitExp); if (lv) res.levels.push(Object.assign({ id }, lv)); });
-      if (supportId) { const lv = Rules.addExpTo(s, supportId, Math.round(r.unitExp / 2)); if (lv) res.levels.push(Object.assign({ id: supportId, support: true }, lv)); }
-      res.drops = rollDrops();
-      Object.entries(res.drops).forEach(([k, n]) => { s.items[k] = (s.items[k] || 0) + n; });
-      if (!prev) {
-        const f = stage.firstClear || {};
-        res.first = f;
-        s.currency.cubes += f.cubes || 0;
-        s.currency.yen += f.yen || 0;
-        Object.entries(f.items || {}).forEach(([k, n]) => { s.items[k] = (s.items[k] || 0) + n; });
-      }
-      s.progress[stage.id] = {
-        stars: Math.max(stars, (prev && prev.stars) || 0),
-        clears: ((prev && prev.clears) || 0) + 1,
-        best: Math.min(S.round, (prev && prev.best) || Infinity),
-      };
+      res = Rules.grantClearTo(s, stage, { team: teamUnitIds, support: supportId, stars, round: S.round, quest: chapter.mode === 'strengthen' ? chapter.id : null });
     });
     UI.sfx(win ? 'win' : 'lose');
     const leveled = res.levels.filter((l) => l.to > l.from).map((l) => l.id);
@@ -365,16 +374,16 @@
       <div class="res-head"><span class="res-k">${win ? '任務完了' : '敗北'}</span><h2 class="res-title">${win ? 'MISSION CLEAR' : 'DEFEAT'}</h2><span class="res-sub">${esc(stage.id + ' · ' + stage.name)}</span></div>
       ${win ? `<div class="res-stars">${conds.map((c, i) => `<div class="res-star pp-card${c.ok ? ' on' : ''}" style="--d:${0.2 + i * 0.25}s"><i>★</i><small>${esc(c.text)}</small></div>`).join('')}</div>
       <div class="res-rewards">
-        <span class="rw">${UI.YEN_SVG} ¥${fmt(r.yen)}</span><span class="rw">Rank EXP +${fmt(r.rankExp)}${res.rankUps ? ' · <b class="gold">RANK UP!</b>' : ''}</span>
+        <span class="rw">${UI.YEN_SVG} ${fmt(r.yen)} JP</span><span class="rw">Rank EXP +${fmt(r.rankExp)}${res.rankUps ? ' · <b class="gold">RANK UP!</b>' : ''}</span>
         ${itemLine(res.drops)}
-        ${res.first ? `<span class="rw first">First clear: ${res.first.cubes ? UI.CUBE_SVG + ' ' + res.first.cubes + ' Cubes ' : ''}</span>${itemLine(res.first.items)}` : ''}
+        ${res.first ? `<span class="rw first">First clear: ${res.first.cubes ? UI.CUBE_SVG + ' ' + fmt(res.first.cubes) + ' Cubes ' : ''}</span>${itemLine(res.first.items)}` : ''}
       </div>
       <div class="res-units">${res.levels.map((l) => {
         const v = Rules.unitView(l.id);
         if (!v) return '';
         return `<div class="res-unit pp-card">${Art.img(v.def, 'icon', { alt: '' })}<small>${esc(v.def.name)}</small>
           <b>${l.to > l.from ? `Lv ${l.from} → <span class="gold">${l.to}</span>` : l.capped ? 'MAX' : 'Lv ' + l.to}</b><small>+${fmt(l.gained)} EXP${l.support ? ' (support)' : ''}</small></div>`;
-      }).join('')}</div>` : `<p class="res-lose">Your opponents were too strong. Level up with talismans, use type advantage (影 Blue › 夜 Green › 幻 Red › 影 Blue, 行 Yellow ⇄ Purple) or bring a stronger support.</p>`}
+      }).join('')}</div>` : `<p class="res-lose">Your opponents were too strong. Level up with Training Lights, use type advantage (影 Blue › 夜 Green › 幻 Red › 影 Blue, 行 Yellow ⇄ Purple) or bring a stronger support.</p>`}
       <div class="modal-actions">
         ${PortalPort.session ? '<button class="jjk-btn" type="button" id="res-portal">Return to Portal</button>' : ''}
         <a class="jjk-btn" href="home.html">Home</a>
@@ -387,10 +396,11 @@
     const rp = $('#res-portal', ov);
     if (rp) rp.addEventListener('click', () => PortalPort.session.exit());
     $('#retry', ov).addEventListener('click', () => {
-      if (Rules.staminaNow().cur < stage.stamina) { UI.toast('Not enough stamina — refill it in the Shop.', 'bad'); return; }
+      if (Rules.staminaNow().cur < stage.stamina) { UI.toast('Not enough AP — refill it in the Shop.', 'bad'); return; }
       location.reload();
     });
-    if (win) list.then((M) => {
+    if (win && chapter.mode === 'strengthen') $('#next-slot', ov).innerHTML = `<a class="jjk-btn is-primary" href="missions.html#${esc(chapter.id)}">Back to ${esc(chapter.name)}</a>`;
+    else if (win) list.then((M) => {
       const all = M.chapters.flatMap((c) => c.stages);
       const nx = all[all.indexOf(all.find((x) => x.id === stage.id)) + 1];
       if (nx) $('#next-slot', ov).innerHTML = `<a class="jjk-btn is-primary" href="missions.html#${esc(M.chapters.find((c) => c.stages.includes(nx)).id)}">Next: ${esc(nx.id)}</a>`;

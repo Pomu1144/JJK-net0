@@ -167,3 +167,26 @@ Animated card art was reduced to a single still frame and resized; skill and uni
 ## UI
 
 Colour-type icons, rarity badges and memory skill icons in `ui/`; sources in `manifest.json`.
+
+## Currency, item and Quest mode art
+
+From the screenshots and icons on the fan wiki's [Beginner's Guide](https://jjk-phantom-parade.fandom.com/wiki/Beginner%27s_Guide)
+(jjk-phantom-parade.fandom.com), cropped and converted to WebP. In-game art © Sumzap / TOHO, JUJUTSU KAISEN Project.
+
+| File | Source |
+| --- | --- |
+| `currency/cubes.webp` | [Kaiju.jpg](https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/75/Kaiju.jpg/revision/latest?cb=20241022164151) |
+| `currency/gacha-card.webp` | [GachaPointCard.png](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/23/GachaPointCard.png/revision/latest?cb=20241022185310) |
+| `currency/jp.webp` | [Tutorial37.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/Tutorial37.PNG/revision/latest?cb=20241024181247) |
+| `currency/training-light.webp` | [Tutorial37.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/Tutorial37.PNG/revision/latest?cb=20241024181247) |
+| `currency/recollection-light.webp` | [Tutorial37.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/Tutorial37.PNG/revision/latest?cb=20241024181247) |
+| `currency/rank-on.webp` | [Tutorial36.png (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/Tutorial36.png/revision/latest?cb=20241024180201) |
+| `currency/rank-off.webp` | [Tutorial36.png (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/Tutorial36.png/revision/latest?cb=20241024180201) |
+| `modes/main-quest.webp` | [Tutorial29.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d9/Tutorial29.PNG/revision/latest?cb=20241024174946) |
+| `modes/cursed-objects.webp` | [Tutorial31.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/ae/Tutorial31.PNG/revision/latest?cb=20241024175921) |
+| `modes/domain.webp` | [Tutorial32.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/72/Tutorial32.PNG/revision/latest?cb=20241024180353) |
+| `modes/strengthen.webp` | [Tutorial33.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/70/Tutorial33.PNG/revision/latest?cb=20241024181102) |
+| `modes/foes.webp` | [Tutorial34.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fc/Tutorial34.PNG/revision/latest?cb=20241024181635) |
+| `modes/tower.webp` | [Tutorial35.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/Tutorial35.PNG/revision/latest?cb=20241024181956) |
+| `modes/training-light-quest.webp` | [Tutorial37.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/Tutorial37.PNG/revision/latest?cb=20241024181247) |
+| `modes/jp-quest.webp` | [Tutorial37.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/Tutorial37.PNG/revision/latest?cb=20241024181247) |

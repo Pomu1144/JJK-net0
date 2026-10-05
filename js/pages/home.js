@@ -51,7 +51,7 @@
         <span class="home-unit">${UI.rarityBadge(hd)}${UI.typeBadge(hd)}${UI.focusTag(hd)}</span></div>` : ''}
       <div class="home-right">
         <a class="side-ic" href="characters.html">${UI.icon('units')}<span>Sorcerers</span><i class="side-count">${Rules.ownedList().length}</i></a>
-        <a class="side-ic" href="summon.html">${UI.icon('summon')}<span>Summon</span>${s.currency.cubes >= 45 || s.items.ticket > 0 ? '<i class="nav-dot">!</i>' : ''}</a>
+        <a class="side-ic" href="summon.html">${UI.icon('summon')}<span>Summon</span>${s.currency.cubes >= 3000 || s.items.ticket > 0 ? '<i class="nav-dot">!</i>' : ''}</a>
         <a class="side-ic" href="shop.html">${UI.icon('shop')}<span>Exchange</span></a>
       </div>
       <a class="pp-parch home-quest" href="missions.html${nx ? '#' + nx.ch.id : ''}">
@@ -87,7 +87,7 @@
       <a class="rank-circle" href="profile.html" title="Player Rank · Profile">${s.profile.rank}</a>
       <div class="hh-block hh-rank"><small>${esc(s.profile.name)}</small><span class="hh-bar red"><i style="width:${Math.min(100, s.profile.rankExp / need * 100)}%"></i></span></div>
       <div class="hh-block hh-ap"><small><span>AP</span><b id="home-ap">${st.cur}/${st.max}</b></small><span class="hh-bar"><i id="home-ap-bar" style="width:${Math.min(100, st.cur / st.max * 100)}%"></i></span></div>
-      <a class="pp-stone hh-plus" href="shop.html#stamina" aria-label="Refill stamina">${UI.icon('plus')}</a>
+      <a class="pp-stone hh-plus" href="shop.html#stamina" aria-label="Refill AP">${UI.icon('plus')}</a>
       <span class="hh-clock" id="home-clock"></span>
     </header>`;
   }

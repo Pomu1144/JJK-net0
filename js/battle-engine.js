@@ -13,9 +13,28 @@
  *   mult 0 does not hit: it only applies its effect (target 'allies' for
  *   heals and buffs).
  * waves:  [[{ id, name, element, stats, skill, boss, level, def }], ...]
+ *
+ * Phantom Parade rules (numbers in Rules.BATTLE):
+ *   Black Flash — every unit has a chance (by def.focus, Itadori bonus) on
+ *     normal attacks and skills to land a Black Flash: x blackFlashMult damage
+ *     and +blackFlashGauge Ultimate gauge for the attacker. It takes
+ *     precedence over a crit (no crit is rolled on a Black Flash hit).
+ *     Damage events carry `blackFlash: true`.
+ *   Break — bosses have u.brk / u.brkMax. Hits lower it; at 0 the boss is
+ *     Broken for breakTurns of its turns (skips them, takes x breakDamageMult).
+ *     Events: 'break' (gauge emptied), 'broken' (turn skipped), 'breakEnd'.
  */
 (function (global) {
   'use strict';
+
+  /** Black Flash chance in % for a unit definition. */
+  function blackFlashChance(B, d, id, name) {
+    if (!B.blackFlash) return 0;
+    const tbl = B.blackFlashChance || {};
+    let c = d && d.focus && tbl[d.focus] != null ? tbl[d.focus] : (B.blackFlashDefault || 0);
+    if (/^yuji_/.test(id || '') || /^yuji_/.test((d && d.unit) || '') || /Itadori/i.test(name || '')) c += B.blackFlashItadori || 0;
+    return c;
+  }
 
   function create(opts) {
     const R = opts.rules;
@@ -47,7 +66,7 @@
         key: 'a' + i, side: 'ally', idx: i, id: a.id, name: a.name, element: a.element, def: a.def,
         maxHp, hp: maxHp, atk: Math.round(a.stats.atk * (1 + p.atk / 100)),
         speed: Math.round(a.stats.speed * (1 + p.speed / 100)),
-        crit: B.baseCrit + p.crit, guard: Math.min(60, p.guard), regen: p.regen, lowHpAtk: p.lowHpAtk,
+        crit: B.baseCrit + p.crit, bf: blackFlashChance(B, a.def, a.id, a.name), guard: Math.min(60, p.guard), regen: p.regen, lowHpAtk: p.lowHpAtk,
         basic: a.basic || { name: 'Attack', mult: 1 }, technique: a.technique || null, technique2: a.technique2 || null, ultimate: a.ultimate || null,
         gauge: 0, buffs: [], dots: [], stun: 0, alive: true, acted: 0,
       });
@@ -66,12 +85,14 @@
       // chapter difficulty: scale multiplies health fully and attack by half as much
       const sc = Math.max(0.1, Number(e.scale) || 1);
       const hp = Math.round(e.stats.hp * sc * (1 + B.enemyLevelHp * (lv - 1)));
+      const brkMax = B.break && e.boss ? Math.round(hp * (B.breakHpRatio || 0.5)) : 0;
       return {
         key: 'e' + w + '_' + i, side: 'enemy', idx: i, id: e.id, name: e.name, element: e.element, def: e.def || e,
         level: lv, boss: !!e.boss, maxHp: hp, hp,
         atk: Math.round(e.stats.atk * (0.5 + sc / 2) * (1 + B.enemyLevelAtk * (lv - 1))),
         speed: Math.round(e.stats.speed * (1 + B.enemyLevelSpeed * (lv - 1))),
-        crit: 5, guard: 0, regen: 0, skill: e.skill || null, enraged: false,
+        crit: 5, bf: blackFlashChance(B, e.def || e, e.id, e.name), guard: 0, regen: 0, skill: e.skill || null, enraged: false,
+        brkMax, brk: brkMax, broken: 0,
         buffs: [], dots: [], stun: 0, alive: true, acted: 0,
       };
     });
@@ -125,6 +146,16 @@
         const h = Math.round(u.maxHp * u.regen / 100);
         u.hp = Math.min(u.maxHp, u.hp + h);
         events.push({ type: 'heal', to: u.key, amount: h, quiet: true });
+      }
+      if (u.broken > 0) {
+        u.broken--;
+        tickBuffs(u);
+        events.push({ type: 'broken', to: u.key, left: u.broken });
+        if (!u.broken) {
+          u.brk = u.brkMax;
+          events.push({ type: 'breakEnd', to: u.key });
+        }
+        continue;
       }
       if (u.stun > 0) {
         u.stun--;
@@ -186,17 +217,37 @@
     return [t || foes[0]];
   }
 
-  function hit(S, from, to, mult, events, label) {
+  function hit(S, from, to, mult, events, label, kind) {
     if (!to.alive) return 0;
     const B = S.B;
     const em = S.R.elementMult(from.element, to.element);
-    const crit = S.rng() * 100 < from.crit;
+    // Black Flash: normal attacks and skills only; it replaces a crit
+    const canBf = kind === 'attack' || kind === 'technique' || kind === 'skill';
+    const blackFlash = canBf && from.bf > 0 && S.rng() * 100 < from.bf;
+    const crit = !blackFlash && S.rng() * 100 < from.crit;
     const varr = 1 - B.variance + S.rng() * B.variance * 2;
-    let dmg = atkOf(from) * mult * em * varr * (crit ? B.critMult : 1) * (1 - (to.guard || 0) / 100);
+    const brokenMult = to.broken > 0 ? (B.breakDamageMult || 1) : 1;
+    let dmg = atkOf(from) * mult * em * varr * (crit ? B.critMult : 1) * (blackFlash ? B.blackFlashMult : 1) * brokenMult * (1 - (to.guard || 0) / 100);
     dmg = Math.max(1, Math.round(dmg));
     to.hp = Math.max(0, to.hp - dmg);
-    events.push({ type: 'damage', from: from.key, to: to.key, amount: dmg, crit, adv: em > 1 ? 'strong' : em < 1 ? 'weak' : '', label });
+    const ev = { type: 'damage', from: from.key, to: to.key, amount: dmg, crit, adv: em > 1 ? 'strong' : em < 1 ? 'weak' : '', label };
+    if (blackFlash) ev.blackFlash = true;
+    if (brokenMult > 1) ev.broken = true;
+    events.push(ev);
+    if (blackFlash && from.side === 'ally' && from.ultimate) from.gauge = Math.min(B.gaugeMax, from.gauge + (B.blackFlashGauge || 0));
     if (to.side === 'ally') to.gauge = Math.min(B.gaugeMax, to.gauge + B.gaugePerHitTaken);
+    // Break gauge (bosses)
+    if (to.brkMax && !to.broken && to.hp > 0) {
+      let dec = dmg;
+      if (kind !== 'attack') dec *= B.breakSkillMult || 1;
+      if (em > 1) dec *= B.breakAdvMult || 1;
+      to.brk = Math.max(0, to.brk - Math.round(dec));
+      if (to.brk <= 0) {
+        to.broken = B.breakTurns || 2;
+        to.stun = 0;
+        events.push({ type: 'break', to: to.key, turns: to.broken });
+      }
+    }
     if (to.boss && !to.enraged && to.hp > 0 && to.hp <= to.maxHp * B.bossEnrageAt) {
       to.enraged = true;
       events.push({ type: 'enrage', to: to.key });
@@ -262,7 +313,7 @@
     const supportOnly = spec.target === 'allies';
     const targets = supportOnly ? [] : pickTargets(S, actor, action && action.target, spec.target || 'single');
     let landed = 0;
-    if (spec.mult > 0) targets.forEach((t) => { if (hit(S, actor, t, spec.mult, events, spec.name) > 0) landed++; });
+    if (spec.mult > 0) targets.forEach((t) => { if (hit(S, actor, t, spec.mult, events, spec.name, spec.kind) > 0) landed++; });
     applyEffect(S, actor, targets.filter((t) => t.alive), spec.effect, events);
     if (actor.side === 'ally') {
       if (spec.kind === 'attack' && landed) {

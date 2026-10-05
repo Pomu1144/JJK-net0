@@ -23,8 +23,8 @@
     ['Build a team', 'Formation › Team Formation: put 4 sorcerers in the Main line and 1 in Backup. The Backup does not fight; its support skill lifts the whole team.'],
     ['Fight', 'Missions: pick a stage. Attack builds cursed energy (呪力); Skill 1 and Skill 2 spend it; the Ultimate charges as you fight.'],
     ['Types', '影 Blue beats 夜 Green, 夜 Green beats 幻 Red, 幻 Red beats 影 Blue; 行 Yellow is strong against curses.'],
-    ['Grow', 'Formation › Enhance Sorcerers: feed talismans for EXP. Buy more in the Shop, and claim the daily gift every day.'],
-    ['Summon', 'Spend Cursed Cubes or tickets. Every 10x summon guarantees an SR or better.'],
+    ['Grow', 'Formation › Enhance Sorcerers: use Training Lights (and JP) for EXP. Farm them in the Training Light Quest, and claim the daily gift every day.'],
+    ['Summon', '300 Cubes a draw, 3,000 for 10. Each pickup draw earns a Gacha Point; 250 points exchange for a featured unit.'],
   ];
 
   const here = (document.currentScript && document.currentScript.src) || '';

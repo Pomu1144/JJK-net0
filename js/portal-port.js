@@ -13,7 +13,7 @@
  *   PortalPort.deposit(cur, n)     game -> hub wallet   (cur: 'coins' | 'premium')
  *   PortalPort.withdraw(cur, n)    hub wallet -> game
  *
- * Currency mapping: Yen (soft) <-> 'coins', Cursed Cubes (premium) <-> 'premium'.
+ * Currency mapping: JP (soft, saved as currency.yen) <-> 'coins', Cubes (premium) <-> 'premium'.
  * Transfers are idempotent: each has a txId from PortalSDK.newTxId() and is kept
  * as pending in the save (save.portal.pendingTx, written in the same atomic
  * save as the local balance change) until the hub answers. A refusal undoes it;
@@ -213,7 +213,7 @@
       s.portal.pendingTx = (s.portal.pendingTx || []).concat([tx]);
       return true;
     });
-    if (!ok) throw new Error('Not enough ' + (currency === 'coins' ? 'Yen' : 'Cursed Cubes') + '.');
+    if (!ok) throw new Error('Not enough ' + (currency === 'coins' ? 'JP' : 'Cubes') + '.');
     return settle(tx);
   }
 

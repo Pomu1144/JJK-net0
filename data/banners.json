@@ -7,7 +7,7 @@
    "subtitle": "Standard banner — every sorcerer and curse",
    "featured": [],
    "element": "Wisdom",
-   "pityAt": 0,
+   "exchangeAt": 0,
    "hero": "yuta_601",
    "bg": "assets/pp/memories/someday-i-ll-be-with-everyone/art.webp"
   },
@@ -23,7 +23,7 @@
     "gojo_9005"
    ],
    "element": "Body",
-   "pityAt": 60,
+   "exchangeAt": 250,
    "hero": "satoru_strongest",
    "bg": "assets/pp/memories/the-strongest-duo/art.webp"
   },
@@ -39,26 +39,33 @@
     "mahito_609"
    ],
    "element": "Heart",
-   "pityAt": 60,
+   "exchangeAt": 250,
    "hero": "sukuna_9006",
    "bg": "assets/pp/memories/malevolent-shrine/art.webp"
   }
  ],
  "rates": {
-  "5": 85.0,
-  "6": 13.0,
-  "7": 2.0
+  "5": 97.5,
+  "6": 2.0,
+  "7": 0.5
  },
  "featuredShare": 50,
  "cost": {
   "single": {
-   "cubes": 5,
+   "cubes": 300,
    "tickets": 1
   },
   "multi": {
-   "cubes": 45,
+   "cubes": 3000,
    "tickets": 10
   }
  },
- "multiGuarantee": 5
+ "multiGuarantee": 5,
+ "gp": {
+  "exchangeAt": 250,
+  "convertPoints": 20,
+  "convertCards": 10,
+  "convertMax": 200,
+  "redeemMax": 100
+ }
 }

@@ -73,7 +73,7 @@ async function gameFlow(browser) {
   await p.waitForSelector('.home');
   await shot(p, '02-home');
   let s = await save(p);
-  check(s && s.schema === 1 && Object.keys(s.units).length === 4, 'new save with 4 starters');
+  check(s && s.schema === 2 && Object.keys(s.units).length === 4, 'new save with 4 starters');
   const keys = await p.evaluate(() => Object.keys(localStorage));
   check(keys.every((k) => k.startsWith('jjk_')), 'only jjk_ keys in localStorage: ' + keys.join(','));
 
@@ -85,7 +85,7 @@ async function gameFlow(browser) {
   await shot(p, '04-summon-results');
   await p.click('#rv-close');
   s = await save(p);
-  check(s.stats.pulls === 10 && s.currency.cubes === 55, '10x summon spent 45 cubes (cubes ' + s.currency.cubes + ')');
+  check(s.stats.pulls === 10 && s.currency.cubes === 3000, '10x summon spent 3000 cubes (cubes ' + s.currency.cubes + ')');
 
   await p.goto(BASE + 'teams.html');
   await p.click('#auto');
@@ -117,7 +117,7 @@ async function gameFlow(browser) {
   s = await save(p);
   check(s.progress['1-1'] && s.progress['1-1'].stars >= 1, 'stage 1-1 cleared with ' + (s.progress['1-1'] || {}).stars + ' stars');
   check(s.stats.wins === 1 && s.currency.yen > 5000 && s.stamina.cur === 27, 'rewards saved (yen ' + s.currency.yen + ', stamina ' + s.stamina.cur + ')');
-  check(s.currency.cubes === 60, 'first-clear bonus +5 cubes');
+  check(s.currency.cubes === 3300, 'first-clear bonus +300 cubes');
 
   // forced defeat: one 3-star unit against the final boss
   await p.evaluate(() => Save.update((st) => {
@@ -141,9 +141,16 @@ async function gameFlow(browser) {
   }
   await p.goto(BASE + 'characters.html');
   await p.click('.ucard');
-  await p.waitForSelector('[data-feed="talisman_s"]');
-  await p.click('[data-feed="talisman_s"]');
+  await p.waitForSelector('[data-feed="light_s"]');
+  const jp0 = (await save(p)).currency.yen;
+  await p.click('[data-feed="light_s"]');
+  s = await save(p);
+  check(s.currency.yen === jp0 - 60, 'Training Light (S) costs 60 JP');
   await shot(p, '10-character-detail');
+  await p.goto(BASE + 'missions.html#strengthen');
+  await p.waitForSelector('.q-card');
+  check((await p.$$('.q-card')).length === 2 && (await p.$$('.mode-card')).length === 6, 'Quest hub: 6 modes, 2 Strengthening Quests');
+  await shot(p, '10b-strengthen');
   await p.goto(BASE + 'shop.html#daily');
   await p.click('[data-buy="daily_gift"]');
   s = await save(p);
