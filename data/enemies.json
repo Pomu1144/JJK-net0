@@ -1,10 +1,12 @@
 [
  {
-  "id": "fly_head",
-  "name": "Fly Head",
-  "grade": "Grade 4",
-  "element": "Body",
-  "kanji": "蠅",
+  "id": "foe_panda_need_help",
+  "unit": "panda_need_help",
+  "name": "Panda",
+  "title": "Need help?",
+  "grade": "Defender",
+  "element": "Heart",
+  "kanji": "パンダ",
   "stats": {
    "hp": 900,
    "atk": 140,
@@ -12,14 +14,33 @@
   },
   "boss": false,
   "skill": null,
-  "art": "assets/enemies/fly_head.svg"
+  "art": "assets/pp/portraits/panda_need_help.webp"
  },
  {
-  "id": "grasshopper",
-  "name": "Grasshopper Curse",
-  "grade": "Grade 3",
+  "id": "foe_maki_longsword_battle",
+  "unit": "maki_longsword_battle",
+  "name": "Maki Zen'in",
+  "title": "Longsword Battle",
+  "grade": "Attacker",
   "element": "Skill",
-  "kanji": "蝗",
+  "kanji": "真希",
+  "stats": {
+   "hp": 900,
+   "atk": 140,
+   "speed": 80
+  },
+  "boss": false,
+  "skill": null,
+  "art": "assets/pp/portraits/maki_longsword_battle.webp"
+ },
+ {
+  "id": "foe_toge_403",
+  "unit": "toge_403",
+  "name": "Toge Inumaki",
+  "title": "Compelling Cursed Speech",
+  "grade": "Support",
+  "element": "Bravery",
+  "kanji": "狗巻",
   "stats": {
    "hp": 1400,
    "atk": 190,
@@ -27,19 +48,21 @@
   },
   "boss": false,
   "skill": {
-   "name": "Leap Slash",
+   "name": "Nodonaor",
    "mult": 1.8,
    "target": "single",
    "every": 3
   },
-  "art": "assets/enemies/grasshopper.svg"
+  "art": "assets/pp/portraits/toge_403.webp"
  },
  {
-  "id": "eye_curse",
-  "name": "Many-Eyed Curse",
-  "grade": "Grade 3",
-  "element": "Wisdom",
-  "kanji": "眼",
+  "id": "foe_saki_resolve_heart",
+  "unit": "saki_resolve_heart",
+  "name": "Saki Rindo",
+  "title": "The resolve within the heart",
+  "grade": "Attacker",
+  "element": "Skill",
+  "kanji": "凛堂",
   "stats": {
    "hp": 1300,
    "atk": 170,
@@ -47,19 +70,21 @@
   },
   "boss": false,
   "skill": {
-   "name": "Piercing Gaze",
+   "name": "Disaster transfer",
    "mult": 0.8,
    "target": "all",
    "every": 3
   },
-  "art": "assets/enemies/eye_curse.svg"
+  "art": "assets/pp/portraits/saki_resolve_heart.webp"
  },
  {
-  "id": "womb_spawn",
-  "name": "Womb Spawn",
-  "grade": "Grade 2",
+  "id": "foe_masamichi_lesson_awareness",
+  "unit": "masamichi_lesson_awareness",
+  "name": "Masamichi Yaga",
+  "title": "A Lesson In Awareness",
+  "grade": "Support",
   "element": "Heart",
-  "kanji": "胎",
+  "kanji": "夜蛾",
   "stats": {
    "hp": 2600,
    "atk": 250,
@@ -67,19 +92,21 @@
   },
   "boss": false,
   "skill": {
-   "name": "Gnash",
+   "name": "Go! Cathy!",
    "mult": 1.7,
    "target": "single",
    "every": 3
   },
-  "art": "assets/enemies/womb_spawn.svg"
+  "art": "assets/pp/portraits/masamichi_lesson_awareness.webp"
  },
  {
-  "id": "cursed_womb",
-  "name": "Special Grade Cursed Womb",
-  "grade": "Special Grade",
-  "element": "Heart",
-  "kanji": "呪胎",
+  "id": "boss_masamichi_cursed_corpse",
+  "unit": "masamichi_cursed_corpse",
+  "name": "Masamichi Yaga",
+  "title": "Cursed Corpse Battle",
+  "grade": "Principal",
+  "element": "Bravery",
+  "kanji": "夜蛾",
   "stats": {
    "hp": 11000,
    "atk": 360,
@@ -87,7 +114,7 @@
   },
   "boss": true,
   "skill": {
-   "name": "Womb Shriek",
+   "name": "Thorough Discipline! Cathy!",
    "mult": 1.1,
    "target": "all",
    "every": 3,
@@ -97,14 +124,16 @@
     "turns": 2
    }
   },
-  "art": "assets/enemies/cursed_womb.svg"
+  "art": "assets/pp/portraits/masamichi_cursed_corpse.webp"
  },
  {
-  "id": "transfigured",
-  "name": "Transfigured Human",
-  "grade": "Grade 3",
+  "id": "foe_junpei_value_life",
+  "unit": "junpei_value_life",
+  "name": "Junpei Yoshino",
+  "title": "The Value of Life",
+  "grade": "Attacker",
   "element": "Body",
-  "kanji": "改",
+  "kanji": "順平",
   "stats": {
    "hp": 2000,
    "atk": 230,
@@ -112,17 +141,85 @@
   },
   "boss": false,
   "skill": {
-   "name": "Flail",
+   "name": "\"Moon Dregs\"",
    "mult": 1.6,
    "target": "single",
    "every": 3
   },
-  "art": "assets/enemies/transfigured.svg"
+  "art": "assets/pp/portraits/junpei_value_life.webp"
  },
  {
-  "id": "mahito_boss",
+  "id": "foe_kaito_his_resolve",
+  "unit": "kaito_his_resolve",
+  "name": "Kaito Yuki",
+  "title": "His Resolve As A Sorcerer",
+  "grade": "Supporter",
+  "element": "Skill",
+  "kanji": "Ka",
+  "stats": {
+   "hp": 2000,
+   "atk": 230,
+   "speed": 95
+  },
+  "boss": false,
+  "skill": {
+   "name": "Defend wall",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/kaito_his_resolve.webp"
+ },
+ {
+  "id": "foe_saki_bring_on",
+  "unit": "saki_bring_on",
+  "name": "Saki Rindo",
+  "title": "Bring On The Fight",
+  "grade": "Defender",
+  "element": "Bravery",
+  "kanji": "凛堂",
+  "stats": {
+   "hp": 1300,
+   "atk": 170,
+   "speed": 90
+  },
+  "boss": false,
+  "skill": {
+   "name": "Hey! This is superior!",
+   "mult": 0.8,
+   "target": "all",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/saki_bring_on.webp"
+ },
+ {
+  "id": "foe_junpei_misunderstand_value",
+  "unit": "junpei_misunderstand_value",
+  "name": "Junpei Yoshino",
+  "title": "Don't Misunderstand the Value of Life",
+  "grade": "Attacker",
+  "element": "Bravery",
+  "kanji": "順平",
+  "stats": {
+   "hp": 2600,
+   "atk": 250,
+   "speed": 100
+  },
+  "boss": false,
+  "skill": {
+   "name": "Poison Stab",
+   "mult": 1.7,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/junpei_misunderstand_value.webp"
+ },
+ {
+  "id": "boss_mahito_609",
+  "unit": "mahito_609",
   "name": "Mahito",
-  "grade": "Special Grade",
+  "title": "The inspiration of death",
+  "grade": "Special Grade Curse",
   "element": "Skill",
   "kanji": "真人",
   "stats": {
@@ -132,7 +229,7 @@
   },
   "boss": true,
   "skill": {
-   "name": "Idle Transfiguration",
+   "name": "Domain Expansion: Self-Embodiment of Perfection",
    "mult": 2.4,
    "target": "single",
    "every": 3,
@@ -142,14 +239,16 @@
     "turns": 2
    }
   },
-  "art": "assets/pp/portraits/mahito_boss.webp"
+  "art": "assets/pp/portraits/mahito_609.webp"
  },
  {
-  "id": "cursed_corpse",
-  "name": "Cursed Corpse",
-  "grade": "Grade 2",
-  "element": "Bravery",
-  "kanji": "骸",
+  "id": "foe_miwa_302",
+  "unit": "miwa_302",
+  "name": "Kasumi Miwa",
+  "title": "Firm Interception",
+  "grade": "Defender",
+  "element": "Heart",
+  "kanji": "Ka",
   "stats": {
    "hp": 2600,
    "atk": 290,
@@ -157,18 +256,240 @@
   },
   "boss": false,
   "skill": {
-   "name": "Rampage",
+   "name": "New Shadow Style Simple Domain",
    "mult": 1.6,
    "target": "single",
    "every": 3
   },
-  "art": "assets/enemies/cursed_corpse.svg"
+  "art": "assets/pp/portraits/miwa_302.webp"
  },
  {
-  "id": "todo_boss",
-  "name": "Aoi Todo",
-  "grade": "Grade 1",
+  "id": "foe_mai_303",
+  "unit": "mai_303",
+  "name": "Mai Ze’nin",
+  "title": "Calculated Shot",
+  "grade": "Obstructor",
   "element": "Bravery",
+  "kanji": "真依",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "Support shooting",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/mai_303.webp"
+ },
+ {
+  "id": "foe_mechamaru_sword_option",
+  "unit": "mechamaru_sword_option",
+  "name": "Ultimate Mechamaru",
+  "title": "Sword Option",
+  "grade": "Attacker",
+  "element": "Bravery",
+  "kanji": "与",
+  "stats": {
+   "hp": 1400,
+   "atk": 190,
+   "speed": 120
+  },
+  "boss": false,
+  "skill": {
+   "name": "Ultra Spin",
+   "mult": 1.8,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/mechamaru_sword_option.webp"
+ },
+ {
+  "id": "foe_kamo_405",
+  "unit": "kamo_405",
+  "name": "Noritoshi Kamo",
+  "title": "The determination within the bloodline",
+  "grade": "Attacker",
+  "element": "Body",
+  "kanji": "加茂",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "Slicing Exorcism",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/kamo_405.webp"
+ },
+ {
+  "id": "foe_yoshinobu_cursed_energy",
+  "unit": "yoshinobu_cursed_energy",
+  "name": "Yoshinobu Gakuganji",
+  "title": "Cursed Energy Melody",
+  "grade": "Debuffer",
+  "element": "Skill",
+  "kanji": "楽巌寺",
+  "stats": {
+   "hp": 1300,
+   "atk": 170,
+   "speed": 90
+  },
+  "boss": false,
+  "skill": {
+   "name": "Cursed Energy Beat",
+   "mult": 0.8,
+   "target": "all",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/yoshinobu_cursed_energy.webp"
+ },
+ {
+  "id": "foe_momo_304",
+  "unit": "momo_304",
+  "name": "Momo Nishimiya",
+  "title": "Aerial Reconnaissance",
+  "grade": "Obstructor",
+  "element": "Skill",
+  "kanji": "西宮",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "The whirlwind of cursed energy",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/momo_304.webp"
+ },
+ {
+  "id": "foe_mechamaru_305",
+  "unit": "mechamaru_305",
+  "name": "Ultimate Mechamaru",
+  "title": "Mode: Albatross",
+  "grade": "Attacker",
+  "element": "Skill",
+  "kanji": "与",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "Ultra Cannon",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/mechamaru_305.webp"
+ },
+ {
+  "id": "foe_kasumi_zanshin",
+  "unit": "kasumi_zanshin",
+  "name": "Kasumi Miwa",
+  "title": "Zanshin",
+  "grade": "Defender",
+  "element": "Body",
+  "kanji": "Ka",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "Sword sheathing",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/kasumi_zanshin.webp"
+ },
+ {
+  "id": "foe_aoi_rowdy_first",
+  "unit": "aoi_rowdy_first",
+  "name": "Aoi Todo",
+  "title": "Rowdy First Class",
+  "grade": "Supporter",
+  "element": "Bravery",
+  "kanji": "東堂",
+  "stats": {
+   "hp": 2600,
+   "atk": 250,
+   "speed": 100
+  },
+  "boss": false,
+  "skill": {
+   "name": "Heavy Blow",
+   "mult": 1.7,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/aoi_rowdy_first.webp"
+ },
+ {
+  "id": "foe_noritoshi_blood_gosanke",
+  "unit": "noritoshi_blood_gosanke",
+  "name": "Noritoshi Kamo",
+  "title": "Blood of the Gosanke",
+  "grade": "Attacker",
+  "element": "Body",
+  "kanji": "加茂",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "Fitful shooting",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/noritoshi_blood_gosanke.webp"
+ },
+ {
+  "id": "foe_momo_underestimate",
+  "unit": "momo_underestimate",
+  "name": "Momo Nishimiya",
+  "title": "Don't underestimate me",
+  "grade": "Obstructor",
+  "element": "Body",
+  "kanji": "西宮",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "Observation",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/momo_underestimate.webp"
+ },
+ {
+  "id": "boss_todo_504",
+  "unit": "todo_504",
+  "name": "Aoi Todo",
+  "title": "Memories of Friendship",
+  "grade": "Grade 1 Sorcerer",
+  "element": "Heart",
   "kanji": "東堂",
   "stats": {
    "hp": 40000,
@@ -177,7 +498,7 @@
   },
   "boss": true,
   "skill": {
-   "name": "Boogie Woogie",
+   "name": "My Best Friend",
    "mult": 2.0,
    "target": "single",
    "every": 3,
@@ -186,14 +507,16 @@
     "chance": 40
    }
   },
-  "art": "assets/pp/portraits/todo_boss.webp"
+  "art": "assets/pp/portraits/todo_504.webp"
  },
  {
-  "id": "cursed_bud",
-  "name": "Cursed Bud",
-  "grade": "Grade 2",
-  "element": "Heart",
-  "kanji": "芽",
+  "id": "foe_aoi_fight_together",
+  "unit": "aoi_fight_together",
+  "name": "Aoi Todo",
+  "title": "Fight Together with Takada-chan",
+  "grade": "Attacker",
+  "element": "Body",
+  "kanji": "東堂",
   "stats": {
    "hp": 2400,
    "atk": 260,
@@ -201,17 +524,19 @@
   },
   "boss": false,
   "skill": {
-   "name": "Drain",
+   "name": "Special Grade Cursed Tool \"Playful Cloud\"",
    "mult": 1.5,
    "target": "single",
    "every": 3
   },
-  "art": "assets/enemies/cursed_bud.svg"
+  "art": "assets/pp/portraits/aoi_fight_together.webp"
  },
  {
-  "id": "hanami_boss",
+  "id": "boss_hanami_508",
+  "unit": "hanami_508",
   "name": "Hanami",
-  "grade": "Special Grade",
+  "title": "The Joys of Battle",
+  "grade": "Special Grade Curse",
   "element": "Heart",
   "kanji": "花御",
   "stats": {
@@ -221,7 +546,7 @@
   },
   "boss": true,
   "skill": {
-   "name": "Cursed Buds",
+   "name": "Domain Expansion \"Ceremonial Sea of Light\"",
    "mult": 1.3,
    "target": "all",
    "every": 3,
@@ -231,14 +556,16 @@
     "turns": 2
    }
   },
-  "art": "assets/pp/portraits/hanami_boss.webp"
+  "art": "assets/pp/portraits/hanami_508.webp"
  },
  {
-  "id": "shibuya_curse",
-  "name": "Shibuya Curse",
-  "grade": "Grade 2",
-  "element": "Wisdom",
-  "kanji": "渋",
+  "id": "foe_geto_604",
+  "unit": "geto_604",
+  "name": "Suguru Geto",
+  "title": "For the Justice",
+  "grade": "Attacker",
+  "element": "Body",
+  "kanji": "夏油",
   "stats": {
    "hp": 4200,
    "atk": 430,
@@ -246,19 +573,43 @@
   },
   "boss": false,
   "skill": {
-   "name": "Veil Crush",
+   "name": "Cursed Spirit Manipulation (2)",
    "mult": 1.5,
    "target": "single",
    "every": 3
   },
-  "art": "assets/enemies/shibuya_curse.svg"
+  "art": "assets/pp/portraits/geto_604.webp"
  },
  {
-  "id": "finger_bearer",
-  "name": "Finger Bearer",
-  "grade": "Grade 1",
-  "element": "Body",
-  "kanji": "指",
+  "id": "foe_suguru_protecting_non",
+  "unit": "suguru_protecting_non",
+  "name": "Suguru Geto",
+  "title": "For protecting non-jujutsu sorcerer",
+  "grade": "Debuffer",
+  "element": "Skill",
+  "kanji": "夏油",
+  "stats": {
+   "hp": 4200,
+   "atk": 430,
+   "speed": 120
+  },
+  "boss": false,
+  "skill": {
+   "name": "Cursed Spirit Manipulation (2)",
+   "mult": 1.5,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/pp/portraits/suguru_protecting_non.webp"
+ },
+ {
+  "id": "foe_mahito_609",
+  "unit": "mahito_609",
+  "name": "Mahito",
+  "title": "The inspiration of death",
+  "grade": "Attacker",
+  "element": "Skill",
+  "kanji": "真人",
   "stats": {
    "hp": 7800,
    "atk": 560,
@@ -266,19 +617,21 @@
   },
   "boss": false,
   "skill": {
-   "name": "Finger Burst",
+   "name": "Idle Transfiguration",
    "mult": 1.0,
    "target": "all",
    "every": 3
   },
-  "art": "assets/enemies/finger_bearer.svg"
+  "art": "assets/pp/portraits/mahito_609.webp"
  },
  {
-  "id": "smallpox",
-  "name": "Smallpox Deity",
-  "grade": "Special Grade",
-  "element": "Wisdom",
-  "kanji": "疱瘡",
+  "id": "foe_hanami_508",
+  "unit": "hanami_508",
+  "name": "Hanami",
+  "title": "The Joys of Battle",
+  "grade": "Debuffer",
+  "element": "Heart",
+  "kanji": "花御",
   "stats": {
    "hp": 11000,
    "atk": 640,
@@ -286,7 +639,7 @@
   },
   "boss": false,
   "skill": {
-   "name": "Coffin Countdown",
+   "name": "Beautiful Earth",
    "mult": 1.9,
    "target": "single",
    "every": 3,
@@ -295,14 +648,16 @@
     "chance": 35
    }
   },
-  "art": "assets/enemies/smallpox.svg"
+  "art": "assets/pp/portraits/hanami_508.webp"
  },
  {
-  "id": "dagon_boss",
-  "name": "Dagon",
-  "grade": "Special Grade",
-  "element": "Skill",
-  "kanji": "陀艮",
+  "id": "boss_toji_602",
+  "unit": "toji_602",
+  "name": "Toji Fushiguro",
+  "title": "The Sorcerer Killer",
+  "grade": "Sorcerer Killer",
+  "element": "Heart",
+  "kanji": "甚爾",
   "stats": {
    "hp": 90000,
    "atk": 1500,
@@ -310,18 +665,20 @@
   },
   "boss": true,
   "skill": {
-   "name": "Death Swarm",
+   "name": "All things I can handle",
    "mult": 1.4,
    "target": "all",
    "every": 3
   },
-  "art": "assets/enemies/dagon_boss.svg"
+  "art": "assets/pp/portraits/toji_602.webp"
  },
  {
-  "id": "jogo_boss",
-  "name": "Jogo",
-  "grade": "Special Grade",
-  "element": "Heart",
+  "id": "boss_jogo_610",
+  "unit": "jogo_610",
+  "name": "Jogo (Cursed Spirit's Pride)",
+  "title": "Cursed Spirit's Pride",
+  "grade": "Special Grade Curse",
+  "element": "Body",
   "kanji": "漏瑚",
   "stats": {
    "hp": 110000,
@@ -330,7 +687,7 @@
   },
   "boss": true,
   "skill": {
-   "name": "Maximum: Meteor",
+   "name": "Domain Expansion \"Coffin of the Iron Mountain\"",
    "mult": 1.6,
    "target": "all",
    "every": 3,
@@ -340,11 +697,13 @@
     "turns": 2
    }
   },
-  "art": "assets/pp/portraits/jogo_boss.webp"
+  "art": "assets/pp/portraits/jogo_610.webp"
  },
  {
-  "id": "sukuna_boss",
+  "id": "boss_sukuna_9006",
+  "unit": "sukuna_9006",
   "name": "Ryomen Sukuna",
+  "title": "King of Curses",
   "grade": "King of Curses",
   "element": "Body",
   "kanji": "宿儺",
@@ -355,7 +714,7 @@
   },
   "boss": true,
   "skill": {
-   "name": "Malevolent Shrine",
+   "name": "Domain Expansion: Malevolent Shrine",
    "mult": 1.7,
    "target": "all",
    "every": 3,
@@ -365,6 +724,6 @@
     "turns": 2
    }
   },
-  "art": "assets/enemies/sukuna_boss.svg"
+  "art": "assets/characters/sukuna_9006/portrait_7S.webp"
  }
 ]

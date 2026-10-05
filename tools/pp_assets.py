@@ -33,7 +33,6 @@ def main(src_dir):
     # Every unit gets a 3:4 portrait; tools/pp-art.json can move the crop.
     units = json.load(open(os.path.join(ROOT, 'tools', 'pp-units.json')))
     crops = [(u['id'], u['slug'], cfg['characters'].get(u['id'], {}).get('x', 0.5)) for u in units]
-    crops += [(gid, c['unit'], c['x']) for gid, c in cfg['enemies'].items()]
     for gid, unit, x in crops:
         art = os.path.join(DEST, 'units', unit, 'art.webp')
         if not os.path.exists(art):

@@ -114,24 +114,6 @@
       "x": 0.72
     }
   },
-  "enemies": {
-    "mahito_boss": {
-      "unit": "mahito-the-inspiration-of-death",
-      "x": 0.5
-    },
-    "todo_boss": {
-      "unit": "aoi-todo-rowdy-first-class",
-      "x": 0.36
-    },
-    "hanami_boss": {
-      "unit": "hanami-the-joys-of-battle",
-      "x": 0.62
-    },
-    "jogo_boss": {
-      "unit": "jogo-cursed-spirit-s-pride",
-      "x": 0.45
-    }
-  },
   "chapters": {
     "ch1": "sukuna-s-vessel",
     "ch2": "instincts-of-a-curse",

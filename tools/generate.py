@@ -113,11 +113,6 @@ def pp_art(gid, slug):
     return art
 
 
-def pp_unit_art(gid, group):
-    c = PP[group].get(gid)
-    return pp_art(gid, c['unit']) if c else None
-
-
 RARITY_LABEL = {5: 'SR', 6: 'SSR', 7: 'SSR'}
 ELEMENT_COLOR = {'Heart': 'Red', 'Body': 'Blue', 'Skill': 'Green', 'Bravery': 'Yellow', 'Wisdom': 'Purple'}
 
@@ -191,93 +186,95 @@ ENEMIES = [
      {'name': 'Malevolent Shrine', 'mult': 1.7, 'target': 'all', 'every': 3, 'effect': {'type': 'burn', 'pct': 5, 'turns': 2}}),
 ]
 
-def enemy_svg(e):
-    eid, name, grade, el, hp, atk, spd, kanji, (look, eyes), boss, _ = e
-    E = ELEMENTS[el]
-    r = rnd_for(eid)
-    body = ''
-    if look in ('blob', 'womb', 'spike', 'worm', 'plant', 'octo'):
-        n = 14
-        pts = []
-        for i in range(n):
-            ang = 2 * math.pi * i / n
-            rad = 92 + r.uniform(-14, 14)
-            if look == 'spike' and i % 2 == 0:
-                rad += 30
-            pts.append((150 + math.cos(ang) * rad * 1.05, 200 + math.sin(ang) * rad * (1.15 if look == 'worm' else 1.0)))
-        # smooth closed outline: quadratic segments through the midpoints
-        segs = []
-        for i in range(n):
-            p1 = pts[(i + 1) % n]
-            m = ((pts[(i + 1) % n][0] + pts[(i + 2) % n][0]) / 2, (pts[(i + 1) % n][1] + pts[(i + 2) % n][1]) / 2)
-            segs.append(f'Q{p1[0]:.0f},{p1[1]:.0f} {m[0]:.0f},{m[1]:.0f}')
-        m0 = ((pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2)
-        d = f'M{m0[0]:.0f},{m0[1]:.0f} ' + ' '.join(segs) + 'z'
-        extra = ''
-        if look == 'octo':
-            extra = ''.join(f'<path d="M{110+i*20},270 q{r.randint(-20,20)},50 {r.randint(-30,30)},100" stroke="url(#eb-{eid})" stroke-width="16" stroke-linecap="round" fill="none"/>' for i in range(5))
-        if look == 'plant':
-            extra = '<path d="M100,120 C80,80 70,60 50,50 M200,120 C220,80 230,60 250,50" stroke="#d5dcb4" stroke-width="10" fill="none" stroke-linecap="round"/>'
-        if look == 'worm':
-            extra = ''.join(f'<path d="M{80+i*28},{280+r.randint(-6,6)} l{r.randint(-6,6)},34" stroke="#0b0b10" stroke-width="7" stroke-linecap="round"/>' for i in range(6))
-        body = extra + f'<path d="{d}" fill="url(#eb-{eid})" stroke="{E["glow"]}" stroke-opacity=".5" stroke-width="3"/>'
-    elif look == 'humanoid':
-        body = (f'<path d="M50,400 C60,310 100,280 150,280 C200,280 240,310 250,400z" fill="url(#eb-{eid})" stroke="{E["glow"]}" stroke-opacity=".5" stroke-width="3"/>'
-                f'<ellipse cx="150" cy="190" rx="62" ry="72" fill="url(#eb-{eid})" stroke="{E["glow"]}" stroke-opacity=".5" stroke-width="3"/>'
-                f'<path d="M96,160 C100,100 200,100 204,160 C190,140 110,140 96,160z" fill="#0b0b10"/>')
-        if eid == 'sukuna_boss':
-            body += '<path d="M112,214 l14,-6 M188,214 l-14,-6 M118,236 l12,-4 M182,236 l-12,-4" stroke="#0b0b10" stroke-width="4"/>'
-        if eid == 'mahito_boss':
-            body += '<path d="M120,170 l40,60 M128,180 l-8,6 M140,198 l-8,6 M152,214 l-8,6" stroke="#2a3340" stroke-width="3"/>'
-    elif look == 'volcano':
-        body = (f'<path d="M50,400 C60,310 100,290 150,290 C200,290 240,310 250,400z" fill="#3a2a1e"/>'
-                f'<path d="M84,280 L112,120 L188,120 L216,280z" fill="#8c6c4b" stroke="#ffb347" stroke-opacity=".6" stroke-width="3"/>'
-                '<path d="M112,120 q38,-26 76,0" fill="#ff7a2e"/><path d="M124,112 q10,-40 26,-56 q-4,30 10,44 q10,-24 8,-50 q22,24 14,62z" fill="#ffb347"/>')
-    # eyes
-    eye_svg = ''
-    if look == 'volcano':
-        eye_svg = '<circle cx="150" cy="200" r="22" fill="#fff6dc"/><circle cx="150" cy="200" r="9" fill="#250d02"/>'
-    elif look == 'humanoid':
-        eye_svg = f'<path d="M118,196 q14,-8 26,0 M156,196 q14,-8 26,0" stroke="{E["glow"]}" stroke-width="5" stroke-linecap="round" fill="none"/>'
-        if eyes >= 4:
-            eye_svg += f'<path d="M124,176 q10,-6 18,0 M158,176 q10,-6 18,0" stroke="{E["glow"]}" stroke-width="3" stroke-linecap="round" fill="none"/>'
-    else:
-        for i in range(eyes):
-            ex = 150 + (r.uniform(-50, 50) if eyes > 1 else 0)
-            ey = 180 + (r.uniform(-40, 30) if eyes > 2 else 0)
-            if eyes == 2:
-                ex = 120 + i * 60; ey = 180
-            rr = r.uniform(9, 17) if eyes > 2 else 16
-            eye_svg += f'<ellipse cx="{ex:.0f}" cy="{ey:.0f}" rx="{rr:.0f}" ry="{rr*0.8:.0f}" fill="#fff6dc"/><circle cx="{ex:.0f}" cy="{ey:.0f}" r="{rr*0.42:.0f}" fill="#120808"/>'
-        eye_svg += '<path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/>' + ''.join(f'<path d="M{110+i*14},238 l6,10 l6,-10" fill="#f6ecd2"/>' for i in range(6))
-    crown = ''
-    if boss:
-        crown = '<path d="M90,96 l14,-34 l16,26 l14,-38 l16,30 l16,-30 l14,38 l16,-26 l14,34" fill="none" stroke="#e8433a" stroke-width="5" stroke-linejoin="round"/>'
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
-<defs>
-<radialGradient id="eb-{eid}" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="{E['c1']}"/><stop offset="0.6" stop-color="{E['c2']}"/><stop offset="1" stop-color="#050507"/></radialGradient>
-<radialGradient id="ea-{eid}" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="{'#ff3b30' if boss else E['glow']}" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-</defs>
-<circle cx="150" cy="200" r="160" fill="url(#ea-{eid})"/>
-<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="{150 if len(kanji)==1 else 110}" font-weight="700" fill="#000" fill-opacity="0.35">{kanji}</text>
-{body}
-{eye_svg}
-{crown}
-</svg>
-'''
+# Every enemy is a character with real art. The stat templates above (and
+# the waves that use them) set each fight's power; CAST decides who fills
+# each template in each chapter, cycling through the list so a wave of the
+# same template shows different opponents.
+CAST = {
+    'ch1': {'fly_head': ['panda_need_help', 'maki_longsword_battle'], 'grasshopper': ['toge_403'],
+            'eye_curse': ['saki_resolve_heart'], 'womb_spawn': ['masamichi_lesson_awareness'],
+            'cursed_womb': ['masamichi_cursed_corpse']},
+    'ch2': {'transfigured': ['junpei_value_life', 'kaito_his_resolve'], 'eye_curse': ['saki_bring_on'],
+            'womb_spawn': ['junpei_misunderstand_value'], 'grasshopper': ['kaito_his_resolve'], 'mahito_boss': ['mahito_609']},
+    'ch3': {'cursed_corpse': ['miwa_302', 'mai_303', 'kamo_405', 'momo_304', 'mechamaru_305', 'kasumi_zanshin', 'noritoshi_blood_gosanke', 'momo_underestimate'],
+            'grasshopper': ['mechamaru_sword_option'], 'eye_curse': ['yoshinobu_cursed_energy'], 'womb_spawn': ['aoi_rowdy_first'],
+            'todo_boss': ['todo_504'], 'cursed_bud': ['yoshinobu_cursed_energy', 'aoi_fight_together', 'mechamaru_sword_option'],
+            'hanami_boss': ['hanami_508']},
+    'ch4': {'shibuya_curse': ['geto_604', 'suguru_protecting_non'], 'finger_bearer': ['mahito_609'],
+            'smallpox': ['hanami_508'], 'dagon_boss': ['toji_602'], 'jogo_boss': ['jogo_610'], 'sukuna_boss': ['sukuna_9006']},
+}
+# Chapter / stage text that matches the new opponents.
+STORY = {
+    'ch1': {'name': 'Entrance Exam', 'kanji': '入学試験', 'desc': 'Principal Yaga tests the new first-year, and the second-years want a spar.',
+            'stages': {'1-1': ('Training Grounds', 'Panda and Maki want to see what the new kid can do.'),
+                       '1-2': ('Rooftop Spar', 'Toge joins in. Keep your guard up.'),
+                       '1-3': ('Night Practice', 'Saki Rindo shows up with something to prove.'),
+                       '1-4': ("The Principal's Office", 'Cursed corpses, and the man who sews them.'),
+                       '1-5': ('Masamichi Yaga', 'Why do you want to be a sorcerer? Answer with your fists.')}},
+    'ch2': {'stages': {'2-1': ('Movie Theatre', 'Something happened at the cinema. Junpei was there.'),
+                       '2-2': ('Satomi Sewers', 'Following the trail underground.'),
+                       '2-3': ('Junpei’s School', 'Junpei has chosen a side.'),
+                       '2-4': ('Lost Resolve', 'Every sorcerer you meet doubts you now.'),
+                       '2-5': ('Mahito', 'The curse that toys with souls.')}},
+    'ch3': {'stages': {'3-1': ('Team Battle Begins', 'Kyoto’s students split up to hunt you down.'),
+                       '3-2': ('Forest Ambush', 'Miwa, Mai and Momo set a trap.'),
+                       '3-3': ('What Type of Woman?', 'Aoi Todo asks the only question that matters.'),
+                       '3-4': ('The Veil Falls', 'The exchange is interrupted; even Kyoto’s principal moves.'),
+                       '3-5': ('Hanami', 'A cursed spirit of the forest, here to stop it all.')}},
+    'ch4': {'stages': {'4-1': ('Veil Descends', 'Shibuya on Halloween night. Someone with Geto’s face is waiting.'),
+                       '4-2': ('Hanami’s Last Stand', 'Mahito and Hanami hold the station.'),
+                       '4-3': ('The Sorcerer Killer', 'A man who should be dead walks the platform.'),
+                       '4-4': ('Jogo', 'The volcano curse, at full power.'),
+                       '4-5': ('The King of Curses', 'Ryomen Sukuna is awake.')}},
+}
 
-def build_enemies():
-    lst = []
-    for e in ENEMIES:
-        eid, name, grade, el, hp, atk, spd, kanji, look, boss, skill = e
-        lst.append({'id': eid, 'name': name, 'grade': grade, 'element': el, 'kanji': kanji,
-                    'stats': {'hp': hp, 'atk': atk, 'speed': spd}, 'boss': boss,
-                    'skill': skill, 'art': f'assets/enemies/{eid}.svg'})
-        pp = pp_unit_art(eid, 'enemies')
-        if pp:
-            lst[-1]['art'] = pp['portrait']
-        out(f'assets/enemies/{eid}.svg', enemy_svg(e))
-    return lst
+BOSS_GRADE = {'mahito_609': 'Special Grade Curse', 'hanami_508': 'Special Grade Curse', 'jogo_610': 'Special Grade Curse',
+              'sukuna_9006': 'King of Curses', 'toji_602': 'Sorcerer Killer', 'masamichi_cursed_corpse': 'Principal'}
+
+
+def cast_enemies():
+    """Rewrite every wave with the chapter's cast; return the enemy list."""
+    tpl = {e[0]: e for e in ENEMIES}
+    by_unit = {u['id']: u for u in PP_UNITS}
+    real = {c[0]: c for c in CHARS}
+    made = {}
+    for ch in MISSIONS['chapters']:
+        cast, turn = CAST[ch['id']], {}
+        story = STORY.get(ch['id'], {})
+        for k in ('name', 'kanji', 'desc'):
+            if k in story:
+                ch[k] = story[k]
+        for st in ch['stages']:
+            if st['id'] in story.get('stages', {}):
+                st['name'], st['desc'] = story['stages'][st['id']]
+            for wave in st['waves']:
+                for slot in wave:
+                    t = slot['enemy']
+                    pool = cast[t]
+                    unit = pool[turn.get(t, 0) % len(pool)]
+                    turn[t] = turn.get(t, 0) + 1
+                    eid = f'foe_{unit}' if not tpl[t][9] else f'boss_{unit}'
+                    slot['enemy'] = eid
+                    if eid in made:
+                        continue
+                    _, _, grade, _, hp, atk, spd, _, _, boss, skill = tpl[t]
+                    if unit in by_unit:
+                        u = by_unit[unit]
+                        name, el, kanji = u['name'], u['element'], u['kanji']
+                        art = f'assets/pp/portraits/{unit}.webp'
+                        sk_name = (u['skills'][1] or u['skills'][0])['name'] if not boss else u['ultimate']['name']
+                        title, role = u['title'], u['role']
+                    else:
+                        c = real[unit]
+                        name, el, kanji, title, role = c[1], c[3], c[5], c[2], 'Attacker'
+                        art = f'assets/characters/{unit}/portrait_7S.webp'
+                        sk_name = c[10]['name'] if boss else c[9]['name']
+                    made[eid] = {'id': eid, 'unit': unit, 'name': name, 'title': title,
+                                 'grade': BOSS_GRADE.get(unit, 'Grade 1 Sorcerer') if boss else role,
+                                 'element': el, 'kanji': kanji, 'stats': {'hp': hp, 'atk': atk, 'speed': spd}, 'boss': boss,
+                                 'skill': dict(skill, name=sk_name) if skill else None, 'art': art}
+    return list(made.values())
+
 
 # ---------------------------------------------------------------------------
 # Missions
@@ -306,7 +303,7 @@ MISSIONS = {'chapters': [
         stage('1-4', 'Inside the Barrier', 4, [W(('womb_spawn', 3), ('eye_curse', 4)), W(('grasshopper', 4), ('womb_spawn', 3), ('fly_head', 5)), W(('womb_spawn', 4), ('womb_spawn', 4))], 520, 34, 280, 12, drops=D_M, rec=2600, desc='The corridors twist into a curse’s domain.'),
         stage('1-5', 'Special Grade Cursed Womb', 5, [W(('womb_spawn', 4), ('womb_spawn', 4)), W(('cursed_womb', 2), ('womb_spawn', 4))], 800, 50, 420, 14, boss=True, drops=D_M, rec=3200, first={'cubes': 15, 'items': {'talisman_m': 2}}, desc='BOSS — the womb is born.'),
      ]},
-    {'id': 'ch2', 'scale': 2.0, 'name': 'Origin of Obedience', 'kanji': '幼魚と逆罰', 'arc': 'Arc II', 'element': 'Skill',
+    {'id': 'ch2', 'scale': 2.5, 'name': 'Origin of Obedience', 'kanji': '幼魚と逆罰', 'arc': 'Arc II', 'element': 'Skill',
      'desc': 'Mysterious deaths in Kawasaki. A patchwork curse is reshaping human souls.',
      'stages': [
         stage('2-1', 'Movie Theatre Murders', 5, [W(('transfigured', 4), ('transfigured', 4)), W(('transfigured', 5), ('eye_curse', 6), ('transfigured', 5))], 900, 55, 520, 12, drops=D_M, rec=4500),
@@ -315,7 +312,7 @@ MISSIONS = {'chapters': [
         stage('2-4', 'Transfigured Horde', 6, [W(('transfigured', 9), ('transfigured', 9), ('transfigured', 9)), W(('womb_spawn', 9), ('transfigured', 10)), W(('transfigured', 10), ('womb_spawn', 10), ('transfigured', 10))], 1200, 72, 820, 14, drops=D_M, rec=7000),
         stage('2-5', 'Mahito', 8, [W(('transfigured', 10), ('transfigured', 10)), W(('mahito_boss', 1), ('transfigured', 10))], 1800, 100, 1200, 18, boss=True, drops=D_L, rec=9000, first={'cubes': 20, 'items': {'talisman_l': 1}}, desc='BOSS — Mahito. Touch nothing.'),
      ]},
-    {'id': 'ch3', 'scale': 2.6, 'name': 'Kyoto Goodwill Event', 'kanji': '京都姉妹校交流会', 'arc': 'Arc III', 'element': 'Bravery',
+    {'id': 'ch3', 'scale': 3.3, 'name': 'Kyoto Goodwill Event', 'kanji': '京都姉妹校交流会', 'arc': 'Arc III', 'element': 'Bravery',
      'desc': 'Tokyo and Kyoto clash — until special grade curses crash the exchange.',
      'stages': [
         stage('3-1', 'Team Battle Begins', 6, [W(('cursed_corpse', 6), ('cursed_corpse', 6)), W(('grasshopper', 12), ('cursed_corpse', 7), ('eye_curse', 12))], 1300, 76, 900, 12, drops=D_M, rec=9500),
@@ -324,7 +321,7 @@ MISSIONS = {'chapters': [
         stage('3-4', 'The Veil Falls', 7, [W(('cursed_bud', 6), ('cursed_bud', 6), ('cursed_bud', 6)), W(('cursed_bud', 8), ('womb_spawn', 14)), W(('cursed_bud', 9), ('cursed_bud', 9), ('cursed_bud', 9))], 1600, 90, 1100, 14, drops=D_L, rec=13000),
         stage('3-5', 'Hanami', 9, [W(('cursed_bud', 10), ('cursed_bud', 10)), W(('hanami_boss', 1), ('cursed_bud', 10))], 2400, 130, 1700, 18, boss=True, drops=D_L, rec=16000, first={'cubes': 25, 'items': {'talisman_l': 2}}, desc='BOSS — a disaster curse of the forest.'),
      ]},
-    {'id': 'ch4', 'scale': 2.3, 'name': 'Shibuya Incident', 'kanji': '渋谷事変', 'arc': 'Arc IV', 'element': 'Body',
+    {'id': 'ch4', 'scale': 1.9, 'name': 'Shibuya Incident', 'kanji': '渋谷事変', 'arc': 'Arc IV', 'element': 'Body',
      'desc': 'October 31st. A veil descends over Shibuya and the worst night in jujutsu history begins.',
      'stages': [
         stage('4-1', 'Veil Descends', 8, [W(('shibuya_curse', 5), ('shibuya_curse', 5), ('shibuya_curse', 5)), W(('finger_bearer', 3), ('shibuya_curse', 6))], 2000, 110, 1500, 14, drops=D_L, rec=18000),
@@ -384,7 +381,7 @@ def main():
             b['bg'] = f'assets/pp/memories/{PP["banners"][b["id"]]}/art.webp'
     chars = build_characters()
     out('data/characters.json', chars)
-    out('data/enemies.json', build_enemies())
+    out('data/enemies.json', cast_enemies())
     out('data/missions.json', MISSIONS)
     out('data/items.json', {'items': ITEMS, 'shop': SHOP})
     out('data/banners.json', BANNERS)
