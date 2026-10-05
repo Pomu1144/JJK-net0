@@ -53,12 +53,14 @@
         <a class="side-ic" href="characters.html">${UI.icon('units')}<span>Sorcerers</span><i class="side-count">${Rules.ownedList().length}</i></a>
         <a class="side-ic" href="summon.html">${UI.icon('summon')}<span>Summon</span>${s.currency.cubes >= 3000 || s.items.ticket > 0 ? '<i class="nav-dot">!</i>' : ''}</a>
         <a class="side-ic" href="shop.html">${UI.icon('shop')}<span>Exchange</span></a>
+        <a class="side-ic" id="novice-entry" href="novice.html" hidden><span class="nv-side-ic" style="display:grid;place-items:center;width:46px;height:36px"></span><span>Novice Mission</span></a>
       </div>
       <a class="pp-parch home-quest" href="missions.html${nx ? '#' + nx.ch.id : ''}">
         <span class="quest-label">Quest</span>
         <span class="quest-next"><b>NEXT</b> ${nx ? esc(nx.st.id + ' ' + nx.st.name) : 'All cleared'}</span>
         <small class="quest-sub">${nx ? esc(nx.ch.name) + ' · ' + nx.st.stamina + ' AP' : 'Replay for 3 stars'}</small></a>
     </div>`;
+    noviceEntry();
     clearInterval(window.__homeCarousel);
     let cur = 0;
     window.__homeCarousel = setInterval(() => {
@@ -76,6 +78,26 @@
       Save.update((st2) => { st2.profile.homeUnit = nextId; });
       draw(M, B);
     });
+  }
+
+  // Novice Mission shortcut: js/pages/novice.js (window.Novice) owns the rules;
+  // the button hides once the final reward is claimed, "!" when something is claimable.
+  function noviceEntry() {
+    const paint = () => window.Novice.status().then((st) => {
+      const a = document.getElementById('novice-entry');
+      if (!a) return;
+      a.hidden = st.hidden;
+      const ic = a.querySelector('.nv-side-ic');
+      if (ic && !ic.firstChild) { ic.innerHTML = window.Novice.ticketSvg('ssr'); const sv = ic.firstChild; if (sv && sv.style) { sv.style.width = '100%'; sv.style.filter = 'drop-shadow(0 1px 2px #000)'; } }
+      let dot = a.querySelector('.nav-dot');
+      if (st.claimable && !dot) { dot = document.createElement('i'); dot.className = 'nav-dot'; dot.textContent = '!'; a.appendChild(dot); }
+      if (!st.claimable && dot) dot.remove();
+    }).catch(() => {});
+    if (window.Novice) { paint(); return; }
+    const sc = document.createElement('script');
+    sc.src = 'js/pages/novice.js';
+    sc.onload = paint;
+    document.head.appendChild(sc);
   }
 
   // Phantom Parade home header: Player Rank, AP (stamina) bar, date / time.

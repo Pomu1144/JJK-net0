@@ -57,10 +57,12 @@
       // redeemed: cards spent on that banner (max 100).
       gacha: { points: {}, converted: {}, redeemed: {} },
       quests: { day: '', runs: {} },   // Strengthening Quest runs today, by quest id
+      events: {},         // eventId -> { tokens, earned, wins, cleared: { nodeId: stars }, missions: { id: true }, bought: { id: n } }
       daily: {},          // offerId -> 'YYYY-MM-DD'
       settings: { music: true, sfx: true, volume: 70, battleSpeed: 1, autoBattle: false, reduceMotion: false },
       portal: { importedParties: [], lastPartyCards: [], pendingTx: [] },
       stats: { battles: 0, wins: 0, pulls: 0 },
+      novice: { claimed: {}, final: false },   // Novice Mission: claimed mission ids + the final SSR ticket
     };
   }
 
@@ -69,10 +71,10 @@
     if (!s || typeof s !== 'object') throw new Error('Save data is not an object');
     const b = blank(s.profile && s.profile.name);
     const out = Object.assign({}, b, s);
-    for (const k of ['profile', 'currency', 'stamina', 'items', 'settings', 'portal', 'stats', 'gacha', 'quests']) {
+    for (const k of ['profile', 'currency', 'stamina', 'items', 'settings', 'portal', 'stats', 'gacha', 'quests', 'novice']) {
       out[k] = Object.assign({}, b[k], s[k] && typeof s[k] === 'object' ? s[k] : {});
     }
-    for (const k of ['units', 'guests', 'progress', 'pity', 'daily']) {
+    for (const k of ['units', 'guests', 'progress', 'pity', 'daily', 'events']) {
       out[k] = s[k] && typeof s[k] === 'object' && !Array.isArray(s[k]) ? s[k] : {};
     }
     if (!Array.isArray(out.teams) || !out.teams.length) out.teams = b.teams;
@@ -89,6 +91,8 @@
       if (!out.gacha[k] || typeof out.gacha[k] !== 'object' || Array.isArray(out.gacha[k])) out.gacha[k] = {};
     }
     if (!out.quests.runs || typeof out.quests.runs !== 'object') out.quests.runs = {};
+    if (!out.novice.claimed || typeof out.novice.claimed !== 'object' || Array.isArray(out.novice.claimed)) out.novice.claimed = {};
+    out.novice.final = !!out.novice.final;
     if (!(Number(s.schema) >= 2)) {
       // Phantom Parade economy: Cubes are priced 300 a draw (was 5), talismans
       // became Training Lights, and the 60-pull pity became Gacha Points.

@@ -66,6 +66,7 @@
     summon: 'A draw costs 300 Cubes (10x: 3,000) or a ticket. Every draw on a pickup banner earns 1 Gacha Point; 250 points exchange for a featured unit. 20 points can be turned into 10 Gacha Point Cards for a later banner.',
     missions: 'Main Quest continues the story; Strengthening Quests give Training Lights and JP. Clear Rank: 1★ clear, 2★ at most 1 character defeated, 3★ nobody defeated. 3★ Strengthening stages can be auto-cleared.',
     shop: 'Trade JP and Cubes for Training Lights, AP and Draw Tickets. The daily gift resets every day.',
+    novice: 'Seven days of beginner missions: a new Day unlocks each day after you start. Progress counts even before a Day unlocks. Tap Challenge to go where the mission is done, Claim (or Claim All) to collect. Claim all 35 to receive an SSR-Character Guaranteed Ticket.',
     settings: 'Audio, display, account and save data. The Portal tab moves sorcerers and currency between games.',
     battle: 'Tap an enemy to target it, then choose Attack, Skill 1, Skill 2 or the Ultimate. Attacks build cursed energy (呪力); skills spend it.',
   };

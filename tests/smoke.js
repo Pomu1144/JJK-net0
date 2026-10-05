@@ -139,6 +139,12 @@ async function gameFlow(browser) {
     });
     check(ov.doc <= 0 && ov.main <= 0, pg + ': no horizontal scroll');
   }
+  // Novice Mission: 7 day tabs, 5 cards on Day 1, no horizontal page scroll
+  await p.goto(BASE + 'novice.html');
+  await p.waitForSelector('.nv-card');
+  const nv = await p.evaluate(() => ({ tabs: document.querySelectorAll('.nv-tab').length, cards: document.querySelectorAll('.nv-card').length, doc: document.documentElement.scrollWidth - innerWidth }));
+  check(nv.tabs === 7 && nv.cards === 5 && nv.doc <= 0, 'novice: 7 day tabs, 5 mission cards, no horizontal scroll');
+  await shot(p, '09b-novice');
   await p.goto(BASE + 'characters.html');
   await p.click('.ucard');
   await p.waitForSelector('[data-feed="light_s"]');
