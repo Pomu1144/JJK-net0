@@ -26,15 +26,29 @@
 .jjk-tab { border-width: 8px 12px; border-image-source: url("../assets/pp/ui/btn/tab-off.webp"); border-image-slice: 12 16 fill; padding: 0 6px; }
 .jjk-tab.active, .jjk-tab[aria-selected="true"] { border-image-source: url("../assets/pp/ui/btn/tab-on.webp"); border-image-slice: 14 18 fill; box-shadow: none; color: #fdf0a0; text-shadow: 0 1px 0 #3d3610, 0 0 5px rgba(40, 34, 4, .8); }
 
-/* bottom navigation: stone plate, gold plate when active */
-.dock-btn { border-width: 9px 22px 11px; border-image-source: url("../assets/pp/ui/btn/nav.webp"); border-image-slice: 20 50 24 fill; padding: 0 2px; }
-.dock-btn.active { border-width: 10px 22px 12px; border-image-source: url("../assets/pp/ui/btn/nav-on.webp"); border-image-slice: 22 52 26 fill; box-shadow: none; filter: drop-shadow(0 0 8px rgba(200, 186, 80, .35)) drop-shadow(0 2px 2px rgba(0, 0, 0, .55)); }
-.dock-btn.is-menu, .dock-btn.is-menu.active { border-width: 4px; border-image-source: url("../assets/pp/ui/btn/sq.webp"); border-image-slice: 14 fill; padding: 0; }
+/* bottom navigation: stone plate, gold plate when active (UI kit sheet) */
+.dock-btn { border-width: 8px 18px 12px; border-image-source: url("../assets/pp/ui/kit/nav.webp"); border-image-slice: 22 48 34 fill; padding: 0 2px; }
+.dock-btn.active { border-width: 8px 18px 12px; border-image-source: url("../assets/pp/ui/kit/nav-on.webp"); border-image-slice: 22 48 34 fill; box-shadow: none; filter: drop-shadow(0 0 8px rgba(200, 186, 80, .35)) drop-shadow(0 2px 2px rgba(0, 0, 0, .55)); }
+.dock-btn.is-menu, .dock-btn.is-menu.active { border-width: 6px; border-image-source: url("../assets/pp/ui/kit/sq.webp"); border-image-slice: 22 fill; padding: 0; }
 
 /* stone buttons (Details, Set as Home, ?, back) */
 .pp-stone { border-width: 6px 8px; border-image-source: url("../assets/pp/ui/btn/btn-grey.webp"); border-image-slice: 10 14 fill; padding: 2px 8px; }
-.help-btn, .pp-stone.sq { border-width: 8px; border-image-source: url("../assets/pp/ui/btn/sq.webp"); border-image-slice: 14 fill; padding: 0; }
+.pp-stone.sq { border-width: 7px; border-image-source: url("../assets/pp/ui/kit/sq.webp"); border-image-slice: 22 fill; padding: 0; }
+/* square icon buttons drawn straight from the kit: back, help */
+.help-btn, .jjk-icon-btn.jjk-back, .jjk-icon-btn.enh-back, .pp-stone.sq.kit-icon { border: 0; border-image: none; box-shadow: none; color: transparent; text-shadow: none; font-size: 0;
+  background: url("../assets/pp/ui/kit/sq-help.webp") center / contain no-repeat; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .55)); }
+.jjk-icon-btn.jjk-back, .jjk-icon-btn.enh-back { background-image: url("../assets/pp/ui/kit/sq-back.webp"); }
+.jjk-icon-btn.jjk-back .ic, .jjk-icon-btn.enh-back .ic, .pp-stone.sq.kit-icon .ic { display: none; }
+.pp-stone.sq.kit-expand { background-image: url("../assets/pp/ui/kit/sq-expand.webp"); }
+.pp-stone.sq.kit-profile { background-image: url("../assets/pp/ui/kit/sq-profile.webp"); }
 
 /* Enhance buttons: the parchment "Lv Enhancement" plate */
 .enh-btn { clip-path: none; background: none; box-shadow: none; border: 12px solid transparent; border-image: url("../assets/pp/ui/btn/parch.webp") 34 36 fill / 12px 13px stretch; padding: 0 2px; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5)); }
 .enh-btn:disabled { filter: grayscale(.9) brightness(.7); }
+
+/* top-bar counters: black plate with a thin gold frame (UI kit currency bar) */
+.hud-cur { background: none; box-shadow: none; border: 8px solid transparent; border-image: url("../assets/pp/ui/kit/bar.webp") 14 16 fill / 7px 8px stretch; border-radius: 0; padding: 0 4px 0 24px; }
+.hud-cur .cur-ic { left: -2px; }
+
+/* Lv / Skill enhancement plates: the kit parchment */
+.enh-btn { border-image: url("../assets/pp/ui/kit/parch.webp") 44 44 fill / 12px 13px stretch; }

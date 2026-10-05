@@ -21,7 +21,7 @@ body {
 /* full-bleed anime scene behind every page (set per page below) */
 body::before {
   content: ''; position: fixed; inset: -12px; z-index: -2; pointer-events: none;
-  background: var(--scene, none) center 40% / cover no-repeat, var(--pp-ink);
+  background: var(--scene, none) center 40% / cover no-repeat, url('../assets/pp/ui/bg-dark.webp') center / cover no-repeat, var(--pp-ink);
   filter: blur(var(--scene-blur, 2px)) saturate(1.05) brightness(var(--scene-bright, .78));
 }
 body::after {

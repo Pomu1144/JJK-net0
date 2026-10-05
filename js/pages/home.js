@@ -43,8 +43,8 @@
         </div>
         <div class="home-stones">
           <button class="pp-stone sq" id="swap" type="button" title="Change home character" aria-label="Change home character">${UI.icon('swap')}</button>
-          <a class="pp-stone sq" href="teams.html" title="${esc(team.name)}" aria-label="Team Formation">${UI.icon('teams')}</a>
-          <a class="pp-stone sq" href="characters.html${hd ? '#' + encodeURIComponent(hero.id) : ''}" title="Enhance" aria-label="Enhance home character">${UI.icon('expand')}</a>
+          <a class="pp-stone sq kit-icon kit-profile" href="teams.html" title="${esc(team.name)}" aria-label="Team Formation">${UI.icon('teams')}</a>
+          <a class="pp-stone sq kit-icon kit-expand" href="characters.html${hd ? '#' + encodeURIComponent(hero.id) : ''}" title="Enhance" aria-label="Enhance home character">${UI.icon('expand')}</a>
         </div>
       </div>
       ${hd ? `<div class="pp-dialog home-dialog"><span class="dlg-name">${esc(hd.name)}</span><p class="dlg-text">${esc(quote)}</p>

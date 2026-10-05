@@ -245,3 +245,9 @@ From the screenshots and icons on the fan wiki's [Beginner's Guide](https://jjk-
 | `modes/tower.webp` | [Tutorial35.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/Tutorial35.PNG/revision/latest?cb=20241024181956) |
 | `modes/training-light-quest.webp` | [Tutorial37.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/Tutorial37.PNG/revision/latest?cb=20241024181247) |
 | `modes/jp-quest.webp` | [Tutorial37.PNG (crop)](https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/Tutorial37.PNG/revision/latest?cb=20241024181247) |
+
+## UI kit
+
+`ui/kit/` (square buttons, nav plates, parchment plates, currency bar, skill slots) is sliced from the
+UI-kit sheet supplied by the project owner, and `ui/bg-dark.webp` is their background texture. `ui/btn/`
+pieces were cut from reference screenshots of the game, with their labels painted out.
