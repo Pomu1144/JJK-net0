@@ -114,6 +114,15 @@ def pp_art(gid, slug):
 
 
 RARITY_LABEL = {5: 'SR', 6: 'SSR', 7: 'SSR'}
+# Phantom Parade's focus tag shown before the role: 体 Physical, 呪 Jujutsu, 複 Combined.
+def focus_of(raw):
+    f = (raw or '').lower()
+    if 'juj' in f:
+        return 'Jujutsu', '呪'
+    if 'phys' in f or 'taij' in f or f == 'hp':
+        return 'Physical', '体'
+    return 'Combined', '複'
+
 ELEMENT_COLOR = {'Heart': 'Red', 'Body': 'Blue', 'Skill': 'Green', 'Bravery': 'Yellow', 'Wisdom': 'Purple'}
 
 
@@ -135,6 +144,7 @@ def build_characters():
         out_list.append({
             'id': u['id'], 'name': u['name'], 'title': u['title'], 'element': u['element'], 'rarity': rar,
             'rarityLabel': RARITY_LABEL[rar], 'color': u['color'], 'role': u['role'],
+            'focus': focus_of(u['focus'])[0], 'focusKanji': focus_of(u['focus'])[1],
             'maxLevel': MAX_LEVEL[rar], 'kanji': u['kanji'], 'affiliation': u['affiliation'],
             'statsBase': sb, 'statsMax': sm,
             'art': pp_art(u['id'], u['slug']),
@@ -147,6 +157,7 @@ def build_characters():
         out_list.append({
             'id': cid, 'name': name, 'title': title, 'element': el, 'rarity': rar,
             'rarityLabel': RARITY_LABEL[rar], 'limited': True, 'color': ELEMENT_COLOR[el], 'role': 'Attacker',
+            'focus': 'Combined', 'focusKanji': '複',
             'maxLevel': MAX_LEVEL[rar], 'kanji': kanji, 'affiliation': aff,
             'statsBase': sb, 'statsMax': sm,
             'art': {'portrait': f'assets/characters/{cid}/portrait_7S.webp', 'full': f'assets/characters/{cid}/full_7S.webp', 'generated': False},
