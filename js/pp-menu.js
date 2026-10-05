@@ -73,14 +73,14 @@
       <div class="ppm-panel">
         <h2 class="ppm-title" id="ppm-title">Menu</h2>
         <div class="ppm-cards">
-          ${card('shop.html', 'street-stall-shopping-and-eating', 'Shop', giftDue)}
+          ${card('missions.html', 'a-fight-to-death', 'Quest', false)}
+          ${card('shop.html', 'street-stall-shopping-and-eating', 'Exchange', giftDue)}
           ${card('settings.html#portal', 'non-standard', 'Portal', portalDue)}
-          ${card('characters.html', 'strong-lineup', 'Sorcerers', false)}
         </div>
         <div class="ppm-row is-3">
           ${pill('data-ppm="news"', 'Announcement', 'news', !seenNotes())}
           ${pill(go('profile.html'), 'Profile', 'card')}
-          ${pill(go('formation.html'), 'Formation', 'units')}
+          ${pill(go('characters.html'), 'Sorcerers', 'units')}
         </div>
         <div class="ppm-row is-4">
           ${pill(go('settings.html#audio'), 'Settings')}

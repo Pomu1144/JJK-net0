@@ -1,20 +1,34 @@
 /* battle.html — drives js/battle-engine.js and animates its events.
  * battle.html?stage=1-1&team=0
+ *
+ * Phantom Parade turn flow: when the first of your units comes up in a round,
+ * you SELECT an action for every unit still to act this round (tap a skill
+ * card to pick it, tap it again / "Confirm" to lock it in; the action shows as
+ * a tag above that unit). "Selection Complete" then plays the round out in
+ * the engine's speed order (enemies keep acting on their own turns). Auto
+ * battle lets the engine's AI pick instead.
  */
 (function () {
   'use strict';
-  const { $, $$, esc, fmt } = UI;
+  const { $, esc, fmt } = UI;
   const E = window.BattleEngine;
   let S = null, stage = null, chapter = null, teamIdx = 0, ITEMS = {};
   let target = null;          // selected enemy key
-  let waiting = null;         // resolver for the player's choice
   let current = null;         // acting unit
   let speed = 1, auto = false;
   let teamUnitIds = [], supportId = null;
   let backHref = 'missions.html';   // event battles go back to event.html
+  let plan = {};              // ally key -> confirmed action for this round
+  let tags = {};              // ally key -> { k, name, ult } shown above the unit
+  let sel = null;             // selection phase: { keys, idx, picked, resolve }
+  let finished = false;
 
   const wait = (ms) => new Promise((r) => setTimeout(r, ms / speed));
   const unitEl = (key) => document.querySelector(`.bu[data-key="${key}"]`);
+  const TYPE_ORDER = [['Red', 'Heart'], ['Blue', 'Body'], ['Green', 'Skill'], ['Yellow', 'Bravery']];
+  const CE_IC = 'assets/pp/ui/Energy.webp';
+  const BUFF_IC = { atk: 'assets/pp/ui/MemoryPhysicalUp.webp', weaken: 'assets/pp/ui/MemoryJujutsuDown.webp', regen: 'assets/pp/ui/MemoryHeal.webp', guard: 'assets/pp/ui/MemoryShieldUp.webp' };
+  const SPLASH = '<svg class="bt-splash" viewBox="0 0 140 110" aria-hidden="true"><path d="M18 22c10-14 30-20 48-17 9-6 24-5 33 2 14-2 27 6 30 18 9 6 11 19 5 28 6 10 2 24-9 29-3 12-17 19-30 15-9 8-25 9-35 2-12 5-27 1-34-9-12-1-21-12-19-23-8-8-7-22 2-28-1-8 3-15 9-17zM8 84c-4 3-6 8-2 10 3 1 6-3 5-7zM128 10c3-3 8-2 8 2s-5 5-8 2zM60 104c-2 2-1 5 2 5s3-4 0-5z"/></svg>';
 
   /* ---------------- setup ---------------- */
   function fail(msg) {
@@ -68,85 +82,191 @@
     loop().catch((err) => { console.error(err); UI.toast('Battle error: ' + err.message, 'bad'); });
   }
 
+  /* ---------------- helpers ---------------- */
+  const typeSrc = (u) => (u.def && u.def.color ? u.def : u.element);
+  function skillIcon(u, k) {
+    const sk = u.def && u.def.art && u.def.art.skills;
+    return sk && sk[k] ? `<img src="${esc(sk[k])}" alt="" draggable="false">` : UI.icon(k === 'normal' ? 'attack' : 'bolt');
+  }
+  /** The command cards of an ally: Attack, Skill 1, Skill 2, Ultimate. */
+  function cmds(u) {
+    const out = [{ type: 'attack', slot: 0, k: 'normal', name: u.basic.name, cost: 0 }];
+    if (u.technique) out.push({ type: 'technique', slot: 0, k: 's1', name: u.technique.name, cost: u.technique.cost });
+    if (u.technique2) out.push({ type: 'technique', slot: 1, k: 's2', name: u.technique2.name, cost: u.technique2.cost });
+    if (u.ultimate) out.push({ type: 'ultimate', slot: 0, k: 'ult', name: u.ultimate.name.replace(/^Domain Expansion: /, ''), cost: u.ultimate.cost, domain: u.ultimate.kind === 'domain' });
+    return out;
+  }
+  const cmdOf = (u, a) => cmds(u).find((c) => c.type === (a.type === 'skill' ? 'technique' : a.type) && (c.type !== 'technique' || c.slot === (a.slot || 0))) || cmds(u)[0];
+  const costOf = (u, a) => (a ? cmdOf(u, a).cost : 0);
+  const selUnit = () => (sel ? E.find(S, sel.keys[sel.idx]) : null);
+  /** Shared cursed-energy pool left after the actions already chosen (except `except`'s). */
+  function projectedCE(except) {
+    let ce = S.ce;
+    if (sel) for (const k of sel.keys) if (k !== except && plan[k]) ce -= costOf(E.find(S, k), plan[k]);
+    return Math.max(0, ce);
+  }
+  function usable(u, c) {
+    if (c.type === 'attack') return true;
+    const ce = projectedCE(u.key);
+    if (c.type === 'ultimate') return u.gauge >= S.B.gaugeMax && c.cost <= ce;
+    return c.cost <= ce;
+  }
+  /** The ally whose art / buffs are shown: the one being selected, else the one acting. */
+  const focusAlly = () => selUnit() || (current && current.side === 'ally' ? current : null);
+  function ensureTarget(u) {
+    if (target && (E.find(S, target) || {}).alive) return;
+    target = u ? E.decide(S, u).target || null : null;
+    if (!target) { const f = S.enemies.find((e) => e.alive); target = f ? f.key : null; }
+  }
+
   /* ---------------- rendering ---------------- */
   function unitHtml(u) {
-    const tsrc = u.def && u.def.color ? u.def : u.element;
-    const t = UI.typeOf(tsrc).toLowerCase();
+    const t = UI.typeOf(typeSrc(u)).toLowerCase();
     if (u.side === 'ally') {
-      const lv = (Rules.unitView(u.id) || { unit: {} }).unit.level;
-      return `<div class="bu ally t-${t} el-${u.element.toLowerCase()}" data-key="${u.key}" aria-label="${esc(u.name)}">
-        <div class="bu-name">${esc(u.name)}</div>
-        <div class="bu-row"><div class="bu-art">${Art.img(u.def, 'icon', { eager: true, alt: '' })}${UI.typeBadge(tsrc, 'bu-type')}${lv ? `<span class="bu-lv">Lv<b>${lv}</b></span>` : ''}<span class="bu-fx"></span><span class="bu-status"></span></div>
-          <div class="bu-bars"><div class="bu-hp"><i></i><span></span></div>${u.ultimate ? '<div class="bu-gauge"><i></i></div>' : ''}</div></div>
+      return `<div class="bu ally t-${t}" data-key="${u.key}" role="button" tabindex="0" aria-label="${esc(u.name)}">
+        <div class="bu-tag"></div>
+        <span class="bu-plate" aria-hidden="true"></span>
+        <div class="bu-body">
+          <div class="bu-art"><span class="bu-aura"></span><span class="bu-face">${Art.img(u.def, 'portrait', { eager: true, alt: '' })}</span><span class="bu-ring" aria-hidden="true"></span>${UI.typeBadge(typeSrc(u), 'bu-tb')}<span class="bu-ko" aria-hidden="true">KO</span><span class="bu-fx"></span><span class="bu-status"></span></div>
+          <div class="bu-bars">
+            <div class="bu-num bu-hpn"></div>
+            <div class="bu-row"><svg class="bu-heart" viewBox="0 0 20 18" aria-hidden="true"><path d="M10 17 2.6 9.7C.4 7.5.6 4 3 2.3 5 .9 7.7 1.4 10 4c2.3-2.6 5-3.1 7-1.7 2.4 1.7 2.6 5.2.4 7.4z"/></svg><div class="bu-hp"><i></i><span></span></div></div>
+            <div class="bu-num bu-cen"></div>
+            <div class="bu-row"><img class="bu-ceic" src="${CE_IC}" alt=""><div class="bu-ce"><i></i></div></div>
+          </div>
+        </div>
+        ${u.ultimate ? '<div class="bu-gauge" title="Ultimate gauge"><i></i></div>' : ''}
       </div>`;
     }
-    return `<div class="bu enemy${u.boss ? ' is-boss' : ''} t-${t} el-${u.element.toLowerCase()}" data-key="${u.key}" role="button" tabindex="0" aria-label="${esc(u.name)}">
-      <div class="bu-hp"><i></i><span></span></div>${u.brkMax ? '<div class="bu-brk" title="Break gauge"><i></i></div>' : ''}
-      <div class="bu-art"><img class="art" src="${esc(u.def.art)}" alt="" draggable="false">${UI.typeBadge(tsrc, 'bu-type')}${u.boss ? '<span class="bu-boss">BOSS</span>' : ''}<span class="bu-lv">Lv<b>${u.level}</b></span><span class="bu-fx"></span><span class="bu-status"></span></div>
-      <div class="bu-name">${esc(u.name)}</div>
+    const weak = TYPE_ORDER.map(([c, el]) => {
+      const w = Rules.elementMult(el, u.element) > 1;
+      return `<i class="k-${c.toLowerCase()}${w ? ' is-weak' : ''}">${Art.TYPES[c].kanji}</i>`;
+    }).join('');
+    return `<div class="bu enemy${u.boss ? ' is-boss' : ''} t-${t}" data-key="${u.key}" role="button" tabindex="0" aria-label="${esc(u.name)} Lv ${u.level}">
+      <div class="be-head">
+        <div class="be-kanji" title="Weak to the highlighted type">${weak}</div>
+        <div class="be-hprow">${UI.typeBadge(typeSrc(u), 'bu-type')}<div class="bu-hp"><i></i><span></span></div></div>
+        ${u.brkMax ? '<div class="bu-brk" title="Break gauge"><i></i></div>' : ''}
+        <div class="bu-status"></div>
+      </div>
+      <div class="bu-art"><img class="art" src="${esc(u.def.art)}" alt="" draggable="false">${u.boss ? '<span class="bu-boss">BOSS</span>' : ''}<span class="bu-reticle"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="30"/><circle class="in" cx="50" cy="50" r="22"/><path d="M50 4v18M50 78v18M4 50h18M78 50h18"/><path class="ar" d="M44 6l6-6 6 6zM44 94l6 6 6-6z"/></svg><b>WEAK</b></span><span class="bu-fx"></span></div>
     </div>`;
   }
 
+  function stoneBtn(id, glyph, title, extra) {
+    return `<button class="bt-sq" id="${id}" type="button" title="${title}" aria-label="${title}" ${extra || ''}>${glyph}</button>`;
+  }
+
   function build() {
-    const sup = supportId && Rules.unitView(supportId);
     if (chapter.bg) document.body.style.setProperty('--scene', `url('${new URL(chapter.bg, location.href).href}')`);
     $('#main').innerHTML = `<div class="battle el-${(chapter.element || 'Body').toLowerCase()}">
-      <div class="bt-top">
-        <div class="bt-wave-plate"><span class="bt-wave" id="wave"></span><span class="bt-round" id="round"></span></div>
-        <div class="bt-ce" id="ce" title="Cursed energy"><img class="ce-ic" src="assets/pp/ui/Energy.webp" alt=""><span class="ce-label">呪力</span><span class="ce-pips"></span><b></b></div>
-        <span class="grow"></span>
-        ${sup ? `<span class="bt-support" title="${esc(sup.def.support.desc)}">${Art.img(sup.def, 'icon', { alt: '' })}<small>${esc(sup.def.support.name)}</small></span>` : ''}
-        <button class="pp-stone bt-sq" id="speed" type="button" title="Battle speed">${speed}x</button>
-        <button class="pp-stone bt-sq" id="auto" type="button" aria-pressed="${auto}" title="Auto battle">Auto</button>
+      <div class="bt-wave-plate">${SPLASH}<span class="bt-wave" id="wave"></span><span class="bt-round" id="round"></span></div>
+      <div class="bt-tr">
+        ${stoneBtn('speed', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5l8 7-8 7zM12 5l8 7-8 7z"/></svg><small id="speed-x"></small>', 'Battle speed')}
+        ${stoneBtn('auto', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 8.5A7.5 7.5 0 0 0 5.6 7.4M5 15.5a7.5 7.5 0 0 0 13.4 1.1" fill="none"/><path d="M3.6 4.2l2.8 4.6 4.6-2.6zM20.4 19.8l-2.8-4.6-4.6 2.6z"/></svg>', 'Auto battle', `aria-pressed="${auto}"`)}
+        <button class="bt-sq is-menu" id="menu" type="button" title="Menu" aria-label="Menu"></button>
       </div>
-      <div class="bt-field"><div class="bt-side bt-enemies" id="enemies"></div></div>
+      <div class="bt-field" id="enemies"></div>
       <div class="bt-actor" id="actor"></div>
       <div class="bt-panel" id="panel"></div>
-      <div class="bt-side bt-allies" id="allies"></div>
+      <div class="bt-party">
+        <div class="bt-prow">
+          <div class="bt-allies" id="allies"></div>
+          <button class="bt-complete" id="complete" type="button" disabled><i class="bt-cmp-glow" aria-hidden="true"></i><span>Selection<br>Complete</span></button>
+        </div>
+        <div class="bt-buffs" id="buffs"></div>
+      </div>
       <div class="bt-banner" id="banner"></div>
     </div>`;
     $('#allies').innerHTML = S.allies.map(unitHtml).join('');
     drawEnemies();
-    $('#enemies').addEventListener('click', (e) => { const b = e.target.closest('.bu'); if (b) selectTarget(b.dataset.key); });
-    $('#enemies').addEventListener('keydown', (e) => { if (e.key === 'Enter') { const b = e.target.closest('.bu'); if (b) selectTarget(b.dataset.key); } });
+    const onEnemy = (e) => { const b = e.target.closest('.bu'); if (b) selectTarget(b.dataset.key); };
+    $('#enemies').addEventListener('click', onEnemy);
+    $('#enemies').addEventListener('keydown', (e) => { if (e.key === 'Enter') onEnemy(e); });
+    const onAlly = (e) => {
+      const b = e.target.closest('.bu');
+      if (!b || !sel) return;
+      const i = sel.keys.indexOf(b.dataset.key);
+      if (i < 0) return;
+      sel.idx = i;
+      const u = selUnit();
+      sel.picked = plan[u.key] ? cmds(u).indexOf(cmdOf(u, plan[u.key])) : -1;
+      UI.sfx('tap');
+      drawAll();
+    };
+    $('#allies').addEventListener('click', onAlly);
+    $('#allies').addEventListener('keydown', (e) => { if (e.key === 'Enter') onAlly(e); });
     $('#auto').addEventListener('click', () => {
       auto = !auto;
       $('#auto').setAttribute('aria-pressed', auto);
       Save.update((s) => { s.settings.autoBattle = auto; });
-      if (auto && waiting && current) { const w = waiting; waiting = null; w(E.decide(S, current)); }
-      drawPanel();
+      if (auto && sel) endSelection();
+      drawAll();
     });
     $('#speed').addEventListener('click', () => {
       speed = speed >= 3 ? 1 : speed + 1;
-      $('#speed').textContent = speed + 'x';
       Save.update((s) => { s.settings.battleSpeed = speed; });
+      drawSpeed();
+    });
+    $('#menu').addEventListener('click', retreat);
+    $('#complete').addEventListener('click', () => {
+      if (!sel) return;
+      const missing = sel.keys.find((k) => !plan[k]);
+      if (missing) {
+        sel.idx = sel.keys.indexOf(missing); sel.picked = -1;
+        UI.toast('Choose an action for ' + E.find(S, missing).name + ' first.');
+        drawAll();
+        return;
+      }
+      UI.sfx('tap');
+      endSelection();
     });
     $('#panel').addEventListener('click', (e) => {
-      const b = e.target.closest('[data-act]');
-      if (!b || b.disabled || !waiting) return;
-      const w = waiting; waiting = null;
-      w({ type: b.dataset.act, slot: Number(b.dataset.slot || 0), target: target });
+      const b = e.target.closest('.act');
+      if (!b || b.disabled || !sel) return;
+      const i = Number(b.dataset.i);
+      if (sel.picked === i) confirmPick();
+      else { sel.picked = i; UI.sfx('tap'); drawPanel(); }
     });
     const back = $('.jjk-back');
-    if (back) back.addEventListener('click', async (e) => {
-      e.preventDefault();
-      if (S.over || await UI.confirm('Retreat from battle? The AP spent is not refunded.', 'Retreat', 'Retreat')) location.href = backHref;
-    });
+    if (back) back.addEventListener('click', (e) => { e.preventDefault(); retreat(); });
+    drawSpeed();
     paint();
   }
 
+  async function retreat() {
+    if (S.over || await UI.confirm('Retreat from battle? The AP spent is not refunded.', 'Retreat', 'Retreat')) location.href = backHref;
+  }
+
+  function drawSpeed() { const x = $('#speed-x'); if (x) x.textContent = '×' + speed; $('#speed').classList.toggle('is-on', speed > 1); }
+
   function drawEnemies() {
     $('#enemies').innerHTML = S.enemies.map(unitHtml).join('');
+    $('#enemies').dataset.n = S.enemies.length;
     $('#enemies').classList.toggle('has-boss', S.enemies.some((e) => e.boss));
     if (!S.enemies.some((e) => e.key === target && e.alive)) target = null;
   }
 
+  function roundIcon(src, title, txt, cls) {
+    return `<i class="bt-ric ${cls || ''}" title="${esc(title)}">${src ? `<img src="${esc(src)}" alt="">` : esc(txt || '')}</i>`;
+  }
+  function statusIcons(u) {
+    const st = [];
+    if (u.stun) st.push(roundIcon('', 'Stunned', '✦', 's-stun'));
+    if (u.dots.length) st.push(roundIcon('', 'Burning', '火', 's-burn'));
+    if (u.buffs.some((b) => b.type === 'weaken')) st.push(roundIcon(BUFF_IC.weaken, 'Attack down', '', 's-weak'));
+    if (u.buffs.some((b) => b.type === 'atk')) st.push(roundIcon(BUFF_IC.atk, 'Attack up', '', 's-up'));
+    if (u.broken) st.push(roundIcon('', 'Broken', '破', 's-break'));
+    if (u.enraged) st.push(roundIcon('', 'Enraged', '怒', 's-rage'));
+    return st;
+  }
+
   function paint() {
+    if (!S) return;
     $('#wave').innerHTML = '<small>WAVE</small>' + (S.wave + 1) + '/' + S.waveCount;
     $('#round').textContent = 'Turn ' + Math.max(1, S.round);
-    const ce = $('#ce');
-    ce.querySelector('b').textContent = S.ce + '/' + S.ceMax;
-    ce.querySelector('.ce-pips').innerHTML = Array.from({ length: S.ceMax }, (_, i) => `<i class="${i < S.ce ? 'on' : ''}"></i>`).join('');
+    const fa = focusAlly();
+    const atk = fa || S.allies.find((a) => a.alive);
     for (const u of S.allies.concat(S.enemies)) {
       const el = unitEl(u.key);
       if (!el) continue;
@@ -154,65 +274,130 @@
       el.querySelector('.bu-hp i').style.width = pct + '%';
       el.querySelector('.bu-hp').classList.toggle('low', pct < 30);
       el.querySelector('.bu-hp span').textContent = fmt(u.hp);
-      const g = el.querySelector('.bu-gauge i');
-      if (g) { g.style.width = u.gauge + '%'; el.classList.toggle('ult-ready', E.canUltimate(S, u)); }
-      const brk = el.querySelector('.bu-brk i');
-      if (brk) brk.style.width = (u.broken ? 0 : Math.max(0, u.brk / u.brkMax * 100)) + '%';
-      el.classList.toggle('is-broken', !!u.broken && u.alive);
       el.classList.toggle('is-ko', !u.alive);
-      el.classList.toggle('is-active', current === u);
-      el.classList.toggle('is-target', u.key === target);
-      const st = [];
-      if (u.stun) st.push('<i class="s-stun" title="Stunned">✦</i>');
-      if (u.dots.length) st.push('<i class="s-burn" title="Burning">火</i>');
-      if (u.buffs.some((b) => b.type === 'weaken')) st.push('<i class="s-weak" title="Attack down">↓</i>');
-      if (u.buffs.some((b) => b.type === 'atk')) st.push('<i class="s-up" title="Attack up">↑</i>');
-      if (u.broken) st.push('<i class="s-break" title="Broken">破</i>');
-      if (u.enraged) st.push('<i class="s-rage" title="Enraged">怒</i>');
-      el.querySelector('.bu-status').innerHTML = st.join('');
+      el.querySelector('.bu-status').innerHTML = statusIcons(u).join('');
+      if (u.side === 'ally') {
+        const ce = sel ? projectedCE() : S.ce;
+        el.querySelector('.bu-hpn').textContent = fmt(u.hp);
+        el.querySelector('.bu-cen').textContent = ce;
+        el.querySelector('.bu-ce i').style.width = (ce / S.ceMax * 100) + '%';
+        const g = el.querySelector('.bu-gauge i');
+        if (g) { g.style.width = u.gauge + '%'; el.classList.toggle('ult-ready', u.gauge >= S.B.gaugeMax); }
+        el.classList.toggle('is-active', fa === u || current === u);
+        el.classList.toggle('is-sel', !!sel && sel.keys.includes(u.key));
+        el.classList.toggle('is-chosen', !!plan[u.key]);
+        const tg = tags[u.key];
+        const tagEl = el.querySelector('.bu-tag');
+        tagEl.className = 'bu-tag' + (tg ? ' on' : '') + (tg && tg.ult ? ' is-ult' : '');
+        tagEl.innerHTML = tg ? `<span class="bt-tic">${skillIcon(u, tg.k)}</span><b>${tg.ult ? '“' + esc(tg.name) + '”' : esc(tg.name)}</b>` : '';
+      } else {
+        const brk = el.querySelector('.bu-brk i');
+        if (brk) brk.style.width = (u.broken ? 0 : Math.max(0, u.brk / u.brkMax * 100)) + '%';
+        el.classList.toggle('is-broken', !!u.broken && u.alive);
+        el.classList.toggle('is-target', u.key === target && u.alive);
+        el.classList.toggle('is-weak', !!atk && Rules.elementMult(atk.element, u.element) > 1);
+        el.classList.toggle('is-active', current === u);
+      }
     }
+    const c = $('#complete');
+    const ready = !!sel && sel.keys.every((k) => plan[k]);
+    c.disabled = !sel;
+    c.classList.toggle('is-ready', ready);
+    drawBuffs(fa || S.allies.find((a) => a.alive));
+  }
+
+  function drawBuffs(u) {
+    const out = [];
+    const sup = supportId && Rules.unitView(supportId);
+    if (sup) out.push(`<i class="bt-ric is-support" title="${esc(sup.def.support.name + ': ' + sup.def.support.desc)}">${Art.img(sup.def, 'icon', { alt: '' })}</i>`);
+    if (u) {
+      out.push(...statusIcons(u));
+      if (u.regen) out.push(roundIcon(BUFF_IC.regen, 'Regeneration'));
+      if (u.guard) out.push(roundIcon(BUFF_IC.guard, 'Damage cut ' + u.guard + '%'));
+    }
+    $('#buffs').innerHTML = out.join('');
   }
 
   function drawActor(u) {
     const a = $('#actor');
     if (!a) return;
     if (!u || u.side !== 'ally') { a.classList.remove('on'); return; }
-    if (a.dataset.key !== u.key) { a.dataset.key = u.key; a.innerHTML = Art.img(u.def, 'full', { alt: '', eager: true }); }
+    if (a.dataset.key !== u.key) {
+      a.dataset.key = u.key;
+      a.classList.remove('on');
+      a.innerHTML = Art.img(u.def, 'full', { alt: '', eager: true });
+      void a.offsetWidth;
+    }
     a.classList.add('on');
   }
 
   function drawPanel() {
     const p = $('#panel');
-    const u = current;
-    drawActor(u);
-    if (!u || u.side !== 'ally') {
-      p.innerHTML = `<div class="bt-wait">${u ? esc(u.name) + ' is acting…' : ''}</div>`;
-      return;
-    }
-    const ul = u.ultimate;
+    const u = selUnit();
+    drawActor(focusAlly());
+    if (!u || auto) { p.classList.remove('on'); return; }
+    p.classList.add('on');
+    const tk = Art.TYPES[UI.typeOf(typeSrc(u))].kanji;
     const fk = u.def && u.def.focusKanji ? `<i class="act-fk">${esc(u.def.focusKanji)}</i>` : '';
-    const sk = (k, fb) => `<span class="act-ic">${u.def && u.def.art && u.def.art.skills && u.def.art.skills[k] ? `<img src="${esc(u.def.art.skills[k])}" alt="">` : UI.icon(fb)}${fk}</span>`;
-    const confirm = '<span class="act-ok">Confirm</span>';
-    const can = !!waiting && !auto;
-    const ready = E.canUltimate(S, u);
-    const techBtn = (t, slot) => `<button class="act act-tech" data-act="technique" data-slot="${slot}" type="button" ${can && t && E.canTechnique(S, u, slot) ? '' : 'disabled'}>${sk('s' + (slot + 1), 'bolt')}<span class="act-tx"><small class="act-k">Skill ${slot + 1}</small><b>${t ? esc(t.name) : '—'}</b></span><span class="act-ce">${t ? t.cost : ''}</span>${confirm}</button>`;
-    const tgt = target && E.find(S, target);
-    p.innerHTML = `
-      <div class="bt-who"><small class="bt-hint">${auto ? 'Auto battle on' : tgt ? 'Selected enemy: ' + esc(tgt.name) : 'Tap an enemy to target'}</small><span class="bt-hp">${esc(u.name)} · ${fmt(u.hp)}/${fmt(u.maxHp)} HP</span></div>
-      <button class="act act-atk" data-act="attack" type="button" ${can ? '' : 'disabled'}>${sk('normal', 'attack')}<span class="act-tx"><small class="act-k">Attack</small><b>${esc(u.basic.name)}</b></span><span class="act-ce plus">+1</span>${confirm}</button>
-      ${techBtn(u.technique, 0)}
-      ${u.technique2 ? techBtn(u.technique2, 1) : ''}
-      <button class="act act-ult${ready ? ' is-ready' : ''}" data-act="ultimate" type="button" ${can && ready ? '' : 'disabled'} style="--g:${ul ? Math.floor(u.gauge) : 0}%">
-        ${sk('ult', 'bolt')}<span class="act-tx"><small class="act-k">${ul ? (ul.kind === 'domain' ? 'Domain Expansion' : 'Ultimate') + (u.gauge < 100 ? ' · ' + Math.floor(u.gauge) + '%' : '') : 'Ultimate'}</small><b>${ul ? esc(ul.name.replace(/^Domain Expansion: /, '')) : 'None'}</b></span><span class="act-ce">${ul ? ul.cost : ''}</span>${confirm}</button>`;
+    p.innerHTML = cmds(u).map((c, i) => {
+      const ok = usable(u, c);
+      const isUlt = c.type === 'ultimate';
+      const cls = ['act', c.type === 'attack' ? 'act-atk' : isUlt ? 'act-ult' : 'act-tech',
+        isUlt && u.gauge >= S.B.gaugeMax ? 'is-ready' : '', sel.picked === i ? 'is-picked' : ''].filter(Boolean).join(' ');
+      const g = isUlt && u.gauge < S.B.gaugeMax ? `<span class="act-g"><i style="width:${Math.floor(u.gauge)}%"></i></span>` : '';
+      return `<button class="${cls}" data-i="${i}" data-act="${c.type}" data-slot="${c.slot}" type="button" ${ok ? '' : 'disabled'} aria-label="${esc(c.name)}">
+        <span class="act-ic">${skillIcon(u, c.k)}<i class="act-tk">${tk}</i>${fk}</span>
+        <span class="act-tx"><b>${isUlt ? '“' + esc(c.name) + '”' : esc(c.name)}</b>${c.cost ? `<span class="act-ce">${c.cost}<img src="${CE_IC}" alt=""></span>` : ''}${g}</span>
+        <span class="act-ok">Confirm</span><span class="act-chev" aria-hidden="true"></span>
+      </button>`;
+    }).join('');
   }
+
+  function drawAll() { drawPanel(); paint(); }
 
   function selectTarget(key) {
     const u = E.find(S, key);
     if (!u || !u.alive || u.side !== 'enemy') return;
     target = key;
     UI.sfx('tap');
+    if (sel) { const a = selUnit(); if (plan[a.key]) plan[a.key].target = key; }
     paint();
-    drawPanel();
+  }
+
+  /* ---------------- selection phase ---------------- */
+  function selectPhase(actor) {
+    const keys = [actor.key].concat(S.queue.filter((k) => {
+      const u = E.find(S, k);
+      return u && u.side === 'ally' && u.alive && !u.stun && !plan[k];
+    }));
+    return new Promise((resolve) => {
+      sel = { keys, idx: 0, picked: -1, resolve };
+      ensureTarget(actor);
+      drawAll();
+    });
+  }
+
+  function endSelection() {
+    if (!sel) return;
+    const r = sel.resolve;
+    sel = null;
+    drawAll();
+    r();
+  }
+
+  function confirmPick() {
+    const u = selUnit();
+    const c = cmds(u)[sel.picked];
+    if (!c || !usable(u, c)) return;
+    ensureTarget(u);
+    plan[u.key] = { type: c.type, slot: c.slot, target };
+    tags[u.key] = { k: c.k, name: c.name, ult: c.type === 'ultimate' };
+    UI.sfx('tap');
+    const n = sel.keys.length;
+    let next = -1;
+    for (let j = 1; j <= n; j++) { const k = sel.keys[(sel.idx + j) % n]; if (!plan[k]) { next = (sel.idx + j) % n; break; } }
+    if (next >= 0) { sel.idx = next; sel.picked = -1; }
+    drawAll();
   }
 
   /* ---------------- animation ---------------- */
@@ -274,7 +459,7 @@
   async function animate(events) {
     for (const ev of events) {
       switch (ev.type) {
-        case 'round': paint(); break;
+        case 'round': plan = {}; tags = {}; paint(); break;
         case 'action': {
           const u = E.find(S, ev.from);
           if (ev.kind === 'domain' || ev.kind === 'ultimate') await domainCutIn(u, u.ultimate);
@@ -308,7 +493,7 @@
         case 'broken': floatText(ev.to, ev.left ? 'BROKEN' : 'BROKEN · last turn', 'status'); paint(); await wait(380); break;
         case 'breakEnd': floatText(ev.to, 'RECOVERED', 'status'); paint(); await wait(300); break;
         case 'enrage': floatText(ev.to, 'ENRAGED!', 'crit'); pulse(ev.to, 'rage', 700); paint(); await wait(400); break;
-        case 'ce': paint(); if (!ev.quiet && ev.amount > 0) pulse('ce', 'x', 1); break;
+        case 'ce': paint(); break;
         case 'ko': pulse(ev.to, 'ko-anim', 600); paint(); await wait(380); break;
         case 'wave':
           await wait(300);
@@ -321,42 +506,47 @@
     paint();
   }
 
-  function playerChoice(u) {
-    return new Promise((resolve) => { waiting = resolve; drawPanel(); });
-  }
-
   async function loop() {
     paint();
     await showBanner(`<small>${esc(stage.label || stage.id)} · ${esc(chapter.name)}</small><b>${esc(stage.name)}</b>`, 'start', 1000);
     let guard = 0;
     while (!S.over && guard++ < 5000) {
       const t = E.nextTurn(S);
-      current = t.actor;
+      current = null;
       await animate(t.events);
       if (!t.actor || S.over) continue;
-      paint();
-      drawPanel();
+      const u = t.actor;
       let action;
-      if (t.actor.side === 'ally' && !auto) {
-        action = await playerChoice(t.actor);
-        if (!action.target || !(E.find(S, action.target) || {}).alive) {
-          const d = E.decide(S, t.actor);
-          action.target = d.target;
-        }
+      if (u.side === 'ally') {
+        // Phantom Parade: choose every unit's action for the round, then play them out
+        if (!auto && !plan[u.key]) await selectPhase(u);
+        if (S.over) break;
+        action = (!auto || plan[u.key]) && plan[u.key] ? Object.assign({}, plan[u.key]) : E.decide(S, u);
+        delete plan[u.key];
+        if (!tags[u.key]) { const c = cmdOf(u, action); tags[u.key] = { k: c.k, name: c.name, ult: c.type === 'ultimate' }; }
+        if (!action.target || !(E.find(S, action.target) || {}).alive) action.target = E.decide(S, u).target;
+        current = u;
+        drawAll();
+        await wait(240);
       } else {
-        await wait(t.actor.side === 'enemy' ? 380 : 240);
-        action = E.decide(S, t.actor);
+        current = u;
+        drawAll();
+        await wait(380);
+        action = E.decide(S, u);
       }
-      const ev = E.act(S, t.actor, action);
+      const ev = E.act(S, u, action);
       await animate(ev);
       current = null;
-      drawPanel();
+      drawAll();
     }
     finish();
   }
 
-  /* ---------------- results ---------------- */
   function finish() {
+    if (finished) return;
+    finished = true;
+    sel = null; current = null;
+    drawAll();
     const win = S.result === 'win';
     const conds = [
       { ok: win, text: 'Clear the mission' },
@@ -422,6 +612,23 @@
       if (nx) $('#next-slot', ov).innerHTML = `<a class="jjk-btn is-primary" href="missions.html#${esc(M.chapters.find((c) => c.stages.includes(nx)).id)}">Next: ${esc(nx.id)}</a>`;
     });
   }
+
+  /* dev panel hook (js/dev.js): control a running battle */
+  function devEnd(win) {
+    if (!S || S.over) return;
+    const side = win ? S.enemies : S.allies;
+    for (const u of side) if (u.alive) { u.alive = false; u.hp = 0; if (!win) S.koAllies++; }
+    S.queue = [];
+    S.over = true; S.result = win ? 'win' : 'lose';
+    paint();
+    if (sel) endSelection();
+  }
+  window.BattleDev = {
+    win: () => devEnd(true),
+    lose: () => devEnd(false),
+    fillGauges: () => { if (!S) return; S.allies.forEach((a) => { if (a.alive) a.gauge = S.B.gaugeMax; }); drawAll(); },
+    fillCE: () => { if (!S) return; S.ce = S.ceMax; drawAll(); },
+  };
 
   UI.boot({
     back: 'missions.html', nav: false, hud: false,

@@ -1,4 +1,10 @@
-/* summon.html — banners, x1 / x10 draws, rates, Gacha Points and the reveal. */
+/* summon.html — the Phantom Parade Gacha screen: full-bleed featured art, banner
+ * list with live countdowns (left), banner logo + description (right), the
+ * featured unit's name (bottom left) and the three draw buttons with the
+ * Exclusive Gacha Pt bar (bottom right). Paid / Free Cubes in the top bar.
+ *
+ * Cubes: currency.cubes are Free Cubes, currency.paidCubes are Paid Cubes.
+ * Draws spend Free first, then Paid; the Limited ×1 daily draw needs Paid. */
 (function () {
   'use strict';
   const { $, $$, esc, fmt } = UI;
@@ -38,6 +44,18 @@
     return out;
   }
 
+  /* ---------- Cubes: Free (currency.cubes) + Paid (currency.paidCubes) ---------- */
+  const free = (s) => Number(s.currency.cubes) || 0;
+  const paid = (s) => Number(s.currency.paidCubes) || 0;
+  /** spend n Cubes, Free first then Paid; false (and nothing spent) if short */
+  function spendCubes(s, n) {
+    if (free(s) + paid(s) < n) return false;
+    const f = Math.min(free(s), n);
+    s.currency.cubes = free(s) - f;
+    s.currency.paidCubes = paid(s) - (n - f);
+    return true;
+  }
+
   const GP = () => B.gp || { exchangeAt: 250, convertPoints: 20, convertCards: 10, convertMax: 200, redeemMax: 100 };
   function gpState(s, b) {
     const g = GP();
@@ -47,32 +65,70 @@
     const cards = s.items.gp_card || 0;
     return {
       points, converted, redeemed, cards,
-      canExchange: points >= (b.exchangeAt || g.exchangeAt),
-      canConvert: points >= g.convertPoints && converted + g.convertPoints <= g.convertMax,
-      redeemable: Math.max(0, Math.min(cards, g.redeemMax - redeemed)),
+      canExchange: !!b.exchangeAt && points >= (b.exchangeAt || g.exchangeAt),
+      canConvert: !!b.exchangeAt && points >= g.convertPoints && converted + g.convertPoints <= g.convertMax,
+      redeemable: b.exchangeAt ? Math.max(0, Math.min(cards, g.redeemMax - redeemed)) : 0,
     };
   }
 
   function costFor(kind) {
     const s = Save.get();
     if (kind === 'daily') {
+      const n = B.dailyCost || 100;
       const used = s.daily.gacha_daily === Rules.today();
-      return { type: 'cubes', n: B.dailyCost || 100, label: fmt(B.dailyCost || 100) + ' Cubes', short: used || s.currency.cubes < (B.dailyCost || 100), used };
+      return { type: 'paid', n, used, short: used || paid(s) < n };
     }
     const c = B.cost[kind];
-    if ((s.items.ticket || 0) >= c.tickets) return { type: 'ticket', n: c.tickets, label: c.tickets + ' Ticket' + (c.tickets > 1 ? 's' : '') };
-    return { type: 'cubes', n: c.cubes, label: fmt(c.cubes) + ' Cubes', short: s.currency.cubes < c.cubes };
+    if ((s.items.ticket || 0) >= c.tickets) return { type: 'ticket', n: c.tickets };
+    return { type: 'cubes', n: c.cubes, short: free(s) + paid(s) < c.cubes };
   }
 
+  /* ---------- banner timers ---------- */
+  const today = () => Rules.today();
+  const isLive = (b) => b.event && b.start <= today() && (!b.end || b.end >= today());
+  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const fmtDay = (d) => { const [y, m, dd] = d.split('-'); return +dd + ' ' + MONTHS[+m - 1] + ' ' + y; };
+  const dateRange = (b) => fmtDay(b.start) + (b.end ? ' – ' + fmtDay(b.end) : '');
+  const p2 = (n) => String(n).padStart(2, '0');
+
   function timerText(b) {
-    if (!b.event) return b.exchangeAt ? 'Limited · permanent' : 'Permanent';
+    if (!b.event) return 'No end date';
     if (isLive(b) && b.end) {
-      const ms = new Date(b.end + 'T23:59:59').getTime() - Date.now();
-      const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
-      return 'Ends in ' + (d ? d + 'd ' : '') + h + 'h ' + m + 'm';
+      const ms = Math.max(0, new Date(b.end + 'T23:59:59').getTime() - Date.now());
+      const sec = Math.floor(ms / 1000);
+      return 'Ends after ' + Math.floor(sec / 86400) + 'd ' + p2(Math.floor(sec / 3600) % 24) + 'h ' + p2(Math.floor(sec / 60) % 60) + 'm ' + p2(sec % 60) + 'sec';
     }
     const [y, mo] = b.start.split('-');
-    return 'JP ' + MONTHS[+mo - 1] + ' ' + y + (b.rerun ? ' · Rerun' : '');
+    return 'JP ' + MONTHS[+mo - 1] + ' ' + y + (b.rerun ? ' · Rerun' : '') + ' · Replay';
+  }
+
+  /* ---------- top bar: Paid / Free Cubes + Gacha Record ---------- */
+  function topHtml() {
+    return `<div class="g-cubes">
+      <span class="g-cube is-paid" title="Paid Cubes"><i>${UI.CUBE_SVG}<small>Paid</small></i><b id="g-paid">0</b></span>
+      <a class="g-plus" href="shop.html#summon" aria-label="Get Cubes" title="Get Cubes">${UI.icon('plus')}</a>
+      <span class="g-cube is-free" title="Free Cubes"><i>${UI.CUBE_SVG}<small>Free</small></i><b id="g-free">0</b></span>
+      <button class="pp-stone g-record" id="history" type="button">Gacha Record</button>
+    </div>`;
+  }
+  function paintCubes() {
+    const s = Save.get();
+    if (!s || !$('#g-paid')) return;
+    $('#g-paid').textContent = fmt(paid(s));
+    $('#g-free').textContent = fmt(free(s));
+  }
+
+  /* ---------- the screen ---------- */
+  function descText(b) {
+    const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
+    const pick = feats.length ? `<span class="g-rateup">${feats.map((d) => esc(d.name)).filter((n, i, a) => a.indexOf(n) === i).slice(0, 2).join(' & ')} rate up! </span>` : '';
+    return `${pick}Characters &amp; Recollection Bits of R or above are obtainable! '10-Draw' guarantees an entity of SR or above!`;
+  }
+
+  function logoHtml(b) {
+    if (b.event && b.bg) return `<div class="g-logo is-art"><img src="${esc(b.bg)}" alt="${esc(b.name)}"></div>`;
+    const title = b.id === 'standard' ? 'Phantom Parade' : b.name;
+    return `<div class="g-logo is-text"><b>${esc(title)}</b><i>Gacha</i></div>`;
   }
 
   function drawPanel() {
@@ -80,51 +136,42 @@
     const b = current;
     const hero = Data.char(b.hero);
     const one = costFor('single'), ten = costFor('multi'), day = costFor('daily');
-    const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
-    const t = UI.typeOf(b.element).toLowerCase();
-    $('#g-bg').className = 'g-bg t-' + t;
+    const t = UI.typeOf(hero || b.element).toLowerCase();
+    $('.gacha').className = 'gacha t-' + t;
     $('#g-bg').innerHTML = `${b.bg ? `<img class="g-blur" src="${esc(b.bg)}" alt="" aria-hidden="true">` : ''}
+      <i class="g-rays" aria-hidden="true"></i>
       ${hero ? Art.img(hero, 'full', { cls: 'g-hero', eager: true, alt: '' }) : ''}
-      ${hero ? `<div class="g-tag">${UI.rarityBadge(hero)}<span><small>${esc(hero.title || '')}</small><b>${esc(hero.name)}</b></span>${UI.typeBadge(hero)}</div>` : ''}`;
-    $('#g-info').innerHTML = `
-      <div class="g-logo${b.event ? ' is-art' : ''}">${b.event ? `<img src="${esc(b.bg)}" alt="${esc(b.name)} banner">` : `<span class="g-logo-k">${esc(b.kanji)}</span>`}
-        <span class="g-kind">${esc(b.event ? b.kind : b.featured.length ? 'Pickup' : 'Standard')}</span>${isLive(b) ? '<span class="g-kind is-live">LIVE</span>' : ''}</div>
-      <h2 class="g-title">${esc(b.name)}</h2>
-      <div class="g-desc">${b.event ? `JP server · ${esc(dateRange(b))}<br>` : ''}${feats.length ? `Featured SSR rate up: ${B.featuredShare}% of SSR draws.<br>${b.exchangeAt ? `Every draw earns 1 Gacha Point; ${b.exchangeAt} points = any featured unit.` : ''}` : 'Every sorcerer and curse in the game. Every 10x draw guarantees SR or better.'}</div>
-      ${feats.length ? `<div class="g-feat">${feats.map((d) => UI.unitTile(d, { tag: 'span' })).join('')}</div>` : ''}
-      <div class="g-btns"><button class="pp-stone" type="button" id="details">Details</button><button class="pp-stone" type="button" id="rates">Gacha Details</button><button class="pp-stone" type="button" id="history">History</button></div>`;
+      <i class="g-burst" aria-hidden="true"></i>`;
+    $('#g-name').innerHTML = hero ? `<span class="g-name-ic">${UI.rarityBadge(hero)}${UI.typeBadge(hero)}</span>
+      <span class="g-name-t"><small>${esc(hero.title || '')}</small><b>${esc(hero.name)}</b></span>` : '';
+    $('#g-info').innerHTML = `${logoHtml(b)}
+      <div class="g-desc"><p>${descText(b)}</p><button class="pp-stone" type="button" id="rates">Gacha Details</button></div>`;
+    const cube = (c) => (c.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG);
+    const st = gpState(s, b);
     $('#g-draws').innerHTML = `
       <div class="g-pull-row">
-        <button class="g-pull is-daily" id="pull-daily" type="button" ${day.short ? 'disabled' : ''}><em>${day.used ? 'Drawn today' : 'Once a day'}</em><b>Limited ×1</b><small>${UI.CUBE_SVG} ${fmt(day.n)}</small></button>
-        <button class="g-pull" id="pull1" type="button" ${one.short ? 'disabled' : ''}><b>Draw ×1</b><small>${one.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(one.label)}</small></button>
-        <button class="g-pull is-multi" id="pull10" type="button" ${ten.short ? 'disabled' : ''}><em>SR or better guaranteed</em><b>Draw ×10</b><small>${ten.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(ten.label)}</small></button>
-        ${s.items.ssr_ticket ? `<button class="g-pull is-ssr" id="pull-ssr" type="button"><em>×${s.items.ssr_ticket}</em><b>SSR Ticket</b><small>SSR guaranteed</small></button>` : ''}
+        ${s.items.ssr_ticket ? `<div class="g-pcol"><span class="g-cap is-gold">×${s.items.ssr_ticket} owned</span><button class="g-pull is-ssr" id="pull-ssr" type="button"><b>SSR Ticket</b><span class="g-cost">SSR guaranteed</span></button></div>` : ''}
+        <div class="g-pcol"><span class="g-cap">Reset at 0:00 Every Day</span>
+          <button class="g-pull is-daily${day.used ? ' is-used' : ''}" id="pull-daily" type="button" ${day.short ? 'disabled' : ''}>
+            <b>Limited to 1<br>time(s) one day</b><span class="g-cost"><em>Paid</em>${UI.CUBE_SVG}<span>${fmt(day.n)}</span></span></button>
+          <i class="g-sticker" aria-label="${day.used ? 0 : 1} time(s) left"><b>${day.used ? 0 : 1}</b>time(s)<br>left</i></div>
+        <div class="g-pcol"><span class="g-cap is-blank"></span>
+          <button class="g-pull" id="pull1" type="button" ${one.short ? 'disabled' : ''}><b>Draw 1 time(s)</b><span class="g-cost">${cube(one)}<span>${fmt(one.n)}</span></span></button></div>
+        <div class="g-pcol"><span class="g-cap is-gold">SR or Above Guaranteed</span>
+          <button class="g-pull" id="pull10" type="button" ${ten.short ? 'disabled' : ''}><b>Draw 10 time(s)</b><span class="g-cost">${cube(ten)}<span>${fmt(ten.n)}</span></span></button></div>
       </div>
-      <div class="g-pt">${b.exchangeAt ? gpHtml(s, b) : '<span class="muted">No Gacha Points on the standard banner</span>'}
-        <a class="pp-stone g-small" href="shop.html#summon">Recharge</a></div>`;
+      <div class="g-pt"><span class="g-ptbar"><span>Exclusive Gacha Pt</span><b id="g-pts">${b.exchangeAt ? fmt(st.points) : '—'}</b></span>
+        <button class="pp-stone g-exch${st.canExchange ? ' is-ready' : ''}" id="gp-open" type="button" ${b.exchangeAt ? '' : 'disabled'}>Exchange</button></div>`;
     $('#pull1').addEventListener('click', () => doPull('single'));
     $('#pull10').addEventListener('click', () => doPull('multi'));
     $('#pull-daily').addEventListener('click', () => doPull('daily'));
     if ($('#pull-ssr')) $('#pull-ssr').addEventListener('click', ssrTicket);
-    if (b.exchangeAt) {
-      $('#gp-exchange').addEventListener('click', exchange);
-      $('#gp-convert').addEventListener('click', convert);
-      $('#gp-redeem').addEventListener('click', redeem);
-    }
+    $('#gp-open').addEventListener('click', gpModal);
     $('#rates').addEventListener('click', showRates);
-    $('#details').addEventListener('click', showDetails);
-    $('#history').addEventListener('click', showHistory);
-    $$('#banners .ban-tab').forEach((x) => x.classList.toggle('active', x.dataset.id === b.id));
-    const at = $('#banners .ban-tab.active');
+    $$('#banners .ban-item').forEach((x) => x.classList.toggle('active', x.dataset.id === b.id));
+    const at = $('#banners .ban-item.active');
     if (at && at.scrollIntoView) at.scrollIntoView({ block: 'nearest' });
-  }
-
-  function showDetails() {
-    const b = current;
-    const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
-    UI.modal(`${b.event ? `<p class="muted" style="margin-top:0">${esc(b.kind)} gacha · Japanese server ${esc(dateRange(b))}${b.rerun ? ' (rerun)' : ''}. Replayed here from the fan wiki's event timeline.</p>` : ''}
-      ${feats.length ? `<div class="gp-pick">${feats.map((d) => `<div class="gp-unit">${UI.unitTile(d, { tag: 'span' })}<small>${esc(d.title || '')}<br><b>${esc(d.name)}</b></small></div>`).join('')}</div>` : '<p>Every unit in the game can appear.</p>'}`,
-    { title: b.name, sub: 'ガチャ詳細' });
+    paintCubes();
   }
 
   function showHistory() {
@@ -132,8 +179,8 @@
     UI.modal(log.length ? `<table class="rates g-hist"><thead><tr><th>Unit</th><th>Banner</th><th>When</th></tr></thead><tbody>${log.map((r) => {
       const d = Data.char(r.id);
       const bn = B.banners.find((x) => x.id === r.b);
-      return `<tr><td>${d ? UI.rarityBadge(d) + ' ' + esc(d.name) + ' <small class="muted">' + esc(d.title || '') + '</small>' : esc(r.id)}</td><td>${esc(bn ? bn.name : r.b)}</td><td class="muted">${new Date(r.t).toLocaleString()}</td></tr>`;
-    }).join('')}</tbody></table>` : '<p class="muted">No draws yet.</p>', { title: 'Gacha History', sub: '最近100件' });
+      return `<tr><td>${d ? UI.rarityBadge(d) + ' ' + esc(d.name) + ' <small class="muted">' + esc(d.title || '') + '</small>' : esc(r.id)}</td><td>${esc(bn ? bn.name : r.b === 'ssr_ticket' ? 'SSR Ticket' : r.b)}</td><td class="muted">${new Date(r.t).toLocaleString()}</td></tr>`;
+    }).join('')}</tbody></table>` : '<p class="muted">No draws yet.</p>', { title: 'Gacha Record', sub: '最近100件' });
   }
 
   /** SSR-Character Guaranteed Ticket (Novice Mission reward): one SSR from the whole pool. */
@@ -156,15 +203,32 @@
     if (s.gachaLog.length > 100) s.gachaLog.splice(0, s.gachaLog.length - 100);
   }
 
+  /* ---------- Exclusive Gacha Pt: exchange / convert / use cards (modal) ---------- */
   function gpHtml(s, b) {
     const g = GP(), st = gpState(s, b), at = b.exchangeAt || g.exchangeAt;
-    return `<div class="pity gp"><small>${UI.GP_ICON} Gacha Points</small>
+    return `<div class="pity gp"><small>${UI.GP_ICON} Exclusive Gacha Pt · ${esc(b.name)}</small>
       <div class="bar"><i style="width:${Math.min(100, st.points / at * 100)}%"></i></div>
       <small><b>${st.points}</b> / ${at} — exchange ${at} for any featured unit</small>
       <div class="row gp-btns"><button class="jjk-btn is-small${st.canExchange ? ' is-primary' : ''}" id="gp-exchange" type="button" ${st.canExchange ? '' : 'disabled'}>Exchange</button>
         <button class="jjk-btn is-small" id="gp-convert" type="button" ${st.canConvert ? '' : 'disabled'} title="Turn ${g.convertPoints} points into ${g.convertCards} Gacha Point Cards (up to ${g.convertMax} points per banner)">${g.convertPoints} GP → ${g.convertCards} ${UI.GP_ICON}</button>
         <button class="jjk-btn is-small" id="gp-redeem" type="button" ${st.redeemable ? '' : 'disabled'} title="Gacha Point Cards are worth 1 point each, up to ${g.redeemMax} per banner">Use ${st.redeemable} ${UI.GP_ICON}</button></div>
       <small class="muted">Cards owned ${st.cards} · converted here ${st.converted}/${g.convertMax} · used here ${st.redeemed}/${g.redeemMax}</small></div>`;
+  }
+
+  let gpm = null;
+  function gpModal() {
+    if (!current.exchangeAt) return;
+    gpm = UI.modal(`<div id="gp-body">${gpHtml(Save.get(), current)}</div>`, { title: 'Gacha Point Exchange', sub: 'ガチャポイント', cls: 'is-small', onClose: () => { gpm = null; } });
+    gpm.el.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[id^="gp-"]');
+      if (!btn || btn.disabled) return;
+      if (btn.id === 'gp-exchange') { gpm.close(); exchange(); } else if (btn.id === 'gp-convert') convert();
+      else if (btn.id === 'gp-redeem') redeem();
+    });
+  }
+  function repaintGp() {
+    const body = gpm && gpm.el.querySelector('#gp-body');
+    if (body) body.innerHTML = gpHtml(Save.get(), current);
   }
 
   function exchange() {
@@ -200,6 +264,7 @@
     });
     if (ok) { UI.toast(g.convertPoints + ' Gacha Points → ' + g.convertCards + ' Gacha Point Cards', 'good'); UI.sfx('heal'); }
     drawPanel();
+    repaintGp();
   }
 
   function redeem() {
@@ -214,18 +279,23 @@
     });
     if (n) { UI.toast('Used ' + n + ' Gacha Point Card' + (n > 1 ? 's' : '') + ' on ' + b.name, 'good'); UI.sfx('heal'); }
     drawPanel();
+    repaintGp();
   }
 
+  /* ---------- Gacha Details: banner, featured units, rates ---------- */
   function showRates() {
     const b = current;
+    const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
     const rows = Object.keys(B.rates).sort().reverse().map((r) => {
-      const feats = b.featured.map((id) => Data.char(id)).filter((c) => c && c.rarity === Number(r));
+      const fr = feats.filter((c) => c.rarity === Number(r));
       const lbl = Number(r) >= 7 ? 'Limited SSR' : UI.rarityOf(Number(r));
-      return `<tr><td>${UI.rarityBadge(Number(r))}${Number(r) >= 7 ? ' <span class="limited-tag">LIMITED</span>' : ''}</td><td><b>${B.rates[r].toFixed(1)}%</b></td><td>${feats.length ? feats.map((f) => esc(f.name + ' (' + f.title + ')')).join(', ') + ` — ${B.featuredShare}% of ${lbl} pulls` : '<span class="muted">—</span>'}</td><td class="muted">${pool(Number(r)).length} units</td></tr>`;
+      return `<tr><td>${UI.rarityBadge(Number(r))}${Number(r) >= 7 ? ' <span class="limited-tag">LIMITED</span>' : ''}</td><td><b>${B.rates[r].toFixed(1)}%</b></td><td>${fr.length ? fr.map((f) => esc(f.name + ' (' + f.title + ')')).join(', ') + ` — ${B.featuredShare}% of ${lbl} pulls` : '<span class="muted">—</span>'}</td><td class="muted">${pool(Number(r)).length} units</td></tr>`;
     }).join('');
-    UI.modal(`<table class="rates"><thead><tr><th>Rarity</th><th>Rate</th><th>Featured</th><th>Pool</th></tr></thead><tbody>${rows}</tbody></table>
-      <p class="muted" style="font-size:12px">A draw costs ${fmt(B.cost.single.cubes)} Cubes, 10 draws ${fmt(B.cost.multi.cubes)}. The 10th draw of a 10x is always ${UI.rarityOf(B.multiGuarantee)} or better. ${b.exchangeAt ? `Every draw on this banner earns 1 Gacha Point; ${b.exchangeAt} points exchange for any featured unit. Points stay on this banner unless you convert them: 20 points → 10 Gacha Point Cards (up to 200 points per banner), and a later banner accepts up to 100 cards.` : ''} Duplicates raise Limit Break (+${Rules.DUPE_BONUS}% stats each, up to LB ${Rules.MAX_DUPES}); after that they convert to JP.</p>`,
-    { title: 'Summon Rates', sub: '提供割合' });
+    UI.modal(`${b.event ? `<p class="muted" style="margin-top:0">${esc(b.kind)} gacha · Japanese server ${esc(dateRange(b))}${b.rerun ? ' (rerun)' : ''}. Replayed here from the fan wiki's event timeline.</p>` : ''}
+      ${feats.length ? `<div class="gp-pick g-featpick">${feats.map((d) => `<div class="gp-unit">${UI.unitTile(d, { tag: 'span' })}<small>${esc(d.title || '')}<br><b>${esc(d.name)}</b></small></div>`).join('')}</div>` : '<p class="muted">Every unit in the game can appear.</p>'}
+      <table class="rates"><thead><tr><th>Rarity</th><th>Rate</th><th>Featured</th><th>Pool</th></tr></thead><tbody>${rows}</tbody></table>
+      <p class="muted" style="font-size:12px">A draw costs ${fmt(B.cost.single.cubes)} Cubes, 10 draws ${fmt(B.cost.multi.cubes)}; Free Cubes are spent first, then Paid Cubes. The Limited draw (once a day, resets at 0:00) costs ${fmt(B.dailyCost || 100)} Paid Cubes. The 10th draw of a 10x is always ${UI.rarityOf(B.multiGuarantee)} or better. ${b.exchangeAt ? `Every draw on this banner earns 1 Exclusive Gacha Pt; ${b.exchangeAt} points exchange for any featured unit. Points stay on this banner unless you convert them: 20 points → 10 Gacha Point Cards (up to 200 points per banner), and a later banner accepts up to 100 cards.` : ''} Duplicates raise Limit Break (+${Rules.DUPE_BONUS}% stats each, up to LB ${Rules.MAX_DUPES}); after that they convert to JP.</p>`,
+    { title: 'Gacha Details', sub: 'ガチャ詳細 · ' + b.name });
   }
 
   function doPull(kind) {
@@ -233,14 +303,20 @@
     const cost = costFor(kind);
     let results = null;
     const ok = Save.update((s) => {
-      if (kind === 'daily') { if (s.daily.gacha_daily === Rules.today() || s.currency.cubes < cost.n) return false; s.currency.cubes -= cost.n; s.daily.gacha_daily = Rules.today(); }
-      else if (cost.type === 'ticket') { if ((s.items.ticket || 0) < cost.n) return false; s.items.ticket -= cost.n; }
-      else { if (s.currency.cubes < cost.n) return false; s.currency.cubes -= cost.n; }
+      if (kind === 'daily') {
+        if (s.daily.gacha_daily === Rules.today() || paid(s) < cost.n) return false;
+        s.currency.paidCubes = paid(s) - cost.n;
+        s.daily.gacha_daily = Rules.today();
+      } else if (cost.type === 'ticket') { if ((s.items.ticket || 0) < cost.n) return false; s.items.ticket -= cost.n; }
+      else if (!spendCubes(s, cost.n)) return false;
       results = pull(s, current, n);
       logPulls(s, current.id, results);
       return true;
     });
-    if (!ok) { UI.toast(kind === 'daily' ? 'The Limited ×1 draw is once a day.' : 'Not enough Cubes — visit the Shop.', 'bad'); return; }
+    if (!ok) {
+      UI.toast(kind === 'daily' ? (cost.used ? 'The Limited draw resets at 0:00.' : 'The Limited draw needs ' + cost.n + ' Paid Cubes.') : 'Not enough Cubes — visit the Shop.', 'bad');
+      return;
+    }
     reveal(results, kind);
     drawPanel();
   }
@@ -258,8 +334,8 @@
             <div class="rcard-front">${UI.unitTile(r.def, { tag: 'span', badge: r.isNew ? '<span class="uc-badge badge is-new">NEW</span>' : r.dupe ? `<span class="uc-badge badge">LB ${r.dupe}</span>` : r.yen ? `<span class="uc-badge badge">${fmt(r.yen)} JP</span>` : '' })}</div>
           </div></div>`).join('')}</div>
       <div class="reveal-actions"><button class="jjk-btn" id="rv-skip" type="button">Skip</button>
-        ${kind === 'exchange' || kind === 'daily' ? '' : `<button class="jjk-btn" id="rv-again" type="button" hidden>Summon ${kind === 'multi' ? '×10' : '×1'} again</button>`}
-        <button class="jjk-btn is-primary rv-back" id="rv-close" type="button" hidden>Back to Summon</button></div>`;
+        ${kind === 'exchange' || kind === 'daily' ? '' : `<button class="jjk-btn" id="rv-again" type="button" hidden>Draw ${kind === 'multi' ? '10' : '1'} time(s) again</button>`}
+        <button class="jjk-btn is-primary rv-back" id="rv-close" type="button" hidden>Back to Gacha</button></div>`;
     document.body.appendChild(ov);
     UI.sfx('pull');
     const finish = () => {
@@ -276,48 +352,56 @@
     if ($('#rv-again', ov)) $('#rv-again', ov).addEventListener('click', () => { ov.remove(); doPull(kind); });
   }
 
-  /* Event banners replay the Japanese server's gacha history (fan wiki
+  /* ---------- banner list (Live / Events / Standard) ----------
+   * Event banners replay the Japanese server's gacha history (fan wiki
    * "Timeline Of Events (JP)"). Every one can be drawn on; the ones whose
-   * original JP dates include today are marked LIVE. */
-  const today = () => Rules.today();
-  const isLive = (b) => b.event && b.start <= today() && (!b.end || b.end >= today());
-  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const fmtDay = (d) => { const [y, m, dd] = d.split('-'); return +dd + ' ' + MONTHS[+m - 1] + ' ' + y; };
-  const dateRange = (b) => fmtDay(b.start) + (b.end ? ' – ' + fmtDay(b.end) : '');
+   * original JP dates include today are live and count down. */
   let listTab = 'live';
 
-  function tabHtml(b) {
+  function itemHtml(b) {
     const h = Data.char(b.hero);
     const img = b.event ? `<img src="${esc(b.bg)}" alt="" loading="lazy">` : h ? Art.img(h, 'full', { alt: '' }) : '';
-    return `<button class="ban-tab${b.event ? ' is-event' : ''}${isLive(b) ? ' is-live' : ''}" data-id="${esc(b.id)}" type="button" title="${esc(b.name)}">${img}<span>${esc(b.name)}</span></button><small class="ban-time" data-id="${esc(b.id)}">${esc(timerText(b))}</small>`;
+    return `<div class="ban-item${b.event ? ' is-event' : ''}${isLive(b) ? ' is-live' : ''}" data-id="${esc(b.id)}">
+      <button class="ban-tab" data-id="${esc(b.id)}" type="button" title="${esc(b.name)}">${img}${b.event ? '' : `<span>${esc(b.name)}</span>`}</button>
+      <small class="ban-time" data-id="${esc(b.id)}">${esc(timerText(b))}</small></div>`;
   }
 
   function drawList() {
     const events = B.banners.filter((b) => b.event);
     let live = events.filter(isLive);
-    const liveLabel = live.length ? 'Live now' : 'Latest';
     if (!live.length) live = events.slice(0, 4);
     let body = '';
-    if (listTab === 'live') body = `<small class="ban-group">${liveLabel}</small>` + live.map(tabHtml).join('');
+    if (listTab === 'live') body = live.map(itemHtml).join('');
     else if (listTab === 'events') {
       let month = '';
       body = events.map((b) => {
         const m = b.start.slice(0, 7);
         const head = m !== month ? `<small class="ban-group">${MONTHS[+m.slice(5) - 1]} ${m.slice(0, 4)}</small>` : '';
         month = m;
-        return head + tabHtml(b);
+        return head + itemHtml(b);
       }).join('');
-    } else body = B.banners.filter((b) => !b.event).map(tabHtml).join('');
+    } else body = B.banners.filter((b) => !b.event).map(itemHtml).join('');
     $('#banners').innerHTML = `<div class="ban-filter" role="tablist">${[['live', 'Live'], ['events', 'Events'], ['standard', 'Standard']].map(([k, l]) => `<button type="button" role="tab" data-list="${k}" class="${k === listTab ? 'on' : ''}" aria-selected="${k === listTab}">${l}</button>`).join('')}</div>
       <div class="ban-scroll">${body}</div>`;
-    $$('#banners .ban-tab').forEach((t) => t.classList.toggle('active', !!current && t.dataset.id === current.id));
+    $$('#banners .ban-item').forEach((t) => t.classList.toggle('active', !!current && t.dataset.id === current.id));
+  }
+
+  function tick() {
+    $$('#banners .ban-time').forEach((el) => {
+      const b = B.banners.find((x) => x.id === el.dataset.id);
+      if (b && b.event && isLive(b)) el.textContent = timerText(b);
+    });
   }
 
   function render() {
+    const right = $('.topbar .top-right');
+    if (right && !$('.g-cubes')) right.insertAdjacentHTML('afterbegin', topHtml());
+    $('#history').addEventListener('click', showHistory);
     $('#main').innerHTML = `<div class="gacha">
       <div class="g-bg" id="g-bg"></div>
       <aside class="g-list" id="banners"></aside>
       <aside class="g-info" id="g-info"></aside>
+      <div class="g-name" id="g-name"></div>
       <div class="g-draws" id="g-draws"></div>
     </div>`;
     $('#banners').addEventListener('click', (e) => {
@@ -332,11 +416,18 @@
     });
     const events = B.banners.filter((b) => b.event);
     current = B.banners.find((b) => b.id === location.hash.slice(1)) || events.find(isLive) || events[0] || B.banners[1] || B.banners[0];
-    listTab = !current.event ? 'standard' : isLive(current) || events.slice(0, 4).includes(current) ? 'live' : 'events';
+    listTab = !current.event ? 'standard' : isLive(current) || (!events.some(isLive) && events.slice(0, 4).includes(current)) ? 'live' : 'events';
     drawList();
     drawPanel();
-    setInterval(() => $$('#banners .ban-time').forEach((el) => { const b = B.banners.find((x) => x.id === el.dataset.id); if (b) el.textContent = timerText(b); }), 60000);
+    Save.onChange(paintCubes);
+    setInterval(tick, 1000);
   }
 
-  UI.boot({ data: ['characters', 'banners'], init: () => Data.load('banners').then((b) => { B = b; render(); }) });
+  UI.boot({
+    data: ['characters', 'banners'],
+    back: false,
+    hud: false,
+    header: () => '<header class="jjk-page-header g-head"><h1 class="g-head-tab">Gacha</h1></header>',
+    init: () => Data.load('banners').then((b) => { B = b; render(); }),
+  });
 })();
