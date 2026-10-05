@@ -236,30 +236,7 @@ html.is-compact .home-dialog .dlg-text { display: -webkit-box; -webkit-line-clam
 }
 @media (max-width: 700px) { .home-dialog { display: none; } }
 
-/* ══════════════ Formation hub ══════════════ */
-body[data-page="formation"] { --scene: url('../assets/pp/memories/night-out-between-sorcerers/art.webp'); --scene-bright: .5; --scene-blur: 3px; }
-.hub { position: relative; height: 100%; min-height: 250px; display: grid; grid-template-columns: minmax(0, 38%) minmax(0, 1fr); gap: 16px; }
-.hub-guide { position: relative; min-width: 0; display: flex; align-items: flex-end; }
-.hub-guide-art { position: absolute; left: calc(-1 * var(--gutter)); top: -60px; bottom: -10px; width: calc(100% + var(--gutter) + 30px); height: calc(100% + 70px); max-width: none; object-fit: cover; object-position: 50% 20%;
-  -webkit-mask-image: linear-gradient(90deg, #000 72%, transparent), linear-gradient(0deg, transparent, #000 18%); -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(90deg, #000 72%, transparent), linear-gradient(0deg, transparent, #000 18%); mask-composite: intersect; animation: heroIn .8s var(--pp-ease) both; }
-.hub-guide .pp-dialog { width: 100%; margin-bottom: 2px; }
-.hub-menu { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1.15fr) minmax(0, 1fr) auto; gap: 10px; min-height: 0; align-content: center; padding: 4px 0; }
-.hub-card { min-height: 84px; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px 14px; animation: riseIn .5s var(--pp-ease) both; }
-.hub-card .parch-art { bottom: 34%; -webkit-mask-image: linear-gradient(0deg, transparent, #000 35%); mask-image: linear-gradient(0deg, transparent, #000 35%); }
-.hub-card .parch-label { font-size: 20px; text-align: center; }
-.hub-card.is-wide { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: flex-end; animation-delay: .1s; }
-.hub-card.is-wide .parch-art { bottom: 7px; right: 40%; -webkit-mask-image: linear-gradient(90deg, #000 60%, transparent); mask-image: linear-gradient(90deg, #000 60%, transparent); }
-.hub-card.is-wide .parch-label { font-size: 26px; margin-right: 8px; }
-.hub-card.is-film .parch-art { top: 17px; }
-.hub-note { position: absolute; z-index: 2; right: 12px; top: 10px; padding: 2px 8px; font: 700 10px/1.3 var(--pp-font); color: #f4ecd8; background: rgba(26, 18, 16, .85); }
-.hub-card.is-film .hub-note { top: 22px; }
-.hub-card.is-wide .hub-note { top: auto; bottom: 10px; right: 14px; }
-.hub-small { grid-column: 1 / -1; display: flex; justify-content: center; gap: 12px; }
-.hub-small .pp-stone { min-width: 150px; text-align: left; font-size: 13px; }
-.hub-small .talisman { width: 18px; height: 24px; } .hub-small .talisman::before { font-size: 10px; }
-@media (min-height: 600px) { .hub-card .parch-label { font-size: 28px; } .hub-card.is-wide .parch-label { font-size: 36px; } .hub-menu { gap: 16px; padding: 30px 0 10px; } }
-@media (max-width: 700px) { .hub { grid-template-columns: 1fr; } .hub-guide { display: none; } }
+/* Formation hub, Shop and Profile layouts live in css/pp-screens.css */
 
 /* ══════════════ Roster / detail ══════════════ */
 .toolbar { display: flex; align-items: center; gap: 8px; margin: 2px 0 8px; flex-wrap: wrap; }
@@ -508,28 +485,6 @@ html.is-compact .brush { font-size: 20px; }
 .team-choice .mini span.sup { outline: 1px solid var(--t-purple); }
 .team-choice b { font: 800 12px/1.2 var(--pp-font); }
 .team-choice small { font-size: 10px; color: var(--pp-muted); display: block; }
-
-/* ══════════════ Shop (Exchange layout: guide + parchment cards) ══════════════ */
-body[data-page="shop"] { --scene: url('../assets/pp/memories/daily-routine/art.webp'); --scene-bright: .55; --scene-blur: 2px; }
-.shop-layout { position: relative; height: 100%; display: grid; grid-template-columns: minmax(0, 34%) minmax(0, 1fr); gap: 14px; }
-.shop-right { display: flex; flex-direction: column; min-height: 0; min-width: 0; }
-.shop-right .tabs { flex: none; padding-top: 0; }
-#offers { flex: 1; min-height: 0; overflow-y: auto; padding: 4px 4px 8px 0; scrollbar-width: thin; scrollbar-color: rgba(182, 154, 92, .55) transparent; }
-.shop-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-.offer { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; padding: 12px 10px 8px; min-height: 0; cursor: default; }
-.offer:hover { transform: none; }
-.offer > * { position: relative; z-index: 2; }
-.offer .of-icon { width: 54px; height: 54px; display: grid; place-items: center; margin-bottom: 2px; background: radial-gradient(circle at 50% 40%, rgba(255, 240, 200, .9), rgba(220, 205, 170, .4) 70%); border-radius: 50%; }
-.offer .of-icon svg { width: 38px; height: 38px; }
-.offer .of-icon .talisman { width: 30px; height: 40px; }
-.offer h4 { margin: 0; font: 700 13px/1.2 var(--pp-font); color: #3a1d12; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.4em; }
-.offer small { font-size: 10.5px; color: #6a5440; }
-.of-strip { display: flex; justify-content: center; width: 100%; margin-top: 4px; padding: 4px; background: #1a1210; }
-.offer .jjk-btn { min-width: 0; width: 100%; height: 28px; font-size: 12.5px; }
-.offer .jjk-btn .cur-ic { width: 15px; height: 15px; }
-.offer.is-off { filter: saturate(.6) brightness(.85); }
-@media (max-width: 700px) { .shop-layout { grid-template-columns: 1fr; } .shop-layout .hub-guide { display: none; } .shop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-height: 600px) { .offer .of-icon { width: 72px; height: 72px; } .offer h4 { font-size: 15px; } }
 
 /* ══════════════ Settings ══════════════ */
 .settings { padding: 12px 16px; }

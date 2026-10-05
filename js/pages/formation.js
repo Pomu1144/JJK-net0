@@ -1,6 +1,7 @@
 /* formation.html — Formation hub (Phantom Parade style): a guide with a
- * dialogue box on the left, parchment menu cards on the right that lead to
- * Enhance Sorcerers (characters.html) and Team Formation (teams.html). */
+ * dialogue box on the left; parchment menu cards on the right lead to
+ * Enhance Sorcerers (characters.html), Summon and Team Formation
+ * (teams.html), with stone buttons for the Talisman Shop and Missions. */
 (function () {
   'use strict';
   const { $, esc, fmt } = UI;
@@ -17,24 +18,25 @@
     const guide = Data.char(GUIDE) || Data.characters[0];
     const owned = Rules.ownedList();
     const team = s.teams[s.activeTeam];
+    const filled = team ? team.slots.filter(Boolean).length + (team.support ? 1 : 0) : 0;
     const line = LINES[Math.floor(Date.now() / 86400000) % LINES.length];
-    $('#main').innerHTML = `<div class="hub">
-      <div class="hub-guide">
-        ${guide ? Art.img(guide, 'full', { cls: 'art hub-guide-art', eager: true, alt: '' }) : ''}
+    $('#main').innerHTML = `<div class="scr fh">
+      <div class="scr-guide" style="--focus:50% 18%">
+        ${guide ? Art.img(guide, 'full', { cls: 'art scr-guide-art', eager: true, alt: '' }) : ''}
         <div class="pp-dialog"><span class="dlg-name">${esc(guide ? guide.name : 'Guide')}</span><p class="dlg-text">${esc(line)}</p></div>
       </div>
-      <div class="hub-menu">
-        <a class="pp-parch hub-card" href="characters.html"><span class="parch-art" style="background-image:url('${mem('the-strongest-quarrel')}')"></span>
-          <span class="parch-label">Enhance<br>Sorcerers</span><small class="hub-note">${owned.length} units</small></a>
-        <a class="pp-parch hub-card is-film" href="summon.html"><span class="parch-art" style="background-image:url('${mem('the-grand-break-through')}')"></span><span class="film-top"></span>
-          <span class="parch-label">Summon<br>Sorcerers</span><small class="hub-note">Pickup</small></a>
-        <a class="pp-parch hub-card is-wide" href="teams.html"><span class="parch-art" style="background-image:url('${mem('here-we-come-fukuoka')}')"></span>
-          <span class="parch-label">Team Formation</span><small class="hub-note">${esc(team.name)} · Power ${fmt(Rules.teamPower(team))}</small></a>
-        <div class="hub-small">
+      <nav class="fh-menu" aria-label="Formation">
+        <a class="pp-parch fh-card" href="characters.html"><span class="parch-art" style="background-image:url('${mem('the-strongest-quarrel')}')"></span>
+          <span class="parch-label scr-orn">Enhance Sorcerers</span><small class="fh-note">${owned.length} owned</small></a>
+        <a class="pp-parch fh-card is-film" href="summon.html"><span class="parch-art" style="background-image:url('${mem('the-grand-break-through')}')"></span><span class="film-top"></span>
+          <span class="parch-label scr-orn">Summon Sorcerers</span><small class="fh-note">Pickup</small></a>
+        <a class="pp-parch fh-card is-wide is-film" href="teams.html"><span class="parch-art" style="background-image:url('${mem('here-we-come-fukuoka')}')"></span><span class="film-top"></span><span class="film-bot"></span>
+          <span class="parch-label scr-orn">Team Formation</span><small class="fh-note">${esc(team ? team.name : 'Team')} · ${filled}/5 · Power ${fmt(team ? Rules.teamPower(team) : 0)}</small></a>
+        <div class="fh-small">
           <a class="pp-stone" href="shop.html#items">${UI.itemIcon('talisman_m', {})}<span>Talisman<br>Shop</span></a>
-          <a class="pp-stone" href="shop.html#daily">${UI.icon('gift')}<span>Daily<br>Gift</span></a>
+          <a class="pp-stone" href="missions.html">${UI.icon('missions')}<span>Missions</span></a>
         </div>
-      </div>
+      </nav>
     </div>`;
   }
 
