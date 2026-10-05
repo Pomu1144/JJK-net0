@@ -253,3 +253,6 @@ UI-kit sheet supplied by the project owner, and `ui/bg-dark.webp` is their backg
 pieces were cut from reference screenshots of the game, with their labels painted out.
 `ui/exchange/` (the six Exchange cards) and `currency/friend-point.webp`, `currency/investigation-medal.webp`
 are cut from the Exchange-screen reference supplied by the project owner (printed counters painted out).
+`ui/enhance/` (Lv and name brush strokes, GRADE / Awakening headers, Grade dial, Awakening hexagon,
+Phantom Seal plate, Attribute Overview button) is cut from the Enhance-screen reference supplied by the
+project owner, with printed numbers and names painted out.

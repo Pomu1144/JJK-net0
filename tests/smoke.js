@@ -147,6 +147,8 @@ async function gameFlow(browser) {
   await shot(p, '09b-novice');
   await p.goto(BASE + 'characters.html');
   await p.click('.ucard');
+  await p.waitForSelector('[data-mode="lv"]');
+  await p.click('[data-mode="lv"]');   // Lv Enhancement opens the Training Light feed
   await p.waitForSelector('[data-feed="light_s"]');
   const jp0 = (await save(p)).currency.yen;
   await p.click('[data-feed="light_s"]');
