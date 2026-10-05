@@ -28,11 +28,11 @@ body[data-page="battle"] #main { padding: 0; overflow: hidden; }
 /* ── stone buttons (top-right): speed, auto, menu ── */
 .bt-tr { position: absolute; z-index: 6; right: max(10px, calc(var(--s) * 20), env(safe-area-inset-right)); top: max(6px, calc(var(--s) * 14)); display: flex; gap: max(8px, calc(var(--s) * 18)); }
 .bt-sq { position: relative; width: max(36px, calc(var(--s) * 48)); height: max(36px, calc(var(--s) * 48)); padding: 0; border: 0; cursor: pointer;
-  background: url('../assets/pp/ui/kit/sq.webp') center / 100% 100% no-repeat; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); display: grid; place-items: center; color: #f3f1ea; transition: transform .1s; }
+  background: url('../assets/pp/ui/hf/sq-blank.webp') center / 100% 100% no-repeat; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); display: grid; place-items: center; color: #f3f1ea; transition: transform .1s; }
 .bt-sq:active { transform: scale(.92); }
 .bt-sq svg { width: 52%; height: 52%; fill: currentColor; stroke: currentColor; stroke-width: 0; }
 #auto svg path:first-child { stroke-width: 2.6; stroke-linecap: round; }
-.bt-sq.is-menu { background-image: url('../assets/pp/ui/kit/sq-menu.webp'); }
+.bt-sq.is-menu { background-image: url('../assets/pp/ui/hf/ic-menu.webp'); }
 .bt-sq small { position: absolute; right: 8%; bottom: 6%; font: 700 max(8px, calc(var(--s) * 11))/1 var(--pp-font); color: #d8dcd8; }
 .bt-sq.is-on, #auto[aria-pressed="true"] { color: #ffd968; filter: drop-shadow(0 0 6px rgba(255, 210, 90, .75)) drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); }
 #auto[aria-pressed="true"] svg { animation: spin 2.4s linear infinite; }
