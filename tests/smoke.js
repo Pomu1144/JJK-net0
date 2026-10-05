@@ -86,6 +86,21 @@ async function gameFlow(browser) {
   await p.click('#rv-close');
   s = await save(p);
   check(s.stats.pulls === 10 && s.currency.cubes === 3000, '10x summon spent 3000 cubes (cubes ' + s.currency.cubes + ')');
+  // Limited x1: Paid Cubes only, once a day; draws spend Free Cubes first, then Paid
+  check(s.currency.paidCubes === 0 && await p.$eval('#pull-daily', (e) => e.disabled), 'Limited x1 needs Paid Cubes (none yet)');
+  await p.evaluate(() => Save.update((st) => { st.currency.paidCubes = 500; }));
+  await p.reload();
+  await p.click('#pull-daily');
+  await p.waitForSelector('#rv-close:not([hidden])', { timeout: 8000 });
+  await p.click('#rv-close');
+  s = await save(p);
+  check(s.currency.paidCubes === 400 && s.currency.cubes === 3000 && await p.$eval('#pull-daily', (e) => e.disabled), 'Limited x1 spent 100 Paid Cubes, then locks for the day');
+  check(await p.textContent('#g-paid') === '400' && await p.textContent('#g-free') === '3,000', 'Paid / Free counters');
+  await p.evaluate(() => Save.update((st) => { st.currency.paidCubes = 0; }));
+  await p.click('#history');
+  await p.waitForSelector('.modal .g-hist');
+  check((await p.$$('.modal .g-hist tbody tr')).length === 11, 'Gacha Record lists 11 draws');
+  await p.click('.modal-x');
 
   await p.goto(BASE + 'teams.html');
   await p.click('#auto');
@@ -102,14 +117,26 @@ async function gameFlow(browser) {
   await p.waitForURL(/battle\.html/);
   await p.waitForSelector('.act-atk:not([disabled])', { timeout: 10000 });
   await shot(p, '07-battle');
-  for (let i = 0; i < 2; i++) {
-    const enemy = await p.$('.bt-enemies .bu:not(.is-ko)');
+  // Phantom Parade selection: pick + confirm an action per unit, then Selection Complete
+  let picks = 0, rounds = 0;
+  for (let i = 0; i < 24 && rounds < 2; i++) {
+    const enemy = await p.$('.bt-field .bu:not(.is-ko)');
     if (enemy) await enemy.click();
-    const b = await p.waitForSelector('.act-atk:not([disabled]), .results', { timeout: 15000 });
+    const b = await p.waitForSelector('.bt-panel.on .act-atk:not([disabled]):not(.is-picked), #complete.is-ready, .results', { timeout: 15000 });
     if (await b.evaluate((el) => el.classList.contains('results'))) break;
-    await b.click();
-    await p.waitForTimeout(600);
+    if (await b.evaluate((el) => el.id === 'complete')) {
+      if (rounds === 0) await shot(p, '07b-battle-selected');
+      await b.click(); rounds++;
+      await p.waitForTimeout(600);
+      continue;
+    }
+    await b.click(); // pick: shows the Confirm tag
+    await p.waitForSelector('.act-atk.is-picked .act-ok', { timeout: 3000 });
+    await p.click('.act-atk.is-picked'); // confirm
+    picks++;
+    await p.waitForTimeout(200);
   }
+  check(picks >= 2 && rounds >= 1, 'manual battle: ' + picks + ' actions confirmed, ' + rounds + ' round(s) resolved via Selection Complete');
   await p.click('#auto');
   await p.waitForSelector('.results', { timeout: 120000 });
   await p.waitForTimeout(1600);
@@ -130,7 +157,9 @@ async function gameFlow(browser) {
   await shot(p, '09-battle-defeat');
   check(await p.$('.results.is-lose') !== null, 'defeat screen shown');
 
-  for (const pg of ['index', 'home', 'characters', 'summon', 'teams', 'missions', 'shop', 'settings']) {
+  // bottom bar: Formation | Album | Home | Gacha | Rank + Menu on every page that has one
+  const NAV_ON = { home: 'home', formation: 'formation', characters: 'formation', teams: 'formation', album: 'album', summon: 'summon', profile: 'rank', missions: '', shop: '', settings: 'settings' };
+  for (const pg of ['index', 'home', 'formation', 'characters', 'summon', 'teams', 'album', 'profile', 'missions', 'shop', 'settings']) {
     await p.goto(BASE + pg + '.html');
     await p.waitForTimeout(900);
     const ov = await p.evaluate(() => {
@@ -138,7 +167,26 @@ async function gameFlow(browser) {
       return { doc: document.documentElement.scrollWidth - innerWidth, main: m ? m.scrollWidth - m.clientWidth : 0 };
     });
     check(ov.doc <= 0 && ov.main <= 0, pg + ': no horizontal scroll');
+    if (pg === 'index') continue;
+    const nav = await p.evaluate(() => ({
+      labels: [...document.querySelectorAll('.dock-btn')].map((a) => a.querySelector('span').textContent).join('|'),
+      active: [...document.querySelectorAll('.dock-btn.active')].map((a) => a.dataset.nav).join(','),
+      icons: [...document.querySelectorAll('.dock-btn svg.nav-ic')].filter((g) => g.childElementCount > 0).length,
+      cut: [...document.querySelectorAll('.dock-btn > span')].some((sp) => sp.scrollWidth > sp.clientWidth + 1),
+    }));
+    check(nav.labels === 'Formation|Album|Home|Gacha|Rank|Menu' && nav.icons === 6 && !nav.cut && nav.active === NAV_ON[pg], pg + ': bottom bar ' + nav.labels + ' (active ' + (nav.active || 'none') + ')');
   }
+  await p.goto(BASE + 'album.html');
+  await p.waitForSelector('.alb-card');
+  check((await p.$$('.alb-card')).length >= 100, 'Album lists the Recollection scenes');
+  await p.click('.alb-card');
+  await p.waitForSelector('.alb-view');
+  await p.keyboard.press('Escape');
+  await p.goto(BASE + 'home.html');
+  await p.click('.dock-btn.is-menu');
+  await p.waitForSelector('.ppm-wrap');
+  const menuLinks = await p.$$eval('.ppm a', (as) => as.map((a) => a.getAttribute('href')).join(' '));
+  check(['missions.html', 'shop.html', 'settings.html#portal', 'settings.html#audio'].every((h) => menuLinks.includes(h)), 'Menu reaches Quest, Exchange, Portal and Settings');
   // Novice Mission: 7 day tabs, 5 cards on Day 1, no horizontal page scroll
   await p.goto(BASE + 'novice.html');
   await p.waitForSelector('.nv-card');

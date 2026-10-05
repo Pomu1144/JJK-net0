@@ -48,16 +48,28 @@
   const GP_ICON = '<img class="cur-ic" src="assets/pp/currency/gacha-card.webp" alt="" aria-hidden="true">';
   const STAM_SVG = '<svg class="cur-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#0f5a5e"/><path d="M13 4L6 14h5l-1 6 7-10h-5z" fill="#7ff2e0"/></svg>';
 
-  // Phantom Parade order: Formation · Missions · Home · Summon · Shop, then the square Menu plate.
+  // Phantom Parade bottom bar: Formation · Album · Home · Gacha · Rank, then the square Menu plate.
   // `pages` lists the pages that light a plate up (the Formation hub covers Sorcerers + Teams).
+  // Missions (Quest) and the Shop / Exchange stay one tap away: Home's Quest card and side
+  // icons, and the Menu popup (js/pp-menu.js). The ids `summon` / `settings` key paintDots.
   const NAV = [
-    { id: 'formation', href: 'formation.html', label: 'Formation', icon: 'units', pages: ['formation', 'characters', 'teams'] },
-    { id: 'missions', href: 'missions.html', label: 'Missions', icon: 'missions', pages: ['missions', 'battle'] },
+    { id: 'formation', href: 'formation.html', label: 'Formation', icon: 'formation', pages: ['formation', 'characters', 'teams'] },
+    { id: 'album', href: 'album.html', label: 'Album', icon: 'album', pages: ['album'] },
     { id: 'home', href: 'home.html', label: 'Home', icon: 'home', pages: ['home'] },
-    { id: 'summon', href: 'summon.html', label: 'Summon', icon: 'summon', pages: ['summon'] },
-    { id: 'shop', href: 'shop.html', label: 'Shop', icon: 'shop', pages: ['shop'] },
+    { id: 'summon', href: 'summon.html', label: 'Gacha', icon: 'gacha', pages: ['summon'] },
+    { id: 'rank', href: 'profile.html', label: 'Rank', icon: 'rank', pages: ['profile'] },
     { id: 'settings', href: 'settings.html', label: 'Menu', icon: 'menu', pages: ['settings'], menu: true },
   ];
+  // solid white glyphs drawn after the real game's nav icons
+  const NAV_ICONS = {
+    formation: '<path d="M12 1.2l.95 2.15 2.15.95-2.15.95L12 7.4l-.95-2.15L8.9 4.3l2.15-.95z"/><circle cx="12" cy="10.2" r="2.7"/><path d="M7.2 19.6c0-3.3 2.1-5.6 4.8-5.6s4.8 2.3 4.8 5.6z"/><circle cx="5.6" cy="11.6" r="2.1"/><path d="M1.4 19.6c0-2.6 1.7-4.4 4-4.4 1 0 1.9.3 2.6.9-.9 1-1.5 2.3-1.6 3.5z"/><circle cx="18.4" cy="11.6" r="2.1"/><path d="M22.6 19.6c0-2.6-1.7-4.4-4-4.4-1 0-1.9.3-2.6.9.9 1 1.5 2.3 1.6 3.5z"/>',
+    album: '<path d="M2 3h15v2.2H4.2V16H2z"/><path fill-rule="evenodd" d="M5.6 6.6h16.4v14H5.6zM7.6 8.6v10h12.4v-10z"/><circle cx="16.8" cy="11.2" r="1.5"/><path d="M8.6 18l3.4-4.6 2.3 2.8 1.6-1.7 3.1 3.5z"/><path d="M19.2 20.6l1.4-1.5 1.4 1.5z"/>',
+    home: '<path d="M7.4 3.2h9.2v1.6H7.4z"/><path d="M.8 10.6c3.2-.4 6-2.4 7.3-5h7.8c1.3 2.6 4.1 4.6 7.3 5v1.7H.8z"/><path fill-rule="evenodd" d="M3.6 12.3h16.8v6.6H3.6zM5.6 13.7v3.6h2.6v-3.6zM9.4 13.7v3.6h2.6v-3.6zM13.2 13.7v3.6h2.6v-3.6zM16.6 13.7v3.6h2v-3.6z"/><path d="M2.4 18.9h19.2v1.8H2.4z"/>',
+    gacha: '<path fill-rule="evenodd" d="M12 1.6l9.2 5.2v10.4L12 22.4l-9.2-5.2V6.8zM12 4l-7.1 4v8l7.1 4 7.1-4V8z"/><path d="M7.3 11.3a4.7 4.7 0 0 1 9.4 0z"/><path d="M7.3 12.7h9.4a4.7 4.7 0 0 1-9.4 0z"/><circle cx="12" cy="12" r="1.5"/><path d="M15.4 6.2l1.1-1.6.5 1.9z"/>',
+    rank: '<path fill-rule="evenodd" d="M3.6 2.6h16.8v18.8H3.6zM5.6 4.6v14.8h12.8V4.6z"/><circle cx="12" cy="9.6" r="3"/><path d="M7 18.4c0-3.4 2.2-5.6 5-5.6s5 2.2 5 5.6z"/>',
+    menu: '<rect x="3" y="3" width="8.2" height="8.2"/><rect x="12.8" y="3" width="8.2" height="8.2"/><rect x="3" y="12.8" width="8.2" height="8.2"/><rect x="12.8" y="12.8" width="8.2" height="8.2"/>',
+  };
+  const navIcon = (n) => `<svg class="ic nav-ic" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">${NAV_ICONS[n] || ''}</svg>`;
   const HELP = {
     home: 'Your home sorcerer greets you here. Tap Change to pick another one. The Quest card continues the story; the banner on the left opens the current pickup summon.',
     formation: 'Enhance Sorcerers to level them up with Training Lights and JP, or open Team Formation to set 4 Main fighters and 1 Backup (support).',
@@ -257,8 +269,11 @@
       const sec = Math.ceil(st.nextIn / 1000);
       set('hud-stam-t', Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0'));
     } else set('hud-stam-t', '');
-    set('hud-cubes', fmtShort(s.currency.cubes));
-    set('hud-yen', fmtShort(s.currency.yen));
+    // full amounts like the game's HUD; abbreviate only on narrow phones / huge numbers
+    const roomy = global.innerWidth > 720;
+    const amt = (n) => (roomy && n < 1e8 ? fmt(n) : fmtShort(n));
+    set('hud-cubes', amt((s.currency.cubes || 0) + (s.currency.paidCubes || 0)));
+    set('hud-yen', amt(s.currency.yen));
   }
 
   /* red "!" notification dots on the nav plates (presentation only) */
@@ -297,7 +312,7 @@
       nav.setAttribute('aria-label', 'Main');
       nav.innerHTML = NAV.map((n) => {
         const on = n.pages.includes(page);
-        return `<a class="dock-btn${on ? ' active' : ''}${n.menu ? ' is-menu' : ''}" href="${n.href}" data-nav="${n.id}"${n.id === page ? ' aria-current="page"' : ''}>${icon(n.icon)}<span>${n.label}</span></a>`;
+        return `<a class="dock-btn${on ? ' active' : ''}${n.menu ? ' is-menu' : ''}" href="${n.href}" data-nav="${n.id}"${n.id === page ? ' aria-current="page"' : ''}>${navIcon(n.icon)}<span>${n.label}</span></a>`;
       }).join('');
       body.appendChild(nav);
       const mb = nav.querySelector('.is-menu');
