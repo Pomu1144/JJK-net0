@@ -47,3 +47,5 @@ html.is-compact .enh-pb small { font-size: 11px; }
 @keyframes rotHint { 0%, 25% { transform: rotate(0); } 55%, 100% { transform: rotate(-90deg); } }
 html.reduce-motion .rotate-hint svg { animation: none; }
 html.is-compact .nv-tab { height: 28px; line-height: 1; border-width: 6px 8px; padding-top: 0; padding-bottom: 0; }
+/* arc cards: one line with ellipsis; the 46px card can't fit two */
+html.is-compact .ch-card .parch-label { display: block; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
