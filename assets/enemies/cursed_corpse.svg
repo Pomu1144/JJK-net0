@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-cursed_corpse" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#e3b52c"/><stop offset="0.6" stop-color="#4a3506"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-cursed_corpse" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#fff0a6" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-cursed_corpse)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="150" font-weight="700" fill="#000" fill-opacity="0.35">骸</text>
+<path d="M256,217 Q225,234 230,268 Q235,301 201,289 Q168,277 144,302 Q119,328 106,298 Q93,268 69,258 Q45,248 49,224 Q52,200 43,173 Q34,147 58,132 Q81,118 101,98 Q121,78 146,97 Q170,115 196,114 Q222,114 226,138 Q230,163 259,182 Q287,200 256,217z" fill="url(#eb-cursed_corpse)" stroke="#fff0a6" stroke-opacity=".5" stroke-width="3"/>
+<ellipse cx="120" cy="180" rx="16" ry="13" fill="#fff6dc"/><circle cx="120" cy="180" r="7" fill="#120808"/><ellipse cx="180" cy="180" rx="16" ry="13" fill="#fff6dc"/><circle cx="180" cy="180" r="7" fill="#120808"/><path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/><path d="M110,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M124,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M138,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M152,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M166,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M180,238 l6,10 l6,-10" fill="#f6ecd2"/>
+
+</svg>

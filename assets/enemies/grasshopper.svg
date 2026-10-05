@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-grasshopper" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#33b56a"/><stop offset="0.6" stop-color="#0a3b23"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-grasshopper" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#a6f0c2" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-grasshopper)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="150" font-weight="700" fill="#000" fill-opacity="0.35">蝗</text>
+<path d="M248,219 Q231,237 234,271 Q237,304 203,292 Q169,281 146,297 Q123,314 107,292 Q92,269 62,262 Q32,254 45,227 Q59,200 50,175 Q42,150 69,143 Q95,135 108,106 Q121,78 147,89 Q174,100 201,103 Q228,107 228,135 Q228,164 247,182 Q265,200 248,219z" fill="url(#eb-grasshopper)" stroke="#a6f0c2" stroke-opacity=".5" stroke-width="3"/>
+<ellipse cx="120" cy="180" rx="16" ry="13" fill="#fff6dc"/><circle cx="120" cy="180" r="7" fill="#120808"/><ellipse cx="180" cy="180" rx="16" ry="13" fill="#fff6dc"/><circle cx="180" cy="180" r="7" fill="#120808"/><path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/><path d="M110,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M124,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M138,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M152,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M166,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M180,238 l6,10 l6,-10" fill="#f6ecd2"/>
+
+</svg>

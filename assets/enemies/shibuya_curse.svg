@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-shibuya_curse" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#9a5ae0"/><stop offset="0.6" stop-color="#2a0f4d"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-shibuya_curse" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#dcc0ff" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-shibuya_curse)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="150" font-weight="700" fill="#000" fill-opacity="0.35">渋</text>
+<path d="M243,221 Q240,241 222,253 Q203,264 188,281 Q174,299 153,288 Q131,278 113,272 Q95,265 80,252 Q65,239 58,219 Q51,200 57,180 Q63,160 80,148 Q96,136 112,120 Q127,103 150,103 Q173,103 190,118 Q207,132 217,148 Q228,164 236,182 Q245,200 243,221z" fill="url(#eb-shibuya_curse)" stroke="#dcc0ff" stroke-opacity=".5" stroke-width="3"/>
+<ellipse cx="143" cy="165" rx="17" ry="13" fill="#fff6dc"/><circle cx="143" cy="165" r="7" fill="#120808"/><ellipse cx="175" cy="174" rx="15" ry="12" fill="#fff6dc"/><circle cx="175" cy="174" r="6" fill="#120808"/><ellipse cx="165" cy="182" rx="17" ry="13" fill="#fff6dc"/><circle cx="165" cy="182" r="7" fill="#120808"/><ellipse cx="111" cy="184" rx="11" ry="9" fill="#fff6dc"/><circle cx="111" cy="184" r="5" fill="#120808"/><path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/><path d="M110,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M124,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M138,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M152,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M166,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M180,238 l6,10 l6,-10" fill="#f6ecd2"/>
+
+</svg>

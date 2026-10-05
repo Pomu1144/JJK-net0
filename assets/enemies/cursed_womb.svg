@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-cursed_womb" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#e0453f"/><stop offset="0.6" stop-color="#4a0c0e"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-cursed_womb" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ff3b30" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-cursed_womb)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="110" font-weight="700" fill="#000" fill-opacity="0.35">呪胎</text>
+<path d="M245,219 Q234,238 224,258 Q215,277 194,288 Q173,298 150,296 Q127,295 112,280 Q96,265 82,251 Q68,238 62,219 Q57,200 61,180 Q65,161 79,147 Q94,133 112,124 Q130,116 152,108 Q174,101 191,115 Q209,130 222,145 Q236,161 246,180 Q257,200 245,219z" fill="url(#eb-cursed_womb)" stroke="#ffb0a4" stroke-opacity=".5" stroke-width="3"/>
+<ellipse cx="189" cy="191" rx="12" ry="10" fill="#fff6dc"/><circle cx="189" cy="191" r="5" fill="#120808"/><ellipse cx="146" cy="152" rx="16" ry="13" fill="#fff6dc"/><circle cx="146" cy="152" r="7" fill="#120808"/><ellipse cx="156" cy="183" rx="9" ry="7" fill="#fff6dc"/><circle cx="156" cy="183" r="4" fill="#120808"/><ellipse cx="191" cy="177" rx="9" ry="8" fill="#fff6dc"/><circle cx="191" cy="177" r="4" fill="#120808"/><path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/><path d="M110,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M124,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M138,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M152,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M166,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M180,238 l6,10 l6,-10" fill="#f6ecd2"/>
+<path d="M90,96 l14,-34 l16,26 l14,-38 l16,30 l16,-30 l14,38 l16,-26 l14,34" fill="none" stroke="#e8433a" stroke-width="5" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<linearGradient id="bg-todo_504" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#e3b52c"/><stop offset="0.55" stop-color="#4a3506"/><stop offset="1" stop-color="#05080a"/></linearGradient>
+<radialGradient id="glow-todo_504" cx="0.5" cy="0.45" r="0.55"><stop offset="0" stop-color="#fff0a6" stop-opacity="0.55"/><stop offset="1" stop-color="#fff0a6" stop-opacity="0"/></radialGradient>
+<linearGradient id="skin-todo_504" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9cdb4"/><stop offset="1" stop-color="#b88f74"/></linearGradient>
+<linearGradient id="coat-todo_504" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2027"/><stop offset="1" stop-color="#07090c"/></linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#bg-todo_504)"/>
+<path d="M-9,302 Q87.0,325.29477416961277 217,299" stroke="#fff0a6" stroke-opacity="0.07" stroke-width="19" stroke-linecap="round" fill="none"/><path d="M83,282 Q214.5,262.8865434909872 390,306" stroke="#fff0a6" stroke-opacity="0.10" stroke-width="29" stroke-linecap="round" fill="none"/><path d="M29,289 Q126.0,288.40874755920936 277,318" stroke="#fff0a6" stroke-opacity="0.10" stroke-width="26" stroke-linecap="round" fill="none"/><path d="M95,58 Q150.5,76.0443146747886 260,60" stroke="#fff0a6" stroke-opacity="0.08" stroke-width="32" stroke-linecap="round" fill="none"/><path d="M195,190 Q278.5,159.76880726921263 408,126" stroke="#fff0a6" stroke-opacity="0.07" stroke-width="25" stroke-linecap="round" fill="none"/>
+<circle cx="150" cy="190" r="150" fill="url(#glow-todo_504)"/>
+<text x="262" y="66" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="44" font-weight="700" fill="#ffffff" fill-opacity="0.16" text-anchor="middle"><tspan x="262" dy="0">東</tspan><tspan x="262" dy="46">堂</tspan></text>
+<path d="M140,128 L150,96 L160,128z" fill="#3b2b22"/>
+<path d="M20,400 C30,320 90,290 150,290 C210,290 270,320 280,400z" fill="url(#coat-todo_504)" stroke="#fff0a6" stroke-opacity="0.55" stroke-width="3"/>
+<path d="M118,292 L150,340 L182,292" fill="none" stroke="#c9a24e" stroke-width="3" stroke-opacity="0.8"/>
+<circle cx="150" cy="318" r="5" fill="#c9a24e"/>
+<rect x="130" y="240" width="40" height="56" fill="url(#skin-todo_504)"/>
+<ellipse cx="150" cy="196" rx="58" ry="66" fill="url(#skin-todo_504)"/>
+<path d="M92,186 C90,128 210,128 208,186 C200,160 184,152 150,152 C116,152 100,160 92,186z" fill="#3b2b22"/>
+<path d="M118,190 l26,6 M182,190 l-26,6" stroke="#15151b" stroke-width="4.5" stroke-linecap="round" fill="none"/><path d="M122,204 q10,-7 20,0 q-10,5 -20,0z M158,204 q10,-7 20,0 q-10,5 -20,0z" fill="#15151b"/><circle cx="133" cy="203" r="2.4" fill="#fff0a6"/><circle cx="167" cy="203" r="2.4" fill="#fff0a6"/><path d="M140,238 q10,4 20,0" stroke="#7a5446" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<g transform="translate(44,352)" fill="none" stroke="#f1d98a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><circle r="24" fill="#071418" fill-opacity="0.75" stroke="#c9a24e"/><path d="M-2,10 L-8,-6 a2,2 0 0 1 4,-1 L0,4 M2,10 L8,-6 a2,2 0 0 0 -4,-1 L0,4 M-10,-10 l3,3 M10,-10 l-3,3 M0,-13 v4"/></g>
+<g transform="translate(252,352)"><rect x="-22" y="-22" width="44" height="44" rx="4" fill="#8e1c1c" stroke="#f1d98a" stroke-opacity="0.6"/><text y="8" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#f6ead0">AT</text></g>
+<rect x="4" y="4" width="292" height="392" fill="none" stroke="#c9a24e" stroke-opacity="0.7" stroke-width="2"/>
+</svg>

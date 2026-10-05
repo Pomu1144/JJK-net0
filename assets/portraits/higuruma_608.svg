@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<linearGradient id="bg-higuruma_608" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#9a5ae0"/><stop offset="0.55" stop-color="#2a0f4d"/><stop offset="1" stop-color="#05080a"/></linearGradient>
+<radialGradient id="glow-higuruma_608" cx="0.5" cy="0.45" r="0.55"><stop offset="0" stop-color="#dcc0ff" stop-opacity="0.55"/><stop offset="1" stop-color="#dcc0ff" stop-opacity="0"/></radialGradient>
+<linearGradient id="skin-higuruma_608" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9cdb4"/><stop offset="1" stop-color="#b88f74"/></linearGradient>
+<linearGradient id="coat-higuruma_608" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2027"/><stop offset="1" stop-color="#07090c"/></linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#bg-higuruma_608)"/>
+<path d="M190,223 Q303.5,157.10272660338737 385,127" stroke="#dcc0ff" stroke-opacity="0.05" stroke-width="33" stroke-linecap="round" fill="none"/><path d="M-24,326 Q119.5,308.7623277057494 209,360" stroke="#dcc0ff" stroke-opacity="0.14" stroke-width="34" stroke-linecap="round" fill="none"/><path d="M103,81 Q154.0,75.08877038749833 265,63" stroke="#dcc0ff" stroke-opacity="0.13" stroke-width="26" stroke-linecap="round" fill="none"/><path d="M54,21 Q204.0,40.29183525191393 324,-6" stroke="#dcc0ff" stroke-opacity="0.06" stroke-width="17" stroke-linecap="round" fill="none"/><path d="M40,182 Q113.5,175.2531179071119 233,105" stroke="#dcc0ff" stroke-opacity="0.11" stroke-width="12" stroke-linecap="round" fill="none"/>
+<circle cx="150" cy="190" r="150" fill="url(#glow-higuruma_608)"/>
+<text x="262" y="66" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="44" font-weight="700" fill="#ffffff" fill-opacity="0.16" text-anchor="middle"><tspan x="262" dy="0">日</tspan><tspan x="262" dy="46">車</tspan></text>
+
+<path d="M20,400 C30,320 90,290 150,290 C210,290 270,320 280,400z" fill="url(#coat-higuruma_608)" stroke="#dcc0ff" stroke-opacity="0.55" stroke-width="3"/>
+<path d="M118,292 L150,340 L182,292" fill="none" stroke="#c9a24e" stroke-width="3" stroke-opacity="0.8"/>
+<circle cx="150" cy="318" r="5" fill="#c9a24e"/>
+<rect x="130" y="240" width="40" height="56" fill="url(#skin-higuruma_608)"/>
+<ellipse cx="150" cy="196" rx="58" ry="66" fill="url(#skin-higuruma_608)"/>
+<path d="M90,196 C84,120 216,120 210,196 C206,166 190,150 150,148 C112,150 96,166 90,196z" fill="#2a2a2c"/>
+<path d="M118,190 l26,6 M182,190 l-26,6" stroke="#15151b" stroke-width="4.5" stroke-linecap="round" fill="none"/><path d="M122,204 q10,-7 20,0 q-10,5 -20,0z M158,204 q10,-7 20,0 q-10,5 -20,0z" fill="#15151b"/><circle cx="133" cy="203" r="2.4" fill="#dcc0ff"/><circle cx="167" cy="203" r="2.4" fill="#dcc0ff"/><path d="M140,238 q10,4 20,0" stroke="#7a5446" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<g transform="translate(44,352)" fill="none" stroke="#f1d98a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><circle r="24" fill="#071418" fill-opacity="0.75" stroke="#c9a24e"/><path d="M0,-12 v22 M-8,10 h16 M-11,-8 h22 M-11,-8 l-3,8 h6z M11,-8 l-3,8 h6z"/></g>
+<g transform="translate(252,352)"><rect x="-22" y="-22" width="44" height="44" rx="4" fill="#8e1c1c" stroke="#f1d98a" stroke-opacity="0.6"/><text y="8" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#f6ead0">HH</text></g>
+<rect x="4" y="4" width="292" height="392" fill="none" stroke="#c9a24e" stroke-opacity="0.7" stroke-width="2"/>
+</svg>

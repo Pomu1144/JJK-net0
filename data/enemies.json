@@ -1,0 +1,370 @@
+[
+ {
+  "id": "fly_head",
+  "name": "Fly Head",
+  "grade": "Grade 4",
+  "element": "Body",
+  "kanji": "蠅",
+  "stats": {
+   "hp": 900,
+   "atk": 140,
+   "speed": 80
+  },
+  "boss": false,
+  "skill": null,
+  "art": "assets/enemies/fly_head.svg"
+ },
+ {
+  "id": "grasshopper",
+  "name": "Grasshopper Curse",
+  "grade": "Grade 3",
+  "element": "Skill",
+  "kanji": "蝗",
+  "stats": {
+   "hp": 1400,
+   "atk": 190,
+   "speed": 120
+  },
+  "boss": false,
+  "skill": {
+   "name": "Leap Slash",
+   "mult": 1.8,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/enemies/grasshopper.svg"
+ },
+ {
+  "id": "eye_curse",
+  "name": "Many-Eyed Curse",
+  "grade": "Grade 3",
+  "element": "Wisdom",
+  "kanji": "眼",
+  "stats": {
+   "hp": 1300,
+   "atk": 170,
+   "speed": 90
+  },
+  "boss": false,
+  "skill": {
+   "name": "Piercing Gaze",
+   "mult": 0.8,
+   "target": "all",
+   "every": 3
+  },
+  "art": "assets/enemies/eye_curse.svg"
+ },
+ {
+  "id": "womb_spawn",
+  "name": "Womb Spawn",
+  "grade": "Grade 2",
+  "element": "Heart",
+  "kanji": "胎",
+  "stats": {
+   "hp": 2600,
+   "atk": 250,
+   "speed": 100
+  },
+  "boss": false,
+  "skill": {
+   "name": "Gnash",
+   "mult": 1.7,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/enemies/womb_spawn.svg"
+ },
+ {
+  "id": "cursed_womb",
+  "name": "Special Grade Cursed Womb",
+  "grade": "Special Grade",
+  "element": "Heart",
+  "kanji": "呪胎",
+  "stats": {
+   "hp": 11000,
+   "atk": 360,
+   "speed": 110
+  },
+  "boss": true,
+  "skill": {
+   "name": "Womb Shriek",
+   "mult": 1.1,
+   "target": "all",
+   "every": 3,
+   "effect": {
+    "type": "weaken",
+    "pct": 15,
+    "turns": 2
+   }
+  },
+  "art": "assets/enemies/cursed_womb.svg"
+ },
+ {
+  "id": "transfigured",
+  "name": "Transfigured Human",
+  "grade": "Grade 3",
+  "element": "Body",
+  "kanji": "改",
+  "stats": {
+   "hp": 2000,
+   "atk": 230,
+   "speed": 95
+  },
+  "boss": false,
+  "skill": {
+   "name": "Flail",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/enemies/transfigured.svg"
+ },
+ {
+  "id": "mahito_boss",
+  "name": "Mahito",
+  "grade": "Special Grade",
+  "element": "Skill",
+  "kanji": "真人",
+  "stats": {
+   "hp": 36000,
+   "atk": 820,
+   "speed": 165
+  },
+  "boss": true,
+  "skill": {
+   "name": "Idle Transfiguration",
+   "mult": 2.4,
+   "target": "single",
+   "every": 3,
+   "effect": {
+    "type": "burn",
+    "pct": 6,
+    "turns": 2
+   }
+  },
+  "art": "assets/enemies/mahito_boss.svg"
+ },
+ {
+  "id": "cursed_corpse",
+  "name": "Cursed Corpse",
+  "grade": "Grade 2",
+  "element": "Bravery",
+  "kanji": "骸",
+  "stats": {
+   "hp": 2600,
+   "atk": 290,
+   "speed": 110
+  },
+  "boss": false,
+  "skill": {
+   "name": "Rampage",
+   "mult": 1.6,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/enemies/cursed_corpse.svg"
+ },
+ {
+  "id": "todo_boss",
+  "name": "Aoi Todo",
+  "grade": "Grade 1",
+  "element": "Bravery",
+  "kanji": "東堂",
+  "stats": {
+   "hp": 40000,
+   "atk": 960,
+   "speed": 170
+  },
+  "boss": true,
+  "skill": {
+   "name": "Boogie Woogie",
+   "mult": 2.0,
+   "target": "single",
+   "every": 3,
+   "effect": {
+    "type": "stun",
+    "chance": 40
+   }
+  },
+  "art": "assets/enemies/todo_boss.svg"
+ },
+ {
+  "id": "cursed_bud",
+  "name": "Cursed Bud",
+  "grade": "Grade 2",
+  "element": "Heart",
+  "kanji": "芽",
+  "stats": {
+   "hp": 2400,
+   "atk": 260,
+   "speed": 105
+  },
+  "boss": false,
+  "skill": {
+   "name": "Drain",
+   "mult": 1.5,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/enemies/cursed_bud.svg"
+ },
+ {
+  "id": "hanami_boss",
+  "name": "Hanami",
+  "grade": "Special Grade",
+  "element": "Heart",
+  "kanji": "花御",
+  "stats": {
+   "hp": 60000,
+   "atk": 1150,
+   "speed": 150
+  },
+  "boss": true,
+  "skill": {
+   "name": "Cursed Buds",
+   "mult": 1.3,
+   "target": "all",
+   "every": 3,
+   "effect": {
+    "type": "weaken",
+    "pct": 20,
+    "turns": 2
+   }
+  },
+  "art": "assets/enemies/hanami_boss.svg"
+ },
+ {
+  "id": "shibuya_curse",
+  "name": "Shibuya Curse",
+  "grade": "Grade 2",
+  "element": "Wisdom",
+  "kanji": "渋",
+  "stats": {
+   "hp": 4200,
+   "atk": 430,
+   "speed": 120
+  },
+  "boss": false,
+  "skill": {
+   "name": "Veil Crush",
+   "mult": 1.5,
+   "target": "single",
+   "every": 3
+  },
+  "art": "assets/enemies/shibuya_curse.svg"
+ },
+ {
+  "id": "finger_bearer",
+  "name": "Finger Bearer",
+  "grade": "Grade 1",
+  "element": "Body",
+  "kanji": "指",
+  "stats": {
+   "hp": 7800,
+   "atk": 560,
+   "speed": 115
+  },
+  "boss": false,
+  "skill": {
+   "name": "Finger Burst",
+   "mult": 1.0,
+   "target": "all",
+   "every": 3
+  },
+  "art": "assets/enemies/finger_bearer.svg"
+ },
+ {
+  "id": "smallpox",
+  "name": "Smallpox Deity",
+  "grade": "Special Grade",
+  "element": "Wisdom",
+  "kanji": "疱瘡",
+  "stats": {
+   "hp": 11000,
+   "atk": 640,
+   "speed": 120
+  },
+  "boss": false,
+  "skill": {
+   "name": "Coffin Countdown",
+   "mult": 1.9,
+   "target": "single",
+   "every": 3,
+   "effect": {
+    "type": "stun",
+    "chance": 35
+   }
+  },
+  "art": "assets/enemies/smallpox.svg"
+ },
+ {
+  "id": "dagon_boss",
+  "name": "Dagon",
+  "grade": "Special Grade",
+  "element": "Skill",
+  "kanji": "陀艮",
+  "stats": {
+   "hp": 90000,
+   "atk": 1500,
+   "speed": 150
+  },
+  "boss": true,
+  "skill": {
+   "name": "Death Swarm",
+   "mult": 1.4,
+   "target": "all",
+   "every": 3
+  },
+  "art": "assets/enemies/dagon_boss.svg"
+ },
+ {
+  "id": "jogo_boss",
+  "name": "Jogo",
+  "grade": "Special Grade",
+  "element": "Heart",
+  "kanji": "漏瑚",
+  "stats": {
+   "hp": 110000,
+   "atk": 1850,
+   "speed": 175
+  },
+  "boss": true,
+  "skill": {
+   "name": "Maximum: Meteor",
+   "mult": 1.6,
+   "target": "all",
+   "every": 3,
+   "effect": {
+    "type": "burn",
+    "pct": 6,
+    "turns": 2
+   }
+  },
+  "art": "assets/enemies/jogo_boss.svg"
+ },
+ {
+  "id": "sukuna_boss",
+  "name": "Ryomen Sukuna",
+  "grade": "King of Curses",
+  "element": "Body",
+  "kanji": "宿儺",
+  "stats": {
+   "hp": 170000,
+   "atk": 2400,
+   "speed": 260
+  },
+  "boss": true,
+  "skill": {
+   "name": "Malevolent Shrine",
+   "mult": 1.7,
+   "target": "all",
+   "every": 3,
+   "effect": {
+    "type": "burn",
+    "pct": 5,
+    "turns": 2
+   }
+  },
+  "art": "assets/enemies/sukuna_boss.svg"
+ }
+]

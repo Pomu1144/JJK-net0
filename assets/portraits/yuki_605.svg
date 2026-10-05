@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<linearGradient id="bg-yuki_605" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#e3b52c"/><stop offset="0.55" stop-color="#4a3506"/><stop offset="1" stop-color="#05080a"/></linearGradient>
+<radialGradient id="glow-yuki_605" cx="0.5" cy="0.45" r="0.55"><stop offset="0" stop-color="#fff0a6" stop-opacity="0.55"/><stop offset="1" stop-color="#fff0a6" stop-opacity="0"/></radialGradient>
+<linearGradient id="skin-yuki_605" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9cdb4"/><stop offset="1" stop-color="#b88f74"/></linearGradient>
+<linearGradient id="coat-yuki_605" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2027"/><stop offset="1" stop-color="#07090c"/></linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#bg-yuki_605)"/>
+<path d="M57,49 Q143.0,-1.8543447161009183 273,-19" stroke="#fff0a6" stroke-opacity="0.11" stroke-width="13" stroke-linecap="round" fill="none"/><path d="M12,300 Q107.5,277.82660998723657 243,264" stroke="#fff0a6" stroke-opacity="0.09" stroke-width="19" stroke-linecap="round" fill="none"/><path d="M18,248 Q161.0,241.56421810883324 254,219" stroke="#fff0a6" stroke-opacity="0.11" stroke-width="31" stroke-linecap="round" fill="none"/><path d="M72,218 Q197.5,245.86075289121828 307,254" stroke="#fff0a6" stroke-opacity="0.11" stroke-width="34" stroke-linecap="round" fill="none"/><path d="M94,302 Q173.0,259.0171404812784 250,290" stroke="#fff0a6" stroke-opacity="0.07" stroke-width="31" stroke-linecap="round" fill="none"/>
+<circle cx="150" cy="190" r="150" fill="url(#glow-yuki_605)"/>
+<text x="262" y="66" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="44" font-weight="700" fill="#ffffff" fill-opacity="0.16" text-anchor="middle"><tspan x="262" dy="0">九</tspan><tspan x="262" dy="46">十</tspan><tspan x="262" dy="46">九</tspan></text>
+<path d="M84,190 C70,260 74,320 64,360 L236,360 C226,320 230,260 216,190z" fill="#ebc95e"/>
+<path d="M20,400 C30,320 90,290 150,290 C210,290 270,320 280,400z" fill="url(#coat-yuki_605)" stroke="#fff0a6" stroke-opacity="0.55" stroke-width="3"/>
+<path d="M118,292 L150,340 L182,292" fill="none" stroke="#c9a24e" stroke-width="3" stroke-opacity="0.8"/>
+<circle cx="150" cy="318" r="5" fill="#c9a24e"/>
+<rect x="130" y="240" width="40" height="56" fill="url(#skin-yuki_605)"/>
+<ellipse cx="150" cy="196" rx="58" ry="66" fill="url(#skin-yuki_605)"/>
+<path d="M88,206 C80,124 220,124 212,206 C204,170 186,154 150,152 C114,154 96,170 88,206z" fill="#ebc95e"/>
+<path d="M118,190 l26,6 M182,190 l-26,6" stroke="#15151b" stroke-width="4.5" stroke-linecap="round" fill="none"/><path d="M122,204 q10,-7 20,0 q-10,5 -20,0z M158,204 q10,-7 20,0 q-10,5 -20,0z" fill="#15151b"/><circle cx="133" cy="203" r="2.4" fill="#fff0a6"/><circle cx="167" cy="203" r="2.4" fill="#fff0a6"/><path d="M140,238 q10,4 20,0" stroke="#7a5446" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<g transform="translate(44,352)" fill="none" stroke="#f1d98a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><circle r="24" fill="#071418" fill-opacity="0.75" stroke="#c9a24e"/><path d="M0,-12 L3.5,-4 L12,-4 L5,1.5 L7.5,10 L0,5 L-7.5,10 L-5,1.5 L-12,-4 L-3.5,-4z"/></g>
+<g transform="translate(252,352)"><rect x="-22" y="-22" width="44" height="44" rx="4" fill="#8e1c1c" stroke="#f1d98a" stroke-opacity="0.6"/><text y="8" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#f6ead0">YT</text></g>
+<rect x="4" y="4" width="292" height="392" fill="none" stroke="#c9a24e" stroke-opacity="0.7" stroke-width="2"/>
+</svg>

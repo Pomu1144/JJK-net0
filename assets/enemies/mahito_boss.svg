@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-mahito_boss" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#33b56a"/><stop offset="0.6" stop-color="#0a3b23"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-mahito_boss" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ff3b30" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-mahito_boss)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="110" font-weight="700" fill="#000" fill-opacity="0.35">真人</text>
+<path d="M50,400 C60,310 100,280 150,280 C200,280 240,310 250,400z" fill="url(#eb-mahito_boss)" stroke="#a6f0c2" stroke-opacity=".5" stroke-width="3"/><ellipse cx="150" cy="190" rx="62" ry="72" fill="url(#eb-mahito_boss)" stroke="#a6f0c2" stroke-opacity=".5" stroke-width="3"/><path d="M96,160 C100,100 200,100 204,160 C190,140 110,140 96,160z" fill="#0b0b10"/><path d="M120,170 l40,60 M128,180 l-8,6 M140,198 l-8,6 M152,214 l-8,6" stroke="#2a3340" stroke-width="3"/>
+<path d="M118,196 q14,-8 26,0 M156,196 q14,-8 26,0" stroke="#a6f0c2" stroke-width="5" stroke-linecap="round" fill="none"/>
+<path d="M90,96 l14,-34 l16,26 l14,-38 l16,30 l16,-30 l14,38 l16,-26 l14,34" fill="none" stroke="#e8433a" stroke-width="5" stroke-linejoin="round"/>
+</svg>

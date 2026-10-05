@@ -1,0 +1,178 @@
+{
+ "items": {
+  "talisman_s": {
+   "name": "Grade 4 Talisman",
+   "kind": "exp",
+   "exp": 600,
+   "kanji": "四",
+   "desc": "A paper seal holding residual cursed energy. +600 EXP."
+  },
+  "talisman_m": {
+   "name": "Grade 2 Talisman",
+   "kind": "exp",
+   "exp": 4000,
+   "kanji": "二",
+   "desc": "A sealed charm from a grade 2 exorcism. +4,000 EXP."
+  },
+  "talisman_l": {
+   "name": "Special Grade Talisman",
+   "kind": "exp",
+   "exp": 20000,
+   "kanji": "特",
+   "desc": "A sealed relic of a special grade curse. +20,000 EXP."
+  },
+  "ticket": {
+   "name": "Summon Ticket",
+   "kind": "ticket",
+   "kanji": "札",
+   "desc": "One free summon on any banner."
+  }
+ },
+ "shop": {
+  "sections": [
+   {
+    "id": "items",
+    "name": "Talismans",
+    "kanji": "呪符",
+    "offers": [
+     {
+      "id": "buy_ts",
+      "give": {
+       "items": {
+        "talisman_s": 1
+       }
+      },
+      "price": {
+       "yen": 300
+      }
+     },
+     {
+      "id": "buy_ts10",
+      "give": {
+       "items": {
+        "talisman_s": 10
+       }
+      },
+      "price": {
+       "yen": 2700
+      }
+     },
+     {
+      "id": "buy_tm",
+      "give": {
+       "items": {
+        "talisman_m": 1
+       }
+      },
+      "price": {
+       "yen": 1800
+      }
+     },
+     {
+      "id": "buy_tl",
+      "give": {
+       "items": {
+        "talisman_l": 1
+       }
+      },
+      "price": {
+       "yen": 8000
+      }
+     },
+     {
+      "id": "buy_tl_c",
+      "give": {
+       "items": {
+        "talisman_l": 1
+       }
+      },
+      "price": {
+       "cubes": 15
+      }
+     }
+    ]
+   },
+   {
+    "id": "stamina",
+    "name": "Stamina",
+    "kanji": "気力",
+    "offers": [
+     {
+      "id": "refill",
+      "give": {
+       "staminaRefill": true
+      },
+      "price": {
+       "cubes": 5
+      }
+     },
+     {
+      "id": "stam10",
+      "give": {
+       "stamina": 10
+      },
+      "price": {
+       "yen": 1000
+      }
+     }
+    ]
+   },
+   {
+    "id": "summon",
+    "name": "Summon",
+    "kanji": "召喚",
+    "offers": [
+     {
+      "id": "ticket1",
+      "give": {
+       "items": {
+        "ticket": 1
+       }
+      },
+      "price": {
+       "cubes": 5
+      }
+     },
+     {
+      "id": "ticket10",
+      "give": {
+       "items": {
+        "ticket": 10
+       }
+      },
+      "price": {
+       "cubes": 45
+      }
+     },
+     {
+      "id": "ticket_yen",
+      "give": {
+       "items": {
+        "ticket": 1
+       }
+      },
+      "price": {
+       "yen": 6000
+      }
+     }
+    ]
+   },
+   {
+    "id": "daily",
+    "name": "Daily",
+    "kanji": "日課",
+    "offers": [
+     {
+      "id": "daily_gift",
+      "give": {
+       "cubes": 10,
+       "yen": 1000
+      },
+      "price": {},
+      "daily": true
+     }
+    ]
+   }
+  ]
+ }
+}

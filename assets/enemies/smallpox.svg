@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-smallpox" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#9a5ae0"/><stop offset="0.6" stop-color="#2a0f4d"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-smallpox" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#dcc0ff" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-smallpox)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="110" font-weight="700" fill="#000" fill-opacity="0.35">疱瘡</text>
+<path d="M251,221 Q244,243 229,260 Q214,276 193,284 Q172,292 152,286 Q131,279 107,279 Q84,279 76,258 Q68,238 60,219 Q51,200 63,183 Q74,165 80,144 Q86,123 106,113 Q127,103 148,109 Q170,116 192,120 Q214,124 229,140 Q244,157 252,178 Q259,200 251,221z" fill="url(#eb-smallpox)" stroke="#dcc0ff" stroke-opacity=".5" stroke-width="3"/>
+<ellipse cx="151" cy="141" rx="12" ry="10" fill="#fff6dc"/><circle cx="151" cy="141" r="5" fill="#120808"/><ellipse cx="173" cy="195" rx="17" ry="14" fill="#fff6dc"/><circle cx="173" cy="195" r="7" fill="#120808"/><ellipse cx="134" cy="185" rx="15" ry="12" fill="#fff6dc"/><circle cx="134" cy="185" r="6" fill="#120808"/><path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/><path d="M110,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M124,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M138,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M152,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M166,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M180,238 l6,10 l6,-10" fill="#f6ecd2"/>
+
+</svg>

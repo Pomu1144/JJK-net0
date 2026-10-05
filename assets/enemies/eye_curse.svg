@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-eye_curse" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#9a5ae0"/><stop offset="0.6" stop-color="#2a0f4d"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-eye_curse" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#dcc0ff" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-eye_curse)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="150" font-weight="700" fill="#000" fill-opacity="0.35">眼</text>
+<path d="M254,223 Q248,245 226,255 Q204,265 188,277 Q171,289 149,295 Q126,301 107,288 Q88,275 77,257 Q66,239 58,219 Q50,200 51,177 Q51,154 68,138 Q85,122 106,112 Q127,103 149,105 Q172,108 192,117 Q213,125 231,140 Q250,154 254,177 Q259,200 254,223z" fill="url(#eb-eye_curse)" stroke="#dcc0ff" stroke-opacity=".5" stroke-width="3"/>
+<ellipse cx="129" cy="209" rx="17" ry="13" fill="#fff6dc"/><circle cx="129" cy="209" r="7" fill="#120808"/><ellipse cx="190" cy="181" rx="17" ry="13" fill="#fff6dc"/><circle cx="190" cy="181" r="7" fill="#120808"/><ellipse cx="126" cy="200" rx="10" ry="8" fill="#fff6dc"/><circle cx="126" cy="200" r="4" fill="#120808"/><ellipse cx="140" cy="143" rx="16" ry="13" fill="#fff6dc"/><circle cx="140" cy="143" r="7" fill="#120808"/><ellipse cx="126" cy="154" rx="10" ry="8" fill="#fff6dc"/><circle cx="126" cy="154" r="4" fill="#120808"/><ellipse cx="158" cy="160" rx="11" ry="9" fill="#fff6dc"/><circle cx="158" cy="160" r="5" fill="#120808"/><ellipse cx="170" cy="195" rx="12" ry="10" fill="#fff6dc"/><circle cx="170" cy="195" r="5" fill="#120808"/><path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/><path d="M110,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M124,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M138,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M152,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M166,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M180,238 l6,10 l6,-10" fill="#f6ecd2"/>
+
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<linearGradient id="bg-panda_404" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#3f8fe0"/><stop offset="0.55" stop-color="#0b2a52"/><stop offset="1" stop-color="#05080a"/></linearGradient>
+<radialGradient id="glow-panda_404" cx="0.5" cy="0.45" r="0.55"><stop offset="0" stop-color="#9fd0ff" stop-opacity="0.55"/><stop offset="1" stop-color="#9fd0ff" stop-opacity="0"/></radialGradient>
+<linearGradient id="skin-panda_404" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9cdb4"/><stop offset="1" stop-color="#b88f74"/></linearGradient>
+<linearGradient id="coat-panda_404" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2027"/><stop offset="1" stop-color="#07090c"/></linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#bg-panda_404)"/>
+<path d="M110,299 Q252.0,255.71265814468717 428,262" stroke="#9fd0ff" stroke-opacity="0.07" stroke-width="11" stroke-linecap="round" fill="none"/><path d="M91,197 Q244.0,209.8270095931359 373,177" stroke="#9fd0ff" stroke-opacity="0.12" stroke-width="23" stroke-linecap="round" fill="none"/><path d="M162,275 Q217.0,222.42643421178633 310,210" stroke="#9fd0ff" stroke-opacity="0.07" stroke-width="22" stroke-linecap="round" fill="none"/><path d="M176,94 Q319.0,77.83310849820617 426,118" stroke="#9fd0ff" stroke-opacity="0.13" stroke-width="15" stroke-linecap="round" fill="none"/><path d="M122,336 Q221.5,374.13678860067944 339,342" stroke="#9fd0ff" stroke-opacity="0.13" stroke-width="24" stroke-linecap="round" fill="none"/>
+<circle cx="150" cy="190" r="150" fill="url(#glow-panda_404)"/>
+<text x="262" y="66" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="44" font-weight="700" fill="#ffffff" fill-opacity="0.16" text-anchor="middle"><tspan x="262" dy="0">パ</tspan><tspan x="262" dy="46">ン</tspan><tspan x="262" dy="46">ダ</tspan></text>
+<circle cx="98" cy="134" r="20" fill="#14141a"/><circle cx="202" cy="134" r="20" fill="#14141a"/>
+<path d="M20,400 C30,320 90,290 150,290 C210,290 270,320 280,400z" fill="url(#coat-panda_404)" stroke="#9fd0ff" stroke-opacity="0.55" stroke-width="3"/>
+<path d="M118,292 L150,340 L182,292" fill="none" stroke="#c9a24e" stroke-width="3" stroke-opacity="0.8"/>
+<circle cx="150" cy="318" r="5" fill="#c9a24e"/>
+<rect x="130" y="240" width="40" height="56" fill="url(#skin-panda_404)"/>
+<ellipse cx="150" cy="196" rx="58" ry="66" fill="#f3f3ee"/>
+<ellipse cx="126" cy="196" rx="16" ry="12" fill="#14141a" transform="rotate(-20 126 196)"/><ellipse cx="174" cy="196" rx="16" ry="12" fill="#14141a" transform="rotate(20 174 196)"/><ellipse cx="150" cy="224" rx="8" ry="6" fill="#14141a"/>
+<circle cx="128" cy="194" r="3" fill="#fff"/><circle cx="172" cy="194" r="3" fill="#fff"/>
+<g transform="translate(44,352)" fill="none" stroke="#f1d98a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><circle r="24" fill="#071418" fill-opacity="0.75" stroke="#c9a24e"/><circle cy="4" r="6"/><circle cx="-8" cy="-5" r="3"/><circle cx="-3" cy="-10" r="3"/><circle cx="3" cy="-10" r="3"/><circle cx="8" cy="-5" r="3"/></g>
+<g transform="translate(252,352)"><rect x="-22" y="-22" width="44" height="44" rx="4" fill="#8e1c1c" stroke="#f1d98a" stroke-opacity="0.6"/><text y="8" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#f6ead0">P</text></g>
+<rect x="4" y="4" width="292" height="392" fill="none" stroke="#c9a24e" stroke-opacity="0.7" stroke-width="2"/>
+</svg>

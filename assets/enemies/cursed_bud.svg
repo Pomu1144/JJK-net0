@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<radialGradient id="eb-cursed_bud" cx="0.4" cy="0.35" r="0.8"><stop offset="0" stop-color="#e0453f"/><stop offset="0.6" stop-color="#4a0c0e"/><stop offset="1" stop-color="#050507"/></radialGradient>
+<radialGradient id="ea-cursed_bud" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#ffb0a4" stop-opacity="0.45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+</defs>
+<circle cx="150" cy="200" r="160" fill="url(#ea-cursed_bud)"/>
+<text x="150" y="250" text-anchor="middle" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="150" font-weight="700" fill="#000" fill-opacity="0.35">芽</text>
+<path d="M100,120 C80,80 70,60 50,50 M200,120 C220,80 230,60 250,50" stroke="#d5dcb4" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M235,220 Q237,240 224,257 Q211,273 191,279 Q170,285 149,289 Q128,293 104,288 Q81,282 76,259 Q72,236 67,218 Q62,200 59,178 Q56,157 75,145 Q94,134 111,121 Q128,108 149,113 Q170,118 194,118 Q219,118 229,138 Q240,159 236,179 Q233,200 235,220z" fill="url(#eb-cursed_bud)" stroke="#ffb0a4" stroke-opacity=".5" stroke-width="3"/>
+<ellipse cx="120" cy="180" rx="16" ry="13" fill="#fff6dc"/><circle cx="120" cy="180" r="7" fill="#120808"/><ellipse cx="180" cy="180" rx="16" ry="13" fill="#fff6dc"/><circle cx="180" cy="180" r="7" fill="#120808"/><path d="M104,236 q46,30 92,0 q-46,14 -92,0z" fill="#120808"/><path d="M110,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M124,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M138,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M152,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M166,238 l6,10 l6,-10" fill="#f6ecd2"/><path d="M180,238 l6,10 l6,-10" fill="#f6ecd2"/>
+
+</svg>

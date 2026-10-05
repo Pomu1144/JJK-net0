@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+<defs>
+<linearGradient id="bg-mechamaru_305" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#e3b52c"/><stop offset="0.55" stop-color="#4a3506"/><stop offset="1" stop-color="#05080a"/></linearGradient>
+<radialGradient id="glow-mechamaru_305" cx="0.5" cy="0.45" r="0.55"><stop offset="0" stop-color="#fff0a6" stop-opacity="0.55"/><stop offset="1" stop-color="#fff0a6" stop-opacity="0"/></radialGradient>
+<linearGradient id="skin-mechamaru_305" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9cdb4"/><stop offset="1" stop-color="#b88f74"/></linearGradient>
+<linearGradient id="coat-mechamaru_305" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2027"/><stop offset="1" stop-color="#07090c"/></linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#bg-mechamaru_305)"/>
+<path d="M-31,167 Q45.5,186.82021405986853 124,179" stroke="#fff0a6" stroke-opacity="0.09" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M50,90 Q216.0,71.95130134743688 334,68" stroke="#fff0a6" stroke-opacity="0.13" stroke-width="27" stroke-linecap="round" fill="none"/><path d="M29,208 Q169.0,200.2213694404217 271,230" stroke="#fff0a6" stroke-opacity="0.07" stroke-width="10" stroke-linecap="round" fill="none"/><path d="M32,166 Q146.5,137.29483430323796 313,35" stroke="#fff0a6" stroke-opacity="0.07" stroke-width="15" stroke-linecap="round" fill="none"/><path d="M114,120 Q201.5,85.9606632911309 287,70" stroke="#fff0a6" stroke-opacity="0.06" stroke-width="12" stroke-linecap="round" fill="none"/>
+<circle cx="150" cy="190" r="150" fill="url(#glow-mechamaru_305)"/>
+<text x="262" y="66" font-family="'Hiragino Mincho ProN','Yu Mincho','Noto Serif JP','IPAMincho',serif" font-size="44" font-weight="700" fill="#ffffff" fill-opacity="0.16" text-anchor="middle"><tspan x="262" dy="0">機</tspan><tspan x="262" dy="46">械</tspan><tspan x="262" dy="46">丸</tspan></text>
+
+<path d="M20,400 C30,320 90,290 150,290 C210,290 270,320 280,400z" fill="url(#coat-mechamaru_305)" stroke="#fff0a6" stroke-opacity="0.55" stroke-width="3"/>
+<path d="M118,292 L150,340 L182,292" fill="none" stroke="#c9a24e" stroke-width="3" stroke-opacity="0.8"/>
+<circle cx="150" cy="318" r="5" fill="#c9a24e"/>
+<rect x="130" y="240" width="40" height="56" fill="url(#skin-mechamaru_305)"/>
+
+<rect x="100" y="140" width="100" height="100" rx="14" fill="#5b6672"/><rect x="112" y="178" width="76" height="20" rx="6" fill="#111"/><rect x="120" y="183" width="60" height="10" rx="4" fill="#8b98a6" opacity=".9"/><path d="M150,140 v-24 M150,116 l10,-6" stroke="#5b6672" stroke-width="6" stroke-linecap="round"/>
+
+<g transform="translate(44,352)" fill="none" stroke="#f1d98a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><circle r="24" fill="#071418" fill-opacity="0.75" stroke="#c9a24e"/><circle r="6"/><path d="M0,-12 v4 M0,8 v4 M-12,0 h4 M8,0 h4 M-8.5,-8.5 l3,3 M5.5,5.5 l3,3 M-8.5,8.5 l3,-3 M5.5,-5.5 l3,-3"/></g>
+<g transform="translate(252,352)"><rect x="-22" y="-22" width="44" height="44" rx="4" fill="#8e1c1c" stroke="#f1d98a" stroke-opacity="0.6"/><text y="8" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#f6ead0">KM</text></g>
+<rect x="4" y="4" width="292" height="392" fill="none" stroke="#c9a24e" stroke-opacity="0.7" stroke-width="2"/>
+</svg>
