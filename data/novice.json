@@ -1,0 +1,524 @@
+{
+ "_note": "Novice Mission (7-day beginner missions). Day N unlocks N-1 local days after the save was created. Progress is derived from the save (see js/pages/novice.js METRIC).",
+ "final": {
+  "item": "ssr_ticket",
+  "n": 1,
+  "name": "SSR-Character Guaranteed Ticket"
+ },
+ "days": [
+  {
+   "day": 1,
+   "missions": [
+    {
+     "id": "d1-1",
+     "text": "Clear Main Quest 1-1",
+     "metric": "clear",
+     "arg": "1-1",
+     "target": 1,
+     "link": "missions.html#ch1",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 300
+      }
+     ]
+    },
+    {
+     "id": "d1-2",
+     "text": "Summon a sorcerer 1 time",
+     "metric": "pulls",
+     "target": 1,
+     "link": "summon.html",
+     "rewards": [
+      {
+       "id": "ticket",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "id": "d1-3",
+     "text": "Claim the Daily Gift in the Shop",
+     "metric": "dailyGift",
+     "target": 1,
+     "link": "shop.html#daily",
+     "rewards": [
+      {
+       "id": "light_s",
+       "n": 5
+      }
+     ]
+    },
+    {
+     "id": "d1-4",
+     "text": "Set a Backup sorcerer in a team",
+     "metric": "support",
+     "target": 1,
+     "link": "teams.html",
+     "rewards": [
+      {
+       "id": "yen",
+       "n": 2000
+      }
+     ]
+    },
+    {
+     "id": "d1-5",
+     "text": "Clear Main Quest 1-5",
+     "metric": "clear",
+     "arg": "1-5",
+     "target": 1,
+     "link": "missions.html#ch1",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 500
+      },
+      {
+       "id": "light_m",
+       "n": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "missions": [
+    {
+     "id": "d2-1",
+     "text": "Win 5 battles",
+     "metric": "wins",
+     "target": 5,
+     "link": "missions.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 300
+      }
+     ]
+    },
+    {
+     "id": "d2-2",
+     "text": "Raise a sorcerer to Lv 10",
+     "metric": "unitLevel",
+     "arg": 10,
+     "target": 1,
+     "link": "characters.html",
+     "rewards": [
+      {
+       "id": "light_s",
+       "n": 10
+      }
+     ]
+    },
+    {
+     "id": "d2-3",
+     "text": "Clear a Strengthening Quest stage",
+     "metric": "questStages",
+     "target": 1,
+     "link": "missions.html#strengthen",
+     "rewards": [
+      {
+       "id": "yen",
+       "n": 3000
+      }
+     ]
+    },
+    {
+     "id": "d2-4",
+     "text": "Summon sorcerers 10 times",
+     "metric": "pulls",
+     "target": 10,
+     "link": "summon.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 500
+      }
+     ]
+    },
+    {
+     "id": "d2-5",
+     "text": "Earn 15 stars in the Main Quest",
+     "metric": "stars",
+     "target": 15,
+     "link": "missions.html#ch1",
+     "rewards": [
+      {
+       "id": "light_m",
+       "n": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "missions": [
+    {
+     "id": "d3-1",
+     "text": "Reach Player Rank 5",
+     "metric": "rank",
+     "target": 5,
+     "link": "missions.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 300
+      }
+     ]
+    },
+    {
+     "id": "d3-2",
+     "text": "Clear Main Quest 2-3",
+     "metric": "clear",
+     "arg": "2-3",
+     "target": 1,
+     "link": "missions.html#ch2",
+     "rewards": [
+      {
+       "id": "yen",
+       "n": 3000
+      }
+     ]
+    },
+    {
+     "id": "d3-3",
+     "text": "Own 8 sorcerers",
+     "metric": "units",
+     "target": 8,
+     "link": "summon.html",
+     "rewards": [
+      {
+       "id": "ticket",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "id": "d3-4",
+     "text": "Clear Strengthening Quests 5 times (Auto-clear counts)",
+     "metric": "questRuns",
+     "target": 5,
+     "link": "missions.html#strengthen",
+     "rewards": [
+      {
+       "id": "light_m",
+       "n": 3
+      }
+     ]
+    },
+    {
+     "id": "d3-5",
+     "text": "Fill all 4 Main slots in 2 teams",
+     "metric": "teamsFull",
+     "target": 2,
+     "link": "teams.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 500
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "missions": [
+    {
+     "id": "d4-1",
+     "text": "Win 20 battles",
+     "metric": "wins",
+     "target": 20,
+     "link": "missions.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 500
+      }
+     ]
+    },
+    {
+     "id": "d4-2",
+     "text": "Raise 4 sorcerers to Lv 20",
+     "metric": "unitLevel",
+     "arg": 20,
+     "target": 4,
+     "link": "characters.html",
+     "rewards": [
+      {
+       "id": "light_m",
+       "n": 4
+      }
+     ]
+    },
+    {
+     "id": "d4-3",
+     "text": "Clear Main Quest 2-5",
+     "metric": "clear",
+     "arg": "2-5",
+     "target": 1,
+     "link": "missions.html#ch2",
+     "rewards": [
+      {
+       "id": "gp_card",
+       "n": 5
+      },
+      {
+       "id": "yen",
+       "n": 3000
+      }
+     ]
+    },
+    {
+     "id": "d4-4",
+     "text": "Summon sorcerers 30 times",
+     "metric": "pulls",
+     "target": 30,
+     "link": "summon.html",
+     "rewards": [
+      {
+       "id": "ticket",
+       "n": 2
+      }
+     ]
+    },
+    {
+     "id": "d4-5",
+     "text": "Get 3★ on 8 Main Quest stages",
+     "metric": "threeStar",
+     "target": 8,
+     "link": "missions.html#ch1",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 500
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "missions": [
+    {
+     "id": "d5-1",
+     "text": "Reach Player Rank 10",
+     "metric": "rank",
+     "target": 10,
+     "link": "missions.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 500
+      }
+     ]
+    },
+    {
+     "id": "d5-2",
+     "text": "Raise a sorcerer to Lv 30",
+     "metric": "unitLevel",
+     "arg": 30,
+     "target": 1,
+     "link": "characters.html",
+     "rewards": [
+      {
+       "id": "light_l",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "id": "d5-3",
+     "text": "Clear Main Quest 3-3",
+     "metric": "clear",
+     "arg": "3-3",
+     "target": 1,
+     "link": "missions.html#ch3",
+     "rewards": [
+      {
+       "id": "yen",
+       "n": 5000
+      }
+     ]
+    },
+    {
+     "id": "d5-4",
+     "text": "Own 3 SSR sorcerers",
+     "metric": "ssr",
+     "target": 3,
+     "link": "summon.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 800
+      }
+     ]
+    },
+    {
+     "id": "d5-5",
+     "text": "Clear Strengthening Quests 15 times (Auto-clear counts)",
+     "metric": "questRuns",
+     "target": 15,
+     "link": "missions.html#strengthen",
+     "rewards": [
+      {
+       "id": "light_m",
+       "n": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "missions": [
+    {
+     "id": "d6-1",
+     "text": "Win 40 battles",
+     "metric": "wins",
+     "target": 40,
+     "link": "missions.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 600
+      }
+     ]
+    },
+    {
+     "id": "d6-2",
+     "text": "Clear Main Quest 3-5",
+     "metric": "clear",
+     "arg": "3-5",
+     "target": 1,
+     "link": "missions.html#ch3",
+     "rewards": [
+      {
+       "id": "ticket",
+       "n": 2
+      }
+     ]
+    },
+    {
+     "id": "d6-3",
+     "text": "Clear Training Light Quest: Intermediate",
+     "metric": "clear",
+     "arg": "tl-2",
+     "target": 1,
+     "link": "missions.html#tl",
+     "rewards": [
+      {
+       "id": "light_l",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "id": "d6-4",
+     "text": "Summon sorcerers 60 times",
+     "metric": "pulls",
+     "target": 60,
+     "link": "summon.html",
+     "rewards": [
+      {
+       "id": "gp_card",
+       "n": 10
+      }
+     ]
+    },
+    {
+     "id": "d6-5",
+     "text": "Earn 45 stars in the Main Quest",
+     "metric": "stars",
+     "target": 45,
+     "link": "missions.html#ch3",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 800
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "missions": [
+    {
+     "id": "d7-1",
+     "text": "Reach Player Rank 15",
+     "metric": "rank",
+     "target": 15,
+     "link": "missions.html",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 1000
+      }
+     ]
+    },
+    {
+     "id": "d7-2",
+     "text": "Raise 4 sorcerers to Lv 40",
+     "metric": "unitLevel",
+     "arg": 40,
+     "target": 4,
+     "link": "characters.html",
+     "rewards": [
+      {
+       "id": "light_l",
+       "n": 2
+      }
+     ]
+    },
+    {
+     "id": "d7-3",
+     "text": "Clear Main Quest 4-5",
+     "metric": "clear",
+     "arg": "4-5",
+     "target": 1,
+     "link": "missions.html#ch4",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 1000
+      },
+      {
+       "id": "light_l",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "id": "d7-4",
+     "text": "Summon sorcerers 100 times",
+     "metric": "pulls",
+     "target": 100,
+     "link": "summon.html",
+     "rewards": [
+      {
+       "id": "ticket",
+       "n": 3
+      }
+     ]
+    },
+    {
+     "id": "d7-5",
+     "text": "Get 3★ on 15 Main Quest stages",
+     "metric": "threeStar",
+     "target": 15,
+     "link": "missions.html#ch4",
+     "rewards": [
+      {
+       "id": "cubes",
+       "n": 1000
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

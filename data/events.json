@@ -1,0 +1,1679 @@
+{
+ "events": [
+  {
+   "id": "ev_night_parade",
+   "name": "Night Parade: Grand Exorcism Battle",
+   "kanji": "百鬼夜行・大祓戦",
+   "period": "Limited event · Season 1",
+   "desc": "Phantoms of sorcerers and curses are marching through Tokyo's night. Clear stages on the Event Map to earn Phantom Medals, complete Event Missions and trade medals in the Exchange.",
+   "currency": {
+    "id": "medal",
+    "name": "Phantom Medal",
+    "short": "Medals",
+    "icon": "assets/pp/event/medal.svg"
+   },
+   "scale": 1.0,
+   "element": "Wisdom",
+   "bg": "assets/pp/memories/night-out-between-sorcerers/art.webp",
+   "npcs": {
+    "ijichi": {
+     "id": "npc_ijichi",
+     "name": "Kiyotaka Ijichi",
+     "element": "Wisdom",
+     "kanji": "伊地知"
+    }
+   },
+   "formidable": {
+    "name": "Formidable Battle",
+    "unlock": "sb-15",
+    "desc": "A tougher rematch against the parade's strongest phantom. Opens in a later update after you defeat the final boss."
+   },
+   "areas": [
+    {
+     "id": "shinjuku",
+     "name": "Shinjuku",
+     "kanji": "新宿",
+     "seed": 1337,
+     "tint": "blue",
+     "art": "assets/pp/memories/night-out-between-sorcerers/art.webp",
+     "nodes": [
+      {
+       "id": "sj-01",
+       "label": "1-1",
+       "type": "story",
+       "name": "Night Briefing",
+       "x": 7,
+       "y": 70,
+       "from": [],
+       "face": "char:kento_ex_salary",
+       "desc": "Story",
+       "lines": [
+        [
+         "npc:ijichi",
+         "Kiyotaka Ijichi",
+         "Thank you for coming on such short notice. Since sundown, phantoms of sorcerers have been appearing all over Shinjuku."
+        ],
+        [
+         "char:kento_ex_salary",
+         "Kento Nanami",
+         "Phantoms. Cursed energy shaped like people we know. They fight like the real thing, but they are hollow inside."
+        ],
+        [
+         "char:panda_need_help",
+         "Panda",
+         "So we get to punch fake versions of our friends? Sounds like Tuesday."
+        ],
+        [
+         "char:kento_ex_salary",
+         "Kento Nanami",
+         "Clear the streets district by district. Overtime is not an option tonight, so let's be efficient."
+        ]
+       ],
+       "reward": {
+        "medals": 50,
+        "yen": 500
+       }
+      },
+      {
+       "id": "sj-02",
+       "label": "1-2",
+       "type": "battle",
+       "name": "Back-Alley Patrol",
+       "x": 15,
+       "y": 58,
+       "from": [
+        "sj-01"
+       ],
+       "desc": "Phantoms of the second-years lurk behind the station.",
+       "stamina": 3,
+       "boss": false,
+       "recommendedPower": 1500,
+       "waves": [
+        [
+         {
+          "enemy": "foe_panda_need_help",
+          "level": 1
+         },
+         {
+          "enemy": "foe_maki_longsword_battle",
+          "level": 1
+         }
+        ],
+        [
+         {
+          "enemy": "foe_toge_403",
+          "level": 1
+         },
+         {
+          "enemy": "foe_panda_need_help",
+          "level": 2
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 300,
+        "rankExp": 18,
+        "unitExp": 150,
+        "medals": 40,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 120,
+        "cubes": 300
+       },
+       "face": "char:panda_need_help"
+      },
+      {
+       "id": "sj-03",
+       "label": "1-3",
+       "type": "battle",
+       "name": "Omoide Yokocho",
+       "x": 24,
+       "y": 72,
+       "from": [
+        "sj-02"
+       ],
+       "desc": "Smoke and lanterns hide a pack of phantoms.",
+       "stamina": 3,
+       "boss": false,
+       "recommendedPower": 1900,
+       "waves": [
+        [
+         {
+          "enemy": "foe_saki_resolve_heart",
+          "level": 2
+         },
+         {
+          "enemy": "foe_toge_403",
+          "level": 2
+         }
+        ],
+        [
+         {
+          "enemy": "foe_maki_longsword_battle",
+          "level": 3
+         },
+         {
+          "enemy": "foe_panda_need_help",
+          "level": 3
+         },
+         {
+          "enemy": "foe_toge_403",
+          "level": 2
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 340,
+        "rankExp": 18,
+        "unitExp": 180,
+        "medals": 45,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 120
+       },
+       "face": "char:toge_403"
+      },
+      {
+       "id": "sj-04",
+       "label": "1-4",
+       "type": "chest",
+       "name": "Supply Cache",
+       "x": 29,
+       "y": 50,
+       "from": [
+        "sj-03"
+       ],
+       "desc": "A cache of cursed tools left by the Auxiliary Managers.",
+       "reward": {
+        "medals": 200,
+        "items": {
+         "light_s": 3
+        }
+       }
+      },
+      {
+       "id": "sj-05",
+       "label": "1-5",
+       "type": "battle",
+       "name": "Under the Overpass",
+       "x": 36,
+       "y": 64,
+       "from": [
+        "sj-03"
+       ],
+       "desc": "Principal Yaga's phantom is testing everyone it meets.",
+       "stamina": 4,
+       "boss": false,
+       "recommendedPower": 2400,
+       "waves": [
+        [
+         {
+          "enemy": "foe_masamichi_lesson_awareness",
+          "level": 2
+         },
+         {
+          "enemy": "foe_saki_resolve_heart",
+          "level": 3
+         }
+        ],
+        [
+         {
+          "enemy": "foe_masamichi_lesson_awareness",
+          "level": 3
+         },
+         {
+          "enemy": "foe_toge_403",
+          "level": 4
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 420,
+        "rankExp": 24,
+        "unitExp": 240,
+        "medals": 50,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 150
+       },
+       "face": "char:masamichi_lesson_awareness"
+      },
+      {
+       "id": "sj-06",
+       "label": "1-6",
+       "type": "elite",
+       "name": "Cursed Corpse Workshop",
+       "x": 42,
+       "y": 42,
+       "from": [
+        "sj-05"
+       ],
+       "desc": "A hardened phantom guards Yaga's workshop. Elite stage.",
+       "stamina": 6,
+       "boss": false,
+       "recommendedPower": 4200,
+       "waves": [
+        [
+         {
+          "enemy": "foe_masamichi_lesson_awareness",
+          "level": 5
+         },
+         {
+          "enemy": "foe_masamichi_lesson_awareness",
+          "level": 5
+         }
+        ],
+        [
+         {
+          "enemy": "boss_masamichi_cursed_corpse",
+          "level": 2
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 700,
+        "rankExp": 36,
+        "unitExp": 420,
+        "medals": 90,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 100,
+          "qty": 1
+         },
+         {
+          "item": "light_m",
+          "chance": 30,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 300,
+        "cubes": 300
+       },
+       "face": "enemy:boss_masamichi_cursed_corpse"
+      },
+      {
+       "id": "sj-07",
+       "label": "1-7",
+       "type": "battle",
+       "name": "Golden Gai",
+       "x": 48,
+       "y": 62,
+       "from": [
+        "sj-05"
+       ],
+       "desc": "Tiny bars, narrow lanes and too many phantoms.",
+       "stamina": 4,
+       "boss": false,
+       "recommendedPower": 3000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_junpei_value_life",
+          "level": 4
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 4
+         }
+        ],
+        [
+         {
+          "enemy": "foe_junpei_misunderstand_value",
+          "level": 4
+         },
+         {
+          "enemy": "foe_saki_bring_on",
+          "level": 5
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 4
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 480,
+        "rankExp": 24,
+        "unitExp": 300,
+        "medals": 55,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 150
+       },
+       "face": "char:junpei_value_life"
+      },
+      {
+       "id": "sj-08",
+       "label": "1-8",
+       "type": "story",
+       "name": "The Strongest Checks In",
+       "x": 53,
+       "y": 80,
+       "from": [
+        "sj-07"
+       ],
+       "face": "char:satoru_strongest",
+       "desc": "Story",
+       "lines": [
+        [
+         "char:satoru_strongest",
+         "Satoru Gojo",
+         "Yo! Looks like you're doing fine without me. I'll just watch from the rooftop and eat this crepe."
+        ],
+        [
+         "char:kento_ex_salary",
+         "Kento Nanami",
+         "Gojo-san. If you have time to eat, you have time to tell us where these phantoms are coming from."
+        ],
+        [
+         "char:satoru_strongest",
+         "Satoru Gojo",
+         "Kabukicho. There's a big one wearing a very familiar patchwork face. Have fun~"
+        ]
+       ],
+       "reward": {
+        "medals": 80,
+        "cubes": 150
+       }
+      },
+      {
+       "id": "sj-09",
+       "label": "1-9",
+       "type": "battle",
+       "name": "Station East Exit",
+       "x": 58,
+       "y": 56,
+       "from": [
+        "sj-07"
+       ],
+       "desc": "The crowd is gone. The phantoms are not.",
+       "stamina": 5,
+       "boss": false,
+       "recommendedPower": 3600,
+       "waves": [
+        [
+         {
+          "enemy": "foe_junpei_value_life",
+          "level": 5
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 6
+         }
+        ],
+        [
+         {
+          "enemy": "foe_junpei_misunderstand_value",
+          "level": 6
+         },
+         {
+          "enemy": "foe_junpei_value_life",
+          "level": 6
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 6
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 540,
+        "rankExp": 30,
+        "unitExp": 360,
+        "medals": 60,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 150
+       },
+       "face": "char:kaito_his_resolve"
+      },
+      {
+       "id": "sj-10",
+       "label": "1-10",
+       "type": "chest",
+       "name": "Rooftop Strongbox",
+       "x": 64,
+       "y": 38,
+       "from": [
+        "sj-09"
+       ],
+       "desc": "A cache of cursed tools left by the Auxiliary Managers.",
+       "reward": {
+        "medals": 300,
+        "items": {
+         "light_m": 1
+        },
+        "yen": 2000
+       }
+      },
+      {
+       "id": "sj-11",
+       "label": "1-11",
+       "type": "battle",
+       "name": "Kabukicho Gate",
+       "x": 68,
+       "y": 62,
+       "from": [
+        "sj-09"
+       ],
+       "desc": "The red gate glows with the residue of a powerful curse.",
+       "stamina": 5,
+       "boss": false,
+       "recommendedPower": 4300,
+       "waves": [
+        [
+         {
+          "enemy": "foe_junpei_misunderstand_value",
+          "level": 7
+         },
+         {
+          "enemy": "foe_saki_bring_on",
+          "level": 8
+         }
+        ],
+        [
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 8
+         },
+         {
+          "enemy": "foe_junpei_value_life",
+          "level": 8
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 8
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 600,
+        "rankExp": 30,
+        "unitExp": 420,
+        "medals": 65,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 180
+       },
+       "face": "char:saki_bring_on"
+      },
+      {
+       "id": "sj-12",
+       "label": "1-12",
+       "type": "elite",
+       "name": "Neon Labyrinth",
+       "x": 74,
+       "y": 42,
+       "from": [
+        "sj-11"
+       ],
+       "desc": "Kyoto's phantoms ambush from the signboards. Elite stage.",
+       "stamina": 7,
+       "boss": false,
+       "recommendedPower": 6500,
+       "waves": [
+        [
+         {
+          "enemy": "foe_miwa_302",
+          "level": 6
+         },
+         {
+          "enemy": "foe_mai_303",
+          "level": 6
+         }
+        ],
+        [
+         {
+          "enemy": "foe_mechamaru_sword_option",
+          "level": 10
+         },
+         {
+          "enemy": "foe_kamo_405",
+          "level": 7
+         },
+         {
+          "enemy": "foe_momo_304",
+          "level": 7
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 900,
+        "rankExp": 42,
+        "unitExp": 600,
+        "medals": 110,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 100,
+          "qty": 2
+         },
+         {
+          "item": "light_m",
+          "chance": 40,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 300,
+        "cubes": 300
+       },
+       "face": "enemy:foe_kamo_405"
+      },
+      {
+       "id": "sj-13",
+       "label": "1-13",
+       "type": "battle",
+       "name": "Hanazono Shrine",
+       "x": 79,
+       "y": 64,
+       "from": [
+        "sj-11"
+       ],
+       "desc": "The shrine's barrier is failing. Hold the line.",
+       "stamina": 6,
+       "boss": false,
+       "recommendedPower": 5000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_junpei_value_life",
+          "level": 9
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 9
+         }
+        ],
+        [
+         {
+          "enemy": "foe_junpei_misunderstand_value",
+          "level": 9
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 10
+         },
+         {
+          "enemy": "foe_junpei_value_life",
+          "level": 9
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 700,
+        "rankExp": 36,
+        "unitExp": 480,
+        "medals": 70,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 200
+       },
+       "face": "char:kento_ex_salary"
+      },
+      {
+       "id": "sj-14",
+       "label": "1-14",
+       "type": "chest",
+       "name": "Shrine Offering Box",
+       "x": 85,
+       "y": 80,
+       "from": [
+        "sj-13"
+       ],
+       "desc": "A cache of cursed tools left by the Auxiliary Managers.",
+       "reward": {
+        "medals": 300,
+        "cubes": 300,
+        "items": {
+         "light_s": 5
+        }
+       }
+      },
+      {
+       "id": "sj-15",
+       "label": "1-15",
+       "type": "boss",
+       "name": "Patchwork Calamity",
+       "x": 88,
+       "y": 38,
+       "from": [
+        "sj-13"
+       ],
+       "desc": "Mahito's phantom has made Kabukicho its playground. Area boss.",
+       "stamina": 8,
+       "boss": true,
+       "recommendedPower": 7500,
+       "waves": [
+        [
+         {
+          "enemy": "foe_junpei_value_life",
+          "level": 10
+         },
+         {
+          "enemy": "foe_kaito_his_resolve",
+          "level": 10
+         }
+        ],
+        [
+         {
+          "enemy": "boss_mahito_609",
+          "level": 1
+         },
+         {
+          "enemy": "foe_junpei_misunderstand_value",
+          "level": 10
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 1600,
+        "rankExp": 48,
+        "unitExp": 1000,
+        "medals": 150,
+        "drops": [
+         {
+          "item": "light_m",
+          "chance": 80,
+          "qty": 1
+         },
+         {
+          "item": "ticket",
+          "chance": 5,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 500,
+        "cubes": 1000,
+        "items": {
+         "light_m": 2
+        }
+       },
+       "face": "enemy:boss_mahito_609"
+      }
+     ]
+    },
+    {
+     "id": "shibuya",
+     "name": "Shibuya",
+     "kanji": "渋谷",
+     "seed": 4242,
+     "tint": "red",
+     "art": "assets/pp/memories/the-encounter-in-the-mall-of-death/art.webp",
+     "nodes": [
+      {
+       "id": "sb-01",
+       "label": "2-1",
+       "type": "story",
+       "name": "Toward Shibuya",
+       "x": 6,
+       "y": 40,
+       "from": [
+        "sj-15"
+       ],
+       "face": "char:yuji_301",
+       "desc": "Story",
+       "lines": [
+        [
+         "char:yuji_301",
+         "Yuji Itadori",
+         "Shinjuku's quiet now... but the phantoms are moving south. Toward Shibuya."
+        ],
+        [
+         "char:megumi_401",
+         "Megumi Fushiguro",
+         "The curtain over Shibuya is already down. Whatever is making them is inside."
+        ],
+        [
+         "npc:ijichi",
+         "Kiyotaka Ijichi",
+         "Please be careful. The stronger the original, the stronger the phantom. And the originals here are... special grade."
+        ]
+       ],
+       "reward": {
+        "medals": 80,
+        "yen": 1000
+       }
+      },
+      {
+       "id": "sb-02",
+       "label": "2-2",
+       "type": "battle",
+       "name": "Meiji-dori",
+       "x": 14,
+       "y": 52,
+       "from": [
+        "sb-01"
+       ],
+       "desc": "Phantoms of Kyoto's students march down the avenue.",
+       "stamina": 6,
+       "boss": false,
+       "recommendedPower": 9000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_miwa_302",
+          "level": 7
+         },
+         {
+          "enemy": "foe_mai_303",
+          "level": 7
+         }
+        ],
+        [
+         {
+          "enemy": "foe_momo_304",
+          "level": 8
+         },
+         {
+          "enemy": "foe_kasumi_zanshin",
+          "level": 8
+         },
+         {
+          "enemy": "foe_mechamaru_305",
+          "level": 8
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 900,
+        "rankExp": 36,
+        "unitExp": 700,
+        "medals": 80,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 200,
+        "cubes": 300
+       },
+       "scale": 1.2,
+       "face": "char:miwa_302"
+      },
+      {
+       "id": "sb-03",
+       "label": "2-3",
+       "type": "battle",
+       "name": "Miyashita Park",
+       "x": 22,
+       "y": 38,
+       "from": [
+        "sb-02"
+       ],
+       "desc": "The rooftop park is crawling with phantoms.",
+       "stamina": 6,
+       "boss": false,
+       "recommendedPower": 10000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_aoi_rowdy_first",
+          "level": 10
+         },
+         {
+          "enemy": "foe_noritoshi_blood_gosanke",
+          "level": 8
+         }
+        ],
+        [
+         {
+          "enemy": "foe_momo_underestimate",
+          "level": 9
+         },
+         {
+          "enemy": "foe_kasumi_zanshin",
+          "level": 9
+         },
+         {
+          "enemy": "foe_aoi_fight_together",
+          "level": 9
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 950,
+        "rankExp": 36,
+        "unitExp": 760,
+        "medals": 85,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 200
+       },
+       "scale": 1.2,
+       "face": "char:aoi_rowdy_first"
+      },
+      {
+       "id": "sb-04",
+       "label": "2-4",
+       "type": "chest",
+       "name": "Coin Locker Cache",
+       "x": 26,
+       "y": 62,
+       "from": [
+        "sb-03"
+       ],
+       "desc": "A cache of cursed tools left by the Auxiliary Managers.",
+       "reward": {
+        "medals": 400,
+        "items": {
+         "light_m": 2
+        }
+       }
+      },
+      {
+       "id": "sb-05",
+       "label": "2-5",
+       "type": "battle",
+       "name": "Scramble Crossing",
+       "x": 33,
+       "y": 46,
+       "from": [
+        "sb-03"
+       ],
+       "desc": "The busiest crossing in the world, emptied by fear.",
+       "stamina": 7,
+       "boss": false,
+       "recommendedPower": 11500,
+       "waves": [
+        [
+         {
+          "enemy": "foe_yoshinobu_cursed_energy",
+          "level": 9
+         },
+         {
+          "enemy": "foe_aoi_fight_together",
+          "level": 9
+         },
+         {
+          "enemy": "foe_mechamaru_sword_option",
+          "level": 9
+         }
+        ],
+        [
+         {
+          "enemy": "foe_aoi_rowdy_first",
+          "level": 13
+         },
+         {
+          "enemy": "foe_yoshinobu_cursed_energy",
+          "level": 10
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 1050,
+        "rankExp": 42,
+        "unitExp": 840,
+        "medals": 90,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 220
+       },
+       "scale": 1.2,
+       "face": "char:aoi_fight_together"
+      },
+      {
+       "id": "sb-06",
+       "label": "2-6",
+       "type": "elite",
+       "name": "Best Friend's Phantom",
+       "x": 38,
+       "y": 24,
+       "from": [
+        "sb-05"
+       ],
+       "desc": "Todo's phantom wants to know your type. Elite stage.",
+       "stamina": 9,
+       "boss": false,
+       "recommendedPower": 15000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_aoi_fight_together",
+          "level": 10
+         },
+         {
+          "enemy": "foe_aoi_rowdy_first",
+          "level": 10
+         }
+        ],
+        [
+         {
+          "enemy": "boss_todo_504",
+          "level": 1
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 1500,
+        "rankExp": 54,
+        "unitExp": 1100,
+        "medals": 140,
+        "drops": [
+         {
+          "item": "light_m",
+          "chance": 100,
+          "qty": 1
+         },
+         {
+          "item": "light_s",
+          "chance": 100,
+          "qty": 2
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 400,
+        "cubes": 500
+       },
+       "scale": 1.1,
+       "face": "enemy:boss_todo_504"
+      },
+      {
+       "id": "sb-07",
+       "label": "2-7",
+       "type": "battle",
+       "name": "Shibuya Station B5F",
+       "x": 45,
+       "y": 58,
+       "from": [
+        "sb-05"
+       ],
+       "desc": "Deep underground, the cursed energy grows thick.",
+       "stamina": 7,
+       "boss": false,
+       "recommendedPower": 13000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_geto_604",
+          "level": 4
+         },
+         {
+          "enemy": "foe_suguru_protecting_non",
+          "level": 4
+         }
+        ],
+        [
+         {
+          "enemy": "foe_mahito_609",
+          "level": 3
+         },
+         {
+          "enemy": "foe_geto_604",
+          "level": 5
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 1150,
+        "rankExp": 42,
+        "unitExp": 900,
+        "medals": 95,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 250
+       },
+       "face": "char:geto_604"
+      },
+      {
+       "id": "sb-08",
+       "label": "2-8",
+       "type": "story",
+       "name": "A Familiar Smile",
+       "x": 50,
+       "y": 78,
+       "from": [
+        "sb-07"
+       ],
+       "face": "char:geto_604",
+       "desc": "Story",
+       "lines": [
+        [
+         "char:geto_604",
+         "Suguru Geto",
+         "Phantoms, parades... how fitting. People only ever see the mask, never what is underneath."
+        ],
+        [
+         "char:yuji_301",
+         "Yuji Itadori",
+         "Who are you? You're not a phantom — your cursed energy feels wrong."
+        ],
+        [
+         "char:geto_604",
+         "Suguru Geto",
+         "Go on, run along to the Fukutoshin line. A volcano is waiting for you there."
+        ]
+       ],
+       "reward": {
+        "medals": 100,
+        "cubes": 300
+       }
+      },
+      {
+       "id": "sb-09",
+       "label": "2-9",
+       "type": "battle",
+       "name": "Fukutoshin Line Platform",
+       "x": 56,
+       "y": 46,
+       "from": [
+        "sb-07"
+       ],
+       "desc": "The tracks are lined with phantom curse users.",
+       "stamina": 8,
+       "boss": false,
+       "recommendedPower": 14500,
+       "waves": [
+        [
+         {
+          "enemy": "foe_geto_604",
+          "level": 6
+         },
+         {
+          "enemy": "foe_mahito_609",
+          "level": 4
+         }
+        ],
+        [
+         {
+          "enemy": "foe_suguru_protecting_non",
+          "level": 7
+         },
+         {
+          "enemy": "foe_hanami_508",
+          "level": 3
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 1250,
+        "rankExp": 48,
+        "unitExp": 980,
+        "medals": 100,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 250
+       },
+       "face": "char:suguru_protecting_non"
+      },
+      {
+       "id": "sb-10",
+       "label": "2-10",
+       "type": "chest",
+       "name": "Abandoned Ticket Office",
+       "x": 61,
+       "y": 24,
+       "from": [
+        "sb-09"
+       ],
+       "desc": "A cache of cursed tools left by the Auxiliary Managers.",
+       "reward": {
+        "medals": 500,
+        "items": {
+         "ticket": 1
+        },
+        "yen": 5000
+       }
+      },
+      {
+       "id": "sb-11",
+       "label": "2-11",
+       "type": "battle",
+       "name": "Dogenzaka",
+       "x": 66,
+       "y": 54,
+       "from": [
+        "sb-09"
+       ],
+       "desc": "Flowers bloom from the asphalt. Something ancient is near.",
+       "stamina": 8,
+       "boss": false,
+       "recommendedPower": 16500,
+       "waves": [
+        [
+         {
+          "enemy": "foe_hanami_508",
+          "level": 4
+         },
+         {
+          "enemy": "foe_suguru_protecting_non",
+          "level": 7
+         }
+        ],
+        [
+         {
+          "enemy": "foe_mahito_609",
+          "level": 5
+         },
+         {
+          "enemy": "foe_hanami_508",
+          "level": 5
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 1350,
+        "rankExp": 48,
+        "unitExp": 1060,
+        "medals": 110,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 280
+       },
+       "face": "enemy:foe_hanami_508"
+      },
+      {
+       "id": "sb-12",
+       "label": "2-12",
+       "type": "elite",
+       "name": "Sorcerer Killer",
+       "x": 72,
+       "y": 30,
+       "from": [
+        "sb-11"
+       ],
+       "desc": "Toji's phantom stalks the rooftops. Elite stage.",
+       "stamina": 10,
+       "boss": false,
+       "recommendedPower": 22000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_geto_604",
+          "level": 8
+         },
+         {
+          "enemy": "foe_suguru_protecting_non",
+          "level": 8
+         }
+        ],
+        [
+         {
+          "enemy": "boss_toji_602",
+          "level": 1
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 2000,
+        "rankExp": 60,
+        "unitExp": 1500,
+        "medals": 180,
+        "drops": [
+         {
+          "item": "light_m",
+          "chance": 100,
+          "qty": 2
+         },
+         {
+          "item": "light_l",
+          "chance": 30,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 500,
+        "cubes": 800
+       },
+       "scale": 0.7,
+       "face": "enemy:boss_toji_602"
+      },
+      {
+       "id": "sb-13",
+       "label": "2-13",
+       "type": "battle",
+       "name": "Shibuya Mark City",
+       "x": 77,
+       "y": 62,
+       "from": [
+        "sb-11"
+       ],
+       "desc": "The last line before the eye of the parade.",
+       "stamina": 9,
+       "boss": false,
+       "recommendedPower": 18000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_mahito_609",
+          "level": 6
+         },
+         {
+          "enemy": "foe_geto_604",
+          "level": 8
+         }
+        ],
+        [
+         {
+          "enemy": "foe_hanami_508",
+          "level": 6
+         },
+         {
+          "enemy": "foe_mahito_609",
+          "level": 7
+         },
+         {
+          "enemy": "foe_suguru_protecting_non",
+          "level": 8
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 1500,
+        "rankExp": 54,
+        "unitExp": 1200,
+        "medals": 120,
+        "drops": [
+         {
+          "item": "light_s",
+          "chance": 50,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 300
+       },
+       "face": "enemy:foe_mahito_609"
+      },
+      {
+       "id": "sb-14",
+       "label": "2-14",
+       "type": "chest",
+       "name": "Curtain Anchor",
+       "x": 84,
+       "y": 80,
+       "from": [
+        "sb-13"
+       ],
+       "desc": "A cache of cursed tools left by the Auxiliary Managers.",
+       "reward": {
+        "medals": 600,
+        "cubes": 500,
+        "items": {
+         "light_l": 1
+        }
+       }
+      },
+      {
+       "id": "sb-15",
+       "label": "2-15",
+       "type": "boss",
+       "name": "Coffin of the Iron Mountain",
+       "x": 87,
+       "y": 40,
+       "from": [
+        "sb-13"
+       ],
+       "desc": "Jogo's phantom burns at the heart of the parade. Final boss.",
+       "stamina": 12,
+       "boss": true,
+       "recommendedPower": 26000,
+       "waves": [
+        [
+         {
+          "enemy": "foe_hanami_508",
+          "level": 6
+         },
+         {
+          "enemy": "foe_mahito_609",
+          "level": 8
+         },
+         {
+          "enemy": "foe_hanami_508",
+          "level": 6
+         }
+        ],
+        [
+         {
+          "enemy": "boss_jogo_610",
+          "level": 1
+         }
+        ]
+       ],
+       "rewards": {
+        "yen": 3000,
+        "rankExp": 72,
+        "unitExp": 2400,
+        "medals": 250,
+        "drops": [
+         {
+          "item": "light_m",
+          "chance": 100,
+          "qty": 2
+         },
+         {
+          "item": "light_l",
+          "chance": 25,
+          "qty": 1
+         },
+         {
+          "item": "ticket",
+          "chance": 8,
+          "qty": 1
+         }
+        ]
+       },
+       "firstClear": {
+        "medals": 1000,
+        "cubes": 2000,
+        "items": {
+         "light_l": 2,
+         "ticket": 2
+        }
+       },
+       "scale": 0.75,
+       "face": "enemy:boss_jogo_610"
+      }
+     ]
+    }
+   ],
+   "missions": [
+    {
+     "id": "m_clear5",
+     "text": "Clear 5 event stages",
+     "goal": {
+      "type": "cleared",
+      "n": 5
+     },
+     "reward": {
+      "medals": 200
+     }
+    },
+    {
+     "id": "m_story",
+     "text": "Read every story on the Event Map",
+     "goal": {
+      "type": "stories"
+     },
+     "reward": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "m_boss1",
+     "text": "Defeat the Shinjuku boss (Mahito)",
+     "goal": {
+      "type": "node",
+      "node": "sj-15"
+     },
+     "reward": {
+      "items": {
+       "ticket": 1
+      }
+     }
+    },
+    {
+     "id": "m_earn1000",
+     "text": "Earn 1,000 Phantom Medals",
+     "goal": {
+      "type": "earned",
+      "n": 1000
+     },
+     "reward": {
+      "items": {
+       "light_m": 3
+      }
+     }
+    },
+    {
+     "id": "m_wins10",
+     "text": "Win 10 event battles",
+     "goal": {
+      "type": "wins",
+      "n": 10
+     },
+     "reward": {
+      "medals": 300,
+      "yen": 3000
+     }
+    },
+    {
+     "id": "m_clear15",
+     "text": "Clear 15 event stages",
+     "goal": {
+      "type": "cleared",
+      "n": 15
+     },
+     "reward": {
+      "cubes": 600
+     }
+    },
+    {
+     "id": "m_chests",
+     "text": "Open every treasure chest",
+     "goal": {
+      "type": "chests"
+     },
+     "reward": {
+      "items": {
+       "gp_card": 10
+      }
+     }
+    },
+    {
+     "id": "m_star10",
+     "text": "Get 3★ on 10 event battles",
+     "goal": {
+      "type": "stars3",
+      "n": 10
+     },
+     "reward": {
+      "medals": 500
+     }
+    },
+    {
+     "id": "m_earn5000",
+     "text": "Earn 5,000 Phantom Medals",
+     "goal": {
+      "type": "earned",
+      "n": 5000
+     },
+     "reward": {
+      "items": {
+       "light_l": 2
+      }
+     }
+    },
+    {
+     "id": "m_boss2",
+     "text": "Defeat the final boss (Jogo)",
+     "goal": {
+      "type": "node",
+      "node": "sb-15"
+     },
+     "reward": {
+      "cubes": 3000
+     }
+    },
+    {
+     "id": "m_clear30",
+     "text": "Clear all 30 event stages",
+     "goal": {
+      "type": "cleared",
+      "n": 30
+     },
+     "reward": {
+      "cubes": 1500,
+      "items": {
+       "ticket": 2
+      }
+     }
+    }
+   ],
+   "exchange": [
+    {
+     "id": "x_ticket",
+     "give": {
+      "items": {
+       "ticket": 1
+      }
+     },
+     "price": 1000,
+     "stock": 5
+    },
+    {
+     "id": "x_cubes",
+     "give": {
+      "cubes": 300
+     },
+     "price": 500,
+     "stock": 5
+    },
+    {
+     "id": "x_gp",
+     "give": {
+      "items": {
+       "gp_card": 1
+      }
+     },
+     "price": 150,
+     "stock": 20
+    },
+    {
+     "id": "x_ll",
+     "give": {
+      "items": {
+       "light_l": 1
+      }
+     },
+     "price": 600,
+     "stock": 3
+    },
+    {
+     "id": "x_lm",
+     "give": {
+      "items": {
+       "light_m": 1
+      }
+     },
+     "price": 120,
+     "stock": 10
+    },
+    {
+     "id": "x_ls",
+     "give": {
+      "items": {
+       "light_s": 1
+      }
+     },
+     "price": 20,
+     "stock": 50
+    },
+    {
+     "id": "x_ap",
+     "give": {
+      "ap": 10
+     },
+     "price": 200,
+     "stock": 5
+    },
+    {
+     "id": "x_jp",
+     "give": {
+      "yen": 5000
+     },
+     "price": 100,
+     "stock": 20
+    }
+   ]
+  }
+ ]
+}

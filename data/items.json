@@ -1,0 +1,269 @@
+{
+ "items": {
+  "light_s": {
+   "name": "Training Light (S)",
+   "kind": "exp",
+   "exp": 600,
+   "jp": 60,
+   "kanji": "燈",
+   "icon": "assets/pp/currency/training-light.webp",
+   "desc": "An orange orb of cursed energy from the Training Light Quest. +600 character EXP (costs 60 JP to use)."
+  },
+  "light_m": {
+   "name": "Training Light (M)",
+   "kind": "exp",
+   "exp": 4000,
+   "jp": 400,
+   "kanji": "燈",
+   "icon": "assets/pp/currency/training-light.webp",
+   "desc": "A brighter Training Light. +4,000 character EXP (costs 400 JP to use)."
+  },
+  "light_l": {
+   "name": "Training Light (L)",
+   "kind": "exp",
+   "exp": 20000,
+   "jp": 2000,
+   "kanji": "燈",
+   "icon": "assets/pp/currency/training-light.webp",
+   "desc": "A blazing Training Light. +20,000 character EXP (costs 2,000 JP to use)."
+  },
+  "ticket": {
+   "name": "Draw Ticket",
+   "kind": "ticket",
+   "kanji": "札",
+   "desc": "One free draw on any banner. Earns a Gacha Point like any draw."
+  },
+  "ssr_ticket": {
+   "name": "SSR-Character Guaranteed Ticket",
+   "kind": "ssr",
+   "kanji": "確",
+   "icon": "assets/pp/currency/gacha-card.webp",
+   "desc": "One draw that is always an SSR character. Reward for finishing all 7 days of Novice Missions."
+  },
+  "gp_card": {
+   "name": "Gacha Point Card",
+   "kind": "gp",
+   "kanji": "点",
+   "icon": "assets/pp/currency/gacha-card.webp",
+   "desc": "Worth 1 Gacha Point on any pickup banner (up to 100 per banner). Made by converting 20 Gacha Points into 10 cards."
+  }
+ },
+ "shop": {
+  "sections": [
+   {
+    "id": "items",
+    "name": "Training Lights",
+    "kanji": "修練の燈",
+    "offers": [
+     {
+      "id": "buy_ts",
+      "give": {
+       "items": {
+        "light_s": 1
+       }
+      },
+      "price": {
+       "yen": 300
+      }
+     },
+     {
+      "id": "buy_ts10",
+      "give": {
+       "items": {
+        "light_s": 10
+       }
+      },
+      "price": {
+       "yen": 2700
+      }
+     },
+     {
+      "id": "buy_tm",
+      "give": {
+       "items": {
+        "light_m": 1
+       }
+      },
+      "price": {
+       "yen": 1800
+      }
+     },
+     {
+      "id": "buy_tl",
+      "give": {
+       "items": {
+        "light_l": 1
+       }
+      },
+      "price": {
+       "yen": 8000
+      }
+     },
+     {
+      "id": "buy_tl_c",
+      "give": {
+       "items": {
+        "light_l": 1
+       }
+      },
+      "price": {
+       "cubes": 900
+      }
+     }
+    ]
+   },
+   {
+    "id": "stamina",
+    "name": "AP",
+    "kanji": "行動力",
+    "offers": [
+     {
+      "id": "refill",
+      "give": {
+       "staminaRefill": true
+      },
+      "price": {
+       "cubes": 300
+      }
+     },
+     {
+      "id": "stam10",
+      "give": {
+       "stamina": 10
+      },
+      "price": {
+       "yen": 1000
+      }
+     }
+    ]
+   },
+   {
+    "id": "summon",
+    "name": "Draw",
+    "kanji": "ガチャ",
+    "offers": [
+     {
+      "id": "ticket1",
+      "give": {
+       "items": {
+        "ticket": 1
+       }
+      },
+      "price": {
+       "cubes": 300
+      }
+     },
+     {
+      "id": "ticket10",
+      "give": {
+       "items": {
+        "ticket": 10
+       }
+      },
+      "price": {
+       "cubes": 3000
+      }
+     },
+     {
+      "id": "ticket_yen",
+      "give": {
+       "items": {
+        "ticket": 1
+       }
+      },
+      "price": {
+       "yen": 6000
+      }
+     }
+    ]
+   },
+   {
+    "id": "daily",
+    "name": "Daily",
+    "kanji": "日課",
+    "offers": [
+     {
+      "id": "daily_gift",
+      "give": {
+       "cubes": 600,
+       "yen": 1000,
+       "fp": 10
+      },
+      "price": {},
+      "daily": true
+     }
+    ]
+   },
+   {
+    "id": "friend",
+    "name": "Friendship Point",
+    "kanji": "友情",
+    "hub": "friend",
+    "offers": [
+     {
+      "id": "fp_ts3",
+      "give": {
+       "items": {
+        "light_s": 3
+       }
+      },
+      "price": {
+       "fp": 30
+      }
+     },
+     {
+      "id": "fp_tm",
+      "give": {
+       "items": {
+        "light_m": 1
+       }
+      },
+      "price": {
+       "fp": 60
+      }
+     },
+     {
+      "id": "fp_ap10",
+      "give": {
+       "stamina": 10
+      },
+      "price": {
+       "fp": 40
+      }
+     },
+     {
+      "id": "fp_jp",
+      "give": {
+       "yen": 3000
+      },
+      "price": {
+       "fp": 50
+      }
+     },
+     {
+      "id": "fp_gp",
+      "give": {
+       "items": {
+        "gp_card": 1
+       }
+      },
+      "price": {
+       "fp": 150
+      }
+     },
+     {
+      "id": "fp_ticket",
+      "give": {
+       "items": {
+        "ticket": 1
+       }
+      },
+      "price": {
+       "fp": 400
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

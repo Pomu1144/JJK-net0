@@ -1,0 +1,11 @@
+{
+ "name": "Jujutsu Kaisen: Cursed Clash",
+ "short_name": "Cursed Clash",
+ "start_url": "./index.html",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "landscape",
+ "background_color": "#071418",
+ "theme_color": "#071418",
+ "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

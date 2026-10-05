@@ -1,0 +1,3891 @@
+{
+ "source": "https://jujutsu-kaisen-phantom-parade.fandom.com",
+ "units": [
+  {
+   "id": "yuji-itadori-cursed-energy-caging",
+   "name": "Yuji Itadori",
+   "epithet": "Cursed Energy Caging",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28_Cursed_Energy_Caging_%29_Yuji_Itadori",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/ff/BlueSSRItadoriArt1.gif/revision/latest?cb=20240903024344",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1d/BlueSSRItadoriIcon1.webp/revision/latest?cb=20240902053614",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/BlueItadoriSSRNormalAttack1.png/revision/latest?cb=20240908051543",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c7/BlueItadoriSSRS11.png/revision/latest?cb=20240908051558",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/78/BlueItadoriSSRS21.png/revision/latest?cb=20240908051617",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/06/BlueItadoriSSRUlt1.png/revision/latest?cb=20240908051631"
+   }
+  },
+  {
+   "id": "suguru-geto-teen-for-protecting-non-jujutsu-sorcerer",
+   "name": "Suguru Geto ( Teen )",
+   "epithet": "For protecting non-jujutsu sorcerer",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28_For_protecting_non-jujutsu_sorcerer_%29_Suguru_Geto_%28_Teen_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c4/GreenGetoSSRArt1.gif/revision/latest?cb=20240903025406",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/61/GreenSSRGetoIcon1.webp/revision/latest?cb=20240902053737",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/71/GreenSSRGetoNormalAttack1.png/revision/latest?cb=20240908062918",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/ca/GreenSSRGetoS11.png/revision/latest?cb=20240908062934",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/33/GreenSSRGetoS21.png/revision/latest?cb=20240908062951",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b4/GreenSSRGetoUlt1.png/revision/latest?cb=20240908063008"
+   }
+  },
+  {
+   "id": "panda-need-help",
+   "name": "Panda",
+   "epithet": "Need help?",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28_Need_help%3F_%29_Panda",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/cb/Freecompress-RedSSRPandaArt1-min.gif/revision/latest?cb=20240907042535",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e5/RedSSRPandaIcon1.webp/revision/latest?cb=20240831060147",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5d/RedSSRPandaNormalAttack1.png/revision/latest?cb=20240831072353",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f4/RedSSRPandaS11.png/revision/latest?cb=20240831072401",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/80/RedSSRPandaS21.png/revision/latest?cb=20240831072417",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2f/RedSSRPandaUlt1.png/revision/latest?cb=20240831072426"
+   }
+  },
+  {
+   "id": "toji-fushiguro-the-sorcerer-killer",
+   "name": "Toji Fushiguro",
+   "epithet": "The Sorcerer Killer",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28_The_Sorcerer_Killer_%29_Toji_Fushiguro",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/26/Freecompress-RedSSRTojiArt1-min.gif/revision/latest?cb=20240907042601",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0b/RedSSRTojiIcon1.webp/revision/latest?cb=20240831060201",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4f/RedSSRTojiNormalAttack1.png/revision/latest?cb=20240831072437",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/63/RedSSRTojiS11.png/revision/latest?cb=20240831072446",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/af/RedSSRTojiS21.png/revision/latest?cb=20240831072455",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e9/RedSSRTojiUlt1.png/revision/latest?cb=20240831072505"
+   }
+  },
+  {
+   "id": "mahito-the-inspiration-of-death",
+   "name": "Mahito",
+   "epithet": "The inspiration of death",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28_The_inspiration_of_death_%29_Mahito",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c3/GreenMahitoSSRArt1.gif/revision/latest?cb=20240903024519",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/14/GreenSSRMahitoIcon1.webp/revision/latest?cb=20240902053730",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c8/GreenSSRMahitoNormalAttack1.png/revision/latest?cb=20240908062456",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/53/GreenSSRMahitoS11.png/revision/latest?cb=20240908062514",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9f/GreenSSRMahitoS21.png/revision/latest?cb=20240908062531",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d0/GreenSSRMahitoUlt1.png/revision/latest?cb=20240908062549"
+   }
+  },
+  {
+   "id": "nobara-kugisaki-the-worst-match",
+   "name": "Nobara Kugisaki",
+   "epithet": "The worst match",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28_The_worst_match_%29_Nobara_Kugisaki",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e0/RedNobaraSSRArt1.gif/revision/latest?cb=20240903025659",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bb/RedNobaraSSRIcon1.webp/revision/latest?cb=20240831060139",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/14/RedNobaraSSRNormalAttack1.png/revision/latest?cb=20240831072558",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/99/RedNobaraSSRS11.png/revision/latest?cb=20240831072609",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f4/RedNobaraSSRS21.png/revision/latest?cb=20240831072322",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/21/RedNobaraSSRUlt1.png/revision/latest?cb=20240831072332"
+   }
+  },
+  {
+   "id": "masamichi-yaga-cursed-corpse-battle",
+   "name": "Masamichi Yaga",
+   "epithet": "Cursed Corpse Battle",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28Cursed_Corpse_Battle%29_Masamichi_Yaga",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/aa/YellowSSRYagaArt1.gif/revision/latest?cb=20240903025717",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1e/YellowSSRYagaIcon1.webp/revision/latest?cb=20240902053902",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f5/YellowSSRYagaNormalAttack1.png/revision/latest?cb=20240908072458",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bd/YellowSSRYagaS11.png/revision/latest?cb=20240908072508",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/09/YellowSSRYagaS21.png/revision/latest?cb=20240908072518",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9a/YellowSSRYagaUlt1.png/revision/latest?cb=20240908072529"
+   }
+  },
+  {
+   "id": "yoshinobu-gakuganji-cursed-energy-melody",
+   "name": "Yoshinobu Gakuganji",
+   "epithet": "Cursed Energy Melody",
+   "color": "Green",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28Cursed_Energy_Melody%29_Yoshinobu_Gakuganji",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d3/Sr4.gif/revision/latest?cb=20240908021635",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/02/GreenSRGakuganjiIcon1.webp/revision/latest?cb=20240903063748",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d1/GreenSRGakuganjiNormalAttack1.png/revision/latest?cb=20240908085311",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/dd/GreenSRGakuganjiS11.png/revision/latest?cb=20240908085322",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a1/GreenSRGakuganjiS21.png/revision/latest?cb=20240908085332",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/97/GreenSRGakuganjiUlt1.png/revision/latest?cb=20240908085342"
+   }
+  },
+  {
+   "id": "maki-zen-in-longsword-battle",
+   "name": "Maki Zen'in",
+   "epithet": "Longsword Battle",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28Longsword_Battle%29_Maki_Zen%27in",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/70/GreenSSRMakiArt1.gif/revision/latest?cb=20240903025620",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7e/GreenSSRMakiIcon1.webp/revision/latest?cb=20240902053752",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bd/GreenSSRMakiNormalAttack1.png/revision/latest?cb=20240907150221",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fc/GreenSSRMakiS11.png/revision/latest?cb=20240907150250",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e9/GreenSSRMakiS21.png/revision/latest?cb=20240907150058",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/28/GreenSSRMakiUlt1.png/revision/latest?cb=20240907150408"
+   }
+  },
+  {
+   "id": "kento-nanami-overtime-work",
+   "name": "Kento Nanami",
+   "epithet": "Overtime Work",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28Overtime_Work%29_Kento_Nanami",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6b/YellowSSRNanamiArt1.gif/revision/latest?cb=20240903024626",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/af/YellowSSRNanamiIcon1.webp/revision/latest?cb=20240902053845",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/78/YellowSSRNanamiNormalAttack1.png/revision/latest?cb=20240908071854",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f1/YellowSSRNanamiS11.png/revision/latest?cb=20240908071902",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e3/YellowSSRNanamiS21.png/revision/latest?cb=20240908071910",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/73/YellowSSRNanamiUlt1.png/revision/latest?cb=20240908071918"
+   }
+  },
+  {
+   "id": "ultimate-mechamaru-sword-option",
+   "name": "Ultimate Mechamaru",
+   "epithet": "Sword Option",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28Sword_Option%29_Ultimate_Mechamaru",
+   "files": {
+    "art": "art.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp",
+    "icon": "icon.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e5/YellowMechamaruSSRArt1.gif/revision/latest?cb=20240903024847",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1b/YellowMechSSRNormalAttack1.png/revision/latest?cb=20240908071419",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b3/MechAutoSkill1.png/revision/latest?cb=20240908071544",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/20/YellowMechSSRS21.png/revision/latest?cb=20240908071435",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3f/YellowMechSSRUlt1.png/revision/latest?cb=20240908071444",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/82/YellowMechamaruSSRIcon1.webp/revision/latest?cb=20240902053835"
+   }
+  },
+  {
+   "id": "kento-nanami-the-capability-of-first-grade-sorcerer",
+   "name": "Kento Nanami",
+   "epithet": "The capability of First-Grade Sorcerer",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28The_capability_of_First-Grade_Sorcerer%29_Kento_Nanami",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/29/BlueSSRNanamiArt1.gif/revision/latest?cb=20240903025637",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/44/BlueSSRNanamiIcon1.webp/revision/latest?cb=20240824130551",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0d/BlueSSRNanamiNormalAttack1.png/revision/latest?cb=20240908052710",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9b/BlueSSRNanamiS11.png/revision/latest?cb=20240908052658",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a8/BlueSSRNanamiS21.png/revision/latest?cb=20240908052643",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7c/BlueSSRNanamiUlt1.png/revision/latest?cb=20240908052626"
+   }
+  },
+  {
+   "id": "saki-rindo-the-resolve-within-the-heart",
+   "name": "Saki Rindo",
+   "epithet": "The resolve within the heart",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28The_resolve_within_the_heart%29_Saki_Rindo",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/66/GreenSSRSakiArt1.gif/revision/latest?cb=20240903024543",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6b/GreenSSRSakiIcon1.webp/revision/latest?cb=20240902053744",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c5/GreenSSRSakiNormalAttack1.png/revision/latest?cb=20240908063404",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1b/GreenSSRSakiS11.png/revision/latest?cb=20240908063418",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8e/GreenSSRSakiS21.png/revision/latest?cb=20240908063431",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8d/GreenSSRSakiUlt1.png/revision/latest?cb=20240908063446"
+   }
+  },
+  {
+   "id": "satoru-gojo-teen-the-strongest-blue",
+   "name": "Satoru Gojo ( Teen )",
+   "epithet": "The strongest Blue",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28The_strongest_Blue%29_Satoru_Gojo_%28_Teen_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/98/YellowGojoSSRArt1.gif/revision/latest?cb=20240903025808",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e5/YellowGojoSSRIcon1.webp/revision/latest?cb=20240902053854",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5d/YellowGojoSSRNormalAttack1.png/revision/latest?cb=20240908072147",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/da/YellowGojoSSRS11.png/revision/latest?cb=20240908072155",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/47/YellowGojoSSRS21.png/revision/latest?cb=20240908072204",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/51/YellowGojoSSRUlt1.png/revision/latest?cb=20240908072212"
+   }
+  },
+  {
+   "id": "kasumi-miwa-zanshin",
+   "name": "Kasumi Miwa",
+   "epithet": "Zanshin",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%28Zanshin%29_Kasumi_Miwa",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7b/Freecompress-BlueMiwaSSRArt1-min.gif/revision/latest?cb=20240907042503",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1d/BlueSSRMiwaIcon1.webp/revision/latest?cb=20240902053625",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/87/BlueSSRMiwaNormalAttack1.png/revision/latest?cb=20240908052216",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7e/BlueSSRMiwaS11.png/revision/latest?cb=20240908052227",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8a/BlueSSRMiwaS21.png/revision/latest?cb=20240908052237",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/88/BlueSSRMiwaUlt1.png/revision/latest?cb=20240908052246"
+   }
+  },
+  {
+   "id": "aoi-todo-fight-together-with-takada-chan",
+   "name": "Aoi Todo",
+   "epithet": "Fight Together with Takada-chan",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Aoi_Todo_%28_Fight_Together_with_Takada-chan_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f3/BlueTodoSSRArt1.gif/revision/latest?cb=20240903024646",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7b/BlueTodoSSRIcon1.webp/revision/latest?cb=20240902053606",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/38/BlueTodoSSRNormalAttack1.png/revision/latest?cb=20240908051302",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/17/BlueTodoSSRS11.png/revision/latest?cb=20240908051318",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/30/BlueTodoSSRS21.png/revision/latest?cb=20240908051331",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ed/BlueTodoSSRUlt1.png/revision/latest?cb=20240908051343"
+   }
+  },
+  {
+   "id": "aoi-todo-memories-of-friendship",
+   "name": "Aoi Todo",
+   "epithet": "Memories of Friendship",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Aoi_Todo_%28Memories_of_Friendship%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ef/RedTodoSSRArt1.gif/revision/latest?cb=20240830081238",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c5/RedTodoSSRIcon1.webp/revision/latest?cb=20240831060035",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a9/RedTodoSSRNormalAttack1.png/revision/latest?cb=20240908024401",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/96/RedTodoSSRS11.png/revision/latest?cb=20240908024422",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4b/RedTodoSSRS21.png/revision/latest?cb=20240908024434",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/50/RedTodoSSRUlt1.png/revision/latest?cb=20240908024444"
+   }
+  },
+  {
+   "id": "aoi-todo-rowdy-first-class",
+   "name": "Aoi Todo",
+   "epithet": "Rowdy First Class",
+   "color": "Yellow",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Aoi_Todo_%28Rowdy_First_Class%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4b/Freecompress-sr2.gif/revision/latest?cb=20240908021556",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2b/YellowTodoSRIcon1.webp/revision/latest?cb=20240903063812",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9c/YellowTodoSRNormalAttack1.png/revision/latest?cb=20240908090634",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/57/YellowTodoSRS11.png/revision/latest?cb=20240908090650",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fd/YellowTodoSRS21.png/revision/latest?cb=20240908090700",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/37/YellowTodoSRUlt1.png/revision/latest?cb=20240908090712"
+   }
+  },
+  {
+   "id": "hanami-the-joys-of-battle",
+   "name": "Hanami",
+   "epithet": "The Joys of Battle",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Hanami_%28The_Joys_of_Battle%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/RedHanamiSSRArt1.gif/revision/latest?cb=20240903024737",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/30/RedHanamiSSRIcon1.webp/revision/latest?cb=20240831060057",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/18/RedHanamiSSRNormalAttack1.png/revision/latest?cb=20240831070313",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/61/RedHanamiSSRS11.png/revision/latest?cb=20240831065112",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/35/RedHanamiSSRS21.png/revision/latest?cb=20240831070404",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/de/RedHanamiSSRUlt1.png/revision/latest?cb=20240831070427"
+   }
+  },
+  {
+   "id": "ieri-shoko-reverse-curse-technique",
+   "name": "Ieri Shoko",
+   "epithet": "Reverse Curse Technique",
+   "color": "Blue",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Ieri_Shoko_%28Reverse_Curse_Technique%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6a/Sr12.gif/revision/latest?cb=20240908021747",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c4/BlueShokoSRIcon1.webp/revision/latest?cb=20240903063620",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/55/BlueShokoSRNormalAttack1.png/revision/latest?cb=20240908073938",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b1/BlueShokoSRS11.png/revision/latest?cb=20240908073950",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/11/BlueShokoSRS21.png/revision/latest?cb=20240908074001",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f8/BlueShokoSRUlt1.png/revision/latest?cb=20240908074010"
+   }
+  },
+  {
+   "id": "jogo-cursed-spirit-s-pride",
+   "name": "Jogo",
+   "epithet": "Cursed Spirit's Pride",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Jogo_%28Cursed_Spirit%27s_Pride%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a4/Freecompress-BlueJogoSSRArt1-min.gif/revision/latest?cb=20240907015656",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/07/BlueJogoSSRIcon1.webp/revision/latest?cb=20240902053526",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/65/BlueJogoSSRNormalAttack1.png/revision/latest?cb=20240908045554",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e5/BlueJogoSSRS11.png/revision/latest?cb=20240908045611",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/46/BlueJogoSSRS21.png/revision/latest?cb=20240908045626",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/04/BlueJogoSSRUlt1.png/revision/latest?cb=20240908045638"
+   }
+  },
+  {
+   "id": "junpei-ssr",
+   "name": "Junpei",
+   "epithet": "SSR",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Junpei_%28SSR%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2a/YellowJunpeiSSRArt1-min.gif/revision/latest?cb=20240903032831",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3a/YellowJunpeiSSRIcon1.webp/revision/latest?cb=20240902053817",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a3/YellowJunpeiSSRNormalAttack1.png/revision/latest?cb=20240908070323",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/97/YellowJunpeiSSRS11.png/revision/latest?cb=20240908070334",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1a/YellowJunpeiSSRS21.png/revision/latest?cb=20240908070346",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/08/YellowJunpeiSSRUlt1.png/revision/latest?cb=20240908070357"
+   }
+  },
+  {
+   "id": "junpei-yoshino-the-value-of-life",
+   "name": "Junpei Yoshino",
+   "epithet": "The Value of Life",
+   "color": "Blue",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Junpei_Yoshino_%28The_Value_of_Life%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e4/Freecompress-sr11.gif/revision/latest?cb=20240908021612",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6d/BlueJunpeiSRIcon1.webp/revision/latest?cb=20240903063631",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/cd/BlueJunpeiSRNormalAttack1.png/revision/latest?cb=20240908075506",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/BlueJunpeiSRS11.png/revision/latest?cb=20240908075517",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e7/BlueJunpeiSRS21.png/revision/latest?cb=20240908075526",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b4/BlueJunpeiSRUlt1.png/revision/latest?cb=20240908075535"
+   }
+  },
+  {
+   "id": "kasumi-miwa-firm-interception",
+   "name": "Kasumi Miwa",
+   "epithet": "Firm Interception",
+   "color": "Red",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Kasumi_Miwa_%28Firm_Interception%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/11/SR.gif/revision/latest?cb=20240908021209",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f3/RedMiwaSRIcon1.webp/revision/latest?cb=20240903063552",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5e/RedMiwaSRNormalAttack1.png/revision/latest?cb=20240908073136",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d7/RedMiwaSRS11.png/revision/latest?cb=20240908073144",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/71/RedMiwaSRS21.png/revision/latest?cb=20240908073156",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/04/RedMiwaSRUlt1.png/revision/latest?cb=20240908073207"
+   }
+  },
+  {
+   "id": "kento-nanami-ex-salary-man",
+   "name": "Kento Nanami",
+   "epithet": "Ex-Salary Man",
+   "color": "Red",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Kento_Nanami_%28Ex-Salary_Man%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/49/Sr15.gif/revision/latest?cb=20240908021842",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f3/RedNanamiSRIcon1.webp/revision/latest?cb=20240903063601",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/36/RedNanamiSRNormalAttack1.png/revision/latest?cb=20240908073452",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3b/RedNanamiSRS11.png/revision/latest?cb=20240908073502",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/42/RedNanamiSRS21.png/revision/latest?cb=20240908073511",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/68/RedNanamiSRUlt1.png/revision/latest?cb=20240908073519"
+   }
+  },
+  {
+   "id": "kento-nanami-ratio-technique",
+   "name": "Kento Nanami",
+   "epithet": "Ratio Technique",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Kento_Nanami_%28Ratio_Technique%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3f/GreenNanamiSSRArt1.gif/revision/latest?cb=20240903025822",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/12/GreenNanamiSSRIcon1.webp/revision/latest?cb=20240902053645",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/73/GreenNanamiSSRNormalAttack1.png/revision/latest?cb=20240908054949",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/de/GreenNanamiSSRS11.png/revision/latest?cb=20240908055005",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1b/GreenNanamiSSRS21.png/revision/latest?cb=20240908055020",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/58/GreenNanamiSSRUlt1.png/revision/latest?cb=20240908055031"
+   }
+  },
+  {
+   "id": "kokichi-muta-mode-albatross",
+   "name": "Kokichi Muta",
+   "epithet": "Mode: Albatross",
+   "color": "Green",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Kokichi_Muta_%28Mode%3A_Albatross%29",
+   "files": {
+    "art": "art.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp",
+    "icon": "icon.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c4/Sr7.gif/revision/latest?cb=20240908021708",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/96/GreenMechSRNormalAttack1.png/revision/latest?cb=20240908082022",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/de/GreenMechSRS11.png/revision/latest?cb=20240908082037",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/86/GreenMechSRS21.png/revision/latest?cb=20240908082048",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7d/GreenMechSRUlt1.png/revision/latest?cb=20240908082102",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/70/GreenMechamaruSRIcon1.webp/revision/latest?cb=20240903063716"
+   }
+  },
+  {
+   "id": "mai-ze-nin-calculated-shot",
+   "name": "Mai Ze’nin",
+   "epithet": "Calculated Shot",
+   "color": "Yellow",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Mai_Ze%E2%80%99nin_%28Calculated_Shot%29",
+   "files": {
+    "art": "art.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp",
+    "icon": "icon.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/98/Sr3.gif/revision/latest?cb=20240908021623",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/81/YellowMaiSRNormalAttack1.png/revision/latest?cb=20240908085835",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/09/MaiAutoSkill1.png/revision/latest?cb=20240908090120",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3d/YellowMaiSRS21.png/revision/latest?cb=20240908085856",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/cf/YellowMaiSRUlt1.png/revision/latest?cb=20240908085904",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7d/YellowMeiSRIcon1.webp/revision/latest?cb=20240903063757"
+   }
+  },
+  {
+   "id": "maki-zen-in-rebellious-failure",
+   "name": "Maki Zen'in",
+   "epithet": "Rebellious Failure",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Maki_Zen%27in_%28Rebellious_Failure%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bd/Maki_Zen_in_Rebellious_Failure_compressed.gif/revision/latest?cb=20240830074933",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/07/RedMakiSSRIcon1.webp/revision/latest?cb=20240830040417",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/27/RedMakiSSRNormalAttack1.png/revision/latest?cb=20240830033039",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/39/RedMakiSSRS11.png/revision/latest?cb=20240830033105",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/RedMakiSSRS21.png/revision/latest?cb=20240830033137",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/55/RedMakiSSRUlt1.png/revision/latest?cb=20240830033212"
+   }
+  },
+  {
+   "id": "maki-zen-in-the-weaker-curse-are-the-more-they-group-together",
+   "name": "Maki Zen'in",
+   "epithet": "The weaker curse are the more they group together",
+   "color": "Blue",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Maki_Zen%27in_%28The_weaker_curse_are_the_more_they_group_together%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/47/Sr8.gif/revision/latest?cb=20240908021933",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0c/BlueMaki0SRIcon1.webp/revision/latest?cb=20240903063708",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/57/BlueMaki0SRNormalAttack1.png/revision/latest?cb=20240908081741",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b7/BlueMaki0SRSkill1%281%29.png/revision/latest?cb=20240908081756",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c0/BlueMaki0SRSkill2%281%29.png/revision/latest?cb=20240908081808",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/63/BlueMaki0SRUlt1.png/revision/latest?cb=20240908081820"
+   }
+  },
+  {
+   "id": "masamichi-yaga-a-lesson-in-awareness",
+   "name": "Masamichi Yaga",
+   "epithet": "A Lesson In Awareness",
+   "color": "Red",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Masamichi_Yaga_%28A_Lesson_In_Awareness%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2c/Sr13.gif/revision/latest?cb=20240908021804",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/79/RedYagaSRIcon1.webp/revision/latest?cb=20240903063610",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9c/RedYagaSRNormalAttack1.png/revision/latest?cb=20240908073718",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/db/RedYagaSRS11.png/revision/latest?cb=20240908073726",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6e/RedYagaSRS21.png/revision/latest?cb=20240908073736",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1e/RedYagaSRUlt1.png/revision/latest?cb=20240908073748"
+   }
+  },
+  {
+   "id": "megumi-fushiguro-incomplete-domain",
+   "name": "Megumi Fushiguro",
+   "epithet": "Incomplete Domain",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Megumi_Fushiguro_%28_Incomplete_Domain_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1c/YellowMegumiSSRArt1.gif/revision/latest?cb=20240903024801",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c8/YellowMegumiSSRIcon1.webp/revision/latest?cb=20240902053826",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/31/YellowMegumiSSRNormalAttack1.png/revision/latest?cb=20240908070627",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/91/YellowMegumiSSRS11.png/revision/latest?cb=20240908070637",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/93/YellowMegumiSSRS21.png/revision/latest?cb=20240908070645",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7e/YellowMegumiSSRUlt1.png/revision/latest?cb=20240908070653"
+   }
+  },
+  {
+   "id": "megumi-fushiguro-inherited-cursed-technique",
+   "name": "Megumi Fushiguro",
+   "epithet": "Inherited Cursed Technique",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Megumi_Fushiguro_%28Inherited_Cursed_Technique%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/19/BlueMegumiSSRArt1.gif/revision/latest?cb=20240903024717",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/31/BlueMegumiSSRIcon1.webp/revision/latest?cb=20240902053512",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c3/BlueMegumiSSRNormalAttack1.png/revision/latest?cb=20240908030425",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b1/BlueMegumiSSRS11.png/revision/latest?cb=20240908030446",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/04/BlueMegumiSSRS21.png/revision/latest?cb=20240908030457",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2f/BlueMegumiSSRUlt1.png/revision/latest?cb=20240908030508"
+   }
+  },
+  {
+   "id": "momo-nishimiya-don-t-underestimate-me",
+   "name": "Momo Nishimiya",
+   "epithet": "Don't underestimate me",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Momo_Nishimiya_%28_Don%27t_underestimate_me_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a4/BlueMomoSSRArt1-min.gif/revision/latest?cb=20240903032951",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6f/BlueSSRMomoIcon1.webp/revision/latest?cb=20240902053558",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c3/BlueSSRMomoNormalAttack1.png/revision/latest?cb=20240908050929",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e8/BlueSSRMomoS11.png/revision/latest?cb=20240908050955",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/77/BlueSSRMomoS21.png/revision/latest?cb=20240908051010",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/02/BlueSSRMomoUlt1.png/revision/latest?cb=20240908051025"
+   }
+  },
+  {
+   "id": "momo-nishimiya-aerial-reconnaissance",
+   "name": "Momo Nishimiya",
+   "epithet": "Aerial Reconnaissance",
+   "color": "Green",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Momo_Nishimiya_%28Aerial_Reconnaissance%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9a/Sr6.gif/revision/latest?cb=20240908021657",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/30/GreenMomoSRIcon1.webp/revision/latest?cb=20240903063730",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/ca/GreenMomoSRNormalAttack1.png/revision/latest?cb=20240908083843",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f5/GreenMomoSRS11.png/revision/latest?cb=20240908083853",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/93/GreenMomoSRS21.png/revision/latest?cb=20240908083915",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8a/GreenMomoSRUlt1.png/revision/latest?cb=20240908083926"
+   }
+  },
+  {
+   "id": "nobara-kugisaki-girl-of-steel",
+   "name": "Nobara Kugisaki",
+   "epithet": "Girl of Steel",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Nobara_Kugisaki_%28Girl_of_Steel%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/34/YellowNobaraSSRArt1.gif/revision/latest?cb=20240903024700",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bc/YellowNobaraSSRIcon1.webp/revision/latest?cb=20240902053800",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c1/YellowNobaraSSRNormalAttack1.png/revision/latest?cb=20240908064312",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3a/YellowNobaraSSRS11.png/revision/latest?cb=20240908064325",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/23/YellowNobaraSSRS21.png/revision/latest?cb=20240908064342",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/66/YellowNobaraSSRUlt1.png/revision/latest?cb=20240908064357"
+   }
+  },
+  {
+   "id": "noritoshi-kamo-the-determination-within-the-bloodline",
+   "name": "Noritoshi Kamo",
+   "epithet": "The determination within the bloodline",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Noritoshi_Kamo_%28_The_determination_within_the_bloodline_%29",
+   "files": {
+    "art": "art.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp",
+    "icon": "icon.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/db/BlueNoritoshiSSRArt1-min.gif/revision/latest?cb=20240903033011",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8e/BlueSSRKamoNormalAttack1.png/revision/latest?cb=20240908050640",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9d/BlueSSRKamoS11.png/revision/latest?cb=20240908050657",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/58/BlueSSRKamoS21.png/revision/latest?cb=20240908050711",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a4/BlueSSRKamoUlt1.png/revision/latest?cb=20240908050725",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/45/BlueSSRKamoIcon1.webp/revision/latest?cb=20240902053545"
+   }
+  },
+  {
+   "id": "noritoshi-kamo-blood-of-the-gosanke",
+   "name": "Noritoshi Kamo",
+   "epithet": "Blood of the Gosanke",
+   "color": "Blue",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Noritoshi_Kamo_%28Blood_of_the_Gosanke%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/ff/Sr14.gif/revision/latest?cb=20240908021829",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ef/BlueKamoSRIcon1.webp/revision/latest?cb=20240903063640",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3d/BlueKamoSRNormalAttack1.png/revision/latest?cb=20240908075816",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4f/BlueKamoSRS11.png/revision/latest?cb=20240908075826",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e1/BlueKamoSRS21.png/revision/latest?cb=20240908075835",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/08/BlueKamoSRUlt1.png/revision/latest?cb=20240908075850"
+   }
+  },
+  {
+   "id": "panda-at-the-shortest-way",
+   "name": "Panda",
+   "epithet": "At the shortest way",
+   "color": "Blue",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Panda_%28At_the_shortest_way%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fb/Sr9.gif/revision/latest?cb=20240908021718",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7a/BluePanda0SRIcon1.webp/revision/latest?cb=20240903063649",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2b/BluePanda0SRNormalAttack1.png/revision/latest?cb=20240908080612",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/43/BluePanda0SRS11.png/revision/latest?cb=20240908080621",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/92/BluePanda0SRS21.png/revision/latest?cb=20240908080632",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/60/BluePanda0SRUlt1.png/revision/latest?cb=20240908080644"
+   }
+  },
+  {
+   "id": "panda-don-t-blame-the-doll",
+   "name": "Panda",
+   "epithet": "Don't Blame the Doll",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Panda_%28Don%27t_Blame_the_Doll%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f8/GreenPandaSSRArt1.gif/revision/latest?cb=20240908092446",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/ca/GreenPandaSSRIcon1.webp/revision/latest?cb=20240902053713",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/01/GreenPandaSSRNormalAttack1.png/revision/latest?cb=20240908060654",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c2/GreenPandaSSRS11.png/revision/latest?cb=20240908060705",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/ff/GreenPandaSSRS21.png/revision/latest?cb=20240908060717",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/53/GreenPandaSSRUlt1.png/revision/latest?cb=20240908060734"
+   }
+  },
+  {
+   "id": "saki-rindo-bring-on-the-fight",
+   "name": "Saki Rindo",
+   "epithet": "Bring On The Fight",
+   "color": "Yellow",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Saki_Rindo_%28Bring_On_The_Fight%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d2/Freecompress-sr1.gif/revision/latest?cb=20240908021544",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5b/YellowSakiSRIcon1.webp/revision/latest?cb=20240903063804",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/26/YellowSakiSRNormalAttack1.png/revision/latest?cb=20240908090340",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2c/YellowSakiSRS11.png/revision/latest?cb=20240908090349",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d2/YellowSakiSRS21.png/revision/latest?cb=20240908090359",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/08/YellowSakiSRUlt1.png/revision/latest?cb=20240908090410"
+   }
+  },
+  {
+   "id": "satoru-gojo-hollow-technique-purple",
+   "name": "Satoru Gojo",
+   "epithet": "Hollow Technique: Purple",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Satoru_Gojo_%28_Hollow_Technique%3A_Purple_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bd/Freecompress-GreenGojoSSRArt1-min.gif/revision/latest?cb=20240907042522",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ea/GreenGojoSSRIcon1.webp/revision/latest?cb=20240902053721",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c7/GreenGojoSSRNormalAttack1.png/revision/latest?cb=20240908061924",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/69/GreenGojoSSRS11.png/revision/latest?cb=20240908061941",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5d/GreenSSRGojoS21.png/revision/latest?cb=20240908061957",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/11/GreenSSRGojoUlt1.png/revision/latest?cb=20240908062010"
+   }
+  },
+  {
+   "id": "satoru-gojo-the-strongest",
+   "name": "Satoru Gojo",
+   "epithet": "The Strongest",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Satoru_Gojo_%28The_Strongest%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/26/Freecompress-BlueGojoSSRArt1-min.gif/revision/latest?cb=20240907042445",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f3/BlueGojoSSRIcon1.webp/revision/latest?cb=20240902053433",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/12/BlueGojoSSRNormalAttack1.png/revision/latest?cb=20240908024826",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e4/BlueGojoSSRS11.png/revision/latest?cb=20240908025109",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/40/S2.png/revision/latest?cb=20240908025150",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/74/BlueGojoSSRUlt1.png/revision/latest?cb=20240908024849"
+   }
+  },
+  {
+   "id": "suguru-geto-for-the-justice",
+   "name": "Suguru Geto",
+   "epithet": "For the Justice",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Suguru_Geto_%28_For_the_Justice_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3b/BlueGetoSSRArt1.gif/revision/latest?cb=20240903024600",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/10/BlueGetoSSRIcon1.webp/revision/latest?cb=20240902053535",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f8/BlueGetoSSRNormalAttack1.png/revision/latest?cb=20240908050103",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/05/BlueGetoSSRS11.png/revision/latest?cb=20240908050217",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f2/BlueGetoSSRS21.png/revision/latest?cb=20240908050159",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e0/BlueGetoSSRUlt1.png/revision/latest?cb=20240908050028"
+   }
+  },
+  {
+   "id": "toge-inumaki-compelling-cursed-speech",
+   "name": "Toge Inumaki",
+   "epithet": "Compelling Cursed Speech",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Toge_Inumaki_%28Compelling_Cursed_Speech%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/ce/YellowTogeSSRArt1.gif/revision/latest?cb=20240903025736",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/YellowTogeSSRIcon1.webp/revision/latest?cb=20240902053809",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/88/YellowTogeSSRNormalAttack1.png/revision/latest?cb=20240908064853",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a7/YellowTogeSSRS11.png/revision/latest?cb=20240908064910",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fd/YellowTogeSSRS21.png/revision/latest?cb=20240908064927",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e7/YellowTogeSSRUlt1.png/revision/latest?cb=20240908064943"
+   }
+  },
+  {
+   "id": "toge-inumaki-the-baton-of-counterattack",
+   "name": "Toge Inumaki",
+   "epithet": "The Baton of Counterattack",
+   "color": "Blue",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Toge_Inumaki_%28The_Baton_of_Counterattack%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b6/Sr10.gif/revision/latest?cb=20240908021729",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a6/BlueToge0SRIcon1.webp/revision/latest?cb=20240903063659",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/42/BlueToge0SRNormalAttack1.png/revision/latest?cb=20240908081006",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/41/BlueToge0SRS11.png/revision/latest?cb=20240908081016",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a6/BlueToge0SRS21.png/revision/latest?cb=20240908081028",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ed/BlueToge0SRUlt1.png/revision/latest?cb=20240908081043"
+   }
+  },
+  {
+   "id": "yuji-itadori-the-agile-body",
+   "name": "Yuji Itadori",
+   "epithet": "The agile body",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Yuji_Itadori_%28_The_agile_body_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9b/RedYujiSSRArt1.gif/revision/latest?cb=20240903024823",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c6/RedYujiSSRIcon1.webp/revision/latest?cb=20240831060131",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7e/RedYujiSSRNormalAttack1.png/revision/latest?cb=20240831072622",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a5/RedYujiSSRS11.png/revision/latest?cb=20240831072632",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c0/RedYujiSSRS21.png/revision/latest?cb=20240831072644",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5a/RedYujiSSRUlt1.png/revision/latest?cb=20240831072754"
+   }
+  },
+  {
+   "id": "yuta-okkotsu-lend-me-your-strength",
+   "name": "Yuta Okkotsu",
+   "epithet": "Lend me your strength",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Yuta_Okkotsu_%28_Lend_me_your_strength_%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/de/RedYutaSSRArt1.gif/revision/latest?cb=20240903025836",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/18/RedYutaSSRIcon1.webp/revision/latest?cb=20240831060106",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0e/RedYutaSSRNormalAttack1.png/revision/latest?cb=20240831071734",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/09/RedYutaSSRS11.png/revision/latest?cb=20240831071725",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a3/RedYutaSSRS21.png/revision/latest?cb=20240831071717",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4a/RedYutaSSRUlt1.png/revision/latest?cb=20240831071709"
+   }
+  },
+  {
+   "id": "yuuji-itadori-cursed-energy-black-flash",
+   "name": "Yuuji Itadori",
+   "epithet": "Cursed Energy Black Flash",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Yuuji_Itadori_%28Cursed_Energy_Black_Flash%29",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2c/Freecompress-GreenItadoriSSRArt1-min.gif/revision/latest?cb=20240907042825",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fb/GreenItadoriSSRIcon1.webp/revision/latest?cb=20240902053634",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/36/GreenItadoriSSRNormalAttack1.png/revision/latest?cb=20240908052915",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/36/GreenItadoriSSRS11.png/revision/latest?cb=20240908052927",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b5/GreenItadoriSSRS21.png/revision/latest?cb=20240908052940",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/62/GreenItadoriSSRUlt1.png/revision/latest?cb=20240908052952"
+   }
+  },
+  {
+   "id": "yuuki-kaito-his-resolve-as-a-sorcerer",
+   "name": "Yuuki Kaito",
+   "epithet": "His Resolve As A Sorcerer",
+   "color": "Green",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Yuuki_Kaito_%28His_Resolve_As_A_Sorcerer%29",
+   "files": {
+    "art": "art.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp",
+    "icon": "icon.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/Sr5.gif/revision/latest?cb=20240908021647",
+    "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/23/GreenKaitoSRNormalAttack1.png/revision/latest?cb=20240908084757",
+    "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/18/GreenKaitoSRS11.png/revision/latest?cb=20240908084808",
+    "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2f/GreenKaitoSRS21.png/revision/latest?cb=20240908084818",
+    "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/02/GreenKaitoSRUlt1.png/revision/latest?cb=20240908084827",
+    "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e0/GreenYuukiSRIcon1.webp/revision/latest?cb=20240903063737"
+   }
+  },
+  {
+   "id": "mai-zen-in-the-final-bullet",
+   "name": "Mai Zen'in",
+   "epithet": "The Final Bullet",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28The_Final_Bullet%29_Mai_Zen%27in",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/18/RedSSRMaiArt1.gif/revision/latest?cb=20240921141521",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1b/RedSSRMaiIcon1.png/revision/latest?cb=20240922161122",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9c/RedSSRMaiNormalAttack1.png/revision/latest?cb=20240921220901",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/ce/RedSSRMaiSkill1.png/revision/latest?cb=20240921220936",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/84/RedSSRMaiSkill2.png/revision/latest?cb=20240921220951",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/54/RedSSRMaiUlt.png/revision/latest?cb=20240921221006"
+   }
+  },
+  {
+   "id": "satoru-gojo-within-infinity",
+   "name": "Satoru Gojo",
+   "epithet": "Within Infinity",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Within_Infinity%29_Satoru_Gojo",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/RedSSRGojoArt1.gif/revision/latest?cb=20241129062551",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7c/RedSSRGojoIcon1.png/revision/latest?cb=20241129170613",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4a/RedSSRGojoNormalAttack1.png/revision/latest?cb=20241130175504",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/RedSSRGojoS11.png/revision/latest?cb=20241130175517",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f4/RedSSRGojoS21.png/revision/latest?cb=20241130175548",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/RedSSRGojoUlt1.png/revision/latest?cb=20241130175601"
+   }
+  },
+  {
+   "id": "toge-inumaki-night-lurking-sorcerer",
+   "name": "Toge Inumaki",
+   "epithet": "Night-Lurking Sorcerer",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Night-Lurking_Sorcerer%29_Toge_Inumaki",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b8/RedSSRInumakiArt1.gif/revision/latest?cb=20250228124303",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d8/RedSSRInumakiIcon1.png/revision/latest?cb=20250219192139",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3d/RedSSRInumakiNormalAttack1.png/revision/latest?cb=20250219190835",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c4/RedSSRInumakiS11.png/revision/latest?cb=20250219190854",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e2/RedSSRInumakiS21.png/revision/latest?cb=20250219190904",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e9/RedSSRInumakiUlt1.png/revision/latest?cb=20250219190914"
+   }
+  },
+  {
+   "id": "mei-mei-night-of-dancing-crows",
+   "name": "Mei Mei",
+   "epithet": "Night Of Dancing Crows",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Night_Of_Dancing_Crows%29_Mei_Mei",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/75/RedSSRMeiMeiArt1.gif/revision/latest?cb=20250331084734",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ef/RedSSRMeiMeiIcon1.png/revision/latest?cb=20250603073245",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/93/RedSSRMeiMeiNormalAttack1.png/revision/latest?cb=20250331084642",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d9/RedSSRMeiMeiS11.png/revision/latest?cb=20250331084643",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/RedSSRMeiMeiS21.png/revision/latest?cb=20250331084643",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2f/RedSSRMeiMeiUlt1.png/revision/latest?cb=20250331084643"
+   }
+  },
+  {
+   "id": "kento-nanami-teen-promising-new-student",
+   "name": "Kento Nanami (Teen)",
+   "epithet": "Promising New Student",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Promising_New_Student%29_Kento_Nanami_%28Teen%29",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6c/RedSSRNanamiArt1.gif/revision/latest?cb=20250710181910",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c3/RedSSRNanamiIcon1.png/revision/latest?cb=20250710181649",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/49/RedSSRNanamiNormalAttack1.png/revision/latest?cb=20250710181649",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/10/RedSSRNanamiS11.png/revision/latest?cb=20250710181649",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/db/RedSSRNanamiS21.png/revision/latest?cb=20250710181649",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/dd/RedSSRNanamiUlt1.png/revision/latest?cb=20250710181648"
+   }
+  },
+  {
+   "id": "megumi-fushiguro-rabbit-s-disruption",
+   "name": "Megumi Fushiguro",
+   "epithet": "Rabbit's Disruption",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Rabbit%27s_Disruption%29_Megumi_Fushiguro",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/46/RedSSRMegumiArt1.gif/revision/latest?cb=20250918051755",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1e/RedSSRMegumiIcon1.jpeg/revision/latest?cb=20250912100303",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/0e/RedSSRMegumiNormalAttack1.png/revision/latest?cb=20250912095526",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b3/RedSSRMegumiS11.png/revision/latest?cb=20250912095622",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/13/RedSSRMegumiS21.png/revision/latest?cb=20250912095649",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/71/RedSSRMegumiUlt1.png/revision/latest?cb=20250912095658"
+   }
+  },
+  {
+   "id": "yuji-itadori-maximum-cursed-energy-output",
+   "name": "Yuji Itadori",
+   "epithet": "Maximum Cursed Energy Output",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Maximum_Cursed_Energy_Output%29_Yuji_Itadori",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fe/RedYujiSSRArt2.gif/revision/latest?cb=20251121143140",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/56/RedSSRYujiIcon2.jpeg/revision/latest?cb=20251121090245",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fe/RedSSRYujiNormalAttack2.png/revision/latest?cb=20251121060016",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7a/RedSSRYujiS12.png/revision/latest?cb=20251121060016",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e3/RedSSRYujiS22.png/revision/latest?cb=20251121060015",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9d/RedSSRYujiUlt2.png/revision/latest?cb=20251121060016"
+   }
+  },
+  {
+   "id": "mahito-unbridled-soul",
+   "name": "Mahito",
+   "epithet": "Unbridled Soul",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Unbridled_Soul%29_Mahito",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a3/RedSSRMahitoArt1.gif/revision/latest?cb=20251204160252",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/79/RedSSRMahitoIcon1.jpeg/revision/latest?cb=20251204095827",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/89/RedSSRMahitoNormalAttack1.png/revision/latest?cb=20251204092501",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4e/RedSSRMahitoS11.png/revision/latest?cb=20251204092521",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/da/RedSSRMahitoS21.png/revision/latest?cb=20251204092534",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a5/RedSSRMahitoUlt1.png/revision/latest?cb=20251204092733"
+   }
+  },
+  {
+   "id": "momo-nishimiya-tool-manipulation",
+   "name": "Momo Nishimiya",
+   "epithet": "Tool Manipulation",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Tool_Manipulation%29_Momo_Nishimiya",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8e/RedSSRMomoArt1.gif/revision/latest?cb=20260225095933",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fd/RedSSRMomoIcon1.jpeg/revision/latest?cb=20260224145849",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2a/RedSSRMomoNormalAttack1.png/revision/latest?cb=20260225095707",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/49/RedSSRMomoS11.png/revision/latest?cb=20260225095727",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f0/RedSSRMomoS21.png/revision/latest?cb=20260225095741",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/RedSSRMomoUlt1.png/revision/latest?cb=20260225095753"
+   }
+  },
+  {
+   "id": "noritoshi-kamo-the-golden-age-of-jujutsu",
+   "name": "Noritoshi Kamo",
+   "epithet": "The Golden Age of Jujutsu",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28The_Golden_Age_of_Jujutsu%29_Noritoshi_Kamo",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/cb/RedSSRKenjakuArt1.gif/revision/latest?cb=20260424150619",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/26/RedSSRKenjakuIcon1.jpeg/revision/latest?cb=20260424082950",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/14/RedSSRKenjakuNormalAttack1.png/revision/latest?cb=20260425142114",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/84/RedSSRKenjakuS11.png/revision/latest?cb=20260424150941",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5f/RedSSRKenjakuS21.png/revision/latest?cb=20260425142135",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/30/RedSSRKenjakuUlt1.png/revision/latest?cb=20260425141825"
+   }
+  },
+  {
+   "id": "yoshinobu-gakuganji-crafty-rock",
+   "name": "Yoshinobu Gakuganji",
+   "epithet": "Crafty Rock",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Crafty_Rock%29_Yoshinobu_Gakuganji",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/48/RedSSRGakuganjiArt1.gif/revision/latest?cb=20260730131832",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/90/RedSSRGakuganjiIcon1.jpeg/revision/latest?cb=20260721100231",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/RedSSRGakuganjiNormalAttack1.png/revision/latest?cb=20260721095203",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/21/RedSSRGakuganjiS11.png/revision/latest?cb=20260721095219",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/98/RedSSRGakuganjiS21.png/revision/latest?cb=20260721095231",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7a/RedSSRGakuganjiUlt1.png/revision/latest?cb=20260721095243"
+   }
+  },
+  {
+   "id": "yu-haibara-burning-passion",
+   "name": "Yu Haibara",
+   "epithet": "Burning Passion",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Burning_Passion%29_Yu_Haibara",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/99/RedSSRHaibaraArt1.gif/revision/latest?cb=20260831140035",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e5/RedSSRHaibaraIcon1.jpeg/revision/latest?cb=20260831094239",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/36/RedSSRHaibaraNormalAttack1.png/revision/latest?cb=20260831140239",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9c/RedSSRHaibaraS11.png/revision/latest?cb=20260831140412",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/77/RedSSRHaibaraS21.png/revision/latest?cb=20260831140438",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ed/RedSSRHaibaraUlt1.png/revision/latest?cb=20260831140540"
+   }
+  },
+  {
+   "id": "toge-inumaki-shatter-to-pieces",
+   "name": "Toge Inumaki",
+   "epithet": "Shatter To Pieces",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Shatter_To_Pieces%29_Toge_Inumaki",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/36/BlueSSRInumakiArt1.gif/revision/latest?cb=20241002085413",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8b/BlueSSRInumakiIcon1.png/revision/latest?cb=20240930121907",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9e/BlueSSRInumakiNormalAttack.png/revision/latest?cb=20241002092517",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/BlueSSRInumakiSkill1.png/revision/latest?cb=20241002092546",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/83/BlueSSRInumakiSkill2.png/revision/latest?cb=20241002092559",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/BlueSSRInumakiUlt.png/revision/latest?cb=20241002092608"
+   }
+  },
+  {
+   "id": "miguel-delayed-quota",
+   "name": "Miguel",
+   "epithet": "Delayed Quota",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Delayed_Quota%29_Miguel",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/91/BlueSSRMiguelArt1.gif/revision/latest?cb=20241213194837",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8e/BlueSSRMiguelIcon1.png/revision/latest?cb=20241213153553",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c5/BlueSSRMiguelNormalAttack.png/revision/latest?cb=20241213113407",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/44/BlueSSRMiguelSkill1.png/revision/latest?cb=20241213114237",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c6/BlueSSRMiguelSkill2.png/revision/latest?cb=20241213113517",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/BlueSSRMiguelUlt.png/revision/latest?cb=20241213113625"
+   }
+  },
+  {
+   "id": "ryomen-sukuna-genuine-jujutsu",
+   "name": "Ryomen Sukuna",
+   "epithet": "Genuine Jujutsu",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Genuine_Jujutsu%29_Ryomen_Sukuna",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/bb/BlueSSRSukunaArt1.gif/revision/latest?cb=20241229135909",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a6/BlueSSRSukunaIcon1.png/revision/latest?cb=20241231084927",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e7/BlueSSRSukunaNormalAttack1.png/revision/latest?cb=20241229065812",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a2/BlueSSRSukunaS11.png/revision/latest?cb=20241229065813",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/71/BlueSSRSukunaS21.png/revision/latest?cb=20250917152610",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/87/BlueSSRSukunaUlt1.png/revision/latest?cb=20241229065812"
+   }
+  },
+  {
+   "id": "maki-zen-in-early-morning-departure",
+   "name": "Maki Zen'in",
+   "epithet": "Early Morning Departure",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Early_Morning_Departure%29_Maki_Zen%27in",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/09/BlueMakiSSRArt1.gif/revision/latest?cb=20250321092301",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ef/BlueSSRMakiIcon1.png/revision/latest?cb=20250321071837",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/73/BlueMakiSSRNormalAttack1.png/revision/latest?cb=20250321055200",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/22/BlueMakiSSRS11.png/revision/latest?cb=20250321055200",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4f/BlueMakiSSRS21.png/revision/latest?cb=20250321055159",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/BlueMakiSSRUlt1.png/revision/latest?cb=20250321055200"
+   }
+  },
+  {
+   "id": "takuma-ino-no-conceit",
+   "name": "Takuma Ino",
+   "epithet": "No Conceit",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28No_Conceit%29_Takuma_Ino",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9e/BlueSSRInoArt1.gif/revision/latest?cb=20250519123909",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/47/BlueSSRInoIcon1.png/revision/latest?cb=20250603071637",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a7/BlueSSRInoNormalAttack1.png/revision/latest?cb=20250428112759",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4e/BlueSSRInoS11.png/revision/latest?cb=20250428112759",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b0/BlueSSRInoS21.png/revision/latest?cb=20250428112758",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/71/BlueSSRInoUlt1.png/revision/latest?cb=20250428112759"
+   }
+  },
+  {
+   "id": "naobito-zen-in-crushed-with-speed",
+   "name": "Naobito Zen'in",
+   "epithet": "Crushed With Speed",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Crushed_With_Speed%29_Naobito_Zen%27in",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d4/BlueSSRNaobitoArt1.gif/revision/latest?cb=20250908032954",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/da/BlueSSRNaobitoIcon1.jpeg/revision/latest?cb=20250903103632",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/22/BlueSSRNaobitoNormalAttack1.png/revision/latest?cb=20250903084242",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/70/BlueSSRNaobitoS11.png/revision/latest?cb=20250903084301",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1e/BlueSSRNaobitoS21.png/revision/latest?cb=20250903084317",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a4/BlueSSRNaobitoUlt1.png/revision/latest?cb=20250903084326"
+   }
+  },
+  {
+   "id": "yuta-okkotsu-queen-of-curses",
+   "name": "Yuta Okkotsu",
+   "epithet": "Queen of Curses",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Queen_of_Curses%29_Yuta_Okkotsu",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b3/BlueSSRYutaArt1.gif/revision/latest?cb=20251020184359",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c3/BlueSSRYutaIcon1.jpeg/revision/latest?cb=20251018135915",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/0a/BlueSSRYutaNormalAttack1.png/revision/latest?cb=20251018094358",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/54/BlueSSRYutaS11.png/revision/latest?cb=20251018094358",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/38/BlueSSRYutaS21.png/revision/latest?cb=20251018094358",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/69/BlueSSRYutaUlt1.png/revision/latest?cb=20251018094358"
+   }
+  },
+  {
+   "id": "satoru-gojo-0-2-second-domain-expansion",
+   "name": "Satoru Gojo",
+   "epithet": "0.2-Second Domain Expansion",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%280.2-Second_Domain_Expansion%29_Satoru_Gojo",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ee/BlueSSRGojoArt2.gif/revision/latest?cb=20251231022224",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/85/BlueSSRGojoIcon2.jpeg/revision/latest?cb=20251226080028",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/db/BlueSSRGojoNormalAttack2.png/revision/latest?cb=20251231025259",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/70/BlueSSRGojoS12.png/revision/latest?cb=20251231025313",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e5/BlueSSRGojoS22.png/revision/latest?cb=20251231025323",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/27/BlueSSRGojoUlt2.png/revision/latest?cb=20251231025335"
+   }
+  },
+  {
+   "id": "masamichi-yaga-pivotal-guardian",
+   "name": "Masamichi Yaga",
+   "epithet": "Pivotal Guardian",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Pivotal_Guardian%29_Masamichi_Yaga",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/36/BlueSSRYagaArt1.gif/revision/latest?cb=20260319084830",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/47/BlueSSRYagaIcon1.jpeg/revision/latest?cb=20260319090316",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/87/BlueSSRYagaNormalAttack1.png/revision/latest?cb=20260319084852",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/df/BlueSSRYagaS11.png/revision/latest?cb=20260319084907",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6b/BlueSSRYagaS21.png/revision/latest?cb=20260319084920",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/db/BlueSSRYagaUlt1.png/revision/latest?cb=20260319084931"
+   }
+  },
+  {
+   "id": "yuji-itadori-smash-it-into-the-summer-sky",
+   "name": "Yuji Itadori",
+   "epithet": "Smash It Into the Summer Sky",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Smash_It_Into_the_Summer_Sky%29_Yuji_Itadori",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a5/BlueSSRYujiArt2.gif/revision/latest?cb=20260525144728",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5b/BlueSSRYujiIcon2.jpeg/revision/latest?cb=20260521091206",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/18/BlueYujiSSRNormalAttack2.png/revision/latest?cb=20260525145824",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d7/BlueYujiSSRS12.png/revision/latest?cb=20260525145841",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/87/BlueYujiSSRS22.png/revision/latest?cb=20260525145858",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/23/BlueYujiSSRUlt2.png/revision/latest?cb=20260525145910"
+   }
+  },
+  {
+   "id": "nobara-kugisaki-striking-eternal-summer",
+   "name": "Nobara Kugisaki",
+   "epithet": "Striking Eternal Summer",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Striking_Eternal_Summer%29_Nobara_Kugisaki",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5c/BlueSSRNobaraArt1.gif/revision/latest?cb=20260531092122",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/aa/BlueSSRNobaraIcon1.jpeg/revision/latest?cb=20260601105819",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4e/BlueSSRNobaraNormalAttack1.png/revision/latest?cb=20260531092159",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c4/BlueSSRNobaraS11.png/revision/latest?cb=20260531092211",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3b/BlueSSRNobaraS21.png/revision/latest?cb=20260531092224",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/58/BlueSSRNobaraUlt1.png/revision/latest?cb=20260531092237"
+   }
+  },
+  {
+   "id": "mai-zen-in-effective-range",
+   "name": "Mai Zen'in",
+   "epithet": "Effective Range",
+   "color": "Blue",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Effective_Range%29_Mai_Zen%27in",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/91/BlueSSRMaiArt1.gif/revision/latest?cb=20260831142529",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e9/BlueSSRMaiIcon1.jpeg/revision/latest?cb=20260731135956",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/84/BlueSSRMaiNormalAttack1.png/revision/latest?cb=20260831142007",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/26/BlueSSRMaiS11.png/revision/latest?cb=20260831142029",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/42/BlueSSRMaiS21.png/revision/latest?cb=20260831142053",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/bb/BlueSSRMaiUlt1.png/revision/latest?cb=20260831142114"
+   }
+  },
+  {
+   "id": "nobara-kugisaki-keep-hammering-at-them",
+   "name": "Nobara Kugisaki",
+   "epithet": "Keep Hammering At Them",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Keep_Hammering_At_Them%29_Nobara_Kugisaki",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d0/NobaraArt.gif/revision/latest?cb=20241021221331",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/52/GreenSSRNobaraIcon1.png/revision/latest?cb=20241022130912",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d4/GreenSSRNobaraNormalAttack.png/revision/latest?cb=20241022185802",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/GreenSSRNobaraSkill1.png/revision/latest?cb=20241022185808",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e1/GreenSSRNobaraSkill2.png/revision/latest?cb=20241022185815",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/be/GreenSSRNobaraUlt.png/revision/latest?cb=20241022185822"
+   }
+  },
+  {
+   "id": "megumi-fushiguro-bond-of-friendship",
+   "name": "Megumi Fushiguro",
+   "epithet": "Bond of Friendship",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Bond_of_Friendship%29_Megumi_Fushiguro",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/06/GreenMegumiSSRArt1.gif/revision/latest?cb=20241031081159",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/76/GreenSSRMegumiIcon1.png/revision/latest?cb=20250603072959",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c8/GreenMegumiSSRNormalAttack1.png/revision/latest?cb=20241031083241",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ed/GreenMegumiSSRS11.png/revision/latest?cb=20241031083240",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3f/GreenMegumiSSRS21.png/revision/latest?cb=20241031083240",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d9/GreenMegumiSSRUlt1.png/revision/latest?cb=20241031083241"
+   }
+  },
+  {
+   "id": "kasumi-miwa-sprinting",
+   "name": "Kasumi Miwa",
+   "epithet": "Sprinting",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Sprinting%29_Kasumi_Miwa",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a6/GreenSSRMiwaArt1.gif/revision/latest?cb=20250123152000",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7c/GreenSSRMiwaIcon1.jpg/revision/latest?cb=20250123160013",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7f/GreenSSRMiwaNormalAttack.png/revision/latest?cb=20250123151555",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3b/GreenSSRMiwaS1.png/revision/latest?cb=20250123151531",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1b/GreenSSRMiwaS2.png/revision/latest?cb=20250123151621",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/01/GreenSSRMiwaUlt.png/revision/latest?cb=20250123151641"
+   }
+  },
+  {
+   "id": "kokichi-muta-i-ve-seen-it-all",
+   "name": "Kokichi Muta",
+   "epithet": "I've Seen It All",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28I%27ve_Seen_It_All%29_Kokichi_Muta",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/65/GreenSSRMutaArt1.gif/revision/latest?cb=20250201221006",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3a/GreenSSRKokichiIcon1.png/revision/latest?cb=20250131181839",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/89/GreenSSRMutaNormalAttack1.png/revision/latest?cb=20250131082359",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b7/GreenSSRMutaS11.png/revision/latest?cb=20250131082359",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/77/GreenSSRMutaS21.png/revision/latest?cb=20250131082359",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e1/GreenSSRMutaUlt1.png/revision/latest?cb=20250131082359"
+   }
+  },
+  {
+   "id": "satoru-gojo-teen-awakening",
+   "name": "Satoru Gojo (Teen)",
+   "epithet": "Awakening",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Awakening%29_Satoru_Gojo_%28Teen%29",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b5/GreenSSRGojoArt2.gif/revision/latest?cb=20250521140007",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b8/GreenSSRGojoIcon2.png/revision/latest?cb=20250603065304",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/16/GreenSSRGojoNormalAttack2.png/revision/latest?cb=20250521135115",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/GreenSSRGojoS12.png/revision/latest?cb=20250521135114",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/00/GreenSSRGojoS22.png/revision/latest?cb=20250521135115",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2d/GreenSSRGojoUlt2.png/revision/latest?cb=20250521135115"
+   }
+  },
+  {
+   "id": "shoko-ieiri-teen-fwoo-hyoi",
+   "name": "Shoko Ieiri (Teen)",
+   "epithet": "\"Fwoo Hyoi\"",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28%22Fwoo_Hyoi%22%29_Shoko_Ieiri_%28Teen%29",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/23/GreenSSRShokoArt1.gif/revision/latest?cb=20250531153412",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/95/GreenSSRShokoIcon1.png/revision/latest?cb=20250530125611",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3c/GreenSSRShokoNormalAttack1.png/revision/latest?cb=20250530122319",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/dc/GreenSSRShokoS11.png/revision/latest?cb=20250530122320",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/da/GreenSSRShokoS21.png/revision/latest?cb=20250530122320",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/GreenSSRShokoUlt1.png/revision/latest?cb=20250530122320"
+   }
+  },
+  {
+   "id": "choso-fulfilling-his-duty-as-the-older-brother",
+   "name": "Choso",
+   "epithet": "Fulfilling His Duty as the Older Brother",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Fulfilling_His_Duty_as_the_Older_Brother%29_Choso",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fa/GreenSSRChosoArt1.gif/revision/latest?cb=20250806123949",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/21/GreenSSRChosoIcon1.jpeg/revision/latest?cb=20250806124443",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7e/GreenSSRChosoNormalAttack1.png/revision/latest?cb=20250806124012",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/GreenSSRChosoS11.png/revision/latest?cb=20250806124025",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5b/GreenSSRChosoS21.png/revision/latest?cb=20250806124038",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/97/GreenSSRChosoUlt1.png/revision/latest?cb=20250806124053"
+   }
+  },
+  {
+   "id": "aoi-todo-are-you-satisfied-with-that",
+   "name": "Aoi Todo",
+   "epithet": "Are you satisfied with that?",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Are_you_satisfied_with_that%3F%29_Aoi_Todo",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f5/GreenSSRTodoArt1.gif/revision/latest?cb=20251121143330",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/cf/GreenSSRTodoIcon1.jpeg/revision/latest?cb=20251121090302",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a4/GreenSSRTodoNormalAttack1.png/revision/latest?cb=20251121071036",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c6/GreenSSRTodoS11.png/revision/latest?cb=20251121071036",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/83/GreenSSRTodoS21.png/revision/latest?cb=20251121071036",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d7/GreenSSRTodoUlt1.png/revision/latest?cb=20251121071036"
+   }
+  },
+  {
+   "id": "yuji-itadori-a-life-entrusted-to-me",
+   "name": "Yuji Itadori",
+   "epithet": "A Life Entrusted to Me",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28A_Life_Entrusted_to_Me%29_Yuji_Itadori",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/90/GreenItadoriSSRArt2.gif/revision/latest?cb=20260109020956",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c9/GreenSSRYujiIcon2.jpeg/revision/latest?cb=20260109025624",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/94/GreenItadoriSSRNormalAttack2.png/revision/latest?cb=20260109025316",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2d/GreenItadoriSSRS12.png/revision/latest?cb=20260109025343",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/eb/GreenItadoriSSRS22.png/revision/latest?cb=20260109025356",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/49/GreenItadoriSSRUlt2.png/revision/latest?cb=20260109025428"
+   }
+  },
+  {
+   "id": "kento-nanami-silent-suppression",
+   "name": "Kento Nanami",
+   "epithet": "Silent Suppression",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Silent_Suppression%29_Kento_Nanami",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/61/GreenNanamiSSRArt2.gif/revision/latest?cb=20260228022734",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d5/GreenSSRNanamiIcon2.jpeg/revision/latest?cb=20260227105827",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5a/GreenNanamiSSRNormalAttack2.png/revision/latest?cb=20260228022804",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e2/GreenNanamiSSRS12.png/revision/latest?cb=20260228022832",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/32/GreenNanamiSSRS22.png/revision/latest?cb=20260228022841",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6c/GreenNanamiSSRUlt2.png/revision/latest?cb=20260228022852"
+   }
+  },
+  {
+   "id": "megumi-fushiguro-enjoying-the-cool-summer-breeze",
+   "name": "Megumi Fushiguro",
+   "epithet": "Enjoying The Cool Summer Breeze",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Enjoying_The_Cool_Summer_Breeze%29_Megumi_Fushiguro",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4a/GreenMegumiSSRArt2.gif/revision/latest?cb=20260531081057",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4a/GreenSSRMegumiIcon2.jpeg/revision/latest?cb=20260601105833",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/0e/GreenMegumiSSRNormalAttack2.png/revision/latest?cb=20260531081137",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b5/GreenMegumiSSRS12.png/revision/latest?cb=20260531081149",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/GreenMegumiSSRS22.png/revision/latest?cb=20260531081231",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8d/GreenMegumiSSRUlt2.png/revision/latest?cb=20260531081249"
+   }
+  },
+  {
+   "id": "takuma-ino-indomitable-auspicious-beasts",
+   "name": "Takuma Ino",
+   "epithet": "Indomitable Auspicious Beasts",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Indomitable_Auspicious_Beasts%29_Takuma_Ino",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/84/GreenInoSSRArt1.gif/revision/latest?cb=20260831141434",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/GreenSSRInoIcon1.jpeg/revision/latest?cb=20260819095013",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a4/GreenInoSSRNormalAttack1.png/revision/latest?cb=20260831140842",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7a/GreenInoSSRS11.png/revision/latest?cb=20260831140858",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/0a/GreenInoSSRS21.png/revision/latest?cb=20260831141015",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b0/GreenInoSSRUlt1.png/revision/latest?cb=20260831141034"
+   }
+  },
+  {
+   "id": "kaito-yuki-with-that-will-in-mind",
+   "name": "Kaito Yuki",
+   "epithet": "With That Will In Mind",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28With_That_Will_In_Mind%29_Kaito_Yuki",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e3/YellowSSRKaitoArt.gif/revision/latest?cb=20241117130519",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/YellowSSRKaitoIcon1.png/revision/latest?cb=20241117140535",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/33/YellowSSRKaitoS11.png/revision/latest?cb=20241117140440",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3f/YellowSSRKaitoS21.png/revision/latest?cb=20241117140450",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a1/YellowSSRKaitoS31.png/revision/latest?cb=20241117140459",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/22/YellowSSRKaitoUlt1.png/revision/latest?cb=20241117140509"
+   }
+  },
+  {
+   "id": "yuji-itadori-zone",
+   "name": "Yuji Itadori",
+   "epithet": "Zone",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Zone%29_Yuji_Itadori",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/ab/YellowSSRYujiArt1.gif/revision/latest?cb=20241121035127",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/95/YellowSSRYujiIcon1.png/revision/latest?cb=20250603072700",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d5/YellowSSRYujiS11.png/revision/latest?cb=20241121035236",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/YellowSSRYujiS21.png/revision/latest?cb=20241121035303",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/58/YellowSSRYujiS31.png/revision/latest?cb=20241121035347",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a1/YellowSSRYujiUlt.png/revision/latest?cb=20241121035402"
+   }
+  },
+  {
+   "id": "shoko-ieiri-life-saver",
+   "name": "Shoko Ieiri",
+   "epithet": "Life Saver",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Life_Saver%29_Shoko_Ieiri",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b5/YellowSSRShokoSSRArt1.gif/revision/latest?cb=20250228054345",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e9/YellowSSRShokoIcon1.png/revision/latest?cb=20250228124535",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/be/YellowSSRShokoNormalAttack1.png/revision/latest?cb=20250228053958",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d7/YellowSSRShokoS11.png/revision/latest?cb=20250228053958",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9f/YellowSSRShokoS21.png/revision/latest?cb=20250228053957",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/85/YellowSSRShokoUlt1.png/revision/latest?cb=20250228053958"
+   }
+  },
+  {
+   "id": "dagon-unlimited-shikigami",
+   "name": "Dagon",
+   "epithet": "Unlimited Shikigami",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Unlimited_Shikigami%29_Dagon",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b7/YellowSSRDagonArt1.gif/revision/latest?cb=20250805190153",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f2/YellowSSRDagonIcon1.jpeg/revision/latest?cb=20250805192557",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3a/YellowSSRDagonNormalAttack1.png/revision/latest?cb=20250805190315",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/dd/YellowSSRDagonS11.png/revision/latest?cb=20250805190341",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/63/YellowSSRDagonS21.png/revision/latest?cb=20250805190410",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2a/YellowSSRDagonUlt1.png/revision/latest?cb=20250805190449"
+   }
+  },
+  {
+   "id": "toji-fushiguro-seance",
+   "name": "Toji Fushiguro",
+   "epithet": "Seance",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Seance%29_Toji_Fushiguro",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9c/YellowSSRTojiArt1.gif/revision/latest?cb=20250820124532",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c4/YellowSSRTojiIcon1.jpeg/revision/latest?cb=20250820125126",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ef/YellowSSRTojiNormalAttack1.png/revision/latest?cb=20250819154542",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a5/YellowSSRTojiS11.png/revision/latest?cb=20250819154542",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1c/YellowSSRTojiS21.png/revision/latest?cb=20250819154540",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4a/YellowSSRTojiUlt1.png/revision/latest?cb=20250819154542"
+   }
+  },
+  {
+   "id": "atsuya-kusakabe-ward-off-with-sharp-blade",
+   "name": "Atsuya Kusakabe",
+   "epithet": "Ward off with Sharp Blade",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Ward_off_with_Sharp_Blade%29_Atsuya_Kusakabe",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/80/YellowSSRKusakabeArt1.gif/revision/latest?cb=20251013071832",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/eb/YellowSSRKusakabeIcon1.jpeg/revision/latest?cb=20250930141226",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/86/YellowSSRKusakabeNormalAttack1.png/revision/latest?cb=20250930141254",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/02/YellowSSRKusakabeS11.png/revision/latest?cb=20250930141334",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1d/YellowSSRKusakabeS21.png/revision/latest?cb=20250930141350",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/YellowSSRKusakabeUlt1.png/revision/latest?cb=20250930141406"
+   }
+  },
+  {
+   "id": "ryomen-sukuna-battle-of-firepower",
+   "name": "Ryomen Sukuna",
+   "epithet": "Battle of firepower",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Battle_of_firepower%29_Ryomen_Sukuna",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/40/YellowSSRSukunaArt1.gif/revision/latest?cb=20251128083124",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/55/YellowSSRSukunaIcon1.jpeg/revision/latest?cb=20251128093235",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/10/YellowSSRSukunaNormalAttack1.png/revision/latest?cb=20251128084608",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3f/YellowSSRSukunaS11.png/revision/latest?cb=20251128084638",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/04/YellowSSRSukunaS21.png/revision/latest?cb=20251128084831",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/48/YellowSSRSukunaUlt1.png/revision/latest?cb=20251128084838"
+   }
+  },
+  {
+   "id": "uraume-step-back-third-rate",
+   "name": "Uraume",
+   "epithet": "Step back, third-rate",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Step_back%2C_third-rate%29_Uraume",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/05/YellowSSRUraumeArt1.gif/revision/latest?cb=20260222040448",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/43/YellowSSRUraumeIcon1.jpeg/revision/latest?cb=20260130164006",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/ae/YellowSSRUraumeNormalAttack1.png/revision/latest?cb=20260209233634",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/59/YellowSSRUraumeS11.png/revision/latest?cb=20260210000302",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/YellowSSRUraumeS21.png/revision/latest?cb=20260210000330",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8c/YellowSSRUraumeUlt1.png/revision/latest?cb=20260210000428"
+   }
+  },
+  {
+   "id": "yuta-okkotsu-executioner",
+   "name": "Yuta Okkotsu",
+   "epithet": "Executioner",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Executioner%29_Yuta_Okkotsu",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c7/YellowSSRYutaArt1.gif/revision/latest?cb=20260327054841",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/52/YellowSSRYutaIcon1.jpeg/revision/latest?cb=20260327095217",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e7/YellowSSRYutaNormalAttack1.png/revision/latest?cb=20260327054751",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c2/YellowSSRYutaS11.png/revision/latest?cb=20260327054802",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/49/YellowSSRYutaS21.png/revision/latest?cb=20260327054814",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d5/YellowSSRYutaUlt1.png/revision/latest?cb=20260327054824"
+   }
+  },
+  {
+   "id": "eiji-urushi-chain-mark-full-throttle",
+   "name": "Eiji Urushi",
+   "epithet": "Chain Mark: Full Throttle",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Chain_Mark%3A_Full_Throttle%29_Eiji_Urushi",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/01/YellowSSREijiArt1.gif/revision/latest?cb=20260416233143",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/67/YellowSSREijiIcon1.jpeg/revision/latest?cb=20260414131228",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3d/YellowSSREijiNormalAttack1.png/revision/latest?cb=20260416233235",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/69/YellowSSREijiS11.png/revision/latest?cb=20260416233302",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/58/YellowSSREijiS21.png/revision/latest?cb=20260416233315",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/69/YellowSSREijiUlt1.png/revision/latest?cb=20260416233411"
+   }
+  },
+  {
+   "id": "satoru-gojo-melting-sweet-summer-treats",
+   "name": "Satoru Gojo",
+   "epithet": "Melting Sweet Summer Treats",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Melting_Sweet_Summer_Treats%29_Satoru_Gojo",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/11/YellowGojoSSRArt2.gif/revision/latest?cb=20260525144223",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/YellowSSRGojoIcon2.jpeg/revision/latest?cb=20260525080805",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f2/YellowGojoSSRNormalAttack2.png/revision/latest?cb=20260525145307",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9b/YellowGojoSSRS12.png/revision/latest?cb=20260525145331",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/cf/YellowGojoSSRS22.png/revision/latest?cb=20260525145344",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8b/YellowGojoSSRUlt2.png/revision/latest?cb=20260525145358"
+   }
+  },
+  {
+   "id": "suguru-geto-teen-what-lies-at-the-end",
+   "name": "Suguru Geto (Teen)",
+   "epithet": "What Lies at the End",
+   "color": "Yellow",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28What_Lies_at_the_End%29_Suguru_Geto_%28Teen%29",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2b/YellowSSRGetoArt1.gif/revision/latest?cb=20260911125158",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/32/YellowSSRGetoIcon1.jpeg/revision/latest?cb=20260911102440",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f0/YellowSSRGetoNormalAttack1.png/revision/latest?cb=20260911124535",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8c/YellowSSRGetoS11.png/revision/latest?cb=20260911124550",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/39/YellowSSRGetoS21.png/revision/latest?cb=20260911124606",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/52/YellowSSRGetoUlt1.png/revision/latest?cb=20260911124618"
+   }
+  },
+  {
+   "id": "jogo-meteor-of-fierceness",
+   "name": "Jogo",
+   "epithet": "Meteor of Fierceness",
+   "color": "Red",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Meteor_of_Fierceness%29_Jogo",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a2/RedSSRJogoArt1.gif/revision/latest?cb=20250921130956",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/bf/RedSSRJogoIcon1.jpeg/revision/latest?cb=20250919081841",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a7/RedSSRJogoNormalAttack1.png/revision/latest?cb=20250919070544",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fa/RedSSRJogoS11.png/revision/latest?cb=20250919070554",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/76/RedSSRJogoS21.png/revision/latest?cb=20250919070603",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/76/RedSSRJogoUlt1.png/revision/latest?cb=20250919070612"
+   }
+  },
+  {
+   "id": "kiyotaka-ijichi-pick-up-after-hard-work",
+   "name": "Kiyotaka Ijichi",
+   "epithet": "Pick Up After Hard Work",
+   "color": "Green",
+   "rarity": "SSR",
+   "page": "https://jjk-phantom-parade.fandom.com/wiki/%28Pick_Up_After_Hard_Work%29_Kiyotaka_Ijichi",
+   "wiki": "https://jjk-phantom-parade.fandom.com",
+   "files": {
+    "art": "art.webp",
+    "icon": "icon.webp",
+    "normal": "normal.webp",
+    "s1": "s1.webp",
+    "s2": "s2.webp",
+    "ult": "ult.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6d/GreenIjichiSSRArt1.gif/revision/latest?cb=20260701005023",
+    "icon": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/44/GreenSSRIjichiIcon1.jpeg/revision/latest?cb=20260630084138",
+    "normal": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e1/GreenSSRIjichiNormalAttack1.png/revision/latest?cb=20260630080029",
+    "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/72/GreenSSRIjichiS11.png/revision/latest?cb=20260630080044",
+    "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/08/GreenSSRIjichiS21.png/revision/latest?cb=20260630080101",
+    "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/43/GreenSSRIjichiUlt1.png/revision/latest?cb=20260630080123"
+   }
+  }
+ ],
+ "memories": [
+  {
+   "id": "are-you-crying",
+   "title": "\"Are you crying?\"",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22Are_you_crying%3F%22",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/31/Are_you_crying.gif/revision/latest?cb=20240913100000"
+   }
+  },
+  {
+   "id": "lets-compare-patience",
+   "title": "\"Lets Compare Patience\"",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22Lets_Compare_Patience%22",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/94/LetsComparePatienceArt.gif/revision/latest?cb=20240913074857"
+   }
+  },
+  {
+   "id": "let-s-win-this",
+   "title": "\"Let’s Win This\"",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22Let%E2%80%99s_Win_This%22",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3d/LetsWinThisArt.gif/revision/latest?cb=20240913074926"
+   }
+  },
+  {
+   "id": "live-a-long-life",
+   "title": "\"Live a long life\"",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22Live_a_long_life%22",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b9/LiveALongLifeArt.gif/revision/latest?cb=20240913075013"
+   }
+  },
+  {
+   "id": "we-re-sisters",
+   "title": "\"We’re Sisters!\"",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22We%E2%80%99re_Sisters%21%22",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1f/SistersArt.gif/revision/latest?cb=20240913075804"
+   }
+  },
+  {
+   "id": "when-you-die-you-ll-die-alone",
+   "title": "\"When You Die, You’ll Die Alone\"",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22When_You_Die%2C_You%E2%80%99ll_Die_Alone%22",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/98/DieAloneArt.gif/revision/latest?cb=20240913075748"
+   }
+  },
+  {
+   "id": "you-are-late",
+   "title": "\"You are late\"",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/%22You_are_late%22",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f8/YouAreLateArt.gif/revision/latest?cb=20240913094513"
+   }
+  },
+  {
+   "id": "a-fight-to-death",
+   "title": "A Fight to Death",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/A_Fight_to_Death",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b8/AFightToDeathArt.gif/revision/latest?cb=20240913092258"
+   }
+  },
+  {
+   "id": "adult-time",
+   "title": "Adult Time",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Adult_Time",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d8/AdultTimeArt.gif/revision/latest?cb=20240913091610"
+   }
+  },
+  {
+   "id": "advancing-in-the-face-of-death",
+   "title": "Advancing in the Face of Death",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Advancing_in_the_Face_of_Death",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6e/AdvancingInTheFaceOfDeathArt.gif/revision/latest?cb=20240913092232"
+   }
+  },
+  {
+   "id": "arrival-of-kyoto-s-students",
+   "title": "Arrival of Kyoto’s students",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Arrival_of_Kyoto%E2%80%99s_students",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/75/KyotoArrivalArt.gif/revision/latest?cb=20240913075647"
+   }
+  },
+  {
+   "id": "art-museum-in-night",
+   "title": "Art Museum in night",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Art_Museum_in_night",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0e/Art_Museum_in_night.gif/revision/latest?cb=20240913100013"
+   }
+  },
+  {
+   "id": "beginner-introduction-to-takada-chan",
+   "title": "Beginner Introduction to Takada-Chan",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Beginner_Introduction_to_Takada-Chan",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8c/TakadaChanArt.gif/revision/latest?cb=20240913074839"
+   }
+  },
+  {
+   "id": "believe-in-each-other",
+   "title": "Believe in Each Other",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Believe_in_Each_Other",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b2/BelieveInEachOtherArt.gif/revision/latest?cb=20240913092504"
+   }
+  },
+  {
+   "id": "cool-eyeglasses",
+   "title": "COOL eyeglasses",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/COOL_eyeglasses",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3d/COOLeyeglassesArt1.gif/revision/latest?cb=20240913100822"
+   }
+  },
+  {
+   "id": "carefree-youth",
+   "title": "Carefree Youth",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Carefree_Youth",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/ad/CarefreeYouthArt.gif/revision/latest?cb=20240913090612"
+   }
+  },
+  {
+   "id": "childhood-promise",
+   "title": "Childhood Promise",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Childhood_Promise",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6c/ChildhoodPromiseArt.gif/revision/latest?cb=20240913091640"
+   }
+  },
+  {
+   "id": "cleaning-duty",
+   "title": "Cleaning Duty",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Cleaning_Duty",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/03/CleaningDutyArt.gif/revision/latest?cb=20240913091652"
+   }
+  },
+  {
+   "id": "contest-for-the-right-hand-man-position",
+   "title": "Contest For The Right-Hand Man Position",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Contest_For_The_Right-Hand_Man_Position",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/40/RightHandManArt.gif/revision/latest?cb=20240913075820"
+   }
+  },
+  {
+   "id": "curse-born-from-the-land",
+   "title": "Curse Born From The Land",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Curse_Born_From_The_Land",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/97/CurseBornFromTheLandArt.gif/revision/latest?cb=20240913100336"
+   }
+  },
+  {
+   "id": "curse-each-other-fight-with-all-your-might",
+   "title": "Curse Each Other, Fight With All Your Might",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Curse_Each_Other%2C_Fight_With_All_Your_Might",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/91/CurseEachotherArt.gif/revision/latest?cb=20240913091705"
+   }
+  },
+  {
+   "id": "daily-routine",
+   "title": "Daily Routine",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Daily_Routine",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5b/EverydayLifeArt.gif/revision/latest?cb=20240913074825"
+   }
+  },
+  {
+   "id": "death-by-wasp",
+   "title": "Death By Wasp",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Death_By_Wasp",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/02/DeathByWaspArt.gif/revision/latest?cb=20240913074557"
+   }
+  },
+  {
+   "id": "die-and-become-a-sage",
+   "title": "Die and become a sage",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Die_and_become_a_sage",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/46/HanamiMemoryArt1.gif/revision/latest?cb=20240913100026"
+   }
+  },
+  {
+   "id": "diverging-paths",
+   "title": "Diverging Paths",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Diverging_Paths",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d0/DivergingPathsArt.gif/revision/latest?cb=20240913091721"
+   }
+  },
+  {
+   "id": "divine-dogs-short-break",
+   "title": "Divine Dogs' Short Break",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Divine_Dogs%27_Short_Break",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/cb/Divine_Dogs%27_Short_Break.gif/revision/latest?cb=20240913103256"
+   }
+  },
+  {
+   "id": "doctor-s-turn",
+   "title": "Doctor's Turn",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Doctor%27s_Turn",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c4/Doctor%27s_Turn.gif/revision/latest?cb=20240913103218"
+   }
+  },
+  {
+   "id": "dream-of-future-days",
+   "title": "Dream of Future Days",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Dream_of_Future_Days",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/52/DreamOfFutureDaysArt.gif/revision/latest?cb=20240913091735"
+   }
+  },
+  {
+   "id": "excellent-shape",
+   "title": "Excellent Shape",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Excellent_Shape",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/89/ExcellentShapeArt.gif/revision/latest?cb=20240913091749"
+   }
+  },
+  {
+   "id": "exciting-stamp-collection",
+   "title": "Exciting stamp-collection",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Exciting_stamp-collection",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b6/ExcitingStampCollectionArt.gif/revision/latest?cb=20240913101226"
+   }
+  },
+  {
+   "id": "fashion-dress-up-plan",
+   "title": "Fashion dress up plan",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Fashion_dress_up_plan",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3e/FashionDressUpArt.gif/revision/latest?cb=20240913101509"
+   }
+  },
+  {
+   "id": "for-myself",
+   "title": "For Myself",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/For_Myself",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0c/ForMyselfArt.gif/revision/latest?cb=20240913075555"
+   }
+  },
+  {
+   "id": "for-now-cola",
+   "title": "For now, Cola",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/For_now%2C_Cola",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/05/For_now%2C_Cola.gif/revision/latest?cb=20240913102910"
+   }
+  },
+  {
+   "id": "fraternal-bond",
+   "title": "Fraternal Bond",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Fraternal_Bond",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5c/FraternalBondArt.gif/revision/latest?cb=20240913092825"
+   }
+  },
+  {
+   "id": "girls-school-sorcerer",
+   "title": "Girls School Sorcerer",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Girls_School_Sorcerer",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c4/GirlsSchoolSorcererArt.gif/revision/latest?cb=20240913100717"
+   }
+  },
+  {
+   "id": "goodbye-take-care",
+   "title": "Goodbye, Take Care",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Goodbye%2C_Take_Care",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/16/ByeTakeCareArt.gif/revision/latest?cb=20240913092643"
+   }
+  },
+  {
+   "id": "grandpa-s-last-words",
+   "title": "Grandpa’s Last Words",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Grandpa%E2%80%99s_Last_Words",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1e/GrandpasWordsArt.gif/revision/latest?cb=20240913080145"
+   }
+  },
+  {
+   "id": "here-we-come-fukuoka",
+   "title": "Here We Come, Fukuoka",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Here_We_Come%2C_Fukuoka",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f2/VisitFukuokaArt.gif/revision/latest?cb=20240913092625"
+   }
+  },
+  {
+   "id": "hidden-gem",
+   "title": "Hidden Gem",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Hidden_Gem",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/29/HiddenGemArt.gif/revision/latest?cb=20240913075917"
+   }
+  },
+  {
+   "id": "home-run",
+   "title": "Home Run !",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Home_Run_%21",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b3/HomeRunArt.gif/revision/latest?cb=20240913080242"
+   }
+  },
+  {
+   "id": "hot-pot-party",
+   "title": "Hot Pot Party",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Hot_Pot_Party",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e6/HotPotPartyArt.gif/revision/latest?cb=20240913090626"
+   }
+  },
+  {
+   "id": "how-to-spend-time-after-school",
+   "title": "How To Spend Time After School",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/How_To_Spend_Time_After_School",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0a/AfterSchoolArt.gif/revision/latest?cb=20240913075854"
+   }
+  },
+  {
+   "id": "i-bought-local-souvenirs",
+   "title": "I Bought Local Souvenirs",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/I_Bought_Local_Souvenirs",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/67/IBoughtLocalSouvenirsArt.gif/revision/latest?cb=20240913091825"
+   }
+  },
+  {
+   "id": "i-see-then-die",
+   "title": "I See, Then Die",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/I_See%2C_Then_Die",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f6/ISeeThenDieArt1.gif/revision/latest?cb=20240913100516"
+   }
+  },
+  {
+   "id": "i-will-follow-you-nanami-san",
+   "title": "I will follow you, Nanami san",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/I_will_follow_you%2C_Nanami_san",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/56/InonanamiArt1.gif/revision/latest?cb=20240913100449"
+   }
+  },
+  {
+   "id": "ignoring-orders",
+   "title": "Ignoring Orders",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Ignoring_Orders",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/87/Ignoring_Orders.gif/revision/latest?cb=20240913100042"
+   }
+  },
+  {
+   "id": "instincts-of-a-curse",
+   "title": "Instincts of a Curse",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Instincts_of_a_Curse",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/67/InstinctsofaCurseArt1.gif/revision/latest?cb=20240913100503"
+   }
+  },
+  {
+   "id": "kept-waiting",
+   "title": "Kept waiting",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Kept_waiting",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5e/KeptwaitingArt1.gif/revision/latest?cb=20240913100057"
+   }
+  },
+  {
+   "id": "leisurely-watching-videos",
+   "title": "Leisurely Watching Videos",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Leisurely_Watching_Videos",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/59/LeisurelyWatchingVideosArt.gif/revision/latest?cb=20240913075958"
+   }
+  },
+  {
+   "id": "liar-i-hate-you-so-much",
+   "title": "Liar...I hate you so much",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Liar...I_hate_you_so_much",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/88/MaiMakiArt3.gif/revision/latest?cb=20240913101520"
+   }
+  },
+  {
+   "id": "make-some-cutie-stuff",
+   "title": "Make some cutie stuff!",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Make_some_cutie_stuff%21",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f6/CutieStuffArt.gif/revision/latest?cb=20240913101215"
+   }
+  },
+  {
+   "id": "malevolent-shrine",
+   "title": "Malevolent Shrine",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Malevolent_Shrine",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/MalevolentShrineArt.gif/revision/latest?cb=20240913075628"
+   }
+  },
+  {
+   "id": "meet-again-after-the-raining",
+   "title": "Meet again, after the raining",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Meet_again%2C_after_the_raining",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b6/Meet_again%2C_after_the_raining.gif/revision/latest?cb=20240913102731"
+   }
+  },
+  {
+   "id": "meeting-in-the-evening",
+   "title": "Meeting In The Evening",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Meeting_In_The_Evening",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b2/MeetingInTheEveningArt.gif/revision/latest?cb=20240913075002"
+   }
+  },
+  {
+   "id": "memories-in-a-corner",
+   "title": "Memories in a Corner",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Memories_in_a_Corner",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/35/MemoriesInACornerArt.gif/revision/latest?cb=20240913090637"
+   }
+  },
+  {
+   "id": "mensore",
+   "title": "Mensore!",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Mensore%21",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/77/Mensore.gif/revision/latest?cb=20240913100110"
+   }
+  },
+  {
+   "id": "mission-begins",
+   "title": "Mission Begins",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Mission_Begins",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/48/MissionBeginsArt.gif/revision/latest?cb=20240913090701"
+   }
+  },
+  {
+   "id": "my-best-batter",
+   "title": "My best batter",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/My_best_batter",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c2/MybestbatterArt1.gif/revision/latest?cb=20240913101540"
+   }
+  },
+  {
+   "id": "night-out-between-sorcerers",
+   "title": "Night Out Between Sorcerers",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Night_Out_Between_Sorcerers",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8f/NightOutArt.gif/revision/latest?cb=20240913080035"
+   }
+  },
+  {
+   "id": "night-on-the-sacred-mountain",
+   "title": "Night on the Sacred Mountain",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Night_on_the_Sacred_Mountain",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f0/NightontheSacredMountainArt1.gif/revision/latest?cb=20240913103130"
+   }
+  },
+  {
+   "id": "nimble-cursed-speech-user",
+   "title": "Nimble Cursed Speech User",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Nimble_Cursed_Speech_User",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/79/NimbleCursedSpeechUserArt.gif/revision/latest?cb=20240913100527"
+   }
+  },
+  {
+   "id": "non-standard",
+   "title": "Non-Standard",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Non-Standard",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3e/NonStandardArt.gif/revision/latest?cb=20240913091307"
+   }
+  },
+  {
+   "id": "not-gonna-admit-that-we-got-into-trouble",
+   "title": "Not gonna admit that we got into trouble",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Not_gonna_admit_that_we_got_into_trouble",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f9/NotGonnaAdmitThatWeGotIntoTroubleArt.gif/revision/latest?cb=20240913101552"
+   }
+  },
+  {
+   "id": "our-priorities",
+   "title": "Our Priorities",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Our_Priorities",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/24/Our_Priorities.gif/revision/latest?cb=20240913100126"
+   }
+  },
+  {
+   "id": "panda-the-fashionista",
+   "title": "Panda, the fashionista",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Panda%2C_the_fashionista",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6c/Panda%2C_the_fashionista.gif/revision/latest?cb=20240913102818"
+   }
+  },
+  {
+   "id": "play-bubbles-with-the-curses",
+   "title": "Play bubbles with the curses",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Play_bubbles_with_the_curses",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/ba/PlayBubblesWithTheCursesArt.gif/revision/latest?cb=20240913100727"
+   }
+  },
+  {
+   "id": "popular-coffee-shop",
+   "title": "Popular Coffee Shop",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Popular_Coffee_Shop",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/79/CoffeShopArt.gif/revision/latest?cb=20240913080052"
+   }
+  },
+  {
+   "id": "pride",
+   "title": "Pride",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Pride",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/19/PrideArt.gif/revision/latest?cb=20240913091455"
+   }
+  },
+  {
+   "id": "satoru-gojo-s-solo-camp",
+   "title": "Satoru Gojo's Solo Camp",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Satoru_Gojo%27s_Solo_Camp",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/22/SatoruGojosSoloCampArt.gif/revision/latest?cb=20240913090719"
+   }
+  },
+  {
+   "id": "searching-in-the-raining",
+   "title": "Searching in the raining",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Searching_in_the_raining",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/80/Searching_in_the_raining.gif/revision/latest?cb=20240913094703"
+   }
+  },
+  {
+   "id": "slight-distance",
+   "title": "Slight Distance",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Slight_Distance",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9d/SlightDistanceArt.gif/revision/latest?cb=20240913091842"
+   }
+  },
+  {
+   "id": "small-pleasures",
+   "title": "Small Pleasures",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Small_Pleasures",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/78/SmallPleasuresArt.gif/revision/latest?cb=20240913075834"
+   }
+  },
+  {
+   "id": "someday-i-ll-be-with-everyone",
+   "title": "Someday, I’ll Be With Everyone",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Someday%2C_I%E2%80%99ll_Be_With_Everyone",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/91/SomedayWithEveryoneArt.gif/revision/latest?cb=20240913074742"
+   }
+  },
+  {
+   "id": "someone-called-nobara-kugisaki",
+   "title": "Someone Called Nobara Kugisaki",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Someone_Called_Nobara_Kugisaki",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c5/CalledNobaraArt.gif/revision/latest?cb=20240913075727"
+   }
+  },
+  {
+   "id": "source-of-stress",
+   "title": "Source of Stress",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Source_of_Stress",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f5/SourceofStressArt1.gif/revision/latest?cb=20240913100540"
+   }
+  },
+  {
+   "id": "strawberry-parfait-of-youth",
+   "title": "Strawberry Parfait of Youth",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Strawberry_Parfait_of_Youth",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4e/Strawberry_Parfait_of_Youth.gif/revision/latest?cb=20240913094427"
+   }
+  },
+  {
+   "id": "street-stall-shopping-and-eating",
+   "title": "Street stall shopping and eating",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Street_stall_shopping_and_eating",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/eb/StreetStallShoppingAndEatingArt.gif/revision/latest?cb=20240913100739"
+   }
+  },
+  {
+   "id": "strong-lineup",
+   "title": "Strong Lineup",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Strong_Lineup",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/06/StrongLineupArt.gif/revision/latest?cb=20240913090745"
+   }
+  },
+  {
+   "id": "sukuna-s-vessel",
+   "title": "Sukuna’s Vessel",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Sukuna%E2%80%99s_Vessel",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c1/SukunaVesselArt.gif/revision/latest?cb=20240913080214"
+   }
+  },
+  {
+   "id": "the-grand-break-through",
+   "title": "The Grand Break Through",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_Grand_Break_Through",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0a/TheGrandBreakThroughArt.gif/revision/latest?cb=20240913091559"
+   }
+  },
+  {
+   "id": "the-last-of-my-cursed-energy",
+   "title": "The Last of My Cursed Energy",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_Last_of_My_Cursed_Energy",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bc/LastMomentsArt.gif/revision/latest?cb=20240913074330"
+   }
+  },
+  {
+   "id": "the-origin-of-conspiracy",
+   "title": "The Origin of Conspiracy",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_Origin_of_Conspiracy",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/87/TheOriginOfConspiracyArt.gif/revision/latest?cb=20240913091933"
+   }
+  },
+  {
+   "id": "the-strongest-duo",
+   "title": "The Strongest Duo",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_Strongest_Duo",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/07/TheStrongestDuoArt.gif/revision/latest?cb=20240913094448"
+   }
+  },
+  {
+   "id": "the-strongest-fooling-around",
+   "title": "The Strongest Fooling Around",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_Strongest_Fooling_Around",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7d/TheStrongestFoolingAroundArt.gif/revision/latest?cb=20240913092029"
+   }
+  },
+  {
+   "id": "the-strongest-quarrel",
+   "title": "The Strongest Quarrel",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_Strongest_Quarrel",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/da/The_Strongest_Quarrel.gif/revision/latest?cb=20240913101623"
+   }
+  },
+  {
+   "id": "the-youth-that-can-t-go-back",
+   "title": "The Youth that can't go back",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_Youth_that_can%27t_go_back",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f4/The_Youth_that_can%27t_go_back.gif/revision/latest?cb=20240913102939"
+   }
+  },
+  {
+   "id": "the-archery-teaching-from-noritoshi-kamo",
+   "title": "The archery teaching from Noritoshi Kamo",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_archery_teaching_from_Noritoshi_Kamo",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5a/TheArcheryTeachingFromNoritoshiKamoArt.gif/revision/latest?cb=20240913094751"
+   }
+  },
+  {
+   "id": "the-bond-of-sibling",
+   "title": "The bond of sibling",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_bond_of_sibling",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d4/The_bond_of_siblingArt1.gif/revision/latest?cb=20240913100202"
+   }
+  },
+  {
+   "id": "the-break-time-for-adult",
+   "title": "The break time for Adult",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_break_time_for_Adult",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/ab/TheBreakTimeForAdultArt.gif/revision/latest?cb=20240913101633"
+   }
+  },
+  {
+   "id": "the-encounter-in-the-mall-of-death",
+   "title": "The encounter in the mall of death",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_encounter_in_the_mall_of_death",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/25/TheEncounterInTheMallOfDeathArt.gif/revision/latest?cb=20240913101644"
+   }
+  },
+  {
+   "id": "the-pride-of-doctor",
+   "title": "The pride of doctor",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_pride_of_doctor",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3f/The_pride_of_doctor.gif/revision/latest?cb=20240913101613"
+   }
+  },
+  {
+   "id": "the-sacrifice-of-snake-deity",
+   "title": "The sacrifice of snake deity",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_sacrifice_of_snake_deity",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/91/TheSacrificeOfSnakeDeityArt.gif/revision/latest?cb=20240913101655"
+   }
+  },
+  {
+   "id": "the-spectator-in-midsummer",
+   "title": "The spectator in midsummer",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/The_spectator_in_midsummer",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d8/TheSpectatorinMidSummerArt1.gif/revision/latest?cb=20240913100752"
+   }
+  },
+  {
+   "id": "to-the-horizon",
+   "title": "To The Horizon",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/To_The_Horizon",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1c/ToTheHorizonArt.gif/revision/latest?cb=20240913074914"
+   }
+  },
+  {
+   "id": "tokyo-fukuoka-exchange",
+   "title": "Tokyo Fukuoka Exchange",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Tokyo_Fukuoka_Exchange",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a9/Tokyo_Fukuoka_Exchange.gif/revision/latest?cb=20240913100303"
+   }
+  },
+  {
+   "id": "two-hearts-beat-as-one",
+   "title": "Two Hearts Beat As One",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Two_Hearts_Beat_As_One",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/42/AunsBreathArt.gif/revision/latest?cb=20240913080404"
+   }
+  },
+  {
+   "id": "unequally",
+   "title": "Unequally",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Unequally",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4e/UnequallyArt.gif/revision/latest?cb=20240913080229"
+   }
+  },
+  {
+   "id": "unity-makes-strength",
+   "title": "Unity Makes Strength",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Unity_Makes_Strength",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/UnityMakesStrengthArt.gif/revision/latest?cb=20240913092612"
+   }
+  },
+  {
+   "id": "viciousness",
+   "title": "Viciousness",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Viciousness",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f9/ViciousnessArt.gif/revision/latest?cb=20240913074948"
+   }
+  },
+  {
+   "id": "we-are-same",
+   "title": "We are same?",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/We_are_same%3F",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/13/WeAreSameArt.gif/revision/latest?cb=20240913101704"
+   }
+  },
+  {
+   "id": "what-if-youth",
+   "title": "What-if Youth",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/What-if_Youth",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/48/WhatIfYouthArt.gif/revision/latest?cb=20240913090758"
+   }
+  },
+  {
+   "id": "winter-new-step",
+   "title": "Winter, New Step",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Winter%2C_New_Step",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/55/WinterNewStepArt.gif/revision/latest?cb=20240913100812"
+   }
+  },
+  {
+   "id": "your-brother-and-sister",
+   "title": "Your Brother and Sister",
+   "rarity": "SR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Your_Brother_and_Sister",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/00/YourBrotherAndSisterArt.gif/revision/latest?cb=20240913075609"
+   }
+  },
+  {
+   "id": "your-path-to-move-forward",
+   "title": "Your path to move forward",
+   "rarity": "SSR",
+   "page": "https://jujutsu-kaisen-phantom-parade.fandom.com/wiki/Your_path_to_move_forward",
+   "files": {
+    "art": "art.webp"
+   },
+   "sources": {
+    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b7/RindoMemoryArt1.gif/revision/latest?cb=20240913100140"
+   }
+  }
+ ],
+ "ui": [
+  {
+   "file": "BlueType.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d4/BlueType.png/revision/latest?cb=20240908023404"
+  },
+  {
+   "file": "GreenType.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d7/GreenType.png/revision/latest?cb=20240907145304"
+  },
+  {
+   "file": "RedType.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/79/RedType.png/revision/latest?cb=20240830032942"
+  },
+  {
+   "file": "YellowType.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ea/YellowType.png/revision/latest?cb=20240908024044"
+  },
+  {
+   "file": "SSR.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/06/SSR.png/revision/latest?cb=20240830032916"
+  },
+  {
+   "file": "SR.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3b/SR.png/revision/latest?cb=20240908022419"
+  },
+  {
+   "file": "Icon_rarity_ssr.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7d/Icon_rarity_ssr.png/revision/latest?cb=20240824145554"
+  },
+  {
+   "file": "Energy.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a9/Energy.png/revision/latest?cb=20240830040139"
+  },
+  {
+   "file": "MemoryBreakUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a8/MemoryBreakUp.png/revision/latest?cb=20240913062830"
+  },
+  {
+   "file": "MemoryCritUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6d/MemoryCritUp.png/revision/latest?cb=20240912090731"
+  },
+  {
+   "file": "MemoryDodge.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/89/MemoryDodge.png/revision/latest?cb=20240912092938"
+  },
+  {
+   "file": "MemoryEnergyConsumptionDown.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b3/MemoryEnergyConsumptionDown.png/revision/latest?cb=20240912092222"
+  },
+  {
+   "file": "MemoryEnergyRecharge.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a5/MemoryEnergyRecharge.png/revision/latest?cb=20240912085505"
+  },
+  {
+   "file": "MemoryEnergyRechargeLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8b/MemoryEnergyRechargeLvl2.png/revision/latest?cb=20240912092927"
+  },
+  {
+   "file": "MemoryFlameResist.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1f/MemoryFlameResist.png/revision/latest?cb=20240912094902"
+  },
+  {
+   "file": "MemoryGreendamageskill.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fd/MemoryGreendamageskill.png/revision/latest?cb=20240912094327"
+  },
+  {
+   "file": "MemoryGreendamageskillLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2a/MemoryGreendamageskillLvl2.png/revision/latest?cb=20240912094338"
+  },
+  {
+   "file": "MemoryHeal.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/12/MemoryHeal.png/revision/latest?cb=20240913062821"
+  },
+  {
+   "file": "MemoryJujutsuDown.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/51/MemoryJujutsuDown.png/revision/latest?cb=20240913062802"
+  },
+  {
+   "file": "MemoryMovieBreakUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a6/MemoryMovieBreakUp.png/revision/latest?cb=20240912092911"
+  },
+  {
+   "file": "MemoryMovieBreakUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/ae/MemoryMovieBreakUpLvl2.png/revision/latest?cb=20240912093455"
+  },
+  {
+   "file": "MemoryMovieCritUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/15/MemoryMovieCritUp.png/revision/latest?cb=20240912092204"
+  },
+  {
+   "file": "MemoryMovieCritUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/21/MemoryMovieCritUpLvl2.png/revision/latest?cb=20240912092152"
+  },
+  {
+   "file": "MemoryMovieHeal.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d2/MemoryMovieHeal.png/revision/latest?cb=20240912091502"
+  },
+  {
+   "file": "MemoryMovieHealLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9d/MemoryMovieHealLvl2.png/revision/latest?cb=20240912091514"
+  },
+  {
+   "file": "MemoryMovieJujutsuResistanceUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3f/MemoryMovieJujutsuResistanceUp.png/revision/latest?cb=20240912093929"
+  },
+  {
+   "file": "MemoryMovieJujutsuResistanceUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c9/MemoryMovieJujutsuResistanceUpLvl2.png/revision/latest?cb=20240912093941"
+  },
+  {
+   "file": "MemoryMovieJujutsuUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0e/MemoryMovieJujutsuUp.png/revision/latest?cb=20240912085145"
+  },
+  {
+   "file": "MemoryMovieJujutsuUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ef/MemoryMovieJujutsuUpLvl2.png/revision/latest?cb=20240912085157"
+  },
+  {
+   "file": "MemoryMoviePhysicalUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/49/MemoryMoviePhysicalUp.png/revision/latest?cb=20240912085444"
+  },
+  {
+   "file": "MemoryMoviePhysicalUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/MemoryMoviePhysicalUpLvl2.png/revision/latest?cb=20240912085427"
+  },
+  {
+   "file": "MemoryMovieShieldUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a4/MemoryMovieShieldUp.png/revision/latest?cb=20240912091448"
+  },
+  {
+   "file": "MemoryMovieShieldUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f4/MemoryMovieShieldUpLvl2.png/revision/latest?cb=20240912091155"
+  },
+  {
+   "file": "MemoryMovieSwordUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/23/MemoryMovieSwordUp.png/revision/latest?cb=20240912090708"
+  },
+  {
+   "file": "MemoryMovieSwordUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6e/MemoryMovieSwordUpLvl2.png/revision/latest?cb=20240912090721"
+  },
+  {
+   "file": "MemoryMovieTaunt.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/42/MemoryMovieTaunt.png/revision/latest?cb=20240912091743"
+  },
+  {
+   "file": "MemoryMovieTauntLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/23/MemoryMovieTauntLvl2.png/revision/latest?cb=20240912091758"
+  },
+  {
+   "file": "MemoryMovieUltgaugeUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b3/MemoryMovieUltgaugeUp.png/revision/latest?cb=20240912092901"
+  },
+  {
+   "file": "MemoryPhysicalResistanceDown.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/50/MemoryPhysicalResistanceDown.png/revision/latest?cb=20240912092846"
+  },
+  {
+   "file": "MemoryPhysicalUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/52/MemoryPhysicalUp.png/revision/latest?cb=20240912085656"
+  },
+  {
+   "file": "MemoryPhysicalUpLvl2.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b5/MemoryPhysicalUpLvl2.png/revision/latest?cb=20240912092834"
+  },
+  {
+   "file": "MemoryRevive.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/MemoryRevive.png/revision/latest?cb=20240912091429"
+  },
+  {
+   "file": "MemoryShieldUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/71/MemoryShieldUp.png/revision/latest?cb=20240912091139"
+  },
+  {
+   "file": "MemorySpecialGauge.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/68/MemorySpecialGauge.png/revision/latest?cb=20240912085212"
+  },
+  {
+   "file": "MemorySwordDown.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/ba/MemorySwordDown.png/revision/latest?cb=20240912094912"
+  },
+  {
+   "file": "MemorySwordUp.webp",
+   "source": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/aa/MemorySwordUp.png/revision/latest?cb=20240912085410"
+  }
+ ]
+}

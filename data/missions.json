@@ -1,0 +1,1517 @@
+{
+ "chapters": [
+  {
+   "id": "ch1",
+   "scale": 1.3,
+   "name": "Entrance Exam",
+   "kanji": "入学試験",
+   "arc": "Arc I",
+   "element": "Heart",
+   "desc": "Principal Yaga tests the new first-year, and the second-years want a spar.",
+   "stages": [
+    {
+     "id": "1-1",
+     "name": "Training Grounds",
+     "desc": "Panda and Maki want to see what the new kid can do.",
+     "stamina": 3,
+     "boss": false,
+     "turnGoal": 8,
+     "recommendedPower": 1500,
+     "waves": [
+      [
+       {
+        "enemy": "foe_panda_need_help",
+        "level": 1
+       },
+       {
+        "enemy": "foe_maki_longsword_battle",
+        "level": 1
+       }
+      ],
+      [
+       {
+        "enemy": "foe_panda_need_help",
+        "level": 1
+       },
+       {
+        "enemy": "foe_toge_403",
+        "level": 1
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 300,
+      "rankExp": 20,
+      "unitExp": 120,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 60,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "1-2",
+     "name": "Rooftop Spar",
+     "desc": "Toge joins in. Keep your guard up.",
+     "stamina": 3,
+     "boss": false,
+     "turnGoal": 9,
+     "recommendedPower": 1800,
+     "waves": [
+      [
+       {
+        "enemy": "foe_maki_longsword_battle",
+        "level": 2
+       },
+       {
+        "enemy": "foe_toge_403",
+        "level": 1
+       },
+       {
+        "enemy": "foe_panda_need_help",
+        "level": 2
+       }
+      ],
+      [
+       {
+        "enemy": "foe_saki_resolve_heart",
+        "level": 2
+       },
+       {
+        "enemy": "foe_toge_403",
+        "level": 2
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 360,
+      "rankExp": 24,
+      "unitExp": 160,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 60,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "1-3",
+     "name": "Night Practice",
+     "desc": "Saki Rindo shows up with something to prove.",
+     "stamina": 4,
+     "boss": false,
+     "turnGoal": 12,
+     "recommendedPower": 2200,
+     "waves": [
+      [
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 1
+       },
+       {
+        "enemy": "foe_maki_longsword_battle",
+        "level": 3
+       }
+      ],
+      [
+       {
+        "enemy": "foe_saki_resolve_heart",
+        "level": 3
+       },
+       {
+        "enemy": "foe_saki_resolve_heart",
+        "level": 3
+       }
+      ],
+      [
+       {
+        "enemy": "foe_toge_403",
+        "level": 3
+       },
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 2
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 450,
+      "rankExp": 30,
+      "unitExp": 220,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 60,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "1-4",
+     "name": "The Principal's Office",
+     "desc": "Cursed corpses, and the man who sews them.",
+     "stamina": 4,
+     "boss": false,
+     "turnGoal": 12,
+     "recommendedPower": 2600,
+     "waves": [
+      [
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 3
+       },
+       {
+        "enemy": "foe_saki_resolve_heart",
+        "level": 4
+       }
+      ],
+      [
+       {
+        "enemy": "foe_toge_403",
+        "level": 4
+       },
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 3
+       },
+       {
+        "enemy": "foe_panda_need_help",
+        "level": 5
+       }
+      ],
+      [
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 4
+       },
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 4
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 520,
+      "rankExp": 34,
+      "unitExp": 280,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "1-5",
+     "name": "Masamichi Yaga",
+     "desc": "Why do you want to be a sorcerer? Answer with your fists.",
+     "stamina": 5,
+     "boss": true,
+     "turnGoal": 14,
+     "recommendedPower": 3200,
+     "waves": [
+      [
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 4
+       },
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 4
+       }
+      ],
+      [
+       {
+        "enemy": "boss_masamichi_cursed_corpse",
+        "level": 2
+       },
+       {
+        "enemy": "foe_masamichi_lesson_awareness",
+        "level": 4
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 800,
+      "rankExp": 50,
+      "unitExp": 420,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 900,
+      "items": {
+       "light_m": 2
+      }
+     }
+    }
+   ],
+   "bg": "assets/pp/memories/sukuna-s-vessel/art.webp"
+  },
+  {
+   "id": "ch2",
+   "scale": 2.5,
+   "name": "Origin of Obedience",
+   "kanji": "幼魚と逆罰",
+   "arc": "Arc II",
+   "element": "Skill",
+   "desc": "Mysterious deaths in Kawasaki. A patchwork curse is reshaping human souls.",
+   "stages": [
+    {
+     "id": "2-1",
+     "name": "Movie Theatre",
+     "desc": "Something happened at the cinema. Junpei was there.",
+     "stamina": 5,
+     "boss": false,
+     "turnGoal": 12,
+     "recommendedPower": 4500,
+     "waves": [
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 4
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 4
+       }
+      ],
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 5
+       },
+       {
+        "enemy": "foe_saki_bring_on",
+        "level": 6
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 5
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 900,
+      "rankExp": 55,
+      "unitExp": 520,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "2-2",
+     "name": "Satomi Sewers",
+     "desc": "Following the trail underground.",
+     "stamina": 5,
+     "boss": false,
+     "turnGoal": 12,
+     "recommendedPower": 5200,
+     "waves": [
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 6
+       },
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 5
+       }
+      ],
+      [
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 6
+       },
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 6
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 8
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 980,
+      "rankExp": 60,
+      "unitExp": 600,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "2-3",
+     "name": "Junpei’s School",
+     "desc": "Junpei has chosen a side.",
+     "stamina": 6,
+     "boss": false,
+     "turnGoal": 14,
+     "recommendedPower": 6000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_saki_bring_on",
+        "level": 9
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 7
+       },
+       {
+        "enemy": "foe_saki_bring_on",
+        "level": 9
+       }
+      ],
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 8
+       },
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 7
+       }
+      ],
+      [
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 8
+       },
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 8
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 8
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 1100,
+      "rankExp": 66,
+      "unitExp": 700,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "2-4",
+     "name": "Lost Resolve",
+     "desc": "Every sorcerer you meet doubts you now.",
+     "stamina": 6,
+     "boss": false,
+     "turnGoal": 14,
+     "recommendedPower": 7000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 9
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 9
+       },
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 9
+       }
+      ],
+      [
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 9
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 10
+       }
+      ],
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 10
+       },
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 10
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 10
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 1200,
+      "rankExp": 72,
+      "unitExp": 820,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "2-5",
+     "name": "Mahito",
+     "desc": "The curse that toys with souls.",
+     "stamina": 8,
+     "boss": true,
+     "turnGoal": 18,
+     "recommendedPower": 9000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 10
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 10
+       }
+      ],
+      [
+       {
+        "enemy": "boss_mahito_609",
+        "level": 1
+       },
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 10
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 1800,
+      "rankExp": 100,
+      "unitExp": 1200,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 70,
+        "qty": 1
+       },
+       {
+        "item": "light_l",
+        "chance": 25,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 1200,
+      "items": {
+       "light_l": 1
+      }
+     }
+    }
+   ],
+   "bg": "assets/pp/memories/instincts-of-a-curse/art.webp"
+  },
+  {
+   "id": "ch3",
+   "scale": 3.3,
+   "name": "Kyoto Goodwill Event",
+   "kanji": "京都姉妹校交流会",
+   "arc": "Arc III",
+   "element": "Bravery",
+   "desc": "Tokyo and Kyoto clash — until special grade curses crash the exchange.",
+   "stages": [
+    {
+     "id": "3-1",
+     "name": "Team Battle Begins",
+     "desc": "Kyoto’s students split up to hunt you down.",
+     "stamina": 6,
+     "boss": false,
+     "turnGoal": 12,
+     "recommendedPower": 9500,
+     "waves": [
+      [
+       {
+        "enemy": "foe_miwa_302",
+        "level": 6
+       },
+       {
+        "enemy": "foe_mai_303",
+        "level": 6
+       }
+      ],
+      [
+       {
+        "enemy": "foe_mechamaru_sword_option",
+        "level": 12
+       },
+       {
+        "enemy": "foe_kamo_405",
+        "level": 7
+       },
+       {
+        "enemy": "foe_yoshinobu_cursed_energy",
+        "level": 12
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 1300,
+      "rankExp": 76,
+      "unitExp": 900,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "3-2",
+     "name": "Forest Ambush",
+     "desc": "Miwa, Mai and Momo set a trap.",
+     "stamina": 6,
+     "boss": false,
+     "turnGoal": 12,
+     "recommendedPower": 10500,
+     "waves": [
+      [
+       {
+        "enemy": "foe_momo_304",
+        "level": 8
+       },
+       {
+        "enemy": "foe_mechamaru_305",
+        "level": 8
+       },
+       {
+        "enemy": "foe_kasumi_zanshin",
+        "level": 8
+       }
+      ],
+      [
+       {
+        "enemy": "foe_aoi_rowdy_first",
+        "level": 12
+       },
+       {
+        "enemy": "foe_noritoshi_blood_gosanke",
+        "level": 9
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 1400,
+      "rankExp": 80,
+      "unitExp": 980,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 80,
+        "qty": 2
+       },
+       {
+        "item": "light_m",
+        "chance": 35,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "3-3",
+     "name": "What Type of Woman?",
+     "desc": "Aoi Todo asks the only question that matters.",
+     "stamina": 7,
+     "boss": true,
+     "turnGoal": 16,
+     "recommendedPower": 12000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_momo_underestimate",
+        "level": 9
+       },
+       {
+        "enemy": "foe_miwa_302",
+        "level": 9
+       }
+      ],
+      [
+       {
+        "enemy": "boss_todo_504",
+        "level": 1
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 1900,
+      "rankExp": 110,
+      "unitExp": 1300,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 70,
+        "qty": 1
+       },
+       {
+        "item": "light_l",
+        "chance": 25,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 900,
+      "items": {
+       "ticket": 1
+      }
+     }
+    },
+    {
+     "id": "3-4",
+     "name": "The Veil Falls",
+     "desc": "The exchange is interrupted; even Kyoto’s principal moves.",
+     "stamina": 7,
+     "boss": false,
+     "turnGoal": 14,
+     "recommendedPower": 13000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_yoshinobu_cursed_energy",
+        "level": 6
+       },
+       {
+        "enemy": "foe_aoi_fight_together",
+        "level": 6
+       },
+       {
+        "enemy": "foe_mechamaru_sword_option",
+        "level": 6
+       }
+      ],
+      [
+       {
+        "enemy": "foe_yoshinobu_cursed_energy",
+        "level": 8
+       },
+       {
+        "enemy": "foe_aoi_rowdy_first",
+        "level": 14
+       }
+      ],
+      [
+       {
+        "enemy": "foe_aoi_fight_together",
+        "level": 9
+       },
+       {
+        "enemy": "foe_mechamaru_sword_option",
+        "level": 9
+       },
+       {
+        "enemy": "foe_yoshinobu_cursed_energy",
+        "level": 9
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 1600,
+      "rankExp": 90,
+      "unitExp": 1100,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 70,
+        "qty": 1
+       },
+       {
+        "item": "light_l",
+        "chance": 25,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "3-5",
+     "name": "Hanami",
+     "desc": "A cursed spirit of the forest, here to stop it all.",
+     "stamina": 9,
+     "boss": true,
+     "turnGoal": 18,
+     "recommendedPower": 16000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_aoi_fight_together",
+        "level": 10
+       },
+       {
+        "enemy": "foe_mechamaru_sword_option",
+        "level": 10
+       }
+      ],
+      [
+       {
+        "enemy": "boss_hanami_508",
+        "level": 1
+       },
+       {
+        "enemy": "foe_yoshinobu_cursed_energy",
+        "level": 10
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 2400,
+      "rankExp": 130,
+      "unitExp": 1700,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 70,
+        "qty": 1
+       },
+       {
+        "item": "light_l",
+        "chance": 25,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 1500,
+      "items": {
+       "light_l": 2
+      }
+     }
+    }
+   ],
+   "bg": "assets/pp/memories/arrival-of-kyoto-s-students/art.webp"
+  },
+  {
+   "id": "ch4",
+   "scale": 1.9,
+   "name": "Shibuya Incident",
+   "kanji": "渋谷事変",
+   "arc": "Arc IV",
+   "element": "Body",
+   "desc": "October 31st. A veil descends over Shibuya and the worst night in jujutsu history begins.",
+   "stages": [
+    {
+     "id": "4-1",
+     "name": "Veil Descends",
+     "desc": "Shibuya on Halloween night. Someone with Geto’s face is waiting.",
+     "stamina": 8,
+     "boss": false,
+     "turnGoal": 14,
+     "recommendedPower": 18000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_geto_604",
+        "level": 5
+       },
+       {
+        "enemy": "foe_suguru_protecting_non",
+        "level": 5
+       },
+       {
+        "enemy": "foe_geto_604",
+        "level": 5
+       }
+      ],
+      [
+       {
+        "enemy": "foe_mahito_609",
+        "level": 3
+       },
+       {
+        "enemy": "foe_suguru_protecting_non",
+        "level": 6
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 2000,
+      "rankExp": 110,
+      "unitExp": 1500,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 70,
+        "qty": 1
+       },
+       {
+        "item": "light_l",
+        "chance": 25,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "4-2",
+     "name": "Hanami’s Last Stand",
+     "desc": "Mahito and Hanami hold the station.",
+     "stamina": 8,
+     "boss": false,
+     "turnGoal": 14,
+     "recommendedPower": 21000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_geto_604",
+        "level": 7
+       },
+       {
+        "enemy": "foe_mahito_609",
+        "level": 5
+       }
+      ],
+      [
+       {
+        "enemy": "foe_hanami_508",
+        "level": 4
+       },
+       {
+        "enemy": "foe_suguru_protecting_non",
+        "level": 8
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 2200,
+      "rankExp": 120,
+      "unitExp": 1700,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 70,
+        "qty": 1
+       },
+       {
+        "item": "light_l",
+        "chance": 25,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     }
+    },
+    {
+     "id": "4-3",
+     "name": "The Sorcerer Killer",
+     "desc": "A man who should be dead walks the platform.",
+     "stamina": 9,
+     "boss": true,
+     "turnGoal": 16,
+     "recommendedPower": 26000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_geto_604",
+        "level": 9
+       },
+       {
+        "enemy": "foe_suguru_protecting_non",
+        "level": 9
+       },
+       {
+        "enemy": "foe_mahito_609",
+        "level": 6
+       }
+      ],
+      [
+       {
+        "enemy": "boss_toji_602",
+        "level": 1
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 2800,
+      "rankExp": 150,
+      "unitExp": 2200,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 90,
+        "qty": 2
+       },
+       {
+        "item": "light_l",
+        "chance": 50,
+        "qty": 1
+       },
+       {
+        "item": "ticket",
+        "chance": 15,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 1500,
+      "items": {
+       "ticket": 2
+      }
+     }
+    },
+    {
+     "id": "4-4",
+     "name": "Jogo",
+     "desc": "The volcano curse, at full power.",
+     "stamina": 10,
+     "boss": true,
+     "turnGoal": 18,
+     "recommendedPower": 32000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_mahito_609",
+        "level": 8
+       },
+       {
+        "enemy": "foe_mahito_609",
+        "level": 8
+       }
+      ],
+      [
+       {
+        "enemy": "boss_jogo_610",
+        "level": 1
+       },
+       {
+        "enemy": "foe_geto_604",
+        "level": 12
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 3200,
+      "rankExp": 170,
+      "unitExp": 2600,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 90,
+        "qty": 2
+       },
+       {
+        "item": "light_l",
+        "chance": 50,
+        "qty": 1
+       },
+       {
+        "item": "ticket",
+        "chance": 15,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 1800,
+      "items": {
+       "light_l": 3
+      }
+     }
+    },
+    {
+     "id": "4-5",
+     "name": "The King of Curses",
+     "desc": "Ryomen Sukuna is awake.",
+     "stamina": 12,
+     "boss": true,
+     "turnGoal": 20,
+     "recommendedPower": 42000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_mahito_609",
+        "level": 10
+       },
+       {
+        "enemy": "foe_hanami_508",
+        "level": 8
+       },
+       {
+        "enemy": "foe_mahito_609",
+        "level": 10
+       }
+      ],
+      [
+       {
+        "enemy": "boss_sukuna_9006",
+        "level": 1
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 5000,
+      "rankExp": 250,
+      "unitExp": 4000,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 90,
+        "qty": 2
+       },
+       {
+        "item": "light_l",
+        "chance": 50,
+        "qty": 1
+       },
+       {
+        "item": "ticket",
+        "chance": 15,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 3000,
+      "items": {
+       "ticket": 5
+      }
+     }
+    }
+   ],
+   "bg": "assets/pp/memories/the-encounter-in-the-mall-of-death/art.webp"
+  }
+ ],
+ "quests": [
+  {
+   "id": "tl",
+   "mode": "strengthen",
+   "name": "Training Light Quest",
+   "kanji": "修練の燈クエスト",
+   "daily": 18,
+   "art": "assets/pp/modes/training-light-quest.webp",
+   "icon": "assets/pp/currency/training-light.webp",
+   "desc": "Spar at Jujutsu High for Training Lights, the orange orbs that level up your characters.",
+   "stages": [
+    {
+     "id": "tl-1",
+     "name": "Beginner",
+     "desc": "",
+     "stamina": 6,
+     "boss": false,
+     "recommendedPower": 1800,
+     "waves": [
+      [
+       {
+        "enemy": "foe_panda_need_help",
+        "level": 2
+       },
+       {
+        "enemy": "foe_toge_403",
+        "level": 2
+       }
+      ],
+      [
+       {
+        "enemy": "foe_saki_resolve_heart",
+        "level": 3
+       },
+       {
+        "enemy": "foe_maki_longsword_battle",
+        "level": 3
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 200,
+      "rankExp": 30,
+      "unitExp": 200,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 100,
+        "qty": 3
+       },
+       {
+        "item": "light_m",
+        "chance": 30,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     },
+     "scale": 1.3,
+     "unlock": null
+    },
+    {
+     "id": "tl-2",
+     "name": "Intermediate",
+     "desc": "",
+     "stamina": 10,
+     "boss": false,
+     "recommendedPower": 6500,
+     "waves": [
+      [
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 6
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 6
+       }
+      ],
+      [
+       {
+        "enemy": "foe_saki_resolve_heart",
+        "level": 8
+       },
+       {
+        "enemy": "foe_junpei_value_life",
+        "level": 8
+       },
+       {
+        "enemy": "foe_toge_403",
+        "level": 8
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 400,
+      "rankExp": 60,
+      "unitExp": 600,
+      "drops": [
+       {
+        "item": "light_s",
+        "chance": 100,
+        "qty": 5
+       },
+       {
+        "item": "light_m",
+        "chance": 100,
+        "qty": 2
+       },
+       {
+        "item": "light_l",
+        "chance": 20,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     },
+     "scale": 2.5,
+     "unlock": "2-5"
+    },
+    {
+     "id": "tl-3",
+     "name": "Advanced",
+     "desc": "",
+     "stamina": 15,
+     "boss": false,
+     "recommendedPower": 13000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_miwa_302",
+        "level": 8
+       },
+       {
+        "enemy": "foe_mai_303",
+        "level": 8
+       },
+       {
+        "enemy": "foe_momo_304",
+        "level": 8
+       }
+      ],
+      [
+       {
+        "enemy": "foe_miwa_302",
+        "level": 10
+       },
+       {
+        "enemy": "foe_kaito_his_resolve",
+        "level": 12
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 800,
+      "rankExp": 100,
+      "unitExp": 1200,
+      "drops": [
+       {
+        "item": "light_m",
+        "chance": 100,
+        "qty": 4
+       },
+       {
+        "item": "light_l",
+        "chance": 60,
+        "qty": 1
+       }
+      ]
+     },
+     "firstClear": {
+      "cubes": 300
+     },
+     "scale": 3.3,
+     "unlock": "3-5"
+    }
+   ]
+  },
+  {
+   "id": "jp",
+   "mode": "strengthen",
+   "name": "JP Gathering Quest",
+   "kanji": "JP獲得クエスト",
+   "daily": 6,
+   "art": "assets/pp/modes/jp-quest.webp",
+   "icon": "assets/pp/currency/jp.webp",
+   "desc": "JP is the general currency you need to power up characters. Clear these for a lot of it.",
+   "stages": [
+    {
+     "id": "jp-1",
+     "name": "Beginner",
+     "desc": "",
+     "stamina": 6,
+     "boss": false,
+     "recommendedPower": 1800,
+     "waves": [
+      [
+       {
+        "enemy": "foe_maki_longsword_battle",
+        "level": 2
+       },
+       {
+        "enemy": "foe_toge_403",
+        "level": 2
+       }
+      ],
+      [
+       {
+        "enemy": "foe_saki_bring_on",
+        "level": 3
+       },
+       {
+        "enemy": "foe_maki_longsword_battle",
+        "level": 3
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 3000,
+      "rankExp": 30,
+      "unitExp": 150,
+      "drops": []
+     },
+     "firstClear": {
+      "cubes": 300
+     },
+     "scale": 1.3,
+     "unlock": null
+    },
+    {
+     "id": "jp-2",
+     "name": "Intermediate",
+     "desc": "",
+     "stamina": 10,
+     "boss": false,
+     "recommendedPower": 6500,
+     "waves": [
+      [
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 6
+       },
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 6
+       }
+      ],
+      [
+       {
+        "enemy": "foe_saki_bring_on",
+        "level": 8
+       },
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 8
+       },
+       {
+        "enemy": "foe_toge_403",
+        "level": 8
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 8000,
+      "rankExp": 60,
+      "unitExp": 400,
+      "drops": []
+     },
+     "firstClear": {
+      "cubes": 300
+     },
+     "scale": 2.5,
+     "unlock": "2-5"
+    },
+    {
+     "id": "jp-3",
+     "name": "Advanced",
+     "desc": "",
+     "stamina": 15,
+     "boss": false,
+     "recommendedPower": 13000,
+     "waves": [
+      [
+       {
+        "enemy": "foe_kamo_405",
+        "level": 8
+       },
+       {
+        "enemy": "foe_kasumi_zanshin",
+        "level": 8
+       },
+       {
+        "enemy": "foe_mechamaru_305",
+        "level": 8
+       }
+      ],
+      [
+       {
+        "enemy": "foe_kamo_405",
+        "level": 10
+       },
+       {
+        "enemy": "foe_junpei_misunderstand_value",
+        "level": 12
+       }
+      ]
+     ],
+     "rewards": {
+      "yen": 20000,
+      "rankExp": 100,
+      "unitExp": 800,
+      "drops": []
+     },
+     "firstClear": {
+      "cubes": 300
+     },
+     "scale": 3.3,
+     "unlock": "3-5"
+    }
+   ]
+  }
+ ]
+}

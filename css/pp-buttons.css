@@ -1,0 +1,63 @@
+/* css/pp-buttons.css — button skins cut from the real game's UI (reference
+   screenshots: Enhance, Home, Novice Mission). Each is a 9-slice image with its
+   label painted out (assets/pp/ui/btn), drawn with border-image so it stretches
+   to any width. Loaded after the theme on every page; only skins, no layout. */
+
+.jjk-btn, .jjk-tab, .dock-btn, .pp-stone {
+  background: none; border-style: solid; border-radius: 0;
+  border-image-repeat: stretch; box-shadow: none;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .55));
+}
+.jjk-btn::before, .jjk-btn::after, .dock-btn::before { display: none; }
+
+/* parchment "Challenge" button */
+.jjk-btn { border-width: 9px 13px; border-image-source: url("../assets/pp/ui/btn/btn-light.webp"); border-image-slice: 14 20 fill; color: #4a1d12; padding: 0 8px; }
+.jjk-btn.is-small { border-width: 7px 10px; padding: 0 6px; }
+/* gold (active Day tab) */
+.jjk-btn.is-primary { border-image-source: url("../assets/pp/ui/btn/tab-on.webp"); border-image-slice: 14 18 fill; color: #fdf0a0; text-shadow: 0 1px 0 #3d3610, 0 0 5px rgba(40, 34, 4, .8); }
+/* red "Claim All" */
+.jjk-btn.is-red { border-width: 9px 20px; border-image-source: url("../assets/pp/ui/btn/btn-red.webp"); border-image-slice: 16 40 fill; color: #f6dfa8; }
+.jjk-btn.is-red.is-small { border-width: 7px 14px; }
+/* greyed "Challenge" */
+.jjk-btn:disabled, .jjk-btn.is-disabled { border-image-source: url("../assets/pp/ui/btn/btn-dark.webp"); border-image-slice: 16 20 fill; color: #9aa09a; }
+.jjk-btn:active:not(:disabled) { box-shadow: none; transform: translateY(1px); }
+
+/* tabs: Day tabs (slate / gold) */
+.jjk-tab { border-width: 8px 12px; border-image-source: url("../assets/pp/ui/btn/tab-off.webp"); border-image-slice: 12 16 fill; padding: 0 6px; }
+.jjk-tab.active, .jjk-tab[aria-selected="true"] { border-image-source: url("../assets/pp/ui/btn/tab-on.webp"); border-image-slice: 14 18 fill; box-shadow: none; color: #fdf0a0; text-shadow: 0 1px 0 #3d3610, 0 0 5px rgba(40, 34, 4, .8); }
+
+/* bottom navigation: stone plate, gold plate when active (UI kit sheet) */
+.dock-btn { border-width: 8px 18px 12px; border-image-source: url("../assets/pp/ui/kit/nav.webp"); border-image-slice: 22 48 34 fill; padding: 0 2px; }
+.dock-btn.active { border-width: 8px 18px 12px; border-image-source: url("../assets/pp/ui/kit/nav-on.webp"); border-image-slice: 22 48 34 fill; box-shadow: none; filter: drop-shadow(0 0 8px rgba(200, 186, 80, .35)) drop-shadow(0 2px 2px rgba(0, 0, 0, .55)); }
+.dock-btn.is-menu, .dock-btn.is-menu.active { border-width: 6px; border-image-source: url("../assets/pp/ui/kit/sq.webp"); border-image-slice: 22 fill; padding: 0; }
+
+/* stone buttons (Details, Set as Home, ?, back) */
+.pp-stone { border-width: 6px 8px; border-image-source: url("../assets/pp/ui/btn/btn-grey.webp"); border-image-slice: 10 14 fill; padding: 2px 8px; }
+.pp-stone.sq { border-width: 7px; border-image-source: url("../assets/pp/ui/kit/sq.webp"); border-image-slice: 22 fill; padding: 0; }
+/* square icon buttons drawn straight from the kit: back, help */
+.help-btn, .jjk-icon-btn.jjk-back, .jjk-icon-btn.enh-back, .pp-stone.sq.kit-icon { border: 0; border-image: none; box-shadow: none; color: transparent; text-shadow: none; font-size: 0;
+  background: url("../assets/pp/ui/kit/sq-help.webp") center / contain no-repeat; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .55)); }
+.jjk-icon-btn.jjk-back, .jjk-icon-btn.enh-back { background-image: url("../assets/pp/ui/kit/sq-back.webp"); }
+.jjk-icon-btn.jjk-back .ic, .jjk-icon-btn.enh-back .ic, .pp-stone.sq.kit-icon .ic { display: none; }
+.pp-stone.sq.kit-expand { background-image: url("../assets/pp/ui/kit/sq-expand.webp"); }
+.pp-stone.sq.kit-profile { background-image: url("../assets/pp/ui/kit/sq-profile.webp"); }
+
+/* Enhance buttons: the parchment "Lv Enhancement" plate */
+.enh-btn { clip-path: none; background: none; box-shadow: none; border: 12px solid transparent; border-image: url("../assets/pp/ui/btn/parch.webp") 34 36 fill / 12px 13px stretch; padding: 0 2px; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5)); }
+.enh-btn:disabled { filter: grayscale(.9) brightness(.7); }
+
+/* top-bar counters: black plate with a thin gold frame (UI kit currency bar) */
+.hud-cur { background: none; box-shadow: none; border: 8px solid transparent; border-image: url("../assets/pp/ui/kit/bar.webp") 14 16 fill / 7px 8px stretch; border-radius: 0; padding: 0 4px 0 24px; }
+.hud-cur .cur-ic { left: -2px; }
+
+/* Lv / Skill enhancement plates: the kit parchment */
+.enh-btn { border-image: url("../assets/pp/ui/kit/parch.webp") 44 44 fill / 12px 13px stretch; }
+@media (max-width: 480px) {
+  .hud-cur { flex: none; border-width: 4px; border-image-width: 4px 5px; padding: 0 1px 0 15px; font-size: 10.5px; }
+  .hud { flex: none; gap: 2px; }
+  .hud-cur .cur-ic { left: -1px; width: 14px; height: 14px; margin-top: -7px; }
+  .jjk-icon-btn.jjk-back, .topbar .help-btn { width: 32px; height: 32px; }
+  .topbar { gap: 4px; }
+  .jjk-title-plate { padding: 0 22px 0 10px; }
+  .hud-cur .hud-plus { display: none; }
+}

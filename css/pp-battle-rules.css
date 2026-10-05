@@ -1,0 +1,45 @@
+/* css/pp-battle-rules.css — Phantom Parade battle rules: Black Flash and Break.
+ * Linked from battle.html only. */
+
+/* ---------- Break gauge (bosses) ---------- */
+.bu-brk { position: relative; width: 70%; height: 4px; margin: -3px auto 5px; background: rgba(0, 0, 0, .8); box-shadow: 0 0 0 1px rgba(0, 0, 0, .9); }
+.bu-brk i { position: absolute; inset: 0 auto 0 0; background: linear-gradient(180deg, #e6f4ff, #6fc3ff 55%, #2a6fb8); transition: width .35s var(--pp-ease, ease); }
+.bu.is-broken .bu-brk { box-shadow: 0 0 0 1px #000, 0 0 6px #ffd45c; }
+.bu.is-broken .bu-art img.art { filter: grayscale(.85) brightness(.75) contrast(1.1); }
+.bu.is-broken .bu-art::after {
+  content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background:
+    linear-gradient(118deg, transparent 46%, rgba(255, 255, 255, .85) 47%, transparent 48.5%),
+    linear-gradient(64deg, transparent 58%, rgba(255, 255, 255, .7) 59%, transparent 60%),
+    linear-gradient(162deg, transparent 30%, rgba(255, 255, 255, .6) 31%, transparent 32%);
+  mix-blend-mode: screen;
+}
+.s-break { color: #ffd45c; }
+.bu.break-anim .bu-art { animation: brkShatter .7s ease-out; }
+@keyframes brkShatter { 0% { filter: brightness(3); transform: scale(1.12); } 40% { transform: scale(.96) rotate(-2deg); } 100% { filter: none; transform: none; } }
+.dmg.tag.break { font: 900 italic 22px/1 var(--pp-font); top: 0; color: #ffd45c; -webkit-text-stroke: 3px #1a0a06; paint-order: stroke fill; letter-spacing: .04em; }
+.dmg.brk { color: #ffe9a8; }
+
+/* ---------- Black Flash ---------- */
+.dmg.bf { font-size: 30px; color: #ff2a2a; -webkit-text-stroke-color: #000; text-shadow: 0 0 6px #000, 0 0 12px #ff1a1a; }
+.dmg.tag.black-flash {
+  font: 900 italic 15px/1 var(--pp-font); top: 30px; letter-spacing: .08em; color: #ff2a2a;
+  -webkit-text-stroke: 3px #000; paint-order: stroke fill; text-shadow: 0 0 8px #ff1a1a, 0 0 2px #000;
+}
+.bf-bolt { position: absolute; left: -15%; right: -15%; top: -60%; height: 170%; z-index: 4; pointer-events: none; animation: bfBolt .6s steps(6) forwards; }
+.bf-bolt svg { width: 100%; height: 100%; overflow: visible; }
+.bf-bolt .k, .bf-bolt .r { stroke-linejoin: round; }
+.bf-bolt .k { fill: #000; stroke: #000; stroke-width: 3; filter: drop-shadow(0 0 4px #ff1a1a); }
+.bf-bolt .r { fill: #ff2020; }
+.bf-bolt .k2, .bf-bolt .r2 { fill: none; stroke-width: 3; stroke-linecap: round; }
+.bf-bolt .k2 { stroke: #000; } .bf-bolt .r2 { stroke: #ff2020; }
+@keyframes bfBolt { 0% { opacity: 1; transform: scale(1.1); } 30% { opacity: .3; } 45% { opacity: 1; } 100% { opacity: 0; transform: scale(1); } }
+.bu.bf-hit .bu-art { animation: bfHit .5s linear; }
+@keyframes bfHit { 0%, 100% { filter: none; transform: none; } 15% { filter: invert(1) hue-rotate(180deg) saturate(3); transform: translateX(-7px); } 35% { filter: brightness(.3) sepia(1) saturate(6) hue-rotate(-30deg); transform: translateX(6px); } 60% { filter: invert(1); transform: translateX(-3px); } }
+.battle.bf-screen::after { content: ''; position: absolute; inset: 0; z-index: 30; pointer-events: none; background: radial-gradient(ellipse at 50% 30%, rgba(255, 20, 20, .35), rgba(0, 0, 0, .55)); animation: bfScreen .45s ease-out forwards; }
+@keyframes bfScreen { 0% { opacity: 1; } 20% { opacity: .2; } 35% { opacity: .9; } 100% { opacity: 0; } }
+
+html.reduce-motion .bf-bolt, html.reduce-motion .bu.bf-hit .bu-art, html.reduce-motion .bu.break-anim .bu-art { animation: none; }
+html.reduce-motion .battle.bf-screen::after { display: none; }
+.bu.ally .dmg.tag.black-flash { top: -34px; }
+.bu.ally .bf-bolt { top: -110%; height: 220%; }

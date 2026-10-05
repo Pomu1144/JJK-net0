@@ -1,0 +1,2610 @@
+{
+ "banners": [
+  {
+   "id": "standard",
+   "name": "Jujutsu High Recruitment",
+   "kanji": "呪術高専",
+   "subtitle": "Standard banner — every sorcerer and curse",
+   "featured": [],
+   "element": "Wisdom",
+   "exchangeAt": 0,
+   "hero": "yuta_601",
+   "bg": "assets/pp/memories/someday-i-ll-be-with-everyone/art.webp"
+  },
+  {
+   "id": "strongest",
+   "name": "The Strongest",
+   "kanji": "最強",
+   "subtitle": "Pickup: Satoru Gojo SSR rate up",
+   "featured": [
+    "satoru_strongest",
+    "satoru_hollow_technique",
+    "satoru_strongest_blue",
+    "gojo_9005"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "satoru_strongest",
+   "bg": "assets/pp/memories/the-strongest-duo/art.webp"
+  },
+  {
+   "id": "king",
+   "name": "King of Curses",
+   "kanji": "呪いの王",
+   "subtitle": "Limited: Ryomen Sukuna rate up",
+   "featured": [
+    "sukuna_9006",
+    "sukuna_9007",
+    "jogo_610",
+    "mahito_609"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "sukuna_9006",
+   "bg": "assets/pp/memories/malevolent-shrine/art.webp"
+  },
+  {
+   "id": "what-lies-at-the-end-2026-09",
+   "name": "What Lies at the End",
+   "kanji": "夏油",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Suguru Geto",
+   "start": "2026-09-11",
+   "end": "2026-10-12",
+   "rerun": false,
+   "featured": [
+    "suguru_what_lies_end"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "suguru_what_lies_end",
+   "bg": "assets/pp/banners/yellowssrgetobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "tool-manipulation-the-final-bullet-2026-09",
+   "name": "Tool Manipulation & The Final Bullet",
+   "kanji": "西宮",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Momo Nishimiya / Mai Zen'in",
+   "start": "2026-09-07",
+   "end": "2026-10-04",
+   "rerun": false,
+   "featured": [
+    "momo_tool_manipulation",
+    "mai_final_bullet"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "momo_tool_manipulation",
+   "bg": "assets/pp/banners/redtypebanner3.webp",
+   "art": true
+  },
+  {
+   "id": "the-steam-sorcerer-2026-08",
+   "name": "The Steam Sorcerer",
+   "kanji": "灰原",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Yu Haibara",
+   "start": "2026-08-31",
+   "end": "2026-10-09",
+   "rerun": false,
+   "featured": [
+    "yu_burning_passion"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yu_burning_passion",
+   "bg": "assets/pp/banners/redssrhaibarabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "indomitable-auspicious-beasts-2026-08",
+   "name": "Indomitable Auspicious Beasts",
+   "kanji": "猪野",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Takuma Ino",
+   "start": "2026-08-19",
+   "end": "2026-09-06",
+   "rerun": false,
+   "featured": [
+    "takuma_indomitable_auspicious"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "takuma_indomitable_auspicious",
+   "bg": "assets/pp/banners/greenssrinobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "blood-borne-resolve-shatter-to-pieces-2026-08",
+   "name": "Blood Borne Resolve & Shatter To Pieces",
+   "kanji": "加茂",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Noritoshi Kamo / Toge Inumaki",
+   "start": "2026-08-10",
+   "end": "2026-08-23",
+   "rerun": false,
+   "featured": [
+    "kamo_405",
+    "toge_shatter_pieces"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kamo_405",
+   "bg": "assets/pp/banners/bluetypebanner5.webp",
+   "art": true
+  },
+  {
+   "id": "ephemeral-family-2026-07",
+   "name": "Ephemeral Family",
+   "kanji": "真依",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Mai Zen'in",
+   "start": "2026-07-31",
+   "end": "2026-08-25",
+   "rerun": false,
+   "featured": [
+    "mai_effective_range"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "mai_effective_range",
+   "bg": "assets/pp/banners/bluessrmaibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "illusory-tower-diverse-2026-07",
+   "name": "Illusory Tower: Diverse",
+   "kanji": "楽巌寺",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Yoshinobu Gakuganji",
+   "start": "2026-07-27",
+   "end": "2026-08-09",
+   "rerun": false,
+   "featured": [
+    "yoshinobu_crafty_rock"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yoshinobu_crafty_rock",
+   "bg": "assets/pp/banners/towerdiversebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "crafty-rock-2026-07",
+   "name": "Crafty Rock",
+   "kanji": "楽巌寺",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Yoshinobu Gakuganji",
+   "start": "2026-07-21",
+   "end": "2026-08-11",
+   "rerun": false,
+   "featured": [
+    "yoshinobu_crafty_rock"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yoshinobu_crafty_rock",
+   "bg": "assets/pp/banners/redssrgakuganjibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "silent-suppression-fulfilling-his-duty-as-the-ol-2026-07",
+   "name": "Silent Suppression & Fulfilling His Duty as the Older Brother",
+   "kanji": "脹相",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Choso / Kento Nanami",
+   "start": "2026-07-13",
+   "end": "2026-07-25",
+   "rerun": false,
+   "featured": [
+    "choso_older_brother",
+    "kento_silent_suppression"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "choso_older_brother",
+   "bg": "assets/pp/banners/greentypebanner3.webp",
+   "art": true
+  },
+  {
+   "id": "ijichi-s-unrelenting-vacation-2026-06",
+   "name": "Ijichi's Unrelenting Vacation",
+   "kanji": "伊地知",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Kiyotaka Ijichi",
+   "start": "2026-06-30",
+   "end": "2026-07-26",
+   "rerun": false,
+   "featured": [
+    "kiyotaka_hard_work"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "kiyotaka_hard_work",
+   "bg": "assets/pp/banners/greenssrijichibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "0-2-second-domain-expansion-2026-06",
+   "name": "0.2-Second Domain Expansion",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo",
+   "start": "2026-06-24",
+   "end": "2026-07-20",
+   "rerun": false,
+   "featured": [
+    "satoru_quick_domain"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "satoru_quick_domain",
+   "bg": "assets/pp/banners/bluessrgojobanner3.webp",
+   "art": true
+  },
+  {
+   "id": "sprinting-2026-06",
+   "name": "Sprinting",
+   "kanji": "三輪",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Kasumi Miwa",
+   "start": "2026-06-18",
+   "end": "2026-07-04",
+   "rerun": false,
+   "featured": [
+    "kasumi_sprinting"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "kasumi_sprinting",
+   "bg": "assets/pp/banners/greentypebanner2.webp",
+   "art": true
+  },
+  {
+   "id": "battle-of-firepower-2026-06",
+   "name": "Battle of Firepower",
+   "kanji": "宿儺",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Ryomen Sukuna",
+   "start": "2026-06-18",
+   "end": "2026-07-20",
+   "rerun": false,
+   "featured": [
+    "ryomen_battle_firepower"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "ryomen_battle_firepower",
+   "bg": "assets/pp/banners/yellowssrsukunabanner2.webp",
+   "art": true
+  },
+  {
+   "id": "unbridled-soul-2026-06",
+   "name": "Unbridled Soul",
+   "kanji": "真人",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Mahito",
+   "start": "2026-06-18",
+   "end": "2026-07-20",
+   "rerun": false,
+   "featured": [
+    "mahito_unbridled_soul"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "mahito_unbridled_soul",
+   "bg": "assets/pp/banners/redssrmahitobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "zanshin-first-grade-sorcerer-s-skill-2026-06",
+   "name": "Zanshin & First-Grade Sorcerer's Skill",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Kento Nanami / Kasumi Miwa",
+   "start": "2026-06-09",
+   "end": "2026-06-22",
+   "rerun": false,
+   "featured": [
+    "kento_capability_first",
+    "kasumi_zanshin"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kento_capability_first",
+   "bg": "assets/pp/banners/bluetypebanner4.webp",
+   "art": true
+  },
+  {
+   "id": "maximum-cursed-energy-output-2026-06",
+   "name": "Maximum Cursed Energy Output",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Yuji Itadori",
+   "start": "2026-06-09",
+   "end": "2026-07-09",
+   "rerun": false,
+   "featured": [
+    "yuji_max_output"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yuji_max_output",
+   "bg": "assets/pp/banners/redssryujibanner3.webp",
+   "art": true
+  },
+  {
+   "id": "are-you-satisfied-with-that-2026-06",
+   "name": "Are you satisfied with that?",
+   "kanji": "東堂",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Aoi Todo",
+   "start": "2026-06-09",
+   "end": "2026-07-09",
+   "rerun": false,
+   "featured": [
+    "aoi_satisfied"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "aoi_satisfied",
+   "bg": "assets/pp/banners/greenssrtodobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "blue-splashing-by-the-shore-part-3-2026-06",
+   "name": "Blue Splashing by the Shore Part 3",
+   "kanji": "伏黒",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Megumi Fushiguro / Nobara Kugisaki",
+   "start": "2026-06-01",
+   "end": "2026-07-09",
+   "rerun": false,
+   "featured": [
+    "megumi_summer_breeze",
+    "nobara_striking_eternal"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "megumi_summer_breeze",
+   "bg": "assets/pp/banners/greenssrmegumibanner2.webp",
+   "art": true
+  },
+  {
+   "id": "blue-splashing-by-the-shore-part-4-2026-06",
+   "name": "Blue Splashing by the Shore Part 4",
+   "kanji": "伏黒",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Megumi Fushiguro / Nobara Kugisaki",
+   "start": "2026-06-01",
+   "end": "2026-07-09",
+   "rerun": false,
+   "featured": [
+    "megumi_summer_breeze",
+    "nobara_striking_eternal"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "megumi_summer_breeze",
+   "bg": "assets/pp/banners/bluessrnobarabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "awakening-fwoo-hyoi-promising-new-student-2026-05",
+   "name": "Awakening, \"Fwoo Hyoi\" & Promising New Student",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Kento Nanami / Satoru Gojo / Shoko Ieiri",
+   "start": "2026-05-29",
+   "end": "2026-06-23",
+   "rerun": false,
+   "featured": [
+    "kento_new_student",
+    "satoru_awakening",
+    "shoko_fwoo_hyoi"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "kento_new_student",
+   "bg": "assets/pp/banners/1-5annitriobanner.webp",
+   "art": true
+  },
+  {
+   "id": "blue-splashing-by-the-shore-part-2-2026-05",
+   "name": "Blue Splashing by the Shore Part 2",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo",
+   "start": "2026-05-25",
+   "end": "2026-06-29",
+   "rerun": false,
+   "featured": [
+    "satoru_summer_treats"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "satoru_summer_treats",
+   "bg": "assets/pp/banners/yellowssrgojobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "blue-splashing-by-the-shore-part-1-2026-05",
+   "name": "Blue Splashing by the Shore Part 1",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Yuji Itadori",
+   "start": "2026-05-21",
+   "end": "2026-06-29",
+   "rerun": false,
+   "featured": [
+    "yuji_summer_sky"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "yuji_summer_sky",
+   "bg": "assets/pp/banners/bluessryujibanner2.webp",
+   "art": true
+  },
+  {
+   "id": "zone-within-infinity-genuine-jujutsu-2026-05",
+   "name": "Zone, Within Infinity & Genuine Jujutsu",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo / Ryomen Sukuna / Yuji Itadori",
+   "start": "2026-05-12",
+   "end": "2026-05-28",
+   "rerun": false,
+   "featured": [
+    "satoru_infinity",
+    "ryomen_genuine_jujutsu",
+    "yuji_zone"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "satoru_infinity",
+   "bg": "assets/pp/banners/1stanni-sukunabanner.webp",
+   "art": true
+  },
+  {
+   "id": "night-lurking-sorcerer-meteor-of-fierceness-2026-05",
+   "name": "Night-Lurking Sorcerer & Meteor of Fierceness",
+   "kanji": "狗巻",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Toge Inumaki / Jogo",
+   "start": "2026-05-01",
+   "end": "2026-05-16",
+   "rerun": false,
+   "featured": [
+    "toge_night_lurking",
+    "jogo_meteor_fierceness"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "toge_night_lurking",
+   "bg": "assets/pp/banners/redtypebanner2.webp",
+   "art": true
+  },
+  {
+   "id": "peering-into-the-dim-abyss-2026-04",
+   "name": "Peering into the Dim Abyss",
+   "kanji": "加茂",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Noritoshi Kamo",
+   "start": "2026-04-24",
+   "end": "2026-05-20",
+   "rerun": false,
+   "featured": [
+    "noritoshi_golden_age"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "noritoshi_golden_age",
+   "bg": "assets/pp/banners/redssrkenjakubanner1.webp",
+   "art": true
+  },
+  {
+   "id": "chain-mark-full-throttle-2026-04",
+   "name": "Chain Mark: Full Throttle",
+   "kanji": "漆",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Eiji Urushi",
+   "start": "2026-04-14",
+   "end": "2026-04-28",
+   "rerun": false,
+   "featured": [
+    "eiji_full_throttle"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "eiji_full_throttle",
+   "bg": "assets/pp/banners/yellowssreijibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "cursed-corpse-battle-with-that-will-in-mind-2026-04",
+   "name": "Cursed Corpse Battle & With That Will In Mind",
+   "kanji": "海斗",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Kaito Yuki / Masamichi Yaga",
+   "start": "2026-04-06",
+   "end": "2026-04-18",
+   "rerun": false,
+   "featured": [
+    "kaito_will_in_mind",
+    "masamichi_cursed_corpse"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "kaito_will_in_mind",
+   "bg": "assets/pp/banners/yellowtypebanner4.webp",
+   "art": true
+  },
+  {
+   "id": "garden-of-echoes-2026-03",
+   "name": "Garden of Echoes",
+   "kanji": "乙骨",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Yuta Okkotsu",
+   "start": "2026-03-27",
+   "end": "2026-04-23",
+   "rerun": false,
+   "featured": [
+    "yuta_executioner"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "yuta_executioner",
+   "bg": "assets/pp/banners/yellowssryutabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "pivotal-guardian-2026-03",
+   "name": "Pivotal Guardian",
+   "kanji": "夜蛾",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Masamichi Yaga",
+   "start": "2026-03-19",
+   "end": "2026-04-13",
+   "rerun": false,
+   "featured": [
+    "masamichi_pivotal_guardian"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "masamichi_pivotal_guardian",
+   "bg": "assets/pp/banners/bluessryagabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "to-protect-non-sorcerers-bond-of-friendship-2026-03",
+   "name": "To Protect Non-Sorcerers & Bond of Friendship",
+   "kanji": "夏油",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Suguru Geto / Megumi Fushiguro",
+   "start": "2026-03-12",
+   "end": "2026-03-23",
+   "rerun": false,
+   "featured": [
+    "suguru_protecting_non",
+    "megumi_bond_friendship"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "suguru_protecting_non",
+   "bg": "assets/pp/banners/greentypebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "the-quiet-cursed-holiday-2026-02",
+   "name": "The Quiet Cursed Holiday",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Kento Nanami",
+   "start": "2026-02-27",
+   "end": "2026-03-26",
+   "rerun": false,
+   "featured": [
+    "kento_silent_suppression"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "kento_silent_suppression",
+   "bg": "assets/pp/banners/greenssrnanamibanner2.webp",
+   "art": true
+  },
+  {
+   "id": "tool-manipulation-2026-02",
+   "name": "Tool Manipulation",
+   "kanji": "西宮",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Momo Nishimiya",
+   "start": "2026-02-20",
+   "end": "2026-03-19",
+   "rerun": false,
+   "featured": [
+    "momo_tool_manipulation"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "momo_tool_manipulation",
+   "bg": "assets/pp/banners/redssrmomobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "incomplete-domain-the-strongest-blue-2026-02",
+   "name": "Incomplete Domain & The Strongest Blue",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Satoru Gojo / Megumi Fushiguro",
+   "start": "2026-02-09",
+   "end": "2026-02-23",
+   "rerun": false,
+   "featured": [
+    "satoru_strongest_blue",
+    "megumi_incomplete_domain"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "satoru_strongest_blue",
+   "bg": "assets/pp/banners/yellowtypebanner3.webp",
+   "art": true
+  },
+  {
+   "id": "step-back-third-rate-2026-01",
+   "name": "Step back, third-rate",
+   "kanji": "裏梅",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Uraume",
+   "start": "2026-01-30",
+   "end": "2026-02-19",
+   "rerun": false,
+   "featured": [
+    "uraume_third_rate"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "uraume_third_rate",
+   "bg": "assets/pp/banners/yellowssruraumebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "ominous-land-reclamation-part-1-2026-01",
+   "name": "Ominous Land Reclamation Part 1",
+   "kanji": "脹相",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Choso",
+   "start": "2026-01-23",
+   "end": "2026-02-08",
+   "rerun": false,
+   "featured": [
+    "choso_older_brother"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "choso_older_brother",
+   "bg": "assets/pp/banners/dieventbanner1.webp",
+   "art": true
+  },
+  {
+   "id": "ominous-land-reclamation-part-2-2026-01",
+   "name": "Ominous Land Reclamation Part 2",
+   "kanji": "家入",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Shoko Ieiri / Momo Nishimiya",
+   "start": "2026-01-23",
+   "end": "2026-02-08",
+   "rerun": false,
+   "featured": [
+    "shoko_life_saver",
+    "momo_underestimate"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "shoko_life_saver",
+   "bg": "assets/pp/banners/dieventbanner2.webp",
+   "art": true
+  },
+  {
+   "id": "promising-new-student-2026-01",
+   "name": "Promising New Student",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Kento Nanami",
+   "start": "2026-01-23",
+   "end": "2026-02-19",
+   "rerun": false,
+   "featured": [
+    "kento_new_student"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "kento_new_student",
+   "bg": "assets/pp/banners/redssrnanamibanner2.webp",
+   "art": true
+  },
+  {
+   "id": "awakening-2026-01",
+   "name": "Awakening",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo",
+   "start": "2026-01-16",
+   "end": "2026-02-19",
+   "rerun": false,
+   "featured": [
+    "satoru_awakening"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "satoru_awakening",
+   "bg": "assets/pp/banners/greenssrgojobanner3.webp",
+   "art": true
+  },
+  {
+   "id": "fwoo-hyoi-2026-01",
+   "name": "Fwoo Hyoi",
+   "kanji": "家入",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Shoko Ieiri",
+   "start": "2026-01-16",
+   "end": "2026-02-19",
+   "rerun": false,
+   "featured": [
+    "shoko_fwoo_hyoi"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "shoko_fwoo_hyoi",
+   "bg": "assets/pp/banners/greenssrshokobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "crushed-with-speed-no-conceit-2026-01",
+   "name": "Crushed With Speed & No Conceit",
+   "kanji": "直毘人",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Naobito Zen'in / Takuma Ino",
+   "start": "2026-01-03",
+   "end": "2026-01-20",
+   "rerun": false,
+   "featured": [
+    "naobito_speed",
+    "takuma_no_conceit"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "naobito_speed",
+   "bg": "assets/pp/banners/bluetypebanner3.webp",
+   "art": true
+  },
+  {
+   "id": "gtg-style-how-to-spend-your-day-off-2025-12",
+   "name": "GTG Style: How to Spend Your Day Off",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo",
+   "start": "2025-12-26",
+   "end": "2026-01-29",
+   "rerun": false,
+   "featured": [
+    "satoru_quick_domain"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "satoru_quick_domain",
+   "bg": "assets/pp/banners/bluessrgojobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "rushing-to-a-mission-on-a-holy-night-2025-12",
+   "name": "Rushing to a Mission on a Holy Night",
+   "kanji": "与",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Kokichi Muta / Kasumi Miwa",
+   "start": "2025-12-19",
+   "end": "2025-12-30",
+   "rerun": false,
+   "featured": [
+    "kokichi_seen_it_all",
+    "kasumi_sprinting"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "kokichi_seen_it_all",
+   "bg": "assets/pp/banners/miwamutabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "zone-within-infinity-genuine-jujutsu-2025-12",
+   "name": "Zone, Within Infinity & Genuine Jujutsu",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo / Ryomen Sukuna / Yuji Itadori",
+   "start": "2025-12-11",
+   "end": "2025-01-13",
+   "rerun": false,
+   "featured": [
+    "satoru_infinity",
+    "ryomen_genuine_jujutsu",
+    "yuji_zone"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "satoru_infinity",
+   "bg": "assets/pp/banners/1stanni-sukunabanner.webp",
+   "art": true
+  },
+  {
+   "id": "2nd-anniversary-part-4-2025-12",
+   "name": "2nd Anniversary Part 4",
+   "kanji": "真人",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Mahito",
+   "start": "2025-12-04",
+   "end": "2026-01-08",
+   "rerun": false,
+   "featured": [
+    "mahito_unbridled_soul"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "mahito_unbridled_soul",
+   "bg": "assets/pp/banners/redssrmahitobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "2nd-anniversary-part-3-2025-11",
+   "name": "2nd Anniversary Part 3",
+   "kanji": "宿儺",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Ryomen Sukuna",
+   "start": "2025-11-28",
+   "end": "2026-01-08",
+   "rerun": false,
+   "featured": [
+    "ryomen_battle_firepower"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "ryomen_battle_firepower",
+   "bg": "assets/pp/banners/yellowssrsukunabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "2nd-anniversary-part-1-2-2025-11",
+   "name": "2nd Anniversary Part 1 & 2",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Yuji Itadori / Aoi Todo",
+   "start": "2025-11-21",
+   "end": "2025-12-25",
+   "rerun": false,
+   "featured": [
+    "yuji_max_output",
+    "aoi_satisfied"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yuji_max_output",
+   "bg": "assets/pp/banners/2ndannibannersp1-2.webp",
+   "art": true
+  },
+  {
+   "id": "jujutsu-kaisen-0-2025-10",
+   "name": "Jujutsu Kaisen 0",
+   "kanji": "乙骨",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Yuta Okkotsu / Suguru Geto / Miguel",
+   "start": "2025-10-31",
+   "end": "2025-11-20",
+   "rerun": false,
+   "featured": [
+    "yuta_601",
+    "geto_604",
+    "miguel_delayed_quota"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yuta_601",
+   "bg": "assets/pp/banners/jjk0banner1.webp",
+   "art": true
+  },
+  {
+   "id": "early-morning-departure-no-conceit-2025-10",
+   "name": "Early Morning Departure & No Conceit",
+   "kanji": "真希",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Maki Zen'in / Takuma Ino",
+   "start": "2025-10-24",
+   "end": "2025-11-09",
+   "rerun": false,
+   "featured": [
+    "maki_early_morning",
+    "takuma_no_conceit"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "maki_early_morning",
+   "bg": "assets/pp/banners/bluetypebanner2.webp",
+   "art": true
+  },
+  {
+   "id": "arrived-gourmet-boom-2025-10",
+   "name": "Arrived! Gourmet Boom!",
+   "kanji": "乙骨",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Yuta Okkotsu",
+   "start": "2025-10-18",
+   "end": "2025-11-20",
+   "rerun": false,
+   "featured": [
+    "yuta_queen_curses"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "yuta_queen_curses",
+   "bg": "assets/pp/banners/bluessryutabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "cursed-corpse-battle-life-saver-2025-10",
+   "name": "Cursed Corpse Battle & Life Saver",
+   "kanji": "夜蛾",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Masamichi Yaga / Shoko Ieiri",
+   "start": "2025-10-08",
+   "end": "2025-10-22",
+   "rerun": false,
+   "featured": [
+    "masamichi_cursed_corpse",
+    "shoko_life_saver"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "masamichi_cursed_corpse",
+   "bg": "assets/pp/banners/yellowtypebanner2.webp",
+   "art": true
+  },
+  {
+   "id": "slob-around-2025-09",
+   "name": "Slob around...",
+   "kanji": "日下部",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Atsuya Kusakabe",
+   "start": "2025-09-30",
+   "end": "2025-10-24",
+   "rerun": false,
+   "featured": [
+    "atsuya_sharp_blade"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "atsuya_sharp_blade",
+   "bg": "assets/pp/banners/yellowssrkusakabebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "meteor-of-fierceness-2025-09",
+   "name": "Meteor of Fierceness",
+   "kanji": "漏瑚",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Jogo",
+   "start": "2025-09-19",
+   "end": "2025-10-04",
+   "rerun": false,
+   "featured": [
+    "jogo_meteor_fierceness"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "jogo_meteor_fierceness",
+   "bg": "assets/pp/banners/redssrjogobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "rabbit-s-disruption-2025-09",
+   "name": "Rabbit's Disruption",
+   "kanji": "伏黒",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Megumi Fushiguro",
+   "start": "2025-09-12",
+   "end": "2025-09-29",
+   "rerun": false,
+   "featured": [
+    "megumi_rabbit_disruption"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "megumi_rabbit_disruption",
+   "bg": "assets/pp/banners/redssrmegumibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "as-fast-as-a-fleeing-rabbit-2025-08",
+   "name": "As Fast as a Fleeing Rabbit",
+   "kanji": "直毘人",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Naobito Zen'in",
+   "start": "2025-08-29",
+   "end": "2025-09-22",
+   "rerun": false,
+   "featured": [
+    "naobito_speed"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "naobito_speed",
+   "bg": "assets/pp/banners/bluessrnaobitobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "seance-2025-08",
+   "name": "Seance",
+   "kanji": "甚爾",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Toji Fushiguro",
+   "start": "2025-08-19",
+   "end": "2025-09-18",
+   "rerun": false,
+   "featured": [
+    "toji_seance"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "toji_seance",
+   "bg": "assets/pp/banners/yellowssrtojibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "cursed-corpse-battle-with-that-will-in-mind-2025-08",
+   "name": "Cursed Corpse Battle & With That Will In Mind",
+   "kanji": "海斗",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Kaito Yuki / Masamichi Yaga",
+   "start": "2025-08-12",
+   "end": "2025-08-23",
+   "rerun": false,
+   "featured": [
+    "kaito_will_in_mind",
+    "masamichi_cursed_corpse"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "kaito_will_in_mind",
+   "bg": "assets/pp/banners/yellowtypebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "the-days-of-cursed-spirits-2025-07",
+   "name": "The Days of Cursed Spirits",
+   "kanji": "脹相",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Choso",
+   "start": "2025-07-31",
+   "end": "2025-08-20",
+   "rerun": false,
+   "featured": [
+    "choso_older_brother"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "choso_older_brother",
+   "bg": "assets/pp/banners/greenssrchosobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "cursed-spirit-school-group-2025-07",
+   "name": "Cursed Spirit School Group",
+   "kanji": "家入",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Shoko Ieiri",
+   "start": "2025-07-22",
+   "end": "2025-08-04",
+   "rerun": false,
+   "featured": [
+    "shoko_life_saver"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "shoko_life_saver",
+   "bg": "assets/pp/banners/yellowshokobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "night-of-dancing-crows-night-lurking-sorcerer-2025-07",
+   "name": "Night Of Dancing Crows & Night-Lurking Sorcerer",
+   "kanji": "狗巻",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Toge Inumaki / Mei Mei",
+   "start": "2025-07-14",
+   "end": "2025-07-26",
+   "rerun": false,
+   "featured": [
+    "toge_night_lurking",
+    "mei_dancing_crows"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "toge_night_lurking",
+   "bg": "assets/pp/banners/redtypebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "genuine-jujutsu-2025-07",
+   "name": "Genuine Jujutsu",
+   "kanji": "宿儺",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Ryomen Sukuna",
+   "start": "2025-07-04",
+   "end": "2025-08-02",
+   "rerun": false,
+   "featured": [
+    "ryomen_genuine_jujutsu"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "ryomen_genuine_jujutsu",
+   "bg": "assets/pp/banners/bluesukunabanner2.webp",
+   "art": true
+  },
+  {
+   "id": "promising-new-student-2025-06",
+   "name": "Promising New Student",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Kento Nanami",
+   "start": "2025-06-30",
+   "end": "2025-07-30",
+   "rerun": false,
+   "featured": [
+    "kento_new_student"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "kento_new_student",
+   "bg": "assets/pp/banners/redssrnanamibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "early-morning-departure-2025-06",
+   "name": "Early Morning Departure",
+   "kanji": "真希",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Maki Zen'in",
+   "start": "2025-06-20",
+   "end": "2025-07-04",
+   "rerun": false,
+   "featured": [
+    "maki_early_morning"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "maki_early_morning",
+   "bg": "assets/pp/banners/bluessrmakibanner2.webp",
+   "art": true
+  },
+  {
+   "id": "within-infinity-2025-06",
+   "name": "Within Infinity",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo",
+   "start": "2025-06-11",
+   "end": "2025-07-03",
+   "rerun": false,
+   "featured": [
+    "satoru_infinity"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "satoru_infinity",
+   "bg": "assets/pp/banners/redssrgojorerunbanner1.webp",
+   "art": true
+  },
+  {
+   "id": "fwoo-hyoi-2025-05",
+   "name": "Fwoo\", \"Hyoi",
+   "kanji": "家入",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Shoko Ieiri",
+   "start": "2025-05-30",
+   "end": "2025-07-03",
+   "rerun": false,
+   "featured": [
+    "shoko_fwoo_hyoi"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "shoko_fwoo_hyoi",
+   "bg": "assets/pp/banners/greenssrshokobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "0-5th-anniversary-rerun-2025-05",
+   "name": "0.5th Anniversary Rerun",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo / Suguru Geto / Toji Fushiguro",
+   "start": "2025-05-30",
+   "end": "2025-07-03",
+   "rerun": true,
+   "featured": [
+    "satoru_strongest_blue",
+    "suguru_protecting_non",
+    "toji_602"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "satoru_strongest_blue",
+   "bg": "assets/pp/banners/0-5thannirerun.webp",
+   "art": true
+  },
+  {
+   "id": "awakening-2025-05",
+   "name": "Awakening",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo",
+   "start": "2025-05-21",
+   "end": "2025-07-03",
+   "rerun": false,
+   "featured": [
+    "satoru_awakening"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "satoru_awakening",
+   "bg": "assets/pp/banners/greenssrgojobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "zone-2025-05",
+   "name": "Zone",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Yuji Itadori",
+   "start": "2025-05-21",
+   "end": "2025-06-10",
+   "rerun": false,
+   "featured": [
+    "yuji_zone"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "yuji_zone",
+   "bg": "assets/pp/banners/yellowssryujirerunbanner1.webp",
+   "art": true
+  },
+  {
+   "id": "with-that-will-in-mind-2025-05",
+   "name": "With That Will In Mind",
+   "kanji": "海斗",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Kaito Yuki",
+   "start": "2025-05-14",
+   "end": "2025-05-20",
+   "rerun": false,
+   "featured": [
+    "kaito_will_in_mind"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "kaito_will_in_mind",
+   "bg": "assets/pp/banners/yellowssrkaitorerunbanner1.webp",
+   "art": true
+  },
+  {
+   "id": "shatter-to-pieces-2025-05",
+   "name": "Shatter To Pieces",
+   "kanji": "狗巻",
+   "event": true,
+   "kind": "Type Pickup",
+   "subtitle": "Type Pickup · Toge Inumaki",
+   "start": "2025-05-07",
+   "end": "2025-05-18",
+   "rerun": false,
+   "featured": [
+    "toge_shatter_pieces"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "toge_shatter_pieces",
+   "bg": "assets/pp/banners/bluetypebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "no-conceit-2025-04",
+   "name": "No Conceit",
+   "kanji": "猪野",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Takuma Ino",
+   "start": "2025-04-28",
+   "end": "2025-05-20",
+   "rerun": false,
+   "featured": [
+    "takuma_no_conceit"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "takuma_no_conceit",
+   "bg": "assets/pp/banners/bluessrinobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "let-s-rescue-satoru-gojo-2025-04",
+   "name": "Let's Rescue Satoru Gojo!",
+   "kanji": "釘崎",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Nobara Kugisaki / Megumi Fushiguro",
+   "start": "2025-04-23",
+   "end": "2025-05-07",
+   "rerun": false,
+   "featured": [
+    "nobara_worst_match",
+    "megumi_incomplete_domain"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "nobara_worst_match",
+   "bg": "assets/pp/banners/gojorescuebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "sorcerer-killer-the-final-bullet-2025-04",
+   "name": "Sorcerer Killer & The Final Bullet",
+   "kanji": "真依",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Mai Zen'in",
+   "start": "2025-04-14",
+   "end": "2025-04-25",
+   "rerun": false,
+   "featured": [
+    "mai_final_bullet"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "mai_final_bullet",
+   "bg": "assets/pp/banners/zeninbanner1.webp",
+   "art": true
+  },
+  {
+   "id": "time-money-lie-2025-03",
+   "name": "Time= Money + Lie",
+   "kanji": "冥冥",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Mei Mei",
+   "start": "2025-03-31",
+   "end": "2025-04-20",
+   "rerun": false,
+   "featured": [
+    "mei_dancing_crows"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "mei_dancing_crows",
+   "bg": "assets/pp/banners/redssrmeimeibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "early-morning-departure-2025-03",
+   "name": "Early Morning Departure",
+   "kanji": "真希",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Maki Zen'in",
+   "start": "2025-03-21",
+   "end": "2025-04-05",
+   "rerun": false,
+   "featured": [
+    "maki_early_morning"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "maki_early_morning",
+   "bg": "assets/pp/banners/bluessrmakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "the-strongest-blue-cursed-corpse-battle-2025-03",
+   "name": "The Strongest Blue&Cursed Corpse Battle",
+   "kanji": "夜蛾",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Masamichi Yaga / Satoru Gojo",
+   "start": "2025-03-14",
+   "end": "2025-03-25",
+   "rerun": false,
+   "featured": [
+    "masamichi_cursed_corpse",
+    "satoru_strongest_blue"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "masamichi_cursed_corpse",
+   "bg": "assets/pp/banners/teenjoyagabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "shoko-ieiri-s-longest-day-2025-02",
+   "name": "Shoko Ieiri's Longest Day",
+   "kanji": "家入",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Shoko Ieiri",
+   "start": "2025-02-28",
+   "end": "2025-03-20",
+   "rerun": false,
+   "featured": [
+    "shoko_life_saver"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "shoko_life_saver",
+   "bg": "assets/pp/banners/yellowshokobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "night-lurking-sorcerer-2025-02",
+   "name": "Night-Lurking Sorcerer",
+   "kanji": "狗巻",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Toge Inumaki",
+   "start": "2025-02-19",
+   "end": "2025-03-04",
+   "rerun": false,
+   "featured": [
+    "toge_night_lurking"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "toge_night_lurking",
+   "bg": "assets/pp/banners/redinumakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "to-protect-non-sorcerers-longsword-battle-2025-02",
+   "name": "To Protect Non-Sorcerers / Longsword Battle",
+   "kanji": "夏油",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Suguru Geto / Maki Zen'in",
+   "start": "2025-02-12",
+   "end": "2025-02-23",
+   "rerun": false,
+   "featured": [
+    "suguru_protecting_non",
+    "maki_longsword_battle"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "suguru_protecting_non",
+   "bg": "assets/pp/banners/getomakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "the-false-hero-2025-01",
+   "name": "The False Hero",
+   "kanji": "与",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Kokichi Muta",
+   "start": "2025-01-31",
+   "end": "2025-02-18",
+   "rerun": false,
+   "featured": [
+    "kokichi_seen_it_all"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "kokichi_seen_it_all",
+   "bg": "assets/pp/banners/greenkokichibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "sprinting-2025-01",
+   "name": "Sprinting",
+   "kanji": "三輪",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Kasumi Miwa",
+   "start": "2025-01-23",
+   "end": "2025-02-04",
+   "rerun": false,
+   "featured": [
+    "kasumi_sprinting"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "kasumi_sprinting",
+   "bg": "assets/pp/banners/greenmiwabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "zanshin-shatter-to-pieces-first-grade-sorcerer-s-2025-01",
+   "name": "Zanshin & Shatter To Pieces & First-Grade Sorcerer's Skill",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Kento Nanami / Toge Inumaki / Kasumi Miwa",
+   "start": "2025-01-14",
+   "end": "2025-01-25",
+   "rerun": false,
+   "featured": [
+    "kento_capability_first",
+    "toge_shatter_pieces",
+    "kasumi_zanshin"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kento_capability_first",
+   "bg": "assets/pp/banners/bluemiwa-toge-nanamibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "ijichi-s-report-sukuna-s-finger-2024-12",
+   "name": "Ijichi's Report: Sukuna's Finger",
+   "kanji": "宿儺",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Ryomen Sukuna",
+   "start": "2024-12-30",
+   "end": "2025-01-20",
+   "rerun": false,
+   "featured": [
+    "ryomen_genuine_jujutsu"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "ryomen_genuine_jujutsu",
+   "bg": "assets/pp/banners/bluesukunabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "jujutsu-kaisen-0-part-3-2024-12",
+   "name": "Jujutsu Kaisen 0 - Part 3",
+   "kanji": "夏油",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Suguru Geto",
+   "start": "2024-12-20",
+   "end": "2025-01-03",
+   "rerun": false,
+   "featured": [
+    "geto_604"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "geto_604",
+   "bg": "assets/pp/banners/bluegetobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "jujutsu-kaisen-0-part-1-2024-12",
+   "name": "Jujutsu Kaisen 0 - Part 1",
+   "kanji": "乙骨",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Yuta Okkotsu",
+   "start": "2024-12-13",
+   "end": "2025-01-03",
+   "rerun": false,
+   "featured": [
+    "yuta_601"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yuta_601",
+   "bg": "assets/pp/banners/redyutabanner2.webp",
+   "art": true
+  },
+  {
+   "id": "jujutsu-kaisen-0-part-2-2024-12",
+   "name": "Jujutsu Kaisen 0 - Part 2",
+   "kanji": "ミゲル",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Miguel",
+   "start": "2024-12-13",
+   "end": "2025-01-03",
+   "rerun": false,
+   "featured": [
+    "miguel_delayed_quota"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "miguel_delayed_quota",
+   "bg": "assets/pp/banners/bluemiguelbanner1.webp",
+   "art": true
+  },
+  {
+   "id": "magnificent-phantom-ship-part-2-2024-11",
+   "name": "Magnificent Phantom Ship, Part 2",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Satoru Gojo",
+   "start": "2024-11-29",
+   "end": "2024-12-19",
+   "rerun": false,
+   "featured": [
+    "satoru_infinity"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "satoru_infinity",
+   "bg": "assets/pp/banners/1styearannibanner-pt2.webp",
+   "art": true
+  },
+  {
+   "id": "magnificent-phantom-ship-part-1-2024-11",
+   "name": "Magnificent Phantom Ship, Part 1",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Limited",
+   "subtitle": "Limited · Yuji Itadori",
+   "start": "2024-11-21",
+   "end": "2024-12-19",
+   "rerun": false,
+   "featured": [
+    "yuji_zone"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "yuji_zone",
+   "bg": "assets/pp/banners/1styearannibanner-pt1.webp",
+   "art": true
+  },
+  {
+   "id": "with-that-will-in-mind-2024-11",
+   "name": "With That Will In Mind",
+   "kanji": "海斗",
+   "event": true,
+   "kind": "Featured",
+   "subtitle": "Featured · Kaito Yuki",
+   "start": "2024-11-17",
+   "end": "2024-12-03",
+   "rerun": false,
+   "featured": [
+    "kaito_will_in_mind"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "kaito_will_in_mind",
+   "bg": "assets/pp/banners/ssryellowkaitobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "overtime-work-sword-option-2024-11",
+   "name": "Overtime Work / Sword Option",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Kento Nanami / Ultimate Mechamaru",
+   "start": "2024-11-12",
+   "end": "2024-11-20",
+   "rerun": false,
+   "featured": [
+    "kento_overtime_work",
+    "mechamaru_sword_option"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "kento_overtime_work",
+   "bg": "assets/pp/banners/nanamimechamarubanner.webp",
+   "art": true
+  },
+  {
+   "id": "hollow-technique-purple-heart-s-resolve-2024-11",
+   "name": "Hollow Technique: Purple, Heart's Resolve",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo / Saki Rindo",
+   "start": "2024-11-06",
+   "end": "2024-11-20",
+   "rerun": false,
+   "featured": [
+    "satoru_hollow_technique",
+    "saki_resolve_heart"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "satoru_hollow_technique",
+   "bg": "assets/pp/banners/greengojo-sakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "kyushu-records-2024-10",
+   "name": "Kyushu Records",
+   "kanji": "伏黒",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Megumi Fushiguro",
+   "start": "2024-10-31",
+   "end": "2024-11-20",
+   "rerun": false,
+   "featured": [
+    "megumi_bond_friendship"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "megumi_bond_friendship",
+   "bg": "assets/pp/banners/greenmegumibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "keep-hammering-at-them-2024-10",
+   "name": "Keep Hammering At Them",
+   "kanji": "釘崎",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Nobara Kugisaki",
+   "start": "2024-10-22",
+   "end": "2024-11-07",
+   "rerun": false,
+   "featured": [
+    "nobara_keep_hammering"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "nobara_keep_hammering",
+   "bg": "assets/pp/banners/nobarabanner2.webp",
+   "art": true
+  },
+  {
+   "id": "hidden-inventory-premature-death-3-rerun-2024-10",
+   "name": "Hidden Inventory / Premature Death 3 Rerun",
+   "kanji": "甚爾",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Toji Fushiguro",
+   "start": "2024-10-17",
+   "end": "2024-11-02",
+   "rerun": true,
+   "featured": [
+    "toji_602"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "toji_602",
+   "bg": "assets/pp/banners/redtojibanner2.webp",
+   "art": true
+  },
+  {
+   "id": "words-beget-curses-2024-09",
+   "name": "Words Beget Curses",
+   "kanji": "狗巻",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Toge Inumaki",
+   "start": "2024-09-30",
+   "end": "2024-10-21",
+   "rerun": false,
+   "featured": [
+    "toge_shatter_pieces"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "toge_shatter_pieces",
+   "bg": "assets/pp/banners/blueinumakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "the-final-bullet-2024-09",
+   "name": "The Final Bullet",
+   "kanji": "真依",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Mai Zen'in",
+   "start": "2024-09-20",
+   "end": "2024-10-04",
+   "rerun": false,
+   "featured": [
+    "mai_final_bullet"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "mai_final_bullet",
+   "bg": "assets/pp/banners/maibanner.webp",
+   "art": true
+  },
+  {
+   "id": "hidden-inventory-premature-death-2-rerun-2024-09",
+   "name": "Hidden Inventory / Premature Death 2 Rerun",
+   "kanji": "夏油",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Suguru Geto",
+   "start": "2024-09-10",
+   "end": "2024-09-19",
+   "rerun": true,
+   "featured": [
+    "suguru_protecting_non"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "suguru_protecting_non",
+   "bg": "assets/pp/banners/greengetobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "dancing-amongst-the-flowers-2024-08",
+   "name": "Dancing Amongst The Flowers",
+   "kanji": "真希",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Maki Zen'in",
+   "start": "2024-08-30",
+   "end": "2024-09-19",
+   "rerun": false,
+   "featured": [
+    "maki_longsword_battle"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "maki_longsword_battle",
+   "bg": "assets/pp/banners/greenmakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "first-grade-sorcerer-s-skill-2024-08",
+   "name": "First-Grade Sorcerer's Skill",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Kento Nanami",
+   "start": "2024-08-20",
+   "end": "2024-09-03",
+   "rerun": false,
+   "featured": [
+    "kento_capability_first"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kento_capability_first",
+   "bg": "assets/pp/banners/nanamibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "hidden-inventory-premature-death-1-rerun-2024-08",
+   "name": "Hidden Inventory / Premature Death 1 Rerun",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo",
+   "start": "2024-08-16",
+   "end": "2024-09-02",
+   "rerun": true,
+   "featured": [
+    "satoru_strongest_blue"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "satoru_strongest_blue",
+   "bg": "assets/pp/banners/yellowgojobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "small-fry-and-reverse-retribution-incomplete-dom-2024-08",
+   "name": "Small Fry and Reverse Retribution / Incomplete Domain",
+   "kanji": "順平",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Junpei Yoshino / Megumi Fushiguro",
+   "start": "2024-08-09",
+   "end": "2024-08-20",
+   "rerun": false,
+   "featured": [
+    "junpei_misunderstand_value",
+    "megumi_incomplete_domain"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "junpei_misunderstand_value",
+   "bg": "assets/pp/banners/junpeimegumibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "principals-tribulations-2024-07",
+   "name": "Principals' Tribulations",
+   "kanji": "夜蛾",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Masamichi Yaga / Yoshinobu Gakuganji",
+   "start": "2024-07-30",
+   "end": "2024-08-19",
+   "rerun": false,
+   "featured": [
+    "masamichi_cursed_corpse",
+    "yoshinobu_cursed_energy"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "masamichi_cursed_corpse",
+   "bg": "assets/pp/banners/yagabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "hollow-technique-purple-2024-07",
+   "name": "Hollow Technique: Purple",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo",
+   "start": "2024-07-21",
+   "end": "2024-08-03",
+   "rerun": false,
+   "featured": [
+    "satoru_hollow_technique"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "satoru_hollow_technique",
+   "bg": "assets/pp/banners/greengojobanner2.webp",
+   "art": true
+  },
+  {
+   "id": "heart-s-resolve-2024-07",
+   "name": "Heart's Resolve",
+   "kanji": "凛堂",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Saki Rindo",
+   "start": "2024-07-16",
+   "end": "2024-08-03",
+   "rerun": false,
+   "featured": [
+    "saki_resolve_heart"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "saki_resolve_heart",
+   "bg": "assets/pp/banners/greensakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "determination-in-the-blood-don-t-underestimate-m-2024-07",
+   "name": "Determination In The Blood / Don't Underestimate Me",
+   "kanji": "加茂",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Noritoshi Kamo / Momo Nishimiya",
+   "start": "2024-07-08",
+   "end": "2024-07-20",
+   "rerun": false,
+   "featured": [
+    "kamo_405",
+    "momo_underestimate"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kamo_405",
+   "bg": "assets/pp/banners/kamomomobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "a-sorcerer-s-balance-2024-06",
+   "name": "A Sorcerer's Balance",
+   "kanji": "三輪",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Kasumi Miwa",
+   "start": "2024-06-28",
+   "end": "2024-07-18",
+   "rerun": false,
+   "featured": [
+    "kasumi_zanshin"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kasumi_zanshin",
+   "bg": "assets/pp/banners/bluemiwabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "tokyo-fukuoka-exchange-2024-06",
+   "name": "Tokyo Fukuoka Exchange",
+   "kanji": "狗巻",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Toge Inumaki / Nobara Kugisaki",
+   "start": "2024-06-20",
+   "end": "2024-07-04",
+   "rerun": false,
+   "featured": [
+    "toge_403",
+    "nobara_402"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "toge_403",
+   "bg": "assets/pp/banners/togenobarabanner2.webp",
+   "art": true
+  },
+  {
+   "id": "the-worst-match-nimble-body-2024-06",
+   "name": "The Worst Match / Nimble Body",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Yuji Itadori",
+   "start": "2024-06-12",
+   "end": "2024-06-24",
+   "rerun": false,
+   "featured": [
+    "yuji_301"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yuji_301",
+   "bg": "assets/pp/banners/yujinobarabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "hidden-inventory-premature-death-3-2024-06",
+   "name": "Hidden Inventory / Premature Death 3",
+   "kanji": "甚爾",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Toji Fushiguro",
+   "start": "2024-06-03",
+   "end": "2024-07-03",
+   "rerun": false,
+   "featured": [
+    "toji_602"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "toji_602",
+   "bg": "assets/pp/banners/redtojibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "hidden-inventory-premature-death-2-2024-05",
+   "name": "Hidden Inventory / Premature Death 2",
+   "kanji": "夏油",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Suguru Geto",
+   "start": "2024-05-31",
+   "end": "2024-07-03",
+   "rerun": false,
+   "featured": [
+    "suguru_protecting_non"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "suguru_protecting_non",
+   "bg": "assets/pp/banners/greengetobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "hidden-inventory-premature-death-1-2024-05",
+   "name": "Hidden Inventory / Premature Death 1",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo",
+   "start": "2024-05-21",
+   "end": "2024-07-03",
+   "rerun": false,
+   "featured": [
+    "satoru_strongest_blue"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "satoru_strongest_blue",
+   "bg": "assets/pp/banners/yellowgojobanner0.webp",
+   "art": true
+  },
+  {
+   "id": "doctor-s-pride-2024-05",
+   "name": "Doctor's Pride",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo / Megumi Fushiguro",
+   "start": "2024-05-17",
+   "end": "2024-06-03",
+   "rerun": false,
+   "featured": [
+    "satoru_strongest",
+    "megumi_401"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "satoru_strongest",
+   "bg": "assets/pp/banners/gojomegumibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "believe-in-each-other-2024-05",
+   "name": "Believe in Each Other",
+   "kanji": "狗巻",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Toge Inumaki / Nobara Kugisaki",
+   "start": "2024-05-14",
+   "end": "2024-05-20",
+   "rerun": false,
+   "featured": [
+    "toge_403",
+    "nobara_402"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "toge_403",
+   "bg": "assets/pp/banners/togenobarabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "rain-and-foosteps-2024-04",
+   "name": "Rain And Foosteps",
+   "kanji": "七海",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Kento Nanami",
+   "start": "2024-04-30",
+   "end": "2024-05-20",
+   "rerun": false,
+   "featured": [
+    "kento_overtime_work"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "kento_overtime_work",
+   "bg": "assets/pp/banners/yellownanamibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "need-help-2024-04",
+   "name": "Need Help?",
+   "kanji": "パンダ",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Panda",
+   "start": "2024-04-19",
+   "end": "2024-05-03",
+   "rerun": false,
+   "featured": [
+    "panda_need_help"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "panda_need_help",
+   "bg": "assets/pp/banners/redpandabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "cursed-energy-infusion-2024-04",
+   "name": "Cursed Energy Infusion",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Yuji Itadori / Mahito",
+   "start": "2024-04-12",
+   "end": "2024-05-03",
+   "rerun": false,
+   "featured": [
+    "yuji_cursed_energy",
+    "mahito_609"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "yuji_cursed_energy",
+   "bg": "assets/pp/banners/blueyujibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "brothers-2024-04",
+   "name": "Brothers",
+   "kanji": "東堂",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Aoi Todo",
+   "start": "2024-04-01",
+   "end": "2024-04-18",
+   "rerun": false,
+   "featured": [
+    "aoi_fight_together"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "aoi_fight_together",
+   "bg": "assets/pp/banners/bluetodobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "sword-option-2024-03",
+   "name": "Sword Option",
+   "kanji": "与",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Ultimate Mechamaru",
+   "start": "2024-03-22",
+   "end": "2024-04-04",
+   "rerun": false,
+   "featured": [
+    "mechamaru_sword_option"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "mechamaru_sword_option",
+   "bg": "assets/pp/banners/yellowmechamarubanner1.webp",
+   "art": true
+  },
+  {
+   "id": "desperate-struggle-2024-03",
+   "name": "Desperate Struggle",
+   "kanji": "東堂",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Aoi Todo / Maki Zen'in",
+   "start": "2024-03-14",
+   "end": "2024-03-21",
+   "rerun": false,
+   "featured": [
+    "todo_504",
+    "maki_503"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "todo_504",
+   "bg": "assets/pp/banners/todomakibanner2.webp",
+   "art": true
+  },
+  {
+   "id": "for-whom-does-the-heart-cry-2024-02",
+   "name": "For Whom Does The Heart Cry",
+   "kanji": "釘崎",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Nobara Kugisaki",
+   "start": "2024-02-29",
+   "end": "2024-03-21",
+   "rerun": false,
+   "featured": [
+    "nobara_worst_match"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "nobara_worst_match",
+   "bg": "assets/pp/banners/rednobarabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "determination-of-the-bloodline-2024-02",
+   "name": "Determination Of The Bloodline",
+   "kanji": "加茂",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Noritoshi Kamo / Momo Nishimiya",
+   "start": "2024-02-20",
+   "end": "2024-03-04",
+   "rerun": false,
+   "featured": [
+    "kamo_405",
+    "momo_underestimate"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kamo_405",
+   "bg": "assets/pp/banners/bluekamobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "don-t-underestimate-me-2024-02",
+   "name": "Don't Underestimate Me",
+   "kanji": "加茂",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Noritoshi Kamo / Momo Nishimiya",
+   "start": "2024-02-20",
+   "end": "2024-03-04",
+   "rerun": false,
+   "featured": [
+    "kamo_405",
+    "momo_underestimate"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "kamo_405",
+   "bg": "assets/pp/banners/bluemomobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "fraternal-bond-2024-02",
+   "name": "Fraternal Bond",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo / Maki Zen'in",
+   "start": "2024-02-13",
+   "end": "2024-02-19",
+   "rerun": false,
+   "featured": [
+    "satoru_hollow_technique",
+    "maki_503"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "satoru_hollow_technique",
+   "bg": "assets/pp/banners/hollowpurplebanner1.webp",
+   "art": true
+  },
+  {
+   "id": "gojo-satoru-s-memorable-holiday-2024-01",
+   "name": "Gojo Satoru's Memorable Holiday?",
+   "kanji": "五条",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Satoru Gojo",
+   "start": "2024-01-29",
+   "end": "2024-02-19",
+   "rerun": false,
+   "featured": [
+    "satoru_hollow_technique"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "satoru_hollow_technique",
+   "bg": "assets/pp/banners/greengojobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "i-will-follow-you-nanami-san-2024-01",
+   "name": "I Will Follow You, Nanami-san",
+   "kanji": "東堂",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Aoi Todo / Maki Zen'in",
+   "start": "2024-01-19",
+   "end": "2024-01-28",
+   "rerun": false,
+   "featured": [
+    "todo_504",
+    "maki_503"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "todo_504",
+   "bg": "assets/pp/banners/todomakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "nimble-body-2024-01",
+   "name": "Nimble Body",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Yuji Itadori",
+   "start": "2024-01-11",
+   "end": "2024-01-28",
+   "rerun": false,
+   "featured": [
+    "yuji_301"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yuji_301",
+   "bg": "assets/pp/banners/redyujibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "the-land-where-shadows-fall-2023-12",
+   "name": "The Land Where Shadows Fall",
+   "kanji": "伏黒",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Megumi Fushiguro",
+   "start": "2023-12-28",
+   "end": "2024-01-10",
+   "rerun": false,
+   "featured": [
+    "megumi_incomplete_domain"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "megumi_incomplete_domain",
+   "bg": "assets/pp/banners/yellowmegumibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "jujutsu-kaisen-0-part-3-2023-12",
+   "name": "Jujutsu Kaisen 0 - Part 3",
+   "kanji": "夏油",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Suguru Geto",
+   "start": "2023-12-18",
+   "end": "2024-01-03",
+   "rerun": false,
+   "featured": [
+    "geto_604"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "geto_604",
+   "bg": "assets/pp/banners/bluegetobanner1.webp",
+   "art": true
+  },
+  {
+   "id": "jujutsu-kaisen-0-part-2-2023-12",
+   "name": "Jujutsu Kaisen 0 - Part 2",
+   "kanji": "乙骨",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Yuta Okkotsu",
+   "start": "2023-12-15",
+   "end": "2024-01-03",
+   "rerun": false,
+   "featured": [
+    "yuta_601"
+   ],
+   "element": "Heart",
+   "exchangeAt": 250,
+   "hero": "yuta_601",
+   "bg": "assets/pp/banners/redyutabanner1.webp",
+   "art": true
+  },
+  {
+   "id": "jujutsu-kaisen-0-part-1-2023-12",
+   "name": "Jujutsu Kaisen 0 - Part 1",
+   "kanji": "パンダ",
+   "event": true,
+   "kind": "Movie-Limited",
+   "subtitle": "Movie-Limited · Panda / Toge Inumaki / Maki Zen'in",
+   "start": "2023-12-06",
+   "end": "2023-12-27",
+   "rerun": false,
+   "featured": [
+    "panda_at_shortest",
+    "toge_baton_counterattack",
+    "maki_weaker_curse"
+   ],
+   "element": "Body",
+   "exchangeAt": 250,
+   "hero": "panda_at_shortest",
+   "bg": "assets/pp/banners/srinumakibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "small-fry-and-reverse-retribution-2023-11",
+   "name": "Small Fry and Reverse Retribution",
+   "kanji": "順平",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Junpei Yoshino",
+   "start": "2023-11-30",
+   "end": "2023-12-09",
+   "rerun": false,
+   "featured": [
+    "junpei_misunderstand_value"
+   ],
+   "element": "Bravery",
+   "exchangeAt": 250,
+   "hero": "junpei_misunderstand_value",
+   "bg": "assets/pp/banners/yellowjunpeibanner1.webp",
+   "art": true
+  },
+  {
+   "id": "a-homesick-horizon-2023-11",
+   "name": "A Homesick Horizon",
+   "kanji": "虎杖",
+   "event": true,
+   "kind": "Pickup",
+   "subtitle": "Pickup · Yuji Itadori",
+   "start": "2023-11-21",
+   "end": "2023-12-05",
+   "rerun": false,
+   "featured": [
+    "yuji_501"
+   ],
+   "element": "Skill",
+   "exchangeAt": 250,
+   "hero": "yuji_501",
+   "bg": "assets/pp/banners/greenyujibanner1.webp",
+   "art": true
+  }
+ ],
+ "rates": {
+  "5": 97.5,
+  "6": 2.0,
+  "7": 0.5
+ },
+ "featuredShare": 50,
+ "cost": {
+  "single": {
+   "cubes": 300,
+   "tickets": 1
+  },
+  "multi": {
+   "cubes": 3000,
+   "tickets": 10
+  }
+ },
+ "multiGuarantee": 5,
+ "dailyCost": 100,
+ "gp": {
+  "exchangeAt": 250,
+  "convertPoints": 20,
+  "convertCards": 10,
+  "convertMax": 200,
+  "redeemMax": 100
+ }
+}
