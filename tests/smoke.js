@@ -155,7 +155,7 @@ async function gameFlow(browser) {
   await shot(p, '10-character-detail');
   await p.goto(BASE + 'missions.html#strengthen');
   await p.waitForSelector('.q-card');
-  check((await p.$$('.q-card')).length === 2 && (await p.$$('.mode-card')).length === 6, 'Quest hub: 6 modes, 2 Strengthening Quests');
+  check((await p.$$('.q-card')).length === 2 && (await p.$$('.mode-card')).length === 7, 'Quest hub: 7 modes (incl. Event), 2 Strengthening Quests');
   await shot(p, '10b-strengthen');
   await p.goto(BASE + 'shop.html#daily');
   await p.click('[data-buy="daily_gift"]');
@@ -207,6 +207,69 @@ async function codeRoundTrip(browser, code) {
   const fb = await p.evaluate(() => { const i = document.querySelector('.ucard[data-id="guest_nxbnvnb_kakashi_100"] img.art'); return !!i && i.src.startsWith('data:image/svg'); });
   check(fb, 'guest with broken art falls back to generated SVG');
   check(errs.every((e) => e.includes('deliberately-missing') || e.includes('Failed to load resource')), 'code round trip: no unexpected errors' + (errs.length ? '\n  ' + errs.join('\n  ') : ''));
+  await ctx.close();
+}
+
+// Map Event (event.html): story node, event battle -> medals, exchange, mission claim, layout
+async function eventFlow(browser) {
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 720 } });
+  const p = await ctx.newPage();
+  const errs = [];
+  watch(p, errs);
+  await p.goto(BASE + 'index.html');
+  await p.evaluate(() => {
+    Save.create('Event Tester');
+    Save.update((s) => {
+      const ids = ['maki_weaker_curse', 'panda_at_shortest', 'toge_baton_counterattack', 'shoko_reverse_curse'];
+      ids.forEach((id) => { s.units[id] = { id, level: 20, exp: 0, dupes: 0, obtained: Date.now() }; });
+      s.teams[0].slots = ids.slice(); s.settings.autoBattle = true; s.settings.battleSpeed = 3;
+    });
+  });
+  await p.goto(BASE + 'missions.html');
+  await p.click('[data-mode="event"]');
+  await p.waitForURL(/event\.html/);
+  await p.waitForSelector('.ev-node');
+  check((await p.$$('.ev-node')).length === 15 && (await p.textContent('#ev-cleared')).includes('0/30'), 'event map: 15 nodes on Shinjuku, Stages Cleared 0/30');
+  await shot(p, '14-event-map');
+  await p.click('.ev-node[data-node="sj-01"]');
+  for (let i = 0; i < 4; i++) { await p.click('[data-a="next"]'); if (!(await p.$('[data-a="next"]'))) break; }
+  await p.waitForTimeout(300);
+  let s = await save(p);
+  let e = (s.events || {}).ev_night_parade || {};
+  check(e.cleared && e.cleared['sj-01'] && e.tokens === 50, 'story node cleared, 50 medals');
+  await p.click('.ev-node[data-node="sj-02"]');
+  await p.click('#go');
+  await p.waitForURL(/battle\.html/);
+  await p.waitForSelector('.results', { timeout: 120000 });
+  await p.waitForTimeout(1600);
+  await shot(p, '15-event-battle-results');
+  s = await save(p);
+  e = s.events.ev_night_parade;
+  check(e.cleared['sj-02'] >= 1 && e.tokens === 210 && e.wins === 1 && !s.progress['sj-02'], 'event battle saved: medals ' + e.tokens + ', stars ' + e.cleared['sj-02']);
+  check(!!(await p.$('.results a[href^="event.html"]')), 'results link back to the Event Map');
+  await p.click('.results a[href^="event.html"]');
+  await p.waitForSelector('.ev-node');
+  const ls0 = (await save(p)).items.light_s;
+  await p.click('#ev-exchange');
+  await p.click('[data-buy="x_ls"]');
+  s = await save(p);
+  check(s.events.ev_night_parade.tokens === 190 && s.events.ev_night_parade.bought.x_ls === 1 && s.items.light_s === ls0 + 1, 'exchange: 20 medals -> Training Light (S)');
+  await p.keyboard.press('Escape');
+  await p.evaluate(() => Save.update((st) => { Object.assign(st.events.ev_night_parade.cleared, { 'sj-03': 1, 'sj-04': 1, 'sj-05': 1 }); }));
+  await p.click('#ev-missions');
+  await p.click('[data-claim="m_clear5"]');
+  s = await save(p);
+  check(s.events.ev_night_parade.missions.m_clear5 && s.events.ev_night_parade.tokens === 390, 'event mission claimed (+200 medals)');
+  await p.keyboard.press('Escape');
+  for (const [w, h] of [[844, 390], [390, 844]]) {
+    await p.setViewportSize({ width: w, height: h });
+    await p.goto(BASE + 'event.html');
+    await p.waitForSelector('.ev-node');
+    await p.waitForTimeout(300);
+    check(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'event map ' + w + 'x' + h + ': no horizontal page scroll');
+    await shot(p, '16-event-' + w + 'x' + h);
+  }
+  check(errs.length === 0, 'event flow: zero console/page errors' + (errs.length ? '\n  ' + errs.join('\n  ') : ''));
   await ctx.close();
 }
 
@@ -278,6 +341,7 @@ async function hubFlow(browser) {
     const code = await gameFlow(browser);
     await codeRoundTrip(browser, code);
     await hubFlow(browser);
+    await eventFlow(browser);
   } catch (err) {
     fails++;
     console.error('ERROR', err);

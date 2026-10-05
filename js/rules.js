@@ -235,6 +235,38 @@
     return res;
   }
 
+  /* ---------------- Map Events (data/events.json) ---------------- */
+  /** The save record for one event, created on first use. Call inside Save.update to change it. */
+  function eventStateOf(s, evId) {
+    if (!s.events || typeof s.events !== 'object') s.events = {};
+    const e = s.events[evId] = Object.assign({ tokens: 0, earned: 0, wins: 0, cleared: {}, missions: {}, bought: {} }, s.events[evId] || {});
+    for (const k of ['cleared', 'missions', 'bought']) if (!e[k] || typeof e[k] !== 'object') e[k] = {};
+    return e;
+  }
+  /** A node opens once any node listed in its `from` is cleared (none listed: open from the start). */
+  function eventNodeOpen(s, ev, node) {
+    const e = s && s.events && s.events[ev.id];
+    return !node.from || !node.from.length || node.from.some((id) => !!(e && e.cleared[id]));
+  }
+  /** Rewards for winning an event battle node, inside a Save.update. Same as
+   *  grantClearTo (JP, EXP, drops, first-clear bonus) plus event tokens; the
+   *  clear is kept in s.events[ev.id].cleared, not s.progress. */
+  function grantEventClearTo(s, ev, node, opts) {
+    const e = eventStateOf(s, ev.id);
+    const first = !e.cleared[node.id];
+    const had = s.progress[node.id];
+    if (first) delete s.progress[node.id];
+    else s.progress[node.id] = { stars: e.cleared[node.id], clears: 1, best: Infinity };
+    const res = grantClearTo(s, node, opts);
+    if (had) s.progress[node.id] = had; else delete s.progress[node.id];
+    e.cleared[node.id] = Math.max((opts && opts.stars) || 1, e.cleared[node.id] || 0);
+    e.wins = (e.wins || 0) + 1;
+    res.medals = ((node.rewards && node.rewards.medals) || 0) + (first ? ((node.firstClear && node.firstClear.medals) || 0) : 0);
+    e.tokens += res.medals;
+    e.earned += res.medals;
+    return res;
+  }
+
   global.Rules = {
     ELEMENTS, ELEMENT_KANJI, STRONG_VS, ADV_MULT, DISADV_MULT, elementMult,
     BATTLE, MAX_LEVEL, expToNext, DUPE_BONUS, MAX_DUPES,
@@ -242,5 +274,6 @@
     unitDef, maxLevelOf, statsAt, power, ownedUnit, unitView, ownedList,
     addUnitTo, addExpTo, staminaNow, spendStamina, addStaminaTo, addRankExpTo,
     teamIds, teamPower, today, questRuns, addQuestRunTo, grantClearTo,
+    eventStateOf, eventNodeOpen, grantEventClearTo,
   };
 })(window);

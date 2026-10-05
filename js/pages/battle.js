@@ -11,24 +11,37 @@
   let current = null;         // acting unit
   let speed = 1, auto = false;
   let teamUnitIds = [], supportId = null;
+  let backHref = 'missions.html';   // event battles go back to event.html
 
   const wait = (ms) => new Promise((r) => setTimeout(r, ms / speed));
   const unitEl = (key) => document.querySelector(`.bu[data-key="${key}"]`);
 
   /* ---------------- setup ---------------- */
   function fail(msg) {
-    $('#main').innerHTML = `<div class="jjk-panel error-panel"><h2>Cannot start battle</h2><p>${esc(msg)}</p><a class="jjk-btn is-primary" href="missions.html">Back to Missions</a></div>`;
+    $('#main').innerHTML = `<div class="jjk-panel error-panel"><h2>Cannot start battle</h2><p>${esc(msg)}</p><a class="jjk-btn is-primary" href="${esc(backHref)}">${backHref.startsWith('event') ? 'Back to Event Map' : 'Back to Missions'}</a></div>`;
   }
 
-  function setup(M) {
+  function setup(M, EV) {
     const q = new URLSearchParams(location.search);
     const sid = q.get('stage');
     teamIdx = Math.max(0, Math.min(2, Number(q.get('team')) || 0));
     for (const c of M.chapters.concat(M.quests || [])) for (const st of c.stages) if (st.id === sid) { stage = st; chapter = c; }
+    // Map Event battle nodes (data/events.json): battle / elite / boss
+    if (!stage) for (const ev of (EV && EV.events) || []) for (const area of ev.areas) for (const n of area.nodes) {
+      if (n.id === sid && n.waves) {
+        stage = n;
+        chapter = { id: ev.id, mode: 'event', ev, area, name: area.name + ' · ' + ev.name, scale: n.scale || ev.scale || 1, bg: area.art || ev.bg, element: ev.element };
+        backHref = 'event.html#' + area.id;
+        const back = $('.jjk-back');
+        if (back) back.setAttribute('href', backHref);
+      }
+    }
     if (!stage) return fail('Unknown mission "' + (sid || '') + '".');
     const s = Save.get();
     // stage must be unlocked; Strengthening Quests also have a daily run limit
-    if (chapter.mode === 'strengthen') {
+    if (chapter.mode === 'event') {
+      if (!Rules.eventNodeOpen(s, chapter.ev, stage)) return fail('Clear the previous stage on the Event Map first.');
+    } else if (chapter.mode === 'strengthen') {
       if (stage.unlock && !s.progress[stage.unlock]) return fail('Clear Main Quest ' + stage.unlock + ' first.');
       if (Rules.questRuns(s, chapter.id) >= chapter.daily) return fail('No ' + chapter.name + ' runs left today. They reset tomorrow.');
     } else {
@@ -117,7 +130,7 @@
     const back = $('.jjk-back');
     if (back) back.addEventListener('click', async (e) => {
       e.preventDefault();
-      if (S.over || await UI.confirm('Retreat from battle? The AP spent is not refunded.', 'Retreat', 'Retreat')) location.href = 'missions.html';
+      if (S.over || await UI.confirm('Retreat from battle? The AP spent is not refunded.', 'Retreat', 'Retreat')) location.href = backHref;
     });
     paint();
   }
@@ -314,7 +327,7 @@
 
   async function loop() {
     paint();
-    await showBanner(`<small>${esc(stage.id)} · ${esc(chapter.name)}</small><b>${esc(stage.name)}</b>`, 'start', 1000);
+    await showBanner(`<small>${esc(stage.label || stage.id)} · ${esc(chapter.name)}</small><b>${esc(stage.name)}</b>`, 'start', 1000);
     let guard = 0;
     while (!S.over && guard++ < 5000) {
       const t = E.nextTurn(S);
@@ -356,7 +369,8 @@
       s.stats.battles++;
       if (!win) return;
       s.stats.wins++;
-      res = Rules.grantClearTo(s, stage, { team: teamUnitIds, support: supportId, stars, round: S.round, quest: chapter.mode === 'strengthen' ? chapter.id : null });
+      const opts = { team: teamUnitIds, support: supportId, stars, round: S.round, quest: chapter.mode === 'strengthen' ? chapter.id : null };
+      res = chapter.mode === 'event' ? Rules.grantEventClearTo(s, chapter.ev, stage, opts) : Rules.grantClearTo(s, stage, opts);
     });
     UI.sfx(win ? 'win' : 'lose');
     const leveled = res.levels.filter((l) => l.to > l.from).map((l) => l.id);
@@ -371,10 +385,11 @@
     const ov = document.createElement('div');
     ov.className = 'results ' + (win ? 'is-win' : 'is-lose');
     ov.innerHTML = `<div class="res-box jjk-panel">
-      <div class="res-head"><span class="res-k">${win ? '任務完了' : '敗北'}</span><h2 class="res-title">${win ? 'MISSION CLEAR' : 'DEFEAT'}</h2><span class="res-sub">${esc(stage.id + ' · ' + stage.name)}</span></div>
+      <div class="res-head"><span class="res-k">${win ? '任務完了' : '敗北'}</span><h2 class="res-title">${win ? 'MISSION CLEAR' : 'DEFEAT'}</h2><span class="res-sub">${esc((stage.label ? chapter.area.name + ' ' + stage.label : stage.id) + ' · ' + stage.name)}</span></div>
       ${win ? `<div class="res-stars">${conds.map((c, i) => `<div class="res-star pp-card${c.ok ? ' on' : ''}" style="--d:${0.2 + i * 0.25}s"><i>★</i><small>${esc(c.text)}</small></div>`).join('')}</div>
       <div class="res-rewards">
         <span class="rw">${UI.YEN_SVG} ${fmt(r.yen)} JP</span><span class="rw">Rank EXP +${fmt(r.rankExp)}${res.rankUps ? ' · <b class="gold">RANK UP!</b>' : ''}</span>
+        ${res.medals ? `<span class="rw ev-medal-rw"><img class="cur-ic" src="${esc(chapter.ev.currency.icon)}" alt=""> +${fmt(res.medals)} ${esc(chapter.ev.currency.name)}s</span>` : ''}
         ${itemLine(res.drops)}
         ${res.first ? `<span class="rw first">First clear: ${res.first.cubes ? UI.CUBE_SVG + ' ' + fmt(res.first.cubes) + ' Cubes ' : ''}</span>${itemLine(res.first.items)}` : ''}
       </div>
@@ -387,7 +402,7 @@
       <div class="modal-actions">
         ${PortalPort.session ? '<button class="jjk-btn" type="button" id="res-portal">Return to Portal</button>' : ''}
         <a class="jjk-btn" href="home.html">Home</a>
-        <a class="jjk-btn" href="missions.html#${esc(chapter.id)}">Missions</a>
+        ${chapter.mode === 'event' ? '' : `<a class="jjk-btn" href="missions.html#${esc(chapter.id)}">Missions</a>`}
         <button class="jjk-btn${win ? '' : ' is-primary'}" type="button" id="retry">Retry · ${stage.stamina} ${UI.icon('bolt')}</button>
         <span id="next-slot"></span>
       </div></div>`;
@@ -399,7 +414,8 @@
       if (Rules.staminaNow().cur < stage.stamina) { UI.toast('Not enough AP — refill it in the Shop.', 'bad'); return; }
       location.reload();
     });
-    if (win && chapter.mode === 'strengthen') $('#next-slot', ov).innerHTML = `<a class="jjk-btn is-primary" href="missions.html#${esc(chapter.id)}">Back to ${esc(chapter.name)}</a>`;
+    if (chapter.mode === 'event') $('#next-slot', ov).innerHTML = `<a class="jjk-btn${win ? ' is-primary' : ''}" href="${esc(backHref)}">Back to Event Map</a>`;
+    else if (win && chapter.mode === 'strengthen') $('#next-slot', ov).innerHTML = `<a class="jjk-btn is-primary" href="missions.html#${esc(chapter.id)}">Back to ${esc(chapter.name)}</a>`;
     else if (win) list.then((M) => {
       const all = M.chapters.flatMap((c) => c.stages);
       const nx = all[all.indexOf(all.find((x) => x.id === stage.id)) + 1];
@@ -410,7 +426,7 @@
   UI.boot({
     back: 'missions.html', nav: false, hud: false,
     data: ['characters', 'enemies', 'missions', 'items'],
-    init: () => Promise.all([Data.load('missions'), Data.load('items')]).then(([M, it]) => { ITEMS = it.items; setup(M); }),
+    init: () => Promise.all([Data.load('missions'), Data.load('items'), Data.load('events')]).then(([M, it, EV]) => { ITEMS = it.items; setup(M, EV); }),
   });
   // test hook: lets automated smoke tests read the battle state
   window.__battle = () => S;

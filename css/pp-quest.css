@@ -1,6 +1,6 @@
 /* Quest hub (missions.html): Phantom Parade mode tiles, Strengthening Quests.
    Mode art from the fan wiki's Beginner's Guide (assets/pp/modes). */
-.mode-cards { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; padding: 2px 0 10px; }
+.mode-cards { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; padding: 2px 0 10px; }
 .mode-card { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 104px; padding: 7px 8px 8px; border: 0; font: inherit; }
 .mode-card .parch-art { inset: 7px 7px 30%; background-position: center 40%;
   -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); mask-image: linear-gradient(180deg, #000 60%, transparent); }

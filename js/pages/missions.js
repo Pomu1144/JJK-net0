@@ -18,6 +18,7 @@
     { id: 'domain', name: 'Domain Investigation', kanji: '領域調査', art: 'domain', soon: true },
     { id: 'foes', name: 'Formidable Foes', kanji: '強敵邂逅', art: 'foes', soon: true },
     { id: 'tower', name: 'Illusory Tower', kanji: '夢幻廻楼', art: 'tower', soon: true },
+    { id: 'event', name: 'Event', kanji: 'イベント', art: '../memories/night-out-between-sorcerers/art', href: 'event.html' },
   ];
   const STAR_TEXT = '1★ clear · 2★ at most 1 character defeated · 3★ no characters defeated';
 
@@ -198,6 +199,8 @@
     $('#modes').addEventListener('click', (e) => {
       const b = e.target.closest('[data-mode]');
       if (!b || b.disabled) return;
+      const tile = MODES.find((m) => m.id === b.dataset.mode);
+      if (tile && tile.href) { location.href = tile.href; return; }
       mode = b.dataset.mode;
       history.replaceState(null, '', '#' + (mode === 'main' ? M.chapters[chIdx].id : 'strengthen'));
       UI.sfx('tap');
