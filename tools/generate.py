@@ -386,6 +386,8 @@ ITEMS = {
     'light_l': {'name': 'Training Light (L)', 'kind': 'exp', 'exp': 20000, 'jp': 2000, 'kanji': '燈', 'icon': 'assets/pp/currency/training-light.webp',
                 'desc': 'A blazing Training Light. +20,000 character EXP (costs 2,000 JP to use).'},
     'ticket': {'name': 'Draw Ticket', 'kind': 'ticket', 'kanji': '札', 'desc': 'One free draw on any banner. Earns a Gacha Point like any draw.'},
+    'ssr_ticket': {'name': 'SSR-Character Guaranteed Ticket', 'kind': 'ssr', 'kanji': '確', 'icon': 'assets/pp/currency/gacha-card.webp',
+                   'desc': 'One draw that is always an SSR character. Reward for finishing all 7 days of Novice Missions.'},
     'gp_card': {'name': 'Gacha Point Card', 'kind': 'gp', 'kanji': '点', 'icon': 'assets/pp/currency/gacha-card.webp',
                 'desc': 'Worth 1 Gacha Point on any pickup banner (up to 100 per banner). Made by converting 20 Gacha Points into 10 cards.'},
 }
@@ -420,8 +422,44 @@ BANNERS = {'banners': [
     {'id': 'king', 'name': 'King of Curses', 'kanji': '呪いの王', 'subtitle': 'Limited: Ryomen Sukuna rate up',
      'featured': ['sukuna_9006', 'sukuna_9007', 'jogo_610', 'mahito_609'], 'element': 'Heart', 'exchangeAt': 250, 'hero': 'sukuna_9006'},
 ], 'rates': {'5': 97.5, '6': 2.0, '7': 0.5}, 'featuredShare': 50,
-   'cost': {'single': {'cubes': 300, 'tickets': 1}, 'multi': {'cubes': 3000, 'tickets': 10}}, 'multiGuarantee': 5,
+   'cost': {'single': {'cubes': 300, 'tickets': 1}, 'multi': {'cubes': 3000, 'tickets': 10}}, 'multiGuarantee': 5, 'dailyCost': 100,
    'gp': {'exchangeAt': 250, 'convertPoints': 20, 'convertCards': 10, 'convertMax': 200, 'redeemMax': 100}}
+
+
+# ---------------------------------------------------------------------------
+# Event banners: the Japanese server's gacha history (fan wiki "Timeline Of
+# Events (JP)"), parsed into tools/pp-banners.json. Featured units are wiki
+# page titles, mapped to unit ids through tools/pp-new-units.json; a banner
+# keeps only featured units that are in the game (i.e. have art) and is
+# dropped if none are.
+def event_banners(chars):
+    by_id = {c['id']: c for c in chars}
+    path = os.path.join(HERE, 'pp-banners.json')
+    if not os.path.exists(path):
+        return []
+    map_path = os.environ.get('PP_UNIT_MAP') or os.path.join(HERE, 'pp-new-units.json')
+    ids = json.load(open(map_path)) if os.path.exists(map_path) else {}
+    norm = lambda s: ' '.join(''.join(ch if ch.isalnum() else ' ' for ch in s.lower()).split())
+    ids_n = {norm(k): v for k, v in ids.items()}
+    out = []
+    for b in json.load(open(path)):
+        feat = []
+        for title in b['featured']:
+            uid = ids.get(title) or ids_n.get(norm(title))
+            if uid in by_id and uid not in feat:
+                feat.append(uid)
+        if not feat:
+            continue
+        hero = by_id[feat[0]]
+        slug = ''.join(ch if ch.isalnum() else '-' for ch in os.path.splitext(b['file'])[0].lower())
+        slug = '-'.join(x for x in slug.split('-') if x)
+        out.append({'id': b['id'], 'name': b['name'], 'kanji': hero.get('kanji', ''), 'event': True, 'kind': b['kind'],
+                    'subtitle': f"{b['kind']} · " + ' / '.join(by_id[f]['name'] for f in feat),
+                    'start': b['start'], 'end': b['end'], 'rerun': b['rerun'],
+                    'featured': feat, 'element': hero['element'], 'exchangeAt': 250, 'hero': feat[0],
+                    'bg': f'assets/pp/banners/{slug}.webp', 'art': True})
+    out.sort(key=lambda x: x['start'], reverse=True)
+    return out
 
 
 def main():
@@ -436,6 +474,7 @@ def main():
     out('data/enemies.json', cast_enemies())
     out('data/missions.json', MISSIONS)
     out('data/items.json', {'items': ITEMS, 'shop': SHOP})
+    BANNERS['banners'] = [b for b in BANNERS['banners'] if not b.get('event')] + event_banners(chars)
     out('data/banners.json', BANNERS)
     print(len(chars), 'characters,', len(ENEMIES), 'enemies,', sum(len(c['stages']) for c in MISSIONS['chapters']), 'stages')
 

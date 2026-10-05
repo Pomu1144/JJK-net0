@@ -55,43 +55,105 @@
 
   function costFor(kind) {
     const s = Save.get();
+    if (kind === 'daily') {
+      const used = s.daily.gacha_daily === Rules.today();
+      return { type: 'cubes', n: B.dailyCost || 100, label: fmt(B.dailyCost || 100) + ' Cubes', short: used || s.currency.cubes < (B.dailyCost || 100), used };
+    }
     const c = B.cost[kind];
     if ((s.items.ticket || 0) >= c.tickets) return { type: 'ticket', n: c.tickets, label: c.tickets + ' Ticket' + (c.tickets > 1 ? 's' : '') };
     return { type: 'cubes', n: c.cubes, label: fmt(c.cubes) + ' Cubes', short: s.currency.cubes < c.cubes };
+  }
+
+  function timerText(b) {
+    if (!b.event) return b.exchangeAt ? 'Limited · permanent' : 'Permanent';
+    if (isLive(b) && b.end) {
+      const ms = new Date(b.end + 'T23:59:59').getTime() - Date.now();
+      const d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
+      return 'Ends in ' + (d ? d + 'd ' : '') + h + 'h ' + m + 'm';
+    }
+    const [y, mo] = b.start.split('-');
+    return 'JP ' + MONTHS[+mo - 1] + ' ' + y + (b.rerun ? ' · Rerun' : '');
   }
 
   function drawPanel() {
     const s = Save.get();
     const b = current;
     const hero = Data.char(b.hero);
-    const one = costFor('single'), ten = costFor('multi');
+    const one = costFor('single'), ten = costFor('multi'), day = costFor('daily');
     const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
-    $('#banner-art').innerHTML = `
-      <div class="ban-stage t-${UI.typeOf(b.element).toLowerCase()}">
-        ${b.bg ? `<div class="scene-bg" style="background-image:url('${esc(b.bg)}')"></div>` : ''}
-        ${hero ? Art.img(hero, 'full', { cls: 'ban-hero', eager: true, alt: '' }) : ''}
-        <span class="ban-kanji">${esc(b.kanji)}</span>
-        <div class="ban-copy"><span class="pk-label">${b.featured.length ? 'PICKUP' : 'STANDARD'}</span>
-          <h2 class="ban-title">${esc(b.name)}</h2><p>${esc(b.subtitle)}</p></div>
-        ${feats.length ? `<div class="ban-film"><span class="film-holes"></span><div class="ban-feat">${feats.map((d) => UI.unitTile(d, { tag: 'span' })).join('')}</div><span class="film-holes"></span></div>` : ''}
-        ${b.exchangeAt ? `<span class="ban-rate">SSR rate up · ${B.featuredShare}%</span>` : ''}
-      </div>`;
-    $('#side').innerHTML = `
-      <h3>${esc(b.name)}</h3>
-      ${b.exchangeAt ? gpHtml(s, b) : '<p class="muted" style="font-size:11.5px;margin:0">The standard banner has no Gacha Points. Every 10x draw guarantees an SR or better.</p>'}
-      <button class="draw-btn is-single" id="pull1" type="button" ${one.short ? 'disabled' : ''}><span class="n">1<small>回</small></span><span class="t">Summon ×1<small>${one.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(one.label)}</small></span></button>
-      <button class="draw-btn is-multi" id="pull10" type="button" ${ten.short ? 'disabled' : ''}><span class="n">10<small>回</small></span><span class="t">Summon ×10<small>${ten.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(ten.label)}</small></span></button>
-      <div class="row" style="gap:6px;margin-top:6px"><button class="jjk-btn is-small grow" id="rates" type="button">Rates</button><a class="jjk-btn is-small grow" href="shop.html#summon">Get Cubes</a></div>
-      <small class="muted have">You have ${UI.CUBE_SVG} ${fmt(s.currency.cubes)} · ${UI.itemIcon('ticket', {})} ${s.items.ticket || 0}${s.items.gp_card ? ' · ' + UI.GP_ICON + ' ' + s.items.gp_card : ''}</small>`;
+    const t = UI.typeOf(b.element).toLowerCase();
+    $('#g-bg').className = 'g-bg t-' + t;
+    $('#g-bg').innerHTML = `${b.bg ? `<img class="g-blur" src="${esc(b.bg)}" alt="" aria-hidden="true">` : ''}
+      ${hero ? Art.img(hero, 'full', { cls: 'g-hero', eager: true, alt: '' }) : ''}
+      ${hero ? `<div class="g-tag">${UI.rarityBadge(hero)}<span><small>${esc(hero.title || '')}</small><b>${esc(hero.name)}</b></span>${UI.typeBadge(hero)}</div>` : ''}`;
+    $('#g-info').innerHTML = `
+      <div class="g-logo${b.event ? ' is-art' : ''}">${b.event ? `<img src="${esc(b.bg)}" alt="${esc(b.name)} banner">` : `<span class="g-logo-k">${esc(b.kanji)}</span>`}
+        <span class="g-kind">${esc(b.event ? b.kind : b.featured.length ? 'Pickup' : 'Standard')}</span>${isLive(b) ? '<span class="g-kind is-live">LIVE</span>' : ''}</div>
+      <h2 class="g-title">${esc(b.name)}</h2>
+      <div class="g-desc">${b.event ? `JP server · ${esc(dateRange(b))}<br>` : ''}${feats.length ? `Featured SSR rate up: ${B.featuredShare}% of SSR draws.<br>${b.exchangeAt ? `Every draw earns 1 Gacha Point; ${b.exchangeAt} points = any featured unit.` : ''}` : 'Every sorcerer and curse in the game. Every 10x draw guarantees SR or better.'}</div>
+      ${feats.length ? `<div class="g-feat">${feats.map((d) => UI.unitTile(d, { tag: 'span' })).join('')}</div>` : ''}
+      <div class="g-btns"><button class="pp-stone" type="button" id="details">Details</button><button class="pp-stone" type="button" id="rates">Gacha Details</button><button class="pp-stone" type="button" id="history">History</button></div>`;
+    $('#g-draws').innerHTML = `
+      <div class="g-pull-row">
+        <button class="g-pull is-daily" id="pull-daily" type="button" ${day.short ? 'disabled' : ''}><em>${day.used ? 'Drawn today' : 'Once a day'}</em><b>Limited ×1</b><small>${UI.CUBE_SVG} ${fmt(day.n)}</small></button>
+        <button class="g-pull" id="pull1" type="button" ${one.short ? 'disabled' : ''}><b>Draw ×1</b><small>${one.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(one.label)}</small></button>
+        <button class="g-pull is-multi" id="pull10" type="button" ${ten.short ? 'disabled' : ''}><em>SR or better guaranteed</em><b>Draw ×10</b><small>${ten.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG} ${esc(ten.label)}</small></button>
+        ${s.items.ssr_ticket ? `<button class="g-pull is-ssr" id="pull-ssr" type="button"><em>×${s.items.ssr_ticket}</em><b>SSR Ticket</b><small>SSR guaranteed</small></button>` : ''}
+      </div>
+      <div class="g-pt">${b.exchangeAt ? gpHtml(s, b) : '<span class="muted">No Gacha Points on the standard banner</span>'}
+        <a class="pp-stone g-small" href="shop.html#summon">Recharge</a></div>`;
     $('#pull1').addEventListener('click', () => doPull('single'));
+    $('#pull10').addEventListener('click', () => doPull('multi'));
+    $('#pull-daily').addEventListener('click', () => doPull('daily'));
+    if ($('#pull-ssr')) $('#pull-ssr').addEventListener('click', ssrTicket);
     if (b.exchangeAt) {
       $('#gp-exchange').addEventListener('click', exchange);
       $('#gp-convert').addEventListener('click', convert);
       $('#gp-redeem').addEventListener('click', redeem);
     }
-    $('#pull10').addEventListener('click', () => doPull('multi'));
     $('#rates').addEventListener('click', showRates);
-    $$('#banners .ban-tab').forEach((t) => t.classList.toggle('active', t.dataset.id === b.id));
+    $('#details').addEventListener('click', showDetails);
+    $('#history').addEventListener('click', showHistory);
+    $$('#banners .ban-tab').forEach((x) => x.classList.toggle('active', x.dataset.id === b.id));
+    const at = $('#banners .ban-tab.active');
+    if (at && at.scrollIntoView) at.scrollIntoView({ block: 'nearest' });
+  }
+
+  function showDetails() {
+    const b = current;
+    const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
+    UI.modal(`${b.event ? `<p class="muted" style="margin-top:0">${esc(b.kind)} gacha · Japanese server ${esc(dateRange(b))}${b.rerun ? ' (rerun)' : ''}. Replayed here from the fan wiki's event timeline.</p>` : ''}
+      ${feats.length ? `<div class="gp-pick">${feats.map((d) => `<div class="gp-unit">${UI.unitTile(d, { tag: 'span' })}<small>${esc(d.title || '')}<br><b>${esc(d.name)}</b></small></div>`).join('')}</div>` : '<p>Every unit in the game can appear.</p>'}`,
+    { title: b.name, sub: 'ガチャ詳細' });
+  }
+
+  function showHistory() {
+    const log = (Save.get().gachaLog || []).slice().reverse();
+    UI.modal(log.length ? `<table class="rates g-hist"><thead><tr><th>Unit</th><th>Banner</th><th>When</th></tr></thead><tbody>${log.map((r) => {
+      const d = Data.char(r.id);
+      const bn = B.banners.find((x) => x.id === r.b);
+      return `<tr><td>${d ? UI.rarityBadge(d) + ' ' + esc(d.name) + ' <small class="muted">' + esc(d.title || '') + '</small>' : esc(r.id)}</td><td>${esc(bn ? bn.name : r.b)}</td><td class="muted">${new Date(r.t).toLocaleString()}</td></tr>`;
+    }).join('')}</tbody></table>` : '<p class="muted">No draws yet.</p>', { title: 'Gacha History', sub: '最近100件' });
+  }
+
+  /** SSR-Character Guaranteed Ticket (Novice Mission reward): one SSR from the whole pool. */
+  function ssrTicket() {
+    let got = null;
+    Save.update((s) => {
+      if (!(s.items.ssr_ticket > 0)) return;
+      s.items.ssr_ticket--;
+      const p = pool(6);
+      const def = p[Math.floor(Math.random() * p.length)];
+      got = Object.assign({ def }, Rules.addUnitTo(s, def.id, 1));
+      logPulls(s, 'ssr_ticket', [got]);
+    });
+    if (got) { reveal([got], 'exchange'); drawPanel(); }
+  }
+
+  function logPulls(s, bid, results) {
+    if (!Array.isArray(s.gachaLog)) s.gachaLog = [];
+    results.forEach((r) => s.gachaLog.push({ t: Date.now(), b: bid, id: r.def.id }));
+    if (s.gachaLog.length > 100) s.gachaLog.splice(0, s.gachaLog.length - 100);
   }
 
   function gpHtml(s, b) {
@@ -171,12 +233,14 @@
     const cost = costFor(kind);
     let results = null;
     const ok = Save.update((s) => {
-      if (cost.type === 'ticket') { if ((s.items.ticket || 0) < cost.n) return false; s.items.ticket -= cost.n; }
+      if (kind === 'daily') { if (s.daily.gacha_daily === Rules.today() || s.currency.cubes < cost.n) return false; s.currency.cubes -= cost.n; s.daily.gacha_daily = Rules.today(); }
+      else if (cost.type === 'ticket') { if ((s.items.ticket || 0) < cost.n) return false; s.items.ticket -= cost.n; }
       else { if (s.currency.cubes < cost.n) return false; s.currency.cubes -= cost.n; }
       results = pull(s, current, n);
+      logPulls(s, current.id, results);
       return true;
     });
-    if (!ok) { UI.toast('Not enough Cubes — visit the Shop.', 'bad'); return; }
+    if (!ok) { UI.toast(kind === 'daily' ? 'The Limited ×1 draw is once a day.' : 'Not enough Cubes — visit the Shop.', 'bad'); return; }
     reveal(results, kind);
     drawPanel();
   }
@@ -194,7 +258,7 @@
             <div class="rcard-front">${UI.unitTile(r.def, { tag: 'span', badge: r.isNew ? '<span class="uc-badge badge is-new">NEW</span>' : r.dupe ? `<span class="uc-badge badge">LB ${r.dupe}</span>` : r.yen ? `<span class="uc-badge badge">${fmt(r.yen)} JP</span>` : '' })}</div>
           </div></div>`).join('')}</div>
       <div class="reveal-actions"><button class="jjk-btn" id="rv-skip" type="button">Skip</button>
-        ${kind === 'exchange' ? '' : `<button class="jjk-btn" id="rv-again" type="button" hidden>Summon ${kind === 'multi' ? '×10' : '×1'} again</button>`}
+        ${kind === 'exchange' || kind === 'daily' ? '' : `<button class="jjk-btn" id="rv-again" type="button" hidden>Summon ${kind === 'multi' ? '×10' : '×1'} again</button>`}
         <button class="jjk-btn is-primary rv-back" id="rv-close" type="button" hidden>Back to Summon</button></div>`;
     document.body.appendChild(ov);
     UI.sfx('pull');
@@ -212,24 +276,66 @@
     if ($('#rv-again', ov)) $('#rv-again', ov).addEventListener('click', () => { ov.remove(); doPull(kind); });
   }
 
+  /* Event banners replay the Japanese server's gacha history (fan wiki
+   * "Timeline Of Events (JP)"). Every one can be drawn on; the ones whose
+   * original JP dates include today are marked LIVE. */
+  const today = () => Rules.today();
+  const isLive = (b) => b.event && b.start <= today() && (!b.end || b.end >= today());
+  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const fmtDay = (d) => { const [y, m, dd] = d.split('-'); return +dd + ' ' + MONTHS[+m - 1] + ' ' + y; };
+  const dateRange = (b) => fmtDay(b.start) + (b.end ? ' – ' + fmtDay(b.end) : '');
+  let listTab = 'live';
+
+  function tabHtml(b) {
+    const h = Data.char(b.hero);
+    const img = b.event ? `<img src="${esc(b.bg)}" alt="" loading="lazy">` : h ? Art.img(h, 'full', { alt: '' }) : '';
+    return `<button class="ban-tab${b.event ? ' is-event' : ''}${isLive(b) ? ' is-live' : ''}" data-id="${esc(b.id)}" type="button" title="${esc(b.name)}">${img}<span>${esc(b.name)}</span></button><small class="ban-time" data-id="${esc(b.id)}">${esc(timerText(b))}</small>`;
+  }
+
+  function drawList() {
+    const events = B.banners.filter((b) => b.event);
+    let live = events.filter(isLive);
+    const liveLabel = live.length ? 'Live now' : 'Latest';
+    if (!live.length) live = events.slice(0, 4);
+    let body = '';
+    if (listTab === 'live') body = `<small class="ban-group">${liveLabel}</small>` + live.map(tabHtml).join('');
+    else if (listTab === 'events') {
+      let month = '';
+      body = events.map((b) => {
+        const m = b.start.slice(0, 7);
+        const head = m !== month ? `<small class="ban-group">${MONTHS[+m.slice(5) - 1]} ${m.slice(0, 4)}</small>` : '';
+        month = m;
+        return head + tabHtml(b);
+      }).join('');
+    } else body = B.banners.filter((b) => !b.event).map(tabHtml).join('');
+    $('#banners').innerHTML = `<div class="ban-filter" role="tablist">${[['live', 'Live'], ['events', 'Events'], ['standard', 'Standard']].map(([k, l]) => `<button type="button" role="tab" data-list="${k}" class="${k === listTab ? 'on' : ''}" aria-selected="${k === listTab}">${l}</button>`).join('')}</div>
+      <div class="ban-scroll">${body}</div>`;
+    $$('#banners .ban-tab').forEach((t) => t.classList.toggle('active', !!current && t.dataset.id === current.id));
+  }
+
   function render() {
-    $('#main').innerHTML = `<div class="summon">
-      <aside class="ban-list jjk-panel" id="banners"><h4>Banners</h4>${B.banners.map((b) => {
-        const h = Data.char(b.hero);
-        return `<button class="ban-tab el-${b.element.toLowerCase()}" data-id="${b.id}" type="button">${h ? Art.img(h, 'full', { alt: '' }) : ''}<span>${esc(b.name)}</span></button>`;
-      }).join('')}</aside>
-      <section class="ban-main" id="banner-art"></section>
-      <aside class="ban-side jjk-panel" id="side"></aside>
+    $('#main').innerHTML = `<div class="gacha">
+      <div class="g-bg" id="g-bg"></div>
+      <aside class="g-list" id="banners"></aside>
+      <aside class="g-info" id="g-info"></aside>
+      <div class="g-draws" id="g-draws"></div>
     </div>`;
     $('#banners').addEventListener('click', (e) => {
+      const f = e.target.closest('[data-list]');
+      if (f) { listTab = f.dataset.list; drawList(); return; }
       const t = e.target.closest('.ban-tab');
       if (!t) return;
       current = B.banners.find((b) => b.id === t.dataset.id);
       history.replaceState(null, '', '#' + current.id);
+      UI.sfx('tap');
       drawPanel();
     });
-    current = B.banners.find((b) => b.id === location.hash.slice(1)) || B.banners[1] || B.banners[0];
+    const events = B.banners.filter((b) => b.event);
+    current = B.banners.find((b) => b.id === location.hash.slice(1)) || events.find(isLive) || events[0] || B.banners[1] || B.banners[0];
+    listTab = !current.event ? 'standard' : isLive(current) || events.slice(0, 4).includes(current) ? 'live' : 'events';
+    drawList();
     drawPanel();
+    setInterval(() => $$('#banners .ban-time').forEach((el) => { const b = B.banners.find((x) => x.id === el.dataset.id); if (b) el.textContent = timerText(b); }), 60000);
   }
 
   UI.boot({ data: ['characters', 'banners'], init: () => Data.load('banners').then((b) => { B = b; render(); }) });

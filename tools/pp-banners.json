@@ -1,0 +1,1767 @@
+[
+ {
+  "id": "a-homesick-horizon-2023-11",
+  "name": "A Homesick Horizon",
+  "kind": "Pickup",
+  "start": "2023-11-21",
+  "end": "2023-12-05",
+  "rerun": false,
+  "featured": [
+   "(Cursed Energy Flashes Black) Yuji Itadori"
+  ],
+  "file": "GreenYujiBanner1.jpg",
+  "label": "Pickup Gacha: A Homesick Horizon"
+ },
+ {
+  "id": "small-fry-and-reverse-retribution-2023-11",
+  "name": "Small Fry and Reverse Retribution",
+  "kind": "Pickup",
+  "start": "2023-11-30",
+  "end": "2023-12-09",
+  "rerun": false,
+  "featured": [
+   "(Small Fry and Reverse Retribution) Junpei Yoshino"
+  ],
+  "file": "YellowJunpeiBanner1.jpg",
+  "label": "Pickup Gacha: Small Fry and Reverse Retribution"
+ },
+ {
+  "id": "jujutsu-kaisen-0-part-1-2023-12",
+  "name": "Jujutsu Kaisen 0 - Part 1",
+  "kind": "Movie-Limited",
+  "start": "2023-12-06",
+  "end": "2023-12-27",
+  "rerun": false,
+  "featured": [
+   "(The Shortest Route) Panda",
+   "(Baton of Counterattack) Toge Inumaki",
+   "(Curses Team Up If They're Weak) Maki Zen'in"
+  ],
+  "file": "SRInumakiBanner1.jpg",
+  "label": "Movie-Limited Gacha: Jujutsu Kaisen 0 - Part 1"
+ },
+ {
+  "id": "jujutsu-kaisen-0-part-2-2023-12",
+  "name": "Jujutsu Kaisen 0 - Part 2",
+  "kind": "Movie-Limited",
+  "start": "2023-12-15",
+  "end": "2024-01-03",
+  "rerun": false,
+  "featured": [
+   "(Lend Me Your Power) Yuta Okkotsu"
+  ],
+  "file": "RedYutaBanner1.png",
+  "label": "Movie-Limited Gacha: Jujutsu Kaisen 0 - Part 2"
+ },
+ {
+  "id": "jujutsu-kaisen-0-part-3-2023-12",
+  "name": "Jujutsu Kaisen 0 - Part 3",
+  "kind": "Movie-Limited",
+  "start": "2023-12-18",
+  "end": "2024-01-03",
+  "rerun": false,
+  "featured": [
+   "(This Is Justice) Suguru Geto"
+  ],
+  "file": "BlueGetoBanner1.png",
+  "label": "Movie-Limited Gacha: Jujutsu Kaisen 0 - Part 3"
+ },
+ {
+  "id": "the-land-where-shadows-fall-2023-12",
+  "name": "The Land Where Shadows Fall",
+  "kind": "Pickup",
+  "start": "2023-12-28",
+  "end": "2024-01-10",
+  "rerun": false,
+  "featured": [
+   "(Incomplete Domain) Megumi Fushiguro"
+  ],
+  "file": "YellowMegumiBanner1.jpg",
+  "label": "Pickup Gacha: The Land Where Shadows Fall"
+ },
+ {
+  "id": "nimble-body-2024-01",
+  "name": "Nimble Body",
+  "kind": "Pickup",
+  "start": "2024-01-11",
+  "end": "2024-01-28",
+  "rerun": false,
+  "featured": [
+   "(Nimble Body) Yuji Itadori"
+  ],
+  "file": "RedYujiBanner1.png",
+  "label": "Pickup Gacha: Nimble Body"
+ },
+ {
+  "id": "i-will-follow-you-nanami-san-2024-01",
+  "name": "I Will Follow You, Nanami-san",
+  "kind": "Pickup",
+  "start": "2024-01-19",
+  "end": "2024-01-28",
+  "rerun": false,
+  "featured": [
+   "(Blast From The Past) Aoi Todo",
+   "(Maverick Outcast) Maki Zen'in"
+  ],
+  "file": "TodoMakiBanner1.jpg",
+  "label": "Pickup Gacha: I Will Follow You, Nanami-san"
+ },
+ {
+  "id": "gojo-satoru-s-memorable-holiday-2024-01",
+  "name": "Gojo Satoru's Memorable Holiday?",
+  "kind": "Pickup",
+  "start": "2024-01-29",
+  "end": "2024-02-19",
+  "rerun": false,
+  "featured": [
+   "(Hollow Technique: Purple) Satoru Gojo"
+  ],
+  "file": "GreenGojoBanner1.jpg",
+  "label": "Pickup Gacha: Gojo Satoru's Memorable Holiday?"
+ },
+ {
+  "id": "fraternal-bond-2024-02",
+  "name": "Fraternal Bond",
+  "kind": "Pickup",
+  "start": "2024-02-13",
+  "end": "2024-02-19",
+  "rerun": false,
+  "featured": [
+   "(Hollow Technique: Purple) Satoru Gojo",
+   "(Maverick Outcast) Maki Zen'in"
+  ],
+  "file": "HollowPurpleBanner1.jpg",
+  "label": "Pickup Gacha: Fraternal Bond"
+ },
+ {
+  "id": "determination-of-the-bloodline-2024-02",
+  "name": "Determination Of The Bloodline",
+  "kind": "Pickup",
+  "start": "2024-02-20",
+  "end": "2024-03-04",
+  "rerun": false,
+  "featured": [
+   "(Blood Borne Resolve) Noritoshi Kamo",
+   "(Don't Look Down On Me) Momo Nishimiya"
+  ],
+  "file": "BlueKamoBanner1.jpg",
+  "label": "Pickup Gacha: Determination Of The Bloodline"
+ },
+ {
+  "id": "don-t-underestimate-me-2024-02",
+  "name": "Don't Underestimate Me",
+  "kind": "Pickup",
+  "start": "2024-02-20",
+  "end": "2024-03-04",
+  "rerun": false,
+  "featured": [
+   "(Blood Borne Resolve) Noritoshi Kamo",
+   "(Don't Look Down On Me) Momo Nishimiya"
+  ],
+  "file": "BlueMomoBanner1.jpg",
+  "label": "Pickup Gacha: Don't Underestimate Me"
+ },
+ {
+  "id": "for-whom-does-the-heart-cry-2024-02",
+  "name": "For Whom Does The Heart Cry",
+  "kind": "Pickup",
+  "start": "2024-02-29",
+  "end": "2024-03-21",
+  "rerun": false,
+  "featured": [
+   "(A Bad Match) Nobara Kugisaki"
+  ],
+  "file": "RedNobaraBanner1.jpg",
+  "label": "Pickup Gacha: For Whom Does The Heart Cry"
+ },
+ {
+  "id": "desperate-struggle-2024-03",
+  "name": "Desperate Struggle",
+  "kind": "Pickup",
+  "start": "2024-03-14",
+  "end": "2024-03-21",
+  "rerun": false,
+  "featured": [
+   "(Blast From The Past) Aoi Todo",
+   "(Maverick Outcast) Maki Zen'in"
+  ],
+  "file": "TodoMakiBanner2.jpg",
+  "label": "Pickup Gacha: Desperate Struggle"
+ },
+ {
+  "id": "sword-option-2024-03",
+  "name": "Sword Option",
+  "kind": "Pickup",
+  "start": "2024-03-22",
+  "end": "2024-04-04",
+  "rerun": false,
+  "featured": [
+   "(Sword Option) Ultimate Mechamaru"
+  ],
+  "file": "YellowMechamaruBanner1.jpg",
+  "label": "Pickup Gacha: Sword Option"
+ },
+ {
+  "id": "brothers-2024-04",
+  "name": "Brothers",
+  "kind": "Pickup",
+  "start": "2024-04-01",
+  "end": "2024-04-18",
+  "rerun": false,
+  "featured": [
+   "(With Takada-Chan) Aoi Todo"
+  ],
+  "file": "BlueTodoBanner1.png",
+  "label": "Pickup Gacha: Brothers"
+ },
+ {
+  "id": "cursed-energy-infusion-2024-04",
+  "name": "Cursed Energy Infusion",
+  "kind": "Pickup",
+  "start": "2024-04-12",
+  "end": "2024-05-03",
+  "rerun": false,
+  "featured": [
+   "(Cursed Energy Focusing) Yuji Itadori",
+   "(Inspiration Of Death) Mahito"
+  ],
+  "file": "BlueYujiBanner1.jpg",
+  "label": "Pickup Gacha: Cursed Energy Infusion"
+ },
+ {
+  "id": "need-help-2024-04",
+  "name": "Need Help?",
+  "kind": "Pickup",
+  "start": "2024-04-19",
+  "end": "2024-05-03",
+  "rerun": false,
+  "featured": [
+   "(Need Some Help?) Panda"
+  ],
+  "file": "RedPandaBanner1.jpg",
+  "label": "Pickup Gacha: Need Help?"
+ },
+ {
+  "id": "rain-and-foosteps-2024-04",
+  "name": "Rain And Foosteps",
+  "kind": "Pickup",
+  "start": "2024-04-30",
+  "end": "2024-05-20",
+  "rerun": false,
+  "featured": [
+   "(Overtime Work) Kento Nanami"
+  ],
+  "file": "YellowNanamiBanner1.jpg",
+  "label": "Pickup Gacha: Rain And Foosteps"
+ },
+ {
+  "id": "believe-in-each-other-2024-05",
+  "name": "Believe in Each Other",
+  "kind": "Pickup",
+  "start": "2024-05-14",
+  "end": "2024-05-20",
+  "rerun": false,
+  "featured": [
+   "(Resolved Cursed Speech) Toge Inumaki",
+   "(Girl Of Steel) Nobara Kugisaki"
+  ],
+  "file": "TogeNobaraBanner1.jpg",
+  "label": "Pickup Gacha: Believe in Each Other"
+ },
+ {
+  "id": "doctor-s-pride-2024-05",
+  "name": "Doctor's Pride",
+  "kind": "Pickup",
+  "start": "2024-05-17",
+  "end": "2024-06-03",
+  "rerun": false,
+  "featured": [
+   "(The Strongest) Satoru Gojo",
+   "(Inherited Cursed Technique) Megumi Fushiguro"
+  ],
+  "file": "GojoMegumiBanner1.jpg",
+  "label": "Pickup Gacha: Doctor's Pride"
+ },
+ {
+  "id": "hidden-inventory-premature-death-1-2024-05",
+  "name": "Hidden Inventory / Premature Death 1",
+  "kind": "Pickup",
+  "start": "2024-05-21",
+  "end": "2024-07-03",
+  "rerun": false,
+  "featured": [
+   "(The Strongest Blue) Satoru Gojo (Teen)"
+  ],
+  "file": "YellowGojoBanner0.jpg",
+  "label": "Pickup Gacha: Hidden Inventory / Premature Death 1"
+ },
+ {
+  "id": "hidden-inventory-premature-death-2-2024-05",
+  "name": "Hidden Inventory / Premature Death 2",
+  "kind": "Pickup",
+  "start": "2024-05-31",
+  "end": "2024-07-03",
+  "rerun": false,
+  "featured": [
+   "(To Protect Non-Sorcerers) Suguru Geto (Teen)"
+  ],
+  "file": "GreenGetoBanner1.jpg",
+  "label": "Pickup Gacha: Hidden Inventory / Premature Death 2"
+ },
+ {
+  "id": "hidden-inventory-premature-death-3-2024-06",
+  "name": "Hidden Inventory / Premature Death 3",
+  "kind": "Pickup",
+  "start": "2024-06-03",
+  "end": "2024-07-03",
+  "rerun": false,
+  "featured": [
+   "(The Sorcerer Killer) Toji Fushiguro"
+  ],
+  "file": "RedTojiBanner1.jpg",
+  "label": "Pickup Gacha: Hidden Inventory / Premature Death 3"
+ },
+ {
+  "id": "the-worst-match-nimble-body-2024-06",
+  "name": "The Worst Match / Nimble Body",
+  "kind": "Pickup",
+  "start": "2024-06-12",
+  "end": "2024-06-24",
+  "rerun": false,
+  "featured": [
+   "(Nimble Body) Yuji Itadori"
+  ],
+  "file": "YujiNobaraBanner1.jpg",
+  "label": "Pickup Gacha: The Worst Match / Nimble Body"
+ },
+ {
+  "id": "tokyo-fukuoka-exchange-2024-06",
+  "name": "Tokyo Fukuoka Exchange",
+  "kind": "Pickup",
+  "start": "2024-06-20",
+  "end": "2024-07-04",
+  "rerun": false,
+  "featured": [
+   "(Resolved Cursed Speech) Toge Inumaki",
+   "(Girl Of Steel) Nobara Kugisaki"
+  ],
+  "file": "TogeNobaraBanner2.jpg",
+  "label": "Pickup Gacha: Tokyo Fukuoka Exchange"
+ },
+ {
+  "id": "a-sorcerer-s-balance-2024-06",
+  "name": "A Sorcerer's Balance",
+  "kind": "Pickup",
+  "start": "2024-06-28",
+  "end": "2024-07-18",
+  "rerun": false,
+  "featured": [
+   "(Zanshin) Kasumi Miwa"
+  ],
+  "file": "BlueMiwaBanner1.jpg",
+  "label": "Pickup Gacha: A Sorcerer's Balance"
+ },
+ {
+  "id": "determination-in-the-blood-don-t-underestimate-m-2024-07",
+  "name": "Determination In The Blood / Don't Underestimate Me",
+  "kind": "Pickup",
+  "start": "2024-07-08",
+  "end": "2024-07-20",
+  "rerun": false,
+  "featured": [
+   "(Blood Borne Resolve) Noritoshi Kamo",
+   "(Don't Look Down On Me) Momo Nishimiya"
+  ],
+  "file": "KamoMomoBanner1.jpg",
+  "label": "Pickup Gacha: Determination In The Blood / Don't Underestimate Me"
+ },
+ {
+  "id": "heart-s-resolve-2024-07",
+  "name": "Heart's Resolve",
+  "kind": "Pickup",
+  "start": "2024-07-16",
+  "end": "2024-08-03",
+  "rerun": false,
+  "featured": [
+   "(Heart's Resolve) Saki Rindo"
+  ],
+  "file": "GreenSakiBanner1.jpg",
+  "label": "Pickup Gacha: Heart's Resolve"
+ },
+ {
+  "id": "hollow-technique-purple-2024-07",
+  "name": "Hollow Technique: Purple",
+  "kind": "Pickup",
+  "start": "2024-07-21",
+  "end": "2024-08-03",
+  "rerun": false,
+  "featured": [
+   "(Hollow Technique: Purple) Satoru Gojo"
+  ],
+  "file": "GreenGojoBanner2.jpg",
+  "label": "Pickup Gacha: Hollow Technique: Purple"
+ },
+ {
+  "id": "principals-tribulations-2024-07",
+  "name": "Principals' Tribulations",
+  "kind": "Pickup",
+  "start": "2024-07-30",
+  "end": "2024-08-19",
+  "rerun": false,
+  "featured": [
+   "(Cursed Corpse Battle) Masamichi Yaga",
+   "(Cursed Energy Melody) Yoshinobu Gakuganji"
+  ],
+  "file": "YagaBanner1.jpg",
+  "label": "Pickup Gacha: Principals' Tribulations"
+ },
+ {
+  "id": "small-fry-and-reverse-retribution-incomplete-dom-2024-08",
+  "name": "Small Fry and Reverse Retribution / Incomplete Domain",
+  "kind": "Pickup",
+  "start": "2024-08-09",
+  "end": "2024-08-20",
+  "rerun": false,
+  "featured": [
+   "(Small Fry and Reverse Retribution) Junpei Yoshino",
+   "(Incomplete Domain) Megumi Fushiguro"
+  ],
+  "file": "JunpeiMegumiBanner1.png",
+  "label": "Pickup Gacha: Small Fry and Reverse Retribution / Incomplete Domain"
+ },
+ {
+  "id": "hidden-inventory-premature-death-1-rerun-2024-08",
+  "name": "Hidden Inventory / Premature Death 1 Rerun",
+  "kind": "Pickup",
+  "start": "2024-08-16",
+  "end": "2024-09-02",
+  "rerun": true,
+  "featured": [
+   "(The Strongest Blue) Satoru Gojo (Teen)"
+  ],
+  "file": "YellowGojoBanner1.jpg",
+  "label": "Pickup Gacha: Hidden Inventory / Premature Death 1 Rerun"
+ },
+ {
+  "id": "first-grade-sorcerer-s-skill-2024-08",
+  "name": "First-Grade Sorcerer's Skill",
+  "kind": "Pickup",
+  "start": "2024-08-20",
+  "end": "2024-09-03",
+  "rerun": false,
+  "featured": [
+   "(First-Grade Sorcerer's Skill) Kento Nanami"
+  ],
+  "file": "NanamiBanner1.jpg",
+  "label": "Pickup Gacha: First-Grade Sorcerer's Skill"
+ },
+ {
+  "id": "dancing-amongst-the-flowers-2024-08",
+  "name": "Dancing Amongst The Flowers",
+  "kind": "Pickup",
+  "start": "2024-08-30",
+  "end": "2024-09-19",
+  "rerun": false,
+  "featured": [
+   "(Longsword Battle) Maki Zen'in"
+  ],
+  "file": "GreenMakiBanner1.jpg",
+  "label": "Pickup Gacha: Dancing Amongst The Flowers"
+ },
+ {
+  "id": "hidden-inventory-premature-death-2-rerun-2024-09",
+  "name": "Hidden Inventory / Premature Death 2 Rerun",
+  "kind": "Pickup",
+  "start": "2024-09-10",
+  "end": "2024-09-19",
+  "rerun": true,
+  "featured": [
+   "(To Protect Non-Sorcerers) Suguru Geto (Teen)"
+  ],
+  "file": "GreenGetoBanner2.jpg",
+  "label": "Pickup Gacha: Hidden Inventory / Premature Death 2 Rerun"
+ },
+ {
+  "id": "the-final-bullet-2024-09",
+  "name": "The Final Bullet",
+  "kind": "Pickup",
+  "start": "2024-09-20",
+  "end": "2024-10-04",
+  "rerun": false,
+  "featured": [
+   "(The Final Bullet) Mai Zen'in"
+  ],
+  "file": "MaiBanner.jpg",
+  "label": "Pickup Gacha: The Final Bullet"
+ },
+ {
+  "id": "words-beget-curses-2024-09",
+  "name": "Words Beget Curses",
+  "kind": "Pickup",
+  "start": "2024-09-30",
+  "end": "2024-10-21",
+  "rerun": false,
+  "featured": [
+   "(Shatter To Pieces) Toge Inumaki"
+  ],
+  "file": "BlueInumakiBanner1.jpg",
+  "label": "Pickup Gacha: Words Beget Curses"
+ },
+ {
+  "id": "hidden-inventory-premature-death-3-rerun-2024-10",
+  "name": "Hidden Inventory / Premature Death 3 Rerun",
+  "kind": "Pickup",
+  "start": "2024-10-17",
+  "end": "2024-11-02",
+  "rerun": true,
+  "featured": [
+   "(The Sorcerer Killer) Toji Fushiguro"
+  ],
+  "file": "RedTojiBanner2.jpg",
+  "label": "Pickup Gacha: Hidden Inventory / Premature Death 3 Rerun"
+ },
+ {
+  "id": "keep-hammering-at-them-2024-10",
+  "name": "Keep Hammering At Them",
+  "kind": "Pickup",
+  "start": "2024-10-22",
+  "end": "2024-11-07",
+  "rerun": false,
+  "featured": [
+   "(Keep Hammering At Them) Nobara Kugisaki"
+  ],
+  "file": "NobaraBanner2.jpg",
+  "label": "Pickup Gacha: Keep Hammering At Them"
+ },
+ {
+  "id": "kyushu-records-2024-10",
+  "name": "Kyushu Records",
+  "kind": "Pickup",
+  "start": "2024-10-31",
+  "end": "2024-11-20",
+  "rerun": false,
+  "featured": [
+   "(Bond of Friendship) Megumi Fushiguro"
+  ],
+  "file": "GreenMegumiBanner1.jpg",
+  "label": "Pickup Gacha: Kyushu Records"
+ },
+ {
+  "id": "hollow-technique-purple-heart-s-resolve-2024-11",
+  "name": "Hollow Technique: Purple, Heart's Resolve",
+  "kind": "Pickup",
+  "start": "2024-11-06",
+  "end": "2024-11-20",
+  "rerun": false,
+  "featured": [
+   "(Hollow Technique: Purple) Satoru Gojo",
+   "(Heart's Resolve) Saki Rindo"
+  ],
+  "file": "GreenGojo&SakiBanner1.jpeg",
+  "label": "Pickup Gacha: Hollow Technique: Purple, Heart's Resolve"
+ },
+ {
+  "id": "overtime-work-sword-option-2024-11",
+  "name": "Overtime Work / Sword Option",
+  "kind": "Pickup",
+  "start": "2024-11-12",
+  "end": "2024-11-20",
+  "rerun": false,
+  "featured": [
+   "(Overtime Work) Kento Nanami",
+   "(Sword Option) Ultimate Mechamaru"
+  ],
+  "file": "NanamiMechamaruBanner.jpg",
+  "label": "Pickup Gacha: Overtime Work / Sword Option"
+ },
+ {
+  "id": "with-that-will-in-mind-2024-11",
+  "name": "With That Will In Mind",
+  "kind": "Featured",
+  "start": "2024-11-17",
+  "end": "2024-12-03",
+  "rerun": false,
+  "featured": [
+   "(With That Will In Mind) Kaito Yuki"
+  ],
+  "file": "SSRYellowKaitoBanner1.jpeg",
+  "label": "Featured Gacha: With That Will In Mind"
+ },
+ {
+  "id": "magnificent-phantom-ship-part-1-2024-11",
+  "name": "Magnificent Phantom Ship, Part 1",
+  "kind": "Limited",
+  "start": "2024-11-21",
+  "end": "2024-12-19",
+  "rerun": false,
+  "featured": [
+   "(Zone) Yuji Itadori"
+  ],
+  "file": "1stYearAnniBanner(Pt1).jpeg",
+  "label": "Limited-Time Gacha: Magnificent Phantom Ship, Part 1"
+ },
+ {
+  "id": "magnificent-phantom-ship-part-2-2024-11",
+  "name": "Magnificent Phantom Ship, Part 2",
+  "kind": "Limited",
+  "start": "2024-11-29",
+  "end": "2024-12-19",
+  "rerun": false,
+  "featured": [
+   "(Within Infinity) Satoru Gojo"
+  ],
+  "file": "1stYearAnniBanner(Pt2).jpeg",
+  "label": "Limited-Time Gacha: Magnificent Phantom Ship, Part 2"
+ },
+ {
+  "id": "jujutsu-kaisen-0-part-1-2024-12",
+  "name": "Jujutsu Kaisen 0 - Part 1",
+  "kind": "Movie-Limited",
+  "start": "2024-12-13",
+  "end": "2025-01-03",
+  "rerun": false,
+  "featured": [
+   "(Lend Me Your Power) Yuta Okkotsu"
+  ],
+  "file": "RedYutaBanner2.jpg",
+  "label": "Movie-Limited Gacha: Jujutsu Kaisen 0 - Part 1"
+ },
+ {
+  "id": "jujutsu-kaisen-0-part-2-2024-12",
+  "name": "Jujutsu Kaisen 0 - Part 2",
+  "kind": "Movie-Limited",
+  "start": "2024-12-13",
+  "end": "2025-01-03",
+  "rerun": false,
+  "featured": [
+   "(Delayed Quota) Miguel"
+  ],
+  "file": "BlueMiguelBanner1.jpg",
+  "label": "Movie-Limited Gacha: Jujutsu Kaisen 0 - Part 2"
+ },
+ {
+  "id": "jujutsu-kaisen-0-part-3-2024-12",
+  "name": "Jujutsu Kaisen 0 - Part 3",
+  "kind": "Movie-Limited",
+  "start": "2024-12-20",
+  "end": "2025-01-03",
+  "rerun": false,
+  "featured": [
+   "(This Is Justice) Suguru Geto"
+  ],
+  "file": "BlueGetoBanner1.png",
+  "label": "Movie-Limited Gacha: Jujutsu Kaisen 0 - Part 3"
+ },
+ {
+  "id": "ijichi-s-report-sukuna-s-finger-2024-12",
+  "name": "Ijichi's Report: Sukuna's Finger",
+  "kind": "Limited",
+  "start": "2024-12-30",
+  "end": "2025-01-20",
+  "rerun": false,
+  "featured": [
+   "(Genuine Jujutsu) Ryomen Sukuna"
+  ],
+  "file": "BlueSukunaBanner1.png",
+  "label": "Limited-Time Gacha: Ijichi's Report: Sukuna's Finger"
+ },
+ {
+  "id": "zanshin-shatter-to-pieces-first-grade-sorcerer-s-2025-01",
+  "name": "Zanshin & Shatter To Pieces & First-Grade Sorcerer's Skill",
+  "kind": "Pickup",
+  "start": "2025-01-14",
+  "end": "2025-01-25",
+  "rerun": false,
+  "featured": [
+   "(First-Grade Sorcerer's Skill) Kento Nanami",
+   "(Shatter To Pieces) Toge Inumaki",
+   "(Zanshin) Kasumi Miwa"
+  ],
+  "file": "BlueMiwa&Toge&NanamiBanner1.png",
+  "label": "PickUp Gacha: Zanshin & Shatter To Pieces & First-Grade Sorcerer's Skill"
+ },
+ {
+  "id": "sprinting-2025-01",
+  "name": "Sprinting",
+  "kind": "Featured",
+  "start": "2025-01-23",
+  "end": "2025-02-04",
+  "rerun": false,
+  "featured": [
+   "(Sprinting) Kasumi Miwa"
+  ],
+  "file": "GreenMiwaBanner1.jpg",
+  "label": "Featured Gacha: Sprinting"
+ },
+ {
+  "id": "the-false-hero-2025-01",
+  "name": "The False Hero",
+  "kind": "Featured",
+  "start": "2025-01-31",
+  "end": "2025-02-18",
+  "rerun": false,
+  "featured": [
+   "(I've Seen It All) Kokichi Muta"
+  ],
+  "file": "GreenKokichiBanner1.jpg",
+  "label": "Featured Gacha: The False Hero"
+ },
+ {
+  "id": "to-protect-non-sorcerers-longsword-battle-2025-02",
+  "name": "To Protect Non-Sorcerers / Longsword Battle",
+  "kind": "Featured",
+  "start": "2025-02-12",
+  "end": "2025-02-23",
+  "rerun": false,
+  "featured": [
+   "(To Protect Non-Sorcerers) Suguru Geto (Teen)",
+   "(Longsword Battle) Maki Zen'in"
+  ],
+  "file": "GetoMakiBanner1.jpg",
+  "label": "Featured Gacha: To Protect Non-Sorcerers / Longsword Battle"
+ },
+ {
+  "id": "night-lurking-sorcerer-2025-02",
+  "name": "Night-Lurking Sorcerer",
+  "kind": "Featured",
+  "start": "2025-02-19",
+  "end": "2025-03-04",
+  "rerun": false,
+  "featured": [
+   "(Night-Lurking Sorcerer) Toge Inumaki"
+  ],
+  "file": "RedInumakiBanner1.png",
+  "label": "Featured Gacha: Night-Lurking Sorcerer"
+ },
+ {
+  "id": "shoko-ieiri-s-longest-day-2025-02",
+  "name": "Shoko Ieiri's Longest Day",
+  "kind": "Featured",
+  "start": "2025-02-28",
+  "end": "2025-03-20",
+  "rerun": false,
+  "featured": [
+   "(Life Saver) Shoko Ieiri"
+  ],
+  "file": "YellowShokoBanner1.jpg",
+  "label": "Featured Gacha: Shoko Ieiri's Longest Day"
+ },
+ {
+  "id": "the-strongest-blue-cursed-corpse-battle-2025-03",
+  "name": "The Strongest Blue&Cursed Corpse Battle",
+  "kind": "Featured",
+  "start": "2025-03-14",
+  "end": "2025-03-25",
+  "rerun": false,
+  "featured": [
+   "(Cursed Corpse Battle) Masamichi Yaga",
+   "(The Strongest Blue) Satoru Gojo (Teen)"
+  ],
+  "file": "TeenjoYagaBanner1.png",
+  "label": "Featured Gacha: The Strongest Blue&Cursed Corpse Battle"
+ },
+ {
+  "id": "early-morning-departure-2025-03",
+  "name": "Early Morning Departure",
+  "kind": "Featured",
+  "start": "2025-03-21",
+  "end": "2025-04-05",
+  "rerun": false,
+  "featured": [
+   "(Early Morning Departure) Maki Zen'in"
+  ],
+  "file": "BlueSSRMakiBanner1.png",
+  "label": "Featured Gacha: Early Morning Departure"
+ },
+ {
+  "id": "time-money-lie-2025-03",
+  "name": "Time= Money + Lie",
+  "kind": "Featured",
+  "start": "2025-03-31",
+  "end": "2025-04-20",
+  "rerun": false,
+  "featured": [
+   "(Night Of Dancing Crows) Mei Mei"
+  ],
+  "file": "RedSSRMeiMeiBanner1.png",
+  "label": "Featured Gacha: Time= Money + Lie"
+ },
+ {
+  "id": "sorcerer-killer-the-final-bullet-2025-04",
+  "name": "Sorcerer Killer & The Final Bullet",
+  "kind": "Featured",
+  "start": "2025-04-14",
+  "end": "2025-04-25",
+  "rerun": false,
+  "featured": [
+   "(The Final Bullet) Mai Zen'in"
+  ],
+  "file": "ZeninBanner1.png",
+  "label": "Featured Gacha: Sorcerer Killer & The Final Bullet"
+ },
+ {
+  "id": "let-s-rescue-satoru-gojo-2025-04",
+  "name": "Let's Rescue Satoru Gojo!",
+  "kind": "Pickup",
+  "start": "2025-04-23",
+  "end": "2025-05-07",
+  "rerun": false,
+  "featured": [
+   "(A Bad Match) Nobara Kugisaki",
+   "(Incomplete Domain) Megumi Fushiguro"
+  ],
+  "file": "GojoRescueBanner1.png",
+  "label": "Pickup Gacha: \"Let's Rescue Satoru Gojo!\""
+ },
+ {
+  "id": "no-conceit-2025-04",
+  "name": "No Conceit",
+  "kind": "Featured",
+  "start": "2025-04-28",
+  "end": "2025-05-20",
+  "rerun": false,
+  "featured": [
+   "(No Conceit) Takuma Ino"
+  ],
+  "file": "BlueSSRInoBanner1.png",
+  "label": "Featured Gacha: No Conceit"
+ },
+ {
+  "id": "shatter-to-pieces-2025-05",
+  "name": "Shatter To Pieces",
+  "kind": "Type Pickup",
+  "start": "2025-05-07",
+  "end": "2025-05-18",
+  "rerun": false,
+  "featured": [
+   "(Shatter To Pieces) Toge Inumaki"
+  ],
+  "file": "BlueTypeBanner1.png",
+  "label": "Blue Type PickUp Gacha: Shatter To Pieces"
+ },
+ {
+  "id": "with-that-will-in-mind-2025-05",
+  "name": "With That Will In Mind",
+  "kind": "Pickup",
+  "start": "2025-05-14",
+  "end": "2025-05-20",
+  "rerun": false,
+  "featured": [
+   "(With That Will In Mind) Kaito Yuki"
+  ],
+  "file": "YellowSSRKaitoRerunBanner1.png",
+  "label": "PickUp Gacha: With That Will In Mind"
+ },
+ {
+  "id": "awakening-2025-05",
+  "name": "Awakening",
+  "kind": "Limited",
+  "start": "2025-05-21",
+  "end": "2025-07-03",
+  "rerun": false,
+  "featured": [
+   "(Awakening) Satoru Gojo (Teen)"
+  ],
+  "file": "GreenSSRGojoBanner2.png",
+  "label": "Limited-Time Gacha: Awakening"
+ },
+ {
+  "id": "zone-2025-05",
+  "name": "Zone",
+  "kind": "Limited",
+  "start": "2025-05-21",
+  "end": "2025-06-10",
+  "rerun": false,
+  "featured": [
+   "(Zone) Yuji Itadori"
+  ],
+  "file": "YellowSSRYujiRerunBanner1.png",
+  "label": "Limited-Time Gacha: Zone"
+ },
+ {
+  "id": "fwoo-hyoi-2025-05",
+  "name": "Fwoo\", \"Hyoi",
+  "kind": "Limited",
+  "start": "2025-05-30",
+  "end": "2025-07-03",
+  "rerun": false,
+  "featured": [
+   "(\"Fwoo Hyoi\") Shoko Ieiri (Teen)"
+  ],
+  "file": "GreenSSRShokoBanner1.png",
+  "label": "Limited-Time Gacha: \"Fwoo\", \"Hyoi\""
+ },
+ {
+  "id": "0-5th-anniversary-rerun-2025-05",
+  "name": "0.5th Anniversary Rerun",
+  "kind": "Pickup",
+  "start": "2025-05-30",
+  "end": "2025-07-03",
+  "rerun": true,
+  "featured": [
+   "(The Strongest Blue) Satoru Gojo (Teen)",
+   "(To Protect Non-Sorcerers) Suguru Geto (Teen)",
+   "(The Sorcerer Killer) Toji Fushiguro"
+  ],
+  "file": "0.5thAnniRerun.png",
+  "label": "PickUp Gacha: 0.5th Anniversary Rerun"
+ },
+ {
+  "id": "within-infinity-2025-06",
+  "name": "Within Infinity",
+  "kind": "Limited",
+  "start": "2025-06-11",
+  "end": "2025-07-03",
+  "rerun": false,
+  "featured": [
+   "(Within Infinity) Satoru Gojo"
+  ],
+  "file": "RedSSRGojoRerunBanner1.png",
+  "label": "Limited-Time Gacha: Within Infinity"
+ },
+ {
+  "id": "early-morning-departure-2025-06",
+  "name": "Early Morning Departure",
+  "kind": "Featured",
+  "start": "2025-06-20",
+  "end": "2025-07-04",
+  "rerun": false,
+  "featured": [
+   "(Early Morning Departure) Maki Zen'in"
+  ],
+  "file": "BlueSSRMakiBanner2.png",
+  "label": "Featured Gacha: Early Morning Departure"
+ },
+ {
+  "id": "promising-new-student-2025-06",
+  "name": "Promising New Student",
+  "kind": "Limited",
+  "start": "2025-06-30",
+  "end": "2025-07-30",
+  "rerun": false,
+  "featured": [
+   "(Promising New Student) Kento Nanami (Teen)"
+  ],
+  "file": "RedSSRNanamiBanner1.png",
+  "label": "Limited-Time Gacha: Promising New Student"
+ },
+ {
+  "id": "genuine-jujutsu-2025-07",
+  "name": "Genuine Jujutsu",
+  "kind": "Limited",
+  "start": "2025-07-04",
+  "end": "2025-08-02",
+  "rerun": false,
+  "featured": [
+   "(Genuine Jujutsu) Ryomen Sukuna"
+  ],
+  "file": "BlueSukunaBanner2.png",
+  "label": "Limited-Time Gacha: Genuine Jujutsu"
+ },
+ {
+  "id": "night-of-dancing-crows-night-lurking-sorcerer-2025-07",
+  "name": "Night Of Dancing Crows & Night-Lurking Sorcerer",
+  "kind": "Type Pickup",
+  "start": "2025-07-14",
+  "end": "2025-07-26",
+  "rerun": false,
+  "featured": [
+   "(Night-Lurking Sorcerer) Toge Inumaki",
+   "(Night Of Dancing Crows) Mei Mei"
+  ],
+  "file": "RedTypeBanner1.png",
+  "label": "Red Type PickUp Gacha: Night Of Dancing Crows & Night-Lurking Sorcerer"
+ },
+ {
+  "id": "cursed-spirit-school-group-2025-07",
+  "name": "Cursed Spirit School Group",
+  "kind": "Featured",
+  "start": "2025-07-22",
+  "end": "2025-08-04",
+  "rerun": false,
+  "featured": [
+   "(Life Saver) Shoko Ieiri"
+  ],
+  "file": "YellowShokoBanner2.png",
+  "label": "Featured Gacha: Cursed Spirit School Group"
+ },
+ {
+  "id": "the-days-of-cursed-spirits-2025-07",
+  "name": "The Days of Cursed Spirits",
+  "kind": "Featured",
+  "start": "2025-07-31",
+  "end": "2025-08-20",
+  "rerun": false,
+  "featured": [
+   "(Fulfilling His Duty as the Older Brother) Choso"
+  ],
+  "file": "GreenSSRChosoBanner1.png",
+  "label": "Featured Gacha: The Days of Cursed Spirits"
+ },
+ {
+  "id": "cursed-corpse-battle-with-that-will-in-mind-2025-08",
+  "name": "Cursed Corpse Battle & With That Will In Mind",
+  "kind": "Type Pickup",
+  "start": "2025-08-12",
+  "end": "2025-08-23",
+  "rerun": false,
+  "featured": [
+   "(With That Will In Mind) Kaito Yuki",
+   "(Cursed Corpse Battle) Masamichi Yaga"
+  ],
+  "file": "YellowTypeBanner1.png",
+  "label": "Yellow Type PickUp Gacha: Cursed Corpse Battle & With That Will In Mind"
+ },
+ {
+  "id": "seance-2025-08",
+  "name": "Seance",
+  "kind": "Featured",
+  "start": "2025-08-19",
+  "end": "2025-09-18",
+  "rerun": false,
+  "featured": [
+   "(Seance) Toji Fushiguro"
+  ],
+  "file": "YellowSSRTojiBanner1.png",
+  "label": "Featured Gacha: Seance"
+ },
+ {
+  "id": "as-fast-as-a-fleeing-rabbit-2025-08",
+  "name": "As Fast as a Fleeing Rabbit",
+  "kind": "Featured",
+  "start": "2025-08-29",
+  "end": "2025-09-22",
+  "rerun": false,
+  "featured": [
+   "(Crushed With Speed) Naobito Zen'in"
+  ],
+  "file": "BlueSSRNaobitoBanner1.png",
+  "label": "Featured Gacha: As Fast as a Fleeing Rabbit"
+ },
+ {
+  "id": "rabbit-s-disruption-2025-09",
+  "name": "Rabbit's Disruption",
+  "kind": "Featured",
+  "start": "2025-09-12",
+  "end": "2025-09-29",
+  "rerun": false,
+  "featured": [
+   "(Rabbit's Disruption) Megumi Fushiguro"
+  ],
+  "file": "RedSSRMegumiBanner1.png",
+  "label": "Featured Gacha: Rabbit's Disruption"
+ },
+ {
+  "id": "meteor-of-fierceness-2025-09",
+  "name": "Meteor of Fierceness",
+  "kind": "Featured",
+  "start": "2025-09-19",
+  "end": "2025-10-04",
+  "rerun": false,
+  "featured": [
+   "(Meteor of Fierceness) Jogo"
+  ],
+  "file": "RedSSRJogoBanner1.png",
+  "label": "Featured Gacha: Meteor of Fierceness"
+ },
+ {
+  "id": "slob-around-2025-09",
+  "name": "Slob around...",
+  "kind": "Featured",
+  "start": "2025-09-30",
+  "end": "2025-10-24",
+  "rerun": false,
+  "featured": [
+   "(Ward off with Sharp Blade) Atsuya Kusakabe"
+  ],
+  "file": "YellowSSRKusakabeBanner1.png",
+  "label": "Featured Gacha: Slob around..."
+ },
+ {
+  "id": "cursed-corpse-battle-life-saver-2025-10",
+  "name": "Cursed Corpse Battle & Life Saver",
+  "kind": "Type Pickup",
+  "start": "2025-10-08",
+  "end": "2025-10-22",
+  "rerun": false,
+  "featured": [
+   "(Cursed Corpse Battle) Masamichi Yaga",
+   "(Life Saver) Shoko Ieiri"
+  ],
+  "file": "YellowTypeBanner2.png",
+  "label": "Yellow Type PickUp Gacha: Cursed Corpse Battle & Life Saver"
+ },
+ {
+  "id": "arrived-gourmet-boom-2025-10",
+  "name": "Arrived! Gourmet Boom!",
+  "kind": "Movie-Limited",
+  "start": "2025-10-18",
+  "end": "2025-11-20",
+  "rerun": false,
+  "featured": [
+   "(Queen of Curses) Yuta Okkotsu"
+  ],
+  "file": "BlueSSRYutaBanner1.png",
+  "label": "Movie-Limited Gacha: Arrived! Gourmet Boom!"
+ },
+ {
+  "id": "early-morning-departure-no-conceit-2025-10",
+  "name": "Early Morning Departure & No Conceit",
+  "kind": "Type Pickup",
+  "start": "2025-10-24",
+  "end": "2025-11-09",
+  "rerun": false,
+  "featured": [
+   "(Early Morning Departure) Maki Zen'in",
+   "(No Conceit) Takuma Ino"
+  ],
+  "file": "BlueTypeBanner2.png",
+  "label": "Blue Type PickUp Gacha: Early Morning Departure & No Conceit"
+ },
+ {
+  "id": "jujutsu-kaisen-0-2025-10",
+  "name": "Jujutsu Kaisen 0",
+  "kind": "Movie-Limited",
+  "start": "2025-10-31",
+  "end": "2025-11-20",
+  "rerun": false,
+  "featured": [
+   "(Lend Me Your Power) Yuta Okkotsu",
+   "(This Is Justice) Suguru Geto",
+   "(Delayed Quota) Miguel"
+  ],
+  "file": "JJK0Banner1.png",
+  "label": "Movie-Limited Gacha: Jujutsu Kaisen 0"
+ },
+ {
+  "id": "2nd-anniversary-part-1-2-2025-11",
+  "name": "2nd Anniversary Part 1 & 2",
+  "kind": "Limited",
+  "start": "2025-11-21",
+  "end": "2025-12-25",
+  "rerun": false,
+  "featured": [
+   "(Maximum Cursed Energy Output) Yuji Itadori",
+   "(Are you satisfied with that?) Aoi Todo"
+  ],
+  "file": "2ndAnniBannersP1&2.png",
+  "label": "Limited-Time Gacha: 2nd Anniversary Part 1 & 2"
+ },
+ {
+  "id": "2nd-anniversary-part-3-2025-11",
+  "name": "2nd Anniversary Part 3",
+  "kind": "Limited",
+  "start": "2025-11-28",
+  "end": "2026-01-08",
+  "rerun": false,
+  "featured": [
+   "(Battle of firepower) Ryomen Sukuna"
+  ],
+  "file": "YellowSSRSukunaBanner1.png",
+  "label": "Limited-Time Gacha: 2nd Anniversary Part 3"
+ },
+ {
+  "id": "2nd-anniversary-part-4-2025-12",
+  "name": "2nd Anniversary Part 4",
+  "kind": "Limited",
+  "start": "2025-12-04",
+  "end": "2026-01-08",
+  "rerun": false,
+  "featured": [
+   "(Unbridled Soul) Mahito"
+  ],
+  "file": "RedSSRMahitoBanner1.png",
+  "label": "Limited-Time Gacha: 2nd Anniversary Part 4"
+ },
+ {
+  "id": "zone-within-infinity-genuine-jujutsu-2025-12",
+  "name": "Zone, Within Infinity & Genuine Jujutsu",
+  "kind": "Limited",
+  "start": "2025-12-11",
+  "end": "2025-01-13",
+  "rerun": false,
+  "featured": [
+   "(Within Infinity) Satoru Gojo",
+   "(Genuine Jujutsu) Ryomen Sukuna",
+   "(Zone) Yuji Itadori"
+  ],
+  "file": "1stAnni+SukunaBanner.png",
+  "label": "Limited-Time Gacha: Zone, Within Infinity & Genuine Jujutsu"
+ },
+ {
+  "id": "rushing-to-a-mission-on-a-holy-night-2025-12",
+  "name": "Rushing to a Mission on a Holy Night",
+  "kind": "Featured",
+  "start": "2025-12-19",
+  "end": "2025-12-30",
+  "rerun": false,
+  "featured": [
+   "(I've Seen It All) Kokichi Muta",
+   "(Sprinting) Kasumi Miwa"
+  ],
+  "file": "MiwaMutaBanner1.png",
+  "label": "Featured Gacha: Rushing to a Mission on a Holy Night"
+ },
+ {
+  "id": "gtg-style-how-to-spend-your-day-off-2025-12",
+  "name": "GTG Style: How to Spend Your Day Off",
+  "kind": "Limited",
+  "start": "2025-12-26",
+  "end": "2026-01-29",
+  "rerun": false,
+  "featured": [
+   "(0.2-Second Domain Expansion) Satoru Gojo"
+  ],
+  "file": "BlueSSRGojoBanner2.png",
+  "label": "Limited-Time Gacha: GTG Style: How to Spend Your Day Off"
+ },
+ {
+  "id": "crushed-with-speed-no-conceit-2026-01",
+  "name": "Crushed With Speed & No Conceit",
+  "kind": "Type Pickup",
+  "start": "2026-01-03",
+  "end": "2026-01-20",
+  "rerun": false,
+  "featured": [
+   "(Crushed With Speed) Naobito Zen'in",
+   "(No Conceit) Takuma Ino"
+  ],
+  "file": "BlueTypeBanner3.png",
+  "label": "Blue Type PickUp Gacha: Crushed With Speed & No Conceit"
+ },
+ {
+  "id": "awakening-2026-01",
+  "name": "Awakening",
+  "kind": "Limited",
+  "start": "2026-01-16",
+  "end": "2026-02-19",
+  "rerun": false,
+  "featured": [
+   "(Awakening) Satoru Gojo (Teen)"
+  ],
+  "file": "GreenSSRGojoBanner3.png",
+  "label": "Limited-Time Gacha Part 1: Awakening"
+ },
+ {
+  "id": "fwoo-hyoi-2026-01",
+  "name": "Fwoo Hyoi",
+  "kind": "Limited",
+  "start": "2026-01-16",
+  "end": "2026-02-19",
+  "rerun": false,
+  "featured": [
+   "(\"Fwoo Hyoi\") Shoko Ieiri (Teen)"
+  ],
+  "file": "GreenSSRShokoBanner2.png",
+  "label": "Limited-Time Gacha Part 2: \"Fwoo Hyoi\""
+ },
+ {
+  "id": "ominous-land-reclamation-part-1-2026-01",
+  "name": "Ominous Land Reclamation Part 1",
+  "kind": "Featured",
+  "start": "2026-01-23",
+  "end": "2026-02-08",
+  "rerun": false,
+  "featured": [
+   "(Fulfilling His Duty as the Older Brother) Choso"
+  ],
+  "file": "DIEventBanner1.png",
+  "label": "Featured Gacha: Ominous Land Reclamation Part 1"
+ },
+ {
+  "id": "ominous-land-reclamation-part-2-2026-01",
+  "name": "Ominous Land Reclamation Part 2",
+  "kind": "Featured",
+  "start": "2026-01-23",
+  "end": "2026-02-08",
+  "rerun": false,
+  "featured": [
+   "(Life Saver) Shoko Ieiri",
+   "(Don't Look Down On Me) Momo Nishimiya"
+  ],
+  "file": "DIEventBanner2.png",
+  "label": "Featured Gacha: Ominous Land Reclamation Part 2"
+ },
+ {
+  "id": "promising-new-student-2026-01",
+  "name": "Promising New Student",
+  "kind": "Limited",
+  "start": "2026-01-23",
+  "end": "2026-02-19",
+  "rerun": false,
+  "featured": [
+   "(Promising New Student) Kento Nanami (Teen)"
+  ],
+  "file": "RedSSRNanamiBanner2.png",
+  "label": "Limited-Time Gacha Part 3: Promising New Student"
+ },
+ {
+  "id": "step-back-third-rate-2026-01",
+  "name": "Step back, third-rate",
+  "kind": "Featured",
+  "start": "2026-01-30",
+  "end": "2026-02-19",
+  "rerun": false,
+  "featured": [
+   "(Step back, third-rate) Uraume"
+  ],
+  "file": "YellowSSRUraumeBanner1.png",
+  "label": "Featured Gacha: Step back, third-rate"
+ },
+ {
+  "id": "incomplete-domain-the-strongest-blue-2026-02",
+  "name": "Incomplete Domain & The Strongest Blue",
+  "kind": "Type Pickup",
+  "start": "2026-02-09",
+  "end": "2026-02-23",
+  "rerun": false,
+  "featured": [
+   "(The Strongest Blue) Satoru Gojo (Teen)",
+   "(Incomplete Domain) Megumi Fushiguro"
+  ],
+  "file": "YellowTypeBanner3.png",
+  "label": "Yellow Type PickUp Gacha: Incomplete Domain & The Strongest Blue"
+ },
+ {
+  "id": "tool-manipulation-2026-02",
+  "name": "Tool Manipulation",
+  "kind": "Featured",
+  "start": "2026-02-20",
+  "end": "2026-03-19",
+  "rerun": false,
+  "featured": [
+   "(Tool Manipulation) Momo Nishimiya"
+  ],
+  "file": "RedSSRMomoBanner1.png",
+  "label": "Featured Gacha: Tool Manipulation"
+ },
+ {
+  "id": "the-quiet-cursed-holiday-2026-02",
+  "name": "The Quiet Cursed Holiday",
+  "kind": "Featured",
+  "start": "2026-02-27",
+  "end": "2026-03-26",
+  "rerun": false,
+  "featured": [
+   "(Silent Suppression) Kento Nanami"
+  ],
+  "file": "GreenSSRNanamiBanner2.png",
+  "label": "Featured Gacha: The Quiet Cursed Holiday"
+ },
+ {
+  "id": "to-protect-non-sorcerers-bond-of-friendship-2026-03",
+  "name": "To Protect Non-Sorcerers & Bond of Friendship",
+  "kind": "Type Pickup",
+  "start": "2026-03-12",
+  "end": "2026-03-23",
+  "rerun": false,
+  "featured": [
+   "(To Protect Non-Sorcerers) Suguru Geto (Teen)",
+   "(Bond of Friendship) Megumi Fushiguro"
+  ],
+  "file": "GreenTypeBanner1.png",
+  "label": "Green Type PickUp Gacha: To Protect Non-Sorcerers & Bond of Friendship"
+ },
+ {
+  "id": "pivotal-guardian-2026-03",
+  "name": "Pivotal Guardian",
+  "kind": "Featured",
+  "start": "2026-03-19",
+  "end": "2026-04-13",
+  "rerun": false,
+  "featured": [
+   "(Pivotal Guardian) Masamichi Yaga"
+  ],
+  "file": "BlueSSRYagaBanner1.png",
+  "label": "Featured Gacha: Pivotal Guardian"
+ },
+ {
+  "id": "garden-of-echoes-2026-03",
+  "name": "Garden of Echoes",
+  "kind": "Limited",
+  "start": "2026-03-27",
+  "end": "2026-04-23",
+  "rerun": false,
+  "featured": [
+   "(Executioner) Yuta Okkotsu"
+  ],
+  "file": "YellowSSRYutaBanner1.png",
+  "label": "Limited-Time Gacha: Garden of Echoes"
+ },
+ {
+  "id": "cursed-corpse-battle-with-that-will-in-mind-2026-04",
+  "name": "Cursed Corpse Battle & With That Will In Mind",
+  "kind": "Type Pickup",
+  "start": "2026-04-06",
+  "end": "2026-04-18",
+  "rerun": false,
+  "featured": [
+   "(With That Will In Mind) Kaito Yuki",
+   "(Cursed Corpse Battle) Masamichi Yaga"
+  ],
+  "file": "YellowTypeBanner4.png",
+  "label": "Yellow Type PickUp Gacha: Cursed Corpse Battle & With That Will In Mind"
+ },
+ {
+  "id": "chain-mark-full-throttle-2026-04",
+  "name": "Chain Mark: Full Throttle",
+  "kind": "Featured",
+  "start": "2026-04-14",
+  "end": "2026-04-28",
+  "rerun": false,
+  "featured": [
+   "(Chain Mark: Full Throttle) Eiji Urushi"
+  ],
+  "file": "YellowSSREijiBanner1.png",
+  "label": "Featured Gacha: Chain Mark: Full Throttle"
+ },
+ {
+  "id": "peering-into-the-dim-abyss-2026-04",
+  "name": "Peering into the Dim Abyss",
+  "kind": "Featured",
+  "start": "2026-04-24",
+  "end": "2026-05-20",
+  "rerun": false,
+  "featured": [
+   "(The Golden Age of Jujutsu) Noritoshi Kamo"
+  ],
+  "file": "RedSSRKenjakuBanner1.png",
+  "label": "Featured Gacha: Peering into the Dim Abyss"
+ },
+ {
+  "id": "night-lurking-sorcerer-meteor-of-fierceness-2026-05",
+  "name": "Night-Lurking Sorcerer & Meteor of Fierceness",
+  "kind": "Type Pickup",
+  "start": "2026-05-01",
+  "end": "2026-05-16",
+  "rerun": false,
+  "featured": [
+   "(Night-Lurking Sorcerer) Toge Inumaki",
+   "(Meteor of Fierceness) Jogo"
+  ],
+  "file": "RedTypeBanner2.png",
+  "label": "Red Type PickUp Gacha: Night-Lurking Sorcerer & Meteor of Fierceness"
+ },
+ {
+  "id": "zone-within-infinity-genuine-jujutsu-2026-05",
+  "name": "Zone, Within Infinity & Genuine Jujutsu",
+  "kind": "Limited",
+  "start": "2026-05-12",
+  "end": "2026-05-28",
+  "rerun": false,
+  "featured": [
+   "(Within Infinity) Satoru Gojo",
+   "(Genuine Jujutsu) Ryomen Sukuna",
+   "(Zone) Yuji Itadori"
+  ],
+  "file": "1stAnni+SukunaBanner.png",
+  "label": "Limited-Time Gacha: Zone, Within Infinity & Genuine Jujutsu"
+ },
+ {
+  "id": "blue-splashing-by-the-shore-part-1-2026-05",
+  "name": "Blue Splashing by the Shore Part 1",
+  "kind": "Limited",
+  "start": "2026-05-21",
+  "end": "2026-06-29",
+  "rerun": false,
+  "featured": [
+   "(Smash It Into the Summer Sky) Yuji Itadori"
+  ],
+  "file": "BlueSSRYujiBanner2.png",
+  "label": "Limited-Time Gacha: Blue Splashing by the Shore Part 1"
+ },
+ {
+  "id": "blue-splashing-by-the-shore-part-2-2026-05",
+  "name": "Blue Splashing by the Shore Part 2",
+  "kind": "Limited",
+  "start": "2026-05-25",
+  "end": "2026-06-29",
+  "rerun": false,
+  "featured": [
+   "(Melting Sweet Summer Treats) Satoru Gojo"
+  ],
+  "file": "YellowSSRGojoBanner2.png",
+  "label": "Limited-Time Gacha: Blue Splashing by the Shore Part 2"
+ },
+ {
+  "id": "awakening-fwoo-hyoi-promising-new-student-2026-05",
+  "name": "Awakening, \"Fwoo Hyoi\" & Promising New Student",
+  "kind": "Limited",
+  "start": "2026-05-29",
+  "end": "2026-06-23",
+  "rerun": false,
+  "featured": [
+   "(Promising New Student) Kento Nanami (Teen)",
+   "(Awakening) Satoru Gojo (Teen)",
+   "(\"Fwoo Hyoi\") Shoko Ieiri (Teen)"
+  ],
+  "file": "1.5AnniTrioBanner.png",
+  "label": "Limited-Time Gacha: Awakening, \"Fwoo Hyoi\" & Promising New Student"
+ },
+ {
+  "id": "blue-splashing-by-the-shore-part-3-2026-06",
+  "name": "Blue Splashing by the Shore Part 3",
+  "kind": "Limited",
+  "start": "2026-06-01",
+  "end": "2026-07-09",
+  "rerun": false,
+  "featured": [
+   "(Enjoying The Cool Summer Breeze) Megumi Fushiguro",
+   "(Striking Eternal Summer) Nobara Kugisaki"
+  ],
+  "file": "GreenSSRMegumiBanner2.png",
+  "label": "Limited-Time Gacha: Blue Splashing by the Shore Part 3"
+ },
+ {
+  "id": "blue-splashing-by-the-shore-part-4-2026-06",
+  "name": "Blue Splashing by the Shore Part 4",
+  "kind": "Limited",
+  "start": "2026-06-01",
+  "end": "2026-07-09",
+  "rerun": false,
+  "featured": [
+   "(Enjoying The Cool Summer Breeze) Megumi Fushiguro",
+   "(Striking Eternal Summer) Nobara Kugisaki"
+  ],
+  "file": "BlueSSRNobaraBanner1.png",
+  "label": "Limited-Time Gacha: Blue Splashing by the Shore Part 4"
+ },
+ {
+  "id": "zanshin-first-grade-sorcerer-s-skill-2026-06",
+  "name": "Zanshin & First-Grade Sorcerer's Skill",
+  "kind": "Type Pickup",
+  "start": "2026-06-09",
+  "end": "2026-06-22",
+  "rerun": false,
+  "featured": [
+   "(First-Grade Sorcerer's Skill) Kento Nanami",
+   "(Zanshin) Kasumi Miwa"
+  ],
+  "file": "BlueTypeBanner4.png",
+  "label": "Blue Type PickUp Gacha: Zanshin & First-Grade Sorcerer's Skill"
+ },
+ {
+  "id": "maximum-cursed-energy-output-2026-06",
+  "name": "Maximum Cursed Energy Output",
+  "kind": "Limited",
+  "start": "2026-06-09",
+  "end": "2026-07-09",
+  "rerun": false,
+  "featured": [
+   "(Maximum Cursed Energy Output) Yuji Itadori"
+  ],
+  "file": "RedSSRYujiBanner3.png",
+  "label": "Limited-Time Gacha Part 1: Maximum Cursed Energy Output"
+ },
+ {
+  "id": "are-you-satisfied-with-that-2026-06",
+  "name": "Are you satisfied with that?",
+  "kind": "Limited",
+  "start": "2026-06-09",
+  "end": "2026-07-09",
+  "rerun": false,
+  "featured": [
+   "(Are you satisfied with that?) Aoi Todo"
+  ],
+  "file": "GreenSSRTodoBanner2.png",
+  "label": "Limited-Time Gacha Part 2: Are you satisfied with that?"
+ },
+ {
+  "id": "sprinting-2026-06",
+  "name": "Sprinting",
+  "kind": "Type Pickup",
+  "start": "2026-06-18",
+  "end": "2026-07-04",
+  "rerun": false,
+  "featured": [
+   "(Sprinting) Kasumi Miwa"
+  ],
+  "file": "GreenTypeBanner2.png",
+  "label": "Green Type PickUp Gacha: Sprinting"
+ },
+ {
+  "id": "battle-of-firepower-2026-06",
+  "name": "Battle of Firepower",
+  "kind": "Limited",
+  "start": "2026-06-18",
+  "end": "2026-07-20",
+  "rerun": false,
+  "featured": [
+   "(Battle of firepower) Ryomen Sukuna"
+  ],
+  "file": "YellowSSRSukunaBanner2.png",
+  "label": "Limited-Time Gacha Part 3: Battle of Firepower"
+ },
+ {
+  "id": "unbridled-soul-2026-06",
+  "name": "Unbridled Soul",
+  "kind": "Limited",
+  "start": "2026-06-18",
+  "end": "2026-07-20",
+  "rerun": false,
+  "featured": [
+   "(Unbridled Soul) Mahito"
+  ],
+  "file": "RedSSRMahitoBanner2.png",
+  "label": "Limited-Time Gacha Part 4: Unbridled Soul"
+ },
+ {
+  "id": "0-2-second-domain-expansion-2026-06",
+  "name": "0.2-Second Domain Expansion",
+  "kind": "Limited",
+  "start": "2026-06-24",
+  "end": "2026-07-20",
+  "rerun": false,
+  "featured": [
+   "(0.2-Second Domain Expansion) Satoru Gojo"
+  ],
+  "file": "BlueSSRGojoBanner3.png",
+  "label": "Limited-Time Gacha Part 5: 0.2-Second Domain Expansion"
+ },
+ {
+  "id": "ijichi-s-unrelenting-vacation-2026-06",
+  "name": "Ijichi's Unrelenting Vacation",
+  "kind": "Featured",
+  "start": "2026-06-30",
+  "end": "2026-07-26",
+  "rerun": false,
+  "featured": [
+   "(Pick Up After Hard Work) Kiyotaka Ijichi"
+  ],
+  "file": "GreenSSRIjichiBanner1.png",
+  "label": "Featured Gacha: Ijichi's Unrelenting Vacation"
+ },
+ {
+  "id": "silent-suppression-fulfilling-his-duty-as-the-ol-2026-07",
+  "name": "Silent Suppression & Fulfilling His Duty as the Older Brother",
+  "kind": "Type Pickup",
+  "start": "2026-07-13",
+  "end": "2026-07-25",
+  "rerun": false,
+  "featured": [
+   "(Fulfilling His Duty as the Older Brother) Choso",
+   "(Silent Suppression) Kento Nanami"
+  ],
+  "file": "GreenTypeBanner3.png",
+  "label": "Green Type PickUp Gacha: Silent Suppression & Fulfilling His Duty as the Older Brother"
+ },
+ {
+  "id": "crafty-rock-2026-07",
+  "name": "Crafty Rock",
+  "kind": "Featured",
+  "start": "2026-07-21",
+  "end": "2026-08-11",
+  "rerun": false,
+  "featured": [
+   "(Crafty Rock) Yoshinobu Gakuganji"
+  ],
+  "file": "RedSSRGakuganjiBanner1.png",
+  "label": "Featured Gacha: Crafty Rock"
+ },
+ {
+  "id": "illusory-tower-diverse-2026-07",
+  "name": "Illusory Tower: Diverse",
+  "kind": "Featured",
+  "start": "2026-07-27",
+  "end": "2026-08-09",
+  "rerun": false,
+  "featured": [
+   "(Crafty Rock) Yoshinobu Gakuganji"
+  ],
+  "file": "TowerDiverseBanner1.png",
+  "label": "Featured Gacha: Illusory Tower: Diverse"
+ },
+ {
+  "id": "ephemeral-family-2026-07",
+  "name": "Ephemeral Family",
+  "kind": "Featured",
+  "start": "2026-07-31",
+  "end": "2026-08-25",
+  "rerun": false,
+  "featured": [
+   "(Effective Range) Mai Zen'in"
+  ],
+  "file": "BlueSSRMaiBanner1.png",
+  "label": "Featured Gacha: Ephemeral Family"
+ },
+ {
+  "id": "blood-borne-resolve-shatter-to-pieces-2026-08",
+  "name": "Blood Borne Resolve & Shatter To Pieces",
+  "kind": "Type Pickup",
+  "start": "2026-08-10",
+  "end": "2026-08-23",
+  "rerun": false,
+  "featured": [
+   "(Blood Borne Resolve) Noritoshi Kamo",
+   "(Shatter To Pieces) Toge Inumaki"
+  ],
+  "file": "BlueTypeBanner5.png",
+  "label": "Blue Type PickUp Gacha: Blood Borne Resolve & Shatter To Pieces"
+ },
+ {
+  "id": "indomitable-auspicious-beasts-2026-08",
+  "name": "Indomitable Auspicious Beasts",
+  "kind": "Featured",
+  "start": "2026-08-19",
+  "end": "2026-09-06",
+  "rerun": false,
+  "featured": [
+   "(Indomitable Auspicious Beasts) Takuma Ino"
+  ],
+  "file": "GreenSSRInoBanner1.png",
+  "label": "Featured Gacha: Indomitable Auspicious Beasts"
+ },
+ {
+  "id": "the-steam-sorcerer-2026-08",
+  "name": "The Steam Sorcerer",
+  "kind": "Featured",
+  "start": "2026-08-31",
+  "end": "2026-10-09",
+  "rerun": false,
+  "featured": [
+   "(Burning Passion) Yu Haibara"
+  ],
+  "file": "RedSSRHaibaraBanner1.png",
+  "label": "Featured Gacha: The Steam Sorcerer"
+ },
+ {
+  "id": "tool-manipulation-the-final-bullet-2026-09",
+  "name": "Tool Manipulation & The Final Bullet",
+  "kind": "Type Pickup",
+  "start": "2026-09-07",
+  "end": "2026-10-04",
+  "rerun": false,
+  "featured": [
+   "(Tool Manipulation) Momo Nishimiya",
+   "(The Final Bullet) Mai Zen'in"
+  ],
+  "file": "RedTypeBanner3.png",
+  "label": "Red Type PickUp Gacha: Tool Manipulation & The Final Bullet"
+ },
+ {
+  "id": "what-lies-at-the-end-2026-09",
+  "name": "What Lies at the End",
+  "kind": "Featured",
+  "start": "2026-09-11",
+  "end": "2026-10-12",
+  "rerun": false,
+  "featured": [
+   "(What Lies at the End) Suguru Geto (Teen)"
+  ],
+  "file": "YellowSSRGetoBanner1.png",
+  "label": "Featured Gacha: What Lies at the End"
+ },
+ {
+  "id": "with-love-from-the-depths-of-darkness-2026-09",
+  "name": "With Love From The Depths Of Darkness",
+  "kind": "Featured",
+  "start": "2026-09-30",
+  "end": "2026-10-25",
+  "rerun": false,
+  "featured": [
+   "(Dance of the Beautiful Blades) Mei Mei"
+  ],
+  "file": "GreenSSRMeimeiBanner1.png",
+  "label": "Featured Gacha: With Love From The Depths Of Darkness"
+ }
+]

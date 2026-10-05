@@ -187,3 +187,116 @@ html.is-compact .rv-title { font-size: 15px; padding: 3px 30px; }
 .gp-unit { display: grid; gap: 4px; justify-items: center; padding: 6px; background: none; border: 1px solid transparent; border-radius: 8px; color: inherit; cursor: pointer; }
 .gp-unit:hover, .gp-unit:focus-visible { border-color: var(--pp-gold, #d4af5f); background: rgba(212, 175, 95, .08); }
 .gp-unit small { font-size: 11px; text-align: center; }
+
+/* Event banners (JP timeline): Live / Events / Standard lists and the real banner art */
+.ban-list { overflow: hidden; gap: 6px; }
+.ban-filter { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; flex: none; }
+.ban-filter button { padding: 5px 0; border: 1px solid #6c6346; background: #0d1418; color: #cfc4a4; cursor: pointer; font: 800 9.5px/1 var(--pp-font); letter-spacing: .04em; }
+.ban-filter button.on { background: linear-gradient(180deg, #e9cd76, #b8913a); color: #2a1a08; border-color: #f3dc94; }
+.ban-scroll { display: flex; flex-direction: column; gap: 6px; overflow-y: auto; min-height: 0; flex: 1; scrollbar-width: thin; scrollbar-color: #6c6346 transparent; padding-right: 2px; }
+.ban-group { flex: none; margin: 4px 0 0; font: 800 9.5px/1 var(--pp-font); letter-spacing: .14em; color: var(--pp-gold-1); text-transform: uppercase; }
+.ban-tab.is-event img { object-position: 50% 50%; filter: brightness(.75); }
+.ban-tab.is-event.active img { filter: none; }
+.ban-tab.is-live::before { content: 'LIVE'; position: absolute; z-index: 2; top: 3px; right: 3px; padding: 1px 4px; font: 900 8px/1.2 var(--pp-font); color: #fff; background: #d23a2a; }
+.ban-stage.is-event { background: #07060b; }
+.ban-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 0; z-index: 1; animation: banIn .6s var(--pp-ease) both; }
+.ban-blur { position: absolute; inset: -20px; width: calc(100% + 40px); height: calc(100% + 40px); object-fit: cover; filter: blur(18px) brightness(.45) saturate(1.2); }
+.ban-stage.is-event::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(0deg, rgba(6, 5, 10, .9) 0%, rgba(6, 5, 10, .3) 22%, transparent 36%); }
+.ban-cap { position: absolute; z-index: 2; right: 3%; bottom: 11%; max-width: 58%; text-align: right; }
+.ban-cap .ban-title { font-size: clamp(18px, 5vh, 32px); margin: 4px 0 3px; }
+.ban-cap p { margin: 0; display: inline-block; padding: 3px 10px; font: 700 10.5px/1.3 var(--pp-font); color: #fff3d6; background: rgba(10, 8, 18, .72); border-right: 2px solid var(--pp-gold-2); }
+.pk-label.is-live { background: #d23a2a; margin-left: 4px; }
+.pk-label.is-rerun { background: #4a5a6a; margin-left: 4px; }
+.ban-stage.is-event .ban-rate { bottom: 4%; }
+@media (max-width: 640px) {
+  .ban-list { flex-direction: column; }
+  .ban-scroll { flex-direction: row; overflow-x: auto; overflow-y: hidden; }
+  .ban-group { display: none; }
+  .ban-cap .ban-title { display: none; }
+  .ban-cap { bottom: 16%; }
+  .ban-stage.is-event .ban-feat .ucard { width: 40px; }
+}
+
+/* ── Gacha screen (Phantom Parade layout): full-bleed featured art, banner list
+   with timers on the left, banner logo + details on the right, draw buttons
+   bottom right ── */
+.gacha { position: relative; height: 100%; min-height: 420px; overflow: hidden; border: 1px solid var(--pp-bronze); border-radius: 2px; background: #07060b; }
+.g-bg { position: absolute; inset: 0; overflow: hidden; }
+.g-blur { position: absolute; inset: -30px; width: calc(100% + 60px); height: calc(100% + 60px); object-fit: cover; filter: blur(22px) brightness(.38) saturate(1.2); }
+.g-hero { position: absolute; left: 12%; right: 26%; top: 0; height: 100%; width: auto; max-width: none; object-fit: cover; object-position: 50% 18%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 80%, transparent); mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 80%, transparent);
+  animation: banIn .7s var(--pp-ease) both; }
+.g-bg::after { content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(5, 4, 9, .85) 0, rgba(5, 4, 9, .1) 24%, transparent 55%, rgba(5, 4, 9, .8) 82%), linear-gradient(0deg, rgba(5, 4, 9, .9) 0, transparent 30%); }
+.g-tag { position: absolute; z-index: 2; left: 33%; top: 46%; display: flex; align-items: center; gap: 8px; padding: 4px 14px 4px 6px;
+  background: linear-gradient(90deg, rgba(10, 8, 18, .8), rgba(10, 8, 18, 0)); animation: banIn .7s .15s var(--pp-ease) both; }
+.g-tag span { display: grid; line-height: 1.1; }
+.g-tag small { font: 700 10px/1.2 var(--pp-font); color: #e8d6a4; }
+.g-tag b { font: 900 clamp(18px, 4vh, 28px)/1 var(--pp-font); color: #f3e8ff; text-shadow: 0 0 10px rgba(190, 120, 255, .8), 0 2px 0 #2a0d3a; }
+.g-tag .rar-ic { height: 26px; }
+
+.g-list { position: absolute; z-index: 3; left: 10px; top: 10px; bottom: 10px; width: 168px; display: flex; flex-direction: column; gap: 6px; }
+.g-list .ban-scroll { gap: 2px; padding-left: 1px; }
+.g-list .ban-group { padding-left: 1px; text-indent: 0; }
+.g-list .ban-tab { height: 64px; flex: none; border-color: #8c7a4c; }
+.g-list .ban-tab.active { margin-left: 6px; }
+.g-list .ban-tab.active::before { content: ''; position: absolute; z-index: 3; left: -1px; top: 50%; border: 8px solid transparent; border-left-color: #f2d24a; transform: translateY(-50%); }
+.ban-time { flex: none; margin: 0 0 6px; padding: 1px 6px; font: 700 9.5px/1.4 var(--pp-font); color: #f0e2bd; background: rgba(10, 8, 18, .75); }
+
+.g-info { position: absolute; z-index: 3; right: 10px; top: 10px; width: min(300px, 30%); display: flex; flex-direction: column; gap: 8px; }
+.g-logo { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid #c9a94f; box-shadow: 0 0 0 2px #0b0f12, 0 8px 20px rgba(0, 0, 0, .6); background: radial-gradient(ellipse, #3a2a60, #0b0812); display: grid; place-items: center; }
+.g-logo img { width: 100%; height: 100%; object-fit: cover; }
+.g-logo-k { font: 900 44px/1 var(--pp-font-title); color: #fff4cc; -webkit-text-stroke: 3px #3a0d10; paint-order: stroke fill; }
+.g-kind { position: absolute; left: 6px; top: 6px; padding: 2px 8px; font: 900 10px/1.3 var(--pp-font); letter-spacing: .06em; color: #fff; background: #c2402f; border: 1px solid #fff0c8; transform: skewX(-8deg); }
+.g-kind.is-live { left: auto; right: 6px; background: #d23a2a; }
+.g-title { margin: 0; font: 900 18px/1.15 var(--pp-font); color: #fff4cc; -webkit-text-stroke: 3px #3a0d10; paint-order: stroke fill; text-align: right; }
+.g-desc { padding: 8px 10px; font: 500 11px/1.45 var(--pp-font); color: #f2ead6; background: rgba(10, 8, 18, .72); border: 1px solid rgba(182, 154, 92, .4); }
+.g-feat { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+.g-feat .ucard { width: 46px; cursor: default; }
+.g-feat .uc-foot { display: none; }
+.g-btns { display: flex; gap: 5px; justify-content: flex-end; }
+.g-btns .pp-stone { padding: 5px 10px; font-size: 11px; }
+
+.g-draws { position: absolute; z-index: 3; right: 10px; bottom: 10px; left: 190px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.g-pull-row { display: flex; gap: 8px; align-items: flex-end; }
+.g-pull { position: relative; display: grid; justify-items: center; gap: 2px; min-width: 120px; padding: 8px 12px 6px; cursor: pointer;
+  border: 1px solid #f3dc94; color: #2a1408; background: linear-gradient(180deg, #fff3cf, #e9cd76 55%, #b8913a); box-shadow: 0 0 0 2px #3a2a10, 0 6px 14px rgba(0, 0, 0, .55);
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px); }
+.g-pull b { font: 900 16px/1 var(--pp-font); }
+.g-pull small { display: flex; align-items: center; gap: 4px; font: 700 11px/1 var(--pp-font); }
+.g-pull small .cur-ic, .g-pull small .item-ic, .g-pull small .talisman { width: 16px; height: 16px; }
+.g-pull em { display: block; align-self: stretch; margin: -8px -12px 3px; white-space: nowrap; padding: 2px 6px; font: 700 9px/1.3 var(--pp-font); font-style: normal; color: #fff; background: #c2402f; text-align: center; }
+.g-pull.is-multi { background: linear-gradient(180deg, #ffe7a8, #f0b43a 55%, #c27a1a); min-width: 140px; }
+.g-pull.is-daily { background: linear-gradient(180deg, #ffeac2, #e7a85a 55%, #a85a20); }
+.g-pull.is-ssr { background: linear-gradient(180deg, #f6e8ff, #b48cff 55%, #6a3fc0); color: #fff; }
+.g-pull:disabled { filter: grayscale(.8) brightness(.6); cursor: not-allowed; }
+.g-pull:not(:disabled):hover { filter: brightness(1.08); }
+.g-pt { display: flex; align-items: center; gap: 8px; padding: 6px 8px; max-width: 560px; font-size: 11px; background: rgba(10, 8, 18, .78); border: 1px solid rgba(182, 154, 92, .4); }
+.g-pt .pity.gp { flex: 1; margin: 0; }
+.g-pt .g-small { padding: 5px 10px; font-size: 11px; flex: none; }
+.g-hist td { font-size: 12px; }
+
+html.is-compact .g-list { width: 140px; } html.is-compact .g-draws { left: 160px; }
+html.is-compact .g-list .ban-tab { height: 50px; }
+html.is-compact .g-info { width: min(250px, 28%); gap: 6px; } html.is-compact .g-desc, html.is-compact .g-feat { display: none; }
+@media (max-height: 640px) and (min-width: 761px) { .g-desc, .g-feat { display: none; } .g-info { width: min(250px, 28%); gap: 6px; } .g-title { font-size: 15px; } }
+html.is-compact .g-title { font-size: 15px; }
+@media (max-width: 760px) {
+  .gacha { height: auto; min-height: 0; display: flex; flex-direction: column; }
+  .g-bg { position: relative; height: 300px; }
+  .g-hero { left: 0; right: 0; width: 100%; }
+  .g-tag { left: 4%; top: auto; bottom: 8%; }
+  .g-list, .g-info, .g-draws { position: relative; inset: auto; width: auto; left: auto; right: auto; top: auto; bottom: auto; padding: 8px; }
+  .g-list { order: -1; }
+  .g-list .ban-scroll { flex-direction: row; overflow-x: auto; overflow-y: hidden; }
+  .g-list .ban-tab { width: 128px; height: 60px; }
+  .g-list .ban-tab.active { transform: none; }
+  .ban-time, .g-list .ban-group { display: none; }
+  .g-info .g-logo { display: none; }
+  .g-title { text-align: left; }
+  .g-feat, .g-btns { justify-content: flex-start; }
+  .g-draws { align-items: stretch; }
+  .g-pull-row { flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+  .g-pull { min-width: 0; flex: 1 1 100px; }
+  .g-pt { flex-wrap: wrap; }
+}
