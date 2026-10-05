@@ -14,15 +14,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/ff/BlueSSRItadoriArt1.gif/revision/latest?cb=20240903024344",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/ff/BlueSSRItadoriArt1.gif/revision/latest?cb=20240412110935",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1d/BlueSSRItadoriIcon1.webp/revision/latest?cb=20240902053614",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/BlueItadoriSSRNormalAttack1.png/revision/latest?cb=20240908051543",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c7/BlueItadoriSSRS11.png/revision/latest?cb=20240908051558",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/78/BlueItadoriSSRS21.png/revision/latest?cb=20240908051617",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/06/BlueItadoriSSRUlt1.png/revision/latest?cb=20240908051631"
+   },
+   "anim": {
+    "width": 600,
+    "height": 309,
+    "frames": 63,
+    "ms": 6300,
+    "keptFrames": 63,
+    "fps": 10.0
    }
   },
   {
@@ -38,15 +47,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c4/GreenGetoSSRArt1.gif/revision/latest?cb=20240903025406",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c4/GreenGetoSSRArt1.gif/revision/latest?cb=20240531104027",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/61/GreenSSRGetoIcon1.webp/revision/latest?cb=20240902053737",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/71/GreenSSRGetoNormalAttack1.png/revision/latest?cb=20240908062918",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/ca/GreenSSRGetoS11.png/revision/latest?cb=20240908062934",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/33/GreenSSRGetoS21.png/revision/latest?cb=20240908062951",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b4/GreenSSRGetoUlt1.png/revision/latest?cb=20240908063008"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 121,
+    "ms": 5030,
+    "keptFrames": 61,
+    "fps": 12.1
    }
   },
   {
@@ -62,15 +80,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/cb/Freecompress-RedSSRPandaArt1-min.gif/revision/latest?cb=20240907042535",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/89/RedSSRPandaArt1.gif/revision/latest?cb=20240419083113",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e5/RedSSRPandaIcon1.webp/revision/latest?cb=20240831060147",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5d/RedSSRPandaNormalAttack1.png/revision/latest?cb=20240831072353",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f4/RedSSRPandaS11.png/revision/latest?cb=20240831072401",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/80/RedSSRPandaS21.png/revision/latest?cb=20240831072417",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2f/RedSSRPandaUlt1.png/revision/latest?cb=20240831072426"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -86,15 +113,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/26/Freecompress-RedSSRTojiArt1-min.gif/revision/latest?cb=20240907042601",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c6/RedSSRTojiArt1.gif/revision/latest?cb=20240603064535",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0b/RedSSRTojiIcon1.webp/revision/latest?cb=20240831060201",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4f/RedSSRTojiNormalAttack1.png/revision/latest?cb=20240831072437",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/63/RedSSRTojiS11.png/revision/latest?cb=20240831072446",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/af/RedSSRTojiS21.png/revision/latest?cb=20240831072455",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e9/RedSSRTojiUlt1.png/revision/latest?cb=20240831072505"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 119,
+    "ms": 5040,
+    "keptFrames": 60,
+    "fps": 11.9
    }
   },
   {
@@ -110,15 +146,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c3/GreenMahitoSSRArt1.gif/revision/latest?cb=20240903024519",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c3/GreenMahitoSSRArt1.gif/revision/latest?cb=20240412113310",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/14/GreenSSRMahitoIcon1.webp/revision/latest?cb=20240902053730",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c8/GreenSSRMahitoNormalAttack1.png/revision/latest?cb=20240908062456",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/53/GreenSSRMahitoS11.png/revision/latest?cb=20240908062514",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9f/GreenSSRMahitoS21.png/revision/latest?cb=20240908062531",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d0/GreenSSRMahitoUlt1.png/revision/latest?cb=20240908062549"
+   },
+   "anim": {
+    "width": 600,
+    "height": 308,
+    "frames": 56,
+    "ms": 5600,
+    "keptFrames": 56,
+    "fps": 10.0
    }
   },
   {
@@ -134,15 +179,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e0/RedNobaraSSRArt1.gif/revision/latest?cb=20240903025659",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e0/RedNobaraSSRArt1.gif/revision/latest?cb=20240229073234",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bb/RedNobaraSSRIcon1.webp/revision/latest?cb=20240831060139",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/14/RedNobaraSSRNormalAttack1.png/revision/latest?cb=20240831072558",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/99/RedNobaraSSRS11.png/revision/latest?cb=20240831072609",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f4/RedNobaraSSRS21.png/revision/latest?cb=20240831072322",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/21/RedNobaraSSRUlt1.png/revision/latest?cb=20240831072332"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -158,15 +212,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/aa/YellowSSRYagaArt1.gif/revision/latest?cb=20240903025717",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/aa/YellowSSRYagaArt1.gif/revision/latest?cb=20240730131414",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1e/YellowSSRYagaIcon1.webp/revision/latest?cb=20240902053902",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f5/YellowSSRYagaNormalAttack1.png/revision/latest?cb=20240908072458",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bd/YellowSSRYagaS11.png/revision/latest?cb=20240908072508",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/09/YellowSSRYagaS21.png/revision/latest?cb=20240908072518",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9a/YellowSSRYagaUlt1.png/revision/latest?cb=20240908072529"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -182,7 +245,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d3/Sr4.gif/revision/latest?cb=20240908021635",
@@ -191,6 +255,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/dd/GreenSRGakuganjiS11.png/revision/latest?cb=20240908085322",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a1/GreenSRGakuganjiS21.png/revision/latest?cb=20240908085332",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/97/GreenSRGakuganjiUlt1.png/revision/latest?cb=20240908085342"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 72,
+    "ms": 6000,
+    "keptFrames": 72,
+    "fps": 12.0
    }
   },
   {
@@ -206,7 +278,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/70/GreenSSRMakiArt1.gif/revision/latest?cb=20240903025620",
@@ -215,6 +288,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fc/GreenSSRMakiS11.png/revision/latest?cb=20240907150250",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e9/GreenSSRMakiS21.png/revision/latest?cb=20240907150058",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/28/GreenSSRMakiUlt1.png/revision/latest?cb=20240907150408"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 96,
+    "ms": 6000,
+    "keptFrames": 96,
+    "fps": 16.0
    }
   },
   {
@@ -230,15 +311,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6b/YellowSSRNanamiArt1.gif/revision/latest?cb=20240903024626",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6b/YellowSSRNanamiArt1.gif/revision/latest?cb=20240503054028",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/af/YellowSSRNanamiIcon1.webp/revision/latest?cb=20240902053845",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/78/YellowSSRNanamiNormalAttack1.png/revision/latest?cb=20240908071854",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f1/YellowSSRNanamiS11.png/revision/latest?cb=20240908071902",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e3/YellowSSRNanamiS21.png/revision/latest?cb=20240908071910",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/73/YellowSSRNanamiUlt1.png/revision/latest?cb=20240908071918"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 73,
+    "ms": 3000,
+    "keptFrames": 37,
+    "fps": 12.3
    }
   },
   {
@@ -254,15 +344,24 @@
     "s1": "s1.webp",
     "s2": "s2.webp",
     "ult": "ult.webp",
-    "icon": "icon.webp"
+    "icon": "icon.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e5/YellowMechamaruSSRArt1.gif/revision/latest?cb=20240903024847",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e5/YellowMechamaruSSRArt1.gif/revision/latest?cb=20240322133723",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1b/YellowMechSSRNormalAttack1.png/revision/latest?cb=20240908071419",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b3/MechAutoSkill1.png/revision/latest?cb=20240908071544",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/20/YellowMechSSRS21.png/revision/latest?cb=20240908071435",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3f/YellowMechSSRUlt1.png/revision/latest?cb=20240908071444",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/82/YellowMechamaruSSRIcon1.webp/revision/latest?cb=20240902053835"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -278,15 +377,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/29/BlueSSRNanamiArt1.gif/revision/latest?cb=20240903025637",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/29/BlueSSRNanamiArt1.gif/revision/latest?cb=20240820062851",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/44/BlueSSRNanamiIcon1.webp/revision/latest?cb=20240824130551",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0d/BlueSSRNanamiNormalAttack1.png/revision/latest?cb=20240908052710",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9b/BlueSSRNanamiS11.png/revision/latest?cb=20240908052658",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a8/BlueSSRNanamiS21.png/revision/latest?cb=20240908052643",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7c/BlueSSRNanamiUlt1.png/revision/latest?cb=20240908052626"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 96,
+    "ms": 6000,
+    "keptFrames": 96,
+    "fps": 16.0
    }
   },
   {
@@ -302,15 +410,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/66/GreenSSRSakiArt1.gif/revision/latest?cb=20240903024543",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/66/GreenSSRSakiArt1.gif/revision/latest?cb=20240709104135",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6b/GreenSSRSakiIcon1.webp/revision/latest?cb=20240902053744",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c5/GreenSSRSakiNormalAttack1.png/revision/latest?cb=20240908063404",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1b/GreenSSRSakiS11.png/revision/latest?cb=20240908063418",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8e/GreenSSRSakiS21.png/revision/latest?cb=20240908063431",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8d/GreenSSRSakiUlt1.png/revision/latest?cb=20240908063446"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -326,7 +443,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/98/YellowGojoSSRArt1.gif/revision/latest?cb=20240903025808",
@@ -335,6 +453,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/da/YellowGojoSSRS11.png/revision/latest?cb=20240908072155",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/47/YellowGojoSSRS21.png/revision/latest?cb=20240908072204",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/51/YellowGojoSSRUlt1.png/revision/latest?cb=20240908072212"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 99,
+    "ms": 5000,
+    "keptFrames": 99,
+    "fps": 19.8
    }
   },
   {
@@ -350,15 +476,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7b/Freecompress-BlueMiwaSSRArt1-min.gif/revision/latest?cb=20240907042503",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/aa/BlueMiwaSSRArt1.gif/revision/latest?cb=20240628104120",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1d/BlueSSRMiwaIcon1.webp/revision/latest?cb=20240902053625",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/87/BlueSSRMiwaNormalAttack1.png/revision/latest?cb=20240908052216",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7e/BlueSSRMiwaS11.png/revision/latest?cb=20240908052227",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8a/BlueSSRMiwaS21.png/revision/latest?cb=20240908052237",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/88/BlueSSRMiwaUlt1.png/revision/latest?cb=20240908052246"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -374,15 +509,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f3/BlueTodoSSRArt1.gif/revision/latest?cb=20240903024646",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/BlueTodoSSRArt1.gif/revision/latest?cb=20240331181917",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7b/BlueTodoSSRIcon1.webp/revision/latest?cb=20240902053606",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/38/BlueTodoSSRNormalAttack1.png/revision/latest?cb=20240908051302",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/17/BlueTodoSSRS11.png/revision/latest?cb=20240908051318",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/30/BlueTodoSSRS21.png/revision/latest?cb=20240908051331",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ed/BlueTodoSSRUlt1.png/revision/latest?cb=20240908051343"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -398,15 +542,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ef/RedTodoSSRArt1.gif/revision/latest?cb=20240830081238",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ef/RedTodoSSRArt1.gif/revision/latest?cb=20231123124657",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c5/RedTodoSSRIcon1.webp/revision/latest?cb=20240831060035",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a9/RedTodoSSRNormalAttack1.png/revision/latest?cb=20240908024401",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/96/RedTodoSSRS11.png/revision/latest?cb=20240908024422",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4b/RedTodoSSRS21.png/revision/latest?cb=20240908024434",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/50/RedTodoSSRUlt1.png/revision/latest?cb=20240908024444"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -422,7 +575,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4b/Freecompress-sr2.gif/revision/latest?cb=20240908021556",
@@ -431,6 +585,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/57/YellowTodoSRS11.png/revision/latest?cb=20240908090650",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fd/YellowTodoSRS21.png/revision/latest?cb=20240908090700",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/37/YellowTodoSRUlt1.png/revision/latest?cb=20240908090712"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -446,15 +608,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/RedHanamiSSRArt1.gif/revision/latest?cb=20240903024737",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/bf/RedHanamiSSRArt1.gif/revision/latest?cb=20231123124657",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/30/RedHanamiSSRIcon1.webp/revision/latest?cb=20240831060057",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/18/RedHanamiSSRNormalAttack1.png/revision/latest?cb=20240831070313",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/61/RedHanamiSSRS11.png/revision/latest?cb=20240831065112",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/35/RedHanamiSSRS21.png/revision/latest?cb=20240831070404",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/de/RedHanamiSSRUlt1.png/revision/latest?cb=20240831070427"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -470,7 +641,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6a/Sr12.gif/revision/latest?cb=20240908021747",
@@ -479,6 +651,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b1/BlueShokoSRS11.png/revision/latest?cb=20240908073950",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/11/BlueShokoSRS21.png/revision/latest?cb=20240908074001",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f8/BlueShokoSRUlt1.png/revision/latest?cb=20240908074010"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -494,15 +674,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a4/Freecompress-BlueJogoSSRArt1-min.gif/revision/latest?cb=20240907015656",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/50/BlueJogoSSRArt1.gif/revision/latest?cb=20231123124645",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/07/BlueJogoSSRIcon1.webp/revision/latest?cb=20240902053526",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/65/BlueJogoSSRNormalAttack1.png/revision/latest?cb=20240908045554",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e5/BlueJogoSSRS11.png/revision/latest?cb=20240908045611",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/46/BlueJogoSSRS21.png/revision/latest?cb=20240908045626",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/04/BlueJogoSSRUlt1.png/revision/latest?cb=20240908045638"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -518,15 +707,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2a/YellowJunpeiSSRArt1-min.gif/revision/latest?cb=20240903032831",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b4/YellowJunpeiSSRArt1.gif/revision/latest?cb=20231130130608",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3a/YellowJunpeiSSRIcon1.webp/revision/latest?cb=20240902053817",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a3/YellowJunpeiSSRNormalAttack1.png/revision/latest?cb=20240908070323",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/97/YellowJunpeiSSRS11.png/revision/latest?cb=20240908070334",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1a/YellowJunpeiSSRS21.png/revision/latest?cb=20240908070346",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/08/YellowJunpeiSSRUlt1.png/revision/latest?cb=20240908070357"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -542,7 +740,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e4/Freecompress-sr11.gif/revision/latest?cb=20240908021612",
@@ -551,6 +750,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/BlueJunpeiSRS11.png/revision/latest?cb=20240908075517",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e7/BlueJunpeiSRS21.png/revision/latest?cb=20240908075526",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b4/BlueJunpeiSRUlt1.png/revision/latest?cb=20240908075535"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -566,7 +773,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/11/SR.gif/revision/latest?cb=20240908021209",
@@ -575,6 +783,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d7/RedMiwaSRS11.png/revision/latest?cb=20240908073144",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/71/RedMiwaSRS21.png/revision/latest?cb=20240908073156",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/04/RedMiwaSRUlt1.png/revision/latest?cb=20240908073207"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -590,7 +806,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/49/Sr15.gif/revision/latest?cb=20240908021842",
@@ -599,6 +816,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3b/RedNanamiSRS11.png/revision/latest?cb=20240908073502",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/42/RedNanamiSRS21.png/revision/latest?cb=20240908073511",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/68/RedNanamiSRUlt1.png/revision/latest?cb=20240908073519"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -614,15 +839,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3f/GreenNanamiSSRArt1.gif/revision/latest?cb=20240903025822",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3f/GreenNanamiSSRArt1.gif/revision/latest?cb=20231123124657",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/12/GreenNanamiSSRIcon1.webp/revision/latest?cb=20240902053645",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/73/GreenNanamiSSRNormalAttack1.png/revision/latest?cb=20240908054949",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/de/GreenNanamiSSRS11.png/revision/latest?cb=20240908055005",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1b/GreenNanamiSSRS21.png/revision/latest?cb=20240908055020",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/58/GreenNanamiSSRUlt1.png/revision/latest?cb=20240908055031"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -638,7 +872,8 @@
     "s1": "s1.webp",
     "s2": "s2.webp",
     "ult": "ult.webp",
-    "icon": "icon.webp"
+    "icon": "icon.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c4/Sr7.gif/revision/latest?cb=20240908021708",
@@ -647,6 +882,14 @@
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/86/GreenMechSRS21.png/revision/latest?cb=20240908082048",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7d/GreenMechSRUlt1.png/revision/latest?cb=20240908082102",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/70/GreenMechamaruSRIcon1.webp/revision/latest?cb=20240903063716"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -662,7 +905,8 @@
     "s1": "s1.webp",
     "s2": "s2.webp",
     "ult": "ult.webp",
-    "icon": "icon.webp"
+    "icon": "icon.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/98/Sr3.gif/revision/latest?cb=20240908021623",
@@ -671,6 +915,14 @@
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3d/YellowMaiSRS21.png/revision/latest?cb=20240908085856",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/cf/YellowMaiSRUlt1.png/revision/latest?cb=20240908085904",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7d/YellowMeiSRIcon1.webp/revision/latest?cb=20240903063757"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -686,7 +938,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bd/Maki_Zen_in_Rebellious_Failure_compressed.gif/revision/latest?cb=20240830074933",
@@ -695,6 +948,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/39/RedMakiSSRS11.png/revision/latest?cb=20240830033105",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fa/RedMakiSSRS21.png/revision/latest?cb=20240830033137",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/55/RedMakiSSRUlt1.png/revision/latest?cb=20240830033212"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -710,7 +971,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/47/Sr8.gif/revision/latest?cb=20240908021933",
@@ -719,6 +981,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b7/BlueMaki0SRSkill1%281%29.png/revision/latest?cb=20240908081756",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c0/BlueMaki0SRSkill2%281%29.png/revision/latest?cb=20240908081808",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/63/BlueMaki0SRUlt1.png/revision/latest?cb=20240908081820"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -734,7 +1004,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2c/Sr13.gif/revision/latest?cb=20240908021804",
@@ -743,6 +1014,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/db/RedYagaSRS11.png/revision/latest?cb=20240908073726",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6e/RedYagaSRS21.png/revision/latest?cb=20240908073736",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1e/RedYagaSRUlt1.png/revision/latest?cb=20240908073748"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -758,15 +1037,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/1c/YellowMegumiSSRArt1.gif/revision/latest?cb=20240903024801",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1c/YellowMegumiSSRArt1.gif/revision/latest?cb=20240221044548",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c8/YellowMegumiSSRIcon1.webp/revision/latest?cb=20240902053826",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/31/YellowMegumiSSRNormalAttack1.png/revision/latest?cb=20240908070627",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/91/YellowMegumiSSRS11.png/revision/latest?cb=20240908070637",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/93/YellowMegumiSSRS21.png/revision/latest?cb=20240908070645",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7e/YellowMegumiSSRUlt1.png/revision/latest?cb=20240908070653"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -782,15 +1070,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/19/BlueMegumiSSRArt1.gif/revision/latest?cb=20240903024717",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/19/BlueMegumiSSRArt1.gif/revision/latest?cb=20231123002325",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/31/BlueMegumiSSRIcon1.webp/revision/latest?cb=20240902053512",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c3/BlueMegumiSSRNormalAttack1.png/revision/latest?cb=20240908030425",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b1/BlueMegumiSSRS11.png/revision/latest?cb=20240908030446",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/04/BlueMegumiSSRS21.png/revision/latest?cb=20240908030457",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2f/BlueMegumiSSRUlt1.png/revision/latest?cb=20240908030508"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 90,
+    "ms": 3000,
+    "keptFrames": 45,
+    "fps": 15.0
    }
   },
   {
@@ -806,15 +1103,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a4/BlueMomoSSRArt1-min.gif/revision/latest?cb=20240903032951",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/ad/BlueMomoSSRArt1.gif/revision/latest?cb=20240222004942",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/6f/BlueSSRMomoIcon1.webp/revision/latest?cb=20240902053558",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c3/BlueSSRMomoNormalAttack1.png/revision/latest?cb=20240908050929",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e8/BlueSSRMomoS11.png/revision/latest?cb=20240908050955",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/77/BlueSSRMomoS21.png/revision/latest?cb=20240908051010",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/02/BlueSSRMomoUlt1.png/revision/latest?cb=20240908051025"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -830,7 +1136,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9a/Sr6.gif/revision/latest?cb=20240908021657",
@@ -839,6 +1146,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f5/GreenMomoSRS11.png/revision/latest?cb=20240908083853",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/93/GreenMomoSRS21.png/revision/latest?cb=20240908083915",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/8a/GreenMomoSRUlt1.png/revision/latest?cb=20240908083926"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -854,15 +1169,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/34/YellowNobaraSSRArt1.gif/revision/latest?cb=20240903024700",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/34/YellowNobaraSSRArt1.gif/revision/latest?cb=20231123124702",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bc/YellowNobaraSSRIcon1.webp/revision/latest?cb=20240902053800",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c1/YellowNobaraSSRNormalAttack1.png/revision/latest?cb=20240908064312",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3a/YellowNobaraSSRS11.png/revision/latest?cb=20240908064325",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/23/YellowNobaraSSRS21.png/revision/latest?cb=20240908064342",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/66/YellowNobaraSSRUlt1.png/revision/latest?cb=20240908064357"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -878,7 +1202,8 @@
     "s1": "s1.webp",
     "s2": "s2.webp",
     "ult": "ult.webp",
-    "icon": "icon.webp"
+    "icon": "icon.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/db/BlueNoritoshiSSRArt1-min.gif/revision/latest?cb=20240903033011",
@@ -887,6 +1212,14 @@
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/58/BlueSSRKamoS21.png/revision/latest?cb=20240908050711",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a4/BlueSSRKamoUlt1.png/revision/latest?cb=20240908050725",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/45/BlueSSRKamoIcon1.webp/revision/latest?cb=20240902053545"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -902,7 +1235,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/ff/Sr14.gif/revision/latest?cb=20240908021829",
@@ -911,6 +1245,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4f/BlueKamoSRS11.png/revision/latest?cb=20240908075826",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e1/BlueKamoSRS21.png/revision/latest?cb=20240908075835",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/08/BlueKamoSRUlt1.png/revision/latest?cb=20240908075850"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -926,7 +1268,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fb/Sr9.gif/revision/latest?cb=20240908021718",
@@ -935,6 +1278,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/43/BluePanda0SRS11.png/revision/latest?cb=20240908080621",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/92/BluePanda0SRS21.png/revision/latest?cb=20240908080632",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/60/BluePanda0SRUlt1.png/revision/latest?cb=20240908080644"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -950,15 +1301,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f8/GreenPandaSSRArt1.gif/revision/latest?cb=20240908092446",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f8/GreenPandaSSRArt1.gif/revision/latest?cb=20231123124657",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/ca/GreenPandaSSRIcon1.webp/revision/latest?cb=20240902053713",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/01/GreenPandaSSRNormalAttack1.png/revision/latest?cb=20240908060654",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c2/GreenPandaSSRS11.png/revision/latest?cb=20240908060705",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/ff/GreenPandaSSRS21.png/revision/latest?cb=20240908060717",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/53/GreenPandaSSRUlt1.png/revision/latest?cb=20240908060734"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -974,7 +1334,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d2/Freecompress-sr1.gif/revision/latest?cb=20240908021544",
@@ -983,6 +1344,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2c/YellowSakiSRS11.png/revision/latest?cb=20240908090349",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/d2/YellowSakiSRS21.png/revision/latest?cb=20240908090359",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/08/YellowSakiSRUlt1.png/revision/latest?cb=20240908090410"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -998,15 +1367,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bd/Freecompress-GreenGojoSSRArt1-min.gif/revision/latest?cb=20240907042522",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/0e/GreenGojoSSRArt1.gif/revision/latest?cb=20240221044557",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ea/GreenGojoSSRIcon1.webp/revision/latest?cb=20240902053721",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c7/GreenGojoSSRNormalAttack1.png/revision/latest?cb=20240908061924",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/69/GreenGojoSSRS11.png/revision/latest?cb=20240908061941",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5d/GreenSSRGojoS21.png/revision/latest?cb=20240908061957",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/11/GreenSSRGojoUlt1.png/revision/latest?cb=20240908062010"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1022,15 +1400,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/26/Freecompress-BlueGojoSSRArt1-min.gif/revision/latest?cb=20240907042445",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9e/BlueGojoSSRArt1.gif/revision/latest?cb=20231123124702",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f3/BlueGojoSSRIcon1.webp/revision/latest?cb=20240902053433",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/12/BlueGojoSSRNormalAttack1.png/revision/latest?cb=20240908024826",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e4/BlueGojoSSRS11.png/revision/latest?cb=20240908025109",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/40/S2.png/revision/latest?cb=20240908025150",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/74/BlueGojoSSRUlt1.png/revision/latest?cb=20240908024849"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1046,15 +1433,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/3b/BlueGetoSSRArt1.gif/revision/latest?cb=20240903024600",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3b/BlueGetoSSRArt1.gif/revision/latest?cb=20231218002326",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/10/BlueGetoSSRIcon1.webp/revision/latest?cb=20240902053535",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f8/BlueGetoSSRNormalAttack1.png/revision/latest?cb=20240908050103",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/05/BlueGetoSSRS11.png/revision/latest?cb=20240908050217",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/f2/BlueGetoSSRS21.png/revision/latest?cb=20240908050159",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e0/BlueGetoSSRUlt1.png/revision/latest?cb=20240908050028"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1070,15 +1466,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/ce/YellowTogeSSRArt1.gif/revision/latest?cb=20240903025736",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/ce/YellowTogeSSRArt1.gif/revision/latest?cb=20231123124702",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/YellowTogeSSRIcon1.webp/revision/latest?cb=20240902053809",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/8/88/YellowTogeSSRNormalAttack1.png/revision/latest?cb=20240908064853",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a7/YellowTogeSSRS11.png/revision/latest?cb=20240908064910",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fd/YellowTogeSSRS21.png/revision/latest?cb=20240908064927",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e7/YellowTogeSSRUlt1.png/revision/latest?cb=20240908064943"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1094,7 +1499,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b6/Sr10.gif/revision/latest?cb=20240908021729",
@@ -1103,6 +1509,14 @@
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/41/BlueToge0SRS11.png/revision/latest?cb=20240908081016",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a6/BlueToge0SRS21.png/revision/latest?cb=20240908081028",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/ed/BlueToge0SRUlt1.png/revision/latest?cb=20240908081043"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -1118,15 +1532,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/9/9b/RedYujiSSRArt1.gif/revision/latest?cb=20240903024823",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9b/RedYujiSSRArt1.gif/revision/latest?cb=20240222005627",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c6/RedYujiSSRIcon1.webp/revision/latest?cb=20240831060131",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/7/7e/RedYujiSSRNormalAttack1.png/revision/latest?cb=20240831072622",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a5/RedYujiSSRS11.png/revision/latest?cb=20240831072632",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/c/c0/RedYujiSSRS21.png/revision/latest?cb=20240831072644",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/5/5a/RedYujiSSRUlt1.png/revision/latest?cb=20240831072754"
+   },
+   "anim": {
+    "width": 600,
+    "height": 338,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1142,15 +1565,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/d/de/RedYutaSSRArt1.gif/revision/latest?cb=20240903025836",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/de/RedYutaSSRArt1.gif/revision/latest?cb=20231218002327",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/1/18/RedYutaSSRIcon1.webp/revision/latest?cb=20240831060106",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/0e/RedYutaSSRNormalAttack1.png/revision/latest?cb=20240831071734",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/09/RedYutaSSRS11.png/revision/latest?cb=20240831071725",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/a/a3/RedYutaSSRS21.png/revision/latest?cb=20240831071717",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/4/4a/RedYutaSSRUlt1.png/revision/latest?cb=20240831071709"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1166,15 +1598,24 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
-    "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2c/Freecompress-GreenItadoriSSRArt1-min.gif/revision/latest?cb=20240907042825",
+    "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9e/GreenItadoriSSRArt1.gif/revision/latest?cb=20231123124657",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/f/fb/GreenItadoriSSRIcon1.webp/revision/latest?cb=20240902053634",
     "normal": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/36/GreenItadoriSSRNormalAttack1.png/revision/latest?cb=20240908052915",
     "s1": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/3/36/GreenItadoriSSRS11.png/revision/latest?cb=20240908052927",
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/b5/GreenItadoriSSRS21.png/revision/latest?cb=20240908052940",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/6/62/GreenItadoriSSRUlt1.png/revision/latest?cb=20240908052952"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1190,7 +1631,8 @@
     "s1": "s1.webp",
     "s2": "s2.webp",
     "ult": "ult.webp",
-    "icon": "icon.webp"
+    "icon": "icon.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/b/bf/Sr5.gif/revision/latest?cb=20240908021647",
@@ -1199,6 +1641,14 @@
     "s2": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/2/2f/GreenKaitoSRS21.png/revision/latest?cb=20240908084818",
     "ult": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/0/02/GreenKaitoSRUlt1.png/revision/latest?cb=20240908084827",
     "icon": "https://static.wikia.nocookie.net/jujutsu-kaisen-phantom-parade/images/e/e0/GreenYuukiSRIcon1.webp/revision/latest?cb=20240903063737"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -1215,7 +1665,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/18/RedSSRMaiArt1.gif/revision/latest?cb=20240921141521",
@@ -1224,6 +1675,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/ce/RedSSRMaiSkill1.png/revision/latest?cb=20240921220936",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/84/RedSSRMaiSkill2.png/revision/latest?cb=20240921220951",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/54/RedSSRMaiUlt.png/revision/latest?cb=20240921221006"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 96,
+    "ms": 5760,
+    "keptFrames": 96,
+    "fps": 16.7
    }
   },
   {
@@ -1240,7 +1699,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/RedSSRGojoArt1.gif/revision/latest?cb=20241129062551",
@@ -1249,6 +1709,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/RedSSRGojoS11.png/revision/latest?cb=20241130175517",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f4/RedSSRGojoS21.png/revision/latest?cb=20241130175548",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/RedSSRGojoUlt1.png/revision/latest?cb=20241130175601"
+   },
+   "anim": {
+    "width": 800,
+    "height": 400,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1265,7 +1733,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b8/RedSSRInumakiArt1.gif/revision/latest?cb=20250228124303",
@@ -1274,6 +1743,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c4/RedSSRInumakiS11.png/revision/latest?cb=20250219190854",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e2/RedSSRInumakiS21.png/revision/latest?cb=20250219190904",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e9/RedSSRInumakiUlt1.png/revision/latest?cb=20250219190914"
+   },
+   "anim": {
+    "width": 1450,
+    "height": 725,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1290,7 +1767,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/75/RedSSRMeiMeiArt1.gif/revision/latest?cb=20250331084734",
@@ -1299,6 +1777,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d9/RedSSRMeiMeiS11.png/revision/latest?cb=20250331084643",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/RedSSRMeiMeiS21.png/revision/latest?cb=20250331084643",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2f/RedSSRMeiMeiUlt1.png/revision/latest?cb=20250331084643"
+   },
+   "anim": {
+    "width": 900,
+    "height": 450,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1315,7 +1801,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6c/RedSSRNanamiArt1.gif/revision/latest?cb=20250710181910",
@@ -1324,6 +1811,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/10/RedSSRNanamiS11.png/revision/latest?cb=20250710181649",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/db/RedSSRNanamiS21.png/revision/latest?cb=20250710181649",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/dd/RedSSRNanamiUlt1.png/revision/latest?cb=20250710181648"
+   },
+   "anim": {
+    "width": 900,
+    "height": 450,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1340,7 +1835,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/46/RedSSRMegumiArt1.gif/revision/latest?cb=20250918051755",
@@ -1349,6 +1845,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b3/RedSSRMegumiS11.png/revision/latest?cb=20250912095622",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/13/RedSSRMegumiS21.png/revision/latest?cb=20250912095649",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/71/RedSSRMegumiUlt1.png/revision/latest?cb=20250912095658"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1365,7 +1869,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fe/RedYujiSSRArt2.gif/revision/latest?cb=20251121143140",
@@ -1374,6 +1879,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7a/RedSSRYujiS12.png/revision/latest?cb=20251121060016",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e3/RedSSRYujiS22.png/revision/latest?cb=20251121060015",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9d/RedSSRYujiUlt2.png/revision/latest?cb=20251121060016"
+   },
+   "anim": {
+    "width": 400,
+    "height": 200,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1390,7 +1903,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a3/RedSSRMahitoArt1.gif/revision/latest?cb=20251204160252",
@@ -1399,6 +1913,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4e/RedSSRMahitoS11.png/revision/latest?cb=20251204092521",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/da/RedSSRMahitoS21.png/revision/latest?cb=20251204092534",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a5/RedSSRMahitoUlt1.png/revision/latest?cb=20251204092733"
+   },
+   "anim": {
+    "width": 750,
+    "height": 375,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1415,7 +1937,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8e/RedSSRMomoArt1.gif/revision/latest?cb=20260225095933",
@@ -1424,6 +1947,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/49/RedSSRMomoS11.png/revision/latest?cb=20260225095727",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f0/RedSSRMomoS21.png/revision/latest?cb=20260225095741",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/RedSSRMomoUlt1.png/revision/latest?cb=20260225095753"
+   },
+   "anim": {
+    "width": 622,
+    "height": 310,
+    "frames": 75,
+    "ms": 6000,
+    "keptFrames": 75,
+    "fps": 12.5
    }
   },
   {
@@ -1440,7 +1971,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/cb/RedSSRKenjakuArt1.gif/revision/latest?cb=20260424150619",
@@ -1449,6 +1981,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/84/RedSSRKenjakuS11.png/revision/latest?cb=20260424150941",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5f/RedSSRKenjakuS21.png/revision/latest?cb=20260425142135",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/30/RedSSRKenjakuUlt1.png/revision/latest?cb=20260425141825"
+   },
+   "anim": {
+    "width": 631,
+    "height": 316,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1465,7 +2005,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/48/RedSSRGakuganjiArt1.gif/revision/latest?cb=20260730131832",
@@ -1474,6 +2015,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/21/RedSSRGakuganjiS11.png/revision/latest?cb=20260721095219",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/98/RedSSRGakuganjiS21.png/revision/latest?cb=20260721095231",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7a/RedSSRGakuganjiUlt1.png/revision/latest?cb=20260721095243"
+   },
+   "anim": {
+    "width": 756,
+    "height": 378,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1490,7 +2039,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/99/RedSSRHaibaraArt1.gif/revision/latest?cb=20260831140035",
@@ -1499,6 +2049,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9c/RedSSRHaibaraS11.png/revision/latest?cb=20260831140412",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/77/RedSSRHaibaraS21.png/revision/latest?cb=20260831140438",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ed/RedSSRHaibaraUlt1.png/revision/latest?cb=20260831140540"
+   },
+   "anim": {
+    "width": 710,
+    "height": 355,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1515,7 +2073,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/36/BlueSSRInumakiArt1.gif/revision/latest?cb=20241002085413",
@@ -1524,6 +2083,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/BlueSSRInumakiSkill1.png/revision/latest?cb=20241002092546",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/83/BlueSSRInumakiSkill2.png/revision/latest?cb=20241002092559",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/BlueSSRInumakiUlt.png/revision/latest?cb=20241002092608"
+   },
+   "anim": {
+    "width": 700,
+    "height": 350,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1540,7 +2107,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/91/BlueSSRMiguelArt1.gif/revision/latest?cb=20241213194837",
@@ -1549,6 +2117,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/44/BlueSSRMiguelSkill1.png/revision/latest?cb=20241213114237",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c6/BlueSSRMiguelSkill2.png/revision/latest?cb=20241213113517",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/BlueSSRMiguelUlt.png/revision/latest?cb=20241213113625"
+   },
+   "anim": {
+    "width": 800,
+    "height": 400,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1565,7 +2141,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/bb/BlueSSRSukunaArt1.gif/revision/latest?cb=20241229135909",
@@ -1574,6 +2151,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a2/BlueSSRSukunaS11.png/revision/latest?cb=20241229065813",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/71/BlueSSRSukunaS21.png/revision/latest?cb=20250917152610",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/87/BlueSSRSukunaUlt1.png/revision/latest?cb=20241229065812"
+   },
+   "anim": {
+    "width": 800,
+    "height": 400,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1590,7 +2175,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/09/BlueMakiSSRArt1.gif/revision/latest?cb=20250321092301",
@@ -1599,6 +2185,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/22/BlueMakiSSRS11.png/revision/latest?cb=20250321055200",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4f/BlueMakiSSRS21.png/revision/latest?cb=20250321055159",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/BlueMakiSSRUlt1.png/revision/latest?cb=20250321055200"
+   },
+   "anim": {
+    "width": 1400,
+    "height": 700,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1615,7 +2209,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9e/BlueSSRInoArt1.gif/revision/latest?cb=20250519123909",
@@ -1624,6 +2219,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4e/BlueSSRInoS11.png/revision/latest?cb=20250428112759",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b0/BlueSSRInoS21.png/revision/latest?cb=20250428112758",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/71/BlueSSRInoUlt1.png/revision/latest?cb=20250428112759"
+   },
+   "anim": {
+    "width": 700,
+    "height": 350,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1640,7 +2243,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d4/BlueSSRNaobitoArt1.gif/revision/latest?cb=20250908032954",
@@ -1649,6 +2253,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/70/BlueSSRNaobitoS11.png/revision/latest?cb=20250903084301",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1e/BlueSSRNaobitoS21.png/revision/latest?cb=20250903084317",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a4/BlueSSRNaobitoUlt1.png/revision/latest?cb=20250903084326"
+   },
+   "anim": {
+    "width": 650,
+    "height": 325,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1665,7 +2277,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b3/BlueSSRYutaArt1.gif/revision/latest?cb=20251020184359",
@@ -1674,6 +2287,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/54/BlueSSRYutaS11.png/revision/latest?cb=20251018094358",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/38/BlueSSRYutaS21.png/revision/latest?cb=20251018094358",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/69/BlueSSRYutaUlt1.png/revision/latest?cb=20251018094358"
+   },
+   "anim": {
+    "width": 480,
+    "height": 240,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1690,7 +2311,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ee/BlueSSRGojoArt2.gif/revision/latest?cb=20251231022224",
@@ -1699,6 +2321,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/70/BlueSSRGojoS12.png/revision/latest?cb=20251231025313",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e5/BlueSSRGojoS22.png/revision/latest?cb=20251231025323",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/27/BlueSSRGojoUlt2.png/revision/latest?cb=20251231025335"
+   },
+   "anim": {
+    "width": 750,
+    "height": 375,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1715,7 +2345,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/36/BlueSSRYagaArt1.gif/revision/latest?cb=20260319084830",
@@ -1724,6 +2355,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/df/BlueSSRYagaS11.png/revision/latest?cb=20260319084907",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6b/BlueSSRYagaS21.png/revision/latest?cb=20260319084920",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/db/BlueSSRYagaUlt1.png/revision/latest?cb=20260319084931"
+   },
+   "anim": {
+    "width": 847,
+    "height": 424,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1740,7 +2379,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a5/BlueSSRYujiArt2.gif/revision/latest?cb=20260525144728",
@@ -1749,6 +2389,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d7/BlueYujiSSRS12.png/revision/latest?cb=20260525145841",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/87/BlueYujiSSRS22.png/revision/latest?cb=20260525145858",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/23/BlueYujiSSRUlt2.png/revision/latest?cb=20260525145910"
+   },
+   "anim": {
+    "width": 1212,
+    "height": 606,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1765,7 +2413,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5c/BlueSSRNobaraArt1.gif/revision/latest?cb=20260531092122",
@@ -1774,6 +2423,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c4/BlueSSRNobaraS11.png/revision/latest?cb=20260531092211",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3b/BlueSSRNobaraS21.png/revision/latest?cb=20260531092224",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/58/BlueSSRNobaraUlt1.png/revision/latest?cb=20260531092237"
+   },
+   "anim": {
+    "width": 1163,
+    "height": 582,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1790,7 +2447,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/91/BlueSSRMaiArt1.gif/revision/latest?cb=20260831142529",
@@ -1799,6 +2457,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/26/BlueSSRMaiS11.png/revision/latest?cb=20260831142029",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/42/BlueSSRMaiS21.png/revision/latest?cb=20260831142053",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/bb/BlueSSRMaiUlt1.png/revision/latest?cb=20260831142114"
+   },
+   "anim": {
+    "width": 1030,
+    "height": 515,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1815,7 +2481,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d0/NobaraArt.gif/revision/latest?cb=20241021221331",
@@ -1824,6 +2491,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/25/GreenSSRNobaraSkill1.png/revision/latest?cb=20241022185808",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e1/GreenSSRNobaraSkill2.png/revision/latest?cb=20241022185815",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/be/GreenSSRNobaraUlt.png/revision/latest?cb=20241022185822"
+   },
+   "anim": {
+    "width": 700,
+    "height": 350,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1840,7 +2515,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/06/GreenMegumiSSRArt1.gif/revision/latest?cb=20241031081159",
@@ -1849,6 +2525,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/ed/GreenMegumiSSRS11.png/revision/latest?cb=20241031083240",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3f/GreenMegumiSSRS21.png/revision/latest?cb=20241031083240",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d9/GreenMegumiSSRUlt1.png/revision/latest?cb=20241031083241"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1865,7 +2549,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a6/GreenSSRMiwaArt1.gif/revision/latest?cb=20250123152000",
@@ -1874,6 +2559,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3b/GreenSSRMiwaS1.png/revision/latest?cb=20250123151531",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1b/GreenSSRMiwaS2.png/revision/latest?cb=20250123151621",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/01/GreenSSRMiwaUlt.png/revision/latest?cb=20250123151641"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 120,
+    "ms": 6000,
+    "keptFrames": 120,
+    "fps": 20.0
    }
   },
   {
@@ -1890,7 +2583,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/65/GreenSSRMutaArt1.gif/revision/latest?cb=20250201221006",
@@ -1899,6 +2593,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b7/GreenSSRMutaS11.png/revision/latest?cb=20250131082359",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/77/GreenSSRMutaS21.png/revision/latest?cb=20250131082359",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e1/GreenSSRMutaUlt1.png/revision/latest?cb=20250131082359"
+   },
+   "anim": {
+    "width": 900,
+    "height": 450,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1915,7 +2617,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b5/GreenSSRGojoArt2.gif/revision/latest?cb=20250521140007",
@@ -1924,6 +2627,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/GreenSSRGojoS12.png/revision/latest?cb=20250521135114",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/00/GreenSSRGojoS22.png/revision/latest?cb=20250521135115",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2d/GreenSSRGojoUlt2.png/revision/latest?cb=20250521135115"
+   },
+   "anim": {
+    "width": 800,
+    "height": 400,
+    "frames": 60,
+    "ms": 6000,
+    "keptFrames": 60,
+    "fps": 10.0
    }
   },
   {
@@ -1940,7 +2651,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/23/GreenSSRShokoArt1.gif/revision/latest?cb=20250531153412",
@@ -1949,6 +2661,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/dc/GreenSSRShokoS11.png/revision/latest?cb=20250530122320",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/da/GreenSSRShokoS21.png/revision/latest?cb=20250530122320",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d1/GreenSSRShokoUlt1.png/revision/latest?cb=20250530122320"
+   },
+   "anim": {
+    "width": 1000,
+    "height": 500,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1965,7 +2685,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fa/GreenSSRChosoArt1.gif/revision/latest?cb=20250806123949",
@@ -1974,6 +2695,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/GreenSSRChosoS11.png/revision/latest?cb=20250806124025",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/5b/GreenSSRChosoS21.png/revision/latest?cb=20250806124038",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/97/GreenSSRChosoUlt1.png/revision/latest?cb=20250806124053"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -1990,7 +2719,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f5/GreenSSRTodoArt1.gif/revision/latest?cb=20251121143330",
@@ -1999,6 +2729,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c6/GreenSSRTodoS11.png/revision/latest?cb=20251121071036",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/83/GreenSSRTodoS21.png/revision/latest?cb=20251121071036",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d7/GreenSSRTodoUlt1.png/revision/latest?cb=20251121071036"
+   },
+   "anim": {
+    "width": 500,
+    "height": 250,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2015,7 +2753,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/90/GreenItadoriSSRArt2.gif/revision/latest?cb=20260109020956",
@@ -2024,6 +2763,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2d/GreenItadoriSSRS12.png/revision/latest?cb=20260109025343",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/eb/GreenItadoriSSRS22.png/revision/latest?cb=20260109025356",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/49/GreenItadoriSSRUlt2.png/revision/latest?cb=20260109025428"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2040,7 +2787,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/61/GreenNanamiSSRArt2.gif/revision/latest?cb=20260228022734",
@@ -2049,6 +2797,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e2/GreenNanamiSSRS12.png/revision/latest?cb=20260228022832",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/32/GreenNanamiSSRS22.png/revision/latest?cb=20260228022841",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6c/GreenNanamiSSRUlt2.png/revision/latest?cb=20260228022852"
+   },
+   "anim": {
+    "width": 525,
+    "height": 263,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2065,7 +2821,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4a/GreenMegumiSSRArt2.gif/revision/latest?cb=20260531081057",
@@ -2074,6 +2831,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b5/GreenMegumiSSRS12.png/revision/latest?cb=20260531081149",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/f3/GreenMegumiSSRS22.png/revision/latest?cb=20260531081231",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8d/GreenMegumiSSRUlt2.png/revision/latest?cb=20260531081249"
+   },
+   "anim": {
+    "width": 1212,
+    "height": 606,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2090,7 +2855,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/84/GreenInoSSRArt1.gif/revision/latest?cb=20260831141434",
@@ -2099,6 +2865,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/7a/GreenInoSSRS11.png/revision/latest?cb=20260831140858",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/0a/GreenInoSSRS21.png/revision/latest?cb=20260831141015",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b0/GreenInoSSRUlt1.png/revision/latest?cb=20260831141034"
+   },
+   "anim": {
+    "width": 847,
+    "height": 424,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2115,7 +2889,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/e/e3/YellowSSRKaitoArt.gif/revision/latest?cb=20241117130519",
@@ -2124,6 +2899,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3f/YellowSSRKaitoS21.png/revision/latest?cb=20241117140450",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a1/YellowSSRKaitoS31.png/revision/latest?cb=20241117140459",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/22/YellowSSRKaitoUlt1.png/revision/latest?cb=20241117140509"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 96,
+    "ms": 6000,
+    "keptFrames": 96,
+    "fps": 16.0
    }
   },
   {
@@ -2140,7 +2923,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/ab/YellowSSRYujiArt1.gif/revision/latest?cb=20241121035127",
@@ -2149,6 +2933,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/af/YellowSSRYujiS21.png/revision/latest?cb=20241121035303",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/58/YellowSSRYujiS31.png/revision/latest?cb=20241121035347",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a1/YellowSSRYujiUlt.png/revision/latest?cb=20241121035402"
+   },
+   "anim": {
+    "width": 540,
+    "height": 270,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2165,7 +2957,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b5/YellowSSRShokoSSRArt1.gif/revision/latest?cb=20250228054345",
@@ -2174,6 +2967,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d7/YellowSSRShokoS11.png/revision/latest?cb=20250228053958",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9f/YellowSSRShokoS21.png/revision/latest?cb=20250228053957",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/85/YellowSSRShokoUlt1.png/revision/latest?cb=20250228053958"
+   },
+   "anim": {
+    "width": 1250,
+    "height": 625,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2190,7 +2991,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/b/b7/YellowSSRDagonArt1.gif/revision/latest?cb=20250805190153",
@@ -2199,6 +3001,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/dd/YellowSSRDagonS11.png/revision/latest?cb=20250805190341",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/63/YellowSSRDagonS21.png/revision/latest?cb=20250805190410",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2a/YellowSSRDagonUlt1.png/revision/latest?cb=20250805190449"
+   },
+   "anim": {
+    "width": 750,
+    "height": 375,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2215,7 +3025,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9c/YellowSSRTojiArt1.gif/revision/latest?cb=20250820124532",
@@ -2224,6 +3035,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a5/YellowSSRTojiS11.png/revision/latest?cb=20250819154542",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1c/YellowSSRTojiS21.png/revision/latest?cb=20250819154540",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/4a/YellowSSRTojiUlt1.png/revision/latest?cb=20250819154542"
+   },
+   "anim": {
+    "width": 800,
+    "height": 400,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2240,7 +3059,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/80/YellowSSRKusakabeArt1.gif/revision/latest?cb=20251013071832",
@@ -2249,6 +3069,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/02/YellowSSRKusakabeS11.png/revision/latest?cb=20250930141334",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/1d/YellowSSRKusakabeS21.png/revision/latest?cb=20250930141350",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/YellowSSRKusakabeUlt1.png/revision/latest?cb=20250930141406"
+   },
+   "anim": {
+    "width": 800,
+    "height": 400,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2265,7 +3093,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/40/YellowSSRSukunaArt1.gif/revision/latest?cb=20251128083124",
@@ -2274,6 +3103,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/3f/YellowSSRSukunaS11.png/revision/latest?cb=20251128084638",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/04/YellowSSRSukunaS21.png/revision/latest?cb=20251128084831",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/48/YellowSSRSukunaUlt1.png/revision/latest?cb=20251128084838"
+   },
+   "anim": {
+    "width": 600,
+    "height": 300,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2290,7 +3127,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/05/YellowSSRUraumeArt1.gif/revision/latest?cb=20260222040448",
@@ -2299,6 +3137,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/59/YellowSSRUraumeS11.png/revision/latest?cb=20260210000302",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/31/YellowSSRUraumeS21.png/revision/latest?cb=20260210000330",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8c/YellowSSRUraumeUlt1.png/revision/latest?cb=20260210000428"
+   },
+   "anim": {
+    "width": 634,
+    "height": 316,
+    "frames": 72,
+    "ms": 5760,
+    "keptFrames": 72,
+    "fps": 12.5
    }
   },
   {
@@ -2315,7 +3161,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c7/YellowSSRYutaArt1.gif/revision/latest?cb=20260327054841",
@@ -2324,6 +3171,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/c2/YellowSSRYutaS11.png/revision/latest?cb=20260327054802",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/49/YellowSSRYutaS21.png/revision/latest?cb=20260327054814",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/d/d5/YellowSSRYutaUlt1.png/revision/latest?cb=20260327054824"
+   },
+   "anim": {
+    "width": 665,
+    "height": 333,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2340,7 +3195,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/01/YellowSSREijiArt1.gif/revision/latest?cb=20260416233143",
@@ -2349,6 +3205,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/69/YellowSSREijiS11.png/revision/latest?cb=20260416233302",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/58/YellowSSREijiS21.png/revision/latest?cb=20260416233315",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/69/YellowSSREijiUlt1.png/revision/latest?cb=20260416233411"
+   },
+   "anim": {
+    "width": 631,
+    "height": 316,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2365,7 +3229,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/1/11/YellowGojoSSRArt2.gif/revision/latest?cb=20260525144223",
@@ -2374,6 +3239,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/9/9b/YellowGojoSSRS12.png/revision/latest?cb=20260525145331",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/c/cf/YellowGojoSSRS22.png/revision/latest?cb=20260525145344",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8b/YellowGojoSSRUlt2.png/revision/latest?cb=20260525145358"
+   },
+   "anim": {
+    "width": 1395,
+    "height": 698,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2390,7 +3263,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/2/2b/YellowSSRGetoArt1.gif/revision/latest?cb=20260911125158",
@@ -2399,6 +3273,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/8/8c/YellowSSRGetoS11.png/revision/latest?cb=20260911124550",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/3/39/YellowSSRGetoS21.png/revision/latest?cb=20260911124606",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/5/52/YellowSSRGetoUlt1.png/revision/latest?cb=20260911124618"
+   },
+   "anim": {
+    "width": 631,
+    "height": 316,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2415,7 +3297,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/a/a2/RedSSRJogoArt1.gif/revision/latest?cb=20250921130956",
@@ -2424,6 +3307,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/f/fa/RedSSRJogoS11.png/revision/latest?cb=20250919070554",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/76/RedSSRJogoS21.png/revision/latest?cb=20250919070603",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/76/RedSSRJogoUlt1.png/revision/latest?cb=20250919070612"
+   },
+   "anim": {
+    "width": 525,
+    "height": 263,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   },
   {
@@ -2440,7 +3331,8 @@
     "normal": "normal.webp",
     "s1": "s1.webp",
     "s2": "s2.webp",
-    "ult": "ult.webp"
+    "ult": "ult.webp",
+    "anim": "art-anim.webp"
    },
    "sources": {
     "art": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/6/6d/GreenIjichiSSRArt1.gif/revision/latest?cb=20260701005023",
@@ -2449,6 +3341,14 @@
     "s1": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/7/72/GreenSSRIjichiS11.png/revision/latest?cb=20260630080044",
     "s2": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/0/08/GreenSSRIjichiS21.png/revision/latest?cb=20260630080101",
     "ult": "https://static.wikia.nocookie.net/jjk-phantom-parade/images/4/43/GreenSSRIjichiUlt1.png/revision/latest?cb=20260630080123"
+   },
+   "anim": {
+    "width": 1689,
+    "height": 845,
+    "frames": 180,
+    "ms": 6000,
+    "keptFrames": 90,
+    "fps": 15.0
    }
   }
  ],

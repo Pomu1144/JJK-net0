@@ -2,7 +2,7 @@
 
 Art in this folder comes from *Jujutsu Kaisen Phantom Parade* (© Gege Akutami/Shueisha, JUJUTSU KAISEN Project; game © Sumzap / TOHO), collected from the fan wiki at https://jujutsu-kaisen-phantom-parade.fandom.com. It is used here for a non-commercial fan project. Each entry links the wiki page it came from; full file URLs are in `manifest.json`.
 
-Animated card art was reduced to a single still frame and resized; skill and unit icons are converted to WebP.
+Card art is animated in the game. Each unit's animated card art is the wiki's own upload at its native size (an animated GIF, or an animated WebP named .gif; where both wikis host the same art the full-colour WebP or larger upload is used), re-encoded by `tools/animate_pp_art.py` as a looping animated WebP (`units/<slug>/art-anim.webp`: native width, <= 20 fps by keeping every k-th frame with the original timing, lossy quality 60). `art.webp` is the middle frame as a still poster, and the 3:4 portraits are cut from it. The exact source file of each unit is `sources.art` in `manifest.json`. Skill and unit icons are converted to WebP.
 
 ## Units
 
@@ -256,3 +256,7 @@ are cut from the Exchange-screen reference supplied by the project owner (printe
 `ui/enhance/` (Lv and name brush strokes, GRADE / Awakening headers, Grade dial, Awakening hexagon,
 Phantom Seal plate, Attribute Overview button) is cut from the Enhance-screen reference supplied by the
 project owner, with printed numbers and names painted out.
+
+## Home UI
+
+- `ui/home/*.webp` — Home screen sprites (Player Rank badge, AP / clock / currency plates, "+" and "i" stones, featured-banner frame and arrows, Novice Mission and invite icons, profile / expand / swap stones, Story Event tab, ribbon and ink splash, Quest card, Gift / Mission / Cursed Corpse Stroll / Exchange / gacha tiles). Home UI sheet supplied by the project owner (a transparent sheet of the *Jujutsu Kaisen Phantom Parade* Home screen). Cut into separate sprites with ImageMagick; baked-in live values (rank number, player name, AP value and bar, date, currency amounts, "Remaining …" time, the event title, the next-chapter line, the invite badge and label) were painted out with the surrounding plate colour so the game draws its own.

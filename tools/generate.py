@@ -106,6 +106,8 @@ def pp_art(gid, slug):
     base = f'assets/pp/units/{slug}/'
     art = {'portrait': f'assets/pp/portraits/{gid}.webp', 'full': base + 'art.webp', 'icon': base + 'icon.webp',
            'source': 'phantom-parade', 'generated': False}
+    if os.path.exists(os.path.join(HERE, '..', base, 'art-anim.webp')):
+        art['anim'] = base + 'art-anim.webp'  # animated card art (tools/animate_pp_art.py)
     skills = {k: base + k + '.webp' for k in ('normal', 's1', 's2', 'ult')
               if os.path.exists(os.path.join(HERE, '..', base, k + '.webp'))}
     if skills:

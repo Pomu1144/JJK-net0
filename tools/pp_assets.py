@@ -49,7 +49,7 @@ def main(src_dir):
              'JUJUTSU KAISEN Project; game © Sumzap / TOHO), collected from the fan wiki at '
              f'{manifest["source"]}. It is used here for a non-commercial fan project. '
              'Each entry links the wiki page it came from; full file URLs are in `manifest.json`.', '',
-             'Animated card art was reduced to a single still frame and resized; skill and unit icons are converted to WebP.', '',
+             "Card art is animated in the game. Each unit's animated card art is the wiki's own upload at its native size (an animated GIF, or an animated WebP named .gif; where both wikis host the same art the full-colour WebP or larger upload is used), re-encoded by `tools/animate_pp_art.py` as a looping animated WebP (`units/<slug>/art-anim.webp`: native width, <= 20 fps by keeping every k-th frame with the original timing, lossy quality 60). `art.webp` is the middle frame as a still poster, and the 3:4 portraits are cut from it. The exact source file of each unit is `sources.art` in `manifest.json`. Skill and unit icons are converted to WebP.", '',
              '## Units', '']
     for u in sorted(manifest['units'], key=lambda u: u['name']):
         lines.append(f'- [{u["name"]} ({u["epithet"]}) — {u["color"]} {u["rarity"]}]({u["page"]}) → `units/{u["id"]}/`')

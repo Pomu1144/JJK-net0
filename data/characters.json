@@ -29,6 +29,7 @@
    "icon": "assets/pp/units/aoi-todo-are-you-satisfied-with-that/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/aoi-todo-are-you-satisfied-with-that/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/aoi-todo-are-you-satisfied-with-that/normal.webp",
     "s1": "assets/pp/units/aoi-todo-are-you-satisfied-with-that/s1.webp",
@@ -129,6 +130,7 @@
    "icon": "assets/pp/units/aoi-todo-fight-together-with-takada-chan/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/aoi-todo-fight-together-with-takada-chan/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/aoi-todo-fight-together-with-takada-chan/normal.webp",
     "s1": "assets/pp/units/aoi-todo-fight-together-with-takada-chan/s1.webp",
@@ -214,6 +216,7 @@
    "icon": "assets/pp/units/aoi-todo-memories-of-friendship/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/aoi-todo-memories-of-friendship/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/aoi-todo-memories-of-friendship/normal.webp",
     "s1": "assets/pp/units/aoi-todo-memories-of-friendship/s1.webp",
@@ -306,6 +309,7 @@
    "icon": "assets/pp/units/atsuya-kusakabe-ward-off-with-sharp-blade/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/atsuya-kusakabe-ward-off-with-sharp-blade/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/atsuya-kusakabe-ward-off-with-sharp-blade/normal.webp",
     "s1": "assets/pp/units/atsuya-kusakabe-ward-off-with-sharp-blade/s1.webp",
@@ -401,6 +405,7 @@
    "icon": "assets/pp/units/choso-fulfilling-his-duty-as-the-older-brother/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/choso-fulfilling-his-duty-as-the-older-brother/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/choso-fulfilling-his-duty-as-the-older-brother/normal.webp",
     "s1": "assets/pp/units/choso-fulfilling-his-duty-as-the-older-brother/s1.webp",
@@ -498,6 +503,7 @@
    "icon": "assets/pp/units/dagon-unlimited-shikigami/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/dagon-unlimited-shikigami/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/dagon-unlimited-shikigami/normal.webp",
     "s1": "assets/pp/units/dagon-unlimited-shikigami/s1.webp",
@@ -595,6 +601,7 @@
    "icon": "assets/pp/units/eiji-urushi-chain-mark-full-throttle/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/eiji-urushi-chain-mark-full-throttle/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/eiji-urushi-chain-mark-full-throttle/normal.webp",
     "s1": "assets/pp/units/eiji-urushi-chain-mark-full-throttle/s1.webp",
@@ -700,6 +707,7 @@
    "icon": "assets/pp/units/hanami-the-joys-of-battle/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/hanami-the-joys-of-battle/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/hanami-the-joys-of-battle/normal.webp",
     "s1": "assets/pp/units/hanami-the-joys-of-battle/s1.webp",
@@ -800,6 +808,7 @@
    "icon": "assets/pp/units/jogo-meteor-of-fierceness/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/jogo-meteor-of-fierceness/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/jogo-meteor-of-fierceness/normal.webp",
     "s1": "assets/pp/units/jogo-meteor-of-fierceness/s1.webp",
@@ -905,6 +914,7 @@
    "icon": "assets/pp/units/jogo-cursed-spirit-s-pride/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/jogo-cursed-spirit-s-pride/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/jogo-cursed-spirit-s-pride/normal.webp",
     "s1": "assets/pp/units/jogo-cursed-spirit-s-pride/s1.webp",
@@ -1000,6 +1010,7 @@
    "icon": "assets/pp/units/junpei-ssr/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/junpei-ssr/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/junpei-ssr/normal.webp",
     "s1": "assets/pp/units/junpei-ssr/s1.webp",
@@ -1092,6 +1103,7 @@
    "icon": "assets/pp/units/kaito-yuki-with-that-will-in-mind/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kaito-yuki-with-that-will-in-mind/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kaito-yuki-with-that-will-in-mind/normal.webp",
     "s1": "assets/pp/units/kaito-yuki-with-that-will-in-mind/s1.webp",
@@ -1188,6 +1200,7 @@
    "icon": "assets/pp/units/kasumi-miwa-sprinting/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kasumi-miwa-sprinting/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kasumi-miwa-sprinting/normal.webp",
     "s1": "assets/pp/units/kasumi-miwa-sprinting/s1.webp",
@@ -1283,6 +1296,7 @@
    "icon": "assets/pp/units/kasumi-miwa-zanshin/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kasumi-miwa-zanshin/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kasumi-miwa-zanshin/normal.webp",
     "s1": "assets/pp/units/kasumi-miwa-zanshin/s1.webp",
@@ -1380,6 +1394,7 @@
    "icon": "assets/pp/units/kento-nanami-overtime-work/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kento-nanami-overtime-work/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kento-nanami-overtime-work/normal.webp",
     "s1": "assets/pp/units/kento-nanami-overtime-work/s1.webp",
@@ -1467,6 +1482,7 @@
    "icon": "assets/pp/units/kento-nanami-teen-promising-new-student/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kento-nanami-teen-promising-new-student/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kento-nanami-teen-promising-new-student/normal.webp",
     "s1": "assets/pp/units/kento-nanami-teen-promising-new-student/s1.webp",
@@ -1572,6 +1588,7 @@
    "icon": "assets/pp/units/kento-nanami-ratio-technique/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kento-nanami-ratio-technique/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kento-nanami-ratio-technique/normal.webp",
     "s1": "assets/pp/units/kento-nanami-ratio-technique/s1.webp",
@@ -1659,6 +1676,7 @@
    "icon": "assets/pp/units/kento-nanami-silent-suppression/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kento-nanami-silent-suppression/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kento-nanami-silent-suppression/normal.webp",
     "s1": "assets/pp/units/kento-nanami-silent-suppression/s1.webp",
@@ -1764,6 +1782,7 @@
    "icon": "assets/pp/units/kento-nanami-the-capability-of-first-grade-sorcerer/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kento-nanami-the-capability-of-first-grade-sorcerer/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kento-nanami-the-capability-of-first-grade-sorcerer/normal.webp",
     "s1": "assets/pp/units/kento-nanami-the-capability-of-first-grade-sorcerer/s1.webp",
@@ -1856,6 +1875,7 @@
    "icon": "assets/pp/units/kiyotaka-ijichi-pick-up-after-hard-work/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kiyotaka-ijichi-pick-up-after-hard-work/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kiyotaka-ijichi-pick-up-after-hard-work/normal.webp",
     "s1": "assets/pp/units/kiyotaka-ijichi-pick-up-after-hard-work/s1.webp",
@@ -1943,6 +1963,7 @@
    "icon": "assets/pp/units/kokichi-muta-i-ve-seen-it-all/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kokichi-muta-i-ve-seen-it-all/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kokichi-muta-i-ve-seen-it-all/normal.webp",
     "s1": "assets/pp/units/kokichi-muta-i-ve-seen-it-all/s1.webp",
@@ -2033,6 +2054,7 @@
    "icon": "assets/pp/units/mahito-the-inspiration-of-death/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/mahito-the-inspiration-of-death/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/mahito-the-inspiration-of-death/normal.webp",
     "s1": "assets/pp/units/mahito-the-inspiration-of-death/s1.webp",
@@ -2125,6 +2147,7 @@
    "icon": "assets/pp/units/mahito-unbridled-soul/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/mahito-unbridled-soul/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/mahito-unbridled-soul/normal.webp",
     "s1": "assets/pp/units/mahito-unbridled-soul/s1.webp",
@@ -2229,6 +2252,7 @@
    "icon": "assets/pp/units/mai-zen-in-effective-range/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/mai-zen-in-effective-range/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/mai-zen-in-effective-range/normal.webp",
     "s1": "assets/pp/units/mai-zen-in-effective-range/s1.webp",
@@ -2329,6 +2353,7 @@
    "icon": "assets/pp/units/mai-zen-in-the-final-bullet/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/mai-zen-in-the-final-bullet/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/mai-zen-in-the-final-bullet/normal.webp",
     "s1": "assets/pp/units/mai-zen-in-the-final-bullet/s1.webp",
@@ -2434,6 +2459,7 @@
    "icon": "assets/pp/units/maki-zen-in-early-morning-departure/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/maki-zen-in-early-morning-departure/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/maki-zen-in-early-morning-departure/normal.webp",
     "s1": "assets/pp/units/maki-zen-in-early-morning-departure/s1.webp",
@@ -2534,6 +2560,7 @@
    "icon": "assets/pp/units/maki-zen-in-longsword-battle/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/maki-zen-in-longsword-battle/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/maki-zen-in-longsword-battle/normal.webp",
     "s1": "assets/pp/units/maki-zen-in-longsword-battle/s1.webp",
@@ -2639,6 +2666,7 @@
    "icon": "assets/pp/units/maki-zen-in-rebellious-failure/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/maki-zen-in-rebellious-failure/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/maki-zen-in-rebellious-failure/normal.webp",
     "s1": "assets/pp/units/maki-zen-in-rebellious-failure/s1.webp",
@@ -2734,6 +2762,7 @@
    "icon": "assets/pp/units/masamichi-yaga-cursed-corpse-battle/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/masamichi-yaga-cursed-corpse-battle/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/masamichi-yaga-cursed-corpse-battle/normal.webp",
     "s1": "assets/pp/units/masamichi-yaga-cursed-corpse-battle/s1.webp",
@@ -2831,6 +2860,7 @@
    "icon": "assets/pp/units/masamichi-yaga-pivotal-guardian/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/masamichi-yaga-pivotal-guardian/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/masamichi-yaga-pivotal-guardian/normal.webp",
     "s1": "assets/pp/units/masamichi-yaga-pivotal-guardian/s1.webp",
@@ -2928,6 +2958,7 @@
    "icon": "assets/pp/units/megumi-fushiguro-bond-of-friendship/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/megumi-fushiguro-bond-of-friendship/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/megumi-fushiguro-bond-of-friendship/normal.webp",
     "s1": "assets/pp/units/megumi-fushiguro-bond-of-friendship/s1.webp",
@@ -3028,6 +3059,7 @@
    "icon": "assets/pp/units/megumi-fushiguro-enjoying-the-cool-summer-breeze/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/megumi-fushiguro-enjoying-the-cool-summer-breeze/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/megumi-fushiguro-enjoying-the-cool-summer-breeze/normal.webp",
     "s1": "assets/pp/units/megumi-fushiguro-enjoying-the-cool-summer-breeze/s1.webp",
@@ -3124,6 +3156,7 @@
    "icon": "assets/pp/units/megumi-fushiguro-incomplete-domain/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/megumi-fushiguro-incomplete-domain/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/megumi-fushiguro-incomplete-domain/normal.webp",
     "s1": "assets/pp/units/megumi-fushiguro-incomplete-domain/s1.webp",
@@ -3205,6 +3238,7 @@
    "icon": "assets/pp/units/megumi-fushiguro-inherited-cursed-technique/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/megumi-fushiguro-inherited-cursed-technique/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/megumi-fushiguro-inherited-cursed-technique/normal.webp",
     "s1": "assets/pp/units/megumi-fushiguro-inherited-cursed-technique/s1.webp",
@@ -3299,6 +3333,7 @@
    "icon": "assets/pp/units/megumi-fushiguro-rabbit-s-disruption/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/megumi-fushiguro-rabbit-s-disruption/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/megumi-fushiguro-rabbit-s-disruption/normal.webp",
     "s1": "assets/pp/units/megumi-fushiguro-rabbit-s-disruption/s1.webp",
@@ -3396,6 +3431,7 @@
    "icon": "assets/pp/units/mei-mei-night-of-dancing-crows/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/mei-mei-night-of-dancing-crows/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/mei-mei-night-of-dancing-crows/normal.webp",
     "s1": "assets/pp/units/mei-mei-night-of-dancing-crows/s1.webp",
@@ -3483,6 +3519,7 @@
    "icon": "assets/pp/units/miguel-delayed-quota/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/miguel-delayed-quota/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/miguel-delayed-quota/normal.webp",
     "s1": "assets/pp/units/miguel-delayed-quota/s1.webp",
@@ -3570,6 +3607,7 @@
    "icon": "assets/pp/units/momo-nishimiya-don-t-underestimate-me/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/momo-nishimiya-don-t-underestimate-me/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/momo-nishimiya-don-t-underestimate-me/normal.webp",
     "s1": "assets/pp/units/momo-nishimiya-don-t-underestimate-me/s1.webp",
@@ -3657,6 +3695,7 @@
    "icon": "assets/pp/units/momo-nishimiya-tool-manipulation/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/momo-nishimiya-tool-manipulation/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/momo-nishimiya-tool-manipulation/normal.webp",
     "s1": "assets/pp/units/momo-nishimiya-tool-manipulation/s1.webp",
@@ -3761,6 +3800,7 @@
    "icon": "assets/pp/units/naobito-zen-in-crushed-with-speed/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/naobito-zen-in-crushed-with-speed/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/naobito-zen-in-crushed-with-speed/normal.webp",
     "s1": "assets/pp/units/naobito-zen-in-crushed-with-speed/s1.webp",
@@ -3866,6 +3906,7 @@
    "icon": "assets/pp/units/nobara-kugisaki-girl-of-steel/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/nobara-kugisaki-girl-of-steel/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/nobara-kugisaki-girl-of-steel/normal.webp",
     "s1": "assets/pp/units/nobara-kugisaki-girl-of-steel/s1.webp",
@@ -3958,6 +3999,7 @@
    "icon": "assets/pp/units/nobara-kugisaki-keep-hammering-at-them/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/nobara-kugisaki-keep-hammering-at-them/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/nobara-kugisaki-keep-hammering-at-them/normal.webp",
     "s1": "assets/pp/units/nobara-kugisaki-keep-hammering-at-them/s1.webp",
@@ -4058,6 +4100,7 @@
    "icon": "assets/pp/units/nobara-kugisaki-striking-eternal-summer/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/nobara-kugisaki-striking-eternal-summer/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/nobara-kugisaki-striking-eternal-summer/normal.webp",
     "s1": "assets/pp/units/nobara-kugisaki-striking-eternal-summer/s1.webp",
@@ -4163,6 +4206,7 @@
    "icon": "assets/pp/units/nobara-kugisaki-the-worst-match/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/nobara-kugisaki-the-worst-match/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/nobara-kugisaki-the-worst-match/normal.webp",
     "s1": "assets/pp/units/nobara-kugisaki-the-worst-match/s1.webp",
@@ -4241,6 +4285,7 @@
    "icon": "assets/pp/units/noritoshi-kamo-the-golden-age-of-jujutsu/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/noritoshi-kamo-the-golden-age-of-jujutsu/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/noritoshi-kamo-the-golden-age-of-jujutsu/normal.webp",
     "s1": "assets/pp/units/noritoshi-kamo-the-golden-age-of-jujutsu/s1.webp",
@@ -4346,6 +4391,7 @@
    "icon": "assets/pp/units/noritoshi-kamo-the-determination-within-the-bloodline/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/noritoshi-kamo-the-determination-within-the-bloodline/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/noritoshi-kamo-the-determination-within-the-bloodline/normal.webp",
     "s1": "assets/pp/units/noritoshi-kamo-the-determination-within-the-bloodline/s1.webp",
@@ -4429,6 +4475,7 @@
    "icon": "assets/pp/units/panda-need-help/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/panda-need-help/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/panda-need-help/normal.webp",
     "s1": "assets/pp/units/panda-need-help/s1.webp",
@@ -4510,6 +4557,7 @@
    "icon": "assets/pp/units/panda-don-t-blame-the-doll/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/panda-don-t-blame-the-doll/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/panda-don-t-blame-the-doll/normal.webp",
     "s1": "assets/pp/units/panda-don-t-blame-the-doll/s1.webp",
@@ -4597,6 +4645,7 @@
    "icon": "assets/pp/units/ryomen-sukuna-battle-of-firepower/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/ryomen-sukuna-battle-of-firepower/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/ryomen-sukuna-battle-of-firepower/normal.webp",
     "s1": "assets/pp/units/ryomen-sukuna-battle-of-firepower/s1.webp",
@@ -4702,6 +4751,7 @@
    "icon": "assets/pp/units/ryomen-sukuna-genuine-jujutsu/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/ryomen-sukuna-genuine-jujutsu/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/ryomen-sukuna-genuine-jujutsu/normal.webp",
     "s1": "assets/pp/units/ryomen-sukuna-genuine-jujutsu/s1.webp",
@@ -4807,6 +4857,7 @@
    "icon": "assets/pp/units/saki-rindo-the-resolve-within-the-heart/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/saki-rindo-the-resolve-within-the-heart/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/saki-rindo-the-resolve-within-the-heart/normal.webp",
     "s1": "assets/pp/units/saki-rindo-the-resolve-within-the-heart/s1.webp",
@@ -4894,6 +4945,7 @@
    "icon": "assets/pp/units/satoru-gojo-0-2-second-domain-expansion/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/satoru-gojo-0-2-second-domain-expansion/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/satoru-gojo-0-2-second-domain-expansion/normal.webp",
     "s1": "assets/pp/units/satoru-gojo-0-2-second-domain-expansion/s1.webp",
@@ -4993,6 +5045,7 @@
    "icon": "assets/pp/units/satoru-gojo-teen-awakening/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/satoru-gojo-teen-awakening/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/satoru-gojo-teen-awakening/normal.webp",
     "s1": "assets/pp/units/satoru-gojo-teen-awakening/s1.webp",
@@ -5083,6 +5136,7 @@
    "icon": "assets/pp/units/satoru-gojo-hollow-technique-purple/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/satoru-gojo-hollow-technique-purple/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/satoru-gojo-hollow-technique-purple/normal.webp",
     "s1": "assets/pp/units/satoru-gojo-hollow-technique-purple/s1.webp",
@@ -5175,6 +5229,7 @@
    "icon": "assets/pp/units/satoru-gojo-melting-sweet-summer-treats/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/satoru-gojo-melting-sweet-summer-treats/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/satoru-gojo-melting-sweet-summer-treats/normal.webp",
     "s1": "assets/pp/units/satoru-gojo-melting-sweet-summer-treats/s1.webp",
@@ -5278,6 +5333,7 @@
    "icon": "assets/pp/units/satoru-gojo-the-strongest/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/satoru-gojo-the-strongest/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/satoru-gojo-the-strongest/normal.webp",
     "s1": "assets/pp/units/satoru-gojo-the-strongest/s1.webp",
@@ -5365,6 +5421,7 @@
    "icon": "assets/pp/units/satoru-gojo-teen-the-strongest-blue/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/satoru-gojo-teen-the-strongest-blue/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/satoru-gojo-teen-the-strongest-blue/normal.webp",
     "s1": "assets/pp/units/satoru-gojo-teen-the-strongest-blue/s1.webp",
@@ -5457,6 +5514,7 @@
    "icon": "assets/pp/units/satoru-gojo-within-infinity/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/satoru-gojo-within-infinity/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/satoru-gojo-within-infinity/normal.webp",
     "s1": "assets/pp/units/satoru-gojo-within-infinity/s1.webp",
@@ -5553,6 +5611,7 @@
    "icon": "assets/pp/units/shoko-ieiri-teen-fwoo-hyoi/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/shoko-ieiri-teen-fwoo-hyoi/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/shoko-ieiri-teen-fwoo-hyoi/normal.webp",
     "s1": "assets/pp/units/shoko-ieiri-teen-fwoo-hyoi/s1.webp",
@@ -5648,6 +5707,7 @@
    "icon": "assets/pp/units/shoko-ieiri-life-saver/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/shoko-ieiri-life-saver/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/shoko-ieiri-life-saver/normal.webp",
     "s1": "assets/pp/units/shoko-ieiri-life-saver/s1.webp",
@@ -5744,6 +5804,7 @@
    "icon": "assets/pp/units/suguru-geto-teen-for-protecting-non-jujutsu-sorcerer/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/suguru-geto-teen-for-protecting-non-jujutsu-sorcerer/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/suguru-geto-teen-for-protecting-non-jujutsu-sorcerer/normal.webp",
     "s1": "assets/pp/units/suguru-geto-teen-for-protecting-non-jujutsu-sorcerer/s1.webp",
@@ -5841,6 +5902,7 @@
    "icon": "assets/pp/units/suguru-geto-for-the-justice/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/suguru-geto-for-the-justice/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/suguru-geto-for-the-justice/normal.webp",
     "s1": "assets/pp/units/suguru-geto-for-the-justice/s1.webp",
@@ -5928,6 +5990,7 @@
    "icon": "assets/pp/units/suguru-geto-teen-what-lies-at-the-end/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/suguru-geto-teen-what-lies-at-the-end/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/suguru-geto-teen-what-lies-at-the-end/normal.webp",
     "s1": "assets/pp/units/suguru-geto-teen-what-lies-at-the-end/s1.webp",
@@ -6033,6 +6096,7 @@
    "icon": "assets/pp/units/takuma-ino-indomitable-auspicious-beasts/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/takuma-ino-indomitable-auspicious-beasts/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/takuma-ino-indomitable-auspicious-beasts/normal.webp",
     "s1": "assets/pp/units/takuma-ino-indomitable-auspicious-beasts/s1.webp",
@@ -6133,6 +6197,7 @@
    "icon": "assets/pp/units/takuma-ino-no-conceit/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/takuma-ino-no-conceit/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/takuma-ino-no-conceit/normal.webp",
     "s1": "assets/pp/units/takuma-ino-no-conceit/s1.webp",
@@ -6238,6 +6303,7 @@
    "icon": "assets/pp/units/toge-inumaki-compelling-cursed-speech/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/toge-inumaki-compelling-cursed-speech/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/toge-inumaki-compelling-cursed-speech/normal.webp",
     "s1": "assets/pp/units/toge-inumaki-compelling-cursed-speech/s1.webp",
@@ -6337,6 +6403,7 @@
    "icon": "assets/pp/units/toge-inumaki-night-lurking-sorcerer/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/toge-inumaki-night-lurking-sorcerer/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/toge-inumaki-night-lurking-sorcerer/normal.webp",
     "s1": "assets/pp/units/toge-inumaki-night-lurking-sorcerer/s1.webp",
@@ -6428,6 +6495,7 @@
    "icon": "assets/pp/units/toge-inumaki-shatter-to-pieces/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/toge-inumaki-shatter-to-pieces/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/toge-inumaki-shatter-to-pieces/normal.webp",
     "s1": "assets/pp/units/toge-inumaki-shatter-to-pieces/s1.webp",
@@ -6522,6 +6590,7 @@
    "icon": "assets/pp/units/toji-fushiguro-seance/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/toji-fushiguro-seance/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/toji-fushiguro-seance/normal.webp",
     "s1": "assets/pp/units/toji-fushiguro-seance/s1.webp",
@@ -6614,6 +6683,7 @@
    "icon": "assets/pp/units/toji-fushiguro-the-sorcerer-killer/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/toji-fushiguro-the-sorcerer-killer/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/toji-fushiguro-the-sorcerer-killer/normal.webp",
     "s1": "assets/pp/units/toji-fushiguro-the-sorcerer-killer/s1.webp",
@@ -6714,6 +6784,7 @@
    "icon": "assets/pp/units/ultimate-mechamaru-sword-option/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/ultimate-mechamaru-sword-option/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/ultimate-mechamaru-sword-option/normal.webp",
     "s1": "assets/pp/units/ultimate-mechamaru-sword-option/s1.webp",
@@ -6802,6 +6873,7 @@
    "icon": "assets/pp/units/uraume-step-back-third-rate/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/uraume-step-back-third-rate/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/uraume-step-back-third-rate/normal.webp",
     "s1": "assets/pp/units/uraume-step-back-third-rate/s1.webp",
@@ -6905,6 +6977,7 @@
    "icon": "assets/pp/units/yoshinobu-gakuganji-crafty-rock/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yoshinobu-gakuganji-crafty-rock/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yoshinobu-gakuganji-crafty-rock/normal.webp",
     "s1": "assets/pp/units/yoshinobu-gakuganji-crafty-rock/s1.webp",
@@ -7002,6 +7075,7 @@
    "icon": "assets/pp/units/yu-haibara-burning-passion/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yu-haibara-burning-passion/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yu-haibara-burning-passion/normal.webp",
     "s1": "assets/pp/units/yu-haibara-burning-passion/s1.webp",
@@ -7105,6 +7179,7 @@
    "icon": "assets/pp/units/yuji-itadori-a-life-entrusted-to-me/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuji-itadori-a-life-entrusted-to-me/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuji-itadori-a-life-entrusted-to-me/normal.webp",
     "s1": "assets/pp/units/yuji-itadori-a-life-entrusted-to-me/s1.webp",
@@ -7210,6 +7285,7 @@
    "icon": "assets/pp/units/yuuji-itadori-cursed-energy-black-flash/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuuji-itadori-cursed-energy-black-flash/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuuji-itadori-cursed-energy-black-flash/normal.webp",
     "s1": "assets/pp/units/yuuji-itadori-cursed-energy-black-flash/s1.webp",
@@ -7288,6 +7364,7 @@
    "icon": "assets/pp/units/yuji-itadori-cursed-energy-caging/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuji-itadori-cursed-energy-caging/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuji-itadori-cursed-energy-caging/normal.webp",
     "s1": "assets/pp/units/yuji-itadori-cursed-energy-caging/s1.webp",
@@ -7379,6 +7456,7 @@
    "icon": "assets/pp/units/yuji-itadori-maximum-cursed-energy-output/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuji-itadori-maximum-cursed-energy-output/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuji-itadori-maximum-cursed-energy-output/normal.webp",
     "s1": "assets/pp/units/yuji-itadori-maximum-cursed-energy-output/s1.webp",
@@ -7469,6 +7547,7 @@
    "icon": "assets/pp/units/yuji-itadori-smash-it-into-the-summer-sky/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuji-itadori-smash-it-into-the-summer-sky/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuji-itadori-smash-it-into-the-summer-sky/normal.webp",
     "s1": "assets/pp/units/yuji-itadori-smash-it-into-the-summer-sky/s1.webp",
@@ -7569,6 +7648,7 @@
    "icon": "assets/pp/units/yuji-itadori-the-agile-body/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuji-itadori-the-agile-body/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuji-itadori-the-agile-body/normal.webp",
     "s1": "assets/pp/units/yuji-itadori-the-agile-body/s1.webp",
@@ -7657,6 +7737,7 @@
    "icon": "assets/pp/units/yuji-itadori-zone/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuji-itadori-zone/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuji-itadori-zone/normal.webp",
     "s1": "assets/pp/units/yuji-itadori-zone/s1.webp",
@@ -7752,6 +7833,7 @@
    "icon": "assets/pp/units/yuta-okkotsu-executioner/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuta-okkotsu-executioner/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuta-okkotsu-executioner/normal.webp",
     "s1": "assets/pp/units/yuta-okkotsu-executioner/s1.webp",
@@ -7852,6 +7934,7 @@
    "icon": "assets/pp/units/yuta-okkotsu-lend-me-your-strength/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuta-okkotsu-lend-me-your-strength/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuta-okkotsu-lend-me-your-strength/normal.webp",
     "s1": "assets/pp/units/yuta-okkotsu-lend-me-your-strength/s1.webp",
@@ -7947,6 +8030,7 @@
    "icon": "assets/pp/units/yuta-okkotsu-queen-of-curses/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuta-okkotsu-queen-of-curses/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuta-okkotsu-queen-of-curses/normal.webp",
     "s1": "assets/pp/units/yuta-okkotsu-queen-of-curses/s1.webp",
@@ -8051,6 +8135,7 @@
    "icon": "assets/pp/units/aoi-todo-rowdy-first-class/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/aoi-todo-rowdy-first-class/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/aoi-todo-rowdy-first-class/normal.webp",
     "s1": "assets/pp/units/aoi-todo-rowdy-first-class/s1.webp",
@@ -8148,6 +8233,7 @@
    "icon": "assets/pp/units/junpei-yoshino-the-value-of-life/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/junpei-yoshino-the-value-of-life/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/junpei-yoshino-the-value-of-life/normal.webp",
     "s1": "assets/pp/units/junpei-yoshino-the-value-of-life/s1.webp",
@@ -8245,6 +8331,7 @@
    "icon": "assets/pp/units/yuuki-kaito-his-resolve-as-a-sorcerer/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yuuki-kaito-his-resolve-as-a-sorcerer/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yuuki-kaito-his-resolve-as-a-sorcerer/normal.webp",
     "s1": "assets/pp/units/yuuki-kaito-his-resolve-as-a-sorcerer/s1.webp",
@@ -8327,6 +8414,7 @@
    "icon": "assets/pp/units/kasumi-miwa-firm-interception/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kasumi-miwa-firm-interception/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kasumi-miwa-firm-interception/normal.webp",
     "s1": "assets/pp/units/kasumi-miwa-firm-interception/s1.webp",
@@ -8405,6 +8493,7 @@
    "icon": "assets/pp/units/kento-nanami-ex-salary-man/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kento-nanami-ex-salary-man/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kento-nanami-ex-salary-man/normal.webp",
     "s1": "assets/pp/units/kento-nanami-ex-salary-man/s1.webp",
@@ -8488,6 +8577,7 @@
    "icon": "assets/pp/units/mai-ze-nin-calculated-shot/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/mai-ze-nin-calculated-shot/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/mai-ze-nin-calculated-shot/normal.webp",
     "s1": "assets/pp/units/mai-ze-nin-calculated-shot/s1.webp",
@@ -8584,6 +8674,7 @@
    "icon": "assets/pp/units/maki-zen-in-the-weaker-curse-are-the-more-they-group-together/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/maki-zen-in-the-weaker-curse-are-the-more-they-group-together/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/maki-zen-in-the-weaker-curse-are-the-more-they-group-together/normal.webp",
     "s1": "assets/pp/units/maki-zen-in-the-weaker-curse-are-the-more-they-group-together/s1.webp",
@@ -8667,6 +8758,7 @@
    "icon": "assets/pp/units/masamichi-yaga-a-lesson-in-awareness/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/masamichi-yaga-a-lesson-in-awareness/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/masamichi-yaga-a-lesson-in-awareness/normal.webp",
     "s1": "assets/pp/units/masamichi-yaga-a-lesson-in-awareness/s1.webp",
@@ -8755,6 +8847,7 @@
    "icon": "assets/pp/units/momo-nishimiya-aerial-reconnaissance/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/momo-nishimiya-aerial-reconnaissance/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/momo-nishimiya-aerial-reconnaissance/normal.webp",
     "s1": "assets/pp/units/momo-nishimiya-aerial-reconnaissance/s1.webp",
@@ -8850,6 +8943,7 @@
    "icon": "assets/pp/units/noritoshi-kamo-blood-of-the-gosanke/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/noritoshi-kamo-blood-of-the-gosanke/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/noritoshi-kamo-blood-of-the-gosanke/normal.webp",
     "s1": "assets/pp/units/noritoshi-kamo-blood-of-the-gosanke/s1.webp",
@@ -8936,6 +9030,7 @@
    "icon": "assets/pp/units/panda-at-the-shortest-way/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/panda-at-the-shortest-way/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/panda-at-the-shortest-way/normal.webp",
     "s1": "assets/pp/units/panda-at-the-shortest-way/s1.webp",
@@ -9014,6 +9109,7 @@
    "icon": "assets/pp/units/saki-rindo-bring-on-the-fight/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/saki-rindo-bring-on-the-fight/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/saki-rindo-bring-on-the-fight/normal.webp",
     "s1": "assets/pp/units/saki-rindo-bring-on-the-fight/s1.webp",
@@ -9101,6 +9197,7 @@
    "icon": "assets/pp/units/ieri-shoko-reverse-curse-technique/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/ieri-shoko-reverse-curse-technique/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/ieri-shoko-reverse-curse-technique/normal.webp",
     "s1": "assets/pp/units/ieri-shoko-reverse-curse-technique/s1.webp",
@@ -9182,6 +9279,7 @@
    "icon": "assets/pp/units/toge-inumaki-the-baton-of-counterattack/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/toge-inumaki-the-baton-of-counterattack/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/toge-inumaki-the-baton-of-counterattack/normal.webp",
     "s1": "assets/pp/units/toge-inumaki-the-baton-of-counterattack/s1.webp",
@@ -9269,6 +9367,7 @@
    "icon": "assets/pp/units/kokichi-muta-mode-albatross/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/kokichi-muta-mode-albatross/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/kokichi-muta-mode-albatross/normal.webp",
     "s1": "assets/pp/units/kokichi-muta-mode-albatross/s1.webp",
@@ -9342,6 +9441,7 @@
    "icon": "assets/pp/units/yoshinobu-gakuganji-cursed-energy-melody/icon.webp",
    "source": "phantom-parade",
    "generated": false,
+   "anim": "assets/pp/units/yoshinobu-gakuganji-cursed-energy-melody/art-anim.webp",
    "skills": {
     "normal": "assets/pp/units/yoshinobu-gakuganji-cursed-energy-melody/normal.webp",
     "s1": "assets/pp/units/yoshinobu-gakuganji-cursed-energy-melody/s1.webp",
