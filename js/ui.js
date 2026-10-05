@@ -365,9 +365,23 @@
     document.body.appendChild(d);
   }
 
+  // Dev panel (js/dev.js): on with ?dev=1 (remembered), off with ?dev=0.
+  function loadDev() {
+    try {
+      const q = new URLSearchParams(global.location.search).get('dev');
+      if (q === '1') Save.pref('dev', true);
+      if (q === '0') Save.pref('dev', false);
+      if (!Save.pref('dev') || document.getElementById('dev-js')) return;
+      const s = document.createElement('script');
+      s.id = 'dev-js'; s.src = 'js/dev.js'; s.defer = true;
+      document.head.appendChild(s);
+    } catch (_) { /* dev tools are optional */ }
+  }
+
   function boot(cfg) {
     const c = cfg || {};
     rotateHint();
+    loadDev();
     if (c.requireSave !== false && !Save.exists()) { global.location.replace('index.html'); return; }
     const start = () => {
       try { if (c.shell !== false) buildShell(c); } catch (e) { errorPanel(e); return; }
