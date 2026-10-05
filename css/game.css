@@ -370,7 +370,7 @@ html.is-compact .enh-stats > div { padding: 3px 8px; font-size: 12px; }
 html.is-compact .enh-btn { min-height: 50px; }
 html.is-compact .enh-btn b { font-size: 12.5px; } html.is-compact .enh-btn .talisman { display: none; } html.is-compact .enh-panel { gap: 5px; }
 @media (min-height: 600px) { .enh-panel { gap: 12px; padding-top: 60px; } .enh-lv b { font-size: 48px; } .enh-name h2 { font-size: 34px; } .enh-btn { min-height: 74px; } .enh-btn b { font-size: 18px; } .enh-stats > div { font-size: 15px; padding: 6px 10px; } }
-@media (max-width: 700px) { .enh { grid-template-columns: 1fr; grid-template-rows: 45% 55%; } .enh-art { clip-path: none; } .enh-panel { margin-left: 0; padding: 10px var(--gutter); } }
+@media (max-width: 700px) and (orientation: portrait) { .enh { grid-template-columns: 1fr; grid-template-rows: 45% 55%; } .enh-art { clip-path: none; } .enh-panel { margin-left: 0; padding: 10px var(--gutter); } }
 
 .help-text { margin: 4px 0; font-size: 14px; line-height: 1.6; }
 .top-right { display: flex; align-items: center; gap: 8px; min-width: 0; }

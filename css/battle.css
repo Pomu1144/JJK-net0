@@ -236,8 +236,16 @@ html.is-compact .bu.ally .bu-art { width: 40px; height: 40px; }
   .act { min-height: 66px; } .act-ic { width: 56px; height: 56px; } .act b { font-size: 16px; } .act-ce { font-size: 28px; }
   .bu.ally { flex-basis: 180px; } .bu.ally .bu-art { width: 60px; height: 60px; } .bu-hp { height: 9px; }
 }
-@media (max-width: 700px) {
+@media (max-width: 700px) and (orientation: portrait) {
   .battle { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr) auto auto; }
   .bt-panel { grid-column: 1; grid-row: 4; } .bt-actor { display: none; }
   .bt-support small, .bt-round, .bt-ce .ce-label { display: none; }
+}
+
+/* landscape phones narrower than the 844px design width: keep the side panel, just slimmer */
+@media (max-width: 760px) and (orientation: landscape) {
+  .battle { grid-template-columns: minmax(0, 1fr) 236px; }
+  .bt-actor { display: none; }
+  .bu.enemy { max-width: 88px; } .bu.enemy.is-boss { max-width: 110px; }
+  .act-ic { width: 34px; height: 34px; } .act { min-height: 42px; }
 }

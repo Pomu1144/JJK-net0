@@ -106,7 +106,7 @@ html.is-compact .ban-tab { height: 46px; }
 html.is-compact .draw-btn { height: 44px; }
 html.is-compact .draw-btn .n { height: 32px; width: 42px; font-size: 18px; }
 @media (min-height: 600px) { .summon { grid-template-columns: 150px minmax(0, 1fr) 260px; } .ban-tab { height: 72px; } .draw-btn { height: 58px; } }
-@media (max-width: 640px) {
+@media (max-width: 640px) and (orientation: portrait) {
   .summon { grid-template-columns: 1fr; height: auto; }
   .ban-list { flex-direction: row; overflow-x: auto; }
   .ban-tab { width: 120px; }
@@ -208,7 +208,7 @@ html.is-compact .rv-title { font-size: 15px; padding: 3px 30px; }
 .pk-label.is-live { background: #d23a2a; margin-left: 4px; }
 .pk-label.is-rerun { background: #4a5a6a; margin-left: 4px; }
 .ban-stage.is-event .ban-rate { bottom: 4%; }
-@media (max-width: 640px) {
+@media (max-width: 640px) and (orientation: portrait) {
   .ban-list { flex-direction: column; }
   .ban-scroll { flex-direction: row; overflow-x: auto; overflow-y: hidden; }
   .ban-group { display: none; }
@@ -280,7 +280,7 @@ html.is-compact .g-list .ban-tab { height: 50px; }
 html.is-compact .g-info { width: min(250px, 28%); gap: 6px; } html.is-compact .g-desc, html.is-compact .g-feat { display: none; }
 @media (max-height: 640px) and (min-width: 761px) { .g-desc, .g-feat { display: none; } .g-info { width: min(250px, 28%); gap: 6px; } .g-title { font-size: 15px; } }
 html.is-compact .g-title { font-size: 15px; }
-@media (max-width: 760px) {
+@media (max-width: 760px) and (orientation: portrait) {
   .gacha { height: auto; min-height: 0; display: flex; flex-direction: column; }
   .g-bg { position: relative; height: 300px; }
   .g-hero { left: 0; right: 0; width: 100%; }

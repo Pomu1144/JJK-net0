@@ -1,0 +1,76 @@
+/* css/pp-landscape.css — landscape phones (html.is-compact = viewport height <= 520px).
+   The game is played sideways; these rules keep every screen's key actions on screen. */
+
+/* Bottom nav: smaller labels so "Formation" / "Summon" fit */
+html.is-compact .dock-btn { font-size: 12.5px; gap: 4px; }
+html.is-compact .dock-btn .ic { width: 15px; height: 15px; }
+@media (max-width: 720px) { html.is-compact .dock-btn:not(.is-menu) { font-size: 11.5px; border-width: 7px 12px 10px; } }
+
+/* Quest hub: one short row of mode tiles so the stages stay in view */
+html.is-compact .mode-cards { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; padding-bottom: 6px; }
+html.is-compact .mode-card { height: 52px; padding: 4px 4px 5px; }
+html.is-compact .mode-card .parch-art { inset: 5px 5px 34%; }
+html.is-compact .mode-card .parch-label { font-size: 10.5px; line-height: 1.05; }
+html.is-compact .mode-kanji { display: none; }
+html.is-compact .mode-soon { top: 5px; padding: 1px 4px; font-size: 7.5px; letter-spacing: .06em; }
+html.is-compact .ch-card { height: 46px; }
+html.is-compact .chapter-hero { padding-top: 6px; padding-bottom: 6px; }
+html.is-compact .chapter-hero .ch-kanji { font-size: 28px; }
+html.is-compact .q-cards { grid-template-columns: repeat(2, minmax(0, 220px)); }
+html.is-compact .q-card { height: 92px; }
+html.is-compact .q-card .parch-label { font-size: 14px; }
+
+/* Gacha: smaller panel and draw buttons that fit under the art */
+html.is-compact .gacha { min-height: 0; }
+html.is-compact .g-logo { max-height: 34vh; }
+html.is-compact .g-desc, html.is-compact .g-feat { display: none; }
+html.is-compact .g-info { width: min(220px, 30%); gap: 5px; }
+html.is-compact .g-title { font-size: 13px; }
+html.is-compact .g-btns .pp-stone { padding: 2px 6px; font-size: 10px; }
+html.is-compact .g-tag { left: 26%; top: 34%; }
+html.is-compact .g-tag b { font-size: 18px; }
+html.is-compact .g-draws { gap: 4px; bottom: 6px; }
+html.is-compact .g-pull { min-width: 0; padding: 6px 8px 4px; }
+html.is-compact .g-pull.is-multi { min-width: 0; }
+html.is-compact .g-pull b { font-size: 13px; }
+html.is-compact .g-pull small { font-size: 9.5px; }
+html.is-compact .g-pull em { font-size: 8px; margin-bottom: 1px; }
+html.is-compact .g-pt { padding: 3px 6px; font-size: 10px; max-width: 440px; }
+html.is-compact .g-pt .pity.gp > small:not(:first-child) { display: none; }
+html.is-compact .g-pt .gp-btns .cur-ic { width: 12px; height: 12px; }
+html.is-compact .g-pt .gp-btns { margin: 3px 0 0; }
+html.is-compact .g-pt .gp-btns .jjk-btn { height: 24px; font-size: 10px; }
+@media (max-width: 720px) {
+  html.is-compact .g-list { width: 118px; }
+  html.is-compact .g-draws { left: 134px; }
+  html.is-compact .g-list .ban-tab { height: 44px; }
+}
+
+/* Novice: Day tabs fit */
+html.is-compact .nv-tab { min-width: 0; font-size: 12px; padding-left: 2px; padding-right: 2px; letter-spacing: 0; white-space: nowrap; }
+@media (max-width: 900px) { html.is-compact .nv-tday { display: none; } html.is-compact .nv-tab { font-size: 14px; } }
+
+/* Enhance: tighter right panel */
+html.is-compact .enh.is-pp .enh-stats > div { padding: 3px 8px 3px 12px; font-size: 12.5px; }
+html.is-compact .enh.is-pp .enh-lv b { font-size: 28px; }
+html.is-compact .enh-headimg { height: 22px; }
+html.is-compact .enh-dial, html.is-compact .enh-hexval { width: 40px; height: 40px; }
+html.is-compact .enh-pb { min-height: 70px; }
+html.is-compact .enh-pb b { font-size: 18px; }
+html.is-compact .enh-pb small { font-size: 11px; }
+
+/* Portrait phones: the game is made for landscape, so ask to rotate */
+.rotate-hint { display: none; }
+@media (orientation: portrait) and (max-width: 600px) {
+  .rotate-hint { position: fixed; inset: 0; z-index: 3000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center;
+    background: url("../assets/pp/ui/bg-dark.webp") center / cover, #070b0e; color: #f2efe6; font: 700 16px/1.4 var(--pp-font); }
+  .rotate-hint svg { width: 74px; height: 74px; color: #e8cf86; animation: rotHint 2.2s var(--pp-ease) infinite; }
+  .rotate-hint small { font-weight: 500; font-size: 12.5px; opacity: .75; }
+  .rotate-hint button { margin-top: 6px; }
+  html.rotate-dismissed .rotate-hint { display: none; }
+}
+@keyframes rotHint { 0%, 25% { transform: rotate(0); } 55%, 100% { transform: rotate(-90deg); } }
+html.reduce-motion .rotate-hint svg { animation: none; }
+html.is-compact .nv-tab { height: 28px; line-height: 1; border-width: 6px 8px; padding-top: 0; padding-bottom: 0; }
+html.is-compact .g-logo { max-height: 24vh; }
+html.is-compact .g-title { display: none; }

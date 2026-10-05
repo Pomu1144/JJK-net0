@@ -348,8 +348,26 @@
     toast(gone.length + ' retired sorcerer' + (gone.length === 1 ? '' : 's') + ' refunded: ' + fmt(refund) + ' JP');
   }
 
+  // The game is laid out for landscape; portrait phones get a "rotate" card (dismissible for the session).
+  function rotateHint() {
+    if (document.querySelector('.rotate-hint')) return;
+    try { if (global.sessionStorage.getItem('jjk_rotate_ok')) document.documentElement.classList.add('rotate-dismissed'); } catch (_) { /* storage blocked */ }
+    const d = document.createElement('div');
+    d.className = 'rotate-hint';
+    d.setAttribute('role', 'dialog');
+    d.innerHTML = '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="14" y="4" width="20" height="40" rx="3"/><path d="M21 39h6"/></svg>'
+      + '<span>Turn your phone sideways</span><small>Cursed Clash is played in landscape.</small>'
+      + '<button class="jjk-btn is-small" type="button">Continue in portrait</button>';
+    d.querySelector('button').addEventListener('click', () => {
+      document.documentElement.classList.add('rotate-dismissed');
+      try { global.sessionStorage.setItem('jjk_rotate_ok', '1'); } catch (_) { /* storage blocked */ }
+    });
+    document.body.appendChild(d);
+  }
+
   function boot(cfg) {
     const c = cfg || {};
+    rotateHint();
     if (c.requireSave !== false && !Save.exists()) { global.location.replace('index.html'); return; }
     const start = () => {
       try { if (c.shell !== false) buildShell(c); } catch (e) { errorPanel(e); return; }

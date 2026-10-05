@@ -295,7 +295,7 @@ html.is-compact .pf-stat b { font-size: 16px; }
 }
 
 /* ══════════ narrow / portrait ══════════ */
-@media (max-width: 700px) {
+@media (max-width: 700px) and (orientation: portrait) {
   .scr { grid-template-columns: 1fr; }
   .scr-guide { display: none; }
   .sx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -335,4 +335,4 @@ html.reduce-motion .sx-card, html.reduce-motion .pf-art-img, html.reduce-motion 
 .ex-gp-row img { width: 120px; aspect-ratio: 16 / 9; object-fit: cover; }
 .ex-gp-row span { display: grid; } .ex-gp-row small { opacity: .7; font-size: 11px; }
 .ex-gp-row em { font: 800 15px/1 var(--pp-font); font-style: normal; color: #f2d24a; padding-right: 8px; }
-@media (max-width: 760px) { .ex-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
+@media (max-width: 760px) and (orientation: portrait) { .ex-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }

@@ -177,7 +177,7 @@
       const r = open && d.missions.some((m) => ready(s, m));
       const allDone = d.missions.every((m) => isClaimed(s, m));
       return `<button class="jjk-tab nv-tab${d.day === cur ? ' active' : ''}${open ? '' : ' is-locked'}${allDone ? ' is-done' : ''}" type="button" role="tab" aria-selected="${d.day === cur}" data-day="${d.day}"
-        title="${open ? 'Day ' + d.day : 'Unlocks in ' + plural(d.day - 1 - di, 'day')}">Day ${d.day}${r ? '<i class="nav-dot nv-tdot" aria-hidden="true">!</i>' : ''}</button>`;
+        title="${open ? 'Day ' + d.day : 'Unlocks in ' + plural(d.day - 1 - di, 'day')}"><span class="nv-tday">Day </span>${d.day}${r ? '<i class="nav-dot nv-tdot" aria-hidden="true">!</i>' : ''}</button>`;
     }).join('');
 
     const open = dayOpen(s, cur);
