@@ -71,6 +71,7 @@
   function openDetail(id) {
     let m = null;
     let pick = 's1';
+    let showDesc = false; // the skill text opens when a skill is tapped, as in the game
     let mode = 'main';        // 'main' | 'lv' (Training Light feed)
     let expanded = false;     // art-only view
     // prev / next follow the roster, strongest first
@@ -133,7 +134,7 @@
               <div class="enh-sk-row">${autoSlots}</div>
             </div>
           </div>
-          ${cur ? `<div class="enh-desc"><b>${esc(cur.name)}</b> <small>${esc(cur.label)}</small>${cur.cost != null ? `<span class="cost"><img src="assets/pp/ui/Energy.webp" alt="CE">${esc(cur.cost)}</span>` : ''}<p>${esc(cur.desc || '')}</p></div>` : ''}
+          ${cur && showDesc ? `<div class="enh-desc is-pop" id="enh-desc"><b>${esc(cur.name)}</b> <small>${esc(cur.label)}</small>${cur.cost != null ? `<span class="cost"><img src="assets/pp/ui/Energy.webp" alt="CE">${esc(cur.cost)}</span>` : ''}<p>${esc(cur.desc || '')}</p></div>` : ''}
           <div class="enh-seal" title="Phantom Seal Stamp: +10 levels past the cap (coming later)"><img src="${E}seal-plate.webp" alt="Phantom Seal Stamp"><b>${fmt(s.items.phantom_seal || 0)}</b></div>
           ${lvMode ? `<div class="enh-btns is-feed">${['light_s', 'light_m', 'light_l'].map((k) => `
             <button class="enh-btn" type="button" data-feed="${k}" ${maxed || !(s.items[k] > 0) || s.currency.yen < (ITEMS[k].jp || 0) ? 'disabled' : ''} title="${esc(ITEMS[k].desc)}">${UI.itemIcon(k, ITEMS)}<span><b>${esc(ITEMS[k].name.replace(/^Training Light /, 'Light '))}</b><small>+${fmt(ITEMS[k].exp)} EXP · ${UI.YEN_SVG}${fmt(ITEMS[k].jp || 0)}</small><em>×${s.items[k] || 0}</em></span></button>`).join('')}
@@ -163,7 +164,7 @@
       if (st) {
         const i = order.indexOf(id);
         id = order[(i + Number(st.dataset.step) + order.length) % order.length];
-        pick = 's1'; mode = 'main';
+        pick = 's1'; mode = 'main'; showDesc = false;
         history.replaceState(null, '', '#' + encodeURIComponent(id));
         UI.sfx('tap'); draw(); return;
       }
@@ -183,7 +184,8 @@
         return;
       }
       const sk = e.target.closest('[data-skill]');
-      if (sk) { pick = sk.dataset.skill; UI.sfx('tap'); draw(); return; }
+      if (sk) { showDesc = !(showDesc && pick === sk.dataset.skill); pick = sk.dataset.skill; UI.sfx('tap'); draw(); return; }
+      if (showDesc && e.target.closest('#enh-desc')) { showDesc = false; draw(); return; }
       const f = e.target.closest('[data-feed]');
       if (f) {
         const k = f.dataset.feed;

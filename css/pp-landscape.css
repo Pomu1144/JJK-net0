@@ -49,3 +49,13 @@ html.reduce-motion .rotate-hint svg { animation: none; }
 html.is-compact .nv-tab { height: 28px; line-height: 1; border-width: 6px 8px; padding-top: 0; padding-bottom: 0; }
 /* arc cards: one line with ellipsis; the 46px card can't fit two */
 html.is-compact .ch-card .parch-label { display: block; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 13px; }
+/* bottom bar as in the game on wide phones: a centred group sized to the
+   screen height (the game lays its UI out on a 16:9 canvas) */
+html.is-compact .dock { width: min(calc(100% - 2 * var(--gutter)), 166vh); margin-left: auto; margin-right: auto; }
+html.is-compact .dock-btn:not(.is-menu) { font-size: 12.5px; letter-spacing: 0; gap: 3px; padding: 0; border-left-width: 10px; border-right-width: 10px; }
+html.is-compact .dock-btn:not(.is-menu) .ic, html.is-compact .dock-btn:not(.is-menu) .nav-ic { width: 18px; height: 18px; }
+/* as in the game: the bottom bar is a centred group on every landscape
+   screen, and page titles are a single line on the red ribbon */
+@media (orientation: landscape) { .dock { width: min(calc(100% - 2 * var(--gutter)), 150vh); margin-left: auto; margin-right: auto; } }
+html.is-compact .dock { width: min(calc(100% - 2 * var(--gutter)), 166vh); }
+.plate-sub { display: none; }

@@ -103,5 +103,5 @@
     });
   }
 
-  UI.boot({ data: ['characters'], init });
+  UI.boot({ back: false, data: ['characters'], init });
 })();

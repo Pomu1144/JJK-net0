@@ -336,3 +336,10 @@ html.reduce-motion .sx-card, html.reduce-motion .pf-art-img, html.reduce-motion 
 .ex-gp-row span { display: grid; } .ex-gp-row small { opacity: .7; font-size: 11px; }
 .ex-gp-row em { font: 800 15px/1 var(--pp-font); font-style: normal; color: #f2d24a; padding-right: 8px; }
 @media (max-width: 760px) and (orientation: portrait) { .ex-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
+
+/* as in the game: the guide's art runs up behind the title row, so the top
+   bar floats over the screen instead of sitting on its own band */
+body[data-page="formation"] .topbar, body[data-page="shop"] .topbar, body[data-page="profile"] .topbar { position: absolute; z-index: 6; top: 0; left: 0; right: 0; }
+body[data-page="formation"] #main, body[data-page="shop"] #main, body[data-page="profile"] #main { padding-top: calc(var(--topbar-h, 58px) + 4px); }
+body[data-page="formation"] .scr-guide-art, body[data-page="shop"] .scr-guide-art, body[data-page="profile"] .scr-guide-art { top: calc(-1 * var(--topbar-h, 58px) - 6px); height: auto; }
+html.is-compact body[data-page="formation"], html.is-compact body[data-page="shop"], html.is-compact body[data-page="profile"] { --topbar-h: 46px; }

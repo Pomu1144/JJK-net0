@@ -169,5 +169,5 @@
     const n = $('#pf-name'); const t = $('#pf-intro');
     draft = { name: n ? n.value : null, intro: t ? t.value : null };
   }
-  UI.boot({ data: ['characters'], init: () => Data.load('missions').then((m) => { missions = m; render(); }) });
+  UI.boot({ back: false, data: ['characters'], init: () => Data.load('missions').then((m) => { missions = m; render(); }) });
 })();
