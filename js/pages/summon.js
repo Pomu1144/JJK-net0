@@ -329,25 +329,43 @@
       UI.toast(kind === 'daily' ? (cost.used ? 'The Limited draw resets at 0:00.' : 'The Limited draw needs ' + cost.n + ' Paid Cubes.') : 'Not enough Cubes — visit the Shop.', 'bad');
       return;
     }
-    reveal(results, kind);
+    const pts = current.exchangeAt ? gpState(Save.get(), current).points : null;
+    reveal(results, kind, pts == null ? null : { from: Math.max(0, pts - n), to: pts });
     drawPanel();
   }
 
-  function reveal(results, kind) {
+  /* Results screen, 1:1 with the game's "Gacha Results": the title ribbon,
+   * cards in rarity frames (silver R, gold SR, rainbow SSR) with NEW and the
+   * type on new units and a black count strip on the rest, the Exclusive
+   * Gacha Pt bar (before ▸ after) and the Back to Gacha / Draw Again plates. */
+  const RES = 'assets/pp/ui/results/';
+  function resultCard(r, i) {
+    const rar = UI.rarityOf(r.def).toLowerCase();
+    const strip = r.isNew ? '' : r.dupe ? `LB ${r.dupe}` : r.yen ? `${fmt(r.yen)} JP` : 'x1';
+    return `<div class="rcard r${r.def.rarity} is-${rar}" style="--d:${i * 0.12}s">
+      <div class="rcard-in">
+        <div class="rcard-back"><span>呪</span></div>
+        <div class="rcard-front rres is-${rar}${r.isNew ? ' is-new' : ''}" title="${esc(r.def.name)}${r.def.title ? ' — ' + esc(r.def.title) : ''}">
+          <span class="rres-art">${Art.img(r.def, 'icon', { alt: r.def.name })}</span>
+          <img class="rres-frame" src="${RES}frame-${rar}.webp" alt="">
+          ${r.isNew ? `<img class="rres-new" src="${RES}new.webp" alt="NEW">${UI.typeBadge(r.def, 'rres-type')}` : ''}
+          ${strip ? `<span class="rres-strip">${esc(strip)}</span>` : ''}
+        </div>
+      </div></div>`;
+  }
+
+  function reveal(results, kind, gp) {
     const top = Math.max(...results.map((r) => r.def.rarity));
+    const again = kind !== 'exchange' && kind !== 'daily';
     const ov = document.createElement('div');
     ov.className = 'reveal r' + top + ' is-' + UI.rarityOf(top).toLowerCase();
     ov.innerHTML = `<div class="reveal-seal"><div class="seal-paper"><span>${top >= 6 ? '特級' : top >= 5 ? '一級' : '呪'}</span></div><div class="seal-burst"></div></div>
-      <h2 class="rv-title">Summon Results</h2>
-      <div class="reveal-cards">${results.map((r, i) => `
-        <div class="rcard r${r.def.rarity} is-${UI.rarityOf(r.def).toLowerCase()}" style="--d:${i * 0.12}s">
-          <div class="rcard-in">
-            <div class="rcard-back"><span>呪</span></div>
-            <div class="rcard-front">${UI.unitTile(r.def, { tag: 'span', badge: r.isNew ? '<span class="uc-badge badge is-new">NEW</span>' : r.dupe ? `<span class="uc-badge badge">LB ${r.dupe}</span>` : r.yen ? `<span class="uc-badge badge">${fmt(r.yen)} JP</span>` : '' })}</div>
-          </div></div>`).join('')}</div>
-      <div class="reveal-actions"><button class="jjk-btn" id="rv-skip" type="button">Skip</button>
-        ${kind === 'exchange' || kind === 'daily' ? '' : `<button class="jjk-btn" id="rv-again" type="button" hidden>Draw ${kind === 'multi' ? '10' : '1'} time(s) again</button>`}
-        <button class="jjk-btn is-primary rv-back" id="rv-close" type="button" hidden>Back to Gacha</button></div>`;
+      <h2 class="rv-title"><img src="${RES}title.webp" alt="Gacha Results"></h2>
+      <div class="reveal-cards">${results.map(resultCard).join('')}</div>
+      ${gp ? `<div class="rv-pt"><img src="${RES}pt-bar.webp" alt=""><span class="rv-pt-l">Exclusive Gacha Pt</span><b class="rv-pt-a">${fmt(gp.from)}</b><i class="rv-pt-arrow"></i><b class="rv-pt-b">${fmt(gp.to)}</b></div>` : ''}
+      <div class="reveal-actions"><button class="pp-stone rv-skip" id="rv-skip" type="button">Skip</button>
+        <button class="rv-img" id="rv-close" type="button" hidden><img src="${RES}b-back.webp" alt="Back to Gacha"></button>
+        ${again ? `<button class="rv-img" id="rv-again" type="button" hidden><img src="${RES}b-again.webp" alt="Draw Again"></button>` : ''}</div>`;
     document.body.appendChild(ov);
     UI.sfx('pull');
     const finish = () => {
