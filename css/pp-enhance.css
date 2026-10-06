@@ -99,3 +99,47 @@ html.is-compact .enh-btns.is-main { gap: 6px; }
 html.is-compact body .enh.is-pp .enh-panel { gap: 4px; padding-top: 4px; padding-bottom: 2px; }
 html.is-compact body .enh.is-pp .enh-panel > :not(.enh-arrow):not(.enh-desc) { zoom: .72; }
 html.is-compact body .enh.is-pp .enh-btns.is-main { zoom: .8; }
+
+/* ===== Characters list, 1:1 with the game ===== */
+.ch-tools { display: flex; align-items: flex-end; gap: 12px; }
+.ch-search { position: relative; display: flex; align-items: center; gap: 6px; width: 200px; height: 34px; padding: 0 8px; color: #fff;
+  background: rgba(8, 10, 12, .85); border: 1px solid #8a8d8e; box-shadow: inset 0 0 0 1px #000; }
+.ch-search svg { flex: none; width: 18px; height: 18px; }
+.ch-search input { flex: 1; min-width: 0; height: 100%; border: 0; background: none; color: #fff; font: 600 14px/1 var(--pp-font); outline: none; }
+.ch-search input::placeholder { color: #fff; opacity: 1; }
+.ch-stack { position: relative; display: grid; justify-items: center; }
+.ch-filter-on, .ch-show { position: absolute; bottom: 100%; margin-bottom: 3px; height: 22px; padding: 0 12px; display: grid; place-items: center; white-space: nowrap;
+  font: 600 13px/1 var(--pp-font); font-style: normal; }
+.ch-filter-on { color: #fff; background: linear-gradient(180deg, #b0302a, #7a1814); border: 1px solid #d86a56; }
+.ch-show { width: 100%; color: #e4e2dc; background: #4c5154; border: 1px solid #6c7174; box-sizing: border-box; }
+.ch-filter-on[hidden] { display: none; }
+.ch-sort, .ch-switch { min-width: 120px; height: 36px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 16px; }
+.ch-sort-ic, .ch-sw-ic { width: 18px; height: 18px; flex: none; }
+.ch-sheet h4 { margin: 4px 0 6px; font: 700 13px/1 var(--pp-font); color: var(--pp-gold-1); }
+.ch-sorts { display: flex; flex-wrap: wrap; gap: 6px; }
+/* cards: holographic frame, each one tilted a little, no name, Lv on a dark strip */
+.ch-grid { gap: 14px 22px !important; padding: 10px 24px 12px !important; }
+.ch-cell { position: relative; transform: perspective(700px) rotateY(var(--ry, 0deg)) rotate(var(--rz, 0deg)); }
+.ch-cell.c0 { --ry: 7deg; --rz: .8deg; } .ch-cell.c1 { --ry: 3deg; --rz: .6deg; } .ch-cell.c2 { --ry: -3deg; --rz: .7deg; } .ch-cell.c3 { --ry: -7deg; --rz: 1deg; }
+.ch-cell .ucard.is-wide .uc-art { border-width: 4px; clip-path: none; border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .8), 0 0 10px rgba(160, 120, 255, .25), 0 8px 16px rgba(0, 0, 0, .6); }
+.ch-cell .ucard.is-wide.is-ssr .uc-art { --fr: linear-gradient(115deg, #ff7ad0, #ffd36e 18%, #8ef0c6 36%, #7fd8ff 52%, #b98cff 70%, #ff7ad0 88%, #ffe08a); }
+.ch-cell .ucard.is-wide .uc-rar { display: none; }
+.ch-cell .ucard.is-wide .uc-type { width: 34px; top: 4px; right: 4px; }
+.ch-cell .uc-strip { left: auto; right: 0; bottom: 6px; padding: 2px 10px 2px 26px; background: linear-gradient(90deg, transparent, rgba(4, 6, 8, .9) 30%); }
+.ch-cell .ucard.is-wide .uc-lv { font-size: 14px; } .ch-cell .ucard.is-wide .uc-lv b { font-size: 22px; margin-left: 1px; }
+.ch-cell .ucard.is-wide .uc-lv.is-cp b { font-size: 17px; }
+.ch-cell .uc-hex { left: 8px; bottom: 8px; width: 30px; height: 32px; font-size: 16px; }
+.ch-alert { position: absolute; z-index: 5; left: -6px; top: -10px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+  font: 900 15px/1 var(--pp-font); font-style: normal; color: #fff; background: radial-gradient(circle at 35% 30%, #f0503e, #c41d17 60%, #8f0d0b); border: 2px solid #f6e6dc; box-shadow: 0 1px 3px #000; }
+body[data-page="characters"] .topbar { align-items: flex-end; }
+html.is-compact .ch-search { width: 130px; height: 28px; } html.is-compact .ch-search input { font-size: 12px; }
+html.is-compact .ch-sort, html.is-compact .ch-switch { min-width: 92px; height: 30px; font-size: 13px; gap: 6px; }
+html.is-compact .ch-filter-on, html.is-compact .ch-show { height: 17px; font-size: 10.5px; }
+html.is-compact .ch-grid { gap: 10px 16px !important; padding: 18px 16px 8px !important; }
+html.is-compact .ch-cell .ucard.is-wide .uc-lv b { font-size: 17px; }
+html.is-compact .ch-cell .uc-hex { width: 24px; height: 26px; font-size: 13px; }
+@media (max-width: 640px) { .ch-search { display: none; } }
+body[data-page="characters"] .topbar { padding-top: 24px; }
+html.is-compact body[data-page="characters"] .topbar { padding-top: 20px; }
+html.is-compact .ch-search { width: 160px; } html.is-compact .ch-search input { font-size: 11.5px; }

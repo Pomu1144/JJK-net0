@@ -3,47 +3,82 @@
   'use strict';
   const { $, $$, esc, fmt } = UI;
   let ITEMS = {};
-  const view = { sort: 'power', el: 'all' };
-  try { Object.assign(view, Save.pref('roster') || {}); } catch (_) { /* default */ }
+  const view = { sort: 'level', el: 'all', show: 'lv', q: '' };
+  try { Object.assign(view, Save.pref('roster') || {}, { q: '' }); } catch (_) { /* default */ }
 
   const SORTS = {
+    level: (a, b) => b.unit.level - a.unit.level || b.power - a.power,
     power: (a, b) => b.power - a.power,
     rarity: (a, b) => b.def.rarity - a.def.rarity || b.power - a.power,
-    level: (a, b) => b.unit.level - a.unit.level || b.power - a.power,
     element: (a, b) => Rules.ELEMENTS.indexOf(a.def.element) - Rules.ELEMENTS.indexOf(b.def.element) || b.power - a.power,
     newest: (a, b) => (b.unit.obtained || 0) - (a.unit.obtained || 0),
   };
+  const SORT_LABEL = { level: 'Lv', power: 'CP', rarity: 'Rarity', element: 'Type', newest: 'New' };
+  /** What the card's corner shows; "Switch" cycles it, as in the game. */
+  const SHOW = { lv: 'Lv', cp: 'CP', awak: 'Awakening' };
+  const SORT_IC = '<svg class="ch-sort-ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h3v11h2.5L4.5 18 .5 14H3zM10 4h8M10 8h6M10 12h4M10 16h2" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  const SWITCH_IC = '<svg class="ch-sw-ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7h12l-3-3M17 13H5l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-  const SORT_LABEL = { power: 'Power', rarity: 'Rarity', level: 'Level', element: 'Type', newest: 'Newest' };
+  /** The red "!" on a card: a Training Light can level this unit now. */
+  function canEnhance(v) {
+    const s = Save.get();
+    return v.unit.level < v.maxLevel && ['light_s', 'light_m', 'light_l'].some((k) => (s.items[k] || 0) > 0 && s.currency.yen >= ((ITEMS[k] || {}).jp || 0));
+  }
+
+  function corner(v) {
+    if (view.show === 'cp') return `<span class="uc-lv is-cp">CP<b>${fmt(v.power)}</b></span>`;
+    if (view.show === 'awak') return `<span class="uc-lv">Awk<b>${v.unit.dupes || 0}</b></span>`;
+    return `<span class="uc-lv">Lv<b>${v.unit.level}</b></span>`;
+  }
 
   function renderGrid() {
     const all = Rules.ownedList();
-    const list = all.filter((v) => view.el === 'all' || v.def.element === view.el).sort(SORTS[view.sort] || SORTS.power);
-    $('#grid').innerHTML = list.length ? list.map((v) => UI.unitCard(v, { wide: true })).join('') : '<p class="empty">No sorcerers match. Summon more at the Summon hall.</p>';
-    $('#count').textContent = list.length + ' / ' + all.length + ' units · ' + Data.characters.length + ' in the archive';
-    $$('.el-filter button').forEach((b) => b.classList.toggle('active', b.dataset.el === view.el));
+    const q = view.q.trim().toLowerCase();
+    const list = all.filter((v) => (view.el === 'all' || v.def.element === view.el)
+      && (!q || (v.def.name + ' ' + (v.def.title || '')).toLowerCase().includes(q))).sort(SORTS[view.sort] || SORTS.level);
+    $('#grid').innerHTML = list.length ? list.map((v, i) => `<div class="ch-cell c${i % 4}">${canEnhance(v) ? '<i class="ch-alert" aria-label="Can be enhanced">!</i>' : ''}${UI.unitCard(v, { wide: true, hideName: true, corner: corner(v) })}</div>`).join('')
+      : '<p class="empty">No sorcerers match. Summon more at the Summon hall.</p>';
+    $('#ch-sort-l').textContent = SORT_LABEL[view.sort] || 'Lv';
+    $('#ch-filter-on').hidden = view.el === 'all' && !q;
+    $('#ch-show').textContent = SHOW[view.show];
+  }
+
+  /** Sort & filter sheet: type filter and sort key. */
+  function openSort() {
+    const m = UI.modal(`<div class="ch-sheet"><h4>Type</h4><div class="el-filter" role="group">
+        <button class="all${view.el === 'all' ? ' active' : ''}" data-el="all" type="button">All</button>
+        ${Rules.ELEMENTS.map((e) => `<button class="${view.el === e ? 'active' : ''}" data-el="${e}" type="button" aria-label="${UI.typeOf(e)} type">${UI.typeBadge(e)}</button>`).join('')}</div>
+      <h4>Sort</h4><div class="ch-sorts">${Object.keys(SORTS).map((k) => `<button class="jjk-tab${k === view.sort ? ' active' : ''}" data-sort="${k}" type="button">${SORT_LABEL[k]}</button>`).join('')}</div></div>`,
+    { title: 'Sort / Filter', sub: '並び替え' });
+    m.el.addEventListener('click', (e) => {
+      const el = e.target.closest('[data-el]'), so = e.target.closest('[data-sort]');
+      if (!el && !so) return;
+      if (el) view.el = el.dataset.el;
+      if (so) view.sort = so.dataset.sort;
+      Save.pref('roster', Object.assign({}, view, { q: '' }));
+      renderGrid();
+      m.el.querySelectorAll('[data-el]').forEach((b) => b.classList.toggle('active', b.dataset.el === view.el));
+      m.el.querySelectorAll('[data-sort]').forEach((b) => b.classList.toggle('active', b.dataset.sort === view.sort));
+    });
   }
 
   function render() {
-    $('#main').innerHTML = `
-      <div class="toolbar">
-        <div class="el-filter" role="group" aria-label="Type filter">
-          <button class="all" data-el="all" type="button">All</button>
-          ${Rules.ELEMENTS.map((e) => `<button data-el="${e}" type="button" title="${UI.typeOf(e)} type (${UI.typeKanji(e)})" aria-label="${UI.typeOf(e)} type">${UI.typeBadge(e)}</button>`).join('')}
-        </div>
-        <label class="sort-label">SORT
-          <select class="input" id="sort">
-            ${Object.keys(SORTS).map((k) => `<option value="${k}"${k === view.sort ? ' selected' : ''}>${SORT_LABEL[k] || k}</option>`).join('')}
-          </select></label>
-        <span class="count" id="count"></span>
-      </div>
-      <div class="unit-grid roster-grid" id="grid"></div>`;
-    $('.el-filter').addEventListener('click', (e) => {
-      const b = e.target.closest('button');
-      if (!b) return;
-      view.el = b.dataset.el; Save.pref('roster', view); renderGrid();
+    const right = $('.topbar .top-right');
+    if (right && !$('.ch-tools')) right.insertAdjacentHTML('afterbegin', `<div class="ch-tools">
+        <label class="ch-search"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 12l5 5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <input id="ch-q" type="search" placeholder="Keyword Search" aria-label="Keyword Search" autocomplete="off"></label>
+        <span class="ch-stack"><i class="ch-filter-on" id="ch-filter-on" hidden>Filter On</i>
+          <button class="jjk-btn is-primary ch-sort" id="ch-sort" type="button">${SORT_IC}<span id="ch-sort-l">Lv</span></button></span>
+        <span class="ch-stack"><i class="ch-show" id="ch-show">Lv</i>
+          <button class="pp-stone ch-switch" id="ch-switch" type="button">${SWITCH_IC}<span>Switch</span></button></span>
+      </div>`);
+    $('#main').innerHTML = '<div class="unit-grid roster-grid ch-grid" id="grid"></div>';
+    $('#ch-q').addEventListener('input', (e) => { view.q = e.target.value; renderGrid(); });
+    $('#ch-sort').addEventListener('click', openSort);
+    $('#ch-switch').addEventListener('click', () => {
+      const k = Object.keys(SHOW); view.show = k[(k.indexOf(view.show) + 1) % k.length];
+      Save.pref('roster', Object.assign({}, view, { q: '' })); UI.sfx('tap'); renderGrid();
     });
-    $('#sort').addEventListener('change', (e) => { view.sort = e.target.value; Save.pref('roster', view); renderGrid(); });
     $('#grid').addEventListener('click', (e) => {
       const c = e.target.closest('.ucard');
       if (c) openDetail(c.dataset.id);
@@ -209,6 +244,6 @@
     draw();
   }
 
-  UI.boot({ back: 'formation.html', data: ['characters', 'items'], init: () => Data.load('items').then((it) => { ITEMS = it.items; render(); }) });
+  UI.boot({ back: 'formation.html', hud: false, data: ['characters', 'items'], init: () => Data.load('items').then((it) => { ITEMS = it.items; render(); }) });
   window.addEventListener('portal:imported', () => { if ($('#grid')) renderGrid(); });
 })();
