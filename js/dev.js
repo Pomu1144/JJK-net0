@@ -210,5 +210,7 @@
     document.body.appendChild(panel);
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+  global.DevPanel = { open: () => (panel ? open() : (global.__devOpen = true)) };
+  function start() { init(); if (global.__devOpen) { global.__devOpen = false; open(); } }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })(window);

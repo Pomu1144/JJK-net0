@@ -380,6 +380,14 @@
     document.body.appendChild(d);
   }
 
+  /** Settings → Data → Developer: turn the dev panel on and open it now. */
+  function openDev() {
+    Save.pref('dev', true);
+    if (global.DevPanel) { global.DevPanel.open(); return; }
+    global.__devOpen = true;
+    loadDev();
+  }
+
   // Dev panel (js/dev.js): on with ?dev=1 (remembered), off with ?dev=0.
   function loadDev() {
     try {
@@ -409,5 +417,5 @@
     else start();
   }
 
-  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, typeOf, typeKanji, typeBadge, typeLabel, rarityOf, rarityBadge, focusTag, unitTile, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG, GP_ICON };
+  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, typeOf, typeKanji, typeBadge, typeLabel, rarityOf, rarityBadge, focusTag, unitTile, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, openDev, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG, GP_ICON };
 })(window);
