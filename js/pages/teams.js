@@ -28,7 +28,7 @@
       <div class="formation-head"><h3>${esc(t.name)}</h3>
         <button class="pp-stone fm-mini" id="rename" type="button" aria-label="Rename team" title="Rename">✎</button>
         <span class="power">Current Power <b>${fmt(Rules.teamPower(t))}</b></span>
-        <button class="jjk-btn is-small${s.activeTeam === teamIdx ? ' is-primary' : ''}" id="activate" type="button">${s.activeTeam === teamIdx ? 'Active team' : 'Set active'}</button></div>
+        <button class="jjk-btn is-small${s.activeTeam === teamIdx ? ' is-primary' : ''}" id="activate" type="button">${s.activeTeam === teamIdx ? 'Active' : 'Set active'}</button></div>
       <div class="fm-row">
         <div class="fm-main"><h4 class="brush">Main</h4><div class="fm-cards">${[0, 1, 2, 3].map(slot).join('')}</div></div>
         <div class="fm-backup"><h4 class="brush">Backup</h4><div class="fm-cards">${slot(4)}</div></div>

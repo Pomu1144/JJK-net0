@@ -76,3 +76,26 @@
 }
 .enh-slot .enh-hex { width: 74%; height: 74%; }
 .enh-slot .enh-hex span { font-size: 16px; }
+
+/* ===== 1:1 pass against the in-game Enhance screen ===== */
+/* the bottom bar stays on screen over the full-screen Enhance view */
+@media (orientation: landscape) {
+  body[data-page="characters"] .dock { position: relative; z-index: 1001; }
+  .modal.is-full .enh { height: calc(100% - var(--dock-h) - max(6px, env(safe-area-inset-bottom)) - 4px); }
+}
+/* skill text: a popover over the stats, closed by tapping it or the skill again */
+.enh-desc.is-pop { position: absolute; z-index: 6; left: 4%; right: 6%; top: 34%; cursor: pointer;
+  background: rgba(8, 14, 18, .96); border: 1px solid #5e6a6e; border-left: 3px solid var(--pp-gold-2); box-shadow: 0 6px 18px rgba(0, 0, 0, .7); }
+.enh-panel { position: relative; }
+html.is-compact .enh-foot { display: none; }
+/* denser, smaller type like the game */
+html.is-compact .enh.is-pp .enh-name h2 { font-size: 21px; }
+html.is-compact .enh-name small { font-size: 10px; }
+html.is-compact .enh.is-pp .enh-stats > div { padding: 2px 8px 2px 12px; font-size: 11.5px; }
+html.is-compact .enh-sk-h { font-size: 11px; }
+html.is-compact .enh-btns.is-main { gap: 6px; }
+/* the game's right panel is denser than ours: scale its contents so stats,
+   skills, the seal bar and the four enhancement plates all fit above the bar */
+html.is-compact body .enh.is-pp .enh-panel { gap: 4px; padding-top: 4px; padding-bottom: 2px; }
+html.is-compact body .enh.is-pp .enh-panel > :not(.enh-arrow):not(.enh-desc) { zoom: .72; }
+html.is-compact body .enh.is-pp .enh-btns.is-main { zoom: .8; }

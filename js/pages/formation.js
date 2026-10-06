@@ -40,5 +40,5 @@
     </div>`;
   }
 
-  UI.boot({ data: ['characters'], init: render });
+  UI.boot({ back: false, data: ['characters'], init: render });
 })();

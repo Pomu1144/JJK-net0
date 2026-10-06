@@ -11,46 +11,58 @@
 .jjk-btn::before, .jjk-btn::after, .dock-btn::before { display: none; }
 
 /* parchment "Challenge" button */
-.jjk-btn { border-width: 9px 13px; border-image-source: url("../assets/pp/ui/btn/btn-light.webp"); border-image-slice: 14 20 fill; color: #4a1d12; padding: 0 8px; }
-.jjk-btn.is-small { border-width: 7px 10px; padding: 0 6px; }
-/* gold (active Day tab) */
-.jjk-btn.is-primary { border-image-source: url("../assets/pp/ui/btn/tab-on.webp"); border-image-slice: 14 18 fill; color: #fdf0a0; text-shadow: 0 1px 0 #3d3610, 0 0 5px rgba(40, 34, 4, .8); }
+.jjk-btn { border-width: 7px 24px; border-image-source: url("../assets/pp/ui/hf/btn-parch.webp"); border-image-slice: 26 90 fill; color: #4a1d12; padding: 0 8px; }
+.jjk-btn.is-small { border-width: 5px 16px; padding: 0 6px; }
+/* gold: the ornamented kit plate (same art as the active bottom-bar tab) */
+.jjk-btn.is-primary { border-width: 8px 25px; border-image-source: url("../assets/pp/ui/hf/btn-gold.webp"); border-image-slice: 26 80 fill; color: #fff4b8; padding: 0 4px;
+  text-shadow: 0 1px 0 #3d3610, 0 0 6px rgba(40, 34, 4, .9); filter: drop-shadow(0 0 7px rgba(214, 196, 90, .28)) drop-shadow(0 2px 2px rgba(0, 0, 0, .6)); }
+.jjk-btn.is-primary.is-small { border-width: 6px 18px; }
 /* red "Claim All" */
-.jjk-btn.is-red { border-width: 9px 20px; border-image-source: url("../assets/pp/ui/btn/btn-red.webp"); border-image-slice: 16 40 fill; color: #f6dfa8; }
-.jjk-btn.is-red.is-small { border-width: 7px 14px; }
+.jjk-btn.is-red { border-width: 6px 12px; border-image-source: url("../assets/pp/ui/hf/btn-red.webp"); border-image-slice: 22 40 fill; color: #f6dfa8; }
+.jjk-btn.is-red.is-small { border-width: 5px 10px; }
 /* greyed "Challenge" */
-.jjk-btn:disabled, .jjk-btn.is-disabled { border-image-source: url("../assets/pp/ui/btn/btn-dark.webp"); border-image-slice: 16 20 fill; color: #9aa09a; }
+.jjk-btn:disabled, .jjk-btn.is-disabled { border-width: 6px 12px; border-image-source: url("../assets/pp/ui/hf/btn-dark.webp"); border-image-slice: 20 40 fill; color: #9aa09a; }
 .jjk-btn:active:not(:disabled) { box-shadow: none; transform: translateY(1px); }
 
+/* press feedback shared by every skinned button */
+.jjk-btn, .pp-stone, .jjk-tab, .dock-btn, .enh-btn { transition: transform .08s ease-out, filter .15s ease-out; -webkit-tap-highlight-color: transparent; }
+@media (hover: hover) {
+  .jjk-btn:hover:not(:disabled), .pp-stone:hover:not(:disabled), .jjk-tab:hover, .dock-btn:hover { filter: brightness(1.12) drop-shadow(0 2px 2px rgba(0, 0, 0, .55)); }
+  .jjk-btn.is-primary:hover:not(:disabled) { filter: brightness(1.1) drop-shadow(0 0 10px rgba(230, 210, 100, .45)) drop-shadow(0 2px 2px rgba(0, 0, 0, .6)); }
+}
+.jjk-btn:active:not(:disabled), .pp-stone:active:not(:disabled), .dock-btn:active, .enh-btn:active:not(:disabled) { transform: translateY(1px) scale(.97); filter: brightness(.88) drop-shadow(0 1px 1px rgba(0, 0, 0, .6)); }
+.jjk-btn:focus-visible, .pp-stone:focus-visible, .jjk-tab:focus-visible, .dock-btn:focus-visible { outline: 2px solid #f3dc86; outline-offset: 2px; }
+
 /* tabs: Day tabs (slate / gold) */
-.jjk-tab { border-width: 8px 12px; border-image-source: url("../assets/pp/ui/btn/tab-off.webp"); border-image-slice: 12 16 fill; padding: 0 6px; }
-.jjk-tab.active, .jjk-tab[aria-selected="true"] { border-image-source: url("../assets/pp/ui/btn/tab-on.webp"); border-image-slice: 14 18 fill; box-shadow: none; color: #fdf0a0; text-shadow: 0 1px 0 #3d3610, 0 0 5px rgba(40, 34, 4, .8); }
+.jjk-tab { border-width: 6px 17px 8px; border-image-source: url("../assets/pp/ui/hf/tab-off.webp"); border-image-slice: 30 90 44 fill; padding: 0 6px; }
+.jjk-tab.active, .jjk-tab[aria-selected="true"] { border-width: 6px 17px 8px; border-image-source: url("../assets/pp/ui/hf/tab-on.webp"); border-image-slice: 30 90 44 fill; box-shadow: none; color: #fdf0a0; text-shadow: 0 1px 0 #3d3610, 0 0 5px rgba(40, 34, 4, .8); }
 
 /* bottom navigation: stone plate, gold plate when active (UI kit sheet) */
-.dock-btn { border-width: 8px 18px 12px; border-image-source: url("../assets/pp/ui/kit/nav.webp"); border-image-slice: 22 48 34 fill; padding: 0 2px; }
-.dock-btn.active { border-width: 8px 18px 12px; border-image-source: url("../assets/pp/ui/kit/nav-on.webp"); border-image-slice: 22 48 34 fill; box-shadow: none; filter: drop-shadow(0 0 8px rgba(200, 186, 80, .35)) drop-shadow(0 2px 2px rgba(0, 0, 0, .55)); }
+.dock-btn { border-width: 8px 15px 11px; border-image-source: url("../assets/pp/ui/hf/nav-off.webp"); border-image-slice: 36 110 52 fill; padding: 0 2px; }
+.dock-btn.active { border-width: 8px 15px 11px; border-image-source: url("../assets/pp/ui/hf/nav-on.webp"); border-image-slice: 36 110 52 fill; box-shadow: none; filter: drop-shadow(0 0 8px rgba(200, 186, 80, .35)) drop-shadow(0 2px 2px rgba(0, 0, 0, .55)); }
 .dock-btn .nav-ic { width: 25px; height: 25px; filter: drop-shadow(0 1px 0 #1d2224) drop-shadow(0 0 1px rgba(0, 0, 0, .6)); }
 .dock-btn.active .nav-ic { filter: drop-shadow(0 1px 0 #3d3610) drop-shadow(0 0 4px rgba(80, 70, 10, .6)); }
 .dock-btn.is-menu .nav-ic { width: 22px; height: 22px; }
-.dock-btn.is-menu, .dock-btn.is-menu.active { border-width: 6px; border-image-source: url("../assets/pp/ui/kit/sq.webp"); border-image-slice: 22 fill; padding: 0; }
+.dock-btn.is-menu, .dock-btn.is-menu.active { border-width: 6px; border-image-source: url("../assets/pp/ui/hf/sq-blank.webp"); border-image-slice: 26 fill; padding: 0; }
 
 /* stone buttons (Details, Set as Home, ?, back) */
-.pp-stone { border-width: 6px 8px; border-image-source: url("../assets/pp/ui/btn/btn-grey.webp"); border-image-slice: 10 14 fill; padding: 2px 8px; }
-.pp-stone.sq { border-width: 7px; border-image-source: url("../assets/pp/ui/kit/sq.webp"); border-image-slice: 22 fill; padding: 0; }
+.pp-stone { border-width: 7px 26px 8px; border-image-source: url("../assets/pp/ui/hf/btn-stone.webp"); border-image-slice: 24 100 30 fill; padding: 0 2px; color: #fbf6ea;
+  text-shadow: 0 1px 0 #1d2224, 0 0 4px rgba(0, 0, 0, .7); }
+.pp-stone.sq { border-width: 7px; border-image-source: url("../assets/pp/ui/hf/sq-blank.webp"); border-image-slice: 26 fill; padding: 0; }
 /* square icon buttons drawn straight from the kit: back, help */
 .help-btn, .jjk-icon-btn.jjk-back, .jjk-icon-btn.enh-back, .pp-stone.sq.kit-icon { border: 0; border-image: none; box-shadow: none; color: transparent; text-shadow: none; font-size: 0;
-  background: url("../assets/pp/ui/kit/sq-help.webp") center / contain no-repeat; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .55)); }
-.jjk-icon-btn.jjk-back, .jjk-icon-btn.enh-back { background-image: url("../assets/pp/ui/kit/sq-back.webp"); }
+  background: url("../assets/pp/ui/hf/ic-help.webp") center / contain no-repeat; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .55)); }
+.jjk-icon-btn.jjk-back, .jjk-icon-btn.enh-back { background-image: url("../assets/pp/ui/hf/ic-back.webp"); }
 .jjk-icon-btn.jjk-back .ic, .jjk-icon-btn.enh-back .ic, .pp-stone.sq.kit-icon .ic { display: none; }
-.pp-stone.sq.kit-expand { background-image: url("../assets/pp/ui/kit/sq-expand.webp"); }
-.pp-stone.sq.kit-profile { background-image: url("../assets/pp/ui/kit/sq-profile.webp"); }
+.pp-stone.sq.kit-expand { background-image: url("../assets/pp/ui/hf/ic-expand.webp"); }
+.pp-stone.sq.kit-profile { background-image: url("../assets/pp/ui/hf/ic-profile.webp"); }
 
 /* Enhance buttons: the parchment "Lv Enhancement" plate */
 .enh-btn { clip-path: none; background: none; box-shadow: none; border: 12px solid transparent; border-image: url("../assets/pp/ui/btn/parch.webp") 34 36 fill / 12px 13px stretch; padding: 0 2px; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5)); }
 .enh-btn:disabled { filter: grayscale(.9) brightness(.7); }
 
 /* top-bar counters: black plate with a thin gold frame (UI kit currency bar) */
-.hud-cur { background: none; box-shadow: none; border: 8px solid transparent; border-image: url("../assets/pp/ui/kit/bar.webp") 14 16 fill / 7px 8px stretch; border-radius: 0; padding: 0 4px 0 24px; }
+.hud-cur { background: none; box-shadow: none; border: 8px solid transparent; border-image: url("../assets/pp/ui/hf/bar.webp") 18 26 fill / 5px 7px stretch; border-radius: 0; padding: 0 4px 0 24px; }
 .hud-cur .cur-ic { left: -2px; }
 
 /* Lv / Skill enhancement plates: the kit parchment */
@@ -64,3 +76,16 @@
   .jjk-title-plate { padding: 0 22px 0 10px; }
   .hud-cur .hud-plus { display: none; }
 }
+
+/* short stone buttons (Gacha Record / Details / Exchange): thinner frame so
+   the bottom ornament stays under the label */
+.g-desc .pp-stone, .pp-stone.g-record, .pp-stone.g-exch { border-width: 5px 16px 6px; }
+
+/* Gacha draw buttons: the octagon art (red Draw, gold Limited) with its own
+   black price strip; the label sits in the top half, the cost on the strip */
+.g-draws .g-pull { clip-path: none; background: url("../assets/pp/ui/hf/draw-red.webp") center / 100% 100% no-repeat; display: block; }
+.g-draws .g-pull.is-daily, .g-draws .g-pull.is-ssr { background-image: url("../assets/pp/ui/hf/draw-gold.webp"); }
+.g-draws .g-pull.is-ssr { filter: hue-rotate(225deg) saturate(1.2) drop-shadow(0 3px 4px rgba(0, 0, 0, .6)); }
+.g-draws .g-pull::before, .g-draws .g-pull::after { display: none; }
+.g-draws .g-pull > b { position: absolute; left: 9%; right: 9%; top: 9%; height: 48%; display: grid; place-items: center; }
+.g-draws .g-pull > .g-cost { position: absolute; left: 10%; right: 10%; top: 61%; height: 24%; width: auto; background: none; box-shadow: none; }

@@ -145,14 +145,14 @@
     $('#g-name').innerHTML = hero ? `<span class="g-name-ic">${UI.rarityBadge(hero)}${UI.typeBadge(hero)}</span>
       <span class="g-name-t"><small>${esc(hero.title || '')}</small><b>${esc(hero.name)}</b></span>` : '';
     $('#g-info').innerHTML = `${logoHtml(b)}
-      <div class="g-desc"><p>${descText(b)}</p><button class="pp-stone" type="button" id="rates">Gacha Details</button></div>`;
+      <div class="g-desc"><p>${descText(b)}</p><div class="g-desc-btns"><button class="pp-stone" type="button" id="details">Details</button><button class="pp-stone" type="button" id="rates">Gacha<br>Details</button></div></div>`;
     const cube = (c) => (c.type === 'ticket' ? UI.itemIcon('ticket', {}) : UI.CUBE_SVG);
     const st = gpState(s, b);
     $('#g-draws').innerHTML = `
       <div class="g-pull-row">
         ${s.items.ssr_ticket ? `<div class="g-pcol"><span class="g-cap is-gold">×${s.items.ssr_ticket} owned</span><button class="g-pull is-ssr" id="pull-ssr" type="button"><b>SSR Ticket</b><span class="g-cost">SSR guaranteed</span></button></div>` : ''}
         <div class="g-pcol"><span class="g-cap">Reset at 0:00 Every Day</span>
-          <button class="g-pull is-daily${day.used ? ' is-used' : ''}" id="pull-daily" type="button" ${day.short ? 'disabled' : ''}>
+          <button class="g-pull is-daily${day.used ? ' is-used' : ''}" id="pull-daily" type="button" ${day.used ? 'disabled' : ''}>
             <b>Limited to 1<br>time(s) one day</b><span class="g-cost"><em>Paid</em>${UI.CUBE_SVG}<span>${fmt(day.n)}</span></span></button>
           <i class="g-sticker" aria-label="${day.used ? 0 : 1} time(s) left"><b>${day.used ? 0 : 1}</b>time(s)<br>left</i></div>
         <div class="g-pcol"><span class="g-cap is-blank"></span>
@@ -161,6 +161,7 @@
           <button class="g-pull" id="pull10" type="button" ${ten.short ? 'disabled' : ''}><b>Draw 10 time(s)</b><span class="g-cost">${cube(ten)}<span>${fmt(ten.n)}</span></span></button></div>
       </div>
       <div class="g-pt"><span class="g-ptbar"><span>Exclusive Gacha Pt</span><b id="g-pts">${b.exchangeAt ? fmt(st.points) : '—'}</b></span>
+        <a class="pp-stone g-exch g-recharge" href="shop.html#summon">Recharge</a>
         <button class="pp-stone g-exch${st.canExchange ? ' is-ready' : ''}" id="gp-open" type="button" ${b.exchangeAt ? '' : 'disabled'}>Exchange</button></div>`;
     $('#pull1').addEventListener('click', () => doPull('single'));
     $('#pull10').addEventListener('click', () => doPull('multi'));
@@ -168,6 +169,7 @@
     if ($('#pull-ssr')) $('#pull-ssr').addEventListener('click', ssrTicket);
     $('#gp-open').addEventListener('click', gpModal);
     $('#rates').addEventListener('click', showRates);
+    $('#details').addEventListener('click', showDetails);
     $$('#banners .ban-item').forEach((x) => x.classList.toggle('active', x.dataset.id === b.id));
     const at = $('#banners .ban-item.active');
     if (at && at.scrollIntoView) at.scrollIntoView({ block: 'nearest' });
@@ -282,6 +284,16 @@
     repaintGp();
   }
 
+  /* ---------- Details: the banner art, its period and featured units ---------- */
+  function showDetails() {
+    const b = current;
+    const feats = b.featured.map((id) => Data.char(id)).filter(Boolean);
+    UI.modal(`${b.bg ? `<img class="g-det-art" src="${esc(b.bg)}" alt="">` : ''}
+      <p class="muted" style="margin:8px 0">${b.event ? `${esc(b.kind)} gacha · Japanese server ${esc(dateRange(b))}${b.rerun ? ' (rerun)' : ''}` : 'Always available'}${b.event && isLive(b) ? ' · ' + esc(timerText(b)) : ''}</p>
+      ${feats.length ? `<div class="gp-pick g-featpick">${feats.map((d) => `<div class="gp-unit">${UI.unitTile(d, { tag: 'span' })}<small>${esc(d.title || '')}<br><b>${esc(d.name)}</b></small></div>`).join('')}</div>` : '<p class="muted">Every unit in the game can appear.</p>'}`,
+    { title: 'Details', sub: b.name });
+  }
+
   /* ---------- Gacha Details: banner, featured units, rates ---------- */
   function showRates() {
     const b = current;
@@ -352,7 +364,7 @@
     if ($('#rv-again', ov)) $('#rv-again', ov).addEventListener('click', () => { ov.remove(); doPull(kind); });
   }
 
-  /* ---------- banner list (Live / Events / Standard) ----------
+  /* ---------- banner list: running banners + Standard; "Past Gachas" opens the archive ----------
    * Event banners replay the Japanese server's gacha history (fan wiki
    * "Timeline Of Events (JP)"). Every one can be drawn on; the ones whose
    * original JP dates include today are live and count down. */
@@ -371,18 +383,19 @@
     let live = events.filter(isLive);
     if (!live.length) live = events.slice(0, 4);
     let body = '';
-    if (listTab === 'live') body = live.map(itemHtml).join('');
-    else if (listTab === 'events') {
+    if (listTab !== 'events') body = live.concat(B.banners.filter((b) => !b.event)).map(itemHtml).join('')
+      + '<button class="pp-stone ban-more" type="button" data-list="events">Past Gachas</button>';
+    else {
+      body = '<button class="pp-stone ban-more" type="button" data-list="live">Back</button>';
       let month = '';
-      body = events.map((b) => {
+      body += events.map((b) => {
         const m = b.start.slice(0, 7);
         const head = m !== month ? `<small class="ban-group">${MONTHS[+m.slice(5) - 1]} ${m.slice(0, 4)}</small>` : '';
         month = m;
         return head + itemHtml(b);
       }).join('');
-    } else body = B.banners.filter((b) => !b.event).map(itemHtml).join('');
-    $('#banners').innerHTML = `<div class="ban-filter" role="tablist">${[['live', 'Live'], ['events', 'Events'], ['standard', 'Standard']].map(([k, l]) => `<button type="button" role="tab" data-list="${k}" class="${k === listTab ? 'on' : ''}" aria-selected="${k === listTab}">${l}</button>`).join('')}</div>
-      <div class="ban-scroll">${body}</div>`;
+    }
+    $('#banners').innerHTML = `<div class="ban-scroll">${body}</div>`;
     $$('#banners .ban-item').forEach((t) => t.classList.toggle('active', !!current && t.dataset.id === current.id));
   }
 
@@ -416,7 +429,7 @@
     });
     const events = B.banners.filter((b) => b.event);
     current = B.banners.find((b) => b.id === location.hash.slice(1)) || events.find(isLive) || events[0] || B.banners[1] || B.banners[0];
-    listTab = !current.event ? 'standard' : isLive(current) || (!events.some(isLive) && events.slice(0, 4).includes(current)) ? 'live' : 'events';
+    listTab = !current.event ? 'live' : isLive(current) || (!events.some(isLive) && events.slice(0, 4).includes(current)) ? 'live' : 'events';
     drawList();
     drawPanel();
     Save.onChange(paintCubes);

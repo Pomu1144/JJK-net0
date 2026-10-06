@@ -327,3 +327,33 @@ html.is-compact .g-name-t b { font-size: 19px; }
   .g-name { left: 14px; top: auto; bottom: 150px; }
   .g-pull-row { flex-wrap: wrap; justify-content: flex-end; }
 }
+
+/* ===== 1:1 pass against the in-game Gacha screen ===== */
+/* banner list: one dark framed column, no filter tabs */
+.g-list { gap: 0; }
+.ban-scroll { padding: 8px 8px 8px 14px; gap: 7px; background: rgba(12, 13, 15, .82); border: 2px solid #55585a; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .7), 0 4px 12px rgba(0, 0, 0, .5); }
+.ban-tab { border: 1px solid #1a1a1a; }
+.ban-item.active { margin-left: 4px; }
+.ban-item.active::before { left: -15px; width: 13px; height: 13px; top: 14px; clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%); background: linear-gradient(135deg, #fff6b0, #e2b82c 60%, #a7780e); }
+.ban-time { font-size: 8.5px; color: #f2efe6; text-shadow: 0 1px 1px #000; }
+.ban-more { flex: none; align-self: center; min-height: 0; height: 22px; padding: 0 6px; font-size: 10.5px; border-width: 4px 14px 5px; margin-top: 2px; }
+/* description: two stone buttons side by side */
+.g-desc { justify-items: stretch; }
+.g-desc-btns { display: flex; justify-content: center; gap: 10px; }
+.g-desc .g-desc-btns .pp-stone { flex: 1; max-width: 46%; height: 26px; line-height: 1; font-size: 11.5px; }
+.g-desc .g-desc-btns #rates { font-size: 9.5px; }
+.g-det-art { width: 100%; display: block; }
+/* Recharge + Exchange under the draws */
+.g-pt { gap: 8px; }
+.g-recharge { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+/* the Limited button stays gold until it's used */
+.g-draws .g-pull.is-daily:not(:disabled) { filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .6)); }
+/* featured unit: SSR + name over a rainbow brush stroke */
+.g-name { gap: 4px; padding: 6px 26px 6px 6px; isolation: isolate; }
+.g-name::before { content: ''; position: absolute; z-index: -1; left: 4%; right: 0; top: 18%; bottom: 14%;
+  background: linear-gradient(90deg, rgba(64, 224, 196, .85), rgba(140, 236, 120, .8) 22%, rgba(250, 226, 120, .75) 40%, rgba(255, 128, 196, .8) 62%, rgba(176, 108, 255, .75) 82%, rgba(176, 108, 255, 0));
+  -webkit-mask: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent); mask: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent);
+  filter: blur(.5px); transform: skewX(-12deg); }
+.g-name-t small { color: #fff; text-shadow: 0 0 3px #3a0a40, 0 1px 1px #000; }
+.g-name-t b { background: none; color: #fff; -webkit-text-stroke: 0; filter: drop-shadow(0 0 2px #5a1a70) drop-shadow(0 0 6px rgba(170, 80, 255, .8)); }
+html.is-compact .g-list { bottom: 13%; }

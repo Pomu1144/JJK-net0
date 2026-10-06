@@ -10,8 +10,8 @@
 
   const EVENT_ID = 'ev_night_parade';
   const css = `
-  .dev-fab { position: fixed; z-index: 4000; right: 6px; bottom: 54px; padding: 4px 8px; font: 800 11px/1 system-ui, sans-serif; letter-spacing: .08em;
-    color: #111; background: #7CFC9A; border: 2px solid #0b3; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.6); cursor: pointer; opacity: .85; }
+  .dev-fab { position: fixed; z-index: 4000; left: 0; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; padding: 7px 3px; font: 800 9px/1 system-ui, sans-serif; letter-spacing: .12em;
+    color: #111; background: #7CFC9A; border: 1px solid #0b3; border-left: 0; border-radius: 0 5px 5px 0; box-shadow: 0 2px 6px rgba(0,0,0,.6); cursor: pointer; opacity: .55; }
   .dev-fab:hover { opacity: 1; }
   .dev-panel { position: fixed; z-index: 4001; inset: 8px; max-width: 720px; margin: 0 auto; display: flex; flex-direction: column;
     background: rgba(12, 16, 20, .97); color: #e8f0e8; border: 1px solid #2f6; border-radius: 8px; font: 13px/1.35 system-ui, sans-serif; box-shadow: 0 10px 40px rgba(0,0,0,.7); }

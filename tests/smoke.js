@@ -87,7 +87,10 @@ async function gameFlow(browser) {
   s = await save(p);
   check(s.stats.pulls === 10 && s.currency.cubes === 3000, '10x summon spent 3000 cubes (cubes ' + s.currency.cubes + ')');
   // Limited x1: Paid Cubes only, once a day; draws spend Free Cubes first, then Paid
-  check(s.currency.paidCubes === 0 && await p.$eval('#pull-daily', (e) => e.disabled), 'Limited x1 needs Paid Cubes (none yet)');
+  // as in the game the gold button stays up; tapping it without Paid Cubes only explains why
+  await p.click('#pull-daily');
+  await p.waitForTimeout(300);
+  check(s.currency.paidCubes === 0 && (await save(p)).stats.pulls === 10 && !(await p.$('.reveal')), 'Limited x1 needs Paid Cubes (none yet)');
   await p.evaluate(() => Save.update((st) => { st.currency.paidCubes = 500; }));
   await p.reload();
   await p.click('#pull-daily');
