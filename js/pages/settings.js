@@ -55,7 +55,10 @@
       <p class="pt-note">Paste a backup or choose a file. This replaces your current save.</p>
       <textarea class="pt-code" id="imp-in" rows="3" placeholder='{"game":"jjk-net0", ...}' spellcheck="false"></textarea>
       <div class="pt-actions"><label class="pp-stone pt-btn set-file">Choose file<input type="file" id="imp-file" accept="application/json,.json"></label><span class="grow"></span><button class="jjk-btn is-primary pt-big" id="imp-go" type="button">Import save</button></div>
-      <p class="msg" id="data-msg" role="status"></p>`;
+      <p class="msg" id="data-msg" role="status"></p>
+      ${sHead('Developer', '開発')}
+      <p class="pt-note">Test tools: add Cubes (+100,000 in one tap), JP, items and units, jump progress, win battles. Turning it on adds a small DEV tab on the left edge of every screen.</p>
+      <div class="pt-actions"><button class="jjk-btn is-primary pt-btn" id="dev-open" type="button">Open Dev Panel</button>${Save.pref('dev') ? '<button class="pp-stone pt-btn" id="dev-off" type="button">Hide DEV tab</button>' : ''}</div>`;
   }
 
   function cardMini(c) {
@@ -225,6 +228,8 @@
           location.href = 'index.html';
         }
         break;
+      case 'dev-open': UI.openDev(); break;
+      case 'dev-off': Save.pref('dev', false); location.reload(); break;
       case 'exp-show': { const ta = $('#exp-out'); ta.hidden = false; ta.value = Save.exportJSON(); ta.select(); break; }
       case 'exp-copy': copy(Save.exportJSON(), 'data-msg'); break;
       case 'exp-dl': {

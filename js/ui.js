@@ -140,9 +140,9 @@
     if (o.wide) {
       // roster card: wide card art, rarity frame, type diamond, dupe hexagon, Lv strip
       return `<${tag} class="${cls} is-wide"${o.id != null ? ` data-id="${esc(o.id)}"` : ''}${tag === 'button' ? ' type="button"' : ''} title="${esc(o.title || (d.name + (d.title ? ' — ' + d.title : '')))}">
-        <span class="uc-art">${Art.img(d, 'full')}${typeBadge(d, 'uc-type')}${rarityBadge(d, 'uc-rar')}
+        <span class="uc-art">${Art.img(d, o.artKind || 'full')}${typeBadge(d, 'uc-type')}${rarityBadge(d, 'uc-rar')}
           ${o.dupes ? `<span class="uc-hex">${esc(o.dupes)}</span>` : ''}
-          <span class="uc-strip"><span class="uc-name">${esc(d.name)}</span>${o.level != null ? `<span class="uc-lv">Lv<b>${esc(o.level)}</b></span>` : ''}</span>${o.badge || ''}${o.extra || ''}</span>
+          <span class="uc-strip"><span class="uc-name${o.hideName ? ' sr-only' : ''}">${esc(d.name)}</span>${o.corner != null ? o.corner : o.level != null ? `<span class="uc-lv">Lv<b>${esc(o.level)}</b></span>` : ''}</span>${o.badge || ''}${o.extra || ''}</span>
       </${tag}>`;
     }
     return `<${tag} class="${cls}"${o.id != null ? ` data-id="${esc(o.id)}"` : ''}${tag === 'button' ? ' type="button"' : ''} title="${esc(o.title || (d.name + (d.title ? ' — ' + d.title : '')))}">
@@ -380,6 +380,14 @@
     document.body.appendChild(d);
   }
 
+  /** Settings → Data → Developer: turn the dev panel on and open it now. */
+  function openDev() {
+    Save.pref('dev', true);
+    if (global.DevPanel) { global.DevPanel.open(); return; }
+    global.__devOpen = true;
+    loadDev();
+  }
+
   // Dev panel (js/dev.js): on with ?dev=1 (remembered), off with ?dev=0.
   function loadDev() {
     try {
@@ -409,5 +417,5 @@
     else start();
   }
 
-  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, typeOf, typeKanji, typeBadge, typeLabel, rarityOf, rarityBadge, focusTag, unitTile, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG, GP_ICON };
+  global.UI = { $, $$, esc, fmt, fmtShort, icon, stars, orb, typeOf, typeKanji, typeBadge, typeLabel, rarityOf, rarityBadge, focusTag, unitTile, unitCard, itemIcon, toast, modal, confirm: confirmBox, sfx, boot, openDev, paintHud, NAV, CUBE_SVG, YEN_SVG, STAM_SVG, GP_ICON };
 })(window);
