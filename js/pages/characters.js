@@ -127,24 +127,27 @@
       const kanji = (x) => esc(String(x.name || '?').replace(/^[^A-Za-z0-9]*/, '').charAt(0) || '術');
       const autoCells = sk.auto.map((x) => `<button class="enh-hex${x.k === pick ? ' on' : ''}" type="button" data-skill="${x.k}" title="${esc(x.name)}"><span>${kanji(x)}</span></button>`)
         .concat(Array.from({ length: Math.max(0, 4 - sk.auto.length) }, () => '<span class="enh-hex is-empty"></span>')).join('');
-      const K = 'assets/pp/ui/kit/', E = 'assets/pp/ui/enhance/';
+      const K = 'assets/pp/ui/kit/', E = 'assets/pp/ui/enhance/', E2 = 'assets/pp/ui/enh2/';
       const cmdLbl = (x) => (x.k === 'normal' ? 'ATK' : x.k === 'ult' ? 'ULT' : x.label.replace('Skill ', 'S'));
       const autoSlots = sk.auto.map((x) => `<button class="enh-slot${x.k === pick ? ' on' : ''}" type="button" data-skill="${x.k}" title="${esc(x.name)}"><span class="enh-hex"><span>${kanji(x)}</span></span></button>`)
-        .concat(Array.from({ length: Math.max(0, 4 - sk.auto.length) }, () => `<span class="enh-slot is-empty"><img src="${K}slot-empty.webp" alt=""></span>`)).join('');
+        .concat(Array.from({ length: Math.max(0, 4 - sk.auto.length) }, () => `<span class="enh-slot is-empty"><img src="${E2}slot-x.webp" alt=""></span>`)).join('');
+      const lights = (s.items.light_s || 0) + (s.items.light_m || 0) + (s.items.light_l || 0);
       const lvMode = mode === 'lv';
       const html = `<div class="enh is-pp t-${t} is-${UI.rarityOf(d).toLowerCase()}${expanded ? ' is-expanded' : ''}">
         <div class="enh-art">${Art.img(d, 'full', { eager: true, alt: '' })}
           <div class="enh-head"><button class="jjk-icon-btn enh-back" type="button" aria-label="Back">${UI.icon('back')}</button><h1 class="jjk-title-plate"><span>Enhance</span></h1></div>
-          <button class="enh-kit-sq" type="button" id="enh-expand" aria-label="View art" title="View art"><img src="${K}sq-expand.webp" alt=""></button>
-          ${order.length > 1 ? `<button class="enh-arrow is-l" type="button" data-step="-1" aria-label="Previous sorcerer"><img src="${K}arrow-l.webp" alt=""></button>` : ''}
+          <button class="enh-kit-sq" type="button" id="enh-expand" aria-label="View art" title="View art"><img src="${E2}expand.webp" alt=""></button>
+          ${order.length > 1 ? `<button class="enh-arrow is-l" type="button" data-step="-1" aria-label="Previous sorcerer"><img src="${E2}arrow-l.webp" alt=""></button>` : ''}
           <div class="enh-id">
-            <div class="enh-namebox">${UI.rarityBadge(d)}<div class="enh-name"><small>${esc(d.title || '')}</small><h2>${esc(d.name)}</h2></div></div>
-            <div class="enh-tags"><span class="enh-type">${UI.typeBadge(d)}</span>${UI.focusTag(d)}${d.rarity >= 7 || d.limited ? '<span class="limited-tag">LIMITED</span>' : ''}${d.guest ? `<span class="badge is-guest">GUEST · ${esc(d.sourceGame)}</span>` : ''}
-              <button class="enh-attr" type="button" id="enh-attr"><img src="${E}attr-btn.webp" alt="Attribute Overview"></button></div>
+            <div class="enh-namebox">${UI.rarityBadge(d)}<div class="enh-name"><small>${esc(d.title || '')}</small><h2>${esc(d.name)}</h2></div><img class="enh-uline" src="${E2}underline.webp" alt=""></div>
+            <div class="enh-tags"><img class="enh-star" src="${E2}star.webp" alt="" title="Favourite"><span class="enh-type">${UI.typeBadge(d)}</span>${UI.focusTag(d)}${d.rarity >= 7 || d.limited ? '<span class="limited-tag">LIMITED</span>' : ''}${d.guest ? `<span class="badge is-guest">GUEST · ${esc(d.sourceGame)}</span>` : ''}
+              <button class="enh-attr" type="button" id="enh-attr"><img src="${E2}attr.webp" alt="Attribute Overview"></button></div>
           </div>
         </div>
         <div class="enh-panel">
-          ${order.length > 1 ? `<button class="enh-arrow is-r" type="button" data-step="1" aria-label="Next sorcerer"><img src="${K}arrow-r.webp" alt=""></button>` : ''}
+          <div class="enh-cur"><span class="enh-bar" title="Training Lights"><img src="${E2}jp-bar.webp" alt=""><b>${fmt(lights)}</b></span><span class="enh-bar" title="JP"><img src="${E2}cube-bar.webp" alt=""><b>${fmt(s.currency.yen)}</b></span>
+            <button class="enh-help" type="button" id="enh-help" aria-label="Help"><img src="${E2}help.webp" alt=""></button></div>
+          ${order.length > 1 ? `<button class="enh-arrow is-r" type="button" data-step="1" aria-label="Next sorcerer"><img src="${E2}arrow-r.webp" alt=""></button>` : ''}
           <div class="enh-top">
             <div class="enh-lv"><small>Lv</small><b>${u.level}<span>/${v.maxLevel}</span></b>
               <div class="bar"><i style="width:${maxed ? 100 : Math.min(100, (u.exp / need) * 100)}%"></i></div>
@@ -163,9 +166,9 @@
               <div><dt>Max CE</dt><dd>${Rules.BATTLE.ceMax}</dd></div>
             </dl>
             <div class="enh-skills">
-              <div class="enh-sk-h">Command Skills</div>
+              <div class="enh-sk-h is-img"><img src="${E2}cmd-h.webp" alt="Command Skills"></div>
               <div class="enh-sk-row">${sk.cmd.map((x) => `<button class="enh-sk${x.k === pick ? ' on' : ''}" type="button" data-skill="${x.k}" title="${esc(x.name)}">${x.icon ? `<img src="${esc(x.icon)}" alt="">` : `<span class="enh-sk-k">${kanji(x)}</span>`}<small>${cmdLbl(x)}</small></button>`).join('')}</div>
-              <div class="enh-sk-h">Auto-Skills</div>
+              <div class="enh-sk-h is-img"><img src="${E2}auto-h.webp" alt="Auto-Skills"></div>
               <div class="enh-sk-row">${autoSlots}</div>
             </div>
           </div>
@@ -176,10 +179,10 @@
             <button class="enh-btn is-done" type="button" data-mode="main"><span><b>Done</b></span></button>
           </div>
           <small class="enh-jp muted">${UI.YEN_SVG} ${fmt(s.currency.yen)} JP · Training Lights drop in the <a href="missions.html#strengthen">Training Light Quest</a></small>` : `<div class="enh-btns is-main">
-            <button class="enh-btn enh-pb" type="button" data-mode="lv"><span><b>Lv</b><small>Enhancement</small></span>${!maxed && ['light_s', 'light_m', 'light_l'].some((k) => s.items[k] > 0) ? '<i class="nav-dot">!</i>' : ''}</button>
-            <button class="enh-btn enh-pb" type="button" data-soon="Grade"><span><b>GRADE</b><small>Enhancement</small></span></button>
-            <button class="enh-btn enh-pb" type="button" id="enh-awak"><span><b class="is-mid">Awakening</b><small class="enh-strip"><img src="${E}awak-hex.webp" alt="">${u.dupes || 0} / ${Rules.MAX_DUPES}</small></span></button>
-            <button class="enh-btn enh-pb" type="button" data-soon="Skill"><span><b>Skill</b><small>Enhancement</small></span></button>
+            <button class="enh-plate" type="button" data-mode="lv"><img src="${E2}plate-lv.webp" alt="Lv Enhancement">${!maxed && ['light_s', 'light_m', 'light_l'].some((k) => s.items[k] > 0) ? `<img class="enh-alert" src="${E2}alert.webp" alt="">` : ''}</button>
+            <button class="enh-plate" type="button" data-soon="Grade"><img src="${E2}plate-grade.webp" alt="GRADE Enhancement"></button>
+            <button class="enh-plate" type="button" id="enh-awak"><img src="${E2}plate-awak.webp" alt="Awakening"><b class="enh-plate-n">${u.dupes || 0}</b></button>
+            <button class="enh-plate" type="button" data-soon="Skill"><img src="${E2}plate-skill.webp" alt="Skill Enhancement"></button>
           </div>`}
           <div class="enh-foot">
             <button class="pp-stone" type="button" id="home-set">${UI.icon('home')}<span>Set as Home</span></button>
@@ -208,6 +211,10 @@
       if (md) { mode = md.dataset.mode; UI.sfx('tap'); draw(); return; }
       const so = e.target.closest('[data-soon]');
       if (so) { UI.toast(so.dataset.soon + ' Enhancement uses Cursed Objects / Cursed Crystals, which arrive with the Cursed Object Collection mode.', 'bad'); return; }
+      if (e.target.closest('#enh-help')) {
+        UI.modal('<p class="help-text">Lv Enhancement feeds Training Lights (they cost JP). Awakening rises with every duplicate you draw. Tap a skill to read it; the arrows switch sorcerer.</p>', { title: 'Enhance · Help', cls: 'is-small' });
+        return;
+      }
       if (e.target.closest('#enh-awak')) {
         const vv = Rules.unitView(id);
         UI.modal(`<p style="margin-top:0">Awakening (Limit Break) rises with every duplicate you draw, up to ${Rules.MAX_DUPES}. Each level adds +${Rules.DUPE_BONUS}% to all stats; duplicates beyond that turn into JP.</p><p><b>${esc(vv.def.name)}</b>: Awakening ${vv.unit.dupes || 0} / ${Rules.MAX_DUPES}</p>`, { title: 'Awakening', sub: '覚醒' });

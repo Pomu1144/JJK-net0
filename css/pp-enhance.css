@@ -191,3 +191,44 @@ html.is-compact .ch-cell .uc-hex { width: 27px; height: 30px; font-size: 15px; }
 .ch-alert { width: 28px; height: 28px; left: -8px; top: -12px; font-size: 0; color: transparent; border: 0; border-radius: 0; box-shadow: none;
   background: url("../assets/pp/ui/hf/alert.webp") center / contain no-repeat; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .7)); }
 html.is-compact .ch-alert { width: 22px; height: 22px; left: -6px; top: -9px; }
+
+/* ===== Enhance pieces from the provided sheet (assets/pp/ui/enh2) ===== */
+.enh-cur { position: absolute; z-index: 5; top: 8px; right: max(var(--gutter), env(safe-area-inset-right)); display: flex; align-items: center; gap: 8px; zoom: 1 !important; }
+.enh-bar { position: relative; display: block; width: 150px; }
+.enh-bar img { display: block; width: 100%; height: auto; }
+.enh-bar b { position: absolute; right: 9%; top: 50%; transform: translateY(-50%); font: 500 15px/1 var(--pp-font); color: #f0eee8; font-variant-numeric: tabular-nums; }
+.enh-help { width: 40px; height: 40px; padding: 0; border: 0; background: none; cursor: pointer; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); }
+.enh-help img { width: 100%; height: 100%; display: block; }
+.enh.is-pp .enh-panel { padding-top: 54px; }
+.enh-sk-h.is-img { padding: 0; background: none; margin: 2px 0 4px; }
+.enh-sk-h.is-img img { display: block; width: 100%; height: auto; }
+.enh-plate { position: relative; padding: 0; border: 0; background: none; cursor: pointer; filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .55)); transition: transform .08s, filter .15s; }
+.enh-plate > img:first-child { display: block; width: 100%; height: auto; }
+.enh-plate:active { transform: translateY(1px) scale(.97); }
+.enh-alert { position: absolute; right: -4%; top: -6%; width: 30%; height: auto; }
+.enh-plate-n { position: absolute; right: 22%; bottom: 17%; font: 500 15px/1 var(--pp-font); color: #fff; }
+.enh-btns.is-main { align-items: end; }
+.enh-uline { position: absolute; left: 0; right: 0; bottom: -4px; width: 100%; height: 6px; pointer-events: none; }
+.enh-namebox { padding-bottom: 10px; }
+.enh-star { width: 34px; height: auto; filter: drop-shadow(0 1px 2px #000); }
+.enh-arrow { width: 34px; height: 60px; }
+html.is-compact .enh-bar { width: 118px; } html.is-compact .enh-bar b { font-size: 12px; }
+html.is-compact .enh-help { width: 32px; height: 32px; }
+html.is-compact body .enh.is-pp .enh-panel { padding-top: 38px; }
+html.is-compact .enh-star { width: 26px; }
+html.is-compact .enh-plate-n { font-size: 12px; }
+/* game layout: stats and skills sit side by side with no box, no seal bar,
+   the four plates directly below */
+.enh.is-pp .enh-skills { padding: 0; background: none; border: 0; box-shadow: none; }
+.enh.is-pp .enh-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 12px; }
+.enh.is-pp .enh-sk-h.is-img { margin: 0 0 4px; }
+.enh.is-pp .enh-sk-h.is-img img { height: auto; max-height: 26px; width: 100%; object-fit: fill; }
+.enh.is-pp .enh-sk-row { gap: 4px; margin-bottom: 4px; }
+.enh.is-pp .enh-seal { display: none; }
+.enh.is-pp .enh-stats > div { background: none; padding: 3px 8px 3px 4px; }
+.enh.is-pp .enh-stats > div:nth-child(even) { background: linear-gradient(90deg, rgba(60, 74, 80, .55), rgba(60, 74, 80, .25)); }
+html.is-compact body .enh.is-pp .enh-panel > :not(.enh-arrow):not(.enh-desc):not(.enh-cur) { zoom: .82; }
+html.is-compact body .enh.is-pp .enh-btns.is-main { zoom: .82; }
+html.is-compact body .enh.is-pp .enh-btns.is-main { zoom: .7; padding: 0 4%; }
+html.is-compact .enh.is-pp .enh-stats > div { font-size: 13.5px; padding: 3px 8px 3px 4px; }
+.enh.is-pp .enh-stats dt { color: #d9c88a; font-weight: 500; } .enh.is-pp .enh-stats dd { font-weight: 500; }
