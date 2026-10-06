@@ -36,7 +36,7 @@
     const q = view.q.trim().toLowerCase();
     const list = all.filter((v) => (view.el === 'all' || v.def.element === view.el)
       && (!q || (v.def.name + ' ' + (v.def.title || '')).toLowerCase().includes(q))).sort(SORTS[view.sort] || SORTS.level);
-    $('#grid').innerHTML = list.length ? list.map((v, i) => `<div class="ch-cell c${i % 4}">${canEnhance(v) ? '<i class="ch-alert" aria-label="Can be enhanced">!</i>' : ''}${UI.unitCard(v, { wide: true, hideName: true, corner: corner(v) })}</div>`).join('')
+    $('#grid').innerHTML = list.length ? list.map((v, i) => `<div class="ch-cell c${i % 4}">${canEnhance(v) ? '<i class="ch-alert" aria-label="Can be enhanced">!</i>' : ''}${UI.unitCard(v, { wide: true, hideName: true, corner: corner(v), artKind: 'portrait' })}</div>`).join('')
       : '<p class="empty">No sorcerers match. Summon more at the Summon hall.</p>';
     $('#ch-sort-l').textContent = SORT_LABEL[view.sort] || 'Lv';
     $('#ch-filter-on').hidden = view.el === 'all' && !q;

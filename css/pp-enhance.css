@@ -143,3 +143,51 @@ html.is-compact .ch-cell .uc-hex { width: 24px; height: 26px; font-size: 13px; }
 body[data-page="characters"] .topbar { padding-top: 24px; }
 html.is-compact body[data-page="characters"] .topbar { padding-top: 20px; }
 html.is-compact .ch-search { width: 160px; } html.is-compact .ch-search input { font-size: 11.5px; }
+
+/* ===== Characters: match the game's finish (not the saturated look) ===== */
+/* toolbar: flat boxes with thin rims, as in the game */
+.ch-search { background: rgba(0, 0, 0, .25); border: 1.5px solid #d6d6d2; box-shadow: none; }
+.ch-search input { font-weight: 500; }
+.ch-sort, .ch-switch { border: 2px solid; border-image: none; padding: 0 14px; filter: none; text-shadow: 0 1px 1px #000; font-weight: 500; }
+.ch-sort { background: linear-gradient(180deg, #5a5816, #47450f); border-color: #cfc64e; color: #e9e27a; }
+.ch-switch { background: linear-gradient(180deg, #686b67, #565955); border-color: #a3a6a2; color: #eceee8; }
+.ch-filter-on { background: #8c1f1a; border: 0; font-weight: 500; }
+.ch-show { background: #4e5356; border: 0; }
+/* cards: close-up art, thin pale iridescent frame with a teal inner line,
+   olive Awakening hexagon, wide black Lv strip */
+.ch-cell .ucard.is-wide .uc-art { border-width: 3px; border-radius: 0;
+  --fr: linear-gradient(115deg, #b9d8c6, #d9d3ea 25%, #a9c7dc 45%, #e3cfe2 65%, #bfe3cf 85%, #d8d3b8);
+  box-shadow: 0 0 0 1px #0b1012, inset 0 0 0 1px rgba(110, 220, 190, .7), 0 8px 18px rgba(0, 0, 0, .65);
+  clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px); }
+.ch-cell .ucard.is-wide.is-ssr .uc-art { --fr: linear-gradient(115deg, #c9a8e0, #a6dccb 20%, #e2cbe4 40%, #9fc9e6 60%, #d8b6e2 80%, #b4e0cc); }
+.ch-cell .ucard.is-wide .uc-art > img.art { object-position: 50% 22%; filter: saturate(.92) contrast(1.04); }
+.ch-cell .uc-hex { background: linear-gradient(180deg, #d8cf72, #a8a03a 60%, #7d7524); color: #f6f0d2; font: 700 17px/1 var(--pp-font);
+  -webkit-text-stroke: 1px #3a3610; paint-order: stroke fill; filter: drop-shadow(0 0 0 #20200a) drop-shadow(0 1px 1px #000); }
+.ch-cell .uc-strip { right: 0; bottom: 4px; min-width: 52%; justify-content: flex-end; padding: 1px 10px 1px 16px; background: linear-gradient(90deg, transparent, rgba(0, 0, 0, .92) 18%); }
+.ch-cell .ucard.is-wide .uc-lv { font-weight: 500; }
+.ch-cell .ucard.is-wide .uc-lv b { font-weight: 500; }
+.ch-alert { background: radial-gradient(circle at 40% 35%, #c9302a, #9a1612 70%); border: 1.5px solid #e8d6cc; }
+/* the game's bottom-bar labels are lighter and less heavy */
+.dock-btn { font-weight: 500; }
+.ch-tools .jjk-btn.ch-sort, .ch-tools .pp-stone.ch-switch { border-image: none; border-style: solid; border-width: 2px; padding: 0 14px; filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .5)); }
+.ch-tools .jjk-btn.ch-sort { border-color: #cfc64e; }
+.ch-tools .pp-stone.ch-switch { border-color: #a3a6a2; }
+.ch-cell .uc-hex { width: 34px; height: 38px; left: 6px; bottom: 6px; font-size: 19px;
+  background: linear-gradient(180deg, #e6dc84, #b2a843 55%, #8a8128); box-shadow: inset 0 0 0 2px #3c3a14; }
+.ch-cell .uc-hex::before { content: ''; position: absolute; inset: 3px; clip-path: inherit; border: 1.5px solid rgba(255, 250, 210, .7); clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
+html.is-compact .ch-cell .uc-hex { width: 27px; height: 30px; font-size: 15px; }
+.ch-cell.c0 { --ry: 10deg; --rz: 1.2deg; } .ch-cell.c1 { --ry: 4deg; --rz: .8deg; } .ch-cell.c2 { --ry: -4deg; --rz: .8deg; } .ch-cell.c3 { --ry: -10deg; --rz: 1.4deg; }
+.ch-tools .jjk-btn.ch-sort { background: linear-gradient(180deg, #5c5a18, #45430e); color: #ebe47c; }
+.ch-tools .pp-stone.ch-switch { background: linear-gradient(180deg, #6a6d69, #575a56); color: #eceee8; }
+
+/* the card frame and "!" badge from the provided asset sheet */
+.ch-cell .ucard.is-wide .uc-art, .ch-cell .ucard.is-wide.is-ssr .uc-art { aspect-ratio: 1161 / 538; border: 0; border-radius: 0; background: none; clip-path: none; box-shadow: none; overflow: visible; }
+.ch-cell .ucard.is-wide .uc-art > img.art { inset: 5.5% 2.6% 5.5% 3%; width: auto; height: auto; width: calc(100% - 5.6%); height: 89%; }
+.ch-cell .ucard.is-wide .uc-art::after { content: ''; display: block; position: absolute; z-index: 2; inset: 0; padding: 0; border: 0; pointer-events: none;
+  background: url("../assets/pp/ui/hf/card-frame.webp") center / 100% 100% no-repeat; -webkit-mask: none; mask: none; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .6)); }
+.ch-cell .ucard.is-wide .uc-type { z-index: 3; top: 7%; right: 4%; }
+.ch-cell .uc-strip { z-index: 3; right: 2.6%; bottom: 7%; }
+.ch-cell .uc-hex { z-index: 3; left: 5%; bottom: 10%; }
+.ch-alert { width: 28px; height: 28px; left: -8px; top: -12px; font-size: 0; color: transparent; border: 0; border-radius: 0; box-shadow: none;
+  background: url("../assets/pp/ui/hf/alert.webp") center / contain no-repeat; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .7)); }
+html.is-compact .ch-alert { width: 22px; height: 22px; left: -6px; top: -9px; }
